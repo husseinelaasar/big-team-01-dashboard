@@ -1,0 +1,12 @@
+# Sensitive / internal files
+sm-scheme.html
+sm-scheme.js
+auto_download_and_process.ps1
+auto_process_update.ps1
+inspect_export_button.ps1
+test_task_center.ps1
+RUN_AUTO_UPDATE.bat
+START_BROWSER_AUTOMATION.bat
+.agents/
+node_modules/
+*.log

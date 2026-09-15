@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Team 01 — Executive Performance Dashboard</title>
+  <meta name="description" content="Official Executive Performance Dashboard for 51Talk Big Team 01. Live sales analytics, renewal & upgrade breakdown, team pacing, and SOP compliance.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <h2>Big Team 01</h2>
+      <p>Synchronizing Performance Intelligence...</p>
+    </div>
+  </div>
+
+  <!-- Main Application Container -->
+  <div id="app" class="app">
+    
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+      <div class="nav-left">
+        <div class="logo-mark">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="2.5"/>
+            <path d="M10 16L14 20L22 12" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <h1 class="nav-title">Big Team 01 — <span class="gradient-text">Executive Dashboard</span></h1>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
+            Senior Manager: <strong>Saber Hussien</strong> | Month: <strong>September 2026 (MTD Day 15/30)</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <!-- Live Data Badges -->
+        <div class="data-freshness">
+          <span class="pulse-dot"></span>
+          <span id="dataDate">Sep 1–15, 2026</span>
+        </div>
+        <div class="nav-source-badge" title="Verified against CRM Renewal Performance & POOL_Detail16">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          CRM & Lens Verified
+        </div>
+      </div>
+    </nav>
+
+    <!-- Tab Bar Navigation -->
+    <div class="tab-bar">
+      <button class="tab active" data-tab="overview">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Executive Overview
+      </button>
+      <button class="tab" data-tab="teams">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Small Teams (5)
+      </button>
+      <button class="tab" data-tab="individuals">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Individual Reps (23)
+      </button>
+      <button class="tab" data-tab="breakdown">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+        Renewal vs Upgrade Detail
+      </button>
+      <button class="tab" data-tab="sop">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        SOP Compliance
+      </button>
+      <button class="tab" data-tab="recommendations">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        Actionable Recommendations
+      </button>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- TAB 1: EXECUTIVE OVERVIEW -->
+    <!-- ============================================== -->
+    <section id="tab-overview" class="tab-content active">
+      <!-- 4 Core Executive KPI Cards -->
+      <div class="kpi-grid">
+        <!-- 1. Total Cash MTD -->
+        <div class="kpi-card kpi-cash">
+          <div class="kpi-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="kpi-label">Total Cash Revenue (MTD)</div>
+          <div class="kpi-value" id="totalCash">$90,846</div>
+          <div class="kpi-sub" id="cashTarget">Target: $225,600 | Projected: $194,670</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 40.3%;"></div></div>
+          <div class="kpi-pct" id="cashPct">40.3% Achieved</div>
+        </div>
+
+        <!-- 2. Total Contracts & Breakdown -->
+        <div class="kpi-card kpi-contracts">
+          <div class="kpi-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="kpi-label">Total Contracts (Orders)</div>
+          <div class="kpi-value" id="totalContracts">87</div>
+          <div class="kpi-sub" id="contractsSub">Normal: 59 | Upgrade M2: 19</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="contractsBar" style="width: 46.8%;"></div></div>
+          <div class="kpi-pct" id="contractsPct">Avg: $1,044 / contract</div>
+        </div>
+
+        <!-- 3. Target Achievement & Pacing Gap -->
+        <div class="kpi-card kpi-ach">
+          <div class="kpi-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="kpi-label">Pacing & Daily Needed</div>
+          <div class="kpi-value" id="achPct">40.3%</div>
+          <div class="kpi-sub" id="achSub">Gap: $134,754 | Need: $8,422/day</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 40.3%; background: #f59e0b;"></div></div>
+          <div class="kpi-pct" id="achDays">Day 14 of 30 (16 Days Remaining)</div>
+        </div>
+
+        <!-- 4. Active Reps & Upgrade Conversion -->
+        <div class="kpi-card kpi-base">
+          <div class="kpi-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="kpi-label">Active Reps & M2 Conversion</div>
+          <div class="kpi-value" id="totalReps">23 Reps</div>
+          <div class="kpi-sub" id="baseLeads">19 M2 Upgrades / 687 Pool Base</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="repsBar" style="width: 87%;"></div></div>
+          <div class="kpi-pct" id="repsPct">2.77% M2 Upgrade Conversion</div>
+        </div>
+      </div>
+
+      <!-- Quick Strategic Highlight Banner -->
+      <div class="highlight-banner" style="display: flex; gap: 20px; align-items: center; background: rgba(99, 102, 241, 0.06); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: var(--radius-lg); padding: 18px 24px; margin-bottom: 28px; backdrop-filter: blur(8px);">
+        <div style="background: rgba(99, 102, 241, 0.2); padding: 12px; border-radius: var(--radius-sm); color: #818cf8;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div style="flex: 1;">
+          <h3 style="font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 4px;">Mid-Month Strategic Velocity Audit</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+            Big Team 01 has generated <strong>$88,618 USD</strong> across <strong>96 contracts</strong>. Target pace projects <strong>$194,670 (86.3% of target)</strong>, clearing the qualification gate. <strong>21 M2 Upgrade orders</strong> have been verified through POOL_Detail.
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <a href="#tab-breakdown" onclick="switchTab('breakdown')" class="action-link-btn primary">View Upgrade Breakdown</a>
+        </div>
+      </div>
+
+      <!-- Small Teams Pacing & Target Comparison -->
+      <div class="section-header">
+        <h2>Small Teams — Cash Achievement vs Target</h2>
+        <span class="source-tag">Source: CRM live data (Sep 1–15, 2026)</span>
+      </div>
+      <div class="chart-container" id="teamBarsContainer"></div>
+
+      <!-- Overview Top Performers Table -->
+      <div class="section-header" style="margin-top: 32px;">
+        <h2>Leaderboard & Individual Matrix Preview</h2>
+        <span class="source-tag">Ranked by Cash Achievement % | Data Center Verified</span>
+      </div>
+      <div class="table-wrapper">
+        <table class="data-table" id="overviewTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Rep Name</th>
+              <th>Team</th>
+              <th>Cash Revenue</th>
+              <th>Target</th>
+              <th>Ach %</th>
+              <th>M2 Conv. % (POOL15)</th>
+              <th style="color: #facc15; font-weight: 800;">M2 Cover Rate % (POOL22)</th>
+              <th>Upgrade M2</th>
+              <th style="color: #c084fc; font-weight: 800;">20% Upgrade Goal (Needed)</th>
+              <th>Contracts</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="overviewTableBody"></tbody>
+          <tfoot id="overviewTableFoot"></tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 2: SMALL TEAMS DEEP DIVE -->
+    <!-- ============================================== -->
+    <section id="tab-teams" class="tab-content">
+      <div class="section-header">
+        <h2>Small Team Performance Breakdown</h2>
+        <span class="source-tag">Teams 01, 05, 10, 13, 30 | Sep 1–14, 2026</span>
+      </div>
+      <div id="smallTeamCards" class="team-cards-grid"></div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 3: INDIVIDUAL REPS (23) -->
+    <!-- ============================================== -->
+    <section id="tab-individuals" class="tab-content">
+      <div class="section-header">
+        <h2>Individual Performance Deep Dive</h2>
+        <span class="source-tag">23 Active Sales Specialists</span>
+      </div>
+      
+      <!-- Filter and Sort Controls -->
+      <div class="filter-bar">
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+          <label style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">Filter Team:</label>
+          <select id="teamFilter" class="filter-select">
+            <option value="all">All Small Teams (5)</option>
+            <option value="EGSS01">ME-EGSS01 (Ashraqatal)</option>
+            <option value="EGSS05">ME-EGSS05 (Ibrahimismaiel)</option>
+            <option value="EGSS10">ME-EGSS10 (Mohamed06)</option>
+            <option value="EGSS13">ME-EGSS13 (Mohamedha)</option>
+            <option value="EGSS30">ME-EGSS30 (AdhmGadAllah)</option>
+          </select>
+          
+          <label style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-left: 8px;">Sort By:</label>
+          <select id="sortFilter" class="filter-select">
+            <option value="ach-desc" selected>Cash Achievement % (High to Low)</option>
+            <option value="upg-rate-desc">Upgrade M2 Conversion % (High to Low)</option>
+            <option value="cover-rate-desc">M2 Cover Rate % (High to Low)</option>
+            <option value="cash-desc">Cash Revenue (High to Low)</option>
+            <option value="gap-desc">Target Gap (Highest Gap)</option>
+            <option value="upgrade-desc">Upgrade M2 Count</option>
+            <option value="contracts-desc">Contracts Count</option>
+          </select>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button id="viewToggleCards" class="view-btn active">Cards View</button>
+          <button id="viewToggleTable" class="view-btn">Table View</button>
+        </div>
+      </div>
+
+      <div id="individualCards" class="individual-cards-grid"></div>
+      
+      <div id="individualTableView" class="table-wrapper hidden" style="margin-top: 20px;">
+        <table class="data-table" id="individualFullTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Rep Name</th>
+              <th>Team</th>
+              <th>Cash ($)</th>
+              <th>Target ($)</th>
+              <th>Ach %</th>
+              <th>Upgrade M2</th>
+              <th>Upgrade Base</th>
+              <th style="color: #c084fc; font-weight: 800;">20% Upgrade Goal (Needed)</th>
+              <th>M2 Conv. % (POOL15)</th>
+              <th style="color: #facc15; font-weight: 800;">M2 Cover Rate % (POOL22)</th>
+              <th>Contracts</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="individualFullTableBody"></tbody>
+          <tfoot id="individualFullTableFoot"></tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 4: RENEWAL VS UPGRADE DETAIL -->
+    <!-- ============================================== -->
+    <section id="tab-breakdown" class="tab-content">
+      <div class="section-header">
+        <h2>Renewal vs Upgrade M2 Analytics</h2>
+        <span class="source-tag">Extracted from SS Lens Dashboard: Sub-sheet POOL_Detail16</span>
+      </div>
+
+      <div class="breakdown-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+        <!-- Left Summary Card -->
+        <div class="calc-card">
+          <div class="calc-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Pool Breakdown Summary (Sep 1–14, 2026)
+          </div>
+          <div style="line-height: 1.8; color: var(--text-secondary); font-size: 0.9rem; margin-top: 14px;">
+            <p>• <strong>Total Pool Renewals:</strong> <span style="color:#fff; font-weight:700;">78 students</span> made "Is This Month Renew" = 1</p>
+            <p>• <strong>Upgrade M2 Renewals:</strong> <span style="color:#10b981; font-weight:700;">19 students</span> (Column E: "Upgrade M2", Column I: 1)</p>
+            <p>• <strong>Normal Renewals:</strong> <span style="color:#38bdf8; font-weight:700;">59 students</span> (Exp Non-0, Exp 0-cr, period, outside pool, FOE)</p>
+            <p>• <strong>Total M2 Upgrade Potential Base:</strong> <span style="color:#f59e0b; font-weight:700;">687 leads</span></p>
+            <p>• <strong>Team M2 Conversion Rate:</strong> <span style="color:#a78bfa; font-weight:700;">2.77%</span> (19 / 687)</p>
+          </div>
+        </div>
+
+        <!-- Right Upgrade Leaders Card -->
+        <div class="calc-card">
+          <div class="calc-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Top Upgrade M2 Producers
+          </div>
+          <div id="upgradeLeadersList" style="margin-top: 14px;"></div>
+        </div>
+      </div>
+
+      <!-- Detailed Breakdown Table by SS -->
+      <div class="table-wrapper">
+        <table class="data-table" id="upgradeDetailTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Team</th>
+              <th>Rep Name</th>
+              <th>Upgrade M2 Renewed</th>
+              <th>Upgrade Base</th>
+              <th style="color: #c084fc; font-weight: 800;">20% Upgrade Goal (Needed)</th>
+              <th>M2 Upgrade Conv. % (POOL15)</th>
+              <th style="color: #facc15; font-weight: 800;">M2 Cover Rate % (POOL22)</th>
+              <th>Total Renewed</th>
+              <th>Normal Renewed</th>
+              <th>Contribution Share</th>
+            </tr>
+          </thead>
+          <tbody id="upgradeDetailTableBody"></tbody>
+          <tfoot id="upgradeDetailTableFoot"></tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 5: SOP COMPLIANCE -->
+    <!-- ============================================== -->
+    <section id="tab-sop" class="tab-content">
+      <div class="section-header">
+        <h2>SOP Process Compliance by Round & Team</h2>
+        <span class="source-tag">Source: 51Talk Data Center (lp.51talkjr.com/#/data-center/business/SA-SSdata)</span>
+      </div>
+      <div id="sopContent" class="sop-grid"></div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 6: RECOMMENDATIONS -->
+    <!-- ============================================== -->
+    <section id="tab-recommendations" class="tab-content">
+      <div class="section-header">
+        <h2>Executive Action Plan & Coaching Points</h2>
+        <span class="source-tag">Automated diagnostic intelligence based on current pace</span>
+      </div>
+      <div id="recommendationsContent" class="recommendations-grid"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <div class="footer-left">
+        <span>Big Team 01 — ME-EGSS01 | Senior Manager: <strong>Saber Hussien</strong></span>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dim);">
+        <span id="dataTimestamp">Last Update: Sep 15, 2026</span>
+      </div>
+      <div class="footer-right">
+        <span>Data Sources: 
+          <a href="https://crm.51talk.com/admin/main.php" target="_blank">CRM Main Portal</a> | 
+          <a href="https://lp.51talkjr.com/#/data-center/business/SA-SSdata" target="_blank">51Talk Data Center</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
