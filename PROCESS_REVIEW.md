@@ -168,7 +168,8 @@ Add a **built-in verification panel** to the dashboard that shows:
 
 ### Phase 3: Future (Optional) 🚀
 - [ ] Direct API integration with 51Talk Data Center (if API available)
-- [ ] Automated scheduled data pull via PowerShell/Python scripts
+- [x] **Automated scheduled hourly data pull & live sync via PowerShell (`hourly_update_and_publish.ps1`) at XX:10 past every hour**
+- [x] **One-click live deployment via GitHub Pages (`https://husseinelaasar.github.io/big-team-01-dashboard/`)**
 - [ ] Historical data tracking (month-over-month comparison)
 
 ---
