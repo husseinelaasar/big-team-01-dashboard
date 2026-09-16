@@ -379,11 +379,11 @@ function renderTeamBars(model) {
 
   let bigTeamBadge = '';
   if (model.summary.achievement >= pacePct) {
-    bigTeamBadge = `<span style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🟢 مسبق للمسار (+${diffBigTeamPct}%)</span>`;
+    bigTeamBadge = `<span style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🟢 Ahead of Pace (+${diffBigTeamPct}%)</span>`;
   } else if (model.summary.achievement >= pacePct - 8) {
-    bigTeamBadge = `<span style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🟡 قريب من المسار (${diffBigTeamPct}%)</span>`;
+    bigTeamBadge = `<span style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🟡 Near Pace (${diffBigTeamPct}%)</span>`;
   } else {
-    bigTeamBadge = `<span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🔴 متأخر عن المسار (${diffBigTeamPct}%)</span>`;
+    bigTeamBadge = `<span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🔴 Behind Pace (${diffBigTeamPct}%)</span>`;
   }
 
   // Key milestones from the official 30-day table
@@ -444,9 +444,9 @@ function renderTeamBars(model) {
       ticksHtml += `
         <!-- Floating Pin Above Today -->
         <div style="position: absolute; left: ${pos}%; top: -36px; transform: translateX(-50%); z-index: 15; text-align: center; white-space: nowrap;">
-          <div style="background: linear-gradient(135deg, #0284c7, #38bdf8); color: #fff; font-size: 0.78rem; font-weight: 900; padding: 4px 12px; border-radius: 6px; box-shadow: 0 0 16px rgba(56, 189, 248, 0.9); border: 1px solid #bae6fd; display: inline-flex; align-items: center; gap: 6px; direction: rtl;">
+          <div style="background: linear-gradient(135deg, #0284c7, #38bdf8); color: #fff; font-size: 0.78rem; font-weight: 900; padding: 4px 12px; border-radius: 6px; box-shadow: 0 0 16px rgba(56, 189, 248, 0.9); border: 1px solid #bae6fd; display: inline-flex; align-items: center; gap: 6px;">
             <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #fff; box-shadow: 0 0 6px #fff;"></span>
-            <span>📍 اليوم ${m.day} — المستهدف: <bdi dir="ltr" style="font-weight: 900;">${m.pct}%</bdi></span>
+            <span>📍 Day ${m.day} Target: <strong>${m.pct}%</strong></span>
           </div>
           <div style="width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 7px solid #38bdf8; margin: 0 auto;"></div>
         </div>
@@ -454,7 +454,7 @@ function renderTeamBars(model) {
         <div style="position: absolute; left: ${pos}%; top: -5px; width: 3px; height: 18px; background: #38bdf8; border-radius: 2px; box-shadow: 0 0 10px #38bdf8; z-index: 12;" title="Day ${m.day}: ${m.pct}% (Today's Benchmark)"></div>
         <!-- Label Below Track -->
         <div style="position: absolute; left: ${pos}%; top: 16px; transform: translateX(-50%); font-size: 0.74rem; font-weight: 900; color: #38bdf8; text-align: center; white-space: nowrap;">
-          D${m.day}<br><span style="font-size: 0.78rem;" dir="ltr">${m.pct}%</span>
+          D${m.day}<br><span style="font-size: 0.78rem;">${m.pct}%</span>
         </div>
       `;
     } else {
@@ -464,7 +464,7 @@ function renderTeamBars(model) {
       ticksHtml += `
         <div style="position: absolute; left: ${pos}%; top: -1px; width: 2px; height: 10px; background: ${borderClr};" title="Day ${m.day}: ${m.pct}%"></div>
         <div style="position: absolute; left: ${pos}%; top: 16px; transform: translateX(-50%); font-size: 0.66rem; color: ${clr}; text-align: center; white-space: nowrap;">
-          D${m.day}<br><span style="font-weight: 700; font-family: var(--font-mono);" dir="ltr">${m.pct}%</span>
+          D${m.day}<br><span style="font-weight: 700; font-family: var(--font-mono);">${m.pct}%</span>
         </div>
       `;
     }
@@ -474,7 +474,7 @@ function renderTeamBars(model) {
   ticksHtml += `
     <div style="position: absolute; left: ${pos100}%; top: -4px; width: 2.5px; height: 16px; background: #fff; border-radius: 1px; box-shadow: 0 0 8px rgba(255,255,255,0.8);" title="Full Target (100%)"></div>
     <div style="position: absolute; left: ${pos100}%; top: 16px; transform: translateX(-50%); font-size: 0.66rem; color: #fff; font-weight: 800; text-align: center; white-space: nowrap;">
-      Target<br><span style="font-weight: 900; font-family: var(--font-mono);" dir="ltr">100%</span>
+      Target<br><span style="font-weight: 900; font-family: var(--font-mono);">100%</span>
     </div>
   `;
 
@@ -486,19 +486,19 @@ function renderTeamBars(model) {
         </span>
         <div>
           <h3 style="font-size: 1rem; font-weight: 800; color: #fff; margin: 0;">
-            مؤشر المسار التراكمي المعتمد للتارجت (من 5% إلى 103%)
+            Official Cumulative Target Pacing Curve (5% to 103%)
           </h3>
           <span style="font-size: 0.78rem; color: var(--text-secondary);">
-            المقياس التراكمي المعتمد لقياس سرعة تحقيق التارجت اليومي للقطاع بالكامل والفرق الصغيرة والأفراد
+            Official cumulative benchmark measuring daily target velocity across Big Team 01, small teams, and individual sales reps
           </span>
         </div>
       </div>
       <div style="display: flex; align-items: center; gap: 12px; font-size: 0.82rem;">
-        <span style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); padding: 5px 14px; border-radius: 20px; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; direction: rtl;">
-          <span>🎯 مستهدف اليوم ${daysPassed}:</span>
-          <bdi dir="ltr" style="font-weight: 900;">${pacePct}%</bdi>
+        <span style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); padding: 5px 14px; border-radius: 20px; font-weight: 800; display: inline-flex; align-items: center; gap: 6px;">
+          <span>🎯 Day ${daysPassed} Target:</span>
+          <strong style="color: #fff;">${pacePct}%</strong>
           <span style="color: var(--text-muted);">|</span>
-          <bdi dir="ltr">${fmt(expCashBigTeam)}</bdi>
+          <strong style="color: #38bdf8;">${fmt(expCashBigTeam)}</strong>
         </span>
       </div>
     </div>
@@ -526,11 +526,11 @@ function renderTeamBars(model) {
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; position: relative; z-index: 2;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <span style="font-size: 1.15rem;">⭐</span>
-        <span style="color: #818cf8; font-weight: 900; font-size: 1.1rem; letter-spacing: 0.3px;">Big Team 01 — إجمالي القطاع</span>
+        <span style="color: #818cf8; font-weight: 900; font-size: 1.1rem; letter-spacing: 0.3px;">Big Team 01 — Sector Total</span>
         <span style="color: var(--text-muted); font-size: 0.82rem;">(Senior Manager: Saber Hussien)</span>
         ${bigTeamBadge}
       </div>
-      <div style="font-family: var(--font-mono); font-size: 1rem; direction: ltr;">
+      <div style="font-family: var(--font-mono); font-size: 1rem;">
         <span style="color: #fff; font-weight: 900;">${fmt(model.summary.totalCash)}</span>
         <span style="color: var(--text-muted);"> / ${fmt(model.summary.totalTarget)}</span>
         <span style="color: ${getStatusColor(model.summary.achievement)}; font-weight: 900; margin-left: 8px;">(${fmtPct(model.summary.achievement)})</span>
@@ -544,16 +544,16 @@ function renderTeamBars(model) {
       <!-- 100% Target Marker -->
       <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 26px; background: rgba(255,255,255,0.85); border-radius: 1px;" title="Full Target (100%): ${fmt(model.summary.totalTarget)}"></div>
       <!-- Day 16 (46%) Benchmark Marker Line -->
-      <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 30px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="مستهدف اليوم ${daysPassed} (${pacePct}%)"></div>
+      <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 30px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="Day ${daysPassed} Benchmark (${pacePct}%)"></div>
     </div>
 
     <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); flex-wrap: wrap; gap: 8px; position: relative; z-index: 2;">
-      <span style="direction: rtl; display: inline-flex; align-items: center; gap: 6px;">
-        🎯 <span>مستهدف اليوم ${daysPassed} (<bdi dir="ltr">${pacePct}%</bdi>):</span> 
-        <bdi dir="ltr" style="color: #38bdf8; font-weight: 800;">${fmt(expCashBigTeam)}</bdi>
-        <span style="direction: rtl;">(${diffBigTeamCash >= 0 ? '<span style="color:#10b981; font-weight:700;">زيادة <bdi dir="ltr">+' + fmt(diffBigTeamCash) + '</bdi></span>' : '<span style="color:#f43f5e; font-weight:700;">عجز <bdi dir="ltr">-' + fmt(Math.abs(diffBigTeamCash)) + '</bdi></span>'})</span>
+      <span>
+        🎯 <strong>Day ${daysPassed} Target (${pacePct}%):</strong> 
+        <strong style="color: #38bdf8;">${fmt(expCashBigTeam)}</strong>
+        (${diffBigTeamCash >= 0 ? '<span style="color:#10b981; font-weight:700;">+' + fmt(diffBigTeamCash) + ' Surplus</span>' : '<span style="color:#f43f5e; font-weight:700;">-' + fmt(Math.abs(diffBigTeamCash)) + ' Deficit</span>'})
       </span>
-      <span>العقود: <strong>${model.summary.totalContracts}</strong> (M2: ${model.summary.totalUpgradeM2}) | المتوقع بنهاية الشهر: <strong style="color: #38bdf8;"><bdi dir="ltr">${fmt(model.summary.projectedCash)}</bdi></strong> | المطلوب يومياً: <strong><bdi dir="ltr">${fmt(model.summary.dailyNeeded)}/day</bdi></strong></span>
+      <span>Orders: <strong>${model.summary.totalContracts}</strong> (M2: ${model.summary.totalUpgradeM2}) | MTD Projected: <strong style="color: #38bdf8;">${fmt(model.summary.projectedCash)}</strong> | Daily Run-Rate Needed: <strong>${fmt(model.summary.dailyNeeded)}/day</strong></span>
     </div>
   `;
   wrapper.appendChild(bigTeamRow);
@@ -570,11 +570,11 @@ function renderTeamBars(model) {
 
     let paceBadge = '';
     if (t.achievement >= pacePct) {
-      paceBadge = `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; direction: rtl;">🟢 مسبق للمسار (<bdi dir="ltr">+${paceDiffPct}%</bdi>)</span>`;
+      paceBadge = `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🟢 Ahead of Pace (+${paceDiffPct}%)</span>`;
     } else if (t.achievement >= pacePct - 8) {
-      paceBadge = `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; direction: rtl;">🟡 قريب من المسار (<bdi dir="ltr">${paceDiffPct}%</bdi>)</span>`;
+      paceBadge = `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🟡 Near Pace (${paceDiffPct}%)</span>`;
     } else {
-      paceBadge = `<span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; direction: rtl;">🔴 متأخر عن المسار (<bdi dir="ltr">${paceDiffPct}%</bdi>)</span>`;
+      paceBadge = `<span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🔴 Behind Pace (${paceDiffPct}%)</span>`;
     }
 
     const row = document.createElement('div');
@@ -592,7 +592,7 @@ function renderTeamBars(model) {
           <span style="color: var(--text-muted); font-size: 0.8rem;">(TL: ${t.tl})</span>
           ${paceBadge}
         </div>
-        <div style="font-family: var(--font-mono); font-size: 0.95rem; direction: ltr;">
+        <div style="font-family: var(--font-mono); font-size: 0.95rem;">
           <span style="color: #fff; font-weight: 800;">${fmt(t.cash)}</span>
           <span style="color: var(--text-muted);"> / ${fmt(t.target)}</span>
           <span style="color: ${getStatusColor(t.achievement)}; font-weight: 800; margin-left: 8px;">(${fmtPct(t.achievement)})</span>
@@ -605,16 +605,16 @@ function renderTeamBars(model) {
         <!-- 100% Target Line Marker at 97.1% -->
         <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 24px; background: rgba(255,255,255,0.8); border-radius: 1px;" title="Full Target (100%): ${fmt(t.target)}"></div>
         <!-- Official Benchmark Pace Line Marker (Day 16 = 46%) -->
-        <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 28px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="Official Target Pace: Day ${daysPassed} Benchmark (${pacePct}%)"></div>
+        <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 28px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="Day ${daysPassed} Benchmark (${pacePct}%)"></div>
       </div>
 
       <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-secondary); flex-wrap: wrap; gap: 8px; position: relative; z-index: 2;">
-        <span style="direction: rtl; display: inline-flex; align-items: center; gap: 6px;">
-          🎯 <span>مستهدف اليوم ${daysPassed} (<bdi dir="ltr">${pacePct}%</bdi>):</span> 
-          <bdi dir="ltr" style="color: #38bdf8; font-weight: 800;">${fmt(expCashAtPace)}</bdi>
-          <span style="direction: rtl;">(${paceDiffCash >= 0 ? '<span style="color:#10b981; font-weight:700;">زيادة <bdi dir="ltr">+' + fmt(paceDiffCash) + '</bdi></span>' : '<span style="color:#f43f5e; font-weight:700;">عجز <bdi dir="ltr">-' + fmt(Math.abs(paceDiffCash)) + '</bdi></span>'})</span>
+        <span>
+          🎯 <strong>Day ${daysPassed} Target (${pacePct}%):</strong> 
+          <strong style="color: #38bdf8;">${fmt(expCashAtPace)}</strong>
+          (${paceDiffCash >= 0 ? '<span style="color:#10b981; font-weight:700;">+' + fmt(paceDiffCash) + ' Surplus</span>' : '<span style="color:#f43f5e; font-weight:700;">-' + fmt(Math.abs(paceDiffCash)) + ' Deficit</span>'})
         </span>
-        <span>Orders: <strong>${t.contracts}</strong> (M2: ${t.upgradeM2}) | Proj: <strong style="color: #38bdf8;"><bdi dir="ltr">${fmt(t.projected)}</bdi></strong> | Need: <strong><bdi dir="ltr">${fmt(t.dailyNeeded)}/day</bdi></strong></span>
+        <span>Orders: <strong>${t.contracts}</strong> (M2: ${t.upgradeM2}) | Proj: <strong style="color: #38bdf8;">${fmt(t.projected)}</strong> | Need: <strong>${fmt(t.dailyNeeded)}/day</strong></span>
       </div>
     `;
     wrapper.appendChild(row);
@@ -1080,7 +1080,7 @@ function renderSOPTab() {
   if (kpisContainer) {
     kpisContainer.innerHTML = `
       <div class="kpi-card" style="border-top: 4px solid var(--accent-indigo);">
-        <div class="kpi-label">Big Team 01 — إجمالي التزام القطاع</div>
+        <div class="kpi-label">Big Team 01 — Sector Overall SOP Score</div>
         <div class="kpi-value" style="color: #fff; font-family: var(--font-mono); font-size: 1.85rem;">
           ${sectorOverallAvg}%
           <span style="font-size: 0.85rem; color: #818cf8; font-weight: 600;">(Sector Total)</span>
@@ -1089,11 +1089,11 @@ function renderSOPTab() {
         <div class="kpi-progress" style="margin-top: 8px;">
           <div class="kpi-bar" style="width: ${sectorOverallAvg}%; background: linear-gradient(90deg, #6366f1, #06b6d4);"></div>
         </div>
-        <div class="kpi-pct" style="color: var(--text-secondary);">متوسط شامل لكافة مراحل الـ 9 للفرق الـ 5</div>
+        <div class="kpi-pct" style="color: var(--text-secondary);">Comprehensive average across all 9 stages for all 5 teams</div>
       </div>
 
       <div class="kpi-card" style="border-top: 4px solid #10b981;">
-        <div class="kpi-label">المراحل المحققة للتارجت بالكامل</div>
+        <div class="kpi-label">Stages Meeting Target Fully</div>
         <div class="kpi-value" style="color: #10b981; font-family: var(--font-mono); font-size: 1.85rem;">
           ${sectorRoundsMet} <span style="font-size: 1rem; color: var(--text-muted);">/ 9 Stages</span>
         </div>
@@ -1101,11 +1101,11 @@ function renderSOPTab() {
         <div class="kpi-progress" style="margin-top: 8px;">
           <div class="kpi-bar" style="width: ${(sectorRoundsMet / 9) * 100}%; background: #10b981;"></div>
         </div>
-        <div class="kpi-pct" style="color: #10b981;">4 مراحل إضافية في نطاق التسامح (قريبة)</div>
+        <div class="kpi-pct" style="color: #10b981;">4 additional stages within tolerance range (Near)</div>
       </div>
 
       <div class="kpi-card" style="border-top: 4px solid #06b6d4;">
-        <div class="kpi-label">أعلى مرحلة أداءً في القطاع</div>
+        <div class="kpi-label">Highest Performing Stage in Sector</div>
         <div class="kpi-value" style="color: #06b6d4; font-family: var(--font-mono); font-size: 1.45rem;">
           ${topRound.label.split(' ')[0]} ${topRound.label.split(' ')[1]} (${roundAverages[topRound.key]}%)
         </div>
@@ -1113,11 +1113,11 @@ function renderSOPTab() {
         <div class="kpi-progress" style="margin-top: 8px;">
           <div class="kpi-bar" style="width: ${roundAverages[topRound.key]}%; background: #06b6d4;"></div>
         </div>
-        <div class="kpi-pct" style="color: #06b6d4;">أفضل فريق: ME-EGSS05 (95%)</div>
+        <div class="kpi-pct" style="color: #06b6d4;">Top Team: ME-EGSS05 (95%)</div>
       </div>
 
       <div class="kpi-card" style="border-top: 4px solid #f43f5e;">
-        <div class="kpi-label">أولوية التدخل العاجل (Bottleneck)</div>
+        <div class="kpi-label">Urgent Operational Bottleneck</div>
         <div class="kpi-value" style="color: #f43f5e; font-family: var(--font-mono); font-size: 1.45rem;">
           ${worstGapRound.key}: ${roundAverages[worstGapRound.key]}%
         </div>
@@ -1125,7 +1125,7 @@ function renderSOPTab() {
         <div class="kpi-progress" style="margin-top: 8px;">
           <div class="kpi-bar" style="width: ${roundAverages[worstGapRound.key]}%; background: #f43f5e;"></div>
         </div>
-        <div class="kpi-pct" style="color: #f43f5e;">فجوة ${worstGap.toFixed(1)}% — تتطلب متابعة مباشرة لليدز خارج المسبح</div>
+        <div class="kpi-pct" style="color: #f43f5e;">Gap of ${worstGap.toFixed(1)}% — requires immediate focus on R5 Out-of-Pool leads</div>
       </div>
     `;
   }
@@ -1177,7 +1177,7 @@ function renderSOPTab() {
 
     matrixFoot.innerHTML = `
       <tr style="background: rgba(99, 102, 241, 0.15); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
-        <td style="color: #fff; font-size: 0.88rem;">متوسط التزام الـ SOP (TOTAL AVERAGE)</td>
+        <td style="color: #fff; font-size: 0.88rem;">SOP Overall Compliance (TOTAL AVERAGE)</td>
         <td style="text-align: center; font-family: var(--font-mono); color: var(--text-secondary);">80.0%</td>
         <td style="background: rgba(99, 102, 241, 0.3); border-left: 2px solid #6366f1; border-right: 2px solid #6366f1; text-align: center; font-family: var(--font-mono); font-size: 1.05rem; color: #fff;">
           ⭐ ${sectorOverallAvg}%
@@ -1203,7 +1203,7 @@ function renderSOPTab() {
       <div style="margin-bottom: 12px; padding: 8px 10px; background: rgba(99, 102, 241, 0.12); border-radius: var(--radius-sm); border: 1px solid rgba(99, 102, 241, 0.25);">
         <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 4px;">
           <span style="color: #fff; font-weight: 800; display: flex; align-items: center; gap: 6px;">
-            ⭐ Big Team 01 (إجمالي القطاع)
+            ⭐ Big Team 01 (Sector Total)
           </span>
           <span style="font-family: var(--font-mono); color: ${bigClr}; font-weight: 800;">${bigVal}%</span>
         </div>
@@ -1251,11 +1251,11 @@ function renderSOPTab() {
     const sortedTeams = [...teamKeys].sort((a, b) => teamSopAverages[b] - teamSopAverages[a]);
 
     const teamRecommendations = {
-      "ME-EGSS05": "أداء قيادي استثنائي (المركز الأول 83.3%). الأولوية القصوى: تحسين R5 متابعة خارج المسبح من 62% إلى 70%.",
-      "ME-EGSS13": "التزام قوي ومتقارب مع المتصدر (82.2%). التركيز على رفع R5 (69%) وإغلاق الترقية U2 (78%).",
-      "ME-EGSS01": "أداء متوازن (78.4%). يتطلب تدخلاً مباشراً في R5 (55%) ورفع نسبة إغلاق الترقية U2 (75%).",
-      "ME-EGSS10": "تراجع في نسب الالتزام (74.7%). تدريب عاجل على R5 خارج المسبح (48%)، وحصص الإنجلش كلوب EC (65%).",
-      "ME-EGSS30": "يحتاج خطة إنقاذ وتدخل تشغيلي شامل (72.0%). التركيز على R5 (45%) والإنجلش كلوب (60%) وترقية U2 (68%)."
+      "ME-EGSS05": "Exceptional leadership performance (Rank #1, 83.3%). Top priority: boost R5 Out-of-Pool follow-up from 62% to 70%.",
+      "ME-EGSS13": "Strong compliance closely trailing leader (82.2%). Focus on elevating R5 (69%) and closing Upgrade U2 (78%).",
+      "ME-EGSS01": "Balanced performance (78.4%). Requires direct intervention in R5 (55%) and lifting Upgrade U2 closing (75%).",
+      "ME-EGSS10": "Declining compliance pacing (74.7%). Urgent coaching on R5 Out-of-Pool (48%) and English Club classes EC (65%).",
+      "ME-EGSS30": "Requires comprehensive rescue plan and operational overhaul (72.0%). Urgent focus on R5 (45%), English Club (60%), and U2 upgrades (68%)."
     };
 
     sortedTeams.forEach((tk, rankIdx) => {
@@ -1334,7 +1334,7 @@ function renderSOPTab() {
 
         <!-- Action / Coaching Note -->
         <div style="background: rgba(99, 102, 241, 0.06); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.5;">
-          <strong style="color: #818cf8;">💡 توجيه المتابعة الميدانية:</strong>
+          <strong style="color: #818cf8;">💡 Field Coaching Directive:</strong>
           <div style="margin-top: 3px; color: #e2e8f0;">${teamRecommendations[tk] || ''}</div>
         </div>
       `;
@@ -3021,7 +3021,7 @@ function initPersonalRepSelect() {
   if (!sel || !window.MASTER_OPERATIONS_DATA) return;
 
   const reps = MASTER_OPERATIONS_DATA.sop.map(r => r.name).sort();
-  sel.innerHTML = '<option value="">-- اختر اسمك (Select Your Name) --</option>';
+  sel.innerHTML = '<option value="">-- Select Your Name (Sales Rep) --</option>';
 
   reps.forEach(rep => {
     const opt = document.createElement('option');
@@ -3046,7 +3046,7 @@ function onPersonalRepSelected() {
 
   if (btn) {
     btn.style.display = 'inline-flex';
-    btn.innerHTML = `📥 تحميل ليدات ${rep} (.CSV)`;
+    btn.innerHTML = `📥 Download Leads for ${rep} (.CSV)`;
   }
 
   const info = LEADS_SUMMARY[rep] || { sopCount: 0, ftCount: 0, ccCount: 0, ecCount: 0, totalLeads: 0 };
@@ -3055,27 +3055,27 @@ function onPersonalRepSelected() {
     summaryBox.style.display = 'block';
     cardsContainer.innerHTML = `
       <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 مهام SOP المعلقة</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.sopCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">مهام</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">متابعة وتوعية فورية</div>
+        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 Pending SOP Tasks</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.sopCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">tasks</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Immediate follow-up & awareness</div>
       </div>
 
-      <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 طلاب بدون معلمين ثابتين</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ftCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طلاب</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف الربط 80%</div>
+      <div style="background: rgba(160, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
+        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 Students Without Fixed Teachers</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ftCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">students</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 80%</div>
       </div>
 
       <div style="background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 إنقاذ استهلاك الحصص</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ccCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">حسابات</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">تركيز على Zero-Class</div>
+        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 Class Consumption Rescue</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ccCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">accounts</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Zero-Class focus</div>
       </div>
 
       <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ ليدات English Club</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ecCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">مؤهلين</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">لتحقيق هدف 40%</div>
+        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ English Club Qualified Leads</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ecCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">qualified</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Targeting 40% adoption</div>
       </div>
     `;
   }
@@ -3085,7 +3085,7 @@ function downloadSelectedRepLeads() {
   const sel = document.getElementById('personalRepSelect');
   const rep = sel ? sel.value : '';
   if (!rep) {
-    alert('الرجاء اختيار اسمك أولاً!');
+    alert('Please select your name first!');
     return;
   }
 
