@@ -1,4 +1,4 @@
-/* =========================================================================
+﻿/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -1568,24 +1568,21 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-09-16 12:07:34',
-      name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-09-16 14:43:18', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
       chkId: 'chkECSheet',
       timeId: 'timeECSheet',
       itemId: 'syncItemEC',
-      latestTime: '2026-09-16 14:38:00',
-      name: 'English Club Sheet'
+      latestTime: '2026-09-16 14:39:11', name: 'English Club Sheet'
     },
     {
       idPrefix: 'SOP',
       chkId: 'chkSOPSheet',
       timeId: 'timeSOPSheet',
       itemId: 'syncItemSOP',
-      latestTime: '2026-09-16 14:22:00',
-      name: 'SOP Compliance Sheet'
+      latestTime: '2026-09-16 14:23:13', name: 'SOP Compliance Sheet'
     }
   ];
 
@@ -3235,3 +3232,4 @@ function downloadSelectedRepLeads() {
   link.click();
   document.body.removeChild(link);
 }
+
