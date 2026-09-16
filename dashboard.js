@@ -365,68 +365,264 @@ function renderTeamBars(model) {
   if (!container) return;
   container.innerHTML = '';
 
-  // Sort teams descending by cash achievement % (Highest at top, lowest at bottom)
-  const sortedTeams = Object.values(model.teams).sort((a, b) => b.achievement - a.achievement);
+  const MAX_SCALE = 103; // Official pacing curve ends at 103%
+  const daysPassed = model.summary.daysPassed || 16;
   const pacePct = model.summary.targetPacePct || 46;
+  const posToday = Math.min(100, Math.max(0, (pacePct / MAX_SCALE) * 100));
+  const pos100 = (100 / MAX_SCALE) * 100; // 97.087%
+
+  // Big Team 01 metrics
+  const expCashBigTeam = Math.round(model.summary.totalTarget * (pacePct / 100));
+  const diffBigTeamCash = model.summary.totalCash - expCashBigTeam;
+  const diffBigTeamPct = Math.round((model.summary.achievement - pacePct) * 10) / 10;
+  const bigTeamWidthPct = Math.min(100, Math.max(0, (model.summary.achievement / MAX_SCALE) * 100));
+
+  let bigTeamBadge = '';
+  if (model.summary.achievement >= pacePct) {
+    bigTeamBadge = `<span style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🟢 مسبق للمسار (+${diffBigTeamPct}%)</span>`;
+  } else if (model.summary.achievement >= pacePct - 8) {
+    bigTeamBadge = `<span style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🟡 قريب من المسار (${diffBigTeamPct}%)</span>`;
+  } else {
+    bigTeamBadge = `<span style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🔴 متأخر عن المسار (${diffBigTeamPct}%)</span>`;
+  }
+
+  // Key milestones from the official 30-day table
+  const rulerMilestones = [
+    { day: 1, pct: 5 },
+    { day: 5, pct: 14 },
+    { day: 10, pct: 29 },
+    { day: 14, pct: 40 },
+    { day: 15, pct: 43 },
+    { day: 16, pct: 46, isToday: true },
+    { day: 20, pct: 54 },
+    { day: 25, pct: 65 },
+    { day: 27, pct: 80 },
+    { day: 28, pct: 87 },
+    { day: 29, pct: 94 },
+    { day: 30, pct: 103, isGoal: true }
+  ];
+
+  function getScalePos(pct) {
+    return Math.min(100, Math.max(0, (pct / MAX_SCALE) * 100));
+  }
+
+  // Outer Relative Wrapper
+  const wrapper = document.createElement('div');
+  wrapper.style.position = 'relative';
+
+  // Continuous Vertical Target Guideline passing down through all tracks
+  const lineRatio = pacePct / MAX_SCALE;
+  const guideLine = document.createElement('div');
+  guideLine.style.position = 'absolute';
+  guideLine.style.left = `calc(20px + (100% - 40px) * ${lineRatio})`;
+  guideLine.style.top = '96px';
+  guideLine.style.bottom = '8px';
+  guideLine.style.width = '0';
+  guideLine.style.borderLeft = '2px dashed #38bdf8';
+  guideLine.style.boxShadow = '0 0 12px rgba(56, 189, 248, 0.85)';
+  guideLine.style.zIndex = '8';
+  guideLine.style.pointerEvents = 'none';
+  guideLine.style.opacity = '0.9';
+  wrapper.appendChild(guideLine);
+
+  // 1. TOP BENCHMARK RULER (5% to 103%)
+  const rulerCard = document.createElement('div');
+  rulerCard.className = 'pacing-scale-header';
+  rulerCard.style.background = 'rgba(15, 23, 42, 0.8)';
+  rulerCard.style.border = '1px solid rgba(56, 189, 248, 0.35)';
+  rulerCard.style.borderRadius = 'var(--radius-md)';
+  rulerCard.style.padding = '18px 20px 24px 20px';
+  rulerCard.style.marginBottom = '20px';
+  rulerCard.style.position = 'relative';
+  rulerCard.style.boxShadow = '0 6px 24px rgba(0, 0, 0, 0.35)';
+
+  // Build ticks HTML
+  let ticksHtml = '';
+  rulerMilestones.forEach(m => {
+    const pos = getScalePos(m.pct);
+    if (m.isToday) {
+      ticksHtml += `
+        <!-- Floating Pin Above Today -->
+        <div style="position: absolute; left: ${pos}%; top: -36px; transform: translateX(-50%); z-index: 15; text-align: center; white-space: nowrap;">
+          <div style="background: linear-gradient(135deg, #0284c7, #38bdf8); color: #fff; font-size: 0.78rem; font-weight: 900; padding: 4px 12px; border-radius: 6px; box-shadow: 0 0 16px rgba(56, 189, 248, 0.9); border: 1px solid #bae6fd; display: inline-flex; align-items: center; gap: 6px; direction: rtl;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #fff; box-shadow: 0 0 6px #fff;"></span>
+            <span>📍 اليوم ${m.day} — المستهدف: <bdi dir="ltr" style="font-weight: 900;">${m.pct}%</bdi></span>
+          </div>
+          <div style="width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 7px solid #38bdf8; margin: 0 auto;"></div>
+        </div>
+        <!-- Tick Line on Track -->
+        <div style="position: absolute; left: ${pos}%; top: -5px; width: 3px; height: 18px; background: #38bdf8; border-radius: 2px; box-shadow: 0 0 10px #38bdf8; z-index: 12;" title="Day ${m.day}: ${m.pct}% (Today's Benchmark)"></div>
+        <!-- Label Below Track -->
+        <div style="position: absolute; left: ${pos}%; top: 16px; transform: translateX(-50%); font-size: 0.74rem; font-weight: 900; color: #38bdf8; text-align: center; white-space: nowrap;">
+          D${m.day}<br><span style="font-size: 0.78rem;" dir="ltr">${m.pct}%</span>
+        </div>
+      `;
+    } else {
+      const isTarget100 = m.pct === 100;
+      const clr = m.isGoal ? '#10b981' : (isTarget100 ? '#fff' : 'rgba(255,255,255,0.65)');
+      const borderClr = m.isGoal ? '#10b981' : 'rgba(255,255,255,0.35)';
+      ticksHtml += `
+        <div style="position: absolute; left: ${pos}%; top: -1px; width: 2px; height: 10px; background: ${borderClr};" title="Day ${m.day}: ${m.pct}%"></div>
+        <div style="position: absolute; left: ${pos}%; top: 16px; transform: translateX(-50%); font-size: 0.66rem; color: ${clr}; text-align: center; white-space: nowrap;">
+          D${m.day}<br><span style="font-weight: 700; font-family: var(--font-mono);" dir="ltr">${m.pct}%</span>
+        </div>
+      `;
+    }
+  });
+
+  // Target 100% tick marker on ruler
+  ticksHtml += `
+    <div style="position: absolute; left: ${pos100}%; top: -4px; width: 2.5px; height: 16px; background: #fff; border-radius: 1px; box-shadow: 0 0 8px rgba(255,255,255,0.8);" title="Full Target (100%)"></div>
+    <div style="position: absolute; left: ${pos100}%; top: 16px; transform: translateX(-50%); font-size: 0.66rem; color: #fff; font-weight: 800; text-align: center; white-space: nowrap;">
+      Target<br><span style="font-weight: 900; font-family: var(--font-mono);" dir="ltr">100%</span>
+    </div>
+  `;
+
+  rulerCard.innerHTML = `
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 7px; border-radius: var(--radius-sm); display: flex;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </span>
+        <div>
+          <h3 style="font-size: 1rem; font-weight: 800; color: #fff; margin: 0;">
+            مؤشر المسار التراكمي المعتمد للتارجت (من 5% إلى 103%)
+          </h3>
+          <span style="font-size: 0.78rem; color: var(--text-secondary);">
+            المقياس التراكمي المعتمد لقياس سرعة تحقيق التارجت اليومي للقطاع بالكامل والفرق الصغيرة والأفراد
+          </span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; font-size: 0.82rem;">
+        <span style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); padding: 5px 14px; border-radius: 20px; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; direction: rtl;">
+          <span>🎯 مستهدف اليوم ${daysPassed}:</span>
+          <bdi dir="ltr" style="font-weight: 900;">${pacePct}%</bdi>
+          <span style="color: var(--text-muted);">|</span>
+          <bdi dir="ltr">${fmt(expCashBigTeam)}</bdi>
+        </span>
+      </div>
+    </div>
+
+    <!-- The Ruler Scale Track -->
+    <div style="position: relative; height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; margin-top: 42px; margin-bottom: 30px;">
+      <!-- Subtle Gradient Fill up to today -->
+      <div style="height: 100%; width: ${posToday}%; background: linear-gradient(90deg, rgba(56,189,248,0.2), rgba(56,189,248,0.55)); border-radius: 4px;"></div>
+      ${ticksHtml}
+    </div>
+  `;
+  wrapper.appendChild(rulerCard);
+
+  // 2. MASTER BENCHMARK ROW: ⭐ Big Team 01 (Sector Total)
+  const bigTeamRow = document.createElement('div');
+  bigTeamRow.style.marginBottom = '18px';
+  bigTeamRow.style.background = 'linear-gradient(90deg, rgba(99, 102, 241, 0.14), rgba(15, 23, 42, 0.7))';
+  bigTeamRow.style.border = '1.5px solid rgba(99, 102, 241, 0.45)';
+  bigTeamRow.style.padding = '14px 20px';
+  bigTeamRow.style.borderRadius = 'var(--radius-md)';
+  bigTeamRow.style.boxShadow = '0 4px 18px rgba(99, 102, 241, 0.2)';
+  bigTeamRow.style.position = 'relative';
+
+  bigTeamRow.innerHTML = `
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; position: relative; z-index: 2;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 1.15rem;">⭐</span>
+        <span style="color: #818cf8; font-weight: 900; font-size: 1.1rem; letter-spacing: 0.3px;">Big Team 01 — إجمالي القطاع</span>
+        <span style="color: var(--text-muted); font-size: 0.82rem;">(Senior Manager: Saber Hussien)</span>
+        ${bigTeamBadge}
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 1rem; direction: ltr;">
+        <span style="color: #fff; font-weight: 900;">${fmt(model.summary.totalCash)}</span>
+        <span style="color: var(--text-muted);"> / ${fmt(model.summary.totalTarget)}</span>
+        <span style="color: ${getStatusColor(model.summary.achievement)}; font-weight: 900; margin-left: 8px;">(${fmtPct(model.summary.achievement)})</span>
+      </div>
+    </div>
+
+    <!-- Progress Track (Exact 103% scale) -->
+    <div style="position: relative; height: 18px; background: rgba(255,255,255,0.07); border-radius: 9px; overflow: visible; margin-bottom: 8px;">
+      <!-- Filled Bar -->
+      <div style="height: 100%; width: ${bigTeamWidthPct}%; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 9px; transition: width 0.8s ease; box-shadow: 0 0 12px rgba(99, 102, 241, 0.55);"></div>
+      <!-- 100% Target Marker -->
+      <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 26px; background: rgba(255,255,255,0.85); border-radius: 1px;" title="Full Target (100%): ${fmt(model.summary.totalTarget)}"></div>
+      <!-- Day 16 (46%) Benchmark Marker Line -->
+      <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 30px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="مستهدف اليوم ${daysPassed} (${pacePct}%)"></div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); flex-wrap: wrap; gap: 8px; position: relative; z-index: 2;">
+      <span style="direction: rtl; display: inline-flex; align-items: center; gap: 6px;">
+        🎯 <span>مستهدف اليوم ${daysPassed} (<bdi dir="ltr">${pacePct}%</bdi>):</span> 
+        <bdi dir="ltr" style="color: #38bdf8; font-weight: 800;">${fmt(expCashBigTeam)}</bdi>
+        <span style="direction: rtl;">(${diffBigTeamCash >= 0 ? '<span style="color:#10b981; font-weight:700;">زيادة <bdi dir="ltr">+' + fmt(diffBigTeamCash) + '</bdi></span>' : '<span style="color:#f43f5e; font-weight:700;">عجز <bdi dir="ltr">-' + fmt(Math.abs(diffBigTeamCash)) + '</bdi></span>'})</span>
+      </span>
+      <span>العقود: <strong>${model.summary.totalContracts}</strong> (M2: ${model.summary.totalUpgradeM2}) | المتوقع بنهاية الشهر: <strong style="color: #38bdf8;"><bdi dir="ltr">${fmt(model.summary.projectedCash)}</bdi></strong> | المطلوب يومياً: <strong><bdi dir="ltr">${fmt(model.summary.dailyNeeded)}/day</bdi></strong></span>
+    </div>
+  `;
+  wrapper.appendChild(bigTeamRow);
+
+  // 3. THE 5 SMALL TEAMS (Ranked by Cash % Descending)
+  const sortedTeams = Object.values(model.teams).sort((a, b) => b.achievement - a.achievement);
 
   sortedTeams.forEach((t, idx) => {
-    // Fill width matches EXACT achievement percentage relative to 100% target
-    const cashWidthPct = Math.min(100, Math.max(0, t.achievement));
+    // Fill width relative to MAX_SCALE (103%)
+    const cashWidthPct = Math.min(100, Math.max(0, (t.achievement / MAX_SCALE) * 100));
     const expCashAtPace = Math.round(t.target * (pacePct / 100));
     const paceDiffPct = Math.round((t.achievement - pacePct) * 10) / 10;
     const paceDiffCash = t.cash - expCashAtPace;
 
     let paceBadge = '';
     if (t.achievement >= pacePct) {
-      paceBadge = `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🟢 مسبق للمسار (+${paceDiffPct}%)</span>`;
+      paceBadge = `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; direction: rtl;">🟢 مسبق للمسار (<bdi dir="ltr">+${paceDiffPct}%</bdi>)</span>`;
     } else if (t.achievement >= pacePct - 8) {
-      paceBadge = `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🟡 قريب من المسار (${paceDiffPct}%)</span>`;
+      paceBadge = `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; direction: rtl;">🟡 قريب من المسار (<bdi dir="ltr">${paceDiffPct}%</bdi>)</span>`;
     } else {
-      paceBadge = `<span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🔴 متأخر عن المسار (${paceDiffPct}%)</span>`;
+      paceBadge = `<span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; direction: rtl;">🔴 متأخر عن المسار (<bdi dir="ltr">${paceDiffPct}%</bdi>)</span>`;
     }
 
     const row = document.createElement('div');
-    row.style.marginBottom = '18px';
+    row.style.marginBottom = '16px';
     row.style.background = 'rgba(255,255,255,0.02)';
-    row.style.padding = '12px 16px';
+    row.style.padding = '14px 20px';
     row.style.borderRadius = 'var(--radius-md)';
     row.style.border = '1px solid var(--border-glass)';
+    row.style.position = 'relative';
     row.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; position: relative; z-index: 2;">
         <div style="display: flex; align-items: center; gap: 8px;">
           <span style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 1rem;">#${idx + 1}</span>
           <span style="color: ${t.color}; font-weight: 800; font-size: 1.05rem;">${t.label}</span>
           <span style="color: var(--text-muted); font-size: 0.8rem;">(TL: ${t.tl})</span>
           ${paceBadge}
         </div>
-        <div style="font-family: var(--font-mono); font-size: 0.95rem;">
+        <div style="font-family: var(--font-mono); font-size: 0.95rem; direction: ltr;">
           <span style="color: #fff; font-weight: 800;">${fmt(t.cash)}</span>
           <span style="color: var(--text-muted);"> / ${fmt(t.target)}</span>
           <span style="color: ${getStatusColor(t.achievement)}; font-weight: 800; margin-left: 8px;">(${fmtPct(t.achievement)})</span>
         </div>
       </div>
 
-      <div style="position: relative; height: 14px; background: rgba(255,255,255,0.06); border-radius: 7px; overflow: visible; margin-bottom: 8px;">
-        <!-- Filled progress bar matching exact achievement percentage -->
-        <div style="height: 100%; width: ${cashWidthPct}%; background: ${t.color}; border-radius: 7px; transition: width 0.8s ease;"></div>
-        <!-- 100% Target Line Marker at Right Edge -->
-        <div style="position: absolute; top: -3px; right: 0; width: 3px; height: 20px; background: rgba(255,255,255,0.8); border-radius: 2px;" title="Full Target (100%): ${fmt(t.target)}"></div>
+      <div style="position: relative; height: 16px; background: rgba(255,255,255,0.06); border-radius: 8px; overflow: visible; margin-bottom: 8px;">
+        <!-- Filled progress bar matching achievement on 103% scale -->
+        <div style="height: 100%; width: ${cashWidthPct}%; background: ${t.color}; border-radius: 8px; transition: width 0.8s ease; box-shadow: 0 0 10px ${t.color}45;"></div>
+        <!-- 100% Target Line Marker at 97.1% -->
+        <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 24px; background: rgba(255,255,255,0.8); border-radius: 1px;" title="Full Target (100%): ${fmt(t.target)}"></div>
         <!-- Official Benchmark Pace Line Marker (Day 16 = 46%) -->
-        <div style="position: absolute; top: -3px; left: ${pacePct}%; width: 2px; height: 20px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 8px rgba(56,189,248,0.8);" title="Official Target Pace: Day ${model.summary.daysPassed} Benchmark (${pacePct}%)"></div>
+        <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 28px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="Official Target Pace: Day ${daysPassed} Benchmark (${pacePct}%)"></div>
       </div>
 
-      <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-secondary); flex-wrap: wrap; gap: 8px;">
-        <span>
-          🎯 <strong>مستهدف اليوم ${model.summary.daysPassed} (${pacePct}%):</strong> 
-          <strong style="color: #38bdf8;">${fmt(expCashAtPace)}</strong>
-          (${paceDiffCash >= 0 ? '<span style="color:#10b981; font-weight:700;">+' + fmt(paceDiffCash) + ' زيادة</span>' : '<span style="color:#f43f5e; font-weight:700;">' + fmt(paceDiffCash) + ' عجز</span>'})
+      <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-secondary); flex-wrap: wrap; gap: 8px; position: relative; z-index: 2;">
+        <span style="direction: rtl; display: inline-flex; align-items: center; gap: 6px;">
+          🎯 <span>مستهدف اليوم ${daysPassed} (<bdi dir="ltr">${pacePct}%</bdi>):</span> 
+          <bdi dir="ltr" style="color: #38bdf8; font-weight: 800;">${fmt(expCashAtPace)}</bdi>
+          <span style="direction: rtl;">(${paceDiffCash >= 0 ? '<span style="color:#10b981; font-weight:700;">زيادة <bdi dir="ltr">+' + fmt(paceDiffCash) + '</bdi></span>' : '<span style="color:#f43f5e; font-weight:700;">عجز <bdi dir="ltr">-' + fmt(Math.abs(paceDiffCash)) + '</bdi></span>'})</span>
         </span>
-        <span>Orders: <strong>${t.contracts}</strong> (M2: ${t.upgradeM2}) | Proj: <strong style="color: #38bdf8;">${fmt(t.projected)}</strong> | Need: <strong>${fmt(t.dailyNeeded)}/day</strong></span>
+        <span>Orders: <strong>${t.contracts}</strong> (M2: ${t.upgradeM2}) | Proj: <strong style="color: #38bdf8;"><bdi dir="ltr">${fmt(t.projected)}</bdi></strong> | Need: <strong><bdi dir="ltr">${fmt(t.dailyNeeded)}/day</bdi></strong></span>
       </div>
     `;
-    container.appendChild(row);
+    wrapper.appendChild(row);
   });
+
+  container.appendChild(wrapper);
 }
+
 
 function renderOverviewTable(model) {
   const tbody = document.getElementById('overviewTableBody');
