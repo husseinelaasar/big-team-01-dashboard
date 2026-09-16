@@ -83,6 +83,11 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         Actionable Recommendations
       </button>
+      <button class="tab" data-tab="operations">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        Operations Master
+        <span style="background: linear-gradient(135deg, #10b981, #06b6d4); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">TRIAL</span>
+      </button>
     </div>
 
     <!-- ============================================== -->
@@ -349,6 +354,101 @@
         <span class="source-tag">Automated diagnostic intelligence based on current pace</span>
       </div>
       <div id="recommendationsContent" class="recommendations-grid"></div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 7: OPERATIONS MASTER (ALL IN ONE INTEGRATION TRIAL) -->
+    <!-- ============================================== -->
+    <section id="tab-operations" class="tab-content">
+      <div class="section-header" style="align-items: flex-start; margin-bottom: 24px;">
+        <div>
+          <h2>All In One Master — Operational Drivers & Field Intelligence <span style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 3px 8px; border-radius: 6px; font-weight: 700; margin-left: 8px;">TRIAL PREVIEW</span></h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Integrated 4-Module Execution Matrix for Big Team 01 (25 Active SS Reps): SOP Pending Tasks, Unfixed Teachers, Consumption Rescue, and English Club.
+          </p>
+        </div>
+        <span class="source-tag" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+          Source: D:\Lens\All in one Master.xlsx
+        </span>
+      </div>
+
+      <!-- 4 Module Summary Hero Cards -->
+      <div class="op-kpi-grid">
+        <!-- Module 1 Card -->
+        <div class="op-card m1 active" onclick="switchOperationsModule(1)" id="opCard1">
+          <div class="op-title">Module 1: SOP Pending Tasks</div>
+          <div class="op-value" id="opSopTotal">621</div>
+          <div class="op-sub">
+            <strong style="color: #f43f5e;">15</strong> Round 1 Awareness Leads<br>
+            25 Active SS Reps
+          </div>
+        </div>
+
+        <!-- Module 2 Card -->
+        <div class="op-card m2" onclick="switchOperationsModule(2)" id="opCard2">
+          <div class="op-title">Module 2: Unfixed Teachers</div>
+          <div class="op-value" id="opFtTotal">1,360</div>
+          <div class="op-sub">
+            M0 Fix: <strong style="color: #f59e0b;">43.1%</strong> (Target 80%)<br>
+            M1 Fix: <strong style="color: #10b981;">78.8%</strong> (Target 80%)
+          </div>
+        </div>
+
+        <!-- Module 3 Card -->
+        <div class="op-card m3" onclick="switchOperationsModule(3)" id="opCard3">
+          <div class="op-title">Module 3: Class Consumption</div>
+          <div class="op-value" id="opCcTotal">5,197</div>
+          <div class="op-sub">
+            <strong style="color: #f43f5e;">1,123</strong> Zero-Class Leads (Rescue)<br>
+            Period Target: &ge; 8 Classes
+          </div>
+        </div>
+
+        <!-- Module 4 Card -->
+        <div class="op-card m4" onclick="switchOperationsModule(4)" id="opCard4">
+          <div class="op-title">Module 4: English Club (40%)</div>
+          <div class="op-value" id="opEcGoal">818</div>
+          <div class="op-sub">
+            Base: 2,043 | Attended: <strong style="color: #c084fc;">355</strong><br>
+            Remaining Needed: <strong style="color: #f59e0b;">466 IDs</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module Selector Pills & Team Filter -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+        <div class="op-module-pills" style="margin-bottom: 0;">
+          <button class="op-pill p1 active" onclick="switchOperationsModule(1)" id="opPill1">
+            <span>📋</span> Module 1: SOP Pending (621 Tasks)
+          </button>
+          <button class="op-pill p2" onclick="switchOperationsModule(2)" id="opPill2">
+            <span>👩‍🏫</span> Module 2: Unfixed Teachers (1,360 Leads)
+          </button>
+          <button class="op-pill p3" onclick="switchOperationsModule(3)" id="opPill3">
+            <span>🎓</span> Module 3: Class Consumption & Zero-Class
+          </button>
+          <button class="op-pill p4" onclick="switchOperationsModule(4)" id="opPill4">
+            <span>🗣️</span> Module 4: English Club 40% Goal (818 IDs)
+          </button>
+        </div>
+
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
+          <select id="opTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;">
+            <option value="ALL">All Teams (Big Team 01)</option>
+            <option value="ME-EGSS01">ME-EGSS01</option>
+            <option value="ME-EGSS05">ME-EGSS05</option>
+            <option value="ME-EGSS10">ME-EGSS10</option>
+            <option value="ME-EGSS13">ME-EGSS13</option>
+            <option value="ME-EGSS30">ME-EGSS30</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Table Display for Active Module -->
+      <div class="table-container" id="operationsTableWrapper">
+        <div id="operationsTableContent"></div>
+      </div>
     </section>
 
     <!-- Footer -->

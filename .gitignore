@@ -10,3 +10,8 @@ START_BROWSER_AUTOMATION.bat
 .agents/
 node_modules/
 *.log
+*.ps1
+*.exe
+inject_operations_js.js
+operations_clean_data.js
+master_extracted_data.json

@@ -1214,3 +1214,123 @@ body::after {
   .dashboard-footer { flex-direction: column; gap: 8px; text-align: center; }
   .filter-bar { flex-direction: column; }
 }
+
+/* ============ OPERATIONS MASTER (4 MODULES) ============ */
+.op-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.op-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+}
+.op-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.op-card.m1 { border-left: 4px solid #3b82f6; }
+.op-card.m2 { border-left: 4px solid #10b981; }
+.op-card.m3 { border-left: 4px solid #f97316; }
+.op-card.m4 { border-left: 4px solid #a855f7; }
+
+.op-card .op-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.op-card .op-value {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.op-card .op-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.op-module-pills {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.op-pill {
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.op-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+.op-pill.active {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: var(--accent-indigo);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+}
+.op-pill.p1.active { border-color: #3b82f6; background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+.op-pill.p2.active { border-color: #10b981; background: rgba(16, 185, 129, 0.15); color: #34d399; }
+.op-pill.p3.active { border-color: #f97316; background: rgba(249, 115, 22, 0.15); color: #fb923c; }
+.op-pill.p4.active { border-color: #a855f7; background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+
+.op-badge-met {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.op-badge-below {
+  background: rgba(244, 63, 94, 0.15);
+  color: #f43f5e;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.op-badge-alert {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .op-kpi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .op-kpi-grid { grid-template-columns: 1fr; }
+  .op-module-pills { flex-direction: column; }
+}
+

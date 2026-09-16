@@ -823,6 +823,9 @@ function setupEvents(model) {
   if (teamFilter) teamFilter.addEventListener('change', () => renderIndividualsTab(model));
   if (sortFilter) sortFilter.addEventListener('change', () => renderIndividualsTab(model));
 
+  const opTeamFilter = document.getElementById('opTeamFilter');
+  if (opTeamFilter) opTeamFilter.addEventListener('change', () => renderOperationsTab());
+
   // Toggle View
   const btnCards = document.getElementById('viewToggleCards');
   const btnTable = document.getElementById('viewToggleTable');
@@ -859,6 +862,7 @@ window.addEventListener('DOMContentLoaded', () => {
   renderBreakdownTab(model);
   renderSOPTab();
   renderRecommendationsTab(model);
+  renderOperationsTab();
 
   setupEvents(model);
 
@@ -871,3 +875,1361 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }, 400);
 });
+
+
+
+// =========================================================================
+// OPERATIONS MASTER (ALL IN ONE INTEGRATION TRIAL)
+// =========================================================================
+
+const MASTER_OPERATIONS_DATA = {
+  "consumption": [
+    {
+      "name": "EGSS-adhmgadallah",
+      "total": 227,
+      "c0": 49,
+      "c1_3": 150,
+      "c4_7": 28,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS30"
+    },
+    {
+      "name": "EGSS-alihesham01",
+      "total": 104,
+      "c0": 17,
+      "c1_3": 70,
+      "c4_7": 16,
+      "c8_11": 1,
+      "c12": 0,
+      "team": "ME-EGSS30"
+    },
+    {
+      "name": "EGSS-abdelrhmanshehata",
+      "total": 112,
+      "c0": 20,
+      "c1_3": 60,
+      "c4_7": 32,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS30"
+    },
+    {
+      "name": "EGSS-ehabzaky01",
+      "total": 219,
+      "c0": 56,
+      "c1_3": 136,
+      "c4_7": 27,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-ibrahimismaiel",
+      "total": 241,
+      "c0": 62,
+      "c1_3": 153,
+      "c4_7": 26,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-titooooo",
+      "total": 229,
+      "c0": 44,
+      "c1_3": 154,
+      "c4_7": 31,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-abdelrahmannasef",
+      "total": 224,
+      "c0": 44,
+      "c1_3": 154,
+      "c4_7": 25,
+      "c8_11": 1,
+      "c12": 0,
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-omarmoneb",
+      "total": 214,
+      "c0": 49,
+      "c1_3": 147,
+      "c4_7": 18,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGLP-saraht",
+      "total": 188,
+      "c0": 48,
+      "c1_3": 126,
+      "c4_7": 14,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-samira01",
+      "total": 213,
+      "c0": 50,
+      "c1_3": 130,
+      "c4_7": 33,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-khaledgonam",
+      "total": 271,
+      "c0": 73,
+      "c1_3": 165,
+      "c4_7": 30,
+      "c8_11": 2,
+      "c12": 1,
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-ahmedshoukry",
+      "total": 285,
+      "c0": 57,
+      "c1_3": 187,
+      "c4_7": 41,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS10"
+    },
+    {
+      "name": "EGSS-mahmoudkhamis",
+      "total": 221,
+      "c0": 44,
+      "c1_3": 141,
+      "c4_7": 36,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS10"
+    },
+    {
+      "name": "EGLP-mohamed06",
+      "total": 188,
+      "c0": 33,
+      "c1_3": 126,
+      "c4_7": 29,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS10"
+    },
+    {
+      "name": "EGSS-mohamedha",
+      "total": 207,
+      "c0": 59,
+      "c1_3": 124,
+      "c4_7": 24,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGSS-hayamhassan",
+      "total": 102,
+      "c0": 13,
+      "c1_3": 74,
+      "c4_7": 15,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGSS-marwaahmed",
+      "total": 251,
+      "c0": 55,
+      "c1_3": 166,
+      "c4_7": 28,
+      "c8_11": 2,
+      "c12": 0,
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGLP-shahdmahmoud",
+      "total": 107,
+      "c0": 20,
+      "c1_3": 69,
+      "c4_7": 18,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGSS-amrsafwat",
+      "total": 285,
+      "c0": 56,
+      "c1_3": 189,
+      "c4_7": 38,
+      "c8_11": 2,
+      "c12": 0,
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGSS-mahmoud04",
+      "total": 300,
+      "c0": 80,
+      "c1_3": 190,
+      "c4_7": 30,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGSS-nohayoussry",
+      "total": 211,
+      "c0": 40,
+      "c1_3": 137,
+      "c4_7": 33,
+      "c8_11": 1,
+      "c12": 0,
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGSS-juliamonir01",
+      "total": 240,
+      "c0": 44,
+      "c1_3": 173,
+      "c4_7": 23,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGLP-yasmin01",
+      "total": 108,
+      "c0": 18,
+      "c1_3": 75,
+      "c4_7": 15,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGSS-ashraqatal",
+      "total": 232,
+      "c0": 54,
+      "c1_3": 153,
+      "c4_7": 25,
+      "c8_11": 0,
+      "c12": 0,
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGSS-negma",
+      "total": 218,
+      "c0": 38,
+      "c1_3": 137,
+      "c4_7": 42,
+      "c8_11": 1,
+      "c12": 0,
+      "team": "ME-EGSS01"
+    }
+  ],
+  "unfixed": [
+    {
+      "name": "EGSS-adhmgadallah",
+      "m0Tot": 3,
+      "m0Fix": 2,
+      "m0Pct": "66.7%",
+      "m1Tot": 21,
+      "m1Fix": 19,
+      "m1Pct": "90.5%",
+      "team": "ME-EGSS30"
+    },
+    {
+      "name": "EGSS-alihesham01",
+      "m0Tot": 1,
+      "m0Fix": 0,
+      "m0Pct": "0.0%",
+      "m1Tot": 14,
+      "m1Fix": 13,
+      "m1Pct": "92.9%",
+      "team": "ME-EGSS30"
+    },
+    {
+      "name": "EGSS-abdelrhmanshehata",
+      "m0Tot": 5,
+      "m0Fix": 3,
+      "m0Pct": "60.0%",
+      "m1Tot": 14,
+      "m1Fix": 12,
+      "m1Pct": "85.7%",
+      "team": "ME-EGSS30"
+    },
+    {
+      "name": "EGSS-ehabzaky01",
+      "m0Tot": 6,
+      "m0Fix": 2,
+      "m0Pct": "33.3%",
+      "m1Tot": 14,
+      "m1Fix": 14,
+      "m1Pct": "100.0%",
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-ibrahimismaiel",
+      "m0Tot": 6,
+      "m0Fix": 3,
+      "m0Pct": "50.0%",
+      "m1Tot": 24,
+      "m1Fix": 16,
+      "m1Pct": "66.7%",
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-titooooo",
+      "m0Tot": 5,
+      "m0Fix": 1,
+      "m0Pct": "20.0%",
+      "m1Tot": 18,
+      "m1Fix": 16,
+      "m1Pct": "88.9%",
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-abdelrahmannasef",
+      "m0Tot": 6,
+      "m0Fix": 3,
+      "m0Pct": "50.0%",
+      "m1Tot": 20,
+      "m1Fix": 16,
+      "m1Pct": "80.0%",
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-omarmoneb",
+      "m0Tot": 3,
+      "m0Fix": 2,
+      "m0Pct": "66.7%",
+      "m1Tot": 16,
+      "m1Fix": 11,
+      "m1Pct": "68.8%",
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGLP-saraht",
+      "m0Tot": 7,
+      "m0Fix": 7,
+      "m0Pct": "100.0%",
+      "m1Tot": 28,
+      "m1Fix": 15,
+      "m1Pct": "53.6%",
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-samira01",
+      "m0Tot": 2,
+      "m0Fix": 1,
+      "m0Pct": "50.0%",
+      "m1Tot": 16,
+      "m1Fix": 15,
+      "m1Pct": "93.8%",
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-khaledgonam",
+      "m0Tot": 0,
+      "m0Fix": 0,
+      "m0Pct": "0.0%",
+      "m1Tot": 12,
+      "m1Fix": 5,
+      "m1Pct": "41.7%",
+      "team": "ME-EGSS05"
+    },
+    {
+      "name": "EGSS-ahmedshoukry",
+      "m0Tot": 3,
+      "m0Fix": 0,
+      "m0Pct": "0.0%",
+      "m1Tot": 25,
+      "m1Fix": 22,
+      "m1Pct": "88.0%",
+      "team": "ME-EGSS10"
+    },
+    {
+      "name": "EGSS-mahmoudkhamis",
+      "m0Tot": 7,
+      "m0Fix": 5,
+      "m0Pct": "71.4%",
+      "m1Tot": 27,
+      "m1Fix": 24,
+      "m1Pct": "88.9%",
+      "team": "ME-EGSS10"
+    },
+    {
+      "name": "EGLP-mohamed06",
+      "m0Tot": 6,
+      "m0Fix": 0,
+      "m0Pct": "0.0%",
+      "m1Tot": 24,
+      "m1Fix": 20,
+      "m1Pct": "83.3%",
+      "team": "ME-EGSS10"
+    },
+    {
+      "name": "EGSS-mohamedha",
+      "m0Tot": 3,
+      "m0Fix": 0,
+      "m0Pct": "0.0%",
+      "m1Tot": 20,
+      "m1Fix": 8,
+      "m1Pct": "40.0%",
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGSS-hayamhassan",
+      "m0Tot": 4,
+      "m0Fix": 2,
+      "m0Pct": "50.0%",
+      "m1Tot": 19,
+      "m1Fix": 19,
+      "m1Pct": "100.0%",
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGSS-marwaahmed",
+      "m0Tot": 4,
+      "m0Fix": 2,
+      "m0Pct": "50.0%",
+      "m1Tot": 16,
+      "m1Fix": 14,
+      "m1Pct": "87.5%",
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGLP-shahdmahmoud",
+      "m0Tot": 6,
+      "m0Fix": 0,
+      "m0Pct": "0.0%",
+      "m1Tot": 23,
+      "m1Fix": 16,
+      "m1Pct": "69.6%",
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGSS-amrsafwat",
+      "m0Tot": 1,
+      "m0Fix": 1,
+      "m0Pct": "100.0%",
+      "m1Tot": 26,
+      "m1Fix": 19,
+      "m1Pct": "73.1%",
+      "team": "ME-EGSS13"
+    },
+    {
+      "name": "EGSS-mahmoud04",
+      "m0Tot": 5,
+      "m0Fix": 4,
+      "m0Pct": "80.0%",
+      "m1Tot": 27,
+      "m1Fix": 23,
+      "m1Pct": "85.2%",
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGSS-nohayoussry",
+      "m0Tot": 3,
+      "m0Fix": 1,
+      "m0Pct": "33.3%",
+      "m1Tot": 23,
+      "m1Fix": 20,
+      "m1Pct": "87.0%",
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGSS-juliamonir01",
+      "m0Tot": 0,
+      "m0Fix": 0,
+      "m0Pct": "0.0%",
+      "m1Tot": 9,
+      "m1Fix": 4,
+      "m1Pct": "44.4%",
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGLP-yasmin01",
+      "m0Tot": 5,
+      "m0Fix": 1,
+      "m0Pct": "20.0%",
+      "m1Tot": 33,
+      "m1Fix": 28,
+      "m1Pct": "84.8%",
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGSS-ashraqatal",
+      "m0Tot": 6,
+      "m0Fix": 2,
+      "m0Pct": "33.3%",
+      "m1Tot": 22,
+      "m1Fix": 16,
+      "m1Pct": "72.7%",
+      "team": "ME-EGSS01"
+    },
+    {
+      "name": "EGSS-negma",
+      "m0Tot": 5,
+      "m0Fix": 2,
+      "m0Pct": "40.0%",
+      "m1Tot": 28,
+      "m1Fix": 24,
+      "m1Pct": "85.7%",
+      "team": "ME-EGSS01"
+    }
+  ],
+  "sop": [
+    {
+      "name": "EGSS-adhmgadallah",
+      "team": "ME-EGSS30",
+      "ec": 1,
+      "r1": 3,
+      "r2": 0,
+      "r3": 0,
+      "r4": 2,
+      "r6d": 4,
+      "r6e": 11,
+      "total": 23
+    },
+    {
+      "name": "EGSS-alihesham01",
+      "team": "ME-EGSS30",
+      "ec": 1,
+      "r1": 0,
+      "r2": 0,
+      "r3": 0,
+      "r4": 0,
+      "r6d": 0,
+      "r6e": 0,
+      "total": 1
+    },
+    {
+      "name": "EGSS-abdelrhmanshehata",
+      "team": "ME-EGSS30",
+      "ec": 0,
+      "r1": 1,
+      "r2": 0,
+      "r3": 0,
+      "r4": 0,
+      "r6d": 0,
+      "r6e": 0,
+      "total": 1
+    },
+    {
+      "name": "EGSS-ehabzaky01",
+      "team": "ME-EGSS05",
+      "ec": 0,
+      "r1": 0,
+      "r2": 0,
+      "r3": 0,
+      "r4": 0,
+      "r6d": 12,
+      "r6e": 4,
+      "total": 20
+    },
+    {
+      "name": "EGSS-ibrahimismaiel",
+      "team": "ME-EGSS05",
+      "ec": 3,
+      "r1": 0,
+      "r2": 2,
+      "r3": 0,
+      "r4": 1,
+      "r6d": 2,
+      "r6e": 2,
+      "total": 12
+    },
+    {
+      "name": "EGSS-titooooo",
+      "team": "ME-EGSS05",
+      "ec": 8,
+      "r1": 0,
+      "r2": 1,
+      "r3": 1,
+      "r4": 1,
+      "r6d": 23,
+      "r6e": 3,
+      "total": 46
+    },
+    {
+      "name": "EGSS-abdelrahmannasef",
+      "team": "ME-EGSS05",
+      "ec": 1,
+      "r1": 1,
+      "r2": 0,
+      "r3": 0,
+      "r4": 1,
+      "r6d": 19,
+      "r6e": 11,
+      "total": 43
+    },
+    {
+      "name": "EGSS-omarmoneb",
+      "team": "ME-EGSS05",
+      "ec": 6,
+      "r1": 1,
+      "r2": 1,
+      "r3": 1,
+      "r4": 1,
+      "r6d": 3,
+      "r6e": 3,
+      "total": 19
+    },
+    {
+      "name": "EGLP-saraht",
+      "team": "ME-EGSS05",
+      "ec": 6,
+      "r1": 0,
+      "r2": 2,
+      "r3": 4,
+      "r4": 1,
+      "r6d": 7,
+      "r6e": 5,
+      "total": 30
+    },
+    {
+      "name": "EGSS-samira01",
+      "team": "ME-EGSS05",
+      "ec": 0,
+      "r1": 0,
+      "r2": 0,
+      "r3": 0,
+      "r4": 0,
+      "r6d": 1,
+      "r6e": 2,
+      "total": 3
+    },
+    {
+      "name": "EGSS-khaledgonam",
+      "team": "ME-EGSS05",
+      "ec": 5,
+      "r1": 2,
+      "r2": 0,
+      "r3": 0,
+      "r4": 3,
+      "r6d": 5,
+      "r6e": 15,
+      "total": 45
+    },
+    {
+      "name": "EGSS-ahmedshoukry",
+      "team": "ME-EGSS10",
+      "ec": 0,
+      "r1": 1,
+      "r2": 0,
+      "r3": 1,
+      "r4": 0,
+      "r6d": 4,
+      "r6e": 1,
+      "total": 7
+    },
+    {
+      "name": "EGSS-mahmoudkhamis",
+      "team": "ME-EGSS10",
+      "ec": 4,
+      "r1": 0,
+      "r2": 0,
+      "r3": 0,
+      "r4": 0,
+      "r6d": 7,
+      "r6e": 0,
+      "total": 11
+    },
+    {
+      "name": "EGLP-mohamed06",
+      "team": "ME-EGSS10",
+      "ec": 0,
+      "r1": 0,
+      "r2": 0,
+      "r3": 0,
+      "r4": 3,
+      "r6d": 20,
+      "r6e": 2,
+      "total": 26
+    },
+    {
+      "name": "EGSS-mohamedha",
+      "team": "ME-EGSS13",
+      "ec": 6,
+      "r1": 1,
+      "r2": 1,
+      "r3": 1,
+      "r4": 0,
+      "r6d": 20,
+      "r6e": 9,
+      "total": 42
+    },
+    {
+      "name": "EGSS-hayamhassan",
+      "team": "ME-EGSS13",
+      "ec": 1,
+      "r1": 0,
+      "r2": 0,
+      "r3": 0,
+      "r4": 1,
+      "r6d": 10,
+      "r6e": 0,
+      "total": 14
+    },
+    {
+      "name": "EGSS-marwaahmed",
+      "team": "ME-EGSS13",
+      "ec": 0,
+      "r1": 2,
+      "r2": 1,
+      "r3": 0,
+      "r4": 0,
+      "r6d": 4,
+      "r6e": 1,
+      "total": 11
+    },
+    {
+      "name": "EGLP-shahdmahmoud",
+      "team": "ME-EGSS13",
+      "ec": 10,
+      "r1": 1,
+      "r2": 0,
+      "r3": 0,
+      "r4": 2,
+      "r6d": 29,
+      "r6e": 1,
+      "total": 45
+    },
+    {
+      "name": "EGSS-amrsafwat",
+      "team": "ME-EGSS13",
+      "ec": 4,
+      "r1": 0,
+      "r2": 0,
+      "r3": 1,
+      "r4": 4,
+      "r6d": 15,
+      "r6e": 11,
+      "total": 37
+    },
+    {
+      "name": "EGSS-mahmoud04",
+      "team": "ME-EGSS01",
+      "ec": 12,
+      "r1": 0,
+      "r2": 1,
+      "r3": 2,
+      "r4": 1,
+      "r6d": 18,
+      "r6e": 14,
+      "total": 55
+    },
+    {
+      "name": "EGSS-nohayoussry",
+      "team": "ME-EGSS01",
+      "ec": 9,
+      "r1": 0,
+      "r2": 0,
+      "r3": 1,
+      "r4": 2,
+      "r6d": 28,
+      "r6e": 4,
+      "total": 52
+    },
+    {
+      "name": "EGSS-juliamonir01",
+      "team": "ME-EGSS01",
+      "ec": 9,
+      "r1": 1,
+      "r2": 0,
+      "r3": 1,
+      "r4": 0,
+      "r6d": 9,
+      "r6e": 6,
+      "total": 27
+    },
+    {
+      "name": "EGLP-yasmin01",
+      "team": "ME-EGSS01",
+      "ec": 0,
+      "r1": 0,
+      "r2": 0,
+      "r3": 0,
+      "r4": 0,
+      "r6d": 0,
+      "r6e": 0,
+      "total": 0
+    },
+    {
+      "name": "EGSS-ashraqatal",
+      "team": "ME-EGSS01",
+      "ec": 5,
+      "r1": 1,
+      "r2": 2,
+      "r3": 5,
+      "r4": 6,
+      "r6d": 8,
+      "r6e": 7,
+      "total": 50
+    },
+    {
+      "name": "EGSS-negma",
+      "team": "ME-EGSS01",
+      "ec": 0,
+      "r1": 0,
+      "r2": 0,
+      "r3": 0,
+      "r4": 0,
+      "r6d": 0,
+      "r6e": 1,
+      "total": 1
+    }
+  ],
+  "englishClub": [
+    {
+      "name": "EGSS-adhmgadallah",
+      "team": "ME-EGSS30",
+      "base": 71,
+      "book": 2,
+      "att": 2,
+      "pct": "2.8%",
+      "goal": 28,
+      "need": 26
+    },
+    {
+      "name": "EGSS-alihesham01",
+      "team": "ME-EGSS30",
+      "base": 32,
+      "book": 13,
+      "att": 10,
+      "pct": "31.3%",
+      "goal": 13,
+      "need": 3
+    },
+    {
+      "name": "EGSS-abdelrhmanshehata",
+      "team": "ME-EGSS30",
+      "base": 36,
+      "book": 25,
+      "att": 17,
+      "pct": "47.2%",
+      "goal": 14,
+      "need": 0
+    },
+    {
+      "name": "EGSS-ehabzaky01",
+      "team": "ME-EGSS05",
+      "base": 93,
+      "book": 49,
+      "att": 17,
+      "pct": "18.3%",
+      "goal": 37,
+      "need": 20
+    },
+    {
+      "name": "EGSS-ibrahimismaiel",
+      "team": "ME-EGSS05",
+      "base": 92,
+      "book": 41,
+      "att": 23,
+      "pct": "25.0%",
+      "goal": 37,
+      "need": 14
+    },
+    {
+      "name": "EGSS-titooooo",
+      "team": "ME-EGSS05",
+      "base": 85,
+      "book": 26,
+      "att": 11,
+      "pct": "12.9%",
+      "goal": 34,
+      "need": 23
+    },
+    {
+      "name": "EGSS-abdelrahmannasef",
+      "team": "ME-EGSS05",
+      "base": 84,
+      "book": 20,
+      "att": 18,
+      "pct": "21.4%",
+      "goal": 34,
+      "need": 16
+    },
+    {
+      "name": "EGSS-omarmoneb",
+      "team": "ME-EGSS05",
+      "base": 76,
+      "book": 28,
+      "att": 7,
+      "pct": "9.2%",
+      "goal": 30,
+      "need": 23
+    },
+    {
+      "name": "EGLP-saraht",
+      "team": "ME-EGSS05",
+      "base": 80,
+      "book": 17,
+      "att": 8,
+      "pct": "10.0%",
+      "goal": 32,
+      "need": 24
+    },
+    {
+      "name": "EGSS-samira01",
+      "team": "ME-EGSS05",
+      "base": 65,
+      "book": 18,
+      "att": 11,
+      "pct": "16.9%",
+      "goal": 26,
+      "need": 15
+    },
+    {
+      "name": "EGSS-khaledgonam",
+      "team": "ME-EGSS05",
+      "base": 79,
+      "book": 5,
+      "att": 3,
+      "pct": "3.8%",
+      "goal": 32,
+      "need": 29
+    },
+    {
+      "name": "EGSS-ahmedshoukry",
+      "team": "ME-EGSS10",
+      "base": 109,
+      "book": 44,
+      "att": 29,
+      "pct": "26.6%",
+      "goal": 44,
+      "need": 15
+    },
+    {
+      "name": "EGSS-mahmoudkhamis",
+      "team": "ME-EGSS10",
+      "base": 101,
+      "book": 48,
+      "att": 16,
+      "pct": "15.8%",
+      "goal": 40,
+      "need": 24
+    },
+    {
+      "name": "EGLP-mohamed06",
+      "team": "ME-EGSS10",
+      "base": 77,
+      "book": 17,
+      "att": 15,
+      "pct": "19.5%",
+      "goal": 31,
+      "need": 16
+    },
+    {
+      "name": "EGSS-mohamedha",
+      "team": "ME-EGSS13",
+      "base": 74,
+      "book": 11,
+      "att": 8,
+      "pct": "10.8%",
+      "goal": 30,
+      "need": 22
+    },
+    {
+      "name": "EGSS-hayamhassan",
+      "team": "ME-EGSS13",
+      "base": 91,
+      "book": 38,
+      "att": 21,
+      "pct": "23.1%",
+      "goal": 36,
+      "need": 15
+    },
+    {
+      "name": "EGSS-marwaahmed",
+      "team": "ME-EGSS13",
+      "base": 89,
+      "book": 43,
+      "att": 15,
+      "pct": "16.9%",
+      "goal": 36,
+      "need": 21
+    },
+    {
+      "name": "EGLP-shahdmahmoud",
+      "team": "ME-EGSS13",
+      "base": 78,
+      "book": 27,
+      "att": 11,
+      "pct": "14.1%",
+      "goal": 31,
+      "need": 20
+    },
+    {
+      "name": "EGSS-amrsafwat",
+      "team": "ME-EGSS13",
+      "base": 108,
+      "book": 47,
+      "att": 27,
+      "pct": "25.0%",
+      "goal": 43,
+      "need": 16
+    },
+    {
+      "name": "EGSS-mahmoud04",
+      "team": "ME-EGSS01",
+      "base": 99,
+      "book": 12,
+      "att": 7,
+      "pct": "7.1%",
+      "goal": 40,
+      "need": 33
+    },
+    {
+      "name": "EGSS-nohayoussry",
+      "team": "ME-EGSS01",
+      "base": 118,
+      "book": 42,
+      "att": 29,
+      "pct": "24.6%",
+      "goal": 47,
+      "need": 18
+    },
+    {
+      "name": "EGSS-juliamonir01",
+      "team": "ME-EGSS01",
+      "base": 79,
+      "book": 21,
+      "att": 15,
+      "pct": "19.0%",
+      "goal": 32,
+      "need": 17
+    },
+    {
+      "name": "EGLP-yasmin01",
+      "team": "ME-EGSS01",
+      "base": 0,
+      "book": 0,
+      "att": 0,
+      "pct": "0.0%",
+      "goal": 0,
+      "need": 0
+    },
+    {
+      "name": "EGSS-ashraqatal",
+      "team": "ME-EGSS01",
+      "base": 115,
+      "book": 44,
+      "att": 19,
+      "pct": "16.5%",
+      "goal": 46,
+      "need": 27
+    },
+    {
+      "name": "EGSS-negma",
+      "team": "ME-EGSS01",
+      "base": 112,
+      "book": 36,
+      "att": 16,
+      "pct": "14.3%",
+      "goal": 45,
+      "need": 29
+    }
+  ]
+};
+
+window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
+
+let currentOperationsModule = 1;
+
+function switchOperationsModule(modIdx) {
+  currentOperationsModule = modIdx;
+  [1, 2, 3, 4].forEach(i => {
+    const card = document.getElementById(`opCard${i}`);
+    const pill = document.getElementById(`opPill${i}`);
+    if (card) {
+      if (i === modIdx) card.classList.add('active');
+      else card.classList.remove('active');
+    }
+    if (pill) {
+      if (i === modIdx) pill.classList.add('active');
+      else pill.classList.remove('active');
+    }
+  });
+  renderOperationsTab();
+}
+
+function renderOperationsTab() {
+  const container = document.getElementById('operationsTableContent');
+  if (!container || !window.MASTER_OPERATIONS_DATA) return;
+
+  const teamFilter = document.getElementById('opTeamFilter')?.value || 'ALL';
+  const filterByTeam = (list) => {
+    if (teamFilter === 'ALL') return list;
+    return list.filter(item => {
+      const itemTeam = (item.team || '').toUpperCase();
+      return itemTeam.includes(teamFilter.replace('ME-', '')) || itemTeam === teamFilter;
+    });
+  };
+
+  if (currentOperationsModule === 1) {
+    // Module 1: SOP Pending Tasks
+    const data = filterByTeam(MASTER_OPERATIONS_DATA.sop);
+    let rowsHtml = data.map((r, idx) => {
+      const r1Alert = r.r1 > 0 
+        ? `<span class="op-badge-below" style="animation: pulse 2s infinite;">${r.r1} Critical</span>` 
+        : `<span style="color: var(--text-muted); font-family: var(--font-mono);">0</span>`;
+      return `
+        <tr>
+          <td style="font-family: var(--font-mono); color: var(--text-muted);">${idx + 1}</td>
+          <td style="font-weight: 600; color: #fff;">${r.name}</td>
+          <td><span class="team-badge" style="font-size: 0.72rem;">${r.team}</span></td>
+          <td style="font-family: var(--font-mono);">${r.ec}</td>
+          <td style="font-family: var(--font-mono); text-align: center;">${r1Alert}</td>
+          <td style="font-family: var(--font-mono);">${r.r2}</td>
+          <td style="font-family: var(--font-mono);">${r.r3}</td>
+          <td style="font-family: var(--font-mono);">${r.r4}</td>
+          <td style="font-family: var(--font-mono);">${r.r6e}</td>
+          <td style="font-family: var(--font-mono); font-weight: 700; color: #60a5fa; font-size: 0.95rem;">${r.total}</td>
+        </tr>
+      `;
+    }).join('');
+
+    const totEC = data.reduce((s, r) => s + r.ec, 0);
+    const totR1 = data.reduce((s, r) => s + r.r1, 0);
+    const totR2 = data.reduce((s, r) => s + r.r2, 0);
+    const totR3 = data.reduce((s, r) => s + r.r3, 0);
+    const totR4 = data.reduce((s, r) => s + r.r4, 0);
+    const totR6e = data.reduce((s, r) => s + r.r6e, 0);
+    const grandTot = data.reduce((s, r) => s + r.total, 0);
+
+    container.innerHTML = `
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>SS Representative</th>
+            <th>Team</th>
+            <th>English Club</th>
+            <th style="color: #f43f5e; text-align: center;">Round 1 (Awareness)</th>
+            <th>Round 2 (Class)</th>
+            <th>Round 3 (Habit)</th>
+            <th>Round 4 (Feedback)</th>
+            <th>Round 6 (Expiring)</th>
+            <th style="color: #60a5fa;">Total Pending</th>
+          </tr>
+        </thead>
+        <tbody>${rowsHtml}</tbody>
+        <tfoot>
+          <tr style="background: rgba(59, 130, 246, 0.12); font-weight: 800; border-top: 2px solid #3b82f6;">
+            <td colspan="3" style="color: #fff; text-align: left;">TOTAL (SELECTED TEAMS)</td>
+            <td style="font-family: var(--font-mono);">${totEC}</td>
+            <td style="font-family: var(--font-mono); color: #f43f5e; text-align: center;">${totR1}</td>
+            <td style="font-family: var(--font-mono);">${totR2}</td>
+            <td style="font-family: var(--font-mono);">${totR3}</td>
+            <td style="font-family: var(--font-mono);">${totR4}</td>
+            <td style="font-family: var(--font-mono);">${totR6e}</td>
+            <td style="font-family: var(--font-mono); color: #60a5fa; font-size: 1rem;">${grandTot}</td>
+          </tr>
+        </tfoot>
+      </table>
+    `;
+  } else if (currentOperationsModule === 2) {
+    // Module 2: Unfixed Teacher Binding
+    const data = filterByTeam(MASTER_OPERATIONS_DATA.unfixed);
+    let rowsHtml = data.map((r, idx) => {
+      const m0PctNum = parseFloat(r.m0Pct) || 0;
+      const m1PctNum = parseFloat(r.m1Pct) || 0;
+      const m0Badge = m0PctNum >= 80 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
+      const m1Badge = m1PctNum >= 80 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
+      const m0Clr = m0PctNum >= 80 ? '#10b981' : m0PctNum >= 50 ? '#f59e0b' : '#f43f5e';
+      const m1Clr = m1PctNum >= 80 ? '#10b981' : m1PctNum >= 70 ? '#f59e0b' : '#f43f5e';
+
+      return `
+        <tr>
+          <td style="font-family: var(--font-mono); color: var(--text-muted);">${idx + 1}</td>
+          <td style="font-weight: 600; color: #fff;">${r.name}</td>
+          <td><span class="team-badge" style="font-size: 0.72rem;">${r.team}</span></td>
+          <td style="font-family: var(--font-mono);">${r.m0Tot}</td>
+          <td style="font-family: var(--font-mono); color: #34d399;">${r.m0Fix}</td>
+          <td style="font-family: var(--font-mono); font-weight: 700; color: ${m0Clr};">${r.m0Pct}</td>
+          <td style="text-align: center;">${m0Badge}</td>
+          <td style="font-family: var(--font-mono);">${r.m1Tot}</td>
+          <td style="font-family: var(--font-mono); color: #34d399;">${r.m1Fix}</td>
+          <td style="font-family: var(--font-mono); font-weight: 700; color: ${m1Clr};">${r.m1Pct}</td>
+          <td style="text-align: center;">${m1Badge}</td>
+        </tr>
+      `;
+    }).join('');
+
+    const sumM0Tot = data.reduce((s, r) => s + r.m0Tot, 0);
+    const sumM0Fix = data.reduce((s, r) => s + r.m0Fix, 0);
+    const avgM0 = sumM0Tot > 0 ? ((sumM0Fix / sumM0Tot) * 100).toFixed(1) + '%' : '0.0%';
+
+    const sumM1Tot = data.reduce((s, r) => s + r.m1Tot, 0);
+    const sumM1Fix = data.reduce((s, r) => s + r.m1Fix, 0);
+    const avgM1 = sumM1Tot > 0 ? ((sumM1Fix / sumM1Tot) * 100).toFixed(1) + '%' : '0.0%';
+
+    container.innerHTML = `
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>SS Representative</th>
+            <th>Team</th>
+            <th>M0 Leads</th>
+            <th>M0 Fixed</th>
+            <th>M0 Fix %</th>
+            <th style="text-align: center;">vs 80% Target</th>
+            <th>M1 Leads</th>
+            <th>M1 Fixed</th>
+            <th>M1 Fix %</th>
+            <th style="text-align: center;">vs 80% Target</th>
+          </tr>
+        </thead>
+        <tbody>${rowsHtml}</tbody>
+        <tfoot>
+          <tr style="background: rgba(16, 185, 129, 0.12); font-weight: 800; border-top: 2px solid #10b981;">
+            <td colspan="3" style="color: #fff; text-align: left;">TOTAL / OVERALL RATE</td>
+            <td style="font-family: var(--font-mono);">${sumM0Tot}</td>
+            <td style="font-family: var(--font-mono); color: #34d399;">${sumM0Fix}</td>
+            <td style="font-family: var(--font-mono); color: #10b981;">${avgM0}</td>
+            <td style="text-align: center;">${parseFloat(avgM0) >= 80 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
+            <td style="font-family: var(--font-mono);">${sumM1Tot}</td>
+            <td style="font-family: var(--font-mono); color: #34d399;">${sumM1Fix}</td>
+            <td style="font-family: var(--font-mono); color: #10b981;">${avgM1}</td>
+            <td style="text-align: center;">${parseFloat(avgM1) >= 80 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
+          </tr>
+        </tfoot>
+      </table>
+    `;
+  } else if (currentOperationsModule === 3) {
+    // Module 3: Class Consumption & Zero-Class
+    const data = filterByTeam(MASTER_OPERATIONS_DATA.consumption);
+    let rowsHtml = data.map((r, idx) => {
+      const zeroPct = r.total > 0 ? ((r.c0 / r.total) * 100).toFixed(1) : '0.0';
+      const zeroClr = parseFloat(zeroPct) > 25 ? '#f43f5e' : parseFloat(zeroPct) > 15 ? '#f59e0b' : '#10b981';
+
+      return `
+        <tr>
+          <td style="font-family: var(--font-mono); color: var(--text-muted);">${idx + 1}</td>
+          <td style="font-weight: 600; color: #fff;">${r.name}</td>
+          <td><span class="team-badge" style="font-size: 0.72rem;">${r.team}</span></td>
+          <td style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${r.total}</td>
+          <td style="font-family: var(--font-mono); font-weight: 800; color: #f43f5e; text-align: center; background: rgba(244, 63, 94, 0.08);">${r.c0}</td>
+          <td style="font-family: var(--font-mono); color: ${zeroClr}; font-weight: 700;">${zeroPct}%</td>
+          <td style="font-family: var(--font-mono);">${r.c1_3}</td>
+          <td style="font-family: var(--font-mono);">${r.c4_7}</td>
+          <td style="font-family: var(--font-mono);">${r.c8_11}</td>
+          <td style="font-family: var(--font-mono); color: #34d399;">${r.c12}</td>
+        </tr>
+      `;
+    }).join('');
+
+    const sumTot = data.reduce((s, r) => s + r.total, 0);
+    const sumC0 = data.reduce((s, r) => s + r.c0, 0);
+    const sumC1_3 = data.reduce((s, r) => s + r.c1_3, 0);
+    const sumC4_7 = data.reduce((s, r) => s + r.c4_7, 0);
+    const sumC8_11 = data.reduce((s, r) => s + r.c8_11, 0);
+    const sumC12 = data.reduce((s, r) => s + r.c12, 0);
+    const overallZeroPct = sumTot > 0 ? ((sumC0 / sumTot) * 100).toFixed(1) + '%' : '0.0%';
+
+    container.innerHTML = `
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>SS Representative</th>
+            <th>Team</th>
+            <th>Total Students</th>
+            <th style="color: #f43f5e; text-align: center;">0 Classes (Alert)</th>
+            <th style="color: #f59e0b;">Zero Class %</th>
+            <th>1–3 Classes</th>
+            <th>4–7 Classes</th>
+            <th>8–11 Classes</th>
+            <th style="color: #34d399;">12+ Classes</th>
+          </tr>
+        </thead>
+        <tbody>${rowsHtml}</tbody>
+        <tfoot>
+          <tr style="background: rgba(249, 115, 22, 0.12); font-weight: 800; border-top: 2px solid #f97316;">
+            <td colspan="3" style="color: #fff; text-align: left;">TOTAL / SECTOR AVERAGE</td>
+            <td style="font-family: var(--font-mono); color: #fff;">${sumTot}</td>
+            <td style="font-family: var(--font-mono); color: #f43f5e; text-align: center;">${sumC0}</td>
+            <td style="font-family: var(--font-mono); color: #f59e0b;">${overallZeroPct}</td>
+            <td style="font-family: var(--font-mono);">${sumC1_3}</td>
+            <td style="font-family: var(--font-mono);">${sumC4_7}</td>
+            <td style="font-family: var(--font-mono);">${sumC8_11}</td>
+            <td style="font-family: var(--font-mono); color: #34d399;">${sumC12}</td>
+          </tr>
+        </tfoot>
+      </table>
+    `;
+  } else if (currentOperationsModule === 4) {
+    // Module 4: English Club (40% Target)
+    const data = filterByTeam(MASTER_OPERATIONS_DATA.englishClub);
+    let rowsHtml = data.map((r, idx) => {
+      const pctNum = parseFloat(r.pct) || 0;
+      const pctClr = pctNum >= 40 ? '#10b981' : pctNum >= 25 ? '#f59e0b' : '#f43f5e';
+      const needBadge = r.need === 0 
+        ? `<span class="op-badge-met">Goal Met 🎉</span>` 
+        : `<span style="font-family: var(--font-mono); font-weight: 700; color: #fbbf24;">${r.need} IDs needed</span>`;
+
+      return `
+        <tr>
+          <td style="font-family: var(--font-mono); color: var(--text-muted);">${idx + 1}</td>
+          <td style="font-weight: 600; color: #fff;">${r.name}</td>
+          <td><span class="team-badge" style="font-size: 0.72rem;">${r.team}</span></td>
+          <td style="font-family: var(--font-mono); color: #fff;">${r.base}</td>
+          <td style="font-family: var(--font-mono);">${r.book}</td>
+          <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${r.att}</td>
+          <td style="font-family: var(--font-mono); font-weight: 800; color: ${pctClr};">${r.pct}</td>
+          <td style="font-family: var(--font-mono); color: #60a5fa;">${r.goal}</td>
+          <td style="text-align: center;">${needBadge}</td>
+        </tr>
+      `;
+    }).join('');
+
+    const sumBase = data.reduce((s, r) => s + r.base, 0);
+    const sumBook = data.reduce((s, r) => s + r.book, 0);
+    const sumAtt = data.reduce((s, r) => s + r.att, 0);
+    const sumGoal = data.reduce((s, r) => s + r.goal, 0);
+    const sumNeed = data.reduce((s, r) => s + r.need, 0);
+    const avgAttPct = sumBase > 0 ? ((sumAtt / sumBase) * 100).toFixed(1) + '%' : '0.0%';
+
+    container.innerHTML = `
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>SS Representative</th>
+            <th>Team</th>
+            <th>Student Base</th>
+            <th>Bookings</th>
+            <th style="color: #c084fc;">Attended</th>
+            <th>Attendance %</th>
+            <th style="color: #60a5fa;">40% Goal (IDs)</th>
+            <th style="text-align: center; color: #fbbf24;">Gap to 40% Goal</th>
+          </tr>
+        </thead>
+        <tbody>${rowsHtml}</tbody>
+        <tfoot>
+          <tr style="background: rgba(168, 85, 247, 0.12); font-weight: 800; border-top: 2px solid #a855f7;">
+            <td colspan="3" style="color: #fff; text-align: left;">TOTAL (SELECTED TEAMS)</td>
+            <td style="font-family: var(--font-mono); color: #fff;">${sumBase}</td>
+            <td style="font-family: var(--font-mono);">${sumBook}</td>
+            <td style="font-family: var(--font-mono); color: #c084fc; font-size: 0.95rem;">${sumAtt}</td>
+            <td style="font-family: var(--font-mono); color: #a855f7;">${avgAttPct}</td>
+            <td style="font-family: var(--font-mono); color: #60a5fa;">${sumGoal}</td>
+            <td style="text-align: center; font-family: var(--font-mono); color: #fbbf24;">${sumNeed} IDs needed</td>
+          </tr>
+        </tfoot>
+      </table>
+    `;
+  }
+}
