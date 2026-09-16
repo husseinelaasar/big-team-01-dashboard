@@ -1,164 +1,176 @@
 # 🚨 DASHBOARD_UPDATE_RULES.md
-## قواعد وإجراءات تحديث الداشبورد التنفيذي (Standard Operating Procedure)
+## Executive Dashboard Standard Operating Procedure (SOP) & Update Rules
 
 > [!CAUTION]
-> **شرط غير قابل للتجاوز تحت أي شكل (NON-NEGOTIABLE RULE):**
-> يُحظر تماماً الاعتماد على أي سجلات مخزنة سابقة أو أرقام قديمة. في كل مرة يُطلب فيها أي تحديث للداشبورد، يجب تحميل ملف جديد بالكامل (Fresh Download) من مركز البيانات، ولا يجوز تأكيد التحديث أو إظهار النتائج للمستخدم إلا بعد التحقق الذاتي الفعلي من أن الملف المحدث تم تحميله بالكامل في كل مرة.
+> **NON-NEGOTIABLE RULE:**
+> Under no circumstances should cached, outdated records or prior figures be used. Whenever any dashboard update is requested, a fresh download must be pulled directly from the official Data Center. No update confirmation or presentation of results may be given until automated self-verification confirms that the newly downloaded file is complete and up to date.
 
 ---
 
-### 🌐 المصدر الرئيسي المعتمد (Primary Data Source)
-* **رابط مركز البيانات الرسمي:** `https://lp.51talkjr.com/#/data-center/business/SA-SSdata` (تبويب **ME Lens Dashboard**).
-* يُعتمد هذا المصدر تلقائياً كبديل رسمي عند تعذر تجاوز حماية أو شفرة تسجيل الدخول في سيستم الـ CRM (`crm.51talk.com`).
+### 🌐 Primary Data Source
+* **Official Data Center URL:** `https://lp.51talkjr.com/#/data-center/business/SA-SSdata` (**ME Lens Dashboard** tab).
+* This source is automatically designated as the official primary data stream whenever login verification or two-factor authentication blocks direct access to the legacy CRM (`crm.51talk.com`).
 
 ---
 
-### 📊 1. الإجراء الأول: كاش المبيعات، العقود، والتارجت المحدث
-1. **الشيت الفرعي المعتمد:** **`Individual_Rankings`**
-2. **أرقام الكاش:** سحب صافي المبيعات من عمود **`Cash-Refund`** (الخانة E).
-3. **عدد العقود الإجمالي:** سحب إجمالي العقود من **العمود F (`CONTRACTS`)**.
-4. **التارجت المحدث (إلغاء التارجت القديم):** مسح وإلغاء أي تارجت سابق تم ذكره سلفاً، والاعتماد الحصري فقط على التارجت المحدث من **العمود H (`Basic Cash Target`)**.
-5. **نسبة الإنجاز:** حساب نسبة الإنجاز المالية (`Cash Achievement %`) بنفسي لكل موظف وفريق من البيانات المحدثة.
-6. **ترتيب ومؤشر الفرق (Small Teams Chart & Cards Order):**
-   * **الترتيب الإلزامي:** ترتيب الفرق تنازلياً حسب نسبة الإنجاز `Cash Achievement %` من الأعلى فوق (المركز #1) إلى الأقل تحت (المركز #5).
-   * **مطابقة المؤشر البصري:** طول الشريط الملون يطابق تماماً نسبة التحقيق المئوية الخاصة بالفريق (مثلاً 82.9% تمتد إلى 82.9% من عرض الشريط) بالنسبة للتارجت (100%)، مع إضافة مؤشر خط التارجت الكامل 100% وخط المسار المرحلي المتقطع (Day 15 = 50%).
-7. **ترتيب لوحة الصدارة والموظفين (Leaderboard Sorting):**
-   * **الترتيب الإلزامي:** ترتيب جدول الصدارة والموظفين تنازلياً حسب نسبة الإنجاز المالية **`Cash Achievement %` (High to Low)** من الأعلى (المركز #1: 108.2%) تنازلياً للأقل.
-8. **ترتيب كروت وقائمة أعضاء الفرق الصغيرة (Small Team Member Roster Sorting):**
-   * **الترتيب الإلزامي:** ترتيب أعضاء الفريق داخل كروت التبويب الثاني تنازلياً حسب نسبة التحقيق المالية `Cash Achievement %` من الأعلى للأقل.
-   * **إدراج ترقيات العضو:** إضافة عدد عقود ترقية الموظف المحققة `Upgrades: Y M2` بجانب كل اسم في القائمة وإدراج إجمالي ترقيات الفريق كصندوق في الكارت.
-9. **صفوف الإجماليات لكل جدول (Table Totals Row - tfoot):**
-   * **الإلزام الشامل:** إضافة صف إجمالي كلي ومتوسطات قطاعية (`TOTAL / SECTOR AVERAGE`) أسفل كافة الجداول الثلاثة في الداشبورد.
+### 📊 1. Sales Cash Revenue, Contracts, and Target Updates
+1. **Designated Source Sheet:** **`Individual_Rankings`**
+2. **Cash Revenue Extraction:** Extract net sales revenue exclusively from column **`Cash-Refund`** (Column E).
+3. **Total Contracts Count:** Extract total executed contracts from **Column F (`CONTRACTS`)**.
+4. **Updated Target Override:** Delete and invalidate any legacy target figures previously referenced. Exclusively adopt the updated target from **Column H (`Basic Cash Target`)**.
+5. **Achievement Calculation:** Calculate financial `Cash Achievement %` dynamically for each sales representative and team from freshly extracted data:
+   $$\text{Cash Achievement \%} = \frac{\text{Cash-Refund}}{\text{Basic Cash Target}} \times 100$$
+6. **Small Teams Chart & Cards Display:**
+   * **Mandatory Sort Order:** Sort teams descending by `Cash Achievement %` from highest at the top (Rank #1) to lowest at the bottom (Rank #5).
+   * **Visual Bar Calibration:** Progress bar fill length must strictly correspond to the team's achievement percentage calibrated on the 103% target curve axis, featuring a 100% full target marker line and the official daily benchmark dashed line.
+7. **Leaderboard & Individual Rankings Sorting:**
+   * **Mandatory Sort Order:** The individual matrix and leaderboard preview must strictly sort descending by **`Cash Achievement %` (High to Low)**, from top performer (Rank #1: 108.2%) downward.
+8. **Small Team Member Roster Sorting:**
+   * **Mandatory Sort Order:** Sort team members within each small team card descending by `Cash Achievement %`.
+   * **Member Upgrade Metric:** Display executed early upgrade contracts `Upgrades: Y M2` next to each rep's name, and feature total team upgrades in a dedicated stat box on the card.
+9. **Table Totals Row (`tfoot`):**
+   * **Universal Rule:** Every table across the dashboard must include a dedicated summary footer row showing total sums (`TOTAL`) and sector-wide weighted averages (`SECTOR AVERAGE`).
 
 ---
 
-### 🟡 2. الإجراء الثاني: نسبة تحويل وتغطية الترقية المبكرة (Upgrade M2 Rates)
-1. **قاعدة طلاب الترقية (`Upgrade Base`):**
-   * **المصدر المعتمد:** جدول Pivot الأصلي (`M-2 Cumulative Upgrade Students`).
-   * **إجمالي القطاع (Big Team 01):** **763 طالباً** (موزعة: EGSS05: 232, EGSS01: 200, EGSS13: 186, EGSS10: 112, EGSS30: 33).
-2. **نسبة تحويل الترقية المبكرة (`Upgrade M2 Conversion Rate`):**
-   * **المعادلة المعتمدة:** $\text{Upgrade M2 Conversion Rate \%} = \frac{\text{Upgrade M2 Contracts}}{\text{Upgrade Base}}$
-   * **المصدر:** الشيت الفرعي **`POOL15`** (العمود G).
-3. **نسبة تغطية الترقية المبكرة (`M2 Cover Rate`):**
-   * **إضافة الخانة:** إضافة عمود/خانة جديدة بجانب عمود الـ M2 Conversion Rate باسم **`M2 Cover Rate`**.
-   * **التمييز البصري:** تمييز هذه الخانة **بلون الخط الأصفر فقط (#facc15)** بدون أي خلفية صفراء على الإطلاق (Text font color yellow only, NO yellow background).
-   * **المصدر:** الشيت الفرعي **`POOL22`** (العمود G).
-4. **مستهدف تحقيق 20% عقود ترقية (`20% Upgrade Goal & Needed`):**
-   * **المعادلة الإلزامية:** $\text{20\% Target Contracts} = \lceil \text{Upgrade Base} \times 0.20 \rceil$
-   * **المتبقي المباشر:** $\max(0, \text{20\% Target} - \text{Upgrade M2 Achieved})$
-   * **التطبيق الشامل:** يظهر العمود والخانة إ لزامياً في كافة الجداول والكروت للموظف الفردي، الفريق الصغير، والقطاع الكبير الكلي (Big Team 01: مستهدف 153 عقداً، المتبقي 132 عقداً).
+### 🟡 2. Early Upgrade Conversion and Coverage Rates (Upgrade M2)
+1. **Upgrade Student Base (`Upgrade Base`):**
+   * **Official Source:** Original Pivot Table (`M-2 Cumulative Upgrade Students`).
+   * **Big Team 01 Sector Total:** **763 students** (Breakdown: EGSS05: 232, EGSS01: 200, EGSS13: 186, EGSS10: 112, EGSS30: 33).
+2. **Early Upgrade Conversion Rate (`Upgrade M2 Conversion Rate`):**
+   * **Approved Formula:**
+     $$\text{Upgrade M2 Conversion Rate \%} = \frac{\text{Upgrade M2 Contracts}}{\text{Upgrade Base}} \times 100$$
+   * **Source:** Sheet **`POOL15`** (Column G).
+3. **Early Upgrade Coverage Rate (`M2 Cover Rate`):**
+   * **Dedicated Column:** Displayed as a dedicated column adjacent to M2 Conversion Rate labeled **`M2 Cover Rate`**.
+   * **Visual Styling:** Styled with **yellow font color only (#facc15)** with zero background color (Text font color yellow only; NO yellow background).
+   * **Source:** Sheet **`POOL22`** (Column G).
+4. **20% Upgrade Target Contracts & Needed Gap:**
+   * **Mandatory Formula:**
+     $$\text{20\% Target Contracts} = \lceil \text{Upgrade Base} \times 0.20 \rceil$$
+     $$\text{20\% Upgrade Needed} = \max(0, \text{20\% Target Contracts} - \text{Upgrade M2 Achieved})$$
+   * **Universal Application:** Displayed across all tables and cards for individual reps, small teams, and Big Team 01 sector total (Sector: 153 target contracts, 135 needed contracts).
 
 ---
 
-### 🚫 3. المسح والحظر التام لنظام وبوابات العمولات (SM Commission Policy)
-* **المسح والشطب النهائي:** مسح وتفريغ أي حاسبة أو بطاقات أو دالة أو روابط (Links) تتعلق بـ `SM Commission Scheme` أو `SM Portal` من متن التقرير والهيدر والفووتر والداشبورد الرئيسي (`index.html`) نهائياً بدون أي أثر.
+### 🚫 3. Strict Exclusion of Senior Manager Commission Scheme (SM Scheme Isolation)
+* **Complete Removal & Security Boundary:** Completely purge, delete, and exclude any calculators, cards, formulas, or links related to the Senior Manager Commission Scheme (`sm-scheme.*`) or SM Portal from the public executive dashboard (`index.html`), scripts, and navigation.
+* The public dashboard must remain strictly operational and performance-focused without exposing executive manager bonus tiers or compensation rules.
 
 ---
 
-### 🔐 4. بروتوكول التحقق الإلزامي قبل تأكيد التحديث (Verification Checkpoint)
-1. **التحقق من التنزيل (Download Verification):** التأكد من تنزيل وتفريغ الملف الجديد بالكامل وحفظه بطابع زمني جديد.
-2. **تصفير السجلات القديمة:** تفريغ وتنظيف البيانات السابقة في `dashboard.js` لمنع أي تداخل للأرقام.
-3. **مطابقة الإجمالي:** مطابقة الإجمالي الكلي للقطاع ($ Revenue, Contracts, Target) مع شاشة مركز البيانات الحية قبل اعتماد وإعلان التحديث.
+### 🔐 4. Mandatory Pre-Publish Verification Checkpoints
+1. **Fresh Download Verification:** Confirm that a completely new export workbook has been downloaded, parsed, and logged with a fresh timestamp.
+2. **Data State Reset:** Clear all previous state arrays in `dashboard.js` before calculating aggregations to eliminate data crossover.
+3. **Totals Reconciliation:** Reconcile aggregate sector metrics (Net Cash Revenue, Contracts, Target) against the live Data Center screen prior to committing and announcing any update.
 
 ---
 
-### 🌐 5. النشر المباشر والجدولة الدورية التلقائية (Live Deployment & Hourly Schedule)
-1. **رابط الداشبورد الحي والرسمي المعتمد (Live Production Link):**
+### 🌐 5. Live Production Deployment & Hourly Automated Schedule
+1. **Official Live Production URL:**
    * `https://husseinelaasar.github.io/big-team-01-dashboard/`
-   * مستضاف سحابياً عبر GitHub Pages ويعمل مباشرة على أجهزة الكمبيوتر والموبايل ومتصفح DingTalk الداخلي.
-   * **الحماية والخصوصية:** تم عزل واستبعاد نظام وبوابات العمولات (`sm-scheme.*`) بالكامل عن هذا الرابط عبر `.gitignore`.
+   * Hosted cloud-native on GitHub Pages, responsive across Desktop, Mobile, and DingTalk in-app browser.
+   * **Security Isolation:** Sensitive manager commission assets (`sm-scheme.*`) are strictly excluded via `.gitignore`.
 
-2. **الجدولة الدورية التلقائية (Hourly Automated Schedule):**
-   * **ميعاد التحديث الإلزامي:** يتم تشغيل مهمة التحديث التلقائي دورياً **كل ساعة بعد مرور 10 دقائق من بدايتها (XX:10)** لمزامنة التحديث الساعي لمركز البيانات (`lp.51talkjr.com`).
-   * **المهمة المجدولة بالنظام:** `51Talk_Dashboard_Hourly_Update`
-   * **السكربت التنفيذي:** [`hourly_update_and_publish.ps1`](file:///d:/Lens/Dashboard/hourly_update_and_publish.ps1)
-   * **سجل العمليات والـ Logs:** [`hourly_update.log`](file:///d:/Lens/Dashboard/hourly_update.log)
-   * **دورة العمل في كل تحديث (XX:10):**
-     1. سحب التنزيل الجديد فورياً من مركز البيانات (Fresh Download via CDP).
-     2. التحقق من سلامة واكتمال شيتات `Individual_Rankings` و `POOL15` و `POOL22`.
-     3. تحديث مصفوفة البيانات في `dashboard.js` مع حفظ التوقيت.
-     4. رفع التحديث تلقائياً (`git commit & push`) ليظهر فورياً على رابط الداشبورد الحي دون أي تدخل يدوي.
-
----
-
-### 💵 6. معايير اعتماد صافي الكاش والتعامل مع الاستردادات والمغادرين (Cash-Refund & Leavers Policy)
-1. **الاعتماد الكلي على عمود صافي الكاش (`Cash-Refund`):**
-   * يتم اعتماد القيمة الصافية من عمود **`Cash-Refund`** (Col E بشيت `Individual_Rankings`) حصراً وليس إجمالي الكاش الأولي (`Revenue Cash`).
-   * يتم تطبيق خصومات الاسترداد (`Refund`) على الموظف صاحب الخصم مباشرة، مما قد يؤدي لظهور صافي كاش سالب للموظف في حال كانت الاستردادات أكبر من مبيعاته الحالية (مثل حالة `EGSS-ashraqatal: -$380`).
-2. **بروتوكول التعامل مع الموظفين المغادرين للشركة (Leavers Handling):**
-   * يُستبعد الموظفون الذين غادروا الشركة من كروت وقوائم الفرق النشطة الحالية (مثل: `EGSS-ahmedabdulhamid`, `EGSS-ahmedhalawa`, `EGSS-rokayar`, `EGSS-suhailajamal`).
-   * تُحتسب وتُخصم استرداداتهم/مبيعاتهم السابقة من تسوية الإجمالي العام للقطاع لضمان مطابقة الإجمالي الكلي للداشبورد تماماً مع إجمالي شاشة مركز البيانات الحية (`$81,792`).
+2. **Automated Hourly Cron Schedule:**
+   * **Execution Timing:** Scheduled every hour at **10 minutes past the hour (XX:10)** to synchronize with 51Talk Data Center hourly data refreshes (`lp.51talkjr.com`).
+   * **System Scheduled Task:** `51Talk_Dashboard_Hourly_Update`
+   * **Execution Script:** [`hourly_update_and_publish.ps1`](file:///d:/Lens/Dashboard/hourly_update_and_publish.ps1)
+   * **Operational Log:** [`hourly_update.log`](file:///d:/Lens/Dashboard/hourly_update.log)
+   * **Automated Cycle per Hour (XX:10):**
+     1. Trigger fresh download via Chrome DevTools Protocol (CDP).
+     2. Verify completeness of `Individual_Rankings`, `POOL15`, and `POOL22`.
+     3. Update JavaScript data matrices in `dashboard.js` with fresh timestamp.
+     4. Execute automated `git commit & push` to deploy live to GitHub Pages without manual intervention.
 
 ---
 
-### 📋 7. معايير وإجراءات تقرير العمليات الموحد وبوابة الليدات الذاتية (Operations Master & Rep Leads SOP)
-1. **المصدر المعتمد لبيانات العمليات:**
-   * **الملف المصدري:** `D:\Lens\All in one Master.xlsx`
-   * **المحاور التشغيلية الأربعة المعتمدة:**
-     1. **مهام الـ SOP المعلقة (`SS pending SOP tasks`):** إجمالي مهام المتابعة الإلزامية وتاريخ استحقاقها.
-     2. **ربط المعلم الثابت (`Unfixed teachers binding`):** قائمة الطلاب الذين لم يتم تثبيت معلمين لهم بعد مرور الحصص المحددة لمنع التسرب وحفظ استمرارية الطالب.
-     3. **إنقاذ استهلاك الحصص (`Zero-class & Consumption rescue`):** تصنيف الطلاب حسب مستوى الخطر (Zero-Class للطلاب غير المستهلكين لأي حصة خلال الشهر، والطلاب ذوي الحصص المدفوعة المتبقية المرتفعة).
-     4. **مستهدف الإنجلش كلوب 40% (`English Club 40% goal`):** الطلاب المؤهلون للحجز لحصص النادي لرفع نسبة التفاعل الإجمالية.
-
-2. **آلية تقسيم وتوزيع الليدات المخصصة (Rep Leads File Generation):**
-   * يتم استخراج وتوليد ملف CSV مستقل لكل موظف مبيعات نشط في المجلد العام `d:\Lens\Dashboard\leads\{rep}.csv`.
-   * يغطي النظام **25 موظفاً نشطاً** عبر الفرق الخمسة (`ME-EGSS01`, `ME-EGSS05`, `ME-EGSS10`, `ME-EGSS13`, `ME-EGSS30`).
-   * **هيكل ملف الـ CSV الداخلي:** يُقسّم ملف الموظف الواحد إلى 4 أقسام واضحة برؤوس محددة لمنع خلط البيانات:
-     * `=== 1. SOP PENDING TASKS ===` (معرف الطالب Student ID، اسم المهمة، وقت الانتهاء).
-     * `=== 2. UNFIXED TEACHER BINDING LEADS ===` (معرف الطالب، عدد الحصص، موعد آخر حصة).
-     * `=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE ===` (معرف الطالب، الحصص الشهرية، الحصص المدفوعة، النقاط المتبقية، مستوى الأولوية).
-     * `=== 4. ENGLISH CLUB ACTIONABLE LEADS ===` (معرف الطالب، الحصص المنجزة، المستهدف).
-
-3. **بوابة الخدمة الذاتية بالداشبورد (Self-Service Portal & Direct Download):**
-   * **عنصر الاختيار:** قائمة منسدلة (`#personalRepSelect`) بتبويب العمليات اليومية (`Operations Master`) تحتوي على جميع الموظفين النشطين.
-   * **لوحة القيادة المصغرة (Personal Cockpit):** بمجرد اختيار الموظف لاسمه، تُعرض له إحصائياته الخاصة فورياً في 4 كروت ملونة.
-   * **زر التحميل المباشر:** زر ذهبي تفاعلي (`downloadSelectedRepLeads()`) يقوم بتنزيل ملف الـ CSV المخصص للموظف مباشرة عبر المتصفح دون الحاجة لأي سيرفر خلفي (Client-side Direct Download).
-
-4. **بروتوكول الخصوصية والأمان الإلزامي (Strict Privacy & Isolation):**
-   * **حظر تام:** يُحظر إدراج أي معلومات أو معادلات أو نسب تتعلق بنظام عمولات الإدارة (`SM Scheme`) أو بيانات الإدارة المالية داخل شيتات ليدات الموظفين أو في كود تبويب العمليات.
-   * الموظف لا يرى ولا يحمل إلا معرفات طلابه ومهامه الميدانية التشغيلية فقط.
-
-5. **دورة تحديث ملفات الليدات عند استلام شيت Master جديد:**
-   * عند تحديث ملف `All in one Master.xlsx` في بداية اليوم أو منتصفه:
-     1. تشغيل سكربت استخراج وتوليد الليدات فائق السرعة عبر Excel COM (`generate_rep_leads_fast.ps1`).
-     2. تحديث مصفوفة الإحصائيات `LEADS_SUMMARY` في `dashboard.js`.
-     3. عمل `git add index.html dashboard.js leads/ DASHBOARD_UPDATE_RULES.md` و `git commit` ثم `git push` لمزامنة النسخة الحية على GitHub Pages فورياً.
+### 💵 6. Net Cash Standards & Leavers Policy (Cash-Refund & Adjustments)
+1. **Net Cash Standard (`Cash-Refund`):**
+   * Net revenue is extracted exclusively from Column E (`Cash-Refund`) of `Individual_Rankings`, never from gross revenue (`Revenue Cash`).
+   * Clawbacks and customer refunds are charged directly against the responsible representative's MTD tally, allowing negative net cash balances where refunds exceed current sales (e.g., `EGSS-ashraqatal: -$380`).
+2. **Inactive Reps & Leavers Handling:**
+   * Representatives who have left the organization are removed from active small team member rosters and cards (e.g., `EGSS-ahmedabdulhamid`, `EGSS-ahmedhalawa`, `EGSS-rokayar`, `EGSS-suhailajamal`).
+   * Their historical sales and refunds remain aggregated in sector totals to ensure 100% reconciliation with live Data Center totals.
 
 ---
 
-### 📊 8. معايير وإجراءات التزام الـ SOP وإجمالي القطاع الكبير والفرق الصغيرة (SOP Compliance Standard)
-1. **المصدر المعتمد لبيانات الـ SOP:**
-   * مركز البيانات الرسمي: `https://lp.51talkjr.com/#/data-center/business/SA-SSdata`.
-   * يشمل الـ 9 مراحل التشغيلية لدورة حياة الطالب: (R1 Leads Coverage 95%, R2 Timely Callback 90%, R3 Demo Reserved 85%, R4 Class Consumption 80%, R5 Outside Pool 70%, R6 Pipeline 75%, EC English Club 70%, U1 Upgrade Pitch 85%, U2 Upgrade Close 80%).
+### 📋 7. Operations Master & Sales Rep Self-Service Leads Portal SOP
+1. **Operational Master Source:**
+   * **Source Workbook:** `D:\Lens\All in one Master.xlsx`
+   * **Four Core Operational Modules:**
+     1. **SS Pending SOP Tasks:** Mandatory student follow-up actions and deadline expirations.
+     2. **Unfixed Teachers Binding:** Students without dedicated fixed teachers past threshold classes to safeguard retention.
+     3. **Zero-Class & Consumption Rescue:** High-risk non-consuming students (Zero-Class MTD and large unused credit balances).
+     4. **English Club 40% Target:** Active students eligible for English Club booking to boost engagement velocity.
 
-2. **احتساب وإبراز إجمالي الفريق الكبير (Big Team 01 Sector Total):**
-   * يتم احتساب المتوسط العام للقطاع الكبير لكل مرحلة عبر الفرق الخمسة.
-   * يظهر إجمالي القطاع الكبير إلزامياً في:
-     1. **كروت الـ KPI العلوية:** متوسط التزام القطاع العام (78.1%)، عدد المراحل المحققة، وأعلى مرحلة وأولوية التدخل العاجل.
-     2. **مصفوفة المقارنة الموحدة (Master Comparison Matrix):** عمود رئيسي بارز ومميز بصرياً (`⭐ Big Team 01`).
-     3. **كروت المراحل التفصيلية:** شريط إجمالي القطاع يظهر في مقدمة كل كارت مقارنة بالفرق.
-     4. **صف الإجماليات (tfoot):** متوسط الالتزام العام للقطاع.
+2. **Rep-Specific Leads File Generation:**
+   * Generates 25 individual clean CSV files in `d:\Lens\Dashboard\leads/{rep}.csv`.
+   * Covers all **25 active sales representatives** across the 5 teams (`ME-EGSS01`, `ME-EGSS05`, `ME-EGSS10`, `ME-EGSS13`, `ME-EGSS30`).
+   * **Internal CSV 4-Section Architecture:**
+     * `=== 1. SOP PENDING TASKS ===` (Student ID, Task Name, Expiration Timestamp).
+     * `=== 2. UNFIXED TEACHER BINDING LEADS ===` (Student ID, Class Count, Last Class Timestamp).
+     * `=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE ===` (Student ID, Monthly Classes, Paid Classes, Remaining Points, Priority Level).
+     * `=== 4. ENGLISH CLUB ACTIONABLE LEADS ===` (Student ID, Completed Classes, Target).
 
-3. **ملفات وبطاقات أداء الفرق الصغيرة بأسفل التبويب (Small Teams SOP Scorecards):**
-   * تخصيص قسم سفلي متكامل يحتوي على **5 كروت مستقلة للفرق الـ 5** مرتبة تنازلياً حسب نسبة الالتزام:
-     * المركز #1: `ME-EGSS05 (Ibrahimismaiel): 83.3%`
-     * المركز #2: `ME-EGSS13 (Mohamedha): 82.2%`
-     * المركز #3: `ME-EGSS01 (Ashraqatal): 78.4%`
-     * المركز #4: `ME-EGSS10 (Mohamed06): 74.7%`
-     * المركز #5: `ME-EGSS30 (AdhmGadAllah): 72.0%`
-   * يتضمن كل كارت: ترتيب الفريق، اسم التيم ليدر، عدد المراحل المحققة من 9، الفارق عن متوسط القطاع، تفاصيل الـ 9 مراحل مع مؤشرات التارجت، والتوجيه الميداني المباشر للتيم ليدر.
+3. **Dashboard Self-Service Portal & Direct Download:**
+   * **Interactive Dropdown:** Rep selector dropdown (`#personalRepSelect`) in the `Operations Master` tab.
+   * **Personal Mini-Cockpit:** Dynamically displays 4 colorful KPI summary cards for the selected rep's active tasks.
+   * **Direct Client-Side Download:** One-click download button (`downloadSelectedRepLeads()`) delivers the rep's personalized CSV instantly from static GitHub Pages without requiring a backend server.
 
-4. **التكامل عبر تبويبات الداشبورد (Cross-Tab Integration):**
-   * إضافة مؤشر نسبة التزام الـ SOP (`SOP Compliance Rate %`) داخل كروت الفرق في تبويب `Small Teams (5)` لربط الأداء المالي والتعاقدي بالانضباط التشغيلي اليومي.
+4. **Privacy & Data Isolation Protocol:**
+   * Absolute isolation: Rep leads CSV files and Operations Master code contain only assigned student IDs and operational tasks. No manager bonus formulas or sensitive compensation data are present.
+
+5. **Workbook Refresh Cycle:**
+   * Whenever a new `All in one Master.xlsx` workbook is delivered:
+     1. Execute fast Excel COM generation script (`generate_rep_leads_fast.ps1`).
+     2. Update `LEADS_SUMMARY` metrics in `dashboard.js`.
+     3. Stage, commit, and push (`git commit & push`) to deploy fresh leads to GitHub Pages.
 
 ---
 
-### 📈 9. جدول ومسار نسب التحقيق اليومية المعتمدة (Official Daily Pacing Target Curve)
-يُلغى أي حساب خطي تقليدي لمسار التارجت (Linear Pacing)، ويُعتمد جدول النسب اليومية التراكمية التاريخية الرسمية المعتمدة لقطاع Big Team 01 في مقارنة أداء اليوم بالمستهدف:
+### 📊 8. SOP Compliance Standards, Sector Totals & Small Teams Scorecards
+1. **SOP Data Source:**
+   * Official Data Center: `https://lp.51talkjr.com/#/data-center/business/SA-SSdata`.
+   * Covers all 9 operational student lifecycle stages:
+     - **R1 Leads Coverage:** Target 95%
+     - **R2 Timely Callback:** Target 90%
+     - **R3 Demo Class Reserved:** Target 85%
+     - **R4 Class Consumption:** Target 80%
+     - **R5 Outside Pool Recovery:** Target 70%
+     - **R6 Sales Pipeline Active:** Target 75%
+     - **EC English Club Engagement:** Target 70%
+     - **U1 Upgrade Pitch Delivery:** Target 85%
+     - **U2 Upgrade Agreement Closed:** Target 80%
 
-| اليوم (Day) | النسبة المستهدفة (Expected Pace %) | اليوم (Day) | النسبة المستهدفة (Expected Pace %) |
+2. **Big Team 01 Sector Overall Averages:**
+   * Weighted average calculated across all 5 teams for each lifecycle round.
+   * Displayed prominently across:
+     1. **Top KPI Scorecards:** Sector Overall SOP Score (78.1%), Met Stages (3/9), Top Stage (R1 91%), and Primary Bottleneck (R5 55.8%).
+     2. **Master Comparison Heatmap Matrix:** Dedicated highlighted column (`⭐ Big Team 01`).
+     3. **Stage Breakdown Cards:** Sector total bar leading each stage comparison.
+     4. **Summary Footer:** Sector average compliance benchmark.
+
+3. **Small Teams SOP Scorecards (Bottom Section):**
+   * Five dedicated performance cards ranked descending by overall SOP compliance:
+     - **Rank #1:** `ME-EGSS05 (Ibrahimismaiel): 83.3%`
+     - **Rank #2:** `ME-EGSS13 (Mohamedha): 82.2%`
+     - **Rank #3:** `ME-EGSS01 (Ashraqatal): 78.4%`
+     - **Rank #4:** `ME-EGSS10 (Mohamed06): 74.7%`
+     - **Rank #5:** `ME-EGSS30 (AdhmGadAllah): 72.0%`
+   * Each card details team rank, Team Leader name, met stages count out of 9, sector average delta, full 9-round breakdown, and strategic Team Leader recommendations.
+
+4. **Cross-Tab Integration:**
+   * Overall `SOP Compliance Rate %` integrated into team overview cards in `Small Teams (5)` tab.
+
+---
+
+### 📈 9. Official 30-Day Cumulative Target Pacing Curve & Top Visual Ruler
+Linear pacing is strictly superseded by the official non-linear cumulative target pacing schedule representing true month-long business dynamics:
+
+| Day of Month | Expected Cumulative Pace % | Day of Month | Expected Cumulative Pace % |
 |:---:|:---:|:---:|:---:|
-| **Day 1** | 5% | **Day 16** | **46%** *(Today)* |
+| **Day 1** | 5% | **Day 16** | **46%** *(Mid-Month Benchmark)* |
 | **Day 2** | 10% | **Day 17** | 49% |
 | **Day 3** | 11% | **Day 18** | 50% |
 | **Day 4** | 12% | **Day 19** | 51% |
@@ -172,11 +184,30 @@
 | **Day 12** | 32% | **Day 27** | 80% |
 | **Day 13** | 36% | **Day 28** | 87% |
 | **Day 14** | 40% | **Day 29** | 94% |
-| **Day 15** | 43% | **Day 30** | **103%** |
+| **Day 15** | 43% | **Day 30** | **103%** *(Excellence Stretch Goal)* |
 
-* **تطبيق المسار في الداشبورد:**
-  * **مسطرة المسار التراكمي المعتمد (Pacing Ruler Header):** مسطرة علوية بعرض الشارت كامل تمتد من نسبة اليوم الأول (5%) حتى نهاية الشهر (103%)، توضح التدرج التراكمي الحقيقي للمبيعات.
-  * **مؤشر اليوم العائم (Floating Pin):** دبوس إرشادي مضيء يحدد اليوم الحالي ونسبته المعتمدة بدقة (اليوم 16: 46%).
-  * **خط المسار اليومي العمودي (Continuous Vertical Guideline):** خط عمودي متقطع متصل باللون الأزرق السماوي المضيء (Cyan Glow) يهبط من مؤشر اليوم بالمسطرة عبر إجمالي القطاع (Big Team 01) وجميع الفرق الصغيرة الخمسة ليحدد بدقة من تجاوز تارجت اليوم ومن هو متأخر.
-  * **إدراج إجمالي القطاع (Big Team 01 Sector Master Row):** صف رئيسي يتصدر الفرق الصغيرة بمقياس 103% للمقارنة الفورية والمباشرة بين أداء القطاع بالكامل والفرق المكونة له.
-  * **كارت المسار في النظرة التنفيذية:** يوضح الفارق اليومي عن نسبة المسار التراكمي المعتمدة وليس المتوسط الحسابي البسيط.
+#### Visual Pacing System Implementation:
+1. **Full-Width Pacing Ruler Header (5% to 103%):**
+   * Positioned directly above the teams progress chart in the Executive Overview tab.
+   * Spans the full horizontal track width from Day 1 (5%) up to Day 30 (103%), providing a clear visual scale of cumulative monthly milestone targets.
+   * Milestone notches marked along the ruler: `D1 (5%)`, `D5 (14%)`, `D10 (29%)`, `D14 (40%)`, `D15 (43%)`, `D16 (46%)`, `D20 (54%)`, `D25 (65%)`, `D27 (80%)`, `D28 (87%)`, `D29 (94%)`, `100% Target`, and `D30 (103% Goal)`.
+
+2. **Floating Today Indicator Pin:**
+   * An illuminated cyan badge positioned above today's milestone mark (`Day 16: 46%`) showing expected sector cash revenue ($103,776).
+   * Features a downward caret directly pointing to the vertical benchmark axis.
+
+3. **Continuous Vertical Benchmark Guideline:**
+   * A luminous cyan dashed vertical line drops down continuously from the Day 16 pin on the ruler through all progress bar tracks.
+   * Mathematically aligned to sub-pixel precision across every row via:
+     $$\text{Track Position} = \text{calc}\left(20\text{px} + (100\% - 40\text{px}) \times \frac{46}{103}\right)$$
+   * Instantly highlights teams ahead of target pace (Team 30 at 82.9%, Team 13 at 47.6%) vs. teams lagging behind pace (Team 05, Team 10, Team 01).
+
+4. **Big Team 01 Sector Master Row (Row #0):**
+   * Placed immediately beneath the ruler on the identical 103% scale to compare overall sector revenue velocity ($85,418 / $225,600, 37.9%) against the 46% target benchmark alongside the five small teams.
+
+5. **Pacing Status Badges & Dollar Variance:**
+   * Every team row and individual rep entry displays real-time pacing classification:
+     * `🟢 Ahead of Pace` (Actual % $\ge$ Expected %)
+     * `🟡 Within Pace` (Actual % within 8% of Expected %)
+     * `🔴 Behind Pace` (Actual % < Expected % - 8%)
+   * Exact dollar variance (+Surplus / -Deficit) relative to today's benchmark cash quota is computed and displayed for every team and rep.
