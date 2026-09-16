@@ -7,9 +7,17 @@
 
 ---
 
-### 🌐 Primary Data Source
+### 🌐 Primary Data Source & Data Sync Verification
 * **Official Data Center URL:** `https://lp.51talkjr.com/#/data-center/business/SA-SSdata` (**ME Lens Dashboard** tab).
-* This source is automatically designated as the official primary data stream whenever login verification or two-factor authentication blocks direct access to the legacy CRM (`crm.51talk.com`).
+* **Data Sources Sync Verification Widget Requirement:**
+  1. The Executive Overview header MUST feature a dedicated **Data Sources Sync Verification Widget**.
+  2. The 3 main essential input sheets MUST be monitored and displayed with checkboxes and exact download timestamps:
+     * **1. Lens Sheet (`POOL_Detail16` / `Individual_Rankings`)**
+     * **2. English Club Sheet**
+     * **3. SOP Compliance Sheet**
+  3. **Verification Logic:**
+     * If the sheet has been downloaded and verified from today's update cycle, the checkbox is **ticked (checked)** with green highlight status and displays the exact download timestamp (`Downloaded: YYYY-MM-DD HH:mm:ss`).
+     * If any sheet is missing or not downloaded, the checkbox MUST be **unticked (unchecked)** with red status highlight and `Status: NOT DOWNLOADED TODAY`.
 
 ---
 

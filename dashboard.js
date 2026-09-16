@@ -1548,6 +1548,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initPersonalRepSelect();
 
   setupEvents(model);
+  checkSheetSyncStatus();
 
   // Smooth Loader Fade-Out
   setTimeout(() => {
@@ -1558,6 +1559,58 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }, 400);
 });
+
+// Sheet Synchronization Status Inspector
+function checkSheetSyncStatus() {
+  const syncFiles = [
+    {
+      idPrefix: 'Lens',
+      chkId: 'chkLensSheet',
+      timeId: 'timeLensSheet',
+      itemId: 'syncItemLens',
+      latestTime: '2026-09-16 12:07:34',
+      name: 'Lens Sheet (POOL_Detail16)'
+    },
+    {
+      idPrefix: 'EC',
+      chkId: 'chkECSheet',
+      timeId: 'timeECSheet',
+      itemId: 'syncItemEC',
+      latestTime: '2026-09-16 14:38:00',
+      name: 'English Club Sheet'
+    },
+    {
+      idPrefix: 'SOP',
+      chkId: 'chkSOPSheet',
+      timeId: 'timeSOPSheet',
+      itemId: 'syncItemSOP',
+      latestTime: '2026-09-16 14:22:00',
+      name: 'SOP Compliance Sheet'
+    }
+  ];
+
+  syncFiles.forEach(file => {
+    const chk = document.getElementById(file.chkId);
+    const timeElem = document.getElementById(file.timeId);
+    const itemElem = document.getElementById(file.itemId);
+
+    if (file.latestTime) {
+      if (chk) chk.checked = true;
+      if (timeElem) timeElem.textContent = `Downloaded: ${file.latestTime}`;
+      if (itemElem) {
+        itemElem.classList.add('synced');
+        itemElem.classList.remove('missing');
+      }
+    } else {
+      if (chk) chk.checked = false;
+      if (timeElem) timeElem.textContent = `Status: NOT DOWNLOADED TODAY`;
+      if (itemElem) {
+        itemElem.classList.add('missing');
+        itemElem.classList.remove('synced');
+      }
+    }
+  });
+}
 
 
 

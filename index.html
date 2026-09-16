@@ -57,6 +57,49 @@
       </div>
     </nav>
 
+    <!-- Data Synchronization Verification Widget -->
+    <div class="sheet-sync-container">
+      <div class="sheet-sync-header">
+        <div class="sheet-sync-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Data Sources Sync Verification
+        </div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Auto-verifies hourly latest downloads from lp.51talkjr.com & CRM</div>
+      </div>
+
+      <div class="sheet-sync-grid">
+        <!-- 1. Lens Sheet -->
+        <div class="sheet-sync-item" id="syncItemLens">
+          <label class="sheet-checkbox-label">
+            <input type="checkbox" id="chkLensSheet" checked disabled>
+            <span class="checkbox-custom"></span>
+            <span class="sheet-name">1. Lens Sheet (POOL_Detail16)</span>
+          </label>
+          <div class="sheet-time" id="timeLensSheet">Updated: 2026-09-16 12:07:34</div>
+        </div>
+
+        <!-- 2. English Club -->
+        <div class="sheet-sync-item" id="syncItemEC">
+          <label class="sheet-checkbox-label">
+            <input type="checkbox" id="chkECSheet" checked disabled>
+            <span class="checkbox-custom"></span>
+            <span class="sheet-name">2. English Club Sheet</span>
+          </label>
+          <div class="sheet-time" id="timeECSheet">Updated: 2026-09-16 14:38:00</div>
+        </div>
+
+        <!-- 3. SOP Sheet -->
+        <div class="sheet-sync-item" id="syncItemSOP">
+          <label class="sheet-checkbox-label">
+            <input type="checkbox" id="chkSOPSheet" checked disabled>
+            <span class="checkbox-custom"></span>
+            <span class="sheet-name">3. SOP Compliance Sheet</span>
+          </label>
+          <div class="sheet-time" id="timeSOPSheet">Updated: 2026-09-16 14:22:00</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Tab Bar Navigation -->
     <div class="tab-bar">
       <button class="tab active" data-tab="overview">
