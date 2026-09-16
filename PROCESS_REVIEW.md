@@ -156,9 +156,9 @@ Add a **built-in verification panel** to the dashboard that shows:
 
 ### Phase 1: Immediate (This Month) ⚡
 - [x] Document current SOP in `DASHBOARD_UPDATE_RULES.md`
-- [ ] Create unified extraction checklist template
-- [ ] Add data freshness timestamp to dashboard header
-- [ ] Add total verification display (rep count, cash sum, contract sum)
+- [x] Add Cash-Refund and leavers handling rules to SOP
+- [x] Add data freshness timestamp to dashboard header & footer
+- [x] Add total verification display & table footers (`TOTAL / SECTOR AVERAGE`)
 
 ### Phase 2: Short-Term (Next Month) 🎯
 - [ ] Extract data into `data.json` — separate data from code
