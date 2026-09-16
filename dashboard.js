@@ -372,33 +372,56 @@ function renderTeamBars(model) {
   sortedTeams.forEach((t, idx) => {
     // Fill width matches EXACT achievement percentage relative to 100% target
     const cashWidthPct = Math.min(100, Math.max(0, t.achievement));
+    const expCashAtPace = Math.round(t.target * (pacePct / 100));
+    const paceDiffPct = Math.round((t.achievement - pacePct) * 10) / 10;
+    const paceDiffCash = t.cash - expCashAtPace;
+
+    let paceBadge = '';
+    if (t.achievement >= pacePct) {
+      paceBadge = `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🟢 مسبق للمسار (+${paceDiffPct}%)</span>`;
+    } else if (t.achievement >= pacePct - 8) {
+      paceBadge = `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🟡 قريب من المسار (${paceDiffPct}%)</span>`;
+    } else {
+      paceBadge = `<span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🔴 متأخر عن المسار (${paceDiffPct}%)</span>`;
+    }
 
     const row = document.createElement('div');
     row.style.marginBottom = '18px';
+    row.style.background = 'rgba(255,255,255,0.02)';
+    row.style.padding = '12px 16px';
+    row.style.borderRadius = 'var(--radius-md)';
+    row.style.border = '1px solid var(--border-glass)';
     row.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
-        <div>
-          <span style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 700; margin-right: 6px;">#${idx + 1}</span>
-          <span style="color: ${t.color}; font-weight: 700; font-size: 0.95rem;">${t.label}</span>
-          <span style="color: var(--text-muted); font-size: 0.8rem; margin-left: 8px;">(TL: ${t.tl})</span>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 1rem;">#${idx + 1}</span>
+          <span style="color: ${t.color}; font-weight: 800; font-size: 1.05rem;">${t.label}</span>
+          <span style="color: var(--text-muted); font-size: 0.8rem;">(TL: ${t.tl})</span>
+          ${paceBadge}
         </div>
-        <div style="font-family: var(--font-mono); font-size: 0.9rem;">
-          <span style="color: #fff; font-weight: 700;">${fmt(t.cash)}</span>
+        <div style="font-family: var(--font-mono); font-size: 0.95rem;">
+          <span style="color: #fff; font-weight: 800;">${fmt(t.cash)}</span>
           <span style="color: var(--text-muted);"> / ${fmt(t.target)}</span>
           <span style="color: ${getStatusColor(t.achievement)}; font-weight: 800; margin-left: 8px;">(${fmtPct(t.achievement)})</span>
         </div>
       </div>
-      <div style="position: relative; height: 12px; background: rgba(255,255,255,0.06); border-radius: 6px; overflow: visible;">
+
+      <div style="position: relative; height: 14px; background: rgba(255,255,255,0.06); border-radius: 7px; overflow: visible; margin-bottom: 8px;">
         <!-- Filled progress bar matching exact achievement percentage -->
-        <div style="height: 100%; width: ${cashWidthPct}%; background: ${t.color}; border-radius: 6px; transition: width 0.8s ease;"></div>
+        <div style="height: 100%; width: ${cashWidthPct}%; background: ${t.color}; border-radius: 7px; transition: width 0.8s ease;"></div>
         <!-- 100% Target Line Marker at Right Edge -->
-        <div style="position: absolute; top: -3px; right: 0; width: 3px; height: 18px; background: rgba(255,255,255,0.8); border-radius: 2px;" title="Full Target (100%): ${fmt(t.target)}"></div>
+        <div style="position: absolute; top: -3px; right: 0; width: 3px; height: 20px; background: rgba(255,255,255,0.8); border-radius: 2px;" title="Full Target (100%): ${fmt(t.target)}"></div>
         <!-- Official Benchmark Pace Line Marker (Day 16 = 46%) -->
-        <div style="position: absolute; top: -2px; left: ${pacePct}%; width: 2px; height: 16px; background: rgba(255,255,255,0.45); border-left: 1px dashed rgba(255,255,255,0.7);" title="Official Target Pace: Day ${model.summary.daysPassed} Benchmark (${pacePct}%)"></div>
+        <div style="position: absolute; top: -3px; left: ${pacePct}%; width: 2px; height: 20px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 8px rgba(56,189,248,0.8);" title="Official Target Pace: Day ${model.summary.daysPassed} Benchmark (${pacePct}%)"></div>
       </div>
-      <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-secondary); margin-top: 5px;">
-        <span>Orders: <strong>${t.contracts}</strong> (Upgrade M2: ${t.upgradeM2} | <span style="color: #c084fc; font-weight: 700;">20% Goal: ${t.upgrade20Target}</span> [<strong>${t.upgrade20Needed} needed</strong>])</span>
-        <span>Run-Rate Proj: <strong style="color: #38bdf8;">${fmt(t.projected)}</strong> | Need: <strong>${fmt(t.dailyNeeded)}/day</strong></span>
+
+      <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-secondary); flex-wrap: wrap; gap: 8px;">
+        <span>
+          🎯 <strong>مستهدف اليوم ${model.summary.daysPassed} (${pacePct}%):</strong> 
+          <strong style="color: #38bdf8;">${fmt(expCashAtPace)}</strong>
+          (${paceDiffCash >= 0 ? '<span style="color:#10b981; font-weight:700;">+' + fmt(paceDiffCash) + ' زيادة</span>' : '<span style="color:#f43f5e; font-weight:700;">' + fmt(paceDiffCash) + ' عجز</span>'})
+        </span>
+        <span>Orders: <strong>${t.contracts}</strong> (M2: ${t.upgradeM2}) | Proj: <strong style="color: #38bdf8;">${fmt(t.projected)}</strong> | Need: <strong>${fmt(t.dailyNeeded)}/day</strong></span>
       </div>
     `;
     container.appendChild(row);
@@ -411,8 +434,16 @@ function renderOverviewTable(model) {
   tbody.innerHTML = '';
 
   const sorted = [...model.individuals].sort((a, b) => b.achievement - a.achievement || b.cash - a.cash);
+  const pacePct = model.summary.targetPacePct || 46;
 
   sorted.forEach((r, idx) => {
+    const expRepCash = Math.round(r.target * (pacePct / 100));
+    const deltaPace = Math.round((r.achievement - pacePct) * 10) / 10;
+    const isAhead = r.achievement >= pacePct;
+    const isNear = r.achievement >= (pacePct - 10);
+    const paceStatusClr = isAhead ? '#10b981' : (isNear ? '#f59e0b' : '#f43f5e');
+    const paceTag = isAhead ? 'Ahead' : (isNear ? 'Near' : 'Behind');
+
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 700;">#${idx + 1}</td>
@@ -426,6 +457,12 @@ function renderOverviewTable(model) {
         <span style="font-family: var(--font-mono); font-weight: 700; color: ${r.statusColor};">
           ${fmtPct(r.achievement)}
         </span>
+      </td>
+      <td style="text-align: center;">
+        <span style="background: ${paceStatusClr}18; color: ${paceStatusClr}; border: 1px solid ${paceStatusClr}35; padding: 2px 7px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.75rem;">
+          ${deltaPace >= 0 ? '+' : ''}${deltaPace}% (${paceTag})
+        </span>
+        <div style="font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(expRepCash)}</div>
       </td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa;">${fmtPct(r.upgradeRate)}</td>
       <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;">${fmtPct(r.coverRate)}</td>
@@ -449,12 +486,20 @@ function renderOverviewTable(model) {
   if (tfoot) {
     const s = model.summary;
     const avgCover = model.individuals.length > 0 ? (model.individuals.reduce((sum, r) => sum + r.coverRate, 0) / model.individuals.length) : 0;
+    const sectorExpCash = Math.round(s.totalTarget * (pacePct / 100));
+    const sectorDeltaPace = Math.round((s.achievement - pacePct) * 10) / 10;
     tfoot.innerHTML = `
       <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
         <td colspan="3" style="color: #fff; text-align: left; font-size: 0.9rem;">TOTAL / SECTOR AVERAGE</td>
         <td style="font-family: var(--font-mono); color: #fff; font-size: 0.95rem;">${fmt(s.totalCash)}</td>
         <td style="font-family: var(--font-mono); color: var(--text-secondary);">${fmt(s.totalTarget)}</td>
         <td style="font-family: var(--font-mono); color: ${getStatusColor(s.achievement)}; font-size: 0.95rem;">${fmtPct(s.achievement)}</td>
+        <td style="text-align: center;">
+          <span style="background: #f59e0b20; color: #f59e0b; border: 1px solid #f59e0b40; padding: 2px 7px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.78rem;">
+            ${sectorDeltaPace}% (Near)
+          </span>
+          <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(sectorExpCash)}</div>
+        </td>
         <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(s.upgradeRate)}</td>
         <td style="font-family: var(--font-mono); color: #facc15; text-align: center;">${fmtPct(avgCover)}</td>
         <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
@@ -596,6 +641,12 @@ function renderIndividualsTab(model) {
 
       <div style="background: rgba(255,255,255,0.02); padding: 10px; border-radius: var(--radius-sm); font-size: 0.8rem; border: 1px solid var(--border-glass);">
         <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+          <span style="color: var(--text-muted);">Pace (Day 16: 46%):</span>
+          <strong style="color: ${r.achievement >= 46 ? '#10b981' : (r.achievement >= 38 ? '#f59e0b' : '#f43f5e')}; font-family: var(--font-mono); font-weight: 800;">
+            ${(r.achievement - 46) >= 0 ? '+' : ''}${(r.achievement - 46).toFixed(1)}% (${r.achievement >= 46 ? 'Ahead' : (r.achievement >= 38 ? 'Near' : 'Behind')})
+          </strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
           <span style="color: var(--text-muted);">Upgrade M2:</span>
           <strong style="color: #10b981;">${r.upgradeM2}</strong>
         </div>
@@ -623,6 +674,13 @@ function renderIndividualsTab(model) {
   // Render Table
   tableBody.innerHTML = '';
   filtered.forEach((r, idx) => {
+    const pacePct = model.summary.targetPacePct || 46;
+    const expRepCash = Math.round(r.target * (pacePct / 100));
+    const deltaPace = Math.round((r.achievement - pacePct) * 10) / 10;
+    const isAhead = r.achievement >= pacePct;
+    const isNear = r.achievement >= (pacePct - 10);
+    const paceStatusClr = isAhead ? '#10b981' : (isNear ? '#f59e0b' : '#f43f5e');
+
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 700;">#${idx + 1}</td>
@@ -631,6 +689,12 @@ function renderIndividualsTab(model) {
       <td style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${fmt(r.cash)}</td>
       <td style="font-family: var(--font-mono); color: var(--text-secondary);">${fmt(r.target)}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.statusColor};">${fmtPct(r.achievement)}</td>
+      <td style="text-align: center;">
+        <span style="background: ${paceStatusClr}18; color: ${paceStatusClr}; border: 1px solid ${paceStatusClr}35; padding: 2px 7px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.75rem;">
+          ${deltaPace >= 0 ? '+' : ''}${deltaPace}%
+        </span>
+        <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(expRepCash)}</div>
+      </td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'};">${r.upgradeM2}</td>
       <td style="font-family: var(--font-mono);">${r.upgradeBase}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${r.upgrade20Target} <span style="font-size: 0.75rem; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">(${r.upgrade20Needed} needed)</span></td>
@@ -645,13 +709,22 @@ function renderIndividualsTab(model) {
   const tfoot = document.getElementById('individualFullTableFoot');
   if (tfoot) {
     const s = model.summary;
+    const pacePct = s.targetPacePct || 46;
     const avgCover = model.individuals.length > 0 ? (model.individuals.reduce((sum, r) => sum + r.coverRate, 0) / model.individuals.length) : 0;
+    const sectorExpCash = Math.round(s.totalTarget * (pacePct / 100));
+    const sectorDeltaPace = Math.round((s.achievement - pacePct) * 10) / 10;
     tfoot.innerHTML = `
       <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
         <td colspan="3" style="color: #fff; text-align: left; font-size: 0.9rem;">TOTAL / SECTOR AVERAGE</td>
         <td style="font-family: var(--font-mono); color: #fff; font-size: 0.95rem;">${fmt(s.totalCash)}</td>
         <td style="font-family: var(--font-mono); color: var(--text-secondary);">${fmt(s.totalTarget)}</td>
         <td style="font-family: var(--font-mono); color: ${getStatusColor(s.achievement)}; font-size: 0.95rem;">${fmtPct(s.achievement)}</td>
+        <td style="text-align: center;">
+          <span style="background: #f59e0b20; color: #f59e0b; border: 1px solid #f59e0b40; padding: 2px 7px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.78rem;">
+            ${sectorDeltaPace}%
+          </span>
+          <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(sectorExpCash)}</div>
+        </td>
         <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
         <td style="font-family: var(--font-mono);">${s.totalUpgradeBase}</td>
         <td style="font-family: var(--font-mono); color: #c084fc;">${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)</td>
