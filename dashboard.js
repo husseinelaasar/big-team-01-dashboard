@@ -792,27 +792,55 @@ function renderIndividualsTab(model) {
   const tableBody = document.getElementById('individualFullTableBody');
   if (!container || !tableBody) return;
 
-  const teamFilter = document.getElementById('teamFilter').value;
-  const sortFilter = document.getElementById('sortFilter').value;
+  const teamFilterEl = document.getElementById('teamFilter');
+  const sortFilterEl = document.getElementById('sortFilter');
+  const teamFilter = teamFilterEl ? teamFilterEl.value : 'all';
+  const sortFilter = sortFilterEl ? sortFilterEl.value : 'ach-desc';
 
+  // 1. Compute official immutable Cash Achievement Ranks
+  // Sector-wide Cash Rank (1 to 23)
+  const sectorRanked = [...model.individuals].sort((a, b) => b.achievement - a.achievement || b.cash - a.cash || b.contracts - a.contracts);
+  const sectorRankMap = new Map();
+  sectorRanked.forEach((r, idx) => sectorRankMap.set(r.name, idx + 1));
+
+  // Team-level Cash Rank (1 to N within each team)
+  const teamRankMap = new Map();
+  Object.values(model.teams).forEach(t => {
+    const tRanked = [...t.members].sort((a, b) => b.achievement - a.achievement || b.cash - a.cash || b.contracts - a.contracts);
+    tRanked.forEach((r, idx) => teamRankMap.set(r.name, idx + 1));
+  });
+
+  // 2. Filter reps
   let filtered = [...model.individuals];
   if (teamFilter !== 'all') {
     filtered = filtered.filter(r => r.team === teamFilter);
   }
 
-  // Sort by Percentages
-  if (sortFilter === 'upg-rate-desc') filtered.sort((a, b) => b.upgradeRate - a.upgradeRate);
-  else if (sortFilter === 'cover-rate-desc') filtered.sort((a, b) => b.coverRate - a.coverRate);
-  else if (sortFilter === 'ach-desc') filtered.sort((a, b) => b.achievement - a.achievement);
-  else if (sortFilter === 'cash-desc') filtered.sort((a, b) => b.cash - a.cash);
-  else if (sortFilter === 'gap-desc') filtered.sort((a, b) => b.gap - a.gap);
-  else if (sortFilter === 'upgrade-desc') filtered.sort((a, b) => b.upgradeM2 - a.upgradeM2);
-  else if (sortFilter === 'contracts-desc') filtered.sort((a, b) => b.contracts - a.contracts);
-  else filtered.sort((a, b) => b.achievement - a.achievement);
+  // Update Section Header Count Tag
+  const countTag = document.getElementById('individualRepsCountTag');
+  if (countTag) {
+    if (teamFilter === 'all') {
+      countTag.textContent = `${model.individuals.length} Active Sales Specialists`;
+    } else {
+      const tObj = model.teams[teamFilter];
+      countTag.textContent = `${filtered.length} Reps (${tObj?.label || teamFilter})`;
+    }
+  }
 
-  // Render Cards
+  // 3. Sort reps (Always defaults to Cash Achievement %)
+  if (sortFilter === 'upg-rate-desc') filtered.sort((a, b) => b.upgradeRate - a.upgradeRate || b.achievement - a.achievement);
+  else if (sortFilter === 'cover-rate-desc') filtered.sort((a, b) => b.coverRate - a.coverRate || b.achievement - a.achievement);
+  else if (sortFilter === 'ach-desc') filtered.sort((a, b) => b.achievement - a.achievement || b.cash - a.cash || b.contracts - a.contracts);
+  else if (sortFilter === 'cash-desc') filtered.sort((a, b) => b.cash - a.cash || b.achievement - a.achievement);
+  else if (sortFilter === 'gap-desc') filtered.sort((a, b) => b.gap - a.gap || b.achievement - a.achievement);
+  else if (sortFilter === 'upgrade-desc') filtered.sort((a, b) => b.upgradeM2 - a.upgradeM2 || b.achievement - a.achievement);
+  else if (sortFilter === 'contracts-desc') filtered.sort((a, b) => b.contracts - a.contracts || b.achievement - a.achievement);
+  else filtered.sort((a, b) => b.achievement - a.achievement || b.cash - a.cash || b.contracts - a.contracts);
+
+  // 4. Render Cards
   container.innerHTML = '';
   filtered.forEach((r, idx) => {
+    const repRank = teamFilter === 'all' ? sectorRankMap.get(r.name) : teamRankMap.get(r.name);
     const card = document.createElement('div');
     card.className = 'calc-card';
     card.style.borderLeft = `4px solid ${r.teamColor}`;
@@ -820,8 +848,11 @@ function renderIndividualsTab(model) {
     card.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
         <div>
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff;">${r.isTL ? '👑 ' : ''}${r.name}</h3>
-          <span style="font-size: 0.8rem; color: ${r.teamColor};">${r.teamLabel}</span>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 0.95rem;">#${repRank}</span>
+            <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0;">${r.isTL ? '👑 ' : ''}${r.name}</h3>
+          </div>
+          <span style="font-size: 0.8rem; color: ${r.teamColor}; margin-top: 2px; display: inline-block;">${r.teamLabel}</span>
         </div>
         <span class="status-badge" style="background: ${r.statusColor}20; color: ${r.statusColor}; border: 1px solid ${r.statusColor}40;">
           ${r.status}
@@ -867,7 +898,7 @@ function renderIndividualsTab(model) {
     container.appendChild(card);
   });
 
-  // Render Table
+  // 5. Render Table
   tableBody.innerHTML = '';
   filtered.forEach((r, idx) => {
     const pacePct = model.summary.targetPacePct || 46;
@@ -876,10 +907,11 @@ function renderIndividualsTab(model) {
     const isAhead = r.achievement >= pacePct;
     const isNear = r.achievement >= (pacePct - 10);
     const paceStatusClr = isAhead ? '#10b981' : (isNear ? '#f59e0b' : '#f43f5e');
+    const repRank = teamFilter === 'all' ? sectorRankMap.get(r.name) : teamRankMap.get(r.name);
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 700;">#${idx + 1}</td>
+      <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800;">#${repRank}</td>
       <td><strong>${r.isTL ? '👑 ' : ''}${r.name}</strong></td>
       <td><span style="color: ${r.teamColor}; font-weight: 600;">${r.team}</span></td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${fmt(r.cash)}</td>
@@ -902,34 +934,82 @@ function renderIndividualsTab(model) {
     tableBody.appendChild(tr);
   });
 
+  // 6. Dynamic Context-Aware Footer Row (Selected Team vs Sector)
   const tfoot = document.getElementById('individualFullTableFoot');
   if (tfoot) {
-    const s = model.summary;
-    const pacePct = s.targetPacePct || 46;
-    const avgCover = model.individuals.length > 0 ? (model.individuals.reduce((sum, r) => sum + r.coverRate, 0) / model.individuals.length) : 0;
-    const sectorExpCash = Math.round(s.totalTarget * (pacePct / 100));
-    const sectorDeltaPace = Math.round((s.achievement - pacePct) * 10) / 10;
-    tfoot.innerHTML = `
-      <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
-        <td colspan="3" style="color: #fff; text-align: left; font-size: 0.9rem;">TOTAL / SECTOR AVERAGE</td>
-        <td style="font-family: var(--font-mono); color: #fff; font-size: 0.95rem;">${fmt(s.totalCash)}</td>
-        <td style="font-family: var(--font-mono); color: var(--text-secondary);">${fmt(s.totalTarget)}</td>
-        <td style="font-family: var(--font-mono); color: ${getStatusColor(s.achievement)}; font-size: 0.95rem;">${fmtPct(s.achievement)}</td>
-        <td style="text-align: center;">
-          <span style="background: #f59e0b20; color: #f59e0b; border: 1px solid #f59e0b40; padding: 2px 7px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.78rem;">
-            ${sectorDeltaPace}%
-          </span>
-          <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(sectorExpCash)}</div>
-        </td>
-        <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
-        <td style="font-family: var(--font-mono);">${s.totalUpgradeBase}</td>
-        <td style="font-family: var(--font-mono); color: #c084fc;">${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)</td>
-        <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(s.upgradeRate)}</td>
-        <td style="font-family: var(--font-mono); color: #facc15; text-align: center;">${fmtPct(avgCover)}</td>
-        <td style="font-family: var(--font-mono); color: #fff;">${s.totalContracts}</td>
-        <td><span class="status-badge" style="background: #6366f120; color: #818cf8;">Sector Total</span></td>
-      </tr>
-    `;
+    const pacePct = model.summary.targetPacePct || 46;
+
+    if (teamFilter === 'all') {
+      const s = model.summary;
+      const avgCover = model.individuals.length > 0 ? (model.individuals.reduce((sum, r) => sum + r.coverRate, 0) / model.individuals.length) : 0;
+      const sectorExpCash = Math.round(s.totalTarget * (pacePct / 100));
+      const sectorDeltaPace = Math.round((s.achievement - pacePct) * 10) / 10;
+      const paceStatusClr = s.achievement >= pacePct ? '#10b981' : (s.achievement >= (pacePct - 8) ? '#f59e0b' : '#f43f5e');
+
+      tfoot.innerHTML = `
+        <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
+          <td colspan="3" style="color: #fff; text-align: left; font-size: 0.9rem;">TOTAL / SECTOR AVERAGE</td>
+          <td style="font-family: var(--font-mono); color: #fff; font-size: 0.95rem;">${fmt(s.totalCash)}</td>
+          <td style="font-family: var(--font-mono); color: var(--text-secondary);">${fmt(s.totalTarget)}</td>
+          <td style="font-family: var(--font-mono); color: ${getStatusColor(s.achievement)}; font-size: 0.95rem;">${fmtPct(s.achievement)}</td>
+          <td style="text-align: center;">
+            <span style="background: ${paceStatusClr}20; color: ${paceStatusClr}; border: 1px solid ${paceStatusClr}40; padding: 2px 7px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.78rem;">
+              ${sectorDeltaPace >= 0 ? '+' : ''}${sectorDeltaPace}%
+            </span>
+            <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(sectorExpCash)}</div>
+          </td>
+          <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
+          <td style="font-family: var(--font-mono);">${s.totalUpgradeBase}</td>
+          <td style="font-family: var(--font-mono); color: #c084fc;">${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)</td>
+          <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(s.upgradeRate)}</td>
+          <td style="font-family: var(--font-mono); color: #facc15; text-align: center;">${fmtPct(avgCover)}</td>
+          <td style="font-family: var(--font-mono); color: #fff;">${s.totalContracts}</td>
+          <td><span class="status-badge" style="background: #6366f120; color: #818cf8;">Sector Total</span></td>
+        </tr>
+      `;
+    } else {
+      const teamObj = model.teams[teamFilter];
+      const teamLabel = teamObj ? teamObj.label : `ME-${teamFilter}`;
+      const teamColor = teamObj ? teamObj.color : '#6366f1';
+
+      const teamCash = filtered.reduce((sum, r) => sum + r.cash, 0);
+      const teamTarget = filtered.reduce((sum, r) => sum + r.target, 0);
+      const teamAch = teamTarget > 0 ? ((teamCash / teamTarget) * 100) : 0;
+      const teamExpCash = Math.round(teamTarget * (pacePct / 100));
+      const teamDeltaPace = Math.round((teamAch - pacePct) * 10) / 10;
+      const teamUpgradeM2 = filtered.reduce((sum, r) => sum + r.upgradeM2, 0);
+      const teamUpgradeBase = filtered.reduce((sum, r) => sum + r.upgradeBase, 0);
+      const teamUpgrade20Target = Math.ceil(teamUpgradeBase * 0.20);
+      const teamUpgrade20Needed = Math.max(0, teamUpgrade20Target - teamUpgradeM2);
+      const teamUpgradeRate = teamUpgradeBase > 0 ? ((teamUpgradeM2 / teamUpgradeBase) * 100) : 0;
+      const teamAvgCover = filtered.length > 0 ? (filtered.reduce((sum, r) => sum + r.coverRate, 0) / filtered.length) : 0;
+      const teamContracts = filtered.reduce((sum, r) => sum + r.contracts, 0);
+      const paceStatusClr = teamAch >= pacePct ? '#10b981' : (teamAch >= (pacePct - 8) ? '#f59e0b' : '#f43f5e');
+
+      tfoot.innerHTML = `
+        <tr style="background: rgba(99, 102, 241, 0.16); font-weight: 800; border-top: 2px solid ${teamColor};">
+          <td colspan="3" style="color: #fff; text-align: left; font-size: 0.9rem;">
+            TOTAL / ${teamLabel.toUpperCase()}
+          </td>
+          <td style="font-family: var(--font-mono); color: #fff; font-size: 0.95rem;">${fmt(teamCash)}</td>
+          <td style="font-family: var(--font-mono); color: var(--text-secondary);">${fmt(teamTarget)}</td>
+          <td style="font-family: var(--font-mono); color: ${getStatusColor(teamAch)}; font-size: 0.95rem;">${fmtPct(teamAch)}</td>
+          <td style="text-align: center;">
+            <span style="background: ${paceStatusClr}20; color: ${paceStatusClr}; border: 1px solid ${paceStatusClr}40; padding: 2px 7px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.78rem;">
+              ${teamDeltaPace >= 0 ? '+' : ''}${teamDeltaPace}%
+            </span>
+            <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(teamExpCash)}</div>
+          </td>
+          <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${teamUpgradeM2}</td>
+          <td style="font-family: var(--font-mono);">${teamUpgradeBase}</td>
+          <td style="font-family: var(--font-mono); color: #c084fc;">${teamUpgrade20Target} (${teamUpgrade20Needed} needed)</td>
+          <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(teamUpgradeRate)}</td>
+          <td style="font-family: var(--font-mono); color: #facc15; text-align: center;">${fmtPct(teamAvgCover)}</td>
+          <td style="font-family: var(--font-mono); color: #fff;">${teamContracts}</td>
+          <td><span class="status-badge" style="background: ${teamColor}25; color: ${teamColor}; border: 1px solid ${teamColor}50;">${teamFilter} Total</span></td>
+        </tr>
+      `;
+    }
   }
 }
 
@@ -1416,7 +1496,13 @@ function setupEvents(model) {
   // Filter & Sort
   const teamFilter = document.getElementById('teamFilter');
   const sortFilter = document.getElementById('sortFilter');
-  if (teamFilter) teamFilter.addEventListener('change', () => renderIndividualsTab(model));
+  if (teamFilter) {
+    teamFilter.addEventListener('change', () => {
+      // Always ensure rank & roster are sorted by Cash % Achievement
+      if (sortFilter) sortFilter.value = 'ach-desc';
+      renderIndividualsTab(model);
+    });
+  }
   if (sortFilter) sortFilter.addEventListener('change', () => renderIndividualsTab(model));
 
   const opTeamFilter = document.getElementById('opTeamFilter');

@@ -24,12 +24,17 @@
    * **Mandatory Sort Order:** Sort teams descending by `Cash Achievement %` from highest at the top (Rank #1) to lowest at the bottom (Rank #5).
    * **Visual Bar Calibration:** Progress bar fill length must strictly correspond to the team's achievement percentage calibrated on the 103% target curve axis, featuring a 100% full target marker line and the official daily benchmark dashed line.
 7. **Leaderboard & Individual Rankings Sorting:**
-   * **Mandatory Sort Order:** The individual matrix and leaderboard preview must strictly sort descending by **`Cash Achievement %` (High to Low)**, from top performer (Rank #1: 108.2%) downward.
+   * **Mandatory Default Sort Order:** The individual matrix, table view, and leaderboard preview must strictly sort descending by **`Cash Achievement %` (High to Low)** by default, with ties broken by total cash volume and then contracts.
+   * **Immutable Cash Rank Assignment:** The **RANK** column (`#1`, `#2`, `#3`...) must ALWAYS be assigned strictly according to **`Cash Achievement %`**. Even if a user sorts by a secondary attribute (such as `M2 Cover Rate %`, `Contracts`, or `Upgrade M2`), the rank index displayed next to each sales rep must preserve their true Cash Achievement Rank, preventing misattribution of top ranks.
+   * **Team Filter Sort Reset:** When switching small team filters, the sort filter must automatically reset to `Cash Achievement % (High to Low)` to ensure the team's roster is immediately presented in true performance order.
 8. **Small Team Member Roster Sorting:**
-   * **Mandatory Sort Order:** Sort team members within each small team card descending by `Cash Achievement %`.
+   * **Mandatory Sort Order:** Sort team members within each small team card strictly descending by `Cash Achievement %`.
    * **Member Upgrade Metric:** Display executed early upgrade contracts `Upgrades: Y M2` next to each rep's name, and feature total team upgrades in a dedicated stat box on the card.
-9. **Table Totals Row (`tfoot`):**
-   * **Universal Rule:** Every table across the dashboard must include a dedicated summary footer row showing total sums (`TOTAL`) and sector-wide weighted averages (`SECTOR AVERAGE`).
+9. **Context-Aware Table Totals Row (`tfoot`):**
+   * **Universal Rule:** Every table across the dashboard must include a dedicated summary footer row.
+   * **Dynamic Team vs. Sector Totals:**
+     * When **"All Small Teams (5)"** is selected: The footer row must display the Big Team 01 Sector Average and totals (`TOTAL / SECTOR AVERAGE`).
+     * When a specific **Small Team** is selected (e.g., `ME-EGSS01`): The footer row must dynamically calculate and display **ONLY the aggregate performance metrics of the selected small team** (`TOTAL / ME-EGSS01 (ASHRAQATAL)`), including team total cash, team target, team achievement %, team pace projection, team early upgrades, and team M2 coverage rate. It is strictly forbidden to show the Big Team total when filtering by an individual team.
 
 ---
 
