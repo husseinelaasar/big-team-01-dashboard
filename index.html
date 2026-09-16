@@ -372,6 +372,39 @@
         </span>
       </div>
 
+      <!-- Rep Personal Self-Service Download Portal -->
+      <div class="rep-self-portal" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.95)); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-lg); padding: 22px 26px; margin-bottom: 28px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35); position: relative; overflow: hidden; backdrop-filter: blur(10px);">
+        <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gradient-primary);"></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span style="font-size: 1.25rem;">👤</span>
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff;">بوابة التحميل الذاتي للممثل (My Personal Actionable Leads Portal)</h3>
+              <span class="pulse-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.7rem; padding: 2px 8px; border-radius: 6px; font-weight: 700;">LIVE EXPORT</span>
+            </div>
+            <p style="font-size: 0.84rem; color: var(--text-secondary);">
+              اختر اسمك من القائمة لعرض ملخص مهامك وتحميل شيت ليدات الطلاب الخاصة بك (Student IDs) للبدء في الاتصال فوراً.
+            </p>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <select id="personalRepSelect" onchange="onPersonalRepSelected()" style="padding: 10px 16px; font-size: 0.88rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff; min-width: 240px; cursor: pointer;">
+              <option value="">-- اختر اسمك (Select Your Name) --</option>
+            </select>
+            <button id="btnDownloadMyLeads" onclick="downloadSelectedRepLeads()" style="display: none; padding: 10px 20px; font-size: 0.88rem; font-weight: 700; border-radius: var(--radius-md); background: linear-gradient(135deg, #10b981, #059669); color: #fff; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); transition: all 0.2s ease;">
+              📥 تحميل شيت ليداتي (Download My Leads)
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Rep Personal Mini-Cockpit -->
+        <div id="repPersonalSummary" style="display: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;" id="repSummaryCards">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+      </div>
+
       <!-- 4 Module Summary Hero Cards -->
       <div class="op-kpi-grid">
         <!-- Module 1 Card -->

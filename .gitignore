@@ -15,3 +15,5 @@ node_modules/
 inject_operations_js.js
 operations_clean_data.js
 master_extracted_data.json
+inject_portal.js
+leads_summary.json

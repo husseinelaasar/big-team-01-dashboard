@@ -863,6 +863,7 @@ window.addEventListener('DOMContentLoaded', () => {
   renderSOPTab();
   renderRecommendationsTab(model);
   renderOperationsTab();
+  initPersonalRepSelect();
 
   setupEvents(model);
 
@@ -2232,4 +2233,270 @@ function renderOperationsTab() {
       </table>
     `;
   }
+}
+
+
+
+// =========================================================================
+// REP PERSONAL PORTAL & SELF-SERVICE DOWNLOAD
+// =========================================================================
+
+const LEADS_SUMMARY = {
+    "EGSS-juliamonir01":  {
+                              "ccCount":  240,
+                              "ftCount":  75,
+                              "sopCount":  42,
+                              "ecCount":  79,
+                              "totalLeads":  436
+                          },
+    "EGSS-marwaahmed":  {
+                            "ccCount":  249,
+                            "ftCount":  56,
+                            "sopCount":  62,
+                            "ecCount":  89,
+                            "totalLeads":  456
+                        },
+    "EGLP-shahdmahmoud":  {
+                              "ccCount":  107,
+                              "ftCount":  34,
+                              "sopCount":  65,
+                              "ecCount":  78,
+                              "totalLeads":  284
+                          },
+    "EGSS-negma":  {
+                       "ccCount":  217,
+                       "ftCount":  42,
+                       "sopCount":  1,
+                       "ecCount":  112,
+                       "totalLeads":  372
+                   },
+    "EGSS-mahmoud04":  {
+                           "ccCount":  300,
+                           "ftCount":  73,
+                           "sopCount":  111,
+                           "ecCount":  99,
+                           "totalLeads":  583
+                       },
+    "EGSS-mohamedha":  {
+                           "ccCount":  207,
+                           "ftCount":  74,
+                           "sopCount":  89,
+                           "ecCount":  74,
+                           "totalLeads":  444
+                       },
+    "EGLP-yasmin01":  {
+                          "ccCount":  108,
+                          "ftCount":  25,
+                          "sopCount":  0,
+                          "ecCount":  0,
+                          "totalLeads":  133
+                      },
+    "EGSS-abdelrahmannasef":  {
+                                  "ccCount":  223,
+                                  "ftCount":  47,
+                                  "sopCount":  85,
+                                  "ecCount":  84,
+                                  "totalLeads":  439
+                              },
+    "EGSS-nohayoussry":  {
+                             "ccCount":  210,
+                             "ftCount":  41,
+                             "sopCount":  84,
+                             "ecCount":  118,
+                             "totalLeads":  453
+                         },
+    "EGSS-samira01":  {
+                          "ccCount":  213,
+                          "ftCount":  51,
+                          "sopCount":  3,
+                          "ecCount":  65,
+                          "totalLeads":  332
+                      },
+    "EGSS-alihesham01":  {
+                             "ccCount":  103,
+                             "ftCount":  22,
+                             "sopCount":  1,
+                             "ecCount":  32,
+                             "totalLeads":  158
+                         },
+    "EGSS-adhmgadallah":  {
+                              "ccCount":  227,
+                              "ftCount":  62,
+                              "sopCount":  25,
+                              "ecCount":  71,
+                              "totalLeads":  385
+                          },
+    "EGSS-omarmoneb":  {
+                           "ccCount":  214,
+                           "ftCount":  68,
+                           "sopCount":  26,
+                           "ecCount":  76,
+                           "totalLeads":  384
+                       },
+    "EGLP-mohamed06":  {
+                           "ccCount":  188,
+                           "ftCount":  63,
+                           "sopCount":  32,
+                           "ecCount":  77,
+                           "totalLeads":  360
+                       },
+    "EGSS-hayamhassan":  {
+                             "ccCount":  102,
+                             "ftCount":  14,
+                             "sopCount":  16,
+                             "ecCount":  91,
+                             "totalLeads":  223
+                         },
+    "EGSS-ahmedshoukry":  {
+                              "ccCount":  285,
+                              "ftCount":  66,
+                              "sopCount":  30,
+                              "ecCount":  109,
+                              "totalLeads":  490
+                          },
+    "EGSS-ashraqatal":  {
+                            "ccCount":  232,
+                            "ftCount":  79,
+                            "sopCount":  80,
+                            "ecCount":  115,
+                            "totalLeads":  506
+                        },
+    "EGSS-titooooo":  {
+                          "ccCount":  229,
+                          "ftCount":  45,
+                          "sopCount":  72,
+                          "ecCount":  85,
+                          "totalLeads":  431
+                      },
+    "EGSS-abdelrhmanshehata":  {
+                                   "ccCount":  112,
+                                   "ftCount":  24,
+                                   "sopCount":  1,
+                                   "ecCount":  36,
+                                   "totalLeads":  173
+                               },
+    "EGSS-amrsafwat":  {
+                           "ccCount":  283,
+                           "ftCount":  75,
+                           "sopCount":  41,
+                           "ecCount":  108,
+                           "totalLeads":  507
+                       },
+    "EGSS-ibrahimismaiel":  {
+                                "ccCount":  241,
+                                "ftCount":  88,
+                                "sopCount":  13,
+                                "ecCount":  92,
+                                "totalLeads":  434
+                            },
+    "EGSS-mahmoudkhamis":  {
+                               "ccCount":  221,
+                               "ftCount":  52,
+                               "sopCount":  11,
+                               "ecCount":  101,
+                               "totalLeads":  385
+                           },
+    "EGSS-ehabzaky01":  {
+                            "ccCount":  219,
+                            "ftCount":  42,
+                            "sopCount":  47,
+                            "ecCount":  93,
+                            "totalLeads":  401
+                        },
+    "EGSS-khaledgonam":  {
+                             "ccCount":  268,
+                             "ftCount":  78,
+                             "sopCount":  81,
+                             "ecCount":  79,
+                             "totalLeads":  506
+                         },
+    "EGLP-saraht":  {
+                        "ccCount":  188,
+                        "ftCount":  64,
+                        "sopCount":  41,
+                        "ecCount":  80,
+                        "totalLeads":  373
+                    }
+}
+;
+
+function initPersonalRepSelect() {
+  const sel = document.getElementById('personalRepSelect');
+  if (!sel || !window.MASTER_OPERATIONS_DATA) return;
+
+  const reps = MASTER_OPERATIONS_DATA.sop.map(r => r.name).sort();
+  sel.innerHTML = '<option value="">-- اختر اسمك (Select Your Name) --</option>';
+
+  reps.forEach(rep => {
+    const opt = document.createElement('option');
+    opt.value = rep;
+    opt.textContent = rep;
+    sel.appendChild(opt);
+  });
+}
+
+function onPersonalRepSelected() {
+  const sel = document.getElementById('personalRepSelect');
+  const rep = sel ? sel.value : '';
+  const btn = document.getElementById('btnDownloadMyLeads');
+  const summaryBox = document.getElementById('repPersonalSummary');
+  const cardsContainer = document.getElementById('repSummaryCards');
+
+  if (!rep) {
+    if (btn) btn.style.display = 'none';
+    if (summaryBox) summaryBox.style.display = 'none';
+    return;
+  }
+
+  if (btn) {
+    btn.style.display = 'inline-flex';
+    btn.innerHTML = `📥 تحميل ليدات ${rep} (.CSV)`;
+  }
+
+  const info = LEADS_SUMMARY[rep] || { sopCount: 0, ftCount: 0, ccCount: 0, ecCount: 0, totalLeads: 0 };
+  
+  if (summaryBox && cardsContainer) {
+    summaryBox.style.display = 'block';
+    cardsContainer.innerHTML = `
+      <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
+        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 مهام SOP المعلقة</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.sopCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">مهام</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">متابعة وتوعية فورية</div>
+      </div>
+
+      <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
+        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 طلاب بدون معلمين ثابتين</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ftCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طلاب</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف الربط 80%</div>
+      </div>
+
+      <div style="background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
+        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 إنقاذ استهلاك الحصص</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ccCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">حسابات</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">تركيز على Zero-Class</div>
+      </div>
+
+      <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
+        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ ليدات English Club</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ecCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">مؤهلين</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">لتحقيق هدف 40%</div>
+      </div>
+    `;
+  }
+}
+
+function downloadSelectedRepLeads() {
+  const sel = document.getElementById('personalRepSelect');
+  const rep = sel ? sel.value : '';
+  if (!rep) {
+    alert('الرجاء اختيار اسمك أولاً!');
+    return;
+  }
+
+  const link = document.createElement('a');
+  link.href = `leads/${rep}.csv`;
+  link.download = `${rep}_Daily_Actionable_Leads.csv`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
