@@ -156,11 +156,22 @@ const POOL22_M2_COVERAGE = {
   "EGLP-yasmin01": 0.0
 };
 
+// Official Cumulative Expected Pacing Benchmark Curve (Day 1 to 30)
+const OFFICIAL_PACING_CURVE = {
+  1: 5,   2: 10,  3: 11,  4: 12,  5: 14,
+  6: 16,  7: 19,  8: 22,  9: 26,  10: 29,
+  11: 31, 12: 32, 13: 36, 14: 40, 15: 43,
+  16: 46, 17: 49, 18: 50, 19: 51, 20: 54,
+  21: 57, 22: 59, 23: 62, 24: 66, 25: 65,
+  26: 68, 27: 80, 28: 87, 29: 94, 30: 103
+};
+
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 14;
+  const daysPassed = 16; // Current MTD Day (Sep 16, 2026)
   const daysInMonth = 30;
   const daysLeft = daysInMonth - daysPassed;
+  const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 46;
 
   const teams = {};
   const teamKeys = ["EGSS01", "EGSS05", "EGSS10", "EGSS13", "EGSS30"];
@@ -263,6 +274,8 @@ function buildDataModel() {
       upgradeRate: ((totalUpgradeM2 / totalUpgradeBase) * 100),
       activeReps: individuals.length,
       zeroReps: individuals.filter(r => r.cash === 0).length,
+      targetPacePct: expectedPace,
+      pacingGapPct: Math.round((((totalCash / totalTarget) * 100) - expectedPace) * 10) / 10,
       daysPassed,
       daysLeft,
       daysInMonth
@@ -338,7 +351,7 @@ function renderKPIs(model) {
   document.getElementById('achPct').textContent = fmtPct(s.achievement);
   document.getElementById('achSub').textContent = `Gap: ${fmt(s.totalGap)} | Need: ${fmt(s.dailyNeeded)}/day`;
   document.getElementById('achBar').style.width = Math.min(100, s.achievement) + '%';
-  document.getElementById('achDays').textContent = `Day ${s.daysPassed} of ${s.daysInMonth} (${s.daysLeft} Days Left)`;
+  document.getElementById('achDays').textContent = `Day ${s.daysPassed} of ${s.daysInMonth} | Expected Pace: ${s.targetPacePct}% (${s.daysLeft} Days Left)`;
 
   // Reps
   document.getElementById('totalReps').textContent = `${s.activeReps} Reps`;
@@ -354,7 +367,7 @@ function renderTeamBars(model) {
 
   // Sort teams descending by cash achievement % (Highest at top, lowest at bottom)
   const sortedTeams = Object.values(model.teams).sort((a, b) => b.achievement - a.achievement);
-  const pacePct = ((model.summary.daysPassed / model.summary.daysInMonth) * 100);
+  const pacePct = model.summary.targetPacePct || 46;
 
   sortedTeams.forEach((t, idx) => {
     // Fill width matches EXACT achievement percentage relative to 100% target
@@ -380,8 +393,8 @@ function renderTeamBars(model) {
         <div style="height: 100%; width: ${cashWidthPct}%; background: ${t.color}; border-radius: 6px; transition: width 0.8s ease;"></div>
         <!-- 100% Target Line Marker at Right Edge -->
         <div style="position: absolute; top: -3px; right: 0; width: 3px; height: 18px; background: rgba(255,255,255,0.8); border-radius: 2px;" title="Full Target (100%): ${fmt(t.target)}"></div>
-        <!-- Mid-Month Pace Line Marker (Day 15/30 = 50%) -->
-        <div style="position: absolute; top: -2px; left: ${pacePct}%; width: 2px; height: 16px; background: rgba(255,255,255,0.35); border-left: 1px dashed rgba(255,255,255,0.6);" title="Day ${model.summary.daysPassed} Pace Benchmark (${fmtPct(pacePct)})"></div>
+        <!-- Official Benchmark Pace Line Marker (Day 16 = 46%) -->
+        <div style="position: absolute; top: -2px; left: ${pacePct}%; width: 2px; height: 16px; background: rgba(255,255,255,0.45); border-left: 1px dashed rgba(255,255,255,0.7);" title="Official Target Pace: Day ${model.summary.daysPassed} Benchmark (${pacePct}%)"></div>
       </div>
       <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-secondary); margin-top: 5px;">
         <span>Orders: <strong>${t.contracts}</strong> (Upgrade M2: ${t.upgradeM2} | <span style="color: #c084fc; font-weight: 700;">20% Goal: ${t.upgrade20Target}</span> [<strong>${t.upgrade20Needed} needed</strong>])</span>
@@ -466,6 +479,11 @@ function renderSmallTeamsTab(model) {
       card.style.borderTop = `4px solid ${t.color}`;
       card.style.animationDelay = `${tIdx * 0.1}s`;
 
+      // Calculate team's SOP compliance average
+      const sopKey = 'ME-' + t.key;
+      const sopVals = Object.values(SOP_DATA[sopKey] || {});
+      const teamSopAvg = sopVals.length > 0 ? (Math.round((sopVals.reduce((a, b) => a + b, 0) / sopVals.length) * 10) / 10) : 0;
+
       const memberRows = t.members
         .sort((a, b) => b.achievement - a.achievement || b.cash - a.cash)
         .map(m => `
@@ -510,6 +528,13 @@ function renderSmallTeamsTab(model) {
         <div>
           <div style="font-size: 0.72rem; color: var(--text-muted);">20% Goal (Needed)</div>
           <div style="font-size: 1.05rem; font-weight: 700; color: #c084fc; font-family: var(--font-mono);">${t.upgrade20Target} <span style="font-size: 0.75rem; color: ${t.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">(${t.upgrade20Needed} needed)</span></div>
+        </div>
+        <div style="grid-column: span 3; display: flex; justify-content: space-between; align-items: center; background: rgba(99, 102, 241, 0.08); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid rgba(99, 102, 241, 0.2); margin-top: 2px;">
+          <span style="font-size: 0.75rem; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            SOP Compliance Rate:
+          </span>
+          <strong style="color: ${teamSopAvg >= 80 ? '#10b981' : '#f59e0b'}; font-family: var(--font-mono); font-size: 0.95rem;">${teamSopAvg}%</strong>
         </div>
       </div>
       <div style="margin-top: 10px;">
@@ -709,42 +734,344 @@ function renderBreakdownTab(model) {
 }
 
 function renderSOPTab() {
-  const container = document.getElementById('sopContent');
-  if (!container) return;
-  container.innerHTML = '';
+  const kpisContainer = document.getElementById('sopExecutiveKpis');
+  const matrixBody = document.getElementById('sopMatrixTableBody');
+  const matrixFoot = document.getElementById('sopMatrixTableFoot');
+  const stagesContainer = document.getElementById('sopContent');
+  const smallTeamsContainer = document.getElementById('sopSmallTeamCards');
 
+  if (!matrixBody || !stagesContainer) return;
+
+  const teamKeys = ["ME-EGSS01", "ME-EGSS05", "ME-EGSS10", "ME-EGSS13", "ME-EGSS30"];
+
+  // 1. Calculate Big Team 01 (Sector Total) average per round & overall team averages
+  const roundAverages = {};
+  SOP_ROUNDS.forEach(r => {
+    let sum = 0;
+    teamKeys.forEach(tk => { sum += (SOP_DATA[tk]?.[r.key] || 0); });
+    roundAverages[r.key] = Math.round((sum / teamKeys.length) * 10) / 10;
+  });
+
+  const teamSopAverages = {};
+  const teamRoundsMet = {};
+  teamKeys.forEach(tk => {
+    let sum = 0;
+    let met = 0;
+    SOP_ROUNDS.forEach(r => {
+      const val = SOP_DATA[tk]?.[r.key] || 0;
+      sum += val;
+      if (val >= r.target) met++;
+    });
+    teamSopAverages[tk] = Math.round((sum / SOP_ROUNDS.length) * 10) / 10;
+    teamRoundsMet[tk] = met;
+  });
+
+  const sectorOverallAvg = Math.round((Object.values(roundAverages).reduce((a, b) => a + b, 0) / SOP_ROUNDS.length) * 10) / 10;
+  const sectorRoundsMet = SOP_ROUNDS.filter(r => roundAverages[r.key] >= r.target).length;
+  
+  // Find top round and bottleneck round
+  let topRound = SOP_ROUNDS[0];
+  let worstGapRound = SOP_ROUNDS[0];
+  let worstGap = 999;
+  let maxScore = -1;
+
+  SOP_ROUNDS.forEach(r => {
+    const avg = roundAverages[r.key];
+    const gap = avg - r.target;
+    if (avg > maxScore) {
+      maxScore = avg;
+      topRound = r;
+    }
+    if (gap < worstGap) {
+      worstGap = gap;
+      worstGapRound = r;
+    }
+  });
+
+  // Helper status color & badges
+  const getSopColor = (val, target) => {
+    if (val >= target) return '#10b981'; // Green
+    if (val >= target - 10) return '#f59e0b'; // Amber
+    return '#f43f5e'; // Rose/Red
+  };
+
+  const getSopBadge = (val, target) => {
+    const delta = Math.round((val - target) * 10) / 10;
+    const sign = delta >= 0 ? '+' : '';
+    if (val >= target) {
+      return `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">🟢 MET (${sign}${delta}%)</span>`;
+    }
+    if (val >= target - 10) {
+      return `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">🟡 ALERT (${sign}${delta}%)</span>`;
+    }
+    return `<span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.3); padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">🔴 LAG (${sign}${delta}%)</span>`;
+  };
+
+  // 2. Render Top Executive Big Team 01 KPI Cards
+  if (kpisContainer) {
+    kpisContainer.innerHTML = `
+      <div class="kpi-card" style="border-top: 4px solid var(--accent-indigo);">
+        <div class="kpi-label">Big Team 01 — إجمالي التزام القطاع</div>
+        <div class="kpi-value" style="color: #fff; font-family: var(--font-mono); font-size: 1.85rem;">
+          ${sectorOverallAvg}%
+          <span style="font-size: 0.85rem; color: #818cf8; font-weight: 600;">(Sector Total)</span>
+        </div>
+        <div class="kpi-sub">Target Benchmark: <strong>80.0%</strong> | Gap: <span style="color: #f59e0b;">-1.9%</span></div>
+        <div class="kpi-progress" style="margin-top: 8px;">
+          <div class="kpi-bar" style="width: ${sectorOverallAvg}%; background: linear-gradient(90deg, #6366f1, #06b6d4);"></div>
+        </div>
+        <div class="kpi-pct" style="color: var(--text-secondary);">متوسط شامل لكافة مراحل الـ 9 للفرق الـ 5</div>
+      </div>
+
+      <div class="kpi-card" style="border-top: 4px solid #10b981;">
+        <div class="kpi-label">المراحل المحققة للتارجت بالكامل</div>
+        <div class="kpi-value" style="color: #10b981; font-family: var(--font-mono); font-size: 1.85rem;">
+          ${sectorRoundsMet} <span style="font-size: 1rem; color: var(--text-muted);">/ 9 Stages</span>
+        </div>
+        <div class="kpi-sub">R4 (80.4%), R6 (77.4%), EC (70.0%)</div>
+        <div class="kpi-progress" style="margin-top: 8px;">
+          <div class="kpi-bar" style="width: ${(sectorRoundsMet / 9) * 100}%; background: #10b981;"></div>
+        </div>
+        <div class="kpi-pct" style="color: #10b981;">4 مراحل إضافية في نطاق التسامح (قريبة)</div>
+      </div>
+
+      <div class="kpi-card" style="border-top: 4px solid #06b6d4;">
+        <div class="kpi-label">أعلى مرحلة أداءً في القطاع</div>
+        <div class="kpi-value" style="color: #06b6d4; font-family: var(--font-mono); font-size: 1.45rem;">
+          ${topRound.label.split(' ')[0]} ${topRound.label.split(' ')[1]} (${roundAverages[topRound.key]}%)
+        </div>
+        <div class="kpi-sub">${topRound.label} | Target: <strong>${topRound.target}%</strong></div>
+        <div class="kpi-progress" style="margin-top: 8px;">
+          <div class="kpi-bar" style="width: ${roundAverages[topRound.key]}%; background: #06b6d4;"></div>
+        </div>
+        <div class="kpi-pct" style="color: #06b6d4;">أفضل فريق: ME-EGSS05 (95%)</div>
+      </div>
+
+      <div class="kpi-card" style="border-top: 4px solid #f43f5e;">
+        <div class="kpi-label">أولوية التدخل العاجل (Bottleneck)</div>
+        <div class="kpi-value" style="color: #f43f5e; font-family: var(--font-mono); font-size: 1.45rem;">
+          ${worstGapRound.key}: ${roundAverages[worstGapRound.key]}%
+        </div>
+        <div class="kpi-sub">${worstGapRound.label} | Target: <strong>${worstGapRound.target}%</strong></div>
+        <div class="kpi-progress" style="margin-top: 8px;">
+          <div class="kpi-bar" style="width: ${roundAverages[worstGapRound.key]}%; background: #f43f5e;"></div>
+        </div>
+        <div class="kpi-pct" style="color: #f43f5e;">فجوة ${worstGap.toFixed(1)}% — تتطلب متابعة مباشرة لليدز خارج المسبح</div>
+      </div>
+    `;
+  }
+
+  // 3. Render Master Comparison Matrix Table (Body & Foot)
+  matrixBody.innerHTML = '';
+  SOP_ROUNDS.forEach((r, idx) => {
+    const bigVal = roundAverages[r.key];
+    const bigClr = getSopColor(bigVal, r.target);
+    const badge = getSopBadge(bigVal, r.target);
+
+    const teamCells = teamKeys.map(tk => {
+      const v = SOP_DATA[tk]?.[r.key] || 0;
+      const clr = getSopColor(v, r.target);
+      const isMet = v >= r.target;
+      return `
+        <td style="text-align: center; font-family: var(--font-mono); font-weight: 700; color: ${clr};">
+          ${v}% ${isMet ? '<span style="font-size: 0.7rem;">✓</span>' : ''}
+        </td>
+      `;
+    }).join('');
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>
+        <strong style="color: #fff;">${r.label}</strong>
+        <span style="font-size: 0.72rem; color: var(--text-muted); margin-left: 6px;">(${r.key})</span>
+      </td>
+      <td style="text-align: center; font-family: var(--font-mono); color: var(--text-secondary); font-weight: 600;">${r.target}%</td>
+      <td style="background: rgba(99, 102, 241, 0.18); border-left: 2px solid #6366f1; border-right: 2px solid #6366f1; text-align: center; font-family: var(--font-mono); font-weight: 800; font-size: 0.95rem; color: ${bigClr};">
+        ${bigVal}%
+      </td>
+      ${teamCells}
+      <td style="text-align: center;">${badge}</td>
+    `;
+    matrixBody.appendChild(tr);
+  });
+
+  if (matrixFoot) {
+    const footTeamCells = teamKeys.map(tk => {
+      const avg = teamSopAverages[tk];
+      const clr = getSopColor(avg, 80);
+      return `
+        <td style="text-align: center; font-family: var(--font-mono); font-weight: 800; font-size: 0.92rem; color: ${clr};">
+          ${avg}%
+        </td>
+      `;
+    }).join('');
+
+    matrixFoot.innerHTML = `
+      <tr style="background: rgba(99, 102, 241, 0.15); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
+        <td style="color: #fff; font-size: 0.88rem;">متوسط التزام الـ SOP (TOTAL AVERAGE)</td>
+        <td style="text-align: center; font-family: var(--font-mono); color: var(--text-secondary);">80.0%</td>
+        <td style="background: rgba(99, 102, 241, 0.3); border-left: 2px solid #6366f1; border-right: 2px solid #6366f1; text-align: center; font-family: var(--font-mono); font-size: 1.05rem; color: #fff;">
+          ⭐ ${sectorOverallAvg}%
+        </td>
+        ${footTeamCells}
+        <td style="text-align: center;">
+          <span style="background: rgba(99, 102, 241, 0.2); color: #818cf8; padding: 3px 10px; border-radius: 6px; font-weight: 800; font-size: 0.78rem;">Big Team 01</span>
+        </td>
+      </tr>
+    `;
+  }
+
+  // 4. Render Stage Breakdown Cards (Including Big Team 01 Bar in each card)
+  stagesContainer.innerHTML = '';
   SOP_ROUNDS.forEach(round => {
     const card = document.createElement('div');
     card.className = 'calc-card';
+    const bigVal = roundAverages[round.key];
+    const bigClr = getSopColor(bigVal, round.target);
 
-    const barRows = Object.entries(SOP_DATA).map(([teamLabel, metrics]) => {
-      const val = metrics[round.key] || 0;
+    // Big Team 01 row
+    const bigTeamRow = `
+      <div style="margin-bottom: 12px; padding: 8px 10px; background: rgba(99, 102, 241, 0.12); border-radius: var(--radius-sm); border: 1px solid rgba(99, 102, 241, 0.25);">
+        <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 4px;">
+          <span style="color: #fff; font-weight: 800; display: flex; align-items: center; gap: 6px;">
+            ⭐ Big Team 01 (إجمالي القطاع)
+          </span>
+          <span style="font-family: var(--font-mono); color: ${bigClr}; font-weight: 800;">${bigVal}%</span>
+        </div>
+        <div style="height: 7px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden;">
+          <div style="height: 100%; width: ${Math.min(100, bigVal)}%; background: linear-gradient(90deg, #6366f1, #06b6d4);"></div>
+        </div>
+      </div>
+    `;
+
+    const barRows = teamKeys.map(teamLabel => {
+      const val = SOP_DATA[teamLabel]?.[round.key] || 0;
       const tk = teamLabel.replace('ME-', '');
       const color = TL_MAPPING[tk]?.color || '#6366f1';
-      const statusClr = val >= round.target ? '#10b981' : val >= (round.target - 10) ? '#f59e0b' : '#f43f5e';
+      const statusClr = getSopColor(val, round.target);
 
       return `
-        <div style="margin-bottom: 10px;">
-          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+        <div style="margin-bottom: 8px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 3px;">
             <span style="color: ${color}; font-weight: 600;">${teamLabel}</span>
             <span style="font-family: var(--font-mono); color: ${statusClr}; font-weight: 700;">${val}%</span>
           </div>
-          <div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden;">
-            <div style="height: 100%; width: ${val}%; background: ${statusClr};"></div>
+          <div style="height: 5px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden;">
+            <div style="height: 100%; width: ${Math.min(100, val)}%; background: ${statusClr};"></div>
           </div>
         </div>
       `;
     }).join('');
 
     card.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
         <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff;">${round.label}</h4>
-        <span style="font-size: 0.75rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px;">Target: ${round.target}%</span>
+        <span style="font-size: 0.72rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px;">Target: ${round.target}%</span>
       </div>
+      ${bigTeamRow}
       ${barRows}
     `;
-    container.appendChild(card);
+    stagesContainer.appendChild(card);
   });
+
+  // 5. Render Dedicated Small Teams SOP Cards at the Bottom
+  if (smallTeamsContainer) {
+    smallTeamsContainer.innerHTML = '';
+    
+    // Sort teams by overall SOP average descending
+    const sortedTeams = [...teamKeys].sort((a, b) => teamSopAverages[b] - teamSopAverages[a]);
+
+    const teamRecommendations = {
+      "ME-EGSS05": "أداء قيادي استثنائي (المركز الأول 83.3%). الأولوية القصوى: تحسين R5 متابعة خارج المسبح من 62% إلى 70%.",
+      "ME-EGSS13": "التزام قوي ومتقارب مع المتصدر (82.2%). التركيز على رفع R5 (69%) وإغلاق الترقية U2 (78%).",
+      "ME-EGSS01": "أداء متوازن (78.4%). يتطلب تدخلاً مباشراً في R5 (55%) ورفع نسبة إغلاق الترقية U2 (75%).",
+      "ME-EGSS10": "تراجع في نسب الالتزام (74.7%). تدريب عاجل على R5 خارج المسبح (48%)، وحصص الإنجلش كلوب EC (65%).",
+      "ME-EGSS30": "يحتاج خطة إنقاذ وتدخل تشغيلي شامل (72.0%). التركيز على R5 (45%) والإنجلش كلوب (60%) وترقية U2 (68%)."
+    };
+
+    sortedTeams.forEach((tk, rankIdx) => {
+      const shortKey = tk.replace('ME-', '');
+      const tl = TL_MAPPING[shortKey];
+      const avg = teamSopAverages[tk];
+      const metCount = teamRoundsMet[tk];
+      const deltaSector = Math.round((avg - sectorOverallAvg) * 10) / 10;
+      const deltaSign = deltaSector >= 0 ? '+' : '';
+      const statusClr = getSopColor(avg, 80);
+
+      const stageRows = SOP_ROUNDS.map(r => {
+        const val = SOP_DATA[tk]?.[r.key] || 0;
+        const clr = getSopColor(val, r.target);
+        const isMet = val >= r.target;
+        return `
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 0.78rem;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="color: ${isMet ? '#10b981' : '#f43f5e'}; font-size: 0.7rem;">${isMet ? '●' : '○'}</span>
+              <span style="color: var(--text-secondary);">${r.label}</span>
+            </div>
+            <div style="font-family: var(--font-mono); display: flex; align-items: center; gap: 6px;">
+              <strong style="color: ${clr};">${val}%</strong>
+              <span style="font-size: 0.68rem; color: var(--text-muted);">/ ${r.target}%</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const card = document.createElement('div');
+      card.className = 'calc-card';
+      card.style.borderTop = `4px solid ${tl?.color || '#6366f1'}`;
+      card.style.background = 'var(--bg-card)';
+      card.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <h4 style="font-size: 1.15rem; font-weight: 800; color: #fff;">${tk}</h4>
+              <span style="background: ${tl?.color || '#6366f1'}20; color: ${tl?.color || '#6366f1'}; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: 700;">
+                Rank #${rankIdx + 1}
+              </span>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
+              Team Leader: <strong style="color: #fff;">👑 ${tl?.tl || ''}</strong>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 1.6rem; font-weight: 900; font-family: var(--font-mono); color: ${statusClr}; line-height: 1;">
+              ${avg}%
+            </div>
+            <div style="font-size: 0.7rem; color: ${deltaSector >= 0 ? '#10b981' : '#f43f5e'}; font-weight: 700; margin-top: 3px;">
+              ${deltaSign}${deltaSector}% vs Sector
+            </div>
+          </div>
+        </div>
+
+        <!-- KPI Mini Box -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; background: rgba(255,255,255,0.02); padding: 10px; border-radius: var(--radius-sm); margin-bottom: 14px; border: 1px solid var(--border-glass);">
+          <div>
+            <div style="font-size: 0.68rem; color: var(--text-muted);">Stages on Target</div>
+            <div style="font-size: 0.95rem; font-weight: 800; color: #10b981; font-family: var(--font-mono);">${metCount} / 9 Stages</div>
+          </div>
+          <div>
+            <div style="font-size: 0.68rem; color: var(--text-muted);">Tolerance Score</div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: #fff; font-family: var(--font-mono);">${Math.round((avg / 80) * 100)}% of Goal</div>
+          </div>
+        </div>
+
+        <!-- 9 Stages List -->
+        <div style="margin-bottom: 14px;">
+          <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.05em;">
+            Operational Stages Breakdown (9 Rounds)
+          </div>
+          ${stageRows}
+        </div>
+
+        <!-- Action / Coaching Note -->
+        <div style="background: rgba(99, 102, 241, 0.06); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.5;">
+          <strong style="color: #818cf8;">💡 توجيه المتابعة الميدانية:</strong>
+          <div style="margin-top: 3px; color: #e2e8f0;">${teamRecommendations[tk] || ''}</div>
+        </div>
+      `;
+      smallTeamsContainer.appendChild(card);
+    });
+  }
 }
 
 function renderRecommendationsTab(model) {

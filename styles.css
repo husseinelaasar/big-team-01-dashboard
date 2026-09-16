@@ -950,7 +950,18 @@ body::after {
   background: var(--bg-secondary);
 }
 
-/* ============ SOP GRID ============ */
+/* ============ SOP GRID & REDESIGNED EXECUTIVE STYLES ============ */
+.sop-executive-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.sop-teams-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
 .sop-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
