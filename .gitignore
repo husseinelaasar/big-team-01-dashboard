@@ -17,3 +17,7 @@ operations_clean_data.js
 master_extracted_data.json
 inject_portal.js
 leads_summary.json
+Dashboard_Input_Files/
+*.xlsx
+*.xls
+
