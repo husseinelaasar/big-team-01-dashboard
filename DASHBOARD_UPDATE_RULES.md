@@ -222,8 +222,10 @@ Linear pacing is strictly superseded by the official non-linear cumulative targe
    * **Windows Task:** `51Talk_Dashboard_Hourly_Update`
    * **Script:** [`hourly_update_and_publish.ps1`](file:///d:/Lens/Dashboard/hourly_update_and_publish.ps1)
    * **Log:** [`hourly_update.log`](file:///d:/Lens/Dashboard/hourly_update.log)
-3. **Browser Cache Busting:**
-   * Inform users to perform a hard refresh (`Ctrl + F5` or `Shift + Reload`) if local browser caching displays older figures.
+3. **Automated Cache-Busting Protocol:**
+   * **Versioned Asset Query Strings:** `index.html` must always reference scripts and stylesheets using timestamped version tags (e.g. `<script src="dashboard.js?v=20260919_1425"></script>` and `<link rel="stylesheet" href="styles.css?v=20260919_1425">`). This prevents browser disk caching and GitHub Pages CDN edge cache delays, ensuring updates reflect instantly.
+   * **Anti-Caching HTTP Meta Directives:** Embedded directly in `<head>` (`Cache-Control: no-cache, no-store, must-revalidate`, `Pragma: no-cache`, `Expires: 0`).
+   * **Client Verification:** Users can immediately view fresh figures via `Ctrl + F5` or `Shift + F5` in any browser.
 
 ---
 
