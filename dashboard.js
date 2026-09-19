@@ -2732,6 +2732,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -3215,6 +3217,8 @@ const LEADS_SUMMARY = {
 
 
 
+
+
 function initPersonalRepSelect() {
   const sel = document.getElementById('personalRepSelect');
   if (!sel || !window.MASTER_OPERATIONS_DATA) return;
@@ -3295,6 +3299,8 @@ function downloadSelectedRepLeads() {
   link.click();
   document.body.removeChild(link);
 }
+
+
 
 
 
