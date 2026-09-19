@@ -68,13 +68,13 @@ const NEW_TARGETS = {
   "EGSS-alihesham01": 3810
 };
 
-// Official Small Team Totals from Data Center Small_Team Sheet
+// Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS30": { gross: 13240, refund: 1750, cash: 11490, target: 15980, contracts: 15, officialAch: 71.9 },
-  "EGSS13": { gross: 29512, refund: 2068, cash: 27444, target: 47060, contracts: 29, officialAch: 58.3 },
-  "EGSS05": { gross: 40984, refund: 880, cash: 40104, target: 76590, contracts: 49, officialAch: 52.4 },
-  "EGSS01": { gross: 17212, refund: 2974, cash: 14238, target: 50760, contracts: 17, officialAch: 28.0 },
-  "EGSS10": { gross: 10650, refund: 2063, cash: 8587, target: 35210, contracts: 11, officialAch: 24.4 },
+  "EGSS30": { gross: 13240, refund: 0, cash: 13240, target: 15980, contracts: 15, officialAch: 82.9 },
+  "EGSS13": { gross: 29512, refund: 1750, cash: 27762, target: 47060, contracts: 29, officialAch: 59.0 },
+  "EGSS05": { gross: 40352, refund: 2068, cash: 38284, target: 76590, contracts: 48, officialAch: 50.0 },
+  "EGSS01": { gross: 17212, refund: 1660, cash: 15552, target: 50760, contracts: 17, officialAch: 30.6 },
+  "EGSS10": { gross: 10650, refund: 0, cash: 10650, target: 35210, contracts: 11, officialAch: 30.2 },
 };
 
 const REPS_DATA = [
@@ -740,7 +740,7 @@ function renderSmallTeamsTab(model) {
           </div>
           <div style="font-family: var(--font-mono); text-align: right;">
             <span style="color: #fff; font-weight: 600;">${fmt(m.cash)}</span>
-            ${m.refund > 0 ? `<span style="color: #f43f5e; font-size: 0.75rem; margin-left: 4px; font-weight: 700;" title="Individual Refund: -$${fmt(m.refund)}">(Ref: -${fmt(m.refund)})</span>` : ''}
+            ${m.refund > 0 ? `<span style="color: #f43f5e; font-size: 0.75rem; margin-left: 4px; font-weight: 700;" title="Individual Refund: -${fmt(m.refund)}">(Ref: -${fmt(m.refund)})</span>` : ''}
             <span style="color: ${m.statusColor}; font-size: 0.75rem; margin-left: 4px;">(${fmtPct(m.achievement)})</span>
           </div>
         </div>
