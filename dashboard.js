@@ -1568,21 +1568,21 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-09-16 19:32:59', name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-09-19 13:03:04', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
       chkId: 'chkECSheet',
       timeId: 'timeECSheet',
       itemId: 'syncItemEC',
-      latestTime: '2026-09-16 14:39:11', name: 'English Club Sheet'
+      latestTime: '2026-09-19 12:33:56', name: 'English Club Sheet'
     },
     {
       idPrefix: 'SOP',
       chkId: 'chkSOPSheet',
       timeId: 'timeSOPSheet',
       itemId: 'syncItemSOP',
-      latestTime: '2026-09-16 14:23:13', name: 'SOP Compliance Sheet'
+      latestTime: '2026-09-19 12:43:33', name: 'SOP Compliance Sheet'
     }
   ];
 
@@ -3232,6 +3232,7 @@ function downloadSelectedRepLeads() {
   link.click();
   document.body.removeChild(link);
 }
+
 
 
 
