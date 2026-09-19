@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -77,33 +77,32 @@ const OFFICIAL_TEAMS_DATA = {
   "EGSS10": { gross: 10650, refund: 2063, cash: 8587, target: 35210, contracts: 11, officialAch: 24.4 },
 };
 
-// Verified Live CRM Performance + POOL_Detail Renewal/Upgrade Breakdown (Sep 1–19, 2026 - Data Center Live)
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 3832, target: 8040, contracts: 6, upgradeM2: 1, normalRenewals: 2, upgradeBase: 47, poolRenewals: 3 },
-  { name: "EGSS-ashraqatal", team: "EGSS01", cash: -380, target: 10880, contracts: 1, upgradeM2: 1, normalRenewals: 0, upgradeBase: 41, poolRenewals: 1 },
-  { name: "EGSS-negma", team: "EGSS01", cash: 4160, target: 7790, contracts: 2, upgradeM2: 1, normalRenewals: 1, upgradeBase: 45, poolRenewals: 2 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 3060, target: 8050, contracts: 3, upgradeM2: 0, normalRenewals: 2, upgradeBase: 22, poolRenewals: 2 },
-  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 4880, target: 10420, contracts: 5, upgradeM2: 2, normalRenewals: 4, upgradeBase: 18, poolRenewals: 6 },
-  { name: "EGLP-yasmin01", team: "EGSS01", cash: 0, target: 5580, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 7341, target: 9710, contracts: 9, upgradeM2: 2, normalRenewals: 7, upgradeBase: 25, poolRenewals: 9 },
-  { name: "EGSS-titooooo", team: "EGSS05", cash: 5640, target: 8920, contracts: 6, upgradeM2: 0, normalRenewals: 5, upgradeBase: 24, poolRenewals: 5 },
-  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 5240, target: 9550, contracts: 6, upgradeM2: 0, normalRenewals: 6, upgradeBase: 20, poolRenewals: 6 },
-  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 5430, target: 10360, contracts: 7, upgradeM2: 0, normalRenewals: 10, upgradeBase: 14, poolRenewals: 10 },
-  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 5907, target: 10170, contracts: 9, upgradeM2: 3, normalRenewals: 6, upgradeBase: 29, poolRenewals: 9 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 5806, target: 10190, contracts: 8, upgradeM2: 1, normalRenewals: 7, upgradeBase: 21, poolRenewals: 8 },
-  { name: "EGLP-saraht", team: "EGSS05", cash: 1020, target: 7340, contracts: 1, upgradeM2: 0, normalRenewals: 1, upgradeBase: 31, poolRenewals: 1 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 1900, target: 10350, contracts: 2, upgradeM2: 1, normalRenewals: 1, upgradeBase: 35, poolRenewals: 2 },
-  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 6090, target: 11640, contracts: 6, upgradeM2: 1, normalRenewals: 5, upgradeBase: 41, poolRenewals: 6 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 3540, target: 16450, contracts: 4, upgradeM2: 0, normalRenewals: 4, upgradeBase: 36, poolRenewals: 4 },
-  { name: "EGLP-mohamed06", team: "EGSS10", cash: 1020, target: 7120, contracts: 1, upgradeM2: 0, normalRenewals: 1, upgradeBase: 31, poolRenewals: 1 },
-  { name: "EGSS-mohamedha", team: "EGSS13", cash: 10940, target: 9300, contracts: 11, upgradeM2: 4, normalRenewals: 7, upgradeBase: 22, poolRenewals: 11 },
-  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 8120, target: 12240, contracts: 5, upgradeM2: 1, normalRenewals: 4, upgradeBase: 24, poolRenewals: 5 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 3662, target: 10560, contracts: 8, upgradeM2: 3, normalRenewals: 2, upgradeBase: 72, poolRenewals: 5 },
-  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 4160, target: 8640, contracts: 4, upgradeM2: 1, normalRenewals: 3, upgradeBase: 8, poolRenewals: 4 },
-  { name: "EGLP-shahdmahmoud", team: "EGSS13", cash: 880, target: 6320, contracts: 1, upgradeM2: 1, normalRenewals: 0, upgradeBase: 41, poolRenewals: 1 },
-  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 8100, target: 8480, contracts: 10, upgradeM2: 1, normalRenewals: 9, upgradeBase: 23, poolRenewals: 10 },
-  { name: "EGSS-abdelrhmanshehata", team: "EGSS30", cash: 3320, target: 3690, contracts: 3, upgradeM2: 1, normalRenewals: 2, upgradeBase: 6, poolRenewals: 3 },
-  { name: "EGSS-alihesham01", team: "EGSS30", cash: 1820, target: 3810, contracts: 2, upgradeM2: 0, normalRenewals: 2, upgradeBase: 5, poolRenewals: 2 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 3832, refund: 0, target: 8040, contracts: 6, upgradeM2: 1, normalRenewals: 2, upgradeBase: 47, poolRenewals: 3 },
+  { name: "EGSS-ashraqatal", team: "EGSS01", cash: -380, refund: 1660, target: 10880, contracts: 1, upgradeM2: 1, normalRenewals: 0, upgradeBase: 41, poolRenewals: 1 },
+  { name: "EGSS-negma", team: "EGSS01", cash: 4160, refund: 0, target: 7790, contracts: 2, upgradeM2: 1, normalRenewals: 1, upgradeBase: 45, poolRenewals: 2 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 3060, refund: 0, target: 8050, contracts: 3, upgradeM2: 0, normalRenewals: 2, upgradeBase: 22, poolRenewals: 2 },
+  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 4880, refund: 0, target: 10420, contracts: 5, upgradeM2: 2, normalRenewals: 4, upgradeBase: 18, poolRenewals: 6 },
+  { name: "EGLP-yasmin01", team: "EGSS01", cash: 0, refund: 0, target: 5580, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 7341, refund: 0, target: 9710, contracts: 9, upgradeM2: 2, normalRenewals: 7, upgradeBase: 25, poolRenewals: 9 },
+  { name: "EGSS-titooooo", team: "EGSS05", cash: 5640, refund: 0, target: 8920, contracts: 6, upgradeM2: 0, normalRenewals: 5, upgradeBase: 24, poolRenewals: 5 },
+  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 5240, refund: 0, target: 9550, contracts: 6, upgradeM2: 0, normalRenewals: 6, upgradeBase: 20, poolRenewals: 6 },
+  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 5430, refund: 0, target: 10360, contracts: 7, upgradeM2: 0, normalRenewals: 10, upgradeBase: 14, poolRenewals: 10 },
+  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 5907, refund: 2068, target: 10170, contracts: 9, upgradeM2: 3, normalRenewals: 6, upgradeBase: 29, poolRenewals: 9 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 5806, refund: 0, target: 10190, contracts: 8, upgradeM2: 1, normalRenewals: 7, upgradeBase: 21, poolRenewals: 8 },
+  { name: "EGLP-saraht", team: "EGSS05", cash: 1020, refund: 0, target: 7340, contracts: 1, upgradeM2: 0, normalRenewals: 1, upgradeBase: 31, poolRenewals: 1 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 1900, refund: 0, target: 10350, contracts: 2, upgradeM2: 1, normalRenewals: 1, upgradeBase: 35, poolRenewals: 2 },
+  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 6090, refund: 0, target: 11640, contracts: 6, upgradeM2: 1, normalRenewals: 5, upgradeBase: 41, poolRenewals: 6 },
+  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 3540, refund: 0, target: 16450, contracts: 4, upgradeM2: 0, normalRenewals: 4, upgradeBase: 36, poolRenewals: 4 },
+  { name: "EGLP-mohamed06", team: "EGSS10", cash: 1020, refund: 0, target: 7120, contracts: 1, upgradeM2: 0, normalRenewals: 1, upgradeBase: 31, poolRenewals: 1 },
+  { name: "EGSS-mohamedha", team: "EGSS13", cash: 10940, refund: 0, target: 9300, contracts: 11, upgradeM2: 4, normalRenewals: 7, upgradeBase: 22, poolRenewals: 11 },
+  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 8120, refund: 0, target: 12240, contracts: 5, upgradeM2: 1, normalRenewals: 4, upgradeBase: 24, poolRenewals: 5 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 3662, refund: 1750, target: 10560, contracts: 8, upgradeM2: 3, normalRenewals: 2, upgradeBase: 72, poolRenewals: 5 },
+  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 4160, refund: 0, target: 8640, contracts: 4, upgradeM2: 1, normalRenewals: 3, upgradeBase: 8, poolRenewals: 4 },
+  { name: "EGLP-shahdmahmoud", team: "EGSS13", cash: 880, refund: 0, target: 6320, contracts: 1, upgradeM2: 1, normalRenewals: 0, upgradeBase: 41, poolRenewals: 1 },
+  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 8100, refund: 0, target: 8480, contracts: 10, upgradeM2: 1, normalRenewals: 9, upgradeBase: 23, poolRenewals: 10 },
+  { name: "EGSS-abdelrhmanshehata", team: "EGSS30", cash: 3320, refund: 0, target: 3690, contracts: 3, upgradeM2: 1, normalRenewals: 2, upgradeBase: 6, poolRenewals: 3 },
+  { name: "EGSS-alihesham01", team: "EGSS30", cash: 1820, refund: 0, target: 3810, contracts: 2, upgradeM2: 0, normalRenewals: 2, upgradeBase: 5, poolRenewals: 2 },
 ];
 
 // SOP Process Compliance Data (51Talk Data Center)
@@ -231,25 +230,18 @@ function buildDataModel() {
     return rep;
   });
 
-  // Calculate official team achievements and run-rates
+  // Calculate team achievements and run-rates
+  // RULE: Small team net cash is strictly the sum of active team members' net cash.
+  // Active member refunds are displayed next to their names in the roster.
+  // Refunds not tied to an active team member are charged ONLY to Big Team 01 (Sector Total).
   teamKeys.forEach(tk => {
     const t = teams[tk];
-    const off = OFFICIAL_TEAMS_DATA[tk];
-    if (off) {
-      t.gross = off.gross || off.cash;
-      t.refund = off.refund || 0;
-      t.cash = off.cash;
-      t.target = off.target;
-      t.contracts = off.contracts;
-      t.achievement = off.officialAch;
-    } else {
-      t.cash = t.members.reduce((s, m) => s + m.cash, 0);
-      t.gross = t.cash;
-      t.refund = 0;
-      t.target = t.members.reduce((s, m) => s + m.target, 0);
-      t.contracts = t.members.reduce((s, m) => s + m.contracts, 0);
-      t.achievement = t.target > 0 ? ((t.cash / t.target) * 100) : 0;
-    }
+    t.cash = t.members.reduce((s, m) => s + m.cash, 0);
+    t.target = t.members.reduce((s, m) => s + m.target, 0);
+    t.refund = t.members.reduce((s, m) => s + (m.refund || 0), 0);
+    t.gross = t.members.reduce((s, m) => s + (m.cash + (m.refund || 0)), 0);
+    t.contracts = t.members.reduce((s, m) => s + m.contracts, 0);
+    t.achievement = t.target > 0 ? ((t.cash / t.target) * 100) : 0;
     t.gap = Math.max(0, t.target - t.cash);
     t.projected = Math.round((t.cash / daysPassed) * daysInMonth);
     t.dailyNeeded = Math.round(t.gap / daysLeft);
@@ -674,8 +666,7 @@ function renderOverviewTable(model) {
         </span>
         <div style="font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(expRepCash)}</div>
       </td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa;">${fmtPct(r.upgradeRate)}</td>
-      <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;">${fmtPct(r.coverRate)}</td>
+      <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;" title="51Talk POOL22 Touchpoint Frequency: ${(r.coverRate / 100).toFixed(1)} calls/student (100% Unique Coverage in POOL_Detail23)">${fmtPct(r.coverRate)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(r.coverRate / 100).toFixed(1)}x)</span></td>
       <td style="font-family: var(--font-mono); color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'}; font-weight: ${r.upgradeM2 > 0 ? '700' : '400'};">
         ${r.upgradeM2}
       </td>
@@ -747,8 +738,9 @@ function renderSmallTeamsTab(model) {
             <span style="color: #fff;">${m.isTL ? '👑 ' : ''}${m.name}</span>
             <span style="font-size: 0.75rem; color: #a78bfa; margin-left: 6px;">(M2 Conv: ${fmtPct(m.upgradeRate)} | Upgrades: <strong style="color: #10b981;">${m.upgradeM2}</strong>)</span>
           </div>
-          <div style="font-family: var(--font-mono);">
+          <div style="font-family: var(--font-mono); text-align: right;">
             <span style="color: #fff; font-weight: 600;">${fmt(m.cash)}</span>
+            ${m.refund > 0 ? `<span style="color: #f43f5e; font-size: 0.75rem; margin-left: 4px; font-weight: 700;" title="Individual Refund: -$${fmt(m.refund)}">(Ref: -${fmt(m.refund)})</span>` : ''}
             <span style="color: ${m.statusColor}; font-size: 0.75rem; margin-left: 4px;">(${fmtPct(m.achievement)})</span>
           </div>
         </div>
@@ -764,7 +756,7 @@ function renderSmallTeamsTab(model) {
           <div style="font-size: 0.72rem; color: var(--text-muted);">Net Cash Achieved</div>
           <div style="font-size: 1.15rem; font-weight: 800; color: #fff; font-family: var(--font-mono);">${fmt(t.cash)}</div>
           <div style="font-size: 0.7rem; color: #94a3b8; font-family: var(--font-mono); margin-top: 3px;">
-            Gross: <span style="color: #38bdf8; font-weight: 700;">${fmt(t.gross || t.cash)}</span>${t.refund > 0 ? ` | Ref: <span style="color: #f43f5e; font-weight: 700;">-${fmt(t.refund)}</span>` : ''}
+            Gross: <span style="color: #38bdf8; font-weight: 700;">${fmt(t.gross)}</span>${t.refund > 0 ? ` | Rep Ref: <span style="color: #f43f5e; font-weight: 700;">-${fmt(t.refund)}</span>` : ''}
           </div>
         </div>
         <div>
@@ -800,14 +792,14 @@ function renderSmallTeamsTab(model) {
         ${memberRows}
         ${t.refund > 0 ? `
         <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; background: rgba(244, 63, 94, 0.08); border: 1px dashed rgba(244, 63, 94, 0.3); border-radius: var(--radius-sm); margin-top: 8px; font-size: 0.8rem;">
-          <span style="color: #fda4af;">🔻 Team Refund / Clawbacks (51Talk Data Center):</span>
+          <span style="color: #fda4af;">🔻 Active Reps Individual Refunds:</span>
           <span style="font-family: var(--font-mono); font-weight: 700; color: #f43f5e;">-${fmt(t.refund)}</span>
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; margin-top: 4px; font-size: 0.85rem; font-weight: 800; border-top: 1px solid rgba(255,255,255,0.08);">
-          <span style="color: #93c5fd;">= Official Net Team Cash:</span>
+        ` : ''}
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; margin-top: 6px; font-size: 0.85rem; font-weight: 800; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); border-radius: var(--radius-sm);">
+          <span style="color: #93c5fd;">= Team Net Cash (Active Members):</span>
           <span style="font-family: var(--font-mono); color: #60a5fa; font-size: 0.95rem;">${fmt(t.cash)} (${fmtPct(t.achievement)})</span>
         </div>
-        ` : ''}
       </div>
     `;
       container.appendChild(card);
@@ -913,8 +905,8 @@ function renderIndividualsTab(model) {
           <strong style="color: #c084fc;">${r.upgrade20Target} <span style="font-size: 0.75rem; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">(${r.upgrade20Needed} needed)</span></strong>
         </div>
         <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-          <span style="color: var(--text-muted);">M2 Cover Rate % (POOL22):</span>
-          <strong style="color: #facc15; font-family: var(--font-mono); font-weight: 800;">${fmtPct(r.coverRate)}</strong>
+          <span style="color: var(--text-muted);" title="51Talk POOL22 Touchpoint Frequency: ${(r.coverRate / 100).toFixed(1)} calls/student (100% Unique Reach)">M2 Touch Frequency (POOL22):</span>
+          <strong style="color: #facc15; font-family: var(--font-mono); font-weight: 800;">${fmtPct(r.coverRate)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(r.coverRate / 100).toFixed(1)}x)</span></strong>
         </div>
         <div style="display: flex; justify-content: space-between;">
           <span style="color: var(--text-muted);">Total Contracts:</span>
@@ -954,7 +946,7 @@ function renderIndividualsTab(model) {
       <td style="font-family: var(--font-mono);">${r.upgradeBase}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${r.upgrade20Target} <span style="font-size: 0.75rem; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">(${r.upgrade20Needed} needed)</span></td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa;">${fmtPct(r.upgradeRate)}</td>
-      <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;">${fmtPct(r.coverRate)}</td>
+      <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;" title="51Talk POOL22 Touchpoint Frequency: ${(r.coverRate / 100).toFixed(1)} calls/student (100% Unique Coverage in POOL_Detail23)">${fmtPct(r.coverRate)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(r.coverRate / 100).toFixed(1)}x)</span></td>
       <td style="font-family: var(--font-mono); font-weight: 600;">${r.contracts}</td>
       <td><span class="status-badge" style="background: ${r.statusColor}20; color: ${r.statusColor};">${r.status}</span></td>
     `;
@@ -1080,8 +1072,7 @@ function renderBreakdownTab(model) {
       <td style="font-family: var(--font-mono); font-weight: 800; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'};">${r.upgradeM2}</td>
       <td style="font-family: var(--font-mono);">${r.upgradeBase}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${r.upgrade20Target} <span style="font-size: 0.75rem; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">(${r.upgrade20Needed} needed)</span></td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.upgradeRate > 3 ? '#10b981' : 'var(--text-secondary)'};">${fmtPct(r.upgradeRate)}</td>
-      <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;">${fmtPct(r.coverRate)}</td>
+      <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;" title="51Talk POOL22 Touchpoint Frequency: ${(r.coverRate / 100).toFixed(1)} calls/student (100% Unique Coverage in POOL_Detail23)">${fmtPct(r.coverRate)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(r.coverRate / 100).toFixed(1)}x)</span></td>
       <td style="font-family: var(--font-mono); font-weight: 600; color: #fff;">${r.contracts}</td>
       <td style="font-family: var(--font-mono); color: #38bdf8;">${r.normalRenewals}</td>
       <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(share)}</td>
@@ -1100,7 +1091,7 @@ function renderBreakdownTab(model) {
         <td style="font-family: var(--font-mono);">${s.totalUpgradeBase}</td>
         <td style="font-family: var(--font-mono); color: #c084fc;">${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)</td>
         <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(s.upgradeRate)}</td>
-        <td style="font-family: var(--font-mono); color: #facc15; text-align: center;">${fmtPct(avgCover)}</td>
+        <td style="font-family: var(--font-mono); color: #facc15; text-align: center;" title="Sector Touchpoint Frequency: ${(avgCover / 100).toFixed(1)} calls/student (100% Unique Coverage)">${fmtPct(avgCover)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(avgCover / 100).toFixed(1)}x)</span></td>
         <td style="font-family: var(--font-mono); color: #fff;">${s.totalContracts}</td>
         <td style="font-family: var(--font-mono); color: #38bdf8;">${s.totalNormalRenewals}</td>
         <td style="font-family: var(--font-mono); color: #a78bfa;">100.0%</td>

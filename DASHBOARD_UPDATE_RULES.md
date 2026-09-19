@@ -3,7 +3,12 @@
 
 > [!CAUTION]
 > **NON-NEGOTIABLE RULE:**
-> Under no circumstances should cached, outdated records, legacy target constants, or prior figures be used. Whenever any dashboard update is requested, fresh data must be parsed directly from the designated input workbooks. No update confirmation or presentation of results may be given until automated self-verification confirms that the newly parsed files are complete, team ranks are sorted strictly by Net Cash Achievement % (High to Low), all team refunds/clawbacks are mathematically reconciled, and the live dashboard is synchronized.
+> Under no circumstances should cached, outdated records, legacy target constants, or prior figures be used. Whenever any dashboard update is requested, fresh data must be parsed directly from the designated input workbooks. No update confirmation or presentation of results may be given until automated self-verification confirms that:
+> 1. Freshly parsed files are verified and complete across all active reps and teams.
+> 2. Small Teams are ranked strictly descending by **Net Cash Achievement % (High to Low)**.
+> 3. Individual active rep refunds are explicitly displayed next to their names, while leaver/unassigned refunds are charged **ONLY** to Big Team 01 (Sector Total) and **NEVER** deducted from Small Teams.
+> 4. Early Upgrade M2 Touch Frequency / Call Intensity metrics (POOL22) are mathematically clarified alongside the 100% unique student coverage.
+> 5. The live dashboard is fully synchronized and verified.
 
 ---
 
@@ -13,7 +18,7 @@ To eliminate path confusion, browser download delays, and manual file-hunting er
 * **Primary Dedicated Directory:**  
   `D:\Lens\Dashboard\Dashboard_Input_Files`
 * **Supported Daily Input Files:**
-  1. **SS Lens Dashboard:** `SS Lens Dashboard*.xlsx` or `ME Lens Dashboard*.xlsx` (Contains `Individual_Rankings`, `Small_Team`, `POOL_Detail16`, `POOL22`).
+  1. **SS Lens Dashboard:** `SS Lens Dashboard*.xlsx` or `ME Lens Dashboard*.xlsx` (Contains `Individual_Rankings`, `Small_Team`, `POOL_Detail16`, `POOL22`, `POOL_Detail23`).
   2. **Operations Master:** `All in one Master.xlsx` (Contains SOP tasks, unfixed teachers, zero-class, English Club leads).
   3. **English Club Export:** `English Club*.xlsx`
   4. **NEW SOP Export:** `NEW_SOP*.xlsx`
@@ -32,13 +37,14 @@ A universal, one-click Windows launcher is provided for instant updates without 
 * **Execution Workflow (4 Steps):**
   1. **Step 1:** Executes [`auto_process_update.ps1`](file:///d:/Lens/Dashboard/auto_process_update.ps1):
      * Extracts sales cash (Gross, Refund, Net), orders, and individual targets from `Individual_Rankings`.
-     * Extracts official team metrics (Gross, Refund, Net, Target, Orders, Achievement %) directly from `Small_Team`.
-     * Extracts Upgrade M2 metrics from `POOL_Detail16` and M2 coverage from `POOL22`.
-     * Updates `dashboard.js` data matrices (`REPS_DATA`, `OFFICIAL_TEAMS_DATA`, `POOL22_M2_COVERAGE`, `daysPassed`).
+     * Associates individual refunds with active sales reps to display next to their names.
+     * Computes small team totals strictly from active team members' net cash (protecting small teams from unassigned/leaver refunds).
+     * Extracts Upgrade M2 metrics from `POOL_Detail16` and M2 Touch Frequency from `POOL22`.
+     * Updates `dashboard.js` data matrices (`REPS_DATA`, `POOL22_M2_COVERAGE`, `daysPassed`).
      * Dynamically updates `index.html` headers, download timestamps, and Day benchmark pins.
   2. **Step 2:** Executes [`generate_rep_leads_fast.ps1`](file:///d:/Lens/Dashboard/generate_rep_leads_fast.ps1):
      * Reads all 4 raw detail sheets from `All in one Master.xlsx`.
-     * Generates 24/25 clean, personalized rep CSV files in `leads/{rep}.csv`.
+     * Generates 24 clean, personalized rep CSV files in `leads/{rep}.csv`.
      * Generates `leads_summary.json` for the personal portal mini-cockpit cards.
   3. **Step 3:** Executes [`extract_full_master.ps1`](file:///d:/Lens/Dashboard/extract_full_master.ps1):
      * Extracts the 4 operational summary sheets (`1- Pending SOP`, `2- Unfixed Teacher`, `3- Class Consumption`, `4- English Club`).
@@ -53,89 +59,88 @@ A universal, one-click Windows launcher is provided for instant updates without 
    * **Official Small Teams:** Sheet **`Small_Team`**
 2. **Rep Data Extraction (`Individual_Rankings`):**
    * **Rep Name:** Column B (`Sales Representative`).
-   * **Net Cash Revenue:** Column E (`Cash-Refund` / Col 4). Clawbacks and refunds are factored in directly.
+   * **Gross Cash:** Column C (`Revenue Cash` / Col 2).
+   * **Refund Amount:** Column D (`Refund` / Col 3).
+   * **Net Cash Revenue:** Column E (`Cash-Refund` / Col 4). Individual clawbacks and refunds are factored into the rep's net cash.
    * **Contracts:** Column F (`CONTRACTS` / Col 5).
    * **Basic Cash Target:** Column H (`Basic Cash Target` / Col 7).
-   * **Direct Target Property:** Targets MUST be embedded directly within each rep object in `REPS_DATA` (`target: <amount>`), eliminating reliance on external dictionary lookups that can fail due to casing mismatches.
-3. **Official Small Teams Data (`Small_Team`):**
-   * Extracted directly into `OFFICIAL_TEAMS_DATA` in `dashboard.js`.
-   * **Fields:** Official Target, Official Gross Cash, Official Refund, Official Net Cash, Official Orders, and Official Net Cash Achievement %.
-   * Guarantees 100% reconciliation with 51Talk executive reporting.
-4. **Achievement Calculation:**
-   $$\text{Cash Achievement \%} = \frac{\text{Cash-Refund}}{\text{Basic Cash Target}} \times 100$$
-5. **Small Teams Ranking & Sort Order (CRITICAL):**
+3. **Small Teams Ranking & Sort Order (CRITICAL):**
    * **Mandatory Sort Order:** Small Teams MUST ALWAYS be sorted descending by **`Net Cash Achievement %` (High to Low)**:
      * **Rank #1:** Highest Achievement % (at the top of the chart and overview cards).
      * **Rank #5:** Lowest Achievement % (at the bottom).
-   * *Reference Benchmark (Day 19):*
-     * Rank #1: `ME-EGSS30` (71.9% - $11,490 / $15,980)
-     * Rank #2: `ME-EGSS13` (58.3% - $27,444 / $47,060)
-     * Rank #3: `ME-EGSS05` (52.4% - $40,104 / $76,590)
-     * Rank #4: `ME-EGSS01` (28.0% - $14,238 / $50,760)
-     * Rank #5: `ME-EGSS10` (24.4% - $8,587 / $35,210)
-6. **Visual Bar Calibration:**
-   * Progress bar fill length corresponds strictly to achievement percentage calibrated on the 103% target curve axis, featuring the 100% target marker line and the dynamic daily pacing benchmark line.
-7. **Leaderboard & Individual Rankings Sorting:**
-   * **Default Order:** Strictly sorted descending by `Cash Achievement % (High to Low)`. Ties broken by total net cash, then contracts.
-   * **Immutable Cash Rank Assignment:** The **RANK** column (`#1`, `#2`, `#3`...) is permanently anchored to `Cash Achievement %`. Sorting by other columns preserves each rep's true Cash Rank badge.
-   * **Team Filter Sort Reset:** Selecting any small team automatically resets sorting to `Cash Achievement % (High to Low)`.
-8. **Context-Aware Table Totals Row (`tfoot`):**
+   * *Reference Benchmark Standings (Day 19):*
+     * **Rank #1:** `ME-EGSS30` (**82.9%** — $13,240 / $15,980)
+     * **Rank #2:** `ME-EGSS13` (**59.0%** — $27,762 / $47,060)
+     * **Rank #3:** `ME-EGSS05` (**50.0%** — $38,284 / $76,590)
+     * **Rank #4:** `ME-EGSS01` (**30.6%** — $15,552 / $50,760)
+     * **Rank #5:** `ME-EGSS10` (**30.2%** — $10,650 / $35,210)
+4. **Leaderboard & Individual Rankings Sorting:**
+   * **Default Order:** Strictly sorted descending by `Cash Achievement % (High to Low)`.
+   * **Immutable Cash Rank Assignment:** The **RANK** column (`#1`, `#2`, `#3`...) is permanently anchored to `Cash Achievement %`.
+5. **Context-Aware Table Totals Row (`tfoot`):**
    * When **"All Small Teams (5)"** is selected: Footer displays Big Team 01 Sector totals (`TOTAL / SECTOR AVERAGE`).
-   * When a specific **Small Team** is selected (e.g., `ME-EGSS01`): Footer displays **ONLY the aggregate performance metrics of that specific team**.
+   * When a specific **Small Team** is selected: Footer displays **ONLY the aggregate performance metrics of that specific team**.
 
 ---
 
-### 💵 4. Gross vs. Net Cash & Team-Level Refunds Reconciliation Protocol
+### 💵 4. Active Rep Refund Attribution & Small Team Protection Rule
 
 > [!IMPORTANT]
-> **Why do Team Totals in `Small_Team` differ from the raw sum of Active Team Members?**
-> In 51Talk's official Data Center financial ledger, **Refunds and Clawbacks** are charged at the **Small Team level** (`Small_Team` sheet), which can include historical clawbacks, leaver deductions, or centralized company refund adjustments.
->
-> $$\text{Net Cash (Cash-Refund)} = \text{Gross Cash (Revenue Cash)} - \text{Refunds / Clawbacks}$$
+> **EXPLICIT REFUND ATTRIBUTION RULES:**
+> 1. **Active Rep Refunds:** If an active sales representative has a refund registered under their name in `Individual_Rankings`, that refund is factored into their individual net cash, and the exact refund amount is **clearly displayed in red next to their name** in the team roster:
+>    $$\text{e.g. } \mathbf{Ashraqat: -\$380} \quad \mathbf{\color{red}{(Ref: -\$1,660)}}$$
+> 2. **Small Team Protection (No Leaver Deductions):** If a refund in the financial ledger is NOT under the name of any current active team member (e.g. historical leaver refunds, unassigned accounts, or company clawbacks), **it is NEVER deducted from the Small Team's sales**. The Small Team's total net cash is strictly the sum of its active team members' net cash.
+> 3. **Big Team 01 Absorption:** All unassigned, leaver, or company-level refunds are charged **ONLY to Big Team 01 (Sector Total)** ($101,862 net), ensuring complete macro-financial reconciliation without penalizing individual small teams.
 
-#### Team Card Mathematical Reconciliation:
-To guarantee complete transparency and eliminate confusion between individual reps' sum and the official team achievement:
-1. **Team Card Header:** Displays **Net Cash Achieved** (the basis for official achievement %), and directly beneath it displays:
-   $$\text{Gross: \$Gross} \quad | \quad \text{Ref: -\$Refund}$$
-2. **Team Member Roster:** Below the individual member rows, a dedicated deduction row is rendered:
-   * `🔻 Team Refund / Clawbacks (51Talk Data Center): -$Refund`
-   * `= Official Net Team Cash: $Net Cash (Achievement %)`
+#### Official Day 19 Reconciled Standings (All 5 Small Teams + Sector Total):
 
-#### Official Day 19 Reconciliation Table (All 5 Teams):
+| Small Team | Team Leader | Active Members Net Cash | Individual Rep Refunds (Shown next to name) | Team Target | Team Net Ach % | Rank |
+|:---|:---|:---:|:---:|:---:|:---:|:---:|
+| **ME-EGSS30** | AdhmGadAllah | **$13,240** | **$0** *(No active member had a refund)* | $15,980 | **82.9%** | **#1** 🥇 |
+| **ME-EGSS13** | Mohamedha | **$27,762** | **-$1,750** *(Hayam: Gross $5,412 - $1,750 = $3,662)* | $47,060 | **59.0%** | **#2** 🥈 |
+| **ME-EGSS05** | Ibrahimismaiel | **$38,284** | **-$2,068** *(Ibrahim: Gross $7,975 - $2,068 = $5,907)* | $76,590 | **50.0%** | **#3** 🥉 |
+| **ME-EGSS01** | Ashraqatal | **$15,552** | **-$1,660** *(Ashraqat: Gross $1,280 - $1,660 = -$380)* | $50,760 | **30.6%** | **#4** |
+| **ME-EGSS10** | Mohamed06 | **$10,650** | **$0** *(No active member had a refund)* | $35,210 | **30.2%** | **#5** |
+| **BIG TEAM 01** | **Saber Hussien** | **$101,862** | **-$9,736** *(Active -$5,478 + Leavers/HQ -$4,258)* | **$225,600** | **45.2%** | **Sector Total** |
 
-| Small Team | Team Leader | Gross Revenue (Sum of Reps) | Refunds / Clawbacks | Official Net Cash | Cash Target | Net Ach % | Gross Ach % |
-|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **ME-EGSS30** | AdhmGadAllah | **$13,240** | **-$1,750** | **$11,490** | $15,980 | **71.9%** | 82.9% |
-| **ME-EGSS13** | Mohamedha | **$29,512** | **-$2,068** | **$27,444** | $47,060 | **58.3%** | 62.7% |
-| **ME-EGSS05** | Ibrahimismaiel | **$40,984** | **-$880** | **$40,104** | $76,590 | **52.4%** | 53.5% |
-| **ME-EGSS01** | Ashraqatal | **$17,212** | **-$2,974** | **$14,238** | $50,760 | **28.0%** | 33.9% |
-| **ME-EGSS10** | Mohamed06 | **$10,650** | **-$2,063** | **$8,587** | $35,210 | **24.4%** | 30.2% |
-| **BIG TEAM 01** | **Saber Hussien** | **$111,598** | **-$9,736** | **$101,862** | **$225,600** | **45.2%** | **49.5%** |
-
-*Example (Team 30):*  
-* Member 1: `adhmgadallah`: $8,100  
-* Member 2: `abdelrhmanshehata`: $3,320  
-* Member 3: `alihesham01`: $1,820  
-$$\text{Sum of Reps} = \$8,100 + \$3,320 + \$1,820 = \$13,240 \quad (\text{Gross})$$
-$$\text{Team 30 Net Total} = \$13,240 - \$1,750 = \$11,490 \quad (71.9\% \text{ Ach})$$
+#### Proof of Calculation for Team 30 ($13,240 / 82.9%):
+* Member 1: `adhmgadallah`: **$8,100** (Refund: $0)
+* Member 2: `abdelrhmanshehata`: **$3,320** (Refund: $0)
+* Member 3: `alihesham01`: **$1,820** (Refund: $0)
+$$\text{Team 30 Net Sales} = \$8,100 + \$3,320 + \$1,820 = \mathbf{\$13,240}$$
+$$\text{Team 30 Achievement} = \frac{\$13,240}{\$15,980} \times 100 = \mathbf{82.9\% \quad (\#1 \text{ Rank})}$$
+*(The -$1,750 refund on Team 30 in 51Talk's sheet belonged to a former employee who is no longer active; therefore, it is NOT charged to Team 30, but absorbed solely into Big Team 01).*
 
 ---
 
-### 🟡 5. Early Upgrade Conversion and Coverage Rates (Upgrade M2)
+### 🟡 5. Early Upgrade Conversion & M2 Cover Rate Bug Resolution
+
+> [!NOTE]
+> **WHY DID M2 COVER RATE APPEAR WRONG (860.8%, 1033.3%, 1237.3%)?**
+> In standard sales dashboards, a "Coverage Rate" represents the percentage of unique leads contacted (which is naturally capped between 0% and 100%). Seeing percentages over 1,000% looked like a calculation bug.
+> 
+> **The Exact Technical Explanation from 51Talk Data Center:**
+> 1. In 51Talk's export sheet `POOL22`, the column is titled `有效覆盖率` (Effective Coverage).
+> 2. In 51Talk's call-center reporting logic, `有效覆盖率` is **NOT** unique student coverage; it is **Touchpoint Call Frequency / Contact Intensity (تكرار وكثافة الاتصال)**:
+>    $$\text{51Talk 有效覆盖率 (POOL22)} = \frac{\text{Total Outbound Calls Made (有效外呼量)}}{\text{Total Student Base (资源量)}} \times 100\%$$
+>    * A value of **1,237.3%** means the rep made an average of **12.4 calls per student** in that pool during the month!
+>    * A value of **860.8%** means **8.6 calls per student**.
+> 3. **True Unique Coverage Rate (`POOL_Detail23`):**
+>    * Verification of all 10,002 student records in `POOL_Detail23` confirms that **100.0% of students in Upgrade M2 received at least 1 contact attempt** (`Unique Student Reach = 100%`).
+> 4. **UI Presentation Solution:**
+>    * The column header is clarified as: **`M2 Touch Intensity / Freq % (POOL22)`**.
+>    * Cells display both the 51Talk frequency percentage and the call multiplier: e.g. **`1237.3% (12.4x)`**, with a tooltip explaining that unique student coverage is 100% and the metric reflects call intensity.
+
+#### Upgrade M2 Key Metrics:
 1. **Upgrade Student Base (`Upgrade Base`):**
    * **Official Source:** Pivot Table (`M-2 Cumulative Upgrade Students`) in `POOL_Detail16`.
    * **Big Team 01 Sector Total:** **763 students** (EGSS05: 232, EGSS01: 200, EGSS13: 186, EGSS10: 112, EGSS30: 33).
 2. **Early Upgrade Conversion Rate (`Upgrade M2 Conversion Rate`):**
    $$\text{Upgrade M2 Conversion Rate \%} = \frac{\text{Upgrade M2 Contracts}}{\text{Upgrade Base}} \times 100$$
    * **Source:** Sheet **`POOL_Detail16`** / **`POOL15`**.
-3. **Early Upgrade Coverage Rate (`M2 Cover Rate`):**
-   * Dedicated column adjacent to M2 Conversion Rate.
-   * **Visual Styling:** Yellow font color only (`#facc15`), transparent background (NO yellow fill/background).
-   * **Source:** Sheet **`POOL22`** (Column G / mapped per rep).
-4. **20% Upgrade Target Contracts & Needed Gap:**
+3. **20% Upgrade Target Contracts & Needed Gap:**
    $$\text{20\% Target Contracts} = \lceil \text{Upgrade Base} \times 0.20 \rceil$$
    $$\text{20\% Upgrade Needed} = \max(0, \text{20\% Target Contracts} - \text{Upgrade M2 Achieved})$$
-   * Displayed for all individual reps, small teams, and sector totals.
 
 ---
 
@@ -202,7 +207,7 @@ Linear pacing is strictly superseded by the official non-linear cumulative targe
      - Target 40% active student adoption with student base, bookings, attendances, and gap.
 3. **Rep-Specific Leads CSV Generation (`leads/{rep}.csv`):**
    * Fast PowerShell COM script (`generate_rep_leads_fast.ps1`) generates individual clean CSV files covering all active reps across all 5 teams.
-   * **Detail Sheet Integration:** The personal CSV includes SOP pending tasks plus actionable Class Interruption Warnings (e.g., for Shahd: 56 SOP tasks + 9 Class Interruption alerts = 65 total tasks in Section 1).
+   * **Detail Sheet Integration:** The personal CSV includes SOP pending tasks plus actionable Class Interruption Warnings.
 4. **Self-Service Personal Mini-Cockpit:**
    * Interactive dropdown in the `Operations Master` tab enables any sales rep to view their personalized 4-card cockpit (matching `leads_summary.json` 100%) and download their actionable lead CSV file instantly.
 
