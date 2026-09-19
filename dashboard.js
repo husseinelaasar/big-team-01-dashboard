@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -70,11 +70,11 @@ const NEW_TARGETS = {
 
 // Official Small Team Totals from Data Center Small_Team Sheet
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS30": { cash: 11490, target: 15980, contracts: 15, officialAch: 71.9 },
-  "EGSS13": { cash: 27444, target: 47060, contracts: 29, officialAch: 58.3 },
-  "EGSS05": { cash: 40104, target: 76590, contracts: 49, officialAch: 52.4 },
-  "EGSS01": { cash: 14238, target: 50760, contracts: 17, officialAch: 28.0 },
-  "EGSS10": { cash: 8587, target: 35210, contracts: 11, officialAch: 24.4 },
+  "EGSS30": { gross: 13240, refund: 1750, cash: 11490, target: 15980, contracts: 15, officialAch: 71.9 },
+  "EGSS13": { gross: 29512, refund: 2068, cash: 27444, target: 47060, contracts: 29, officialAch: 58.3 },
+  "EGSS05": { gross: 40984, refund: 880, cash: 40104, target: 76590, contracts: 49, officialAch: 52.4 },
+  "EGSS01": { gross: 17212, refund: 2974, cash: 14238, target: 50760, contracts: 17, officialAch: 28.0 },
+  "EGSS10": { gross: 10650, refund: 2063, cash: 8587, target: 35210, contracts: 11, officialAch: 24.4 },
 };
 
 // Verified Live CRM Performance + POOL_Detail Renewal/Upgrade Breakdown (Sep 1–19, 2026 - Data Center Live)
@@ -236,12 +236,16 @@ function buildDataModel() {
     const t = teams[tk];
     const off = OFFICIAL_TEAMS_DATA[tk];
     if (off) {
+      t.gross = off.gross || off.cash;
+      t.refund = off.refund || 0;
       t.cash = off.cash;
       t.target = off.target;
       t.contracts = off.contracts;
       t.achievement = off.officialAch;
     } else {
       t.cash = t.members.reduce((s, m) => s + m.cash, 0);
+      t.gross = t.cash;
+      t.refund = 0;
       t.target = t.members.reduce((s, m) => s + m.target, 0);
       t.contracts = t.members.reduce((s, m) => s + m.contracts, 0);
       t.achievement = t.target > 0 ? ((t.cash / t.target) * 100) : 0;
@@ -757,8 +761,11 @@ function renderSmallTeamsTab(model) {
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 14px; background: rgba(255,255,255,0.02); padding: 12px; border-radius: var(--radius-sm);">
         <div>
-          <div style="font-size: 0.72rem; color: var(--text-muted);">Cash Achieved</div>
-          <div style="font-size: 1.1rem; font-weight: 800; color: #fff; font-family: var(--font-mono);">${fmt(t.cash)}</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">Net Cash Achieved</div>
+          <div style="font-size: 1.15rem; font-weight: 800; color: #fff; font-family: var(--font-mono);">${fmt(t.cash)}</div>
+          <div style="font-size: 0.7rem; color: #94a3b8; font-family: var(--font-mono); margin-top: 3px;">
+            Gross: <span style="color: #38bdf8; font-weight: 700;">${fmt(t.gross || t.cash)}</span>${t.refund > 0 ? ` | Ref: <span style="color: #f43f5e; font-weight: 700;">-${fmt(t.refund)}</span>` : ''}
+          </div>
         </div>
         <div>
           <div style="font-size: 0.72rem; color: var(--text-muted);">Target</div>
@@ -791,6 +798,16 @@ function renderSmallTeamsTab(model) {
       <div style="margin-top: 10px;">
         <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; font-weight: 600;">Team Member Roster (Sorted by Cash Ach %)</div>
         ${memberRows}
+        ${t.refund > 0 ? `
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; background: rgba(244, 63, 94, 0.08); border: 1px dashed rgba(244, 63, 94, 0.3); border-radius: var(--radius-sm); margin-top: 8px; font-size: 0.8rem;">
+          <span style="color: #fda4af;">🔻 Team Refund / Clawbacks (51Talk Data Center):</span>
+          <span style="font-family: var(--font-mono); font-weight: 700; color: #f43f5e;">-${fmt(t.refund)}</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; margin-top: 4px; font-size: 0.85rem; font-weight: 800; border-top: 1px solid rgba(255,255,255,0.08);">
+          <span style="color: #93c5fd;">= Official Net Team Cash:</span>
+          <span style="font-family: var(--font-mono); color: #60a5fa; font-size: 0.95rem;">${fmt(t.cash)} (${fmtPct(t.achievement)})</span>
+        </div>
+        ` : ''}
       </div>
     `;
       container.appendChild(card);

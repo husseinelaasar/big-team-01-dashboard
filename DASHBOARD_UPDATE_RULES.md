@@ -3,7 +3,7 @@
 
 > [!CAUTION]
 > **NON-NEGOTIABLE RULE:**
-> Under no circumstances should cached, outdated records, legacy target constants, or prior figures be used. Whenever any dashboard update is requested, fresh data must be parsed directly from the designated input workbooks. No update confirmation or presentation of results may be given until automated self-verification confirms that the newly parsed files are complete, team ranks are sorted strictly by Net Cash Achievement % (High to Low), and the live dashboard is synchronized.
+> Under no circumstances should cached, outdated records, legacy target constants, or prior figures be used. Whenever any dashboard update is requested, fresh data must be parsed directly from the designated input workbooks. No update confirmation or presentation of results may be given until automated self-verification confirms that the newly parsed files are complete, team ranks are sorted strictly by Net Cash Achievement % (High to Low), all team refunds/clawbacks are mathematically reconciled, and the live dashboard is synchronized.
 
 ---
 
@@ -29,17 +29,21 @@ To eliminate path confusion, browser download delays, and manual file-hunting er
 A universal, one-click Windows launcher is provided for instant updates without manual scripting:
 
 * **Launcher Path:** `D:\Lens\Dashboard\RUN_AUTO_UPDATE.bat`
-* **Execution Workflow:**
-  1. **Step 1:** Searches `Dashboard_Input_Files` (and downloads folder) for the freshest Excel export files.
-  2. **Step 2:** Executes [`auto_process_update.ps1`](file:///d:/Lens/Dashboard/auto_process_update.ps1) via Windows PowerShell.
-     * Extracts sales cash, orders, and individual targets from `Individual_Rankings`.
-     * Extracts official team metrics directly from `Small_Team`.
+* **Execution Workflow (4 Steps):**
+  1. **Step 1:** Executes [`auto_process_update.ps1`](file:///d:/Lens/Dashboard/auto_process_update.ps1):
+     * Extracts sales cash (Gross, Refund, Net), orders, and individual targets from `Individual_Rankings`.
+     * Extracts official team metrics (Gross, Refund, Net, Target, Orders, Achievement %) directly from `Small_Team`.
      * Extracts Upgrade M2 metrics from `POOL_Detail16` and M2 coverage from `POOL22`.
      * Updates `dashboard.js` data matrices (`REPS_DATA`, `OFFICIAL_TEAMS_DATA`, `POOL22_M2_COVERAGE`, `daysPassed`).
      * Dynamically updates `index.html` headers, download timestamps, and Day benchmark pins.
-  3. **Step 3:** Executes [`generate_rep_leads_fast.ps1`](file:///d:/Lens/Dashboard/generate_rep_leads_fast.ps1) to extract 25 personalized rep leads CSV files into `leads/` and refresh `LEADS_SUMMARY`.
+  2. **Step 2:** Executes [`generate_rep_leads_fast.ps1`](file:///d:/Lens/Dashboard/generate_rep_leads_fast.ps1):
+     * Reads all 4 raw detail sheets from `All in one Master.xlsx`.
+     * Generates 24/25 clean, personalized rep CSV files in `leads/{rep}.csv`.
+     * Generates `leads_summary.json` for the personal portal mini-cockpit cards.
+  3. **Step 3:** Executes [`extract_full_master.ps1`](file:///d:/Lens/Dashboard/extract_full_master.ps1):
+     * Extracts the 4 operational summary sheets (`1- Pending SOP`, `2- Unfixed Teacher`, `3- Class Consumption`, `4- English Club`).
+     * Injects `MASTER_OPERATIONS_DATA` and `LEADS_SUMMARY` directly into `dashboard.js`.
   4. **Step 4:** Stages, commits, and pushes changes to GitHub (`git commit -m "Auto Update..." && git push origin master`).
-  5. **Step 5:** Displays the completion summary with live URL verification links.
 
 ---
 
@@ -55,7 +59,7 @@ A universal, one-click Windows launcher is provided for instant updates without 
    * **Direct Target Property:** Targets MUST be embedded directly within each rep object in `REPS_DATA` (`target: <amount>`), eliminating reliance on external dictionary lookups that can fail due to casing mismatches.
 3. **Official Small Teams Data (`Small_Team`):**
    * Extracted directly into `OFFICIAL_TEAMS_DATA` in `dashboard.js`.
-   * **Fields:** Official Target, Official Net Cash, Official Orders, and Official Net Cash Achievement %.
+   * **Fields:** Official Target, Official Gross Cash, Official Refund, Official Net Cash, Official Orders, and Official Net Cash Achievement %.
    * Guarantees 100% reconciliation with 51Talk executive reporting.
 4. **Achievement Calculation:**
    $$\text{Cash Achievement \%} = \frac{\text{Cash-Refund}}{\text{Basic Cash Target}} \times 100$$
@@ -81,7 +85,43 @@ A universal, one-click Windows launcher is provided for instant updates without 
 
 ---
 
-### 🟡 4. Early Upgrade Conversion and Coverage Rates (Upgrade M2)
+### 💵 4. Gross vs. Net Cash & Team-Level Refunds Reconciliation Protocol
+
+> [!IMPORTANT]
+> **Why do Team Totals in `Small_Team` differ from the raw sum of Active Team Members?**
+> In 51Talk's official Data Center financial ledger, **Refunds and Clawbacks** are charged at the **Small Team level** (`Small_Team` sheet), which can include historical clawbacks, leaver deductions, or centralized company refund adjustments.
+>
+> $$\text{Net Cash (Cash-Refund)} = \text{Gross Cash (Revenue Cash)} - \text{Refunds / Clawbacks}$$
+
+#### Team Card Mathematical Reconciliation:
+To guarantee complete transparency and eliminate confusion between individual reps' sum and the official team achievement:
+1. **Team Card Header:** Displays **Net Cash Achieved** (the basis for official achievement %), and directly beneath it displays:
+   $$\text{Gross: \$Gross} \quad | \quad \text{Ref: -\$Refund}$$
+2. **Team Member Roster:** Below the individual member rows, a dedicated deduction row is rendered:
+   * `🔻 Team Refund / Clawbacks (51Talk Data Center): -$Refund`
+   * `= Official Net Team Cash: $Net Cash (Achievement %)`
+
+#### Official Day 19 Reconciliation Table (All 5 Teams):
+
+| Small Team | Team Leader | Gross Revenue (Sum of Reps) | Refunds / Clawbacks | Official Net Cash | Cash Target | Net Ach % | Gross Ach % |
+|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **ME-EGSS30** | AdhmGadAllah | **$13,240** | **-$1,750** | **$11,490** | $15,980 | **71.9%** | 82.9% |
+| **ME-EGSS13** | Mohamedha | **$29,512** | **-$2,068** | **$27,444** | $47,060 | **58.3%** | 62.7% |
+| **ME-EGSS05** | Ibrahimismaiel | **$40,984** | **-$880** | **$40,104** | $76,590 | **52.4%** | 53.5% |
+| **ME-EGSS01** | Ashraqatal | **$17,212** | **-$2,974** | **$14,238** | $50,760 | **28.0%** | 33.9% |
+| **ME-EGSS10** | Mohamed06 | **$10,650** | **-$2,063** | **$8,587** | $35,210 | **24.4%** | 30.2% |
+| **BIG TEAM 01** | **Saber Hussien** | **$111,598** | **-$9,736** | **$101,862** | **$225,600** | **45.2%** | **49.5%** |
+
+*Example (Team 30):*  
+* Member 1: `adhmgadallah`: $8,100  
+* Member 2: `abdelrhmanshehata`: $3,320  
+* Member 3: `alihesham01`: $1,820  
+$$\text{Sum of Reps} = \$8,100 + \$3,320 + \$1,820 = \$13,240 \quad (\text{Gross})$$
+$$\text{Team 30 Net Total} = \$13,240 - \$1,750 = \$11,490 \quad (71.9\% \text{ Ach})$$
+
+---
+
+### 🟡 5. Early Upgrade Conversion and Coverage Rates (Upgrade M2)
 1. **Upgrade Student Base (`Upgrade Base`):**
    * **Official Source:** Pivot Table (`M-2 Cumulative Upgrade Students`) in `POOL_Detail16`.
    * **Big Team 01 Sector Total:** **763 students** (EGSS05: 232, EGSS01: 200, EGSS13: 186, EGSS10: 112, EGSS30: 33).
@@ -99,7 +139,7 @@ A universal, one-click Windows launcher is provided for instant updates without 
 
 ---
 
-### 📈 5. Official 30-Day Cumulative Target Pacing Curve & Dynamic Day Pacing
+### 📈 6. Official 30-Day Cumulative Target Pacing Curve & Dynamic Day Pacing
 Linear pacing is strictly superseded by the official non-linear cumulative target pacing schedule:
 
 | Day of Month | Expected Cumulative Pace % | Day of Month | Expected Cumulative Pace % |
@@ -138,23 +178,37 @@ Linear pacing is strictly superseded by the official non-linear cumulative targe
 
 ---
 
-### 📋 6. Operations Master & Sales Rep Self-Service Leads Portal SOP
+### 📋 7. Operations Master (All 24 Reps & 4 Modules) & Self-Service Leads SOP
 1. **Operational Master Source:**
    * Primary: `D:\Lens\Dashboard\Dashboard_Input_Files\All in one Master.xlsx` (Fallback: `D:\Lens\All in one Master.xlsx`).
-   * Modules:
-     1. **SS Pending SOP Tasks:** Urgent pending follow-ups and expirations.
-     2. **Unfixed Teachers Binding:** Students without dedicated teachers past class thresholds.
-     3. **Zero-Class & Consumption Rescue:** High-risk non-consuming students with large balances.
-     4. **English Club 40% Target:** Eligible students for English Club bookings.
-2. **Rep-Specific Leads Generation:**
-   * Fast PowerShell COM script (`generate_rep_leads_fast.ps1`) generates 25 clean CSV files into `d:\Lens\Dashboard\leads/{rep}.csv`.
-   * Covers all 25 active sales representatives across the 5 teams (`ME-EGSS01`, `ME-EGSS05`, `ME-EGSS10`, `ME-EGSS13`, `ME-EGSS30`).
-3. **Direct Client-Side Self-Service Download:**
-   * Interactive dropdown in the `Operations Master` tab allows reps to select their name and download their personalized task CSV instantly via static GitHub Pages.
+2. **Four Core Operational Modules:**
+   * **Module 1: SS Pending SOP Tasks:**
+     - Displays all 8 official lifecycle task columns:
+       1. English Club Booking (`ec`)
+       2. Round 1 Awareness (`r1`)
+       3. Round 2 Class Attendance (`r2`)
+       4. Round 3 Habit Cultivation (`r3`)
+       5. Round 4 Learning Progress Feedback (`r4`)
+       6. Round 5 Upgrade Path Duration (`r6d`)
+       7. Round 6 Expiring Inside/Outside Pool (`r6e`)
+       8. SS Absence Warning (`absence`)
+     - Mathematically reconciled total:
+       $$\text{Total Pending Tasks} = \text{EC} + \text{R1} + \text{R2} + \text{R3} + \text{R4} + \text{R5} + \text{R6} + \text{Absence}$$
+   * **Module 2: Unfixed Teachers Binding:**
+     - Covers M0, M1, M2 cohorts with an 80% binding target.
+   * **Module 3: Class Consumption & Zero-Class Rescue:**
+     - High-risk zero-consuming students (0 classes MTD with remaining points).
+   * **Module 4: English Club (40% Target):**
+     - Target 40% active student adoption with student base, bookings, attendances, and gap.
+3. **Rep-Specific Leads CSV Generation (`leads/{rep}.csv`):**
+   * Fast PowerShell COM script (`generate_rep_leads_fast.ps1`) generates individual clean CSV files covering all active reps across all 5 teams.
+   * **Detail Sheet Integration:** The personal CSV includes SOP pending tasks plus actionable Class Interruption Warnings (e.g., for Shahd: 56 SOP tasks + 9 Class Interruption alerts = 65 total tasks in Section 1).
+4. **Self-Service Personal Mini-Cockpit:**
+   * Interactive dropdown in the `Operations Master` tab enables any sales rep to view their personalized 4-card cockpit (matching `leads_summary.json` 100%) and download their actionable lead CSV file instantly.
 
 ---
 
-### 🌐 7. Production Deployment & Hourly Automated Schedule
+### 🌐 8. Production Deployment & Hourly Automated Schedule
 1. **Official Live Production URL:**
    * `https://husseinelaasar.github.io/big-team-01-dashboard/`
    * Hosted cloud-native on GitHub Pages. Fully responsive on Desktop, Mobile, and DingTalk in-app browser.
@@ -168,6 +222,6 @@ Linear pacing is strictly superseded by the official non-linear cumulative targe
 
 ---
 
-### 🚫 8. Strict Security & SM Scheme Isolation
+### 🚫 9. Strict Security & SM Scheme Isolation
 * **Security Boundary:** All calculations, cards, formulas, or links related to the Senior Manager Commission Scheme (`sm-scheme.*`) or SM Portal are strictly isolated and excluded from the public executive dashboard (`index.html`), scripts, and GitHub repositories.
 * The public dashboard remains 100% operational and team-facing.
