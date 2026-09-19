@@ -30,7 +30,12 @@ try {
 try {
     Log-Message "Step 2: Processing fresh export and verifying data..."
     & powershell -ExecutionPolicy Bypass -File "$workDir\auto_process_update.ps1" | Out-Null
-    Log-Message "Verification and data process completed."
+    Log-Message "Verification and sales data process completed."
+
+    Log-Message "Step 2b: Processing Operations Master and Rep Leads..."
+    & powershell -ExecutionPolicy Bypass -File "$workDir\generate_rep_leads_fast.ps1" | Out-Null
+    & powershell -ExecutionPolicy Bypass -File "$workDir\extract_full_master.ps1" | Out-Null
+    Log-Message "Operations Master extraction completed."
 } catch {
     Log-Message "Error in auto-process: $_"
 }
@@ -42,8 +47,8 @@ try {
     
     $status = git status --porcelain
     if ($status) {
-        git add dashboard.js index.html styles.css
-        git commit -m "Auto-update dashboard: $timestamp"
+        git add dashboard.js index.html styles.css leads/ leads_summary.json master_extracted_data.json DASHBOARD_UPDATE_RULES.md
+        git commit -m "Auto-update dashboard & operations: $timestamp"
         git push origin master
         Log-Message "Live GitHub Pages dashboard updated successfully."
     } else {
