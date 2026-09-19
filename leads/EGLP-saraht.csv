@@ -1,16 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGLP-saraht | Generated: 2026-09-16 21:11
+# Representative: EGLP-saraht | Generated: 2026-09-19 12:45
 
-=== 1. SOP PENDING TASKS (36) ===
+=== 1. SOP PENDING TASKS (51) ===
 Student_ID,Task_Name,Expiration_Time
-58739251,"Round 3 Habit Cultivation (1st Unit Assessment)",20260917 18:55:00
-58907377,"SS:Service warning - absence",20260917 18:55:00
-62705349,"Round 6 Premium Service(Outside Renewal Pool)",20260917 18:55:00
-62711040,"Round 6 Premium Service(Outside Renewal Pool)",20260917 18:55:00
-62728395,"SS:Service warning - absence",20260917 18:55:00
-62786987,"Round 6 Premium Service(Duration Renewal Insidepool)",20260917 18:55:00
-63584984,"English Club Booking",20260917 18:55:00
-63976353,"Round 3 Habit Cultivation (1st Unit Assessment)",20260917 18:55:00
 59276259,"English Club Booking",20260919 18:55:00
 62712709,"Round 6 Premium Service(Outside Renewal Pool)",20260919 18:55:00
 62712931,"Round 6 Premium Service(Outside Renewal Pool)",20260919 18:55:00
@@ -20,27 +12,50 @@ Student_ID,Task_Name,Expiration_Time
 64134426,"SS:Service warning - absence",20260919 18:55:00
 64170937,"Round 3 Habit Cultivation (1st Unit Assessment)",20260919 18:55:00
 58802535,"English Club Booking",20260920 18:55:00
+59413595,"SS:Service warning - absence",20260920 18:55:00
+62660169,"SS:Service warning - absence",20260920 18:55:00
 62720104,"Round 6 Premium Service(Outside Renewal Pool)",20260920 18:55:00
 62917349,"Round 6 Premium Service(Duration Renewal Insidepool)",20260920 18:55:00
+63236524,"SS:Service warning - absence",20260920 18:55:00
 63470829,"English Club Booking",20260920 18:55:00
 63857181,"English Club Booking",20260920 18:55:00
 64114212,"English Club Booking",20260920 18:55:00
+64144046,"Round 3 Habit Cultivation (1st Unit Assessment)",20260920 18:55:00
+59351053,"English Club Booking",20260921 18:55:00
+62769028,"Round 6 Premium Service(Outside Renewal Pool)",20260921 18:55:00
+63584984,"SS:Service warning - absence",20260921 18:55:00
+63702549,"SS:Service warning - absence",20260921 18:55:00
+63976353,"English Club Booking",20260921 18:55:00
+64096077,"English Club Booking",20260921 18:55:00
+59442652,"English Club Booking",20260922 18:55:00
+61769453,"Round 6 Premium Service(Expiring Renewal Insidepool )",20260922 18:55:00
+62786997,"Round 6 Premium Service(Outside Renewal Pool)",20260922 18:55:00
+62836940,"Round 6 Premium Service(Outside Renewal Pool)",20260922 18:55:00
+63165923,"English Club Booking",20260922 18:55:00
+63669369,"English Club Booking",20260922 18:55:00
+64144046,"English Club Booking",20260922 18:55:00
+64170937,"English Club Booking",20260922 18:55:00
 63503087,"Round 5 Learning Path Planning-Upgrade insidepool",20260928 18:55:00
 63607314,"Round 5 Learning Path Planning-Upgrade insidepool",20260928 18:55:00
 63651737,"Round 5 Learning Path Planning-Upgrade insidepool",20260928 18:55:00
+59217966,"SS：Service warning - class interruption",20260930 23:59:59
 59323713,"SS：Service warning - class interruption",20260930 23:59:59
 59413595,"SS：Service warning - class interruption",20260930 23:59:59
 60177401,"SS：Service warning - class interruption",20260930 23:59:59
 60853096,"SS：Service warning - class interruption",20260930 23:59:59
+61674923,"SS：Service warning - class interruption",20260930 23:59:59
+62669656,"SS：Service warning - class interruption",20260930 23:59:59
 62725791,"SS：Service warning - class interruption",20260930 23:59:59
+62916400,"SS：Service warning - class interruption",20260930 23:59:59
 63440552,"SS：Service warning - class interruption",20260930 23:59:59
 63559893,"SS：Service warning - class interruption",20260930 23:59:59
+63702549,"SS：Service warning - class interruption",20260930 23:59:59
 63818374,"SS：Service warning - class interruption",20260930 23:59:59
 63867656,"SS：Service warning - class interruption",20260930 23:59:59
 63968028,"SS：Service warning - class interruption",20260930 23:59:59
 64044191,"SS：Service warning - class interruption",20260930 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING LEADS (68) ===
+=== 2. UNFIXED TEACHER BINDING LEADS (67) ===
 Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 57787090,"M3+ Pool",0,"UNFIXED BINDING"
 57950524,"M3+ Pool",0,"UNFIXED BINDING"
@@ -105,160 +120,140 @@ Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 63976353,"M1 Pool",0,"HIGH BINDING"
 64006558,"M1 Pool",0,"HIGH BINDING"
 64044191,"M1 Pool",0,"HIGH BINDING"
-64063499,"M1 Pool",0,"HIGH BINDING"
 64113407,"M1 Pool",0,"HIGH BINDING"
 64124294,"M1 Pool",0,"HIGH BINDING"
 64144046,"M1 Pool",0,"HIGH BINDING"
 64238521,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (146) ===
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (127) ===
 Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 57950524,"M3+ Pool",1,"Low Consumption Follow-up"
-58217509,"M3+ Pool",1,"Low Consumption Follow-up"
-58413863,"M2 Pool",7,"Low Consumption Follow-up"
+58217509,"M3+ Pool",2,"Low Consumption Follow-up"
 58453668,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-58559228,"M2 Pool",3,"Low Consumption Follow-up"
-58659635,"M2 Pool",6,"Low Consumption Follow-up"
+58559228,"M2 Pool",4,"Low Consumption Follow-up"
 58777035,"M2 Pool",1,"Low Consumption Follow-up"
 58854943,"M2 Pool",3,"Low Consumption Follow-up"
 58863770,"M3+ Pool",7,"Low Consumption Follow-up"
-59217966,"M1 Pool",3,"Low Consumption Follow-up"
+59217966,"M1 Pool",5,"Low Consumption Follow-up"
 59276259,"M3+ Pool",2,"Low Consumption Follow-up"
-59323713,"M3+ Pool",2,"Low Consumption Follow-up"
-59351053,"M1 Pool",7,"Low Consumption Follow-up"
-59413595,"M1 Pool",2,"Low Consumption Follow-up"
-59442652,"M2 Pool",7,"Low Consumption Follow-up"
+59323713,"M3+ Pool",3,"Low Consumption Follow-up"
+59413595,"M1 Pool",3,"Low Consumption Follow-up"
 59522660,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 59606629,"M3+ Pool",6,"Low Consumption Follow-up"
 59894167,"M2 Pool",0,"Zero Consumption - Urgent Booking Call"
 60177401,"M2 Pool",3,"Low Consumption Follow-up"
-60195704,"M3+ Pool",4,"Low Consumption Follow-up"
+60195704,"M3+ Pool",6,"Low Consumption Follow-up"
 60478898,"M2 Pool",7,"Low Consumption Follow-up"
 60536386,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-60551502,"M3+ Pool",1,"Low Consumption Follow-up"
+60551502,"M3+ Pool",2,"Low Consumption Follow-up"
 60553880,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 60570914,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-60660292,"M3+ Pool",7,"Low Consumption Follow-up"
-60853096,"M3+ Pool",2,"Low Consumption Follow-up"
-60923859,"M3+ Pool",2,"Low Consumption Follow-up"
-61091856,"M1 Pool",6,"Low Consumption Follow-up"
-61227536,"M3+ Pool",6,"Low Consumption Follow-up"
-61440303,"M3+ Pool",7,"Low Consumption Follow-up"
+60853096,"M3+ Pool",3,"Low Consumption Follow-up"
+60923859,"M3+ Pool",3,"Low Consumption Follow-up"
+61091856,"M1 Pool",7,"Low Consumption Follow-up"
+61227536,"M3+ Pool",7,"Low Consumption Follow-up"
 61545861,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-61654765,"M3+ Pool",7,"Low Consumption Follow-up"
 61672069,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 61674923,"M3+ Pool",5,"Low Consumption Follow-up"
-61756732,"M3+ Pool",5,"Low Consumption Follow-up"
+61756732,"M3+ Pool",6,"Low Consumption Follow-up"
 62065468,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62079971,"M3+ Pool",5,"Low Consumption Follow-up"
+62079971,"M3+ Pool",6,"Low Consumption Follow-up"
 62132899,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 62198948,"M3+ Pool",2,"Low Consumption Follow-up"
-62394527,"M1 Pool",7,"Low Consumption Follow-up"
 62432586,"M3+ Pool",4,"Low Consumption Follow-up"
 62475632,"M3+ Pool",2,"Low Consumption Follow-up"
 62492609,"M3+ Pool",3,"Low Consumption Follow-up"
-62660169,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62660217,"M3+ Pool",5,"Low Consumption Follow-up"
+62660169,"M3+ Pool",1,"Low Consumption Follow-up"
+62660217,"M3+ Pool",6,"Low Consumption Follow-up"
 62668060,"M3+ Pool",6,"Low Consumption Follow-up"
 62668240,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62669656,"M3+ Pool",5,"Low Consumption Follow-up"
+62669656,"M3+ Pool",6,"Low Consumption Follow-up"
 62682153,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62683071,"M3+ Pool",3,"Low Consumption Follow-up"
-62684074,"M3+ Pool",7,"Low Consumption Follow-up"
+62683071,"M3+ Pool",4,"Low Consumption Follow-up"
 62688347,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62688540,"M3+ Pool",6,"Low Consumption Follow-up"
-62690171,"M3+ Pool",4,"Low Consumption Follow-up"
+62688540,"M3+ Pool",7,"Low Consumption Follow-up"
+62690171,"M3+ Pool",6,"Low Consumption Follow-up"
 62691250,"M3+ Pool",5,"Low Consumption Follow-up"
 62701385,"M3+ Pool",4,"Low Consumption Follow-up"
-62703812,"M3+ Pool",5,"Low Consumption Follow-up"
-62705349,"M3+ Pool",1,"Low Consumption Follow-up"
-62710281,"M3+ Pool",7,"Low Consumption Follow-up"
+62703812,"M3+ Pool",6,"Low Consumption Follow-up"
+62705349,"M3+ Pool",3,"Low Consumption Follow-up"
 62711040,"M3+ Pool",3,"Low Consumption Follow-up"
 62712709,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 62712931,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62713005,"M3+ Pool",5,"Low Consumption Follow-up"
-62713054,"M3+ Pool",7,"Low Consumption Follow-up"
-62725791,"M3+ Pool",4,"Low Consumption Follow-up"
+62713005,"M3+ Pool",6,"Low Consumption Follow-up"
+62725791,"M3+ Pool",5,"Low Consumption Follow-up"
 62726563,"M3+ Pool",7,"Low Consumption Follow-up"
 62728395,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 62728815,"M3+ Pool",6,"Low Consumption Follow-up"
 62728831,"M3+ Pool",3,"Low Consumption Follow-up"
-62732379,"M3+ Pool",3,"Low Consumption Follow-up"
+62732379,"M3+ Pool",4,"Low Consumption Follow-up"
 62748309,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62762259,"M3+ Pool",5,"Low Consumption Follow-up"
+62762259,"M3+ Pool",7,"Low Consumption Follow-up"
 62763468,"M3+ Pool",7,"Low Consumption Follow-up"
 62769028,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 62770107,"M3+ Pool",7,"Low Consumption Follow-up"
 62770528,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62771645,"M3+ Pool",3,"Low Consumption Follow-up"
-62774304,"M3+ Pool",6,"Low Consumption Follow-up"
-62778005,"M3+ Pool",6,"Low Consumption Follow-up"
+62771645,"M3+ Pool",5,"Low Consumption Follow-up"
+62774304,"M3+ Pool",7,"Low Consumption Follow-up"
+62778005,"M3+ Pool",7,"Low Consumption Follow-up"
 62778300,"M3+ Pool",6,"Low Consumption Follow-up"
 62779414,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 62780631,"M3+ Pool",1,"Low Consumption Follow-up"
 62785584,"M3+ Pool",7,"Low Consumption Follow-up"
-62786978,"M3+ Pool",4,"Low Consumption Follow-up"
-62786987,"M3+ Pool",6,"Low Consumption Follow-up"
-62786997,"M3+ Pool",4,"Low Consumption Follow-up"
-62787242,"M3+ Pool",7,"Low Consumption Follow-up"
-62787299,"M3+ Pool",4,"Low Consumption Follow-up"
+62786978,"M3+ Pool",5,"Low Consumption Follow-up"
+62786987,"M3+ Pool",7,"Low Consumption Follow-up"
+62786997,"M3+ Pool",5,"Low Consumption Follow-up"
+62787299,"M3+ Pool",6,"Low Consumption Follow-up"
 62787907,"M3+ Pool",3,"Low Consumption Follow-up"
-62788589,"M3+ Pool",7,"Low Consumption Follow-up"
-62788773,"M3+ Pool",6,"Low Consumption Follow-up"
+62788773,"M3+ Pool",7,"Low Consumption Follow-up"
 62790876,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62792151,"M3+ Pool",7,"Low Consumption Follow-up"
-62825962,"M3+ Pool",7,"Low Consumption Follow-up"
 62836940,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 62849602,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 62871744,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
 62895078,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-62916400,"M1 Pool",3,"Low Consumption Follow-up"
-62917349,"M3+ Pool",6,"Low Consumption Follow-up"
+62916400,"M1 Pool",4,"Low Consumption Follow-up"
+62917349,"M3+ Pool",7,"Low Consumption Follow-up"
 63079544,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-63165923,"M2 Pool",6,"Low Consumption Follow-up"
+63165923,"M2 Pool",7,"Low Consumption Follow-up"
 63217063,"M3+ Pool",1,"Low Consumption Follow-up"
 63236524,"M1 Pool",0,"Zero Consumption - Urgent Booking Call"
 63389062,"M1 Pool",0,"Zero Consumption - Urgent Booking Call"
-63426050,"M2 Pool",7,"Low Consumption Follow-up"
-63440552,"M2 Pool",4,"Low Consumption Follow-up"
-63466033,"M3+ Pool",2,"Low Consumption Follow-up"
-63470055,"M2 Pool",2,"Low Consumption Follow-up"
-63470829,"M3+ Pool",6,"Low Consumption Follow-up"
-63485816,"M3+ Pool",6,"Low Consumption Follow-up"
-63503087,"M2 Pool",4,"Low Consumption Follow-up"
-63519744,"M3+ Pool",5,"Low Consumption Follow-up"
+63440552,"M2 Pool",5,"Low Consumption Follow-up"
+63466033,"M3+ Pool",4,"Low Consumption Follow-up"
+63470055,"M2 Pool",3,"Low Consumption Follow-up"
+63470829,"M3+ Pool",7,"Low Consumption Follow-up"
+63503087,"M2 Pool",7,"Low Consumption Follow-up"
+63519744,"M3+ Pool",6,"Low Consumption Follow-up"
 63534996,"M3+ Pool",0,"Zero Consumption - Urgent Booking Call"
-63542523,"M3+ Pool",5,"Low Consumption Follow-up"
-63559893,"M3+ Pool",3,"Low Consumption Follow-up"
-63584984,"M2 Pool",4,"Low Consumption Follow-up"
+63542523,"M3+ Pool",6,"Low Consumption Follow-up"
+63559893,"M3+ Pool",5,"Low Consumption Follow-up"
+63584984,"M2 Pool",5,"Low Consumption Follow-up"
 63604476,"M2 Pool",0,"Zero Consumption - Urgent Booking Call"
-63604861,"M2 Pool",5,"Low Consumption Follow-up"
+63604861,"M2 Pool",6,"Low Consumption Follow-up"
 63605848,"M2 Pool",2,"Low Consumption Follow-up"
-63607314,"M2 Pool",5,"Low Consumption Follow-up"
+63607314,"M2 Pool",6,"Low Consumption Follow-up"
 63640942,"M2 Pool",3,"Low Consumption Follow-up"
-63651737,"M2 Pool",6,"Low Consumption Follow-up"
-63669369,"M2 Pool",4,"Low Consumption Follow-up"
+63651737,"M2 Pool",7,"Low Consumption Follow-up"
+63669369,"M2 Pool",6,"Low Consumption Follow-up"
 63702549,"M2 Pool",4,"Low Consumption Follow-up"
 63722531,"M2 Pool",5,"Low Consumption Follow-up"
-63742653,"M2 Pool",5,"Low Consumption Follow-up"
-63812375,"M2 Pool",6,"Low Consumption Follow-up"
-63818374,"M2 Pool",4,"Low Consumption Follow-up"
+63742653,"M2 Pool",6,"Low Consumption Follow-up"
+63812375,"M2 Pool",7,"Low Consumption Follow-up"
+63818374,"M2 Pool",5,"Low Consumption Follow-up"
 63849164,"M2 Pool",0,"Zero Consumption - Urgent Booking Call"
 63857181,"M2 Pool",3,"Low Consumption Follow-up"
 63867656,"M1 Pool",2,"Low Consumption Follow-up"
 63910356,"M1 Pool",7,"Low Consumption Follow-up"
-63932910,"M1 Pool",3,"Low Consumption Follow-up"
+63932910,"M1 Pool",7,"Low Consumption Follow-up"
 63968028,"M1 Pool",2,"Low Consumption Follow-up"
-64006558,"M1 Pool",5,"Low Consumption Follow-up"
-64044191,"M1 Pool",5,"Low Consumption Follow-up"
+64006558,"M1 Pool",6,"Low Consumption Follow-up"
+64044191,"M1 Pool",6,"Low Consumption Follow-up"
 64063499,"M1 Pool",0,"Zero Consumption - Urgent Booking Call"
-64096077,"M1 Pool",7,"Low Consumption Follow-up"
 64102982,"M1 Pool",7,"Low Consumption Follow-up"
-64113407,"M1 Pool",1,"Low Consumption Follow-up"
+64113407,"M1 Pool",2,"Low Consumption Follow-up"
 64114212,"M1 Pool",7,"Low Consumption Follow-up"
 64124294,"M1 Pool",7,"Low Consumption Follow-up"
 64134426,"M1 Pool",6,"Low Consumption Follow-up"
-64170937,"M1 Pool",7,"Low Consumption Follow-up"
 
 === 4. ENGLISH CLUB ACTIONABLE LEADS (80) ===
 Student_ID,Level,Completed_Classes,Booking_Status
