@@ -47,7 +47,7 @@ try {
     
     $status = git status --porcelain
     if ($status) {
-        git add dashboard.js index.html styles.css leads/ leads_summary.json master_extracted_data.json DASHBOARD_UPDATE_RULES.md
+        git add dashboard.js index.html styles.css leads/ DASHBOARD_UPDATE_RULES.md
         git commit -m "Auto-update dashboard & operations: $timestamp"
         git push origin master
         Log-Message "Live GitHub Pages dashboard updated successfully."
