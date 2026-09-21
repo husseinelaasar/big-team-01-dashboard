@@ -427,7 +427,7 @@ body::after {
 /* ============ KPI GRID ============ */
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
   margin-top: 8px;
 }
@@ -438,6 +438,9 @@ body::after {
   padding: 20px 24px;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   backdrop-filter: blur(12px);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
   animation: cardEntrance 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards;
@@ -699,21 +702,29 @@ body::after {
   opacity: 0.4;
 }
 .data-table th {
-  padding: 14px 16px;
-  text-align: left;
-  font-weight: 600;
+  padding: 12px 14px;
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-weight: 700;
   color: var(--text-secondary);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   border-bottom: 1px solid var(--border-glass);
   white-space: nowrap;
 }
 .data-table td {
-  padding: 12px 16px;
+  padding: 11px 14px;
+  text-align: center !important;
+  vertical-align: middle !important;
   border-bottom: 1px solid var(--border-glass);
   color: var(--text-primary);
   transition: background 0.2s ease;
+  white-space: nowrap;
+}
+.data-table td > div {
+  margin-left: auto;
+  margin-right: auto;
 }
 .data-table tbody tr {
   transition: all 0.25s ease;
@@ -757,11 +768,15 @@ body::after {
 .data-table tfoot td {
   font-weight: 800;
   border-bottom: none;
+  text-align: center !important;
+  vertical-align: middle !important;
 }
 
 .status-badge {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
   gap: 5px;
   padding: 3px 10px;
   border-radius: 20px;
@@ -790,11 +805,18 @@ body::after {
 .status-behind { background: rgba(244, 63, 94, 0.15); color: var(--accent-rose); }
 .status-no-sales { background: rgba(100, 116, 139, 0.15); color: var(--text-muted); }
 
-/* ============ TEAM CARDS ============ */
+/* ============ TEAM CARDS & BREAKDOWN GRIDS ============ */
 .team-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 20px;
+}
+
+.breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
 }
 
 /* ============ CALC-CARD (shared card style for JS-generated cards) ============ */
@@ -802,11 +824,14 @@ body::after {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  padding: 22px 24px;
   backdrop-filter: blur(12px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   animation: cardEntrance 0.5s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 }
 .calc-card:hover {
@@ -1305,7 +1330,7 @@ body::after {
 /* ============ OPERATIONS MASTER (4 MODULES) ============ */
 .op-kpi-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
   margin-bottom: 28px;
 }
@@ -1316,6 +1341,9 @@ body::after {
   padding: 20px;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(12px);
   cursor: pointer;

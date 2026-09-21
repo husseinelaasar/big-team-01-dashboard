@@ -1088,6 +1088,7 @@ function renderBreakdownTab(model) {
       <td style="font-family: var(--font-mono); font-weight: 800; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'};">${r.upgradeM2}</td>
       <td style="font-family: var(--font-mono);">${r.upgradeBase}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${r.upgrade20Target} <span style="font-size: 0.75rem; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">(${r.upgrade20Needed} needed)</span></td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa;">${fmtPct(r.upgradeRate)}</td>
       <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;" title="51Talk POOL22 Touchpoint Frequency: ${(r.coverRate / 100).toFixed(1)} calls/student (100% Unique Coverage in POOL_Detail23)">${fmtPct(r.coverRate)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(r.coverRate / 100).toFixed(1)}x)</span></td>
       <td style="font-family: var(--font-mono); font-weight: 600; color: #fff;">${r.contracts}</td>
       <td style="font-family: var(--font-mono); color: #38bdf8;">${r.normalRenewals}</td>
@@ -1102,7 +1103,7 @@ function renderBreakdownTab(model) {
     const avgCover = model.individuals.length > 0 ? (model.individuals.reduce((sum, r) => sum + r.coverRate, 0) / model.individuals.length) : 0;
     tfoot.innerHTML = `
       <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
-        <td colspan="3" style="color: #fff; text-align: left; font-size: 0.9rem;">TOTAL / SECTOR AVERAGE</td>
+        <td colspan="3" style="color: #fff; text-align: center; font-size: 0.9rem;">TOTAL / SECTOR AVERAGE</td>
         <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
         <td style="font-family: var(--font-mono);">${s.totalUpgradeBase}</td>
         <td style="font-family: var(--font-mono); color: #c084fc;">${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)</td>
