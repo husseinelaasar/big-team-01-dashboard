@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -1553,34 +1553,43 @@ function setupEvents(model) {
   }
 }
 
-// App Initialization
-window.addEventListener('DOMContentLoaded', () => {
-  const model = buildDataModel();
-  window.__model = model;
+// App Initialization with Error Boundary & Guaranteed Loader Dismissal
+function initApp() {
+  try {
+    const model = buildDataModel();
+    window.__model = model;
 
-  renderKPIs(model);
-  renderTeamBars(model);
-  renderOverviewTable(model);
-  renderSmallTeamsTab(model);
-  renderIndividualsTab(model);
-  renderBreakdownTab(model);
-  renderSOPTab();
-  renderRecommendationsTab(model);
-  renderOperationsTab();
-  initPersonalRepSelect();
+    renderKPIs(model);
+    renderTeamBars(model);
+    renderOverviewTable(model);
+    renderSmallTeamsTab(model);
+    renderIndividualsTab(model);
+    renderBreakdownTab(model);
+    renderSOPTab();
+    renderRecommendationsTab(model);
+    if (typeof renderOperationsTab === 'function') renderOperationsTab();
+    if (typeof initPersonalRepSelect === 'function') initPersonalRepSelect();
 
-  setupEvents(model);
-  checkSheetSyncStatus();
-
-  // Smooth Loader Fade-Out
-  setTimeout(() => {
+    setupEvents(model);
+    checkSheetSyncStatus();
+  } catch (err) {
+    console.error("Dashboard initialization error:", err);
+  } finally {
+    // Guaranteed loader removal
     const loader = document.getElementById('loader');
     if (loader) {
       loader.classList.add('fade-out');
-      setTimeout(() => loader.remove(), 600);
+      setTimeout(() => { if (loader && loader.parentNode) loader.remove(); }, 400);
     }
-  }, 400);
-});
+  }
+}
+
+if (document.readyState === 'loading') {
+  window.addEventListener('DOMContentLoaded', initApp);
+} else {
+  // DOM is already parsed (script at bottom of body or cached load)
+  initApp();
+}
 
 // Sheet Synchronization Status Inspector
 function checkSheetSyncStatus() {

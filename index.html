@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260921_133208">
+  <link rel="stylesheet" href="styles.css?v=20260921_134800">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -20,6 +20,16 @@
       <p>Synchronizing Performance Intelligence...</p>
     </div>
   </div>
+  <script>
+    // Bulletproof loader safety timer: guarantees loading screen hides within 1.5s
+    setTimeout(function() {
+      var l = document.getElementById('loader');
+      if (l) {
+        l.classList.add('fade-out');
+        setTimeout(function() { if (l && l.parentNode) l.remove(); }, 500);
+      }
+    }, 1500);
+  </script>
 
   <!-- Main Application Container -->
   <div id="app" class="app">
@@ -608,7 +618,7 @@
     </footer>
   </div>
 
-  <script src="dashboard.js?v=20260921_133208"></script>
+  <script src="dashboard.js?v=20260921_134800"></script>
 </body>
 </html>
 
