@@ -18,12 +18,13 @@ To eliminate path confusion, browser download delays, and manual file-hunting er
 * **Primary Dedicated Directory:**  
   `D:\Lens\Dashboard\Dashboard_Input_Files`
 * **Supported Daily Input Files:**
-  1. **SS Lens Dashboard:** `SS Lens Dashboard*.xlsx` or `ME Lens Dashboard*.xlsx` (Contains `Individual_Rankings`, `Small_Team`, `POOL_Detail16`, `POOL22`, `POOL_Detail23`).
-  2. **Operations Master:** `All in one Master.xlsx` (Contains SOP tasks, unfixed teachers, zero-class, English Club leads).
-  3. **English Club Export:** `English Club*.xlsx`
-  4. **NEW SOP Export:** `NEW_SOP*.xlsx`
+  1. **SS Lens Dashboard:** `SS Lens Dashboard*.xlsx` or `ME Lens Dashboard*.xlsx` (Contains `Individual_Rankings`, `Small_Team`, `POOL_Detail16`, `POOL23`, `POOL_Detail24`).
+     * *Schema Note:* In latest 51Talk exports, coverage rate sheet is named `POOL23` (Coverage rate in Column H), and `POOL_Detail16` has 1-column shift (Col B = Small Team, Col C = Agent, Col F = Pool in Detail, Col J = Is Renew).
+  2. **Overseas NEW SOP:** `海外NEW_SOP*.xlsx` (Contains `By_group`, `SOP_by_group`, `New_SOP_detail`).
+  3. **Middle East English Club:** `中东English Club数据看板*.xlsx` or `English Club*.xlsx` (Contains `English_club_bygroup`, `English_club_detail`).
+  4. **Operations Master (Legacy/Merged):** `All in one Master.xlsx` (Can be used as fallback).
 * **Multi-Tier Search Priority:**
-  All automated update scripts (`RUN_AUTO_UPDATE.bat`, `auto_process_update.ps1`, `auto_download_and_process.ps1`, `generate_rep_leads_fast.ps1`, `extract_full_master.ps1`) scan sources in the following strict priority:
+  All automated update scripts (`run_master_update.ps1`, `auto_process_update.ps1`, `generate_rep_leads_fast.ps1`, `extract_full_master.ps1`) scan sources in the following strict priority:
   1. **Tier 1 (Highest Priority):** `D:\Lens\Dashboard\Dashboard_Input_Files\`
   2. **Tier 2:** `C:\Users\husse\Downloads\` (Standard Chrome / Edge download folder)
   3. **Tier 3:** `D:\Lens\` (Legacy root directory)
@@ -68,12 +69,12 @@ A universal, one-click Windows launcher is provided for instant updates without 
    * **Mandatory Sort Order:** Small Teams MUST ALWAYS be sorted descending by **`Net Cash Achievement %` (High to Low)**:
      * **Rank #1:** Highest Achievement % (at the top of the chart and overview cards).
      * **Rank #5:** Lowest Achievement % (at the bottom).
-   * *Reference Benchmark Standings (Day 19):*
+   * *Reference Benchmark Standings (Day 21 - Sep 21, 2026):*
      * **Rank #1:** `ME-EGSS30` (**82.9%** — $13,240 / $15,980)
-     * **Rank #2:** `ME-EGSS13` (**59.0%** — $27,762 / $47,060)
-     * **Rank #3:** `ME-EGSS05` (**50.0%** — $38,284 / $76,590)
-     * **Rank #4:** `ME-EGSS01` (**30.6%** — $15,552 / $50,760)
-     * **Rank #5:** `ME-EGSS10` (**30.2%** — $10,650 / $35,210)
+     * **Rank #2:** `ME-EGSS13` (**60.2%** — $28,342 / $47,060)
+     * **Rank #3:** `ME-EGSS05` (**58.2%** — $44,566 / $76,590)
+     * **Rank #4:** `ME-EGSS10` (**40.4%** — $14,220 / $35,210)
+     * **Rank #5:** `ME-EGSS01` (**36.4%** — $18,492 / $50,760)
 4. **Leaderboard & Individual Rankings Sorting:**
    * **Default Order:** Strictly sorted descending by `Cash Achievement % (High to Low)`.
    * **Immutable Cash Rank Assignment:** The **RANK** column (`#1`, `#2`, `#3`...) is permanently anchored to `Cash Achievement %`.
@@ -88,20 +89,20 @@ A universal, one-click Windows launcher is provided for instant updates without 
 > [!IMPORTANT]
 > **EXPLICIT REFUND ATTRIBUTION RULES:**
 > 1. **Active Rep Refunds:** If an active sales representative has a refund registered under their name in `Individual_Rankings`, that refund is factored into their individual net cash, and the exact refund amount is **clearly displayed in red next to their name** in the team roster:
->    $$\text{e.g. } \mathbf{Ashraqat: -\$380} \quad \mathbf{\color{red}{(Ref: -\$1,660)}}$$
+>    $$\text{e.g. } \mathbf{Ashraqat: +\$2,560} \quad \mathbf{\color{red}{(Ref: -\$1,660)}}$$
 > 2. **Small Team Protection (No Leaver Deductions):** If a refund in the financial ledger is NOT under the name of any current active team member (e.g. historical leaver refunds, unassigned accounts, or company clawbacks), **it is NEVER deducted from the Small Team's sales**. The Small Team's total net cash is strictly the sum of its active team members' net cash.
-> 3. **Big Team 01 Absorption:** All unassigned, leaver, or company-level refunds are charged **ONLY to Big Team 01 (Sector Total)** ($101,862 net), ensuring complete macro-financial reconciliation without penalizing individual small teams.
+> 3. **Big Team 01 Absorption:** All unassigned, leaver, or company-level refunds are charged **ONLY to Big Team 01 (Sector Total)** ($115,234.46 net), ensuring complete macro-financial reconciliation without penalizing individual small teams.
 
-#### Official Day 19 Reconciled Standings (All 5 Small Teams + Sector Total):
+#### Official Day 21 Reconciled Standings (All 5 Small Teams + Sector Total):
 
 | Small Team | Team Leader | Active Members Net Cash | Individual Rep Refunds (Shown next to name) | Team Target | Team Net Ach % | Rank |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|
 | **ME-EGSS30** | AdhmGadAllah | **$13,240** | **$0** *(No active member had a refund)* | $15,980 | **82.9%** | **#1** 🥇 |
-| **ME-EGSS13** | Mohamedha | **$27,762** | **-$1,750** *(Hayam: Gross $5,412 - $1,750 = $3,662)* | $47,060 | **59.0%** | **#2** 🥈 |
-| **ME-EGSS05** | Ibrahimismaiel | **$38,284** | **-$2,068** *(Ibrahim: Gross $7,975 - $2,068 = $5,907)* | $76,590 | **50.0%** | **#3** 🥉 |
-| **ME-EGSS01** | Ashraqatal | **$15,552** | **-$1,660** *(Ashraqat: Gross $1,280 - $1,660 = -$380)* | $50,760 | **30.6%** | **#4** |
-| **ME-EGSS10** | Mohamed06 | **$10,650** | **$0** *(No active member had a refund)* | $35,210 | **30.2%** | **#5** |
-| **BIG TEAM 01** | **Saber Hussien** | **$101,862** | **-$9,736** *(Active -$5,478 + Leavers/HQ -$4,258)* | **$225,600** | **45.2%** | **Sector Total** |
+| **ME-EGSS13** | Mohamedha | **$28,342** | **-$1,750** *(Hayam: Gross $5,992 - $1,750 = $4,242)* | $47,060 | **60.2%** | **#2** 🥈 |
+| **ME-EGSS05** | Ibrahimismaiel | **$44,566** | **-$2,068** *(Ibrahim: Gross $14,257 - $2,068 = $12,189)* | $76,590 | **58.2%** | **#3** 🥉 |
+| **ME-EGSS10** | Mohamed06 | **$14,220** | **$0** *(No active member had a refund)* | $35,210 | **40.4%** | **#4** |
+| **ME-EGSS01** | Ashraqatal | **$18,492** | **-$1,660** *(Ashraqat: Gross $4,220 - $1,660 = $2,560)* | $50,760 | **36.4%** | **#5** |
+| **BIG TEAM 01** | **Saber Hussien** | **$115,234.46** | **-$9,735.54** *(Active -$5,477.71 + Leavers/HQ -$4,257.83)* | **$225,600** | **51.1%** | **Sector Total** |
 
 #### Proof of Calculation for Team 30 ($13,240 / 82.9%):
 * Member 1: `adhmgadallah`: **$8,100** (Refund: $0)

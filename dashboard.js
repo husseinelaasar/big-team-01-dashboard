@@ -70,39 +70,39 @@ const NEW_TARGETS = {
 
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS30": { gross: 13240, refund: 1750, cash: 11490, target: 15980, contracts: 15, officialAch: 71.9 },
-  "EGSS13": { gross: 29512, refund: 2068, cash: 27444, target: 47060, contracts: 29, officialAch: 58.3 },
-  "EGSS05": { gross: 42004, refund: 880, cash: 41124, target: 76590, contracts: 50, officialAch: 53.7 },
-  "EGSS01": { gross: 18552, refund: 2974, cash: 15578, target: 50760, contracts: 19, officialAch: 30.7 },
-  "EGSS10": { gross: 12470, refund: 2063, cash: 10407, target: 35210, contracts: 12, officialAch: 29.6 },
+  "EGSS30": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
+  "EGSS01": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
+  "EGSS13": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
+  "EGSS10": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
+  "EGSS05": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
 };
 
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 3832, refund: 0, target: 8040, contracts: 6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ashraqatal", team: "EGSS01", cash: -380, refund: 1660, target: 10880, contracts: 1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-negma", team: "EGSS01", cash: 4160, refund: 0, target: 7790, contracts: 2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 3060, refund: 0, target: 8050, contracts: 3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 6220, refund: 0, target: 10420, contracts: 7, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGLP-yasmin01", team: "EGSS01", cash: 0, refund: 0, target: 5580, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 7341, refund: 0, target: 9710, contracts: 9, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-titooooo", team: "EGSS05", cash: 5640, refund: 0, target: 8920, contracts: 6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 5240, refund: 0, target: 9550, contracts: 6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 5430, refund: 0, target: 10360, contracts: 7, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 6927, refund: 2068, target: 10170, contracts: 10, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 5806, refund: 0, target: 10190, contracts: 8, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGLP-saraht", team: "EGSS05", cash: 1020, refund: 0, target: 7340, contracts: 1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 1900, refund: 0, target: 10350, contracts: 2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 6090, refund: 0, target: 11640, contracts: 6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 5360, refund: 0, target: 16450, contracts: 5, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGLP-mohamed06", team: "EGSS10", cash: 1020, refund: 0, target: 7120, contracts: 1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mohamedha", team: "EGSS13", cash: 10940, refund: 0, target: 9300, contracts: 11, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 8120, refund: 0, target: 12240, contracts: 5, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 3662, refund: 1750, target: 10560, contracts: 8, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 4160, refund: 0, target: 8640, contracts: 4, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGLP-shahdmahmoud", team: "EGSS13", cash: 880, refund: 0, target: 6320, contracts: 1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 8100, refund: 0, target: 8480, contracts: 10, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrhmanshehata", team: "EGSS30", cash: 3320, refund: 0, target: 3690, contracts: 3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-alihesham01", team: "EGSS30", cash: 1820, refund: 0, target: 3810, contracts: 2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-negma", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGLP-yasmin01", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-titooooo", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGLP-saraht", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGLP-mohamed06", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mohamedha", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGLP-shahdmahmoud", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-abdelrhmanshehata", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-alihesham01", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
 ];
 
 // SOP Process Compliance Data (51Talk Data Center)
@@ -167,7 +167,7 @@ const OFFICIAL_PACING_CURVE = {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 20; // Current MTD Day (Sep 19, 2026)
+  const daysPassed = 21; // Current MTD Day (Sep 19, 2026)
   const daysInMonth = 30;
   const daysLeft = daysInMonth - daysPassed;
   const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 51;
@@ -251,9 +251,9 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official Data Center Reconciliation)
-  const totalCash = 101862; // Official Sector Net Cash
+  const totalCash = 115234; // Official Sector Net Cash
   const totalTarget = 225600; // Official Sector Cash Target
-  const totalContracts = 121; // Official Sector Total Orders
+  const totalContracts = 136; // Official Sector Total Orders
   const totalUpgradeM2 = individuals.reduce((sum, r) => sum + r.upgradeM2, 0);
   const totalNormalRenewals = individuals.reduce((sum, r) => sum + r.normalRenewals, 0);
   const totalUpgradeBase = individuals.reduce((sum, r) => sum + r.upgradeBase, 0);
@@ -399,14 +399,18 @@ function renderTeamBars(model) {
     { day: 14, pct: 40 },
     { day: 15, pct: 43 },
     { day: 16, pct: 46 },
-    { day: 19, pct: 51, isToday: true },
+    { day: 19, pct: 51 },
     { day: 20, pct: 54 },
+    { day: 21, pct: 57 },
     { day: 25, pct: 65 },
     { day: 27, pct: 80 },
     { day: 28, pct: 87 },
     { day: 29, pct: 94 },
     { day: 30, pct: 103, isGoal: true }
   ];
+  rulerMilestones.forEach(m => {
+    if (m.day === daysPassed) { m.isToday = true; }
+  });
 
   function getScalePos(pct) {
     return Math.min(100, Math.max(0, (pct / MAX_SCALE) * 100));
@@ -1586,21 +1590,21 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-09-20 12:10:55', name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-09-21 12:41:49', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
       chkId: 'chkECSheet',
       timeId: 'timeECSheet',
       itemId: 'syncItemEC',
-      latestTime: '2026-09-20 12:05:08', name: 'English Club Sheet'
+      latestTime: '2026-09-21 12:39:21', name: 'English Club Sheet'
     },
     {
       idPrefix: 'SOP',
       chkId: 'chkSOPSheet',
       timeId: 'timeSOPSheet',
       itemId: 'syncItemSOP',
-      latestTime: '2026-09-20 12:02:14', name: 'SOP Compliance Sheet'
+      latestTime: '2026-09-21 12:40:29', name: 'SOP Compliance Sheet'
     }
   ];
 
@@ -1635,1089 +1639,753 @@ function checkSheetSyncStatus() {
 
 const MASTER_OPERATIONS_DATA = {
     "consumption":  [
-                        {
-                            "name":  "EGSS-adhmgadallah",
-                            "team":  "ME-EGSS30 Team",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-alihesham01",
-                            "team":  "ME-EGSS30",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-abdelrhmanshehata",
-                            "team":  "ME-EGSS30",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-ehabzaky01",
-                            "team":  "ME-EGSS05 Team",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-ibrahimismaiel",
-                            "team":  "ME-EGSS05",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-titooooo",
-                            "team":  "ME-EGSS05",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-abdelrahmannasef",
-                            "team":  "ME-EGSS05",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-omarmoneb",
-                            "team":  "ME-EGSS05",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGLP-saraht",
-                            "team":  "ME-EGSS05",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-samira01",
-                            "team":  "ME-EGSS05",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-khaledgonam",
-                            "team":  "ME-EGSS05",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-ahmedshoukry",
-                            "team":  "ME-EGSS10 Team",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-mahmoudkhamis",
-                            "team":  "ME-EGSS10",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGLP-mohamed06",
-                            "team":  "ME-EGSS10",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-mohamedha",
-                            "team":  "ME-EGSS13 Team",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-hayamhassan",
-                            "team":  "ME-EGSS13",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-marwaahmed",
-                            "team":  "ME-EGSS13",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGLP-shahdmahmoud",
-                            "team":  "ME-EGSS13",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-amrsafwat",
-                            "team":  "ME-EGSS13",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-mahmoud04",
-                            "team":  "ME-EGSS01 Team",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-nohayoussry",
-                            "team":  "",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-juliamonir01",
-                            "team":  "ME-EGSS01",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGLP-yasmin01",
-                            "team":  "ME-EGSS01",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-ashraqatal",
-                            "team":  "ME-EGSS01",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        },
-                        {
-                            "name":  "EGSS-negma",
-                            "team":  "ME-EGSS01",
-                            "total":  0,
-                            "c0":  0,
-                            "c1_3":  0,
-                            "c4_7":  0,
-                            "c8_11":  0,
-                            "c12":  0
-                        }
+
                     ],
     "unfixed":  [
-                    {
-                        "name":  "EGSS-adhmgadallah",
-                        "team":  "ME-EGSS30 Team",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  15,
-                        "m1Fix":  14,
-                        "m1Pct":  "93.3%"
-                    },
-                    {
-                        "name":  "EGSS-alihesham01",
-                        "team":  "ME-EGSS30",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  11,
-                        "m1Fix":  11,
-                        "m1Pct":  "100.0%"
-                    },
-                    {
-                        "name":  "EGSS-abdelrhmanshehata",
-                        "team":  "ME-EGSS30",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  10,
-                        "m1Fix":  9,
-                        "m1Pct":  "90.0%"
-                    },
-                    {
-                        "name":  "EGSS-ehabzaky01",
-                        "team":  "ME-EGSS05 Team",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  10,
-                        "m1Fix":  10,
-                        "m1Pct":  "100.0%"
-                    },
-                    {
-                        "name":  "EGSS-ibrahimismaiel",
-                        "team":  "ME-EGSS05",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  20,
-                        "m1Fix":  14,
-                        "m1Pct":  "70.0%"
-                    },
-                    {
-                        "name":  "EGSS-titooooo",
-                        "team":  "ME-EGSS05",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  17,
-                        "m1Fix":  14,
-                        "m1Pct":  "82.4%"
-                    },
-                    {
-                        "name":  "EGSS-abdelrahmannasef",
-                        "team":  "ME-EGSS05",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  18,
-                        "m1Fix":  16,
-                        "m1Pct":  "88.9%"
-                    },
-                    {
-                        "name":  "EGSS-omarmoneb",
-                        "team":  "ME-EGSS05",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  14,
-                        "m1Fix":  11,
-                        "m1Pct":  "78.6%"
-                    },
-                    {
-                        "name":  "EGLP-saraht",
-                        "team":  "ME-EGSS05",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  24,
-                        "m1Fix":  12,
-                        "m1Pct":  "50.0%"
-                    },
-                    {
-                        "name":  "EGSS-samira01",
-                        "team":  "ME-EGSS05",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  14,
-                        "m1Fix":  14,
-                        "m1Pct":  "100.0%"
-                    },
-                    {
-                        "name":  "EGSS-khaledgonam",
-                        "team":  "ME-EGSS05",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  11,
-                        "m1Fix":  6,
-                        "m1Pct":  "54.5%"
-                    },
-                    {
-                        "name":  "EGSS-ahmedshoukry",
-                        "team":  "ME-EGSS10 Team",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  20,
-                        "m1Fix":  19,
-                        "m1Pct":  "95.0%"
-                    },
-                    {
-                        "name":  "EGSS-mahmoudkhamis",
-                        "team":  "ME-EGSS10",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  23,
-                        "m1Fix":  20,
-                        "m1Pct":  "87.0%"
-                    },
-                    {
-                        "name":  "EGLP-mohamed06",
-                        "team":  "ME-EGSS10",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  13,
-                        "m1Fix":  12,
-                        "m1Pct":  "92.3%"
-                    },
-                    {
-                        "name":  "EGSS-mohamedha",
-                        "team":  "ME-EGSS13 Team",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  19,
-                        "m1Fix":  9,
-                        "m1Pct":  "47.4%"
-                    },
-                    {
-                        "name":  "EGSS-hayamhassan",
-                        "team":  "ME-EGSS13",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  15,
-                        "m1Fix":  15,
-                        "m1Pct":  "100.0%"
-                    },
-                    {
-                        "name":  "EGSS-marwaahmed",
-                        "team":  "ME-EGSS13",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  12,
-                        "m1Fix":  12,
-                        "m1Pct":  "100.0%"
-                    },
-                    {
-                        "name":  "EGLP-shahdmahmoud",
-                        "team":  "ME-EGSS13",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  24,
-                        "m1Fix":  17,
-                        "m1Pct":  "70.8%"
-                    },
-                    {
-                        "name":  "EGSS-amrsafwat",
-                        "team":  "ME-EGSS13",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  22,
-                        "m1Fix":  17,
-                        "m1Pct":  "77.3%"
-                    },
-                    {
-                        "name":  "EGSS-mahmoud04",
-                        "team":  "ME-EGSS01 Team",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  22,
-                        "m1Fix":  22,
-                        "m1Pct":  "100.0%"
-                    },
-                    {
-                        "name":  "EGSS-nohayoussry",
-                        "team":  "",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  20,
-                        "m1Fix":  17,
-                        "m1Pct":  "85.0%"
-                    },
-                    {
-                        "name":  "EGSS-juliamonir01",
-                        "team":  "ME-EGSS01",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  15,
-                        "m1Fix":  12,
-                        "m1Pct":  "80.0%"
-                    },
-                    {
-                        "name":  "EGLP-yasmin01",
-                        "team":  "ME-EGSS01",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  0,
-                        "m1Fix":  0,
-                        "m1Pct":  "0.0%"
-                    },
-                    {
-                        "name":  "EGSS-ashraqatal",
-                        "team":  "ME-EGSS01",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  24,
-                        "m1Fix":  17,
-                        "m1Pct":  "70.8%"
-                    },
-                    {
-                        "name":  "EGSS-negma",
-                        "team":  "ME-EGSS01",
-                        "m0Tot":  0,
-                        "m0Fix":  0,
-                        "m0Pct":  "0.0%",
-                        "m1Tot":  27,
-                        "m1Fix":  23,
-                        "m1Pct":  "85.2%"
-                    }
+
                 ],
     "sop":  [
                 {
-                    "name":  "EGSS-adhmgadallah",
-                    "team":  "ME-EGSS30",
-                    "ec":  0,
-                    "r1":  0,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  0,
-                    "r6d":  4,
-                    "r6e":  16,
-                    "absence":  3,
-                    "total":  23
-                },
-                {
-                    "name":  "EGSS-alihesham01",
-                    "team":  "ME-EGSS30",
-                    "ec":  3,
-                    "r1":  1,
-                    "r2":  2,
-                    "r3":  2,
-                    "r4":  1,
-                    "r6d":  0,
-                    "r6e":  0,
-                    "absence":  0,
-                    "total":  9
-                },
-                {
-                    "name":  "EGSS-abdelrhmanshehata",
-                    "team":  "ME-EGSS30",
-                    "ec":  0,
-                    "r1":  0,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  0,
-                    "r6d":  0,
-                    "r6e":  0,
-                    "absence":  2,
-                    "total":  2
-                },
-                {
-                    "name":  "EGSS-ehabzaky01",
-                    "team":  "ME-EGSS05",
-                    "ec":  4,
-                    "r1":  1,
-                    "r2":  0,
-                    "r3":  2,
-                    "r4":  1,
-                    "r6d":  11,
-                    "r6e":  3,
-                    "absence":  8,
-                    "total":  30
-                },
-                {
-                    "name":  "EGSS-ibrahimismaiel",
-                    "team":  "ME-EGSS05",
-                    "ec":  2,
-                    "r1":  0,
-                    "r2":  1,
-                    "r3":  0,
-                    "r4":  0,
-                    "r6d":  1,
-                    "r6e":  4,
-                    "absence":  0,
-                    "total":  8
-                },
-                {
-                    "name":  "EGSS-titooooo",
-                    "team":  "ME-EGSS05",
-                    "ec":  10,
-                    "r1":  2,
-                    "r2":  0,
-                    "r3":  1,
-                    "r4":  1,
-                    "r6d":  24,
-                    "r6e":  3,
-                    "absence":  4,
-                    "total":  45
-                },
-                {
-                    "name":  "EGSS-abdelrahmannasef",
-                    "team":  "ME-EGSS05",
-                    "ec":  5,
-                    "r1":  1,
-                    "r2":  1,
-                    "r3":  0,
-                    "r4":  1,
-                    "r6d":  20,
-                    "r6e":  7,
-                    "absence":  4,
-                    "total":  39
-                },
-                {
-                    "name":  "EGSS-omarmoneb",
-                    "team":  "ME-EGSS05",
-                    "ec":  1,
-                    "r1":  0,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  0,
-                    "r6d":  0,
-                    "r6e":  5,
-                    "absence":  0,
-                    "total":  6
-                },
-                {
-                    "name":  "EGLP-saraht",
-                    "team":  "ME-EGSS05",
-                    "ec":  15,
-                    "r1":  0,
-                    "r2":  0,
-                    "r3":  1,
-                    "r4":  0,
-                    "r6d":  4,
-                    "r6e":  6,
-                    "absence":  6,
-                    "total":  32
-                },
-                {
-                    "name":  "EGSS-samira01",
-                    "team":  "ME-EGSS05",
-                    "ec":  6,
-                    "r1":  1,
-                    "r2":  0,
-                    "r3":  1,
-                    "r4":  1,
-                    "r6d":  0,
-                    "r6e":  5,
-                    "absence":  0,
-                    "total":  14
-                },
-                {
-                    "name":  "EGSS-khaledgonam",
-                    "team":  "ME-EGSS05",
-                    "ec":  5,
-                    "r1":  2,
-                    "r2":  1,
-                    "r3":  0,
-                    "r4":  1,
-                    "r6d":  3,
-                    "r6e":  16,
-                    "absence":  6,
-                    "total":  34
-                },
-                {
-                    "name":  "EGSS-ahmedshoukry",
-                    "team":  "ME-EGSS10",
-                    "ec":  2,
-                    "r1":  0,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  3,
-                    "r6d":  5,
-                    "r6e":  7,
-                    "absence":  4,
-                    "total":  21
-                },
-                {
-                    "name":  "EGSS-mahmoudkhamis",
-                    "team":  "ME-EGSS10",
-                    "ec":  4,
-                    "r1":  1,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  0,
-                    "r6d":  9,
-                    "r6e":  4,
-                    "absence":  3,
-                    "total":  21
-                },
-                {
-                    "name":  "EGLP-mohamed06",
-                    "team":  "ME-EGSS10",
-                    "ec":  1,
-                    "r1":  0,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  0,
-                    "r6d":  11,
-                    "r6e":  5,
-                    "absence":  2,
-                    "total":  19
-                },
-                {
-                    "name":  "EGSS-mohamedha",
-                    "team":  "ME-EGSS13",
-                    "ec":  14,
-                    "r1":  1,
-                    "r2":  1,
-                    "r3":  1,
-                    "r4":  3,
-                    "r6d":  20,
-                    "r6e":  6,
-                    "absence":  7,
-                    "total":  53
-                },
-                {
-                    "name":  "EGSS-hayamhassan",
-                    "team":  "ME-EGSS13",
-                    "ec":  6,
-                    "r1":  2,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  4,
-                    "r6d":  0,
-                    "r6e":  0,
-                    "absence":  0,
-                    "total":  12
-                },
-                {
-                    "name":  "EGSS-marwaahmed",
-                    "team":  "ME-EGSS13",
-                    "ec":  12,
-                    "r1":  1,
-                    "r2":  0,
-                    "r3":  1,
-                    "r4":  1,
-                    "r6d":  4,
-                    "r6e":  6,
-                    "absence":  3,
-                    "total":  28
-                },
-                {
-                    "name":  "EGLP-shahdmahmoud",
-                    "team":  "ME-EGSS13",
-                    "ec":  10,
-                    "r1":  6,
-                    "r2":  2,
-                    "r3":  2,
-                    "r4":  0,
-                    "r6d":  29,
-                    "r6e":  2,
-                    "absence":  3,
-                    "total":  54
-                },
-                {
-                    "name":  "EGSS-amrsafwat",
-                    "team":  "ME-EGSS13",
-                    "ec":  5,
-                    "r1":  0,
-                    "r2":  1,
-                    "r3":  1,
-                    "r4":  1,
-                    "r6d":  0,
-                    "r6e":  6,
-                    "absence":  9,
-                    "total":  23
-                },
-                {
-                    "name":  "EGSS-mahmoud04",
-                    "team":  "ME-EGSS01",
-                    "ec":  11,
-                    "r1":  0,
-                    "r2":  0,
-                    "r3":  2,
-                    "r4":  1,
-                    "r6d":  16,
-                    "r6e":  19,
-                    "absence":  10,
-                    "total":  59
-                },
-                {
-                    "name":  "EGSS-nohayoussry",
-                    "team":  "ME-EGSS01",
-                    "ec":  5,
-                    "r1":  2,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  0,
-                    "r6d":  25,
-                    "r6e":  2,
-                    "absence":  2,
-                    "total":  36
-                },
-                {
-                    "name":  "EGSS-juliamonir01",
-                    "team":  "ME-EGSS01",
-                    "ec":  2,
-                    "r1":  2,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  0,
-                    "r6d":  8,
-                    "r6e":  12,
-                    "absence":  3,
-                    "total":  27
-                },
-                {
                     "name":  "EGLP-yasmin01",
-                    "team":  "ME-EGSS01",
-                    "ec":  0,
-                    "r1":  0,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  0,
+                    "team":  "ME-EGSS01小组",
+                    "ec":  24,
+                    "r1":  13,
+                    "r2":  17,
+                    "r3":  5,
+                    "r4":  2,
+                    "r6d":  3,
+                    "r6e":  0,
+                    "absence":  6,
+                    "total":  70
+                },
+                {
+                    "name":  "EGSS-ahmedabdulhamid",
+                    "team":  "ME-EGSS01小组",
+                    "ec":  4,
+                    "r1":  4,
+                    "r2":  4,
+                    "r3":  1,
+                    "r4":  1,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  0,
-                    "total":  0
+                    "absence":  7,
+                    "total":  21
                 },
                 {
                     "name":  "EGSS-ashraqatal",
-                    "team":  "ME-EGSS01",
-                    "ec":  7,
-                    "r1":  1,
-                    "r2":  1,
+                    "team":  "ME-EGSS01小组",
+                    "ec":  69,
+                    "r1":  19,
+                    "r2":  27,
+                    "r3":  15,
+                    "r4":  11,
+                    "r6d":  23,
+                    "r6e":  6,
+                    "absence":  66,
+                    "total":  236
+                },
+                {
+                    "name":  "EGSS-hussienmo",
+                    "team":  "ME-EGSS01小组",
+                    "ec":  14,
+                    "r1":  2,
+                    "r2":  4,
                     "r3":  1,
                     "r4":  2,
-                    "r6d":  8,
-                    "r6e":  6,
-                    "absence":  3,
-                    "total":  29
+                    "r6d":  7,
+                    "r6e":  5,
+                    "absence":  13,
+                    "total":  48
+                },
+                {
+                    "name":  "EGSS-juliamonir01",
+                    "team":  "ME-EGSS01小组",
+                    "ec":  53,
+                    "r1":  5,
+                    "r2":  6,
+                    "r3":  3,
+                    "r4":  4,
+                    "r6d":  35,
+                    "r6e":  14,
+                    "absence":  46,
+                    "total":  166
+                },
+                {
+                    "name":  "EGSS-mahmoud04",
+                    "team":  "ME-EGSS01小组",
+                    "ec":  70,
+                    "r1":  21,
+                    "r2":  21,
+                    "r3":  12,
+                    "r4":  11,
+                    "r6d":  19,
+                    "r6e":  23,
+                    "absence":  60,
+                    "total":  237
                 },
                 {
                     "name":  "EGSS-negma",
-                    "team":  "ME-EGSS01",
-                    "ec":  1,
-                    "r1":  0,
-                    "r2":  0,
-                    "r3":  1,
-                    "r4":  0,
+                    "team":  "ME-EGSS01小组",
+                    "ec":  66,
+                    "r1":  27,
+                    "r2":  27,
+                    "r3":  11,
+                    "r4":  21,
+                    "r6d":  10,
+                    "r6e":  8,
+                    "absence":  49,
+                    "total":  219
+                },
+                {
+                    "name":  "EGSS-nohayoussry",
+                    "team":  "ME-EGSS01小组",
+                    "ec":  75,
+                    "r1":  13,
+                    "r2":  14,
+                    "r3":  14,
+                    "r4":  17,
+                    "r6d":  19,
+                    "r6e":  5,
+                    "absence":  44,
+                    "total":  201
+                },
+                {
+                    "name":  "小计",
+                    "team":  "ME-EGSS01小组",
+                    "ec":  375,
+                    "r1":  104,
+                    "r2":  120,
+                    "r3":  62,
+                    "r4":  69,
+                    "r6d":  116,
+                    "r6e":  61,
+                    "absence":  291,
+                    "total":  1198
+                },
+                {
+                    "name":  "EGLP-saraht",
+                    "team":  "ME-EGSS05小组",
+                    "ec":  46,
+                    "r1":  14,
+                    "r2":  19,
+                    "r3":  7,
+                    "r4":  7,
+                    "r6d":  14,
+                    "r6e":  5,
+                    "absence":  33,
+                    "total":  145
+                },
+                {
+                    "name":  "EGSS-abdelrahmannasef",
+                    "team":  "ME-EGSS05小组",
+                    "ec":  47,
+                    "r1":  16,
+                    "r2":  17,
+                    "r3":  6,
+                    "r4":  13,
+                    "r6d":  18,
+                    "r6e":  19,
+                    "absence":  49,
+                    "total":  185
+                },
+                {
+                    "name":  "EGSS-ehabzaky01",
+                    "team":  "ME-EGSS05小组",
+                    "ec":  62,
+                    "r1":  18,
+                    "r2":  23,
+                    "r3":  5,
+                    "r4":  9,
+                    "r6d":  10,
+                    "r6e":  11,
+                    "absence":  43,
+                    "total":  181
+                },
+                {
+                    "name":  "EGSS-ibrahimismaiel",
+                    "team":  "ME-EGSS05小组",
+                    "ec":  60,
+                    "r1":  16,
+                    "r2":  13,
+                    "r3":  5,
+                    "r4":  15,
+                    "r6d":  19,
+                    "r6e":  9,
+                    "absence":  46,
+                    "total":  183
+                },
+                {
+                    "name":  "EGSS-khaledgonam",
+                    "team":  "ME-EGSS05小组",
+                    "ec":  39,
+                    "r1":  8,
+                    "r2":  7,
+                    "r3":  2,
+                    "r4":  9,
+                    "r6d":  18,
+                    "r6e":  28,
+                    "absence":  62,
+                    "total":  173
+                },
+                {
+                    "name":  "EGSS-omarmoneb",
+                    "team":  "ME-EGSS05小组",
+                    "ec":  56,
+                    "r1":  14,
+                    "r2":  17,
+                    "r3":  8,
+                    "r4":  11,
+                    "r6d":  17,
+                    "r6e":  11,
+                    "absence":  34,
+                    "total":  168
+                },
+                {
+                    "name":  "EGSS-samira01",
+                    "team":  "ME-EGSS05小组",
+                    "ec":  52,
+                    "r1":  13,
+                    "r2":  14,
+                    "r3":  8,
+                    "r4":  8,
+                    "r6d":  15,
+                    "r6e":  18,
+                    "absence":  42,
+                    "total":  170
+                },
+                {
+                    "name":  "EGSS-titooooo",
+                    "team":  "ME-EGSS05小组",
+                    "ec":  62,
+                    "r1":  16,
+                    "r2":  17,
+                    "r3":  4,
+                    "r4":  6,
+                    "r6d":  18,
+                    "r6e":  4,
+                    "absence":  43,
+                    "total":  170
+                },
+                {
+                    "name":  "小计",
+                    "team":  "ME-EGSS05小组",
+                    "ec":  424,
+                    "r1":  115,
+                    "r2":  127,
+                    "r3":  45,
+                    "r4":  78,
+                    "r6d":  129,
+                    "r6e":  105,
+                    "absence":  352,
+                    "total":  1375
+                },
+                {
+                    "name":  "EGLP-mohamed06",
+                    "team":  "ME-EGSS10小组",
+                    "ec":  48,
+                    "r1":  16,
+                    "r2":  19,
+                    "r3":  4,
+                    "r4":  9,
+                    "r6d":  16,
+                    "r6e":  6,
+                    "absence":  34,
+                    "total":  152
+                },
+                {
+                    "name":  "EGSS-ahmedshoukry",
+                    "team":  "ME-EGSS10小组",
+                    "ec":  73,
+                    "r1":  21,
+                    "r2":  17,
+                    "r3":  8,
+                    "r4":  22,
+                    "r6d":  14,
+                    "r6e":  33,
+                    "absence":  49,
+                    "total":  237
+                },
+                {
+                    "name":  "EGSS-mahmoudkhamis",
+                    "team":  "ME-EGSS10小组",
+                    "ec":  71,
+                    "r1":  20,
+                    "r2":  21,
+                    "r3":  4,
+                    "r4":  14,
+                    "r6d":  19,
+                    "r6e":  20,
+                    "absence":  33,
+                    "total":  202
+                },
+                {
+                    "name":  "小计",
+                    "team":  "ME-EGSS10小组",
+                    "ec":  192,
+                    "r1":  57,
+                    "r2":  57,
+                    "r3":  16,
+                    "r4":  45,
+                    "r6d":  49,
+                    "r6e":  59,
+                    "absence":  116,
+                    "total":  591
+                },
+                {
+                    "name":  "EGLP-shahdmahmoud",
+                    "team":  "ME-EGSS13小组",
+                    "ec":  57,
+                    "r1":  26,
+                    "r2":  25,
+                    "r3":  9,
+                    "r4":  19,
+                    "r6d":  10,
+                    "r6e":  3,
+                    "absence":  25,
+                    "total":  174
+                },
+                {
+                    "name":  "EGSS-amrsafwat",
+                    "team":  "ME-EGSS13小组",
+                    "ec":  77,
+                    "r1":  20,
+                    "r2":  23,
+                    "r3":  9,
+                    "r4":  19,
+                    "r6d":  16,
+                    "r6e":  30,
+                    "absence":  43,
+                    "total":  237
+                },
+                {
+                    "name":  "EGSS-hayamhassan",
+                    "team":  "ME-EGSS13小组",
+                    "ec":  58,
+                    "r1":  15,
+                    "r2":  14,
+                    "r3":  5,
+                    "r4":  28,
                     "r6d":  0,
-                    "r6e":  2,
+                    "r6e":  1,
+                    "absence":  25,
+                    "total":  146
+                },
+                {
+                    "name":  "EGSS-marwaahmed",
+                    "team":  "ME-EGSS13小组",
+                    "ec":  59,
+                    "r1":  16,
+                    "r2":  17,
+                    "r3":  3,
+                    "r4":  9,
+                    "r6d":  11,
+                    "r6e":  16,
+                    "absence":  46,
+                    "total":  177
+                },
+                {
+                    "name":  "EGSS-mohamedha",
+                    "team":  "ME-EGSS13小组",
+                    "ec":  51,
+                    "r1":  15,
+                    "r2":  11,
+                    "r3":  5,
+                    "r4":  13,
+                    "r6d":  9,
+                    "r6e":  11,
+                    "absence":  33,
+                    "total":  148
+                },
+                {
+                    "name":  "小计",
+                    "team":  "ME-EGSS13小组",
+                    "ec":  302,
+                    "r1":  92,
+                    "r2":  90,
+                    "r3":  31,
+                    "r4":  88,
+                    "r6d":  46,
+                    "r6e":  61,
+                    "absence":  172,
+                    "total":  882
+                },
+                {
+                    "name":  "EGSS-abdelrhmanshehata",
+                    "team":  "ME-EGSS30小组",
+                    "ec":  16,
+                    "r1":  12,
+                    "r2":  15,
+                    "r3":  5,
+                    "r4":  9,
+                    "r6d":  13,
+                    "r6e":  4,
+                    "absence":  24,
+                    "total":  98
+                },
+                {
+                    "name":  "EGSS-adhmgadallah",
+                    "team":  "ME-EGSS30小组",
+                    "ec":  43,
+                    "r1":  12,
+                    "r2":  14,
+                    "r3":  8,
+                    "r4":  10,
+                    "r6d":  10,
+                    "r6e":  17,
+                    "absence":  27,
+                    "total":  141
+                },
+                {
+                    "name":  "EGSS-ahmedhalawa",
+                    "team":  "ME-EGSS30小组",
+                    "ec":  2,
+                    "r1":  3,
+                    "r2":  1,
+                    "r3":  0,
+                    "r4":  2,
+                    "r6d":  0,
+                    "r6e":  0,
                     "absence":  3,
-                    "total":  7
+                    "total":  11
+                },
+                {
+                    "name":  "EGSS-alihesham01",
+                    "team":  "ME-EGSS30小组",
+                    "ec":  23,
+                    "r1":  14,
+                    "r2":  15,
+                    "r3":  7,
+                    "r4":  3,
+                    "r6d":  13,
+                    "r6e":  5,
+                    "absence":  15,
+                    "total":  95
+                },
+                {
+                    "name":  "小计",
+                    "team":  "ME-EGSS30小组",
+                    "ec":  84,
+                    "r1":  41,
+                    "r2":  45,
+                    "r3":  20,
+                    "r4":  24,
+                    "r6d":  36,
+                    "r6e":  26,
+                    "absence":  69,
+                    "total":  345
                 }
             ],
     "englishClub":  [
                         {
-                            "name":  "EGSS-adhmgadallah",
-                            "team":  "ME-EGSS30",
-                            "base":  62,
-                            "book":  2,
-                            "att":  2,
-                            "pct":  "3.2%",
-                            "goal":  25,
-                            "need":  23
-                        },
-                        {
-                            "name":  "EGSS-alihesham01",
-                            "team":  "ME-EGSS30",
-                            "base":  26,
-                            "book":  19,
-                            "att":  14,
-                            "pct":  "53.8%",
-                            "goal":  10,
-                            "need":  0
-                        },
-                        {
-                            "name":  "EGSS-abdelrhmanshehata",
-                            "team":  "ME-EGSS30",
-                            "base":  26,
-                            "book":  22,
-                            "att":  15,
-                            "pct":  "57.7%",
-                            "goal":  10,
-                            "need":  0
-                        },
-                        {
-                            "name":  "EGSS-ehabzaky01",
-                            "team":  "ME-EGSS05",
-                            "base":  80,
-                            "book":  52,
-                            "att":  19,
-                            "pct":  "23.8%",
-                            "goal":  32,
-                            "need":  13
-                        },
-                        {
-                            "name":  "EGSS-ibrahimismaiel",
-                            "team":  "ME-EGSS05",
-                            "base":  82,
-                            "book":  45,
-                            "att":  26,
-                            "pct":  "31.7%",
-                            "goal":  33,
-                            "need":  7
-                        },
-                        {
-                            "name":  "EGSS-titooooo",
-                            "team":  "ME-EGSS05",
-                            "base":  76,
-                            "book":  25,
-                            "att":  12,
-                            "pct":  "15.8%",
-                            "goal":  30,
-                            "need":  18
-                        },
-                        {
-                            "name":  "EGSS-abdelrahmannasef",
-                            "team":  "ME-EGSS05",
-                            "base":  73,
-                            "book":  24,
-                            "att":  23,
-                            "pct":  "31.5%",
-                            "goal":  29,
-                            "need":  6
-                        },
-                        {
-                            "name":  "EGSS-omarmoneb",
-                            "team":  "ME-EGSS05",
-                            "base":  67,
-                            "book":  39,
-                            "att":  10,
-                            "pct":  "14.9%",
-                            "goal":  27,
-                            "need":  17
-                        },
-                        {
-                            "name":  "EGLP-saraht",
-                            "team":  "ME-EGSS05",
-                            "base":  70,
-                            "book":  17,
-                            "att":  8,
-                            "pct":  "11.4%",
-                            "goal":  28,
-                            "need":  20
-                        },
-                        {
-                            "name":  "EGSS-samira01",
-                            "team":  "ME-EGSS05",
-                            "base":  58,
-                            "book":  20,
-                            "att":  12,
-                            "pct":  "20.7%",
-                            "goal":  23,
-                            "need":  11
-                        },
-                        {
-                            "name":  "EGSS-khaledgonam",
-                            "team":  "ME-EGSS05",
-                            "base":  74,
-                            "book":  5,
-                            "att":  3,
-                            "pct":  "4.1%",
-                            "goal":  30,
-                            "need":  27
-                        },
-                        {
-                            "name":  "EGSS-ahmedshoukry",
-                            "team":  "ME-EGSS10",
-                            "base":  101,
-                            "book":  43,
-                            "att":  32,
-                            "pct":  "31.7%",
-                            "goal":  40,
-                            "need":  8
-                        },
-                        {
-                            "name":  "EGSS-mahmoudkhamis",
-                            "team":  "ME-EGSS10",
-                            "base":  90,
-                            "book":  51,
-                            "att":  24,
-                            "pct":  "26.7%",
-                            "goal":  36,
-                            "need":  12
-                        },
-                        {
-                            "name":  "EGLP-mohamed06",
-                            "team":  "ME-EGSS10",
-                            "base":  64,
-                            "book":  17,
-                            "att":  16,
-                            "pct":  "25.0%",
-                            "goal":  26,
-                            "need":  10
-                        },
-                        {
-                            "name":  "EGSS-mohamedha",
-                            "team":  "ME-EGSS13",
-                            "base":  68,
-                            "book":  11,
-                            "att":  8,
-                            "pct":  "11.8%",
-                            "goal":  27,
-                            "need":  19
-                        },
-                        {
-                            "name":  "EGSS-hayamhassan",
-                            "team":  "ME-EGSS13",
-                            "base":  84,
-                            "book":  45,
-                            "att":  24,
-                            "pct":  "28.6%",
-                            "goal":  34,
-                            "need":  10
-                        },
-                        {
-                            "name":  "EGSS-marwaahmed",
-                            "team":  "ME-EGSS13",
-                            "base":  80,
-                            "book":  42,
-                            "att":  18,
-                            "pct":  "22.5%",
-                            "goal":  32,
-                            "need":  14
-                        },
-                        {
-                            "name":  "EGLP-shahdmahmoud",
-                            "team":  "ME-EGSS13",
-                            "base":  68,
-                            "book":  32,
-                            "att":  17,
-                            "pct":  "25.0%",
-                            "goal":  27,
-                            "need":  10
-                        },
-                        {
-                            "name":  "EGSS-amrsafwat",
-                            "team":  "ME-EGSS13",
-                            "base":  98,
-                            "book":  56,
-                            "att":  32,
-                            "pct":  "32.7%",
-                            "goal":  39,
-                            "need":  7
-                        },
-                        {
-                            "name":  "EGSS-mahmoud04",
-                            "team":  "ME-EGSS01",
-                            "base":  85,
-                            "book":  18,
-                            "att":  9,
-                            "pct":  "10.6%",
-                            "goal":  34,
-                            "need":  25
-                        },
-                        {
-                            "name":  "EGSS-nohayoussry",
-                            "team":  "ME-EGSS01",
-                            "base":  109,
-                            "book":  44,
-                            "att":  27,
-                            "pct":  "24.8%",
-                            "goal":  44,
-                            "need":  17
-                        },
-                        {
-                            "name":  "EGSS-juliamonir01",
-                            "team":  "ME-EGSS01",
-                            "base":  76,
-                            "book":  35,
-                            "att":  16,
-                            "pct":  "21.1%",
-                            "goal":  30,
-                            "need":  14
-                        },
-                        {
-                            "name":  "EGLP-yasmin01",
-                            "team":  "ME-EGSS01",
-                            "base":  0,
-                            "book":  0,
-                            "att":  0,
-                            "pct":  "0.0%",
-                            "goal":  0,
-                            "need":  0
+                            "name":  "小计",
+                            "team":  "ME-EGSS01小组",
+                            "base":  791,
+                            "book":  187,
+                            "att":  96,
+                            "pct":  "50.2%",
+                            "goal":  317,
+                            "need":  221
                         },
                         {
                             "name":  "EGSS-ashraqatal",
-                            "team":  "ME-EGSS01",
-                            "base":  101,
+                            "team":  "ME-EGSS01小组",
+                            "base":  154,
                             "book":  40,
                             "att":  19,
-                            "pct":  "18.8%",
-                            "goal":  40,
-                            "need":  21
+                            "pct":  "50%",
+                            "goal":  62,
+                            "need":  43
+                        },
+                        {
+                            "name":  "EGSS-hussienmo",
+                            "team":  "ME-EGSS01小组",
+                            "base":  49,
+                            "book":  1,
+                            "att":  0,
+                            "pct":  "0%",
+                            "goal":  20,
+                            "need":  20
+                        },
+                        {
+                            "name":  "EGSS-juliamonir01",
+                            "team":  "ME-EGSS01小组",
+                            "base":  127,
+                            "book":  33,
+                            "att":  18,
+                            "pct":  "50%",
+                            "goal":  51,
+                            "need":  33
+                        },
+                        {
+                            "name":  "EGSS-mahmoud04",
+                            "team":  "ME-EGSS01小组",
+                            "base":  175,
+                            "book":  19,
+                            "att":  12,
+                            "pct":  "63.2%",
+                            "goal":  70,
+                            "need":  58
                         },
                         {
                             "name":  "EGSS-negma",
-                            "team":  "ME-EGSS01",
-                            "base":  96,
+                            "team":  "ME-EGSS01小组",
+                            "base":  138,
+                            "book":  47,
+                            "att":  18,
+                            "pct":  "36%",
+                            "goal":  56,
+                            "need":  38
+                        },
+                        {
+                            "name":  "EGSS-nohayoussry",
+                            "team":  "ME-EGSS01小组",
+                            "base":  148,
+                            "book":  47,
+                            "att":  29,
+                            "pct":  "61.7%",
+                            "goal":  60,
+                            "need":  31
+                        },
+                        {
+                            "name":  "小计",
+                            "team":  "ME-EGSS05小组",
+                            "base":  1141,
+                            "book":  251,
+                            "att":  126,
+                            "pct":  "48%",
+                            "goal":  457,
+                            "need":  331
+                        },
+                        {
+                            "name":  "EGLP-saraht",
+                            "team":  "ME-EGSS05小组",
+                            "base":  141,
+                            "book":  17,
+                            "att":  8,
+                            "pct":  "47.1%",
+                            "goal":  57,
+                            "need":  49
+                        },
+                        {
+                            "name":  "EGSS-abdelrahmannasef",
+                            "team":  "ME-EGSS05小组",
+                            "base":  142,
+                            "book":  26,
+                            "att":  25,
+                            "pct":  "96.2%",
+                            "goal":  57,
+                            "need":  32
+                        },
+                        {
+                            "name":  "EGSS-ehabzaky01",
+                            "team":  "ME-EGSS05小组",
+                            "base":  143,
+                            "book":  60,
+                            "att":  24,
+                            "pct":  "37.1%",
+                            "goal":  58,
+                            "need":  34
+                        },
+                        {
+                            "name":  "EGSS-ibrahimismaiel",
+                            "team":  "ME-EGSS05小组",
+                            "base":  149,
+                            "book":  47,
+                            "att":  26,
+                            "pct":  "56.2%",
+                            "goal":  60,
+                            "need":  34
+                        },
+                        {
+                            "name":  "EGSS-khaledgonam",
+                            "team":  "ME-EGSS05小组",
+                            "base":  136,
+                            "book":  5,
+                            "att":  3,
+                            "pct":  "60%",
+                            "goal":  55,
+                            "need":  52
+                        },
+                        {
+                            "name":  "EGSS-omarmoneb",
+                            "team":  "ME-EGSS05小组",
+                            "base":  148,
+                            "book":  46,
+                            "att":  11,
+                            "pct":  "22%",
+                            "goal":  60,
+                            "need":  49
+                        },
+                        {
+                            "name":  "EGSS-samira01",
+                            "team":  "ME-EGSS05小组",
+                            "base":  133,
+                            "book":  21,
+                            "att":  13,
+                            "pct":  "59.1%",
+                            "goal":  54,
+                            "need":  41
+                        },
+                        {
+                            "name":  "EGSS-titooooo",
+                            "team":  "ME-EGSS05小组",
+                            "base":  149,
+                            "book":  29,
+                            "att":  16,
+                            "pct":  "51.6%",
+                            "goal":  60,
+                            "need":  44
+                        },
+                        {
+                            "name":  "小计",
+                            "team":  "ME-EGSS10小组",
+                            "base":  497,
+                            "book":  115,
+                            "att":  75,
+                            "pct":  "63.2%",
+                            "goal":  199,
+                            "need":  124
+                        },
+                        {
+                            "name":  "EGLP-mohamed06",
+                            "team":  "ME-EGSS10小组",
+                            "base":  114,
+                            "book":  17,
+                            "att":  16,
+                            "pct":  "94.4%",
+                            "goal":  46,
+                            "need":  30
+                        },
+                        {
+                            "name":  "EGSS-ahmedshoukry",
+                            "team":  "ME-EGSS10小组",
+                            "base":  201,
                             "book":  45,
+                            "att":  33,
+                            "pct":  "68.6%",
+                            "goal":  81,
+                            "need":  48
+                        },
+                        {
+                            "name":  "EGSS-mahmoudkhamis",
+                            "team":  "ME-EGSS10小组",
+                            "base":  182,
+                            "book":  53,
+                            "att":  26,
+                            "pct":  "48.2%",
+                            "goal":  73,
+                            "need":  47
+                        },
+                        {
+                            "name":  "小计",
+                            "team":  "ME-EGSS13小组",
+                            "base":  618,
+                            "book":  208,
+                            "att":  100,
+                            "pct":  "44.4%",
+                            "goal":  248,
+                            "need":  148
+                        },
+                        {
+                            "name":  "EGLP-shahdmahmoud",
+                            "team":  "ME-EGSS13小组",
+                            "base":  108,
+                            "book":  33,
                             "att":  17,
-                            "pct":  "17.7%",
-                            "goal":  38,
-                            "need":  21
+                            "pct":  "50%",
+                            "goal":  44,
+                            "need":  27
+                        },
+                        {
+                            "name":  "EGSS-amrsafwat",
+                            "team":  "ME-EGSS13小组",
+                            "base":  177,
+                            "book":  62,
+                            "att":  32,
+                            "pct":  "47.1%",
+                            "goal":  71,
+                            "need":  39
+                        },
+                        {
+                            "name":  "EGSS-hayamhassan",
+                            "team":  "ME-EGSS13小组",
+                            "base":  96,
+                            "book":  47,
+                            "att":  24,
+                            "pct":  "47.1%",
+                            "goal":  39,
+                            "need":  15
+                        },
+                        {
+                            "name":  "EGSS-marwaahmed",
+                            "team":  "ME-EGSS13小组",
+                            "base":  128,
+                            "book":  55,
+                            "att":  19,
+                            "pct":  "31.1%",
+                            "goal":  52,
+                            "need":  33
+                        },
+                        {
+                            "name":  "EGSS-mohamedha",
+                            "team":  "ME-EGSS13小组",
+                            "base":  109,
+                            "book":  11,
+                            "att":  8,
+                            "pct":  "72.7%",
+                            "goal":  44,
+                            "need":  36
+                        },
+                        {
+                            "name":  "小计",
+                            "team":  "ME-EGSS30小组",
+                            "base":  260,
+                            "book":  54,
+                            "att":  39,
+                            "pct":  "56.7%",
+                            "goal":  104,
+                            "need":  65
+                        },
+                        {
+                            "name":  "EGSS-abdelrhmanshehata",
+                            "team":  "ME-EGSS30小组",
+                            "base":  67,
+                            "book":  29,
+                            "att":  20,
+                            "pct":  "60.6%",
+                            "goal":  27,
+                            "need":  7
+                        },
+                        {
+                            "name":  "EGSS-adhmgadallah",
+                            "team":  "ME-EGSS30小组",
+                            "base":  133,
+                            "book":  5,
+                            "att":  4,
+                            "pct":  "50%",
+                            "goal":  54,
+                            "need":  50
+                        },
+                        {
+                            "name":  "EGSS-alihesham01",
+                            "team":  "ME-EGSS30小组",
+                            "base":  60,
+                            "book":  20,
+                            "att":  15,
+                            "pct":  "53.8%",
+                            "goal":  24,
+                            "need":  9
                         }
                     ]
 };
+
+
+
+
+
+
+
+
 
 
 
@@ -3306,6 +2974,12 @@ function downloadSelectedRepLeads() {
   link.click();
   document.body.removeChild(link);
 }
+
+
+
+
+
+
 
 
 
