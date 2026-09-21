@@ -1,5 +1,5 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-hayamhassan | Generated: 2026-09-21 13:10
+# Representative: EGSS-hayamhassan | Generated: 2026-09-21 13:32
 
 === 1. SOP PENDING TASKS (12) ===
 Student_ID,Task_Name,Expiration_Time
@@ -16,11 +16,30 @@ Student_ID,Task_Name,Expiration_Time
 64170627,"Round 3 Habit Cultivation (1st Unit Assessment)",20260923 18:55:00
 64171255,"English Club Booking",20260922 18:55:00
 
-=== 2. UNFIXED TEACHER BINDING LEADS (0) ===
+=== 2. UNFIXED TEACHER BINDING LEADS (15) ===
 Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
+58603971,"M3+ Pool",0,"UNFIXED BINDING"
+58713040,"M3+ Pool",0,"UNFIXED BINDING"
+63595698,"M3+ Pool",0,"UNFIXED BINDING"
+63605140,"M3+ Pool",0,"UNFIXED BINDING"
+63711216,"M3+ Pool",0,"UNFIXED BINDING"
+63735765,"M3+ Pool",0,"UNFIXED BINDING"
+63747393,"M3+ Pool",0,"UNFIXED BINDING"
+63757854,"M3+ Pool",0,"UNFIXED BINDING"
+63764411,"M3+ Pool",0,"UNFIXED BINDING"
+63780391,"M3+ Pool",0,"UNFIXED BINDING"
+63789772,"M3+ Pool",0,"UNFIXED BINDING"
+63801429,"M3+ Pool",0,"UNFIXED BINDING"
+63868002,"M3+ Pool",0,"UNFIXED BINDING"
+64327809,"M3+ Pool",0,"UNFIXED BINDING"
+64388847,"M3+ Pool",0,"UNFIXED BINDING"
 
-=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (0) ===
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (4) ===
 Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
+63602621,"Zero Consumption",0,"ZERO CLASS RESCUE"
+63757854,"Zero Consumption",0,"ZERO CLASS RESCUE"
+63762996,"Zero Consumption",0,"ZERO CLASS RESCUE"
+63764411,"Zero Consumption",0,"ZERO CLASS RESCUE"
 
 === 4. ENGLISH CLUB ACTIONABLE LEADS (72) ===
 Student_ID,Level,Completed_Classes,Booking_Status
