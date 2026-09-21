@@ -109,4 +109,57 @@ The card in the **Renewal vs Upgrade M2 Analytics** tab had retained static plac
    - Module 4 displays **836 Goal IDs** and **427 IDs Needed**.
 4. **Date Banners & Encodings:**
    - All source tags and pacing headers updated to: `Sep 1–21, 2026 (Day 21) | Pace: 57%`.
-   - Updated cache busters on `dashboard.js` and `styles.css` to `?v=20260921_144500`.
+   - Updated cache busters on `dashboard.js` and `styles.css` to `?v=20260921_152000`.
+
+---
+
+## 6. Layout, Alignment & Spacing Optimization (Zero Dead Space & Full Centering)
+
+As requested by the user, a comprehensive formatting and layout overhaul was executed:
+
+1. **Strict Center Alignment for All Columns (`text-align: center !important`):**
+   - All table headers (`th`), data rows (`td`), status badges, and table footer aggregations (`tfoot td`) across all tables are now centered vertically and horizontally.
+   - Applies universally across:
+     - `individualFullTable` (14 columns centered)
+     - `upgradeDetailTable` (11 columns centered)
+     - `sopMatrixTable` (10 columns centered)
+     - Operations Modules 1, 2, 3, and 4 tables (all columns centered)
+
+2. **Resolved Column Mismatch Bug & Eliminated Dead Spaces:**
+   - Identified and fixed a missing 7th column (`fmtPct(r.upgradeRate)`) in `upgradeDetailTableBody` rows.
+   - **Previous Bug:** In `upgradeDetailTable`, rows had 10 `<td>` elements while the header and footer had 11 columns. This shifted all metrics by one column and left the 11th column completely empty.
+   - **Resolution:** Added the missing `upgradeRate` column to each `<tr>`. All 11 columns now align with their headers and footers with zero dead spaces.
+
+3. **Responsive Auto-Fit Grids:**
+   - Replaced rigid grid column definitions with dynamic responsive auto-fit structures (`repeat(auto-fit, minmax(...))`):
+     - `.breakdown-grid`: Responsive 2-column flex cards.
+     - `.kpi-grid`: Balanced 4-card hero layout that auto-adapts without leaving empty gaps.
+     - `.team-cards-grid`: Auto-fit cards (minmax 340px).
+     - `.op-kpi-grid`: Auto-fit 4-card operational cockpit.
+
+4. **Frame Containment & Overflow Prevention:**
+   - Added `box-sizing: border-box`, `overflow: hidden`, `word-wrap: break-word`, and `overflow-wrap: break-word` to all cards (`.calc-card`, `.kpi-card`, `.op-card`, `.team-card`, `.ind-card`, `.rec-card`).
+   - Ensured all tables live inside `.table-wrapper` with smooth horizontal scrolling to prevent content from spilling outside cards or breaking parent containers.
+
+---
+
+## 7. High-End Branding & Promotional Visual Asset (v2)
+
+- **New Asset:** `d:\Lens\Dashboard\assets\big_team_1_banner.jpg`
+- **Design Elements:**
+  - 3D holographic chrome sculpture lettering for **"Big Team 01"** with iridescent light reflections.
+  - Subtitle in refined golden serif typography: **"EXECUTIVE PERFORMANCE DASHBOARD"**.
+  - Subtle glowing golden **"51"** watermark branding in the central background.
+  - Radiant golden champion trophy with volumetric light rays.
+  - Floating translucent glass KPI cards showing live operational indicators.
+  - Ascending holographic bar charts and circular radial gauges in cyan and electric purple.
+  - Deep space navy gradient with a futuristic smart city skyline silhouette.
+- **Social & Messaging Integration:** Linked directly in Open Graph (`og:image`) and Twitter Cards metadata for rich previews when shared on WeChat, DingTalk, WhatsApp, or Slack.
+
+---
+
+## 8. Deployment Verification
+- **Repository:** `https://github.com/husseinelaasar/big-team-01-dashboard.git`
+- **Live URL:** [https://husseinelaasar.github.io/big-team-01-dashboard/](https://husseinelaasar.github.io/big-team-01-dashboard/)
+- **Live Branch:** `master`
+- **Cache Busting Version:** `v20260921_152000`
