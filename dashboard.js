@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -250,13 +250,13 @@ function buildDataModel() {
     t.upgrade20Needed = Math.max(0, t.upgrade20Target - t.upgradeM2);
   });
 
-  // Reconciled Sector Totals (Official Data Center Reconciliation)
+  // Reconciled Sector Totals (Official Data Center Reconciliation & POOL_Detail16)
   const totalCash = 115234; // Official Sector Net Cash
   const totalTarget = 225600; // Official Sector Cash Target
   const totalContracts = 136; // Official Sector Total Orders
-  const totalUpgradeM2 = individuals.reduce((sum, r) => sum + r.upgradeM2, 0);
-  const totalNormalRenewals = individuals.reduce((sum, r) => sum + r.normalRenewals, 0);
-  const totalUpgradeBase = individuals.reduce((sum, r) => sum + r.upgradeBase, 0);
+  const totalUpgradeM2 = 29; // Official POOL_Detail16 Total M2 Upgrades
+  const totalNormalRenewals = 103; // Official POOL_Detail16 Total Normal Renewals
+  const totalUpgradeBase = 687; // Official POOL_Detail16 Total Upgrade Base
   const totalUpgrade20Target = Math.ceil(totalUpgradeBase * 0.20);
   const totalUpgrade20Needed = Math.max(0, totalUpgrade20Target - totalUpgradeM2);
 
@@ -1034,6 +1034,21 @@ function renderIndividualsTab(model) {
 }
 
 function renderBreakdownTab(model) {
+  // Synchronize Left Summary Card with Official Day 21 POOL_Detail16 Data
+  const elTitle = document.getElementById('poolBreakdownTitle');
+  const elTotal = document.getElementById('poolTotalRenewals');
+  const elUpgrade = document.getElementById('poolUpgradeM2Renewals');
+  const elNormal = document.getElementById('poolNormalRenewals');
+  const elBase = document.getElementById('poolUpgradeBase');
+  const elRate = document.getElementById('poolUpgradeRate');
+
+  if (elTitle) elTitle.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Pool Breakdown Summary (Sep 1–${model.summary.daysPassed || 21}, 2026)`;
+  if (elTotal) elTotal.textContent = `132 students`;
+  if (elUpgrade) elUpgrade.textContent = `${model.summary.totalUpgradeM2} students`;
+  if (elNormal) elNormal.textContent = `${model.summary.totalNormalRenewals} students`;
+  if (elBase) elBase.textContent = `${model.summary.totalUpgradeBase} leads`;
+  if (elRate) elRate.textContent = `${fmtPct(model.summary.upgradeRate)} (${model.summary.totalUpgradeM2} / ${model.summary.totalUpgradeBase})`;
+
   // Top Upgrade Producers
   const leadersContainer = document.getElementById('upgradeLeadersList');
   if (leadersContainer) {

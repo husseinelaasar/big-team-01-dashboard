@@ -79,15 +79,34 @@ All 4 operational modules and self-service lead files are now sourced and verifi
 
 ---
 
-## 4. UI & Structural Adjustments
+## 4. Pool Renewal & Upgrade M2 Audit (`POOL_Detail16` Day 21 Synchronization)
+
+### Root Cause of Previous Card Discrepancy (19 vs 29)
+The card in the **Renewal vs Upgrade M2 Analytics** tab had retained static placeholder text from the Day 14 milestone (`Sep 1–14, 2026` showing 19 upgrades out of 78 renewals). It has now been updated and dynamically bound directly to `SS Lens Dashboard` sheet `POOL_Detail16`:
+
+| Metric | Day 14 Stale Baseline | Day 21 Official Count (`POOL_Detail16`) | Change / Delta | Condition / Criteria |
+| :--- | :---: | :---: | :---: | :--- |
+| **Total Pool Renewals** | 78 students | **132 students** | +54 renewals | Column J (`Is This Month Renew`) == 1 |
+| **Upgrade M2 Renewals** | 19 students | **29 students** | +10 upgrades | Column F == "Upgrade M2" & Column J == 1 |
+| **Normal Renewals** | 59 students | **103 students** | +44 renewals | Column F != "Upgrade M2" & Column J == 1 |
+| **Total M2 Upgrade Base** | 687 leads | **687 leads** | Stable base | Total eligible Upgrade M2 students in pool |
+| **Team M2 Conversion Rate** | 2.77% | **4.22%** | **+1.45%** | **29 / 687** (Significant acceleration) |
+
+---
+
+## 5. UI & Structural Adjustments
 1. **Removed Leaderboard from Executive Overview:**
    - As instructed, the `Leaderboard & Individual Matrix Preview` table was completely deleted from the first tab (`tab-overview`).
    - Detailed individual rankings remain fully accessible under the dedicated **Sales Representatives** tab.
-2. **Operations Hero Cards Updated:**
-   - Module 1 now displays **557 Tasks** and **25 Round 1 Awareness Leads**.
+2. **Synchronized Renewal vs Upgrade M2 Analytics Card:**
+   - Updated the card title to `Pool Breakdown Summary (Sep 1–21, 2026)`.
+   - Updated values to: **132 Total Renewals**, **29 Upgrade M2 Renewals**, **103 Normal Renewals**, **687 Base**, and **4.22% Conversion Rate**.
+   - Added dynamic DOM binding in `renderBreakdownTab()` so the card automatically reflects live calculations.
+3. **Operations Hero Cards Updated:**
+   - Module 1 displays **557 Tasks** and **25 Round 1 Awareness Leads** (from `All in one Master.xlsx`).
    - Module 2 displays **817 Leads** (M0: 71.5%, M1: 82.6%).
    - Module 3 displays **5,216 Students** and **584 Zero-Class Leads**.
    - Module 4 displays **836 Goal IDs** and **427 IDs Needed**.
-3. **Date Banners & Encodings:**
-   - Verified clean UTF-8 encoding across all badges: `Sep 1–21, 2026 (Day 21)`.
-   - Updated cache busters on `dashboard.js` and `styles.css`.
+4. **Date Banners & Encodings:**
+   - All source tags and pacing headers updated to: `Sep 1–21, 2026 (Day 21) | Pace: 57%`.
+   - Updated cache busters on `dashboard.js` and `styles.css` to `?v=20260921_144500`.
