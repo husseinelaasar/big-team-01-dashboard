@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260921_142133">
+  <link rel="stylesheet" href="styles.css?v=20260921_143800">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -199,38 +199,9 @@
             Comparison of revenue velocity across all teams and Big Team 01 against the official pacing curve (5% to 103%)
           </p>
         </div>
-        <span class="source-tag">Source: CRM live data (Sep 1–19, 2026)</span>
+        <span class="source-tag">Source: CRM live data (Sep 1–21, 2026)</span>
       </div>
       <div class="chart-container" id="teamBarsContainer"></div>
-
-      <!-- Overview Top Performers Table -->
-      <div class="section-header" style="margin-top: 32px;">
-        <h2>Leaderboard & Individual Matrix Preview</h2>
-        <span class="source-tag">Ranked by Cash Achievement % | Official Day 19 Benchmark (51%)</span>
-      </div>
-      <div class="table-wrapper">
-        <table class="data-table" id="overviewTable">
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Rep Name</th>
-              <th>Team</th>
-              <th>Cash Revenue</th>
-              <th>Target</th>
-              <th>Ach %</th>
-              <th style="color: #38bdf8; font-weight: 800; text-align: center;">Pacing Status (Day 19: 51%)</th>
-              <th>M2 Conv. % (POOL15)</th>
-              <th style="color: #facc15; font-weight: 800;" title="51Talk POOL22 Effective Coverage: Call Frequency & Touch Intensity (Calls / Student Base * 100%). Unique reach is 100%.">M2 Touch Intensity / Freq % (POOL22)</th>
-              <th>Upgrade M2</th>
-              <th style="color: #c084fc; font-weight: 800;">20% Upgrade Goal (Needed)</th>
-              <th>Contracts</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody id="overviewTableBody"></tbody>
-          <tfoot id="overviewTableFoot"></tfoot>
-        </table>
-      </div>
     </section>
 
     <!-- ============================================== -->
@@ -517,9 +488,9 @@
         <!-- Module 1 Card -->
         <div class="op-card m1 active" onclick="switchOperationsModule(1)" id="opCard1">
           <div class="op-title">Module 1: SOP Pending Tasks</div>
-          <div class="op-value" id="opSopTotal">621</div>
+          <div class="op-value" id="opSopTotal">557</div>
           <div class="op-sub">
-            <strong style="color: #f43f5e;">15</strong> Round 1 Awareness Leads<br>
+            <strong style="color: #f43f5e;">25</strong> Round 1 Awareness Leads<br>
             25 Active SS Reps
           </div>
         </div>
@@ -527,19 +498,19 @@
         <!-- Module 2 Card -->
         <div class="op-card m2" onclick="switchOperationsModule(2)" id="opCard2">
           <div class="op-title">Module 2: Unfixed Teachers</div>
-          <div class="op-value" id="opFtTotal">1,360</div>
+          <div class="op-value" id="opFtTotal">817</div>
           <div class="op-sub">
-            M0 Fix: <strong style="color: #f59e0b;">43.1%</strong> (Target 80%)<br>
-            M1 Fix: <strong style="color: #10b981;">78.8%</strong> (Target 80%)
+            M0 Fix: <strong style="color: #10b981;">71.5%</strong> (Target 80%)<br>
+            M1 Fix: <strong style="color: #10b981;">82.6%</strong> (Target 80%)
           </div>
         </div>
 
         <!-- Module 3 Card -->
         <div class="op-card m3" onclick="switchOperationsModule(3)" id="opCard3">
           <div class="op-title">Module 3: Class Consumption</div>
-          <div class="op-value" id="opCcTotal">5,197</div>
+          <div class="op-value" id="opCcTotal">5,216</div>
           <div class="op-sub">
-            <strong style="color: #f43f5e;">1,123</strong> Zero-Class Leads (Rescue)<br>
+            <strong style="color: #f43f5e;">584</strong> Zero-Class Leads (Rescue)<br>
             Period Target: &ge; 8 Classes
           </div>
         </div>
@@ -547,10 +518,10 @@
         <!-- Module 4 Card -->
         <div class="op-card m4" onclick="switchOperationsModule(4)" id="opCard4">
           <div class="op-title">Module 4: English Club (40%)</div>
-          <div class="op-value" id="opEcGoal">818</div>
+          <div class="op-value" id="opEcGoal">836</div>
           <div class="op-sub">
-            Base: 2,043 | Attended: <strong style="color: #c084fc;">355</strong><br>
-            Remaining Needed: <strong style="color: #f59e0b;">466 IDs</strong>
+            Base: 2,096 | Attended: <strong style="color: #c084fc;">411</strong><br>
+            Remaining Needed: <strong style="color: #f59e0b;">427 IDs</strong>
           </div>
         </div>
       </div>
@@ -559,16 +530,16 @@
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
         <div class="op-module-pills" style="margin-bottom: 0;">
           <button class="op-pill p1 active" onclick="switchOperationsModule(1)" id="opPill1">
-            <span>📋</span> Module 1: SOP Pending (621 Tasks)
+            <span>📋</span> Module 1: SOP Pending (557 Tasks)
           </button>
           <button class="op-pill p2" onclick="switchOperationsModule(2)" id="opPill2">
-            <span>👩‍🏫</span> Module 2: Unfixed Teachers (1,360 Leads)
+            <span>👩‍🏫</span> Module 2: Unfixed Teachers (817 Leads)
           </button>
           <button class="op-pill p3" onclick="switchOperationsModule(3)" id="opPill3">
-            <span>🎓</span> Module 3: Class Consumption & Zero-Class
+            <span>🎓</span> Module 3: Class Consumption & Zero-Class (584 Zero-Class)
           </button>
           <button class="op-pill p4" onclick="switchOperationsModule(4)" id="opPill4">
-            <span>🗣️</span> Module 4: English Club 40% Goal (818 IDs)
+            <span>🗣️</span> Module 4: English Club 40% Goal (836 IDs)
           </button>
         </div>
 
@@ -608,7 +579,7 @@
     </footer>
   </div>
 
-  <script src="dashboard.js?v=20260921_142133"></script>
+  <script src="dashboard.js?v=20260921_143800"></script>
 </body>
 </html>
 
