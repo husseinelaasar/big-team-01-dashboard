@@ -3045,6 +3045,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -3650,6 +3652,8 @@ function downloadSelectedRepLeads() {
   link.click();
   document.body.removeChild(link);
 }
+
+
 
 
 
