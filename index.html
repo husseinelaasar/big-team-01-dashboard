@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260926_131012">
+  <link rel="stylesheet" href="styles.css?v=20260926_141013">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -211,6 +211,82 @@
         <span class="source-tag">Source: CRM live data (Sep 1–21, 2026)</span>
       </div>
       <div class="chart-container" id="teamBarsContainer"></div>
+
+      <!-- ============================================== -->
+      <!-- OFFICIAL MASTER WORKBOOKS & ATTACHMENTS HUB -->
+      <!-- ============================================== -->
+      <div class="attachments-hub-container" style="margin-top: 32px; padding: 24px; background: linear-gradient(135deg, rgba(30, 41, 59, 0.75), rgba(15, 23, 42, 0.9)); border-radius: var(--radius-lg); border: 1px solid rgba(99, 102, 241, 0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.3); backdrop-filter: blur(12px);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 16px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 1.5rem;">📥</span>
+              <h3 style="font-size: 1.22rem; font-weight: 800; color: #fff; margin: 0;">Official Reports & Master Attachments</h3>
+              <span class="pulse-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.72rem; padding: 3px 10px; border-radius: 6px; font-weight: 700;">LIVE EXCEL REFRESH</span>
+            </div>
+            <p style="font-size: 0.86rem; color: var(--text-secondary); margin: 6px 0 0 0;">
+              Download the official consolidated master spreadsheets and specialized operational lead reports refreshed for today.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <button onclick="switchTab('individuals')" style="padding: 8px 16px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #a5b4fc; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+              🔍 Go to Individuals Deep Dive & Rankings &rarr;
+            </button>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+          <!-- Card 1: All in one Master -->
+          <div class="attachment-card" style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                <span style="font-size: 2rem;">📘</span>
+                <span style="background: rgba(99, 102, 241, 0.2); color: #818cf8; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; font-family: var(--font-mono);">.XLSX | 442 KB</span>
+              </div>
+              <h4 style="color: #fff; font-size: 1rem; font-weight: 800; margin: 0 0 6px 0;">All in one Master.xlsx</h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin: 0 0 16px 0;">
+                Full executive workbook containing all 8 operational sub-sheets (SOP Pending, Unfixed Teacher, Class Consumption, English Club, and Complete Student Detail Leads).
+              </p>
+            </div>
+            <a href="attachments/All in one Master.xlsx" download="All in one Master.xlsx" style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: linear-gradient(135deg, #6366f1, #4f46e5); color: #fff; text-decoration: none; border-radius: var(--radius-sm); font-size: 0.86rem; font-weight: 700; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35); text-align: center;">
+              <span>📥</span> Download Master Workbook
+            </a>
+          </div>
+
+          <!-- Card 2: Class Consumption Report -->
+          <div class="attachment-card" style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                <span style="font-size: 2rem;">📙</span>
+                <span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; font-family: var(--font-mono);">.XLSX | 281 KB</span>
+              </div>
+              <h4 style="color: #fff; font-size: 1rem; font-weight: 800; margin: 0 0 6px 0;">Class_Consumption_Leads_Report.xlsx</h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin: 0 0 16px 0;">
+                Specialized standalone report featuring the 16-column discrete distribution dashboard and 5,254 student tier-progression actionable lead list.
+              </p>
+            </div>
+            <a href="attachments/Class_Consumption_Leads_Report.xlsx" download="Class_Consumption_Leads_Report.xlsx" style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: linear-gradient(135deg, #d97706, #b45309); color: #fff; text-decoration: none; border-radius: var(--radius-sm); font-size: 0.86rem; font-weight: 700; box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35); text-align: center;">
+              <span>📥</span> Download Consumption Report
+            </a>
+          </div>
+
+          <!-- Card 3: Unfixed Teacher Report -->
+          <div class="attachment-card" style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                <span style="font-size: 2rem;">📗</span>
+                <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; font-family: var(--font-mono);">.XLSX | 59 KB</span>
+              </div>
+              <h4 style="color: #fff; font-size: 1rem; font-weight: 800; margin: 0 0 6px 0;">Unfixed_Teacher_Leads_Report.xlsx</h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin: 0 0 16px 0;">
+                Unfixed teacher binding dashboard and 1,375 priority student leads list for M0, M1, and M2 cohorts targeting the 80% binding benchmark.
+              </p>
+            </div>
+            <a href="attachments/Unfixed_Teacher_Leads_Report.xlsx" download="Unfixed_Teacher_Leads_Report.xlsx" style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: linear-gradient(135deg, #059669, #047857); color: #fff; text-decoration: none; border-radius: var(--radius-sm); font-size: 0.86rem; font-weight: 700; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35); text-align: center;">
+              <span>📥</span> Download Unfixed Report
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ============================================== -->
@@ -327,26 +403,35 @@
         </div>
       </div>
 
-      <!-- Detailed Breakdown Table by SS -->
+      <!-- Small Teams Upgrade M2 & Call Intensity Comparison Matrix (Non-Redundant Team Summary) -->
+      <div class="section-header" style="margin-top: 28px;">
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff;">Small Teams Upgrade M2 & Outreach Intensity Comparison</h3>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 4px;">
+            Sector-wide comparison by Small Team for Early Upgrade M2 conversion, 20% target achievement, and contact frequency. (Individual reps viewable in Individuals tab).
+          </p>
+        </div>
+        <span class="source-tag">Source: POOL_Detail16 & POOL22</span>
+      </div>
+
       <div class="table-wrapper">
-        <table class="data-table" id="upgradeDetailTable">
+        <table class="data-table" id="upgradeTeamTable">
           <thead>
             <tr>
-              <th>Rank</th>
-              <th>Team</th>
-              <th>Rep Name</th>
-              <th>Upgrade M2 Renewed</th>
-              <th>Upgrade Base</th>
-              <th style="color: #c084fc; font-weight: 800;">20% Upgrade Goal (Needed)</th>
-              <th>M2 Upgrade Conv. % (POOL15)</th>
-              <th style="color: #facc15; font-weight: 800;" title="51Talk POOL22 Effective Coverage: Call Frequency & Touch Intensity (Calls / Student Base * 100%). Unique reach is 100%.">M2 Touch Intensity / Freq % (POOL22)</th>
-              <th>Total Renewed</th>
-              <th>Normal Renewed</th>
-              <th>Contribution Share</th>
+              <th>Small Team</th>
+              <th>Team Leader</th>
+              <th>Upgrade Base (POOL_Detail16)</th>
+              <th>Upgrade M2 Achieved</th>
+              <th>Normal Renewals</th>
+              <th>Total Contracts</th>
+              <th>Team Conv. Rate %</th>
+              <th style="color: #c084fc; font-weight: 800;">20% Team Target (Gap)</th>
+              <th style="color: #facc15; font-weight: 800;" title="51Talk POOL22 Effective Coverage: Call Frequency & Touch Intensity (Calls / Student Base * 100%). Unique reach is 100%.">Avg Touch Intensity % (POOL22)</th>
+              <th>Team Status</th>
             </tr>
           </thead>
-          <tbody id="upgradeDetailTableBody"></tbody>
-          <tfoot id="upgradeDetailTableFoot"></tfoot>
+          <tbody id="upgradeTeamTableBody"></tbody>
+          <tfoot id="upgradeTeamTableFoot"></tfoot>
         </table>
       </div>
     </section>
@@ -472,6 +557,17 @@
             <p style="font-size: 0.84rem; color: var(--text-secondary);">
               Select your name from the dropdown to review task metrics and download your assigned student leads CSV for immediate outreach.
             </p>
+            <div style="display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap;">
+              <a href="attachments/All in one Master.xlsx" download="All in one Master.xlsx" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.74rem; color: #a5b4fc; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: 600;">
+                📘 All in one Master.xlsx
+              </a>
+              <a href="attachments/Class_Consumption_Leads_Report.xlsx" download="Class_Consumption_Leads_Report.xlsx" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.74rem; color: #fde68a; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: 600;">
+                📙 Class_Consumption_Leads_Report.xlsx
+              </a>
+              <a href="attachments/Unfixed_Teacher_Leads_Report.xlsx" download="Unfixed_Teacher_Leads_Report.xlsx" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.74rem; color: #6ee7b7; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: 600;">
+                📗 Unfixed_Teacher_Leads_Report.xlsx
+              </a>
+            </div>
           </div>
 
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
@@ -588,9 +684,10 @@
     </footer>
   </div>
 
-  <script src="dashboard.js?v=20260926_131012"></script>
+  <script src="dashboard.js?v=20260926_141013"></script>
 </body>
 </html>
+
 
 
 
