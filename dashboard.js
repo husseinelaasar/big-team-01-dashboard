@@ -70,39 +70,39 @@ const NEW_TARGETS = {
 
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS30": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
-  "EGSS01": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
-  "EGSS13": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
-  "EGSS10": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
-  "EGSS05": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
+  "EGSS30": { gross: 13240, refund: 0, cash: 13240, target: 15980, contracts: 15, officialAch: 82.9 },
+  "EGSS13": { gross: 30092, refund: 1750, cash: 28342, target: 47060, contracts: 30, officialAch: 60.2 },
+  "EGSS05": { gross: 46634, refund: 2068, cash: 44566, target: 76590, contracts: 55, officialAch: 58.2 },
+  "EGSS10": { gross: 14220, refund: 0, cash: 14220, target: 35210, contracts: 14, officialAch: 40.4 },
+  "EGSS01": { gross: 20152, refund: 1660, cash: 18492, target: 50760, contracts: 21, officialAch: 36.4 },
 };
 
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-negma", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGLP-yasmin01", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-titooooo", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGLP-saraht", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGLP-mohamed06", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mohamedha", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGLP-shahdmahmoud", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrhmanshehata", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-alihesham01", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 3832, refund: 0, target: 8040, contracts: 6, upgradeM2: 1, normalRenewals: 2, upgradeBase: 47, poolRenewals: 3 },
+  { name: "EGSS-ashraqatal", team: "EGSS01", cash: -380, refund: 1660, target: 10880, contracts: 1, upgradeM2: 1, normalRenewals: 0, upgradeBase: 41, poolRenewals: 1 },
+  { name: "EGSS-negma", team: "EGSS01", cash: 4160, refund: 0, target: 7790, contracts: 2, upgradeM2: 1, normalRenewals: 1, upgradeBase: 45, poolRenewals: 2 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 4080, refund: 0, target: 8050, contracts: 4, upgradeM2: 0, normalRenewals: 2, upgradeBase: 22, poolRenewals: 2 },
+  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 6800, refund: 0, target: 10420, contracts: 8, upgradeM2: 3, normalRenewals: 6, upgradeBase: 18, poolRenewals: 9 },
+  { name: "EGLP-yasmin01", team: "EGSS01", cash: 0, refund: 0, target: 5580, contracts: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 9091, refund: 0, target: 9710, contracts: 11, upgradeM2: 2, normalRenewals: 9, upgradeBase: 25, poolRenewals: 11 },
+  { name: "EGSS-titooooo", team: "EGSS05", cash: 5640, refund: 0, target: 8920, contracts: 6, upgradeM2: 0, normalRenewals: 6, upgradeBase: 24, poolRenewals: 6 },
+  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 5240, refund: 0, target: 9550, contracts: 6, upgradeM2: 0, normalRenewals: 6, upgradeBase: 20, poolRenewals: 6 },
+  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 7342, refund: 0, target: 10360, contracts: 9, upgradeM2: 0, normalRenewals: 12, upgradeBase: 14, poolRenewals: 12 },
+  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 7507, refund: 2068, target: 10170, contracts: 11, upgradeM2: 4, normalRenewals: 7, upgradeBase: 29, poolRenewals: 11 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 5806, refund: 0, target: 10190, contracts: 8, upgradeM2: 1, normalRenewals: 7, upgradeBase: 21, poolRenewals: 8 },
+  { name: "EGLP-saraht", team: "EGSS05", cash: 1020, refund: 0, target: 7340, contracts: 1, upgradeM2: 0, normalRenewals: 1, upgradeBase: 31, poolRenewals: 1 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 2920, refund: 0, target: 10350, contracts: 3, upgradeM2: 1, normalRenewals: 2, upgradeBase: 35, poolRenewals: 3 },
+  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 6090, refund: 0, target: 11640, contracts: 6, upgradeM2: 1, normalRenewals: 5, upgradeBase: 41, poolRenewals: 6 },
+  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 7110, refund: 0, target: 16450, contracts: 7, upgradeM2: 0, normalRenewals: 7, upgradeBase: 36, poolRenewals: 7 },
+  { name: "EGLP-mohamed06", team: "EGSS10", cash: 1020, refund: 0, target: 7120, contracts: 1, upgradeM2: 0, normalRenewals: 1, upgradeBase: 31, poolRenewals: 1 },
+  { name: "EGSS-mohamedha", team: "EGSS13", cash: 10940, refund: 0, target: 9300, contracts: 11, upgradeM2: 4, normalRenewals: 7, upgradeBase: 22, poolRenewals: 11 },
+  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 8700, refund: 0, target: 12240, contracts: 6, upgradeM2: 2, normalRenewals: 4, upgradeBase: 24, poolRenewals: 6 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 3662, refund: 1750, target: 10560, contracts: 8, upgradeM2: 3, normalRenewals: 2, upgradeBase: 72, poolRenewals: 5 },
+  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 4160, refund: 0, target: 8640, contracts: 4, upgradeM2: 1, normalRenewals: 3, upgradeBase: 8, poolRenewals: 4 },
+  { name: "EGLP-shahdmahmoud", team: "EGSS13", cash: 880, refund: 0, target: 6320, contracts: 1, upgradeM2: 1, normalRenewals: 0, upgradeBase: 41, poolRenewals: 1 },
+  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 8100, refund: 0, target: 8480, contracts: 10, upgradeM2: 1, normalRenewals: 9, upgradeBase: 23, poolRenewals: 10 },
+  { name: "EGSS-abdelrhmanshehata", team: "EGSS30", cash: 3320, refund: 0, target: 3690, contracts: 3, upgradeM2: 1, normalRenewals: 2, upgradeBase: 6, poolRenewals: 3 },
+  { name: "EGSS-alihesham01", team: "EGSS30", cash: 1820, refund: 0, target: 3810, contracts: 2, upgradeM2: 0, normalRenewals: 2, upgradeBase: 5, poolRenewals: 2 },
 ];
 
 // SOP Process Compliance Data (51Talk Data Center)
@@ -128,31 +128,31 @@ const SOP_ROUNDS = [
 
 // Verified POOL22 Column G (Upgrade M2 Effective Coverage %)
 const POOL22_M2_COVERAGE = {
-  "EGSS-nohayoussry": 0,
-  "EGSS-ashraqatal": 0,
-  "EGSS-negma": 0,
-  "EGSS-juliamonir01": 0,
-  "EGSS-mahmoud04": 0,
+  "EGSS-nohayoussry": 55.3,
+  "EGSS-ashraqatal": 39,
+  "EGSS-negma": 73.3,
+  "EGSS-juliamonir01": 54.5,
+  "EGSS-mahmoud04": 83.3,
   "EGLP-yasmin01": 0,
-  "EGSS-abdelrahmannasef": 0,
-  "EGSS-titooooo": 0,
-  "EGSS-omarmoneb": 0,
-  "EGSS-khaledgonam": 0,
-  "EGSS-ibrahimismaiel": 0,
-  "EGSS-samira01": 0,
-  "EGLP-saraht": 0,
-  "EGSS-ehabzaky01": 0,
-  "EGSS-mahmoudkhamis": 0,
-  "EGSS-ahmedshoukry": 0,
-  "EGLP-mohamed06": 0,
-  "EGSS-mohamedha": 0,
-  "EGSS-amrsafwat": 0,
-  "EGSS-hayamhassan": 0,
-  "EGSS-marwaahmed": 0,
-  "EGLP-shahdmahmoud": 0,
-  "EGSS-adhmgadallah": 0,
-  "EGSS-abdelrhmanshehata": 0,
-  "EGSS-alihesham01": 0,
+  "EGSS-abdelrahmannasef": 60,
+  "EGSS-titooooo": 70.8,
+  "EGSS-omarmoneb": 65,
+  "EGSS-khaledgonam": 78.6,
+  "EGSS-ibrahimismaiel": 79.3,
+  "EGSS-samira01": 85.7,
+  "EGLP-saraht": 64.5,
+  "EGSS-ehabzaky01": 60,
+  "EGSS-mahmoudkhamis": 46.3,
+  "EGSS-ahmedshoukry": 63.9,
+  "EGLP-mohamed06": 67.7,
+  "EGSS-mohamedha": 40.9,
+  "EGSS-amrsafwat": 75,
+  "EGSS-hayamhassan": 79.2,
+  "EGSS-marwaahmed": 87.5,
+  "EGLP-shahdmahmoud": 80.5,
+  "EGSS-adhmgadallah": 73.9,
+  "EGSS-abdelrhmanshehata": 83.3,
+  "EGSS-alihesham01": 100,
 };
 
 // Official Cumulative Expected Pacing Benchmark Curve (Day 1 to 30)
@@ -392,7 +392,7 @@ function renderTeamBars(model) {
   }
 
   // Key milestones from the official 30-day table
-  const rulerMilestones = [
+  const baseMilestones = [
     { day: 1, pct: 5 },
     { day: 5, pct: 14 },
     { day: 10, pct: 29 },
@@ -401,13 +401,24 @@ function renderTeamBars(model) {
     { day: 16, pct: 46 },
     { day: 19, pct: 51 },
     { day: 20, pct: 54 },
-    { day: 21, pct: 57, isToday: true },
+    { day: 21, pct: 57 },
     { day: 25, pct: 65 },
+    { day: 26, pct: 68 },
     { day: 27, pct: 80 },
     { day: 28, pct: 87 },
     { day: 29, pct: 94 },
     { day: 30, pct: 103, isGoal: true }
   ];
+
+  // Dynamically assign isToday to the current active day
+  const rulerMilestones = baseMilestones.map(m => ({
+    ...m,
+    isToday: m.day === daysPassed
+  }));
+  if (!rulerMilestones.some(m => m.day === daysPassed)) {
+    rulerMilestones.push({ day: daysPassed, pct: pacePct, isToday: true });
+    rulerMilestones.sort((a, b) => a.day - b.day);
+  }
 
   function getScalePos(pct) {
     return Math.min(100, Math.max(0, (pct / MAX_SCALE) * 100));
@@ -3633,6 +3644,8 @@ function downloadSelectedRepLeads() {
   link.click();
   document.body.removeChild(link);
 }
+
+
 
 
 
