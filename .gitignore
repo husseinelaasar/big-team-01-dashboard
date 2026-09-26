@@ -21,3 +21,7 @@ Dashboard_Input_Files/
 *.xlsx
 *.xls
 
+
+# Allow official dashboard attachments
+!attachments/
+!attachments/*.xlsx

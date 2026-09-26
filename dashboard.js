@@ -1049,7 +1049,7 @@ function renderBreakdownTab(model) {
   if (elBase) elBase.textContent = `${model.summary.totalUpgradeBase} leads`;
   if (elRate) elRate.textContent = `${fmtPct(model.summary.upgradeRate)} (${model.summary.totalUpgradeM2} / ${model.summary.totalUpgradeBase})`;
 
-  // Top Upgrade Producers
+  // Top Upgrade Producers Leaderboard Card
   const leadersContainer = document.getElementById('upgradeLeadersList');
   if (leadersContainer) {
     const topUpgraders = [...model.individuals]
@@ -1064,54 +1064,72 @@ function renderBreakdownTab(model) {
           <span style="color: ${r.teamColor}; font-size: 0.75rem; margin-left: 6px;">(${r.team})</span>
         </div>
         <div style="font-family: var(--font-mono);">
-          <span style="color: #10b981; font-weight: 800; font-size: 1rem;">${fmtPct(r.upgradeRate)} M2 Conv. %</span>
-          <span style="color: var(--text-muted); font-size: 0.8rem; margin-left: 4px;">(${r.upgradeM2}/${r.upgradeBase})</span>
+          <span style="color: #10b981; font-weight: 800; font-size: 0.95rem;">${fmtPct(r.upgradeRate)} M2 Conv. %</span>
+          <span style="color: var(--text-muted); font-size: 0.78rem; margin-left: 4px;">(${r.upgradeM2}/${r.upgradeBase})</span>
         </div>
       </div>
     `).join('');
   }
 
-  // Detailed Table
-  const tbody = document.getElementById('upgradeDetailTableBody');
+  // Small Teams Upgrade M2 Comparison Matrix (Non-Redundant Team Level)
+  const tbody = document.getElementById('upgradeTeamTableBody') || document.getElementById('upgradeDetailTableBody');
   if (!tbody) return;
   tbody.innerHTML = '';
 
-  const sorted = [...model.individuals].sort((a, b) => b.upgradeRate - a.upgradeRate || b.coverRate - a.coverRate);
+  const teamList = Object.values(model.teams).sort((a, b) => {
+    const aBase = a.members.reduce((sum, r) => sum + (r.upgradeBase || 0), 0);
+    const aUp = a.members.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
+    const aRate = aBase > 0 ? (aUp / aBase) : 0;
+    const bBase = b.members.reduce((sum, r) => sum + (r.upgradeBase || 0), 0);
+    const bUp = b.members.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
+    const bRate = bBase > 0 ? (bUp / bBase) : 0;
+    return bRate - aRate;
+  });
 
-  sorted.forEach((r, idx) => {
-    const share = model.summary.totalUpgradeM2 > 0 ? ((r.upgradeM2 / model.summary.totalUpgradeM2) * 100) : 0;
+  teamList.forEach((t, idx) => {
+    const tBase = t.members.reduce((sum, r) => sum + (r.upgradeBase || 0), 0);
+    const tUp = t.members.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
+    const tNorm = t.members.reduce((sum, r) => sum + (r.normalRenewals || 0), 0);
+    const tContracts = t.members.reduce((sum, r) => sum + (r.contracts || 0), 0);
+    const tRate = tBase > 0 ? ((tUp / tBase) * 100) : 0;
+    const tTarget20 = Math.ceil(tBase * 0.20);
+    const tNeeded = Math.max(0, tTarget20 - tUp);
+    const tCover = t.members.length > 0 ? (t.members.reduce((sum, r) => sum + (r.coverRate || 0), 0) / t.members.length) : 0;
+    const tl = t.members.find(m => m.isTL)?.name || t.leader || 'Team Leader';
+    const statusClr = tRate >= 5.0 ? '#10b981' : (tRate >= 3.0 ? '#f59e0b' : '#f43f5e');
+    const statusTxt = tRate >= 5.0 ? 'Ahead' : (tRate >= 3.0 ? 'On Track' : 'Gap');
+
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 700;">#${idx + 1}</td>
-      <td><span style="color: ${r.teamColor}; font-weight: 600;">${r.team}</span></td>
-      <td><strong>${r.name}</strong></td>
-      <td style="font-family: var(--font-mono); font-weight: 800; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'};">${r.upgradeM2}</td>
-      <td style="font-family: var(--font-mono);">${r.upgradeBase}</td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${r.upgrade20Target} <span style="font-size: 0.75rem; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">(${r.upgrade20Needed} needed)</span></td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa;">${fmtPct(r.upgradeRate)}</td>
-      <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;" title="51Talk POOL22 Touchpoint Frequency: ${(r.coverRate / 100).toFixed(1)} calls/student (100% Unique Coverage in POOL_Detail23)">${fmtPct(r.coverRate)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(r.coverRate / 100).toFixed(1)}x)</span></td>
-      <td style="font-family: var(--font-mono); font-weight: 600; color: #fff;">${r.contracts}</td>
-      <td style="font-family: var(--font-mono); color: #38bdf8;">${r.normalRenewals}</td>
-      <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(share)}</td>
+      <td><span style="color: ${t.color}; font-weight: 700;">${t.label || t.key}</span></td>
+      <td><strong style="color: #fff;">👑 ${tl}</strong></td>
+      <td style="font-family: var(--font-mono); color: #fff;">${tBase}</td>
+      <td style="font-family: var(--font-mono); font-weight: 800; color: #10b981;">${tUp}</td>
+      <td style="font-family: var(--font-mono); color: #38bdf8;">${tNorm}</td>
+      <td style="font-family: var(--font-mono); font-weight: 600; color: #fff;">${tContracts}</td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa;">${fmtPct(tRate)}</td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${tTarget20} <span style="font-size: 0.75rem; color: ${tNeeded > 0 ? '#f43f5e' : '#10b981'};">(${tNeeded} needed)</span></td>
+      <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;">${fmtPct(tCover)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(tCover / 100).toFixed(1)}x)</span></td>
+      <td><span class="status-badge" style="background: ${statusClr}20; color: ${statusClr}; border: 1px solid ${statusClr}40;">${statusTxt}</span></td>
     `;
     tbody.appendChild(tr);
   });
 
-  const tfoot = document.getElementById('upgradeDetailTableFoot');
+  const tfoot = document.getElementById('upgradeTeamTableFoot') || document.getElementById('upgradeDetailTableFoot');
   if (tfoot) {
     const s = model.summary;
     const avgCover = model.individuals.length > 0 ? (model.individuals.reduce((sum, r) => sum + r.coverRate, 0) / model.individuals.length) : 0;
     tfoot.innerHTML = `
       <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
-        <td colspan="3" style="color: #fff; text-align: center; font-size: 0.9rem;">TOTAL / SECTOR AVERAGE</td>
+        <td colspan="2" style="color: #fff; text-align: left; font-size: 0.9rem;">TOTAL / SECTOR AVERAGE</td>
+        <td style="font-family: var(--font-mono); color: #fff;">${s.totalUpgradeBase}</td>
         <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
-        <td style="font-family: var(--font-mono);">${s.totalUpgradeBase}</td>
-        <td style="font-family: var(--font-mono); color: #c084fc;">${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)</td>
-        <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(s.upgradeRate)}</td>
-        <td style="font-family: var(--font-mono); color: #facc15; text-align: center;" title="Sector Touchpoint Frequency: ${(avgCover / 100).toFixed(1)} calls/student (100% Unique Coverage)">${fmtPct(avgCover)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(avgCover / 100).toFixed(1)}x)</span></td>
-        <td style="font-family: var(--font-mono); color: #fff;">${s.totalContracts}</td>
         <td style="font-family: var(--font-mono); color: #38bdf8;">${s.totalNormalRenewals}</td>
-        <td style="font-family: var(--font-mono); color: #a78bfa;">100.0%</td>
+        <td style="font-family: var(--font-mono); color: #fff;">${s.totalContracts}</td>
+        <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(s.upgradeRate)}</td>
+        <td style="font-family: var(--font-mono); color: #c084fc;">${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)</td>
+        <td style="font-family: var(--font-mono); color: #facc15; text-align: center;" title="Sector Touchpoint Frequency: ${(avgCover / 100).toFixed(1)} calls/student (100% Unique Coverage)">${fmtPct(avgCover)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(avgCover / 100).toFixed(1)}x)</span></td>
+        <td><span class="status-badge" style="background: #6366f120; color: #818cf8;">Sector Total</span></td>
       </tr>
     `;
   }
@@ -3008,6 +3026,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -3185,24 +3205,37 @@ function renderOperationsTab() {
       </table>
     `;
   } else if (currentOperationsModule === 3) {
-    // Module 3: Class Consumption & Zero-Class
-    const data = filterByTeam(MASTER_OPERATIONS_DATA.consumption);
+    // Module 3: Class Consumption & Zero-Class (Official 16-Column Pure Schema)
+    const data = filterByTeam(MASTER_OPERATIONS_DATA.consumption || []);
     let rowsHtml = data.map((r, idx) => {
       const zeroPct = r.total > 0 ? ((r.c0 / r.total) * 100).toFixed(1) : '0.0';
-      const zeroClr = parseFloat(zeroPct) > 25 ? '#f43f5e' : parseFloat(zeroPct) > 15 ? '#f59e0b' : '#10b981';
+      const c12_14 = r.c12_14 || 0;
+      const c15 = r.c15 || 0;
+      const p4 = r.total > 0 ? (((r.c4_7 + r.c8_11 + c12_14 + c15) / r.total) * 100).toFixed(1) : '0.0';
+      const p8 = r.total > 0 ? (((r.c8_11 + c12_14 + c15) / r.total) * 100).toFixed(1) : '0.0';
+      const p12 = r.total > 0 ? (((c12_14 + c15) / r.total) * 100).toFixed(1) : '0.0';
+      const p15 = r.total > 0 ? ((c15 / r.total) * 100).toFixed(1) : '0.0';
+      const zeroClr = parseFloat(zeroPct) > 20 ? '#f43f5e' : parseFloat(zeroPct) > 10 ? '#f59e0b' : '#10b981';
+      const avgClasses = r.avg_classes ? r.avg_classes.toFixed(1) : (r.total > 0 ? ((r.total_classes || 0) / r.total).toFixed(1) : '0.0');
 
       return `
         <tr>
           <td style="font-family: var(--font-mono); color: var(--text-muted);">${idx + 1}</td>
           <td style="font-weight: 600; color: #fff;">${r.name}</td>
           <td><span class="team-badge" style="font-size: 0.72rem;">${r.team}</span></td>
-          <td style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${r.total}</td>
+          <td style="font-family: var(--font-mono); font-weight: 800; color: #fff;">${r.total}</td>
+          <td style="font-family: var(--font-mono); color: #38bdf8; font-weight: 600;">${avgClasses}</td>
           <td style="font-family: var(--font-mono); font-weight: 800; color: #f43f5e; text-align: center; background: rgba(244, 63, 94, 0.08);">${r.c0}</td>
-          <td style="font-family: var(--font-mono); color: ${zeroClr}; font-weight: 700;">${zeroPct}%</td>
           <td style="font-family: var(--font-mono);">${r.c1_3}</td>
           <td style="font-family: var(--font-mono);">${r.c4_7}</td>
           <td style="font-family: var(--font-mono);">${r.c8_11}</td>
-          <td style="font-family: var(--font-mono); color: #34d399;">${r.c12}</td>
+          <td style="font-family: var(--font-mono);">${c12_14}</td>
+          <td style="font-family: var(--font-mono); font-weight: 700; color: #10b981;">${c15}</td>
+          <td style="font-family: var(--font-mono); color: ${zeroClr}; font-weight: 700;">${zeroPct}%</td>
+          <td style="font-family: var(--font-mono);">${p4}%</td>
+          <td style="font-family: var(--font-mono); font-weight: 700; color: #38bdf8;">${p8}%</td>
+          <td style="font-family: var(--font-mono);">${p12}%</td>
+          <td style="font-family: var(--font-mono); font-weight: 700; color: #10b981;">${p15}%</td>
         </tr>
       `;
     }).join('');
@@ -3212,8 +3245,15 @@ function renderOperationsTab() {
     const sumC1_3 = data.reduce((s, r) => s + r.c1_3, 0);
     const sumC4_7 = data.reduce((s, r) => s + r.c4_7, 0);
     const sumC8_11 = data.reduce((s, r) => s + r.c8_11, 0);
-    const sumC12 = data.reduce((s, r) => s + r.c12, 0);
+    const sumC12_14 = data.reduce((s, r) => s + (r.c12_14 || 0), 0);
+    const sumC15 = data.reduce((s, r) => s + (r.c15 || 0), 0);
+    const sumTotalClasses = data.reduce((s, r) => s + (r.total_classes || 0), 0);
+    const avgSecClasses = sumTot > 0 ? (sumTotalClasses / sumTot).toFixed(1) : '0.0';
     const overallZeroPct = sumTot > 0 ? ((sumC0 / sumTot) * 100).toFixed(1) + '%' : '0.0%';
+    const overallP4 = sumTot > 0 ? (((sumC4_7 + sumC8_11 + sumC12_14 + sumC15) / sumTot) * 100).toFixed(1) + '%' : '0.0%';
+    const overallP8 = sumTot > 0 ? (((sumC8_11 + sumC12_14 + sumC15) / sumTot) * 100).toFixed(1) + '%' : '0.0%';
+    const overallP12 = sumTot > 0 ? (((sumC12_14 + sumC15) / sumTot) * 100).toFixed(1) + '%' : '0.0%';
+    const overallP15 = sumTot > 0 ? ((sumC15 / sumTot) * 100).toFixed(1) + '%' : '0.0%';
 
     container.innerHTML = `
       <table class="data-table">
@@ -3223,12 +3263,18 @@ function renderOperationsTab() {
             <th>SS Representative</th>
             <th>Team</th>
             <th>Total Students</th>
-            <th style="color: #f43f5e; text-align: center;">0 Classes (Alert)</th>
-            <th style="color: #f59e0b;">Zero Class %</th>
+            <th>Avg Classes</th>
+            <th style="color: #f43f5e; text-align: center;">0 Classes</th>
             <th>1–3 Classes</th>
             <th>4–7 Classes</th>
             <th>8–11 Classes</th>
-            <th style="color: #34d399;">12+ Classes</th>
+            <th>12–14 Classes</th>
+            <th style="color: #10b981;">&ge; 15 Classes</th>
+            <th style="color: #f59e0b;">0 %</th>
+            <th>&ge; 4 %</th>
+            <th style="color: #38bdf8;">&ge; 8 %</th>
+            <th>&ge; 12 %</th>
+            <th style="color: #10b981;">&ge; 15 %</th>
           </tr>
         </thead>
         <tbody>${rowsHtml}</tbody>
@@ -3236,12 +3282,18 @@ function renderOperationsTab() {
           <tr style="background: rgba(249, 115, 22, 0.12); font-weight: 800; border-top: 2px solid #f97316;">
             <td colspan="3" style="color: #fff; text-align: left;">TOTAL / SECTOR AVERAGE</td>
             <td style="font-family: var(--font-mono); color: #fff;">${sumTot}</td>
+            <td style="font-family: var(--font-mono); color: #38bdf8;">${avgSecClasses}</td>
             <td style="font-family: var(--font-mono); color: #f43f5e; text-align: center;">${sumC0}</td>
-            <td style="font-family: var(--font-mono); color: #f59e0b;">${overallZeroPct}</td>
             <td style="font-family: var(--font-mono);">${sumC1_3}</td>
             <td style="font-family: var(--font-mono);">${sumC4_7}</td>
             <td style="font-family: var(--font-mono);">${sumC8_11}</td>
-            <td style="font-family: var(--font-mono); color: #34d399;">${sumC12}</td>
+            <td style="font-family: var(--font-mono);">${sumC12_14}</td>
+            <td style="font-family: var(--font-mono); color: #10b981;">${sumC15}</td>
+            <td style="font-family: var(--font-mono); color: #f59e0b;">${overallZeroPct}</td>
+            <td style="font-family: var(--font-mono);">${overallP4}</td>
+            <td style="font-family: var(--font-mono); color: #38bdf8;">${overallP8}</td>
+            <td style="font-family: var(--font-mono);">${overallP12}</td>
+            <td style="font-family: var(--font-mono); color: #10b981;">${overallP15}</td>
           </tr>
         </tfoot>
       </table>
@@ -3581,6 +3633,7 @@ function downloadSelectedRepLeads() {
   link.click();
   document.body.removeChild(link);
 }
+
 
 
 
