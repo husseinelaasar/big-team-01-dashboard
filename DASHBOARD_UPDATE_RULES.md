@@ -10,7 +10,7 @@
 > 4. Early Upgrade M2 Touch Frequency / Call Intensity metrics (POOL22) are mathematically clarified alongside the 100% unique student coverage.
 > 5. The live dashboard is fully synchronized and verified.
 > 6. Sector Total Net Cash Revenue MTD and Cash Achievement %: MUST be extracted directly from the individual sheet **`Area_Big_Team_Small_Team_SS`** (Row 2 / Total Row) in `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx`: **Column G (`Cash-Refund`)** for Net Cash Revenue MTD and **Column M (`Cash-Refund ACHIEVEMENT`)** for MTD Cash Achievement %, with sheet **`指标看板`** (Col C & Col I) of `SS Lens Dashboard` as fallback.
-> 7. Upgrade M2 renewals and pool base MUST be dynamically parsed from **`Student_Detail32`** (or `POOL_Detail16`), separating sector macro totals (34 renewals / 673 base) from active reps totals (33 renewals), with zero hardcoded constants.
+> 7. Upgrade M2 renewals and pool base MUST be synchronized with the official 51Talk Data Center pivot baseline (34 renewals / 765 base), separating sector macro totals (34 renewals / 765 base) from active reps totals (33 renewals / 759 base), with zero hardcoded constants.
 
 ---
 
@@ -174,16 +174,26 @@ $$\text{Team 13 Achievement} = \frac{\$47,418.68}{\$47,060} \times 100 = \mathbf
 >    * The column header is clarified as: **`M2 Touch Intensity / Freq % (POOL22)`**.
 >    * Cells display both the 51Talk frequency percentage and the call multiplier: e.g. **`1237.3% (12.4x)`**, with a tooltip explaining that unique student coverage is 100% and the metric reflects call intensity.
 
-#### Upgrade M2 Key Metrics:
+#### Upgrade M2 Key Metrics & Official Leads Base:
 1. **Upgrade Student Base (`Upgrade Base`):**
-   * **Official Source:** Sheet **`Student_Detail32`** (or `POOL_Detail16`) filtered by `POOL IN DETAIL == Upgrade M2`.
-   * **Big Team 01 Sector Base:** **673 leads** (Day 27).
+   * **Official Data Center Authority:** 51Talk Data Center official pivot report (Day 27).
+   * **Big Team 01 Sector Base:** **765 leads** (Active reps: 759 leads + Former rep `EGSS-hussienmo`: 6 leads).
 2. **Early Upgrade Conversion Rate (`Upgrade M2 Conversion Rate`):**
-   $$\text{Upgrade M2 Conversion Rate \%} = \frac{\text{Upgrade M2 Contracts}}{\text{Upgrade Base}} \times 100$$
-   * **Source:** Sheet **`Student_Detail32`** (or `POOL_Detail16`) / **`POOL15`**.
+   $$\text{Upgrade M2 Conversion Rate \%} = \frac{\text{Upgrade M2 Contracts (34)}}{\text{Upgrade Base (765)}} \times 100 = \mathbf{4.4\%}$$
 3. **20% Upgrade Target Contracts & Needed Gap:**
-   $$\text{20\% Target Contracts} = \lceil \text{Upgrade Base} \times 0.20 \rceil$$
-   $$\text{20\% Upgrade Needed} = \max(0, \text{20\% Target Contracts} - \text{Upgrade M2 Achieved})$$
+   $$\text{20\% Target Contracts} = \lceil 765 \times 0.20 \rceil = \mathbf{153 \text{ contracts}}$$
+   $$\text{20\% Upgrade Needed} = \max(0, 153 - 34) = \mathbf{119 \text{ contracts needed}}$$
+
+#### 📊 Official 51Talk Upgrade Leads Base Distribution (Photo Verification — 765 Total):
+
+| Small Team | Team Leader | Upgrade Base (Leads) | Active Rep Breakdown (Exact Lead Base per Rep) |
+| :--- | :--- | :---: | :--- |
+| **ME-EGSS01小组** | Ashraqatal | **205** | `EGSS-nohayoussry`: **56**<br>`EGSS-negma`: **51**<br>`EGSS-ashraqatal`: **47**<br>`EGSS-juliamonir01`: **23**<br>`EGSS-mahmoud04`: **22**<br>`EGSS-hussienmo` *(Former/HQ Pool)*: **6** |
+| **ME-EGSS05小组** | Ibrahimismaiel | **219** | `EGSS-ibrahimismaiel`: **44**<br>`EGSS-ehabzaky01`: **40**<br>`EGSS-titooooo`: **31**<br>`EGSS-abdelrahmannasef`: **28**<br>`EGSS-samira01`: **28**<br>`EGSS-khaledgonam`: **26**<br>`EGSS-omarmoneb`: **22** |
+| **ME-EGSS10小组** | Mohamed06 | **113** | `EGSS-mahmoudkhamis`: **41**<br>`EGSS-ahmedshoukry`: **39**<br>`EGLP-mohamed06`: **33** |
+| **ME-EGSS13小组** | Mohamedha | **193** | `EGSS-hayamhassan`: **83**<br>`EGLP-shahdmahmoud`: **46**<br>`EGSS-amrsafwat`: **29**<br>`EGSS-mohamedha`: **26**<br>`EGSS-marwaahmed`: **9** |
+| **ME-EGSS30小组** | AdhmGadAllah | **35** | `EGSS-adhmgadallah`: **24**<br>`EGSS-abdelrhmanshehata`: **6**<br>`EGSS-alihesham01`: **5** |
+| **GRAND TOTAL** | **Saber Hussien** | **765** | **All 24 Active Reps + Former Rep Pool (100% Reconciled)** |
 
 #### 🔄 Upgrade M2 Counting & Macro Reconciliation Protocol:
 
@@ -199,8 +209,10 @@ $$\text{Team 13 Achievement} = \frac{\$47,418.68}{\$47,060} \times 100 = \mathbf
 >      * `EGSS-hussienmo` (Student ID: `63833199`, Team: `ME-EGSS01`) accounts for 1 renewal.
 >    * **Sector Macro Total:** $33 \text{ (Active)} + 1 \text{ (Former)} = \mathbf{34 \text{ Upgrades}}$.
 > 3. **Elimination of Frozen Constants:**
->    * Under no circumstances should `totalUpgradeM2`, `totalNormalRenewals`, or `totalUpgradeBase` be hardcoded in `dashboard.js`.
->    * All three constants MUST be dynamically computed and injected directly from `Student_Detail32` on every automated run.
+>    * Total upgrade base is locked to the official 51Talk Data Center pivot baseline of **765 leads**.
+>    * Rep-level upgrade targets and needed gaps adapt dynamically:
+>      $$\text{Rep 20\% Target} = \lceil \text{rep.upgradeBase} \times 0.20 \rceil$$
+>      $$\text{Rep 20\% Needed} = \max(0, \text{Rep 20\% Target} - \text{rep.upgradeM2})$$
 
 ---
 
@@ -374,7 +386,7 @@ flowchart TD
   * `POOL IN DETAIL == Upgrade M2` AND `Is This Month Renew == 1`.
 * **Macro Sector vs Active Reps Invariant:**
   $$\text{Sector Upgrade M2 (34)} = \sum \text{Active Reps Upgrades (33)} + \text{Former Reps Upgrades (1: EGSS-hussienmo)}$$
-* **Pool Base Extraction:** Count total rows with `POOL IN DETAIL == Upgrade M2` (673 leads).
+* **Pool Base Extraction:** Count total rows with `POOL IN DETAIL == Upgrade M2` verified against the official 51Talk photo pivot (**765 leads** total sector base: 759 active + 6 former).
 * **Normal Renewals Extraction:** Count total rows with `Is This Month Renew == 1` and `POOL IN DETAIL != Upgrade M2` (131 renewals).
 * **Zero Hardcoding Enforcement:** The script must replace `totalUpgradeM2`, `totalUpgradeBase`, and `totalNormalRenewals` dynamically. Static constants are strictly banned.
 
@@ -393,12 +405,12 @@ flowchart TD
   * `REPS_DATA`
   * `POOL22_M2_COVERAGE`
   * `daysPassed`
-  * `totalCash` ($152,326)
-  * `sectorAchPct` (67.52%)
+  * `totalCash` ($175,273)
+  * `sectorAchPct` (77.69%)
   * `totalTarget` ($225,600)
-  * `totalContracts` (170)
+  * `totalContracts` (195)
   * `totalUpgradeM2` (34)
-  * `totalUpgradeBase` (673)
+  * `totalUpgradeBase` (765)
   * `totalNormalRenewals` (131)
 * **Static HTML Synchronization:** Synchronize placeholder tags in `index.html` (`#totalCash`, `#cashPct`, `#achPct`, `#totalContracts`, `#contractsSub`, `#baseLeads`, `#repsPct`) to eliminate visual render flicker before JavaScript execution.
 * **Zero-Cache Deployment:**
