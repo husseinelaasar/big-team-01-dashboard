@@ -133,6 +133,27 @@ $$\text{Team 30 Net Sales} = \$8,100 + \$3,320 + \$1,820 = \mathbf{\$13,240}$$
 $$\text{Team 30 Achievement} = \frac{\$13,240}{\$15,980} \times 100 = \mathbf{82.9\% \quad (\#1 \text{ Rank})}$$
 *(The -$1,750 refund on Team 30 in 51Talk's sheet belonged to a former employee who is no longer active; therefore, it is NOT charged to Team 30, but absorbed solely into Big Team 01).*
 
+#### Official Day 27 Reconciled Standings (All 5 Small Teams + Sector Total):
+
+| Small Team | Team Leader | Active Members Net Cash | Active Member Refunds | Team Target | Team Net Ach % | Rank & Target Status |
+|:---|:---|:---:|:---:|:---:|:---:|:---:|
+| **ME-EGSS30** | AdhmGadAllah | **$19,147** | **$0** | $15,980 | **119.8%** | **#1** 🥇 (Met $\ge 100\%$) |
+| **ME-EGSS13** | Mohamedha | **$47,419** | **$0** | $47,060 | **100.8%** | **#2** 🥈 (Met $\ge 100\%$) |
+| **ME-EGSS05** | Ibrahimismaiel | **$70,578** | **$0** | $76,590 | **92.2%** | **#3** 🥉 |
+| **ME-EGSS01** | Ashraqatal | **$28,279** | **-$1,660** *(Ashraqat)* | $50,760 | **55.7%** | **#4** |
+| **ME-EGSS10** | Mohamed06 | **$17,296** | **$0** | $35,210 | **49.1%** | **#5** |
+| **BIG TEAM 01** | **Saber Hussien** | **$175,273.49** | **-$9,735.54** *(All Active + Cross/HQ Refunds)* | **$225,600** | **77.7%** | **Sector Total (Col G & Col M)** |
+
+#### Proof of Calculation for Team 13 ($47,419 / 100.8%):
+* Member 1: `EGSS-amrsafwat`: **$12,600** (Refund: $0)
+* Member 2: `EGSS-marwaahmed`: **$11,087** (Refund: $0)
+* Member 3: `EGSS-mohamedha`: **$10,940** (Refund: $0)
+* Member 4: `EGSS-hayamhassan`: **$8,452** (Refund: $0)
+* Member 5: `EGLP-shahdmahmoud`: **$4,340** (Refund: $0)
+$$\text{Team 13 Active Net Sales} = \$12,600 + \$11,087 + \$10,940 + \$8,452 + \$4,340 = \mathbf{\$47,419}$$
+$$\text{Team 13 Achievement} = \frac{\$47,418.68}{\$47,060} \times 100 = \mathbf{100.76\% \approx 100.8\% \quad (\#2 \text{ Rank, Met } \ge 100\%)}$$
+*(In 51Talk's raw export `Area_Big_Team_Small_Team_SS`, row 33 listed a historical -$2,067.84 refund under `EGSS-ibrahimismaiel`. Since Ibrahim Ismaiel is the Team Leader of ME-EGSS05 and not an active member of Team 13, under Rule 4 that deduction is NEVER charged to Team 13. It is absorbed solely into Big Team 01 Sector Total. Team 13 officially achieved 100.8%, unlocking the +0.5% team booster for individual qualifiers Marwa, Mohamedha, and Amr).*
+
 ---
 
 ### 🟡 5. Early Upgrade Conversion & M2 Cover Rate Bug Resolution
@@ -253,9 +274,12 @@ Linear pacing is strictly superseded by the official non-linear cumulative targe
 ---
 
 ### 🌐 8. Production Deployment & Hourly Automated Schedule
-1. **Official Live Production URL:**
-   * `https://husseinelaasar.github.io/big-team-01-dashboard/`
-   * Hosted cloud-native on GitHub Pages. Fully responsive on Desktop, Mobile, and DingTalk in-app browser.
+1. **Official Live Production URL (Shareable Link):**
+   * **Public Shareable Link:** `https://husseinelaasar.github.io/big-team-01-dashboard/`
+   * Hosted cloud-native on GitHub Pages. Accessible worldwide to any team member or executive on Desktop, Mobile, and inside the DingTalk in-app browser without requiring VPN or local access.
+   * **Local File vs Public Link Distinction:**
+     - `file:///D:/Lens/Dashboard/index.html` is a local hard-drive file path that works **only on your physical machine** and cannot be opened by anyone else.
+     - To share updates with the team, local changes must be committed and pushed to GitHub (`git push origin master`). Once pushed, GitHub Pages builds and serves the updated figures globally within 30–60 seconds.
 2. **Automated Hourly Cron Schedule:**
    * **Timing:** Runs every hour at **10 minutes past the hour (XX:10)**.
    * **Windows Task:** `51Talk_Dashboard_Hourly_Update`
