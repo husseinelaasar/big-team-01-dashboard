@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    Big Team 01 Executive Dashboard — Styles v2.0
    Design: Premium dark glassmorphism + micro-animations
    ============================================ */
@@ -163,7 +163,7 @@ body::after {
 .app {
   position: relative;
   z-index: 1;
-  max-width: 1680px;
+  max-width: 98vw;
   width: 100%;
   margin: 0 auto;
   padding: 0 16px 40px;
@@ -678,51 +678,20 @@ body::after {
 
 /* ============ DATA TABLE (ZERO-SCROLL FIT) ============ */
 .table-wrapper {
-  overflow-x: hidden !important;
-  width: 100% !important;
+  overflow-x: hidden;
+  width: 100%;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-glass);
   backdrop-filter: blur(8px);
 }
-
-#individualTableView {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  max-width: 100% !important;
+@media (max-width: 850px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
 }
-
-#individualFullTable {
-  width: 100% !important;
-  max-width: 100% !important;
-  table-layout: fixed !important;
-  border-collapse: collapse !important;
-  font-size: 0.68rem !important;
-}
-
-#individualFullTable th {
-  padding: 5px 2px !important;
-  font-size: 0.63rem !important;
-  line-height: 1.15 !important;
-  white-space: normal !important;
-  word-break: break-word !important;
-  text-align: center !important;
-  vertical-align: middle !important;
-  overflow: hidden;
-}
-
-#individualFullTable td {
-  padding: 4px 2px !important;
-  font-size: 0.68rem !important;
-  line-height: 1.15 !important;
-  white-space: normal !important;
-  word-break: break-word !important;
-  text-align: center !important;
-  vertical-align: middle !important;
-  overflow: hidden;
-}
-
 .data-table {
   width: 100%;
+  table-layout: fixed !important;
   border-collapse: collapse;
   font-size: 0.75rem;
 }
@@ -761,8 +730,7 @@ body::after {
   color: var(--text-primary);
   font-size: 0.72rem !important;
   transition: background 0.2s ease;
-  white-space: normal !important;
-  word-break: break-word !important;
+  white-space: nowrap !important;
 }
 .data-table td > div {
   margin-left: auto;
@@ -1491,3 +1459,18 @@ body::after {
   .op-module-pills { flex-direction: column; }
 }
 
+
+/* Ensure Individual Table Never Forces Horizontal Scroll */
+#individualTableView {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+#individualFullTable {
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+#individualFullTable td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -555,7 +555,9 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
    * `viewToggleTable` is active by default; `#individualCards` is gracefully hidden.
 
 #### B. Zero-Scroll Strict Geometry (No Left-Right Scrolling):
-To completely eliminate the need for horizontal cursor scrolling across the screen:
+> **Mandatory Executive Layout Rule:**  
+> "Ø£Ù† ØªÙƒÙˆÙ† ÙƒØ§ÙØ© Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª ÙˆØ§Ø¶Ø­Ø© Ø¨Ø¹Ø±Ø¶ Ø§Ù„Ø´Ø§Ø´Ø© Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ Ø¨Ø¯ÙˆÙ† Ø£ÙŠ Ø¥Ø¬Ø¨Ø§Ø± Ù„Ù„Ù…Ø³ØªØ®Ø¯Ù… Ø¹Ù„Ù‰ Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„Ù€ Scroll ÙŠÙ…ÙŠÙ† ÙˆÙŠØ³Ø§Ø± Ù„Ø±Ø¤ÙŠØ© Ø§Ù„Ù…Ø­ØªÙˆÙ‰."  
+> All 17 performance and commission columns must fit cleanly and legibly across standard executive monitor and laptop viewports with zero horizontal scrollbar (`overflow-x: hidden !important`).
 1. **Strict Container Containment (`overflow-x: hidden !important`):**
    * `#individualTableView` and `.table-wrapper` strictly enforce `overflow-x: hidden !important` on desktop/laptop viewports.
 2. **Fixed Table Layout (`table-layout: fixed !important`):**
@@ -582,7 +584,7 @@ To completely eliminate the need for horizontal cursor scrolling across the scre
 4. **Content Wrapping Standard (`white-space: normal !important`):**
    * Table cells and headers wrap text naturally with compact line-height (`1.15`) and font size (`0.68rem`), ensuring no column ever forces a horizontal viewport shift.
 5. **App Container Flexibility:**
-   * `.app` container expanded to `max-width: 1680px; width: 100%;` allowing high-resolution screens to utilize full monitor width comfortably.
+   * `.app` container expanded to `max-width: 98vw; width: 100%;` allowing high-resolution screens to utilize full monitor width comfortably.
 
 #### C. Prominent High-Visibility Action & Download Toolbar:
 1. **Dedicated Action Banner (`.table-export-banner`):**
