@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -341,26 +341,60 @@
             <option value="cash-desc">Cash Revenue (High to Low)</option>
             <option value="gap-desc">Target Gap (Highest Gap)</option>
             <option value="upgrade-desc">Upgrade M2 Count</option>
-            <option value="contracts-desc">Contracts Count</option>
-          </select>
-        </div>
-
-        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-          <button id="btnExportExcel" onclick="exportIndividualTableToExcel()" class="view-btn" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;" title="Download Table as Excel Spreadsheet (.xlsx)">
-            <span>ðŸ“Š</span> Export Excel
+            <option value="contracts-desc">Contracts Count</o        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <button id="btnExportExcel" onclick="exportIndividualTableToExcel()" class="view-btn" style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.5); color: #34d399; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; font-size: 0.8rem; cursor: pointer;" title="Download Table as Excel Spreadsheet (.xlsx)">
+            <span>&#128229;</span> Export Excel
           </button>
-          <button id="btnExportImage" onclick="exportIndividualTableToImage()" class="view-btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;" title="Download Table as High-Resolution Image (.png)">
-            <span>ðŸ–¼ï¸</span> Export Image
+          <button id="btnExportImage" onclick="exportIndividualTableToImage()" class="view-btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; font-size: 0.8rem; cursor: pointer;" title="Download Table as High-Resolution Image (.png)">
+            <span>&#128247;</span> Export Image
           </button>
-          <button id="viewToggleCards" class="view-btn active">Cards View</button>
-          <button id="viewToggleTable" class="view-btn">Table View</button>
+          <button id="viewToggleTable" class="view-btn active">Table View</button>
+          <button id="viewToggleCards" class="view-btn">Cards View</button>
         </div>
       </div>
 
-      <div id="individualCards" class="individual-cards-grid"></div>
+      <!-- Prominent High-Visibility Download & Action Banner -->
+      <div class="table-export-banner" style="display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(30, 41, 59, 0.95)); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: 12px; padding: 12px 20px; margin-top: 16px; margin-bottom: 12px; gap: 14px; flex-wrap: wrap; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 1.5rem;">📊</span>
+          <div>
+            <div style="font-size: 0.96rem; font-weight: 800; color: #fff; letter-spacing: -0.01em;">جدول أداء الموظفين والعمولات الكامل (All Sales Specialists Performance & Commission)</div>
+            <div style="font-size: 0.74rem; color: #94a3b8;">عرض مباشر لكافة الموظفين الـ 25 والعمولات وتارجت الـ 20% بدون أي تمرير أفقي (100% Fit Screen)</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <button id="btnExportExcelMain" onclick="exportIndividualTableToExcel()" style="background: linear-gradient(135deg, #059669, #10b981); color: #ffffff; border: 1px solid #34d399; font-weight: 800; font-size: 0.85rem; padding: 9px 18px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35); transition: all 0.2s ease;">
+            <span style="font-size: 1.15rem;">&#128229;</span> تحميل ملف إكسل (Excel .xlsx)
+          </button>
+          <button id="btnExportImageMain" onclick="exportIndividualTableToImage()" style="background: linear-gradient(135deg, #0284c7, #38bdf8); color: #ffffff; border: 1px solid #7dd3fc; font-weight: 800; font-size: 0.85rem; padding: 9px 18px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35); transition: all 0.2s ease;">
+            <span style="font-size: 1.15rem;">&#128247;</span> حفظ كصورة (Export Image)
+          </button>
+        </div>
+      </div>
+
+      <div id="individualCards" class="individual-cards-grid hidden"></div>
       
-      <div id="individualTableView" class="table-wrapper hidden" style="margin-top: 20px;">
+      <div id="individualTableView" class="table-wrapper" style="margin-top: 14px;">
         <table class="data-table" id="individualFullTable">
+          <colgroup>
+            <col style="width: 3.2%;"> <!-- 1. Rank -->
+            <col style="width: 11.5%;"> <!-- 2. Rep Name -->
+            <col style="width: 5.2%;"> <!-- 3. Team -->
+            <col style="width: 7.2%;"> <!-- 4. Cash ($) -->
+            <col style="width: 7.0%;"> <!-- 5. Target ($) -->
+            <col style="width: 5.8%;"> <!-- 6. Ach % -->
+            <col style="width: 5.2%;"> <!-- 7. Pace -->
+            <col style="width: 4.2%;"> <!-- 8. Upg M2 -->
+            <col style="width: 4.0%;"> <!-- 9. Base -->
+            <col style="width: 7.5%;"> <!-- 10. 20% Goal (Needed) -->
+            <col style="width: 5.0%;"> <!-- 11. Conv % -->
+            <col style="width: 8.2%;"> <!-- 12. Exp. Comm ($) -->
+            <col style="width: 7.8%;"> <!-- 13. Next Band ($) -->
+            <col style="width: 7.2%;"> <!-- 14. Gap ($) -->
+            <col style="width: 5.0%;"> <!-- 15. Touch Freq -->
+            <col style="width: 4.2%;"> <!-- 16. Contr. -->
+            <col style="width: 6.8%;"> <!-- 17. Status -->
+          </colgroup>
           <thead>
             <tr>
               <th>#</th>
@@ -372,12 +406,12 @@
               <th style="color: #38bdf8; font-weight: 800;">Pace</th>
               <th>Upg M2</th>
               <th>Base</th>
-              <th style="color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); border-left: 1px solid rgba(192, 132, 252, 0.25); border-right: 1px solid rgba(192, 132, 252, 0.25);">&#127919; 20% Goal (Needed)</th>
+              <th style="color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); border-left: 1px solid rgba(192, 132, 252, 0.25); border-right: 1px solid rgba(192, 132, 252, 0.25);" title="20% Upgrade Goal & Remaining Needed">&#127919; 20% Goal</th>
               <th>Conv %</th>
-              <th style="color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.25);" title="Expected Commission Payout (USD)">&#128176; Exp. Comm ($)</th>
-              <th style="color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.05);" title="Next Band Commission Payout (USD)">&#128640; Next Band ($)</th>
-              <th style="color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.05); border-right: 1px solid rgba(250, 204, 21, 0.25);" title="Remaining Cash Gap to Next Band">&#127919; Gap ($)</th>
-              <th style="color: #facc15; font-weight: 800;" title="Touch Intensity / Frequency">Touch Freq</th>
+              <th style="color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.25);" title="Expected Commission Payout (USD)">&#128176; Exp. Comm</th>
+              <th style="color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.05);" title="Next Band Commission Payout (USD)">&#128640; Next Band</th>
+              <th style="color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.05); border-right: 1px solid rgba(250, 204, 21, 0.25);" title="Remaining Cash Gap to Next Band">&#127919; Gap</th>
+              <th style="color: #facc15; font-weight: 800;" title="Touch Intensity / Frequency">Touch</th>
               <th>Contr.</th>
               <th>Status</th>
             </tr>

@@ -1020,58 +1020,58 @@ function renderIndividualsTab(model) {
   container.innerHTML = '';
   filtered.forEach((r, idx) => {
     const repRank = teamFilter === 'all' ? sectorRankMap.get(r.name) : teamRankMap.get(r.name);
-    const cleanRepName = r.name.replace(/^(EGSS|EOSS|EGLP)-/i, '');
+    const cleanRepName = r.name.replace(/^(ME-|EGSS\d+-|EOSS\d+-|EGLP\d+-)/i, '');
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 0.72rem;">#${repRank}</td>
-      <td style="text-align: left !important; font-weight: 700;"><strong title="${r.name}">${r.isTL ? 'ðŸ‘‘ ' : ''}${cleanRepName}</strong></td>
-      <td><span style="color: ${r.teamColor}; font-weight: 700; font-size: 0.72rem;">${r.team}</span></td>
+      <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 0.70rem;">#${repRank}</td>
+      <td style="text-align: left !important; font-weight: 700;"><strong title="${r.name}">${r.isTL ? '👑 ' : ''}${cleanRepName}</strong></td>
+      <td><span style="color: ${r.teamColor}; font-weight: 700; font-size: 0.68rem;">${r.team}</span></td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${fmt(r.cash)}</td>
-      <td style="font-family: var(--font-mono); color: var(--text-secondary); font-size: 0.7rem;">${fmt(r.target)}</td>
+      <td style="font-family: var(--font-mono); color: var(--text-secondary); font-size: 0.68rem;">${fmt(r.target)}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.statusColor};">${fmtPct(r.achievement)}</td>
       <td style="text-align: center;">
-        <span style="background: ${paceStatusClr}18; color: ${paceStatusClr}; border: 1px solid ${paceStatusClr}35; padding: 1px 5px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.72rem;">
+        <span style="background: ${paceStatusClr}18; color: ${paceStatusClr}; border: 1px solid ${paceStatusClr}35; padding: 1px 4px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.68rem;">
           ${deltaPace >= 0 ? '+' : ''}${deltaPace}%
         </span>
       </td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'};">${r.upgradeM2}</td>
       <td style="font-family: var(--font-mono); color: var(--text-secondary);">${r.upgradeBase}</td>
       <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(192, 132, 252, 0.05); border-left: 1px solid rgba(192, 132, 252, 0.2); border-right: 1px solid rgba(192, 132, 252, 0.2);">
-        <strong style="color: #c084fc; font-size: 0.92rem;">${r.upgrade20Target}</strong>
+        <strong style="color: #c084fc; font-size: 0.84rem;">${r.upgrade20Target}</strong>
         <div style="margin-top: 1px;">
-          <span style="font-size: 0.68rem; font-weight: 800; padding: 1px 4px; border-radius: 3px; background: ${r.upgrade20Needed > 0 ? 'rgba(244, 63, 94, 0.18)' : 'rgba(16, 185, 129, 0.18)'}; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">
-            ${r.upgrade20Needed > 0 ? r.upgrade20Needed + ' n' : 'âœ“'}
+          <span style="font-size: 0.64rem; font-weight: 800; padding: 1px 4px; border-radius: 3px; background: ${r.upgrade20Needed > 0 ? 'rgba(244, 63, 94, 0.18)' : 'rgba(16, 185, 129, 0.18)'}; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">
+            ${r.upgrade20Needed > 0 ? r.upgrade20Needed + ' n' : '✓'}
           </span>
         </div>
       </td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa; font-size: 0.7rem;">${fmtPct(r.upgradeRate)}</td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa; font-size: 0.68rem;">${fmtPct(r.upgradeRate)}</td>
       <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(16, 185, 129, 0.04); border-left: 1px solid rgba(16, 185, 129, 0.25);">
-        <div style="font-size: 0.92rem; font-weight: 800; color: #10b981;">${fmt(r.commission.totalPayout)}</div>
-        <div style="font-size: 0.65rem; color: #a5b4fc; font-weight: 600;">
-          ${r.commission.baseRatePct}${r.commission.hasTeamBonus ? ' +0.5% ðŸ”¥' : ''}
+        <div style="font-size: 0.84rem; font-weight: 800; color: #10b981;">${fmt(r.commission.totalPayout)}</div>
+        <div style="font-size: 0.60rem; color: #a5b4fc; font-weight: 600;">
+          ${r.commission.baseRatePct}${r.commission.hasTeamBonus ? ' +0.5% 🔥' : ''}
         </div>
       </td>
       <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(56, 189, 248, 0.03);">
         ${r.commission.nextTier ? `
-          <div style="font-size: 0.88rem; font-weight: 800; color: #38bdf8;">${fmt(r.commission.expectedNextEarning)}</div>
-          <div style="font-size: 0.62rem; color: #94a3b8;">${r.commission.nextRatePct}</div>
+          <div style="font-size: 0.82rem; font-weight: 800; color: #38bdf8;">${fmt(r.commission.expectedNextEarning)}</div>
+          <div style="font-size: 0.60rem; color: #94a3b8;">${r.commission.nextRatePct}</div>
         ` : `
-          <div style="font-size: 0.8rem; font-weight: 800; color: #facc15;">&#127942; Top</div>
+          <div style="font-size: 0.78rem; font-weight: 800; color: #facc15;">🏆 Top</div>
         `}
       </td>
       <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(250, 204, 21, 0.03); border-right: 1px solid rgba(250, 204, 21, 0.25);">
         ${r.commission.nextTier ? `
-          <div style="font-size: 0.88rem; font-weight: 800; color: ${r.commission.remainingToNext <= 1500 ? '#facc15' : '#fff'};">
+          <div style="font-size: 0.82rem; font-weight: 800; color: ${r.commission.remainingToNext <= 1500 ? '#facc15' : '#fff'};">
             ${fmt(r.commission.remainingToNext)}
           </div>
         ` : `
-          <div style="font-size: 0.75rem; color: #10b981; font-weight: 700;">âœ“</div>
+          <div style="font-size: 0.72rem; color: #10b981; font-weight: 700;">✓</div>
         `}
       </td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #facc15; font-size: 0.7rem;" title="Touch Frequency">${(r.coverRate / 100).toFixed(1)}x</td>
-      <td style="font-family: var(--font-mono); font-weight: 600; font-size: 0.72rem;">${r.contracts}</td>
-      <td><span class="status-badge" style="background: ${r.statusColor}20; color: ${r.statusColor}; font-size: 0.62rem; padding: 2px 6px;">${r.status}</span></td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: #facc15; font-size: 0.68rem;" title="Touch Frequency">${(r.coverRate / 100).toFixed(1)}x</td>
+      <td style="font-family: var(--font-mono); font-weight: 600; font-size: 0.70rem;">${r.contracts}</td>
+      <td><span class="status-badge" style="background: ${r.statusColor}20; color: ${r.statusColor}; font-size: 0.60rem; padding: 2px 4px;">${r.status}</span></td>
     `;
     tableBody.appendChild(tr);
   });
@@ -3843,9 +3843,13 @@ function exportIndividualTableToExcel() {
   const table = document.getElementById('individualFullTable');
   if (!table) return;
 
-  const btn = document.getElementById('btnExportExcel');
-  const origHtml = btn ? btn.innerHTML : '';
-  if (btn) btn.innerHTML = '<span>â³</span> Exporting...';
+  const btns = [
+    document.getElementById('btnExportExcel'),
+    document.getElementById('btnExportExcelMain')
+  ].filter(Boolean);
+
+  const origHtmls = btns.map(b => b.innerHTML);
+  btns.forEach(b => { b.innerHTML = '<span>⏳</span> Exporting...'; });
 
   const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const fileName = `Big_Team_01_Individual_Performance_${dateStr}`;
@@ -3855,10 +3859,10 @@ function exportIndividualTableToExcel() {
     if (typeof XLSX !== 'undefined') {
       const wb = XLSX.utils.table_to_book(table, { sheet: "Individual Reps" });
       XLSX.writeFile(wb, `${fileName}.xlsx`);
-      if (btn) {
-        btn.innerHTML = '<span>âœ“</span> Downloaded!';
-        setTimeout(() => { btn.innerHTML = origHtml; }, 2000);
-      }
+      btns.forEach((b, idx) => {
+        b.innerHTML = '<span>✓</span> Downloaded!';
+        setTimeout(() => { b.innerHTML = origHtmls[idx]; }, 2500);
+      });
       return;
     }
 
@@ -3880,7 +3884,7 @@ function exportIndividualTableToExcel() {
         </style>
       </head>
       <body>
-        <h2 style="font-family: sans-serif; color: #1e1b4b;">51Talk Big Team 01 â€” Individual Sales Specialists Performance Report</h2>
+        <h2 style="font-family: sans-serif; color: #1e1b4b;">51Talk Big Team 01 - Individual Sales Specialists Performance Report</h2>
         <p style="font-family: sans-serif; font-size: 10pt; color: #64748b;">Exported on: ${new Date().toLocaleString()}</p>
         ${tableClone.outerHTML}
       </body>
@@ -3896,13 +3900,13 @@ function exportIndividualTableToExcel() {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
 
-    if (btn) {
-      btn.innerHTML = '<span>âœ“</span> Downloaded!';
-      setTimeout(() => { btn.innerHTML = origHtml; }, 2000);
-    }
+    btns.forEach((b, idx) => {
+      b.innerHTML = '<span>✓</span> Downloaded!';
+      setTimeout(() => { b.innerHTML = origHtmls[idx]; }, 2500);
+    });
   } catch (err) {
     console.error('Excel Export Error:', err);
-    if (btn) btn.innerHTML = origHtml;
+    btns.forEach((b, idx) => { b.innerHTML = origHtmls[idx]; });
     alert('Export error. Please ensure table is visible.');
   }
 }
@@ -3912,9 +3916,13 @@ function exportIndividualTableToImage() {
   const cardsView = document.getElementById('individualCards');
   if (!tableView) return;
 
-  const btn = document.getElementById('btnExportImage');
-  const origHtml = btn ? btn.innerHTML : '';
-  if (btn) btn.innerHTML = '<span>â³</span> Capturing...';
+  const btns = [
+    document.getElementById('btnExportImage'),
+    document.getElementById('btnExportImageMain')
+  ].filter(Boolean);
+
+  const origHtmls = btns.map(b => b.innerHTML);
+  btns.forEach(b => { b.innerHTML = '<span>⏳</span> Capturing...'; });
 
   // Make sure table view is displayed for capture
   const wasHidden = tableView.classList.contains('hidden');
@@ -3946,17 +3954,17 @@ function exportIndividualTableToImage() {
           if (cardsView) cardsView.classList.remove('hidden');
         }
 
-        if (btn) {
-          btn.innerHTML = '<span>âœ“</span> Downloaded!';
-          setTimeout(() => { btn.innerHTML = origHtml; }, 2000);
-        }
+        btns.forEach((b, idx) => {
+          b.innerHTML = '<span>✓</span> Downloaded!';
+          setTimeout(() => { b.innerHTML = origHtmls[idx]; }, 2500);
+        });
       }).catch(err => {
         console.error('Image capture error:', err);
         if (wasHidden) {
           tableView.classList.add('hidden');
           if (cardsView) cardsView.classList.remove('hidden');
         }
-        if (btn) btn.innerHTML = origHtml;
+        btns.forEach((b, idx) => { b.innerHTML = origHtmls[idx]; });
         alert('Could not capture image. You can use Print Screen or Ctrl+P.');
       });
     } else {
@@ -3969,13 +3977,12 @@ function exportIndividualTableToImage() {
           tableView.classList.add('hidden');
           if (cardsView) cardsView.classList.remove('hidden');
         }
-        if (btn) btn.innerHTML = origHtml;
+        btns.forEach((b, idx) => { b.innerHTML = origHtmls[idx]; });
         alert('Image export library could not be loaded.');
       };
       document.head.appendChild(script);
     }
   }
 
-  // Small timeout to allow DOM layout reflow if unhidden
   setTimeout(doCapture, 100);
 }

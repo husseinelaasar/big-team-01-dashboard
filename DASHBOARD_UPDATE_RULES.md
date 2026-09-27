@@ -486,16 +486,16 @@ The expected individual commission payout for each Sales Specialist (SS) is calc
   $$\text{Total Payout} = \text{Net Cash} \times \text{Effective Rate}$$
 - **UI Visibility:**
   1. **Small Teams Tab (`#tab-teams`):**
-     - When team ach $\ge 100\%$: Glowing green booster banner: `ðŸ”¥ TEAM TARGET MET (>100%) â€” +0.5% BONUS UNLOCKED!`
+     - When team ach $\ge 100\%$: Glowing green booster banner: `ðŸ”¥ TEAM TARGET MET (>100%) — +0.5% BONUS UNLOCKED!`
      - When team ach $< 100\%$: Actionable sprint message showing cash gap needed to unlock the +0.5% bonus for all team members.
   2. **Individual Cards View (`#tab-individuals`):**
-     - Prominent Expected Commission badge with Base Rate + Team Booster indicator (`+ 0.5% ðŸš€`).
+     - Prominent Expected Commission badge with Base Rate + Team Booster indicator (`+ 0.5% 🚀`).
      - Next Band projection showing expected dollar earnings upon stepping into the next tier and exact remaining cash required.
   3. **Individual Table View (`#individualFullTable`):**
-     - Column 8: `ðŸ’° Expected Commission & Next Band (USD)` displaying total payout in USD, scheme tier, booster status, and next tier gap.
+     - Column 8: `💰 Expected Commission & Next Band (USD)` displaying total payout in USD, scheme tier, booster status, and next tier gap.
      - Footer totals: Displays aggregate commission accrued for Sector Total and Team Total.
   4. **Sorting:**
-     - Added `ðŸ’° Expected Commission (Highest Payout)` option to `#sortFilter` for instant leaderboard sorting by earnings.
+     - Added `💰 Expected Commission (Highest Payout)` option to `#sortFilter` for instant leaderboard sorting by earnings.
 
 ---
 
@@ -515,11 +515,11 @@ Tables must render 100% visible on standard executive laptops and desktop displa
    * Technical prefixes (`EGSS-`, `EOSS-`, `EGLP-`) are stripped inside table rows via `r.name.replace(/^(EGSS|EOSS|EGLP)-/i, '')` because the dedicated `Team` column already displays the team identifier.
    * The full official name is preserved in the HTML `title` tooltip attribute for hover inspection.
 4. **Proportional Column Ordering (Natural Flow):**
-   * Standard order: `Rank -> Rep Name -> Team -> Cash ($) -> Target ($) -> Ach % -> Pace -> Upgrade M2 -> Base -> ðŸŽ¯ 20% Goal (Needed) -> Conv % -> ðŸ’° Exp. Comm ($) -> ðŸš€ Next Band ($) -> ðŸŽ¯ Gap ($) -> Touch Freq -> Contr. -> Status`.
+   * Standard order: `Rank -> Rep Name -> Team -> Cash ($) -> Target ($) -> Ach % -> Pace -> Upgrade M2 -> Base -> 🎯 20% Goal (Needed) -> Conv % -> 💰 Exp. Comm ($) -> 🚀 Next Band ($) -> 🎯 Gap ($) -> Touch Freq -> Contr. -> Status`.
    * Puts the core Upgrade M2 and 20% Goal metrics immediately adjacent to performance indicators, preventing them from being pushed off-screen.
 5. **Footer Totals Standard:**
    * **Cumulative Metrics (Maintained):** Total Cash, Target, Ach %, Pace Exp Cash, Upgrade M2, Base, 20% Upgrade Target (`${totalTarget} (${totalNeeded} needed)`), Conversion Rate, Coverage %, and Contracts.
-   * **Individual Commission Columns (Cleared):** `Expected Commission`, `Next Band Commission`, and `Gap to Next` display `â€”` (dash) in the footer row, as commission schemes are evaluated on individual representative tiers rather than summed as team totals.
+   * **Individual Commission Columns (Cleared):** `Expected Commission`, `Next Band Commission`, and `Gap to Next` display `—` (dash) in the footer row, as commission schemes are evaluated on individual representative tiers rather than summed as team totals.
 
 ---
 
@@ -536,10 +536,59 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
 #### B. Implementation Specifications:
 1. **Interactive Controls Placement:**
    * Located directly in the `#tab-individuals` control bar adjacent to Cards/Table view toggles.
-   * `ðŸ“Š Export Excel`: Styled in emerald (`rgba(16, 185, 129, 0.15)`), triggers full table parse.
+   * `📊 Export Excel`: Styled in emerald (`rgba(16, 185, 129, 0.15)`), triggers full table parse.
    * `ðŸ–¼ï¸ Export Image`: Styled in sky cyan (`rgba(56, 189, 248, 0.15)`), renders 2x pixel density retina image.
 2. **View State Auto-Negotiation (Image Export):**
    * If the user is currently on **Cards View**, `exportIndividualTableToImage()` seamlessly un-hides `#individualTableView`, renders the canvas snapshot, and immediately restores the user back to Cards View without disrupting UX.
 3. **Data Integrity & Footer Preservation:**
    * Exported files contain all 17 active performance columns (Rank, Rep, Team, Cash, Target, Ach %, Pace, Upgrade M2, Base, 20% Goal, Conv %, Expected Commission, Next Band, Gap, Touch Freq, Contracts, Status).
    * Footers correctly display official operational totals and dash placeholders for individual-tier commission cells.
+
+---
+
+### 12. Direct Table Display, Zero-Scroll Viewport Standard & Prominent Export Banner (Day 27 Audit)
+
+#### A. Direct Display Standard (Eliminating Hidden Views):
+1. **Immediate Table Accessibility:**
+   * When opening the **Individual Performance Deep Dive** (`#tab-individuals`), the complete 17-column performance table is rendered **DIRECTLY** by default.
+   * `#individualTableView` no longer carries the `hidden` class upon tab load, eliminating friction and redundant clicks.
+   * `viewToggleTable` is active by default; `#individualCards` is gracefully hidden.
+
+#### B. Zero-Scroll Strict Geometry (No Left-Right Scrolling):
+To completely eliminate the need for horizontal cursor scrolling across the screen:
+1. **Strict Container Containment (`overflow-x: hidden !important`):**
+   * `#individualTableView` and `.table-wrapper` strictly enforce `overflow-x: hidden !important` on desktop/laptop viewports.
+2. **Fixed Table Layout (`table-layout: fixed !important`):**
+   * `#individualFullTable` enforces `table-layout: fixed !important; width: 100% !important;` preventing individual cells from blowing out column widths.
+3. **Deterministic 100% Colgroup Percentages:**
+   Exact widths defined via `<colgroup>` summing precisely to 100.0%:
+   * `# (Rank)`: 3.2%
+   * `Rep Name`: 11.5%
+   * `Team`: 5.2%
+   * `Cash ($)`: 7.2%
+   * `Target ($)`: 7.0%
+   * `Ach %`: 5.8%
+   * `Pace`: 5.2%
+   * `Upg M2`: 4.2%
+   * `Base`: 4.0%
+   * `🎯 20% Goal (Needed)`: 7.5%
+   * `Conv %`: 5.0%
+   * `💰 Exp. Comm ($)`: 8.2%
+   * `🚀 Next Band ($)`: 7.8%
+   * `🎯 Gap ($)`: 7.2%
+   * `Touch Freq`: 5.0%
+   * `Contr.`: 4.2%
+   * `Status`: 6.8%
+4. **Content Wrapping Standard (`white-space: normal !important`):**
+   * Table cells and headers wrap text naturally with compact line-height (`1.15`) and font size (`0.68rem`), ensuring no column ever forces a horizontal viewport shift.
+5. **App Container Flexibility:**
+   * `.app` container expanded to `max-width: 1680px; width: 100%;` allowing high-resolution screens to utilize full monitor width comfortably.
+
+#### C. Prominent High-Visibility Action & Download Toolbar:
+1. **Dedicated Action Banner (`.table-export-banner`):**
+   * Positioned immediately above the table header with high-contrast dark glass styling (`background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(30, 41, 59, 0.95))`).
+   * Large, glowing bilingual download buttons:
+     - **📥 تحميل ملف إكسل (Excel .xlsx)**: Glowing emerald button (`linear-gradient(135deg, #059669, #10b981)`) with box-shadow.
+     - **📸 حفظ كصورة (Export Image)**: Glowing cyan button (`linear-gradient(135deg, #0284c7, #38bdf8)`) with box-shadow.
+2. **Synchronized State Feedback:**
+   * Both header buttons and banner buttons synchronize during export: showing `⏳ Exporting...` / `⏳ Capturing...` and `✓ Downloaded!`.
