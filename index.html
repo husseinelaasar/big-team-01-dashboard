@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260927_151021">
+  <link rel="stylesheet" href="styles.css?v=20260927_152016">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -29,6 +29,16 @@
       <p>Synchronizing Performance Intelligence...</p>
     </div>
   </div>
+  <script>
+    // Bulletproof Failsafe: Dismiss loader after 1.2s under all circumstances
+    setTimeout(function() {
+      var l = document.getElementById('loader');
+      if (l) {
+        l.classList.add('fade-out');
+        setTimeout(function() { if (l && l.parentNode) l.parentNode.removeChild(l); }, 500);
+      }
+    }, 1200);
+  </script>
 
   <!-- Main Application Container -->
   <div id="app" class="app">
@@ -684,9 +694,11 @@
     </footer>
   </div>
 
-  <script src="dashboard.js?v=20260927_151021"></script>
+  <script src="dashboard.js?v=20260927_152016"></script>
 </body>
 </html>
+
+
 
 
 
