@@ -166,13 +166,13 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 77.69% vs 80% benchmark. Push $16776/day to stay on track.', time: '20260927_212046' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260927_212046' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-mahmoudkhamis (52.3%). Schedule targeted coaching sessions today.', time: '20260927_212046' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-alihesham01 (140.3%), EGSS-ibrahimismaiel (145.4%). Recognize in team channel!', time: '20260927_212046' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $6659/day', detail: 'Currently at 43.3% (15233/35210). Gap: $19977.', time: '20260927_212046' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 101 more renewals', detail: 'Current: 34/673 (5.1%). 20% target = 135. Focus on high-base reps.', time: '20260927_212046' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $194748 (86.3%). 3 days left. Daily need: $16776. Push all pending deals!', time: '20260927_212046' },
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 77.69% vs 80% benchmark. Push $16776/day to stay on track.', time: '20260927_213406' },
+  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260927_213406' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-mahmoudkhamis (52.3%). Schedule targeted coaching sessions today.', time: '20260927_213406' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-alihesham01 (140.3%), EGSS-ibrahimismaiel (145.4%). Recognize in team channel!', time: '20260927_213406' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $6659/day', detail: 'Currently at 43.3% (15233/35210). Gap: $19977.', time: '20260927_213406' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 101 more renewals', detail: 'Current: 34/673 (5.1%). 20% target = 135. Focus on high-base reps.', time: '20260927_213406' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $194748 (86.3%). 3 days left. Daily need: $16776. Push all pending deals!', time: '20260927_213406' },
 ];
 
 // =========================================================================
@@ -188,7 +188,7 @@ const SS_COMMISSION_TIERS = [
   { min: 0,     max: 4000,     rate: 0.005, label: '0.5%', name: 'Tier 1' }
 ];
 
-function calculateSSCommission(netCash, teamAch, teamTarget, teamCash) {
+function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
   const cash = Math.max(0, netCash || 0);
   
   let currentTierIndex = -1;
@@ -202,8 +202,11 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash) {
   if (currentTierIndex === -1) currentTierIndex = SS_COMMISSION_TIERS.length - 1;
   const currentTier = SS_COMMISSION_TIERS[currentTierIndex];
   
-  // Small Team Bonus: +0.5% if Small Team achieved >= 100%
-  const hasTeamBonus = (teamAch !== undefined && teamAch !== null && teamAch >= 100);
+  // Dual-Condition Small Team Booster (+0.5% Extra Earning):
+  // Rule: Only unlocked when BOTH the Small Team achieves >= 100% AND the individual rep achieves >= 100%
+  const teamQualified = (teamAch !== undefined && teamAch !== null && teamAch >= 100);
+  const repQualified = (repAch !== undefined && repAch !== null && repAch >= 100);
+  const hasTeamBonus = teamQualified && repQualified;
   const teamBonusRate = hasTeamBonus ? 0.005 : 0.0;
   
   const baseRate = currentTier.rate;
@@ -341,7 +344,7 @@ function buildDataModel() {
   individuals.forEach(rep => {
     const t = teams[rep.team];
     const teamAch = t ? (t.officialAch !== undefined ? t.officialAch : t.achievement) : 0;
-    rep.commission = calculateSSCommission(rep.cash, teamAch, t ? t.target : 0, t ? t.cash : 0);
+    rep.commission = calculateSSCommission(rep.cash, teamAch, t ? t.target : 0, t ? t.cash : 0, rep.achievement);
   });
 
   // Reconciled Sector Totals (Official Data Center Reconciliation & POOL_Detail16)
@@ -933,12 +936,12 @@ function renderSmallTeamsTab(model) {
               <span style="font-size: 0.82rem; font-weight: 800; color: #34d399; display: flex; align-items: center; gap: 6px;">
                 &#128293; TEAM TARGET MET (${fmtPct(t.officialAch !== undefined ? t.officialAch : t.achievement)})  -  +0.5% BONUS UNLOCKED!
               </span>
-              <span style="font-size: 0.72rem; color: #a7f3d0; font-weight: 700; background: rgba(16, 185, 129, 0.25); padding: 2px 8px; border-radius: 4px;">All reps earn +0.5% Booster</span>
+              <span style="font-size: 0.72rem; color: #a7f3d0; font-weight: 700; background: rgba(16, 185, 129, 0.25); padding: 2px 8px; border-radius: 4px;">Reps with &ge;100% Ach earn +0.5% Booster</span>
             </div>
           ` : `
             <div style="background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,255,255,0.14); border-radius: var(--radius-sm); padding: 6px 12px; display: flex; align-items: center; justify-content: space-between;">
               <span style="font-size: 0.74rem; color: var(--text-muted);">
-                &#127919; Reach 100% to unlock <strong style="color: #6ee7b7;">+0.5% Team Commission Booster</strong> for all reps (Gap: <strong style="color: #f59e0b;">${fmt(Math.max(0, t.target - t.cash))}</strong>)
+                &#127919; Reach 100% to unlock <strong style="color: #6ee7b7;">+0.5% Team Booster</strong> for &ge;100% qualifiers (Gap: <strong style="color: #f59e0b;">${fmt(Math.max(0, t.target - t.cash))}</strong>)
               </span>
               <span style="font-size: 0.72rem; color: #f59e0b; font-weight: 800; font-family: var(--font-mono);">${fmtPct(t.officialAch !== undefined ? t.officialAch : t.achievement)}</span>
             </div>
@@ -1053,7 +1056,7 @@ function renderIndividualsTab(model) {
       <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(16, 185, 129, 0.04); border-left: 1px solid rgba(16, 185, 129, 0.25);">
         <div style="font-size: 0.84rem; font-weight: 800; color: #10b981;">${fmt(r.commission.totalPayout)}</div>
         <div style="font-size: 0.60rem; color: #a5b4fc; font-weight: 600;">
-          ${r.commission.baseRatePct}${r.commission.hasTeamBonus ? ' +0.5% 🔥' : ''}
+          ${r.commission.baseRatePct}${r.commission.hasTeamBonus ? ' +0.5% &#128293;' : ''}
         </div>
       </td>
       <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(56, 189, 248, 0.03);">
@@ -4127,6 +4130,7 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
 
 
 

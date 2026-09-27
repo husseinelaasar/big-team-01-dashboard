@@ -480,17 +480,24 @@ The expected individual commission payout for each Sales Specialist (SS) is calc
 | **Tier 2** | **$4,000 â€“ $5,999.99** | **1.5%** | Developing Band |
 | **Tier 1** | **$0 â€“ $3,999.99** | **0.5%** | Foundation Band |
 
-#### B. Small Team Target Booster (+0.5%):
-- **Rule:** When any Small Team achieves **$\ge 100\%$** of its team target (e.g. `ME-EGSS30` at 103.4%), all active Sales Specialists in that team unlock an **additional +0.5% commission booster** applied to their entire net cash revenue.
-- **Formula:**
-  $$\text{Effective Rate} = \text{Base Rate} + (\text{Team Ach} \ge 100\% \ ?\ 0.5\% : 0\%)$$
-  $$\text{Total Payout} = \text{Net Cash} \times \text{Effective Rate}$$
+#### B. Small Team Target Booster (+0.5% Extra Earning Rule):
+- **Dual-Qualification Rule (Team + Individual):** 
+  To unlock and receive the additional **+0.5% commission booster**, TWO conditions must be satisfied simultaneously:
+  1. **Team Qualification:** The rep's Small Team MUST achieve **$\ge 100\%$** of its official team target ($\text{Team Ach} \ge 100\%$).
+  2. **Individual Qualification:** The individual sales representative MUST ALSO have achieved **$\ge 100\%$** of their personal target ($\text{Individual Ach} \ge 100\%$).
+- **Strict Disqualification Rules:**
+  * **Team Met ($\ge 100\%$), Rep Under ($< 100\%$):** If the Small Team hits $\ge 100\%$, but an individual rep on that team achieved $< 100\%$, **they DO NOT receive the +0.5% bonus**. They receive only their standard base tier rate.
+  * **Rep Met ($\ge 100\%$), Team Under ($< 100\%$):** If an individual rep hits $\ge 100\%$, but their Small Team fails to reach $100\%$, **they DO NOT receive the +0.5% bonus** (the team threshold was not unlocked).
+- **Mathematical Formula:**
+  $$\text{Extra Earning Bonus Rate} = \begin{cases} +0.5\% & \text{if } \text{Team Ach} \ge 100\% \text{ AND } \text{Individual Ach} \ge 100\% \\ 0.0\% & \text{otherwise} \end{cases}$$
+  $$\text{Effective Commission Rate} = \text{Base Tier Rate} + \text{Extra Earning Bonus Rate}$$
+  $$\text{Total Commission Payout} = \text{Individual Net Cash} \times \text{Effective Commission Rate}$$
 - **UI Visibility:**
   1. **Small Teams Tab (`#tab-teams`):**
-     - When team ach $\ge 100\%$: Glowing green booster banner: `ðŸ”¥ TEAM TARGET MET (>100%) — +0.5% BONUS UNLOCKED!`
-     - When team ach $< 100\%$: Actionable sprint message showing cash gap needed to unlock the +0.5% bonus for all team members.
+     - When team ach $\ge 100\%$: Glowing green booster banner: `🔥 TEAM TARGET MET (≥100%) — +0.5% BONUS UNLOCKED FOR QUALIFIERS!` (Reps with individual achievement $\ge 100\%$ earn the booster).
+     - When team ach $< 100\%$: Actionable sprint message showing cash gap needed for the team to unlock the +0.5% bonus for individual $\ge 100\%$ qualifiers.
   2. **Individual Cards View (`#tab-individuals`):**
-     - Prominent Expected Commission badge with Base Rate + Team Booster indicator (`+ 0.5% 🚀`).
+     - Prominent Expected Commission badge displaying Base Rate plus Team Booster indicator (`+0.5% 🚀`) for qualified reps.
      - Next Band projection showing expected dollar earnings upon stepping into the next tier and exact remaining cash required.
   3. **Individual Table View (`#individualFullTable`):**
      - Column 8: `💰 Expected Commission & Next Band (USD)` displaying total payout in USD, scheme tier, booster status, and next tier gap.
