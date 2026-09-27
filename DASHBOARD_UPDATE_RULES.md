@@ -9,7 +9,7 @@
 > 3. Individual active rep refunds are explicitly displayed next to their names, while leaver/unassigned refunds are charged **ONLY** to Big Team 01 (Sector Total) and **NEVER** deducted from Small Teams.
 > 4. Early Upgrade M2 Touch Frequency / Call Intensity metrics (POOL22) are mathematically clarified alongside the 100% unique student coverage.
 > 5. The live dashboard is fully synchronized and verified.
-> 6. Sector Total Net Cash Revenue MTD ($152,326) and Cash Achievement % (67.52%) MUST be extracted directly from sheet **`指标看板`** (Col C & Col I) of `SS Lens Dashboard`.
+> 6. Sector Total Net Cash Revenue MTD and Cash Achievement %: MUST be extracted directly from the individual sheet **`Area_Big_Team_Small_Team_SS`** (Row 2 / Total Row) in `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx`: **Column G (`Cash-Refund`)** for Net Cash Revenue MTD and **Column M (`Cash-Refund ACHIEVEMENT`)** for MTD Cash Achievement %, with sheet **`指标看板`** (Col C & Col I) of `SS Lens Dashboard` as fallback.
 > 7. Upgrade M2 renewals and pool base MUST be dynamically parsed from **`Student_Detail32`** (or `POOL_Detail16`), separating sector macro totals (34 renewals / 673 base) from active reps totals (33 renewals), with zero hardcoded constants.
 
 ---
@@ -68,12 +68,13 @@ A single unified script replaces the former 3-script chain for faster, less erro
 
 ### 📊 3. Sales Cash Revenue, Contracts, Target Updates & Small Team Sorting
 0. **Official Sector Total Cash & Achievement Source (MANDATORY RULE):**
-   * Total Cash Revenue MTD MUST BE EXTRACTED DIRECTLY from `SS Lens Dashboard` workbook, subsheet **`指标看板`** (Row 2):
-     * **Column C (`Cash-Refund`):** Official Sector Total Cash Revenue MTD.
-     * **Column I (`Cash-Refund ACHIEVEMENT`):** Official Sector Cash Achievement %.
-     * **Column D (`CONTRACTS`):** Official Sector Total Contracts / Orders.
-     * **Column F (`Basic Cash Target`):** Official Sector Target ($225,600).
-   * Under no circumstances should sector total cash or achievement % be hardcoded or derived from any other source.
+   * **Primary Source (Individual Reps Ledger):** Sheet **`Area_Big_Team_Small_Team_SS`** (Row 2 / Total Row) in `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx`:
+     * **Column G (`Cash-Refund`):** Official Sector Total Cash Revenue MTD.
+     * **Column M (`Cash-Refund ACHIEVEMENT`):** Official Sector MTD Cash Achievement %.
+     * **Column H (`CONTRACTS`):** Official Sector Total Contracts / Orders.
+     * **Column J (`Basic Cash Target`):** Official Sector Target ($225,600).
+   * **Secondary / Fallback Source (Lens Macro Dashboard):** Sheet **`指标看板`** (Row 2, Col C for Cash-Refund & Col I for Cash-Refund ACHIEVEMENT).
+   * Under no circumstances should sector total cash or achievement % be hardcoded.
 1. **Designated Source Sheets:**
    * **Sector Metrics:** Sheet **`指标看板`** (First sheet of `SS Lens Dashboard*.xlsx`).
    * **Individual Sales Reps:** Dedicated file `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx` (Sheet `Area_Big_Team_Small_Team_SS`).
