@@ -3944,9 +3944,10 @@ function exportIndividualTableToExcel() {
 }
 
 function exportIndividualTableToImage() {
+  const table = document.getElementById('individualFullTable');
   const tableView = document.getElementById('individualTableView');
   const cardsView = document.getElementById('individualCards');
-  if (!tableView) return;
+  if (!table || !tableView) return;
 
   const btns = [
     document.getElementById('btnExportImage'),
@@ -3956,7 +3957,18 @@ function exportIndividualTableToImage() {
   const origHtmls = btns.map(b => b.innerHTML);
   btns.forEach(b => { b.innerHTML = '<span>⏳</span> Capturing...'; });
 
-  // Make sure table view is displayed for capture
+  const restoreView = () => {
+    btns.forEach((b, idx) => { b.innerHTML = origHtmls[idx]; });
+  };
+
+  const markSuccess = () => {
+    btns.forEach((b, idx) => {
+      b.innerHTML = '<span>✓</span> Downloaded!';
+      setTimeout(() => { b.innerHTML = origHtmls[idx]; }, 2500);
+    });
+  };
+
+  // Ensure table view is visible for capture
   const wasHidden = tableView.classList.contains('hidden');
   if (wasHidden) {
     tableView.classList.remove('hidden');
@@ -3966,55 +3978,145 @@ function exportIndividualTableToImage() {
   const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const fileName = `Big_Team_01_Individual_Performance_${dateStr}.png`;
 
-  function doCapture() {
-    if (typeof html2canvas !== 'undefined') {
-      html2canvas(tableView, {
-        backgroundColor: '#0a0e1a',
-        scale: 2, // High resolution (retina 2x)
-        logging: false,
-        useCORS: true,
-        windowWidth: 1400
-      }).then(canvas => {
-        const link = document.createElement('a');
-        link.download = fileName;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
+  function saveUrl(url, isBlob) {
+    const link = document.createElement('a');
+    link.download = fileName;
+    link.href = url;
+    document.body.appendChild(link);
+    link.click();
+    setTimeout(() => {
+      document.body.removeChild(link);
+      if (isBlob) URL.revokeObjectURL(url);
+      if (wasHidden) {
+        tableView.classList.add('hidden');
+        if (cardsView) cardsView.classList.remove('hidden');
+      }
+      markSuccess();
+    }, 200);
+  }
 
-        // Restore view if it was in cards view
-        if (wasHidden) {
-          tableView.classList.add('hidden');
-          if (cardsView) cardsView.classList.remove('hidden');
-        }
-
-        btns.forEach((b, idx) => {
-          b.innerHTML = '<span>✓</span> Downloaded!';
-          setTimeout(() => { b.innerHTML = origHtmls[idx]; }, 2500);
-        });
-      }).catch(err => {
-        console.error('Image capture error:', err);
-        if (wasHidden) {
-          tableView.classList.add('hidden');
-          if (cardsView) cardsView.classList.remove('hidden');
-        }
-        btns.forEach((b, idx) => { b.innerHTML = origHtmls[idx]; });
-        alert('Could not capture image. You can use Print Screen or Ctrl+P.');
-      });
-    } else {
-      // Dynamic load fallback
-      const script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
-      script.onload = () => { doCapture(); };
-      script.onerror = () => {
-        if (wasHidden) {
-          tableView.classList.add('hidden');
-          if (cardsView) cardsView.classList.remove('hidden');
-        }
-        btns.forEach((b, idx) => { b.innerHTML = origHtmls[idx]; });
-        alert('Image export library could not be loaded.');
-      };
-      document.head.appendChild(script);
+  function triggerDownload(canvas) {
+    try {
+      if (canvas.toBlob) {
+        canvas.toBlob(blob => {
+          if (!blob) {
+            saveUrl(canvas.toDataURL('image/png'), false);
+            return;
+          }
+          const url = URL.createObjectURL(blob);
+          saveUrl(url, true);
+        }, 'image/png');
+      } else {
+        saveUrl(canvas.toDataURL('image/png'), false);
+      }
+    } catch (e) {
+      console.warn('Canvas export tainted or blob error, trying direct dataURL:', e);
+      saveUrl(canvas.toDataURL('image/png'), false);
     }
   }
 
-  setTimeout(doCapture, 100);
+  function openPrintView() {
+    if (wasHidden) {
+      tableView.classList.add('hidden');
+      if (cardsView) cardsView.classList.remove('hidden');
+    }
+    restoreView();
+
+    const printWin = window.open('', '_blank');
+    if (!printWin) {
+      alert('Could not open print preview. Please check popup permissions or use Ctrl+P.');
+      return;
+    }
+    const tableClone = table.cloneNode(true);
+    printWin.document.write(`
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Big Team 01 - Individual Reps Performance (${dateStr})</title>
+        <meta charset="utf-8">
+        <style>
+          body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0a0e1a; color: #f1f5f9; padding: 24px; }
+          h2 { margin: 0 0 6px; color: #38bdf8; font-size: 18px; }
+          p { margin: 0 0 16px; color: #94a3b8; font-size: 12px; }
+          table { width: 100%; border-collapse: collapse; font-size: 11px; table-layout: fixed; }
+          th { background: #1e293b; color: #94a3b8; padding: 6px 4px; border: 1px solid #334155; text-align: center; }
+          td { padding: 5px 3px; border: 1px solid #1e293b; text-align: center; }
+          tfoot tr { background: #1e1b4b; font-weight: bold; }
+          @media print {
+            body { background: #fff !important; color: #000 !important; }
+            th { background: #e2e8f0 !important; color: #000 !important; border: 1px solid #94a3b8 !important; }
+            td { border: 1px solid #cbd5e1 !important; color: #000 !important; }
+            tfoot tr { background: #e0e7ff !important; color: #000 !important; }
+          }
+        </style>
+      </head>
+      <body>
+        <h2>51Talk Big Team 01 — Individual Sales Specialists Performance</h2>
+        <p>Senior Manager: Saber Hussien | Generated: ${new Date().toLocaleString()}</p>
+        ${tableClone.outerHTML}
+        <script>
+          window.onload = function() { window.print(); };
+        <\/script>
+      </body>
+      </html>
+    `);
+    printWin.document.close();
+  }
+
+  function doCapture() {
+    if (typeof html2canvas === 'function') {
+      html2canvas(tableView, {
+        backgroundColor: '#0a0e1a',
+        scale: 1.5,
+        useCORS: true,
+        allowTaint: false,
+        logging: false,
+        ignoreElements: (el) => {
+          return el.classList && (el.classList.contains('view-toggle-bar') || el.classList.contains('no-export'));
+        },
+        onclone: (clonedDoc) => {
+          const el = clonedDoc.getElementById('individualTableView');
+          if (el) {
+            el.style.overflow = 'visible';
+            el.style.width = '100%';
+            el.style.maxWidth = 'none';
+            el.style.border = 'none';
+            el.style.backdropFilter = 'none';
+            el.style.webkitBackdropFilter = 'none';
+          }
+          const allEl = clonedDoc.querySelectorAll('*');
+          allEl.forEach(node => {
+            if (node.style) {
+              node.style.backdropFilter = 'none';
+              node.style.webkitBackdropFilter = 'none';
+              if (node.tagName === 'TH') {
+                node.style.position = 'static';
+                node.style.background = '#111827';
+              }
+            }
+          });
+        }
+      }).then(canvas => {
+        triggerDownload(canvas);
+      }).catch(err => {
+        console.warn('html2canvas standard failed, trying fallback capture mode:', err);
+        html2canvas(table, {
+          backgroundColor: '#0a0e1a',
+          scale: 1,
+          useCORS: false,
+          allowTaint: true,
+          logging: false
+        }).then(canvas => {
+          triggerDownload(canvas);
+        }).catch(err2 => {
+          console.error('All html2canvas attempts failed:', err2);
+          openPrintView();
+        });
+      });
+    } else {
+      openPrintView();
+    }
+  }
+
+  setTimeout(doCapture, 120);
 }

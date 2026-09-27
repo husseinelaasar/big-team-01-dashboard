@@ -583,8 +583,9 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
    * `Status`: 6.8%
 4. **Content Wrapping Standard (`white-space: normal !important`):**
    * Table cells and headers wrap text naturally with compact line-height (`1.15`) and font size (`0.68rem`), ensuring no column ever forces a horizontal viewport shift.
-5. **App Container Flexibility:**
-   * `.app` container expanded to `max-width: 98vw; width: 100%;` allowing high-resolution screens to utilize full monitor width comfortably.
+5. **Executive Balanced Container Width (No Extreme Wide Stretching):**
+   * `.app` container is balanced at `max-width: 1480px; width: 95%; margin: 0 auto;`.
+   * This prevents awkward, extreme edge-to-edge stretching across ultrawide and 4K displays while preserving a clean, centered desktop layout where all 17 table columns fit with zero horizontal scroll.
 
 #### C. Prominent High-Visibility Action & Download Toolbar:
 1. **Dedicated Action Banner (`.table-export-banner`):**
@@ -617,4 +618,24 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
 
 4. **Non-Blocking Loader & Pointer-Events:**
    * `.loader-overlay.fade-out` must enforce `pointer-events: none !important; display: none !important;` to ensure that a fading or dismissed overlay can never intercept user clicks.
+
+---
+
+### 📸 12. Local High-Fidelity Image & Excel Export Architecture
+
+> [!IMPORTANT]
+> **MANDATORY RULES FOR BULLETPROOF TABLE EXPORTS:**
+> The export system must operate reliably across local files (`file:///`), GitHub Pages, and enterprise networks without throwing capture or CDN load errors:
+
+1. **Local Bundling of html2canvas:**
+   * `html2canvas.min.js` is bundled locally in `assets/html2canvas.min.js`. The dashboard must never depend exclusively on external CDNs (`cdn.jsdelivr.net`) which may be restricted or blocked by firewall/VPN policies.
+2. **Cloned DOM Sanitization (`onclone`):**
+   * Before rasterizing to canvas, `onclone` must sanitize all cloned nodes:
+     - Remove `backdrop-filter` and `-webkit-backdrop-filter` (known cause of `html2canvas` render crashes).
+     - Reset `position: sticky` on table headers to `static` with solid background (`#111827`).
+     - Remove `overflow: hidden` on the cloned container so the entire table is captured without clipping.
+3. **Blob & DataURL Dual-Mode Download:**
+   * Canvases must attempt `canvas.toBlob()` first (for optimal memory performance on large retina captures) with an automatic fallback to `canvas.toDataURL('image/png')`.
+4. **Universal Print/PDF Fail-Safe:**
+   * If any browser-level canvas security restriction prevents canvas export, the engine must never show a dead error message. It automatically falls back to an elegant, standalone printable window (`openPrintView()`) invoking `window.print()` for instant saving as PDF or image.
 

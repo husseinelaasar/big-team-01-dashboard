@@ -164,8 +164,8 @@ body::after {
 .app {
   position: relative;
   z-index: 1;
-  max-width: 98vw;
-  width: 100%;
+  max-width: 1480px;
+  width: 95%;
   margin: 0 auto;
   padding: 0 16px 40px;
 }
