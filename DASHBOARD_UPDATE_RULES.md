@@ -409,4 +409,58 @@ To guarantee that [`update_dashboard.ps1`](file:///d:/Lens/Dashboard/update_dash
 4. **Performance Benchmark:**
    * The unified single-pass updater v2.0 completes full extraction (KPIs + Operations + 25 Rep CSVs + Git deploy) in **20 to 26 seconds** (a 78% reduction from legacy ~120s runtime).
 
+---
+
+### 🚀 8. One-Click Builder Architecture & Deployment Hardening SOP
+
+#### A. One-Click Builder Launcher (`RUN_BUILDER.bat` & Desktop Shortcut):
+1. **Zero-Friction Execution:**
+   * Users double-click the **`Big Team 01 - Run Builder`** shortcut on their Desktop or [`RUN_BUILDER.bat`](file:///d:/Lens/Dashboard/RUN_BUILDER.bat) in the project root.
+   * Automatically scans `Dashboard_Input_Files\`, `Downloads\`, and `D:\Lens\` in descending order of file creation timestamps.
+2. **Instant Local Visibility + Asynchronous Cloud Deploy:**
+   * **Local File:** Immediately opens `index.html` in the default browser (0s delay, bypasses ISP/CDN propagation lags).
+   * **Live Cloud Link:** Automatically triggers GitHub Pages deployment (`https://husseinelaasar.github.io/big-team-01-dashboard/`) which refreshes online in 30–60 seconds.
+
+#### B. Direct Column M Official Achievement % Extraction Rule:
+1. **Data Source:** Sheet `Area_Big_Team_Small_Team_SS` in `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx`.
+2. **Extraction Invariant:**
+   * **Column M (`Cash-Refund ACHIEVEMENT`):** Contains the official, unrounded sales achievement percentage for each individual sales rep.
+   * Extraction formula in `update_dashboard.ps1`:
+     ```powershell
+     $officialAch = if ($c['M'] -and $c['M'] -ne '-') { 
+         [math]::Round([double]$c['M'] * 100, 1) 
+     } else { 
+         if ($target -gt 0) { [math]::Round(($netCash / $target) * 100, 1) } else { 0 } 
+     }
+     ```
+   * Injected into `REPS_DATA` as `officialAch` and rendered directly in `dashboard.js`:
+     ```javascript
+     const ach = (raw.officialAch !== undefined && raw.officialAch !== null) 
+         ? raw.officialAch 
+         : (target > 0 ? ((raw.cash / target) * 100) : 0);
+     ```
+   * **Prohibition:** Do not overwrite official rep achievement with rounded division (`cash / target`) when Column M is available.
+
+#### C. Dynamic Sheet Suffix Resolution (Upgrade M2 & Coverage):
+1. **Issue:** SS Lens exports dynamically increment or alter worksheet numbers between iterations (e.g., `Student_Detail32` vs `Student_Detail30`, `Student_Detail26` vs `Student_Detail25`).
+2. **Cascade Search Hierarchy:**
+   * **Renewals & Upgrade M2:** Look for `Student_Detail30` $\rightarrow$ fallback to `Student_Detail32` $\rightarrow$ fallback to `POOL_Detail16`.
+   * **Effective M2 Coverage:** Look for `Student_Detail25` $\rightarrow$ fallback to `Student_Detail26` $\rightarrow$ fallback to `POOL23`.
+3. **Validation Threshold:** Confirm that `Upgrade M2 Total == 34` and `Upgrade Base == 673` on Day 27.
+
+#### D. Git Deploy Error Isolation (Preventing `NativeCommandError`):
+1. **Root Cause:** In PowerShell 5.1 with `$ErrorActionPreference = "Stop"`, Git commands that write informational messages (such as `To https://github.com/...` or remote pack progress) to `stderr` will throw a fatal `NativeCommandError` if captured via `2>&1` or run under strict error preferences.
+2. **Remediation Pattern:**
+   * Execute Git deployment commands through `cmd.exe /c` or temporarily relax `$ErrorActionPreference = "Continue"` during Phase 5:
+     ```powershell
+     $prevEAP = $ErrorActionPreference
+     $ErrorActionPreference = "Continue"
+     cmd.exe /c "git -C `"$DashDir`" add dashboard.js index.html ..."
+     cmd.exe /c "git -C `"$DashDir`" commit -m `"Auto Update...`""
+     cmd.exe /c "git -C `"$DashDir`" push origin master 2>&1"
+     $ErrorActionPreference = $prevEAP
+     ```
+   * Ensures that normal Git standard error stream output does not trigger script abortion or batch error codes.
+
+
 
