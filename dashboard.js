@@ -166,14 +166,14 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 67.52% vs Day 27 target 80%. Gap: 12.5pp. Need $24425/day to close.', time: '20260927_152016' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260927_152016' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-shahdmahmoud (13.9%), EGLP-mohamed06 (35.1%). Schedule targeted coaching sessions today.', time: '20260927_152016' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (117.6%), EGSS-khaledgonam (118.7%), EGSS-ibrahimismaiel (128.2%). Recognize in team channel!', time: '20260927_152016' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $9365/day', detail: 'Currently at 44.7% (22665/50760). Gap: $28095.', time: '20260927_152016' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $6870/day', detail: 'Currently at 41.5% (14601/35210). Gap: $20609.', time: '20260927_152016' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 101 more renewals', detail: 'Current: 34/673 (5.1%). 20% target = 135. Focus on high-base reps.', time: '20260927_152016' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $169251 (75%). 3 days left. Daily need: $24425. Push all pending deals!', time: '20260927_152016' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 71.64% vs Day 27 target 80%. Gap: 8.4pp. Need $21328/day to close.', time: '20260927_155010' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20260927_155010' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20260927_155010' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $16804/day', detail: 'Currently at 0.7% (349/50760). Gap: $50411.', time: '20260927_155010' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $15598/day', detail: 'Currently at 0.6% (267/47060). Gap: $46793.', time: '20260927_155010' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $25367/day', detail: 'Currently at 0.6% (488/76590). Gap: $76102.', time: '20260927_155010' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $11698/day', detail: 'Currently at 0.3% (115/35210). Gap: $35095.', time: '20260927_155010' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $179573 (79.6%). 3 days left. Daily need: $21328. Push all pending deals!', time: '20260927_155010' },
 ];
 
 // Build Unified Data Intelligence Model
@@ -262,10 +262,10 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official Data Center Reconciliation & POOL_Detail16)
-  const totalCash = 152326; // from æŒ‡æ ‡çœ‹æ¿ Col C
-  const sectorAchPct = 67.52; // from æŒ‡æ ‡çœ‹æ¿ Col I
+  const totalCash = 161616; // from æŒ‡æ ‡çœ‹æ¿ Col C
+  const sectorAchPct = 71.64; // from æŒ‡æ ‡çœ‹æ¿ Col I
   const totalTarget = 225600; // from æŒ‡æ ‡çœ‹æ¿ Col F
-  const totalContracts = 170; // from æŒ‡æ ‡çœ‹æ¿ Col D
+  const totalContracts = 179; // from æŒ‡æ ‡çœ‹æ¿ Col D
   const totalUpgradeM2 = 34; // from Student_Detail32
   const totalNormalRenewals = 131; // from Student_Detail32
   const totalUpgradeBase = 673; // from Student_Detail32
@@ -2956,6 +2956,10 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -3660,7 +3664,7 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-09-27 10:20:11', name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-09-27 15:48:11', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
@@ -3700,6 +3704,10 @@ function checkSheetSyncStatus() {
     }
   });
 }
+
+
+
+
 
 
 
