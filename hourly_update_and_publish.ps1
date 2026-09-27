@@ -1,6 +1,7 @@
 # =========================================================================
-# 51Talk Dashboard Hourly Scheduled Updater & Git Publisher
+# 51Talk Dashboard Hourly Scheduled Updater & Git Publisher v2.0
 # Trigger: Every hour at :10 (10 minutes past the hour)
+# Uses single unified update_dashboard.ps1 instead of 3 separate scripts
 # =========================================================================
 
 $ErrorActionPreference = "Continue"
@@ -15,7 +16,7 @@ Function Log-Message([string]$msg) {
 }
 
 Log-Message "=========================================================="
-Log-Message "Starting Hourly Scheduled Dashboard Update (:10 past hour)"
+Log-Message "Starting Hourly Scheduled Dashboard Update v2.0 (:10 past hour)"
 
 # Step 1: Run fresh download from 51Talk Data Center
 try {
@@ -26,36 +27,13 @@ try {
     Log-Message "Error in auto-download: $_"
 }
 
-# Step 2: Run verification and data processing
+# Step 2: Run unified update (sales + operations + leads + git deploy)
 try {
-    Log-Message "Step 2: Processing fresh export and verifying data..."
-    & powershell -ExecutionPolicy Bypass -File "$workDir\auto_process_update.ps1" | Out-Null
-    Log-Message "Verification and sales data process completed."
-
-    Log-Message "Step 2b: Processing Operations Master and Rep Leads..."
-    & powershell -ExecutionPolicy Bypass -File "$workDir\generate_rep_leads_fast.ps1" | Out-Null
-    & powershell -ExecutionPolicy Bypass -File "$workDir\extract_full_master.ps1" | Out-Null
-    Log-Message "Operations Master extraction completed."
+    Log-Message "Step 2: Running unified dashboard update..."
+    & powershell -ExecutionPolicy Bypass -File "$workDir\update_dashboard.ps1" | Out-Null
+    Log-Message "Unified update completed successfully."
 } catch {
-    Log-Message "Error in auto-process: $_"
-}
-
-# Step 3: Git auto-commit and push updates to GitHub Pages (Live Dashboard)
-try {
-    Log-Message "Step 3: Syncing changes with GitHub Pages..."
-    cd $workDir
-    
-    $status = git status --porcelain
-    if ($status) {
-        git add dashboard.js index.html styles.css leads/ attachments/ leads_summary.json master_extracted_data.json DASHBOARD_UPDATE_RULES.md
-        git commit -m "Auto-update dashboard & operations: $timestamp"
-        git push origin master
-        Log-Message "Live GitHub Pages dashboard updated successfully."
-    } else {
-        Log-Message "No data changes detected in dashboard files. Skipping commit."
-    }
-} catch {
-    Log-Message "Error during Git push: $_"
+    Log-Message "Error in unified update: $_"
 }
 
 Log-Message "Hourly update routine finished."

@@ -33,26 +33,36 @@ To eliminate path confusion, browser download delays, and manual file-hunting er
 
 ---
 
-### ⚡ 2. One-Click Automated Update Protocol (`RUN_AUTO_UPDATE.bat`)
-A universal, one-click Windows launcher is provided for instant updates without manual scripting:
+### ⚡ 2. Simplified One-Click Update Protocol (`UPDATE.bat` / `update_dashboard.ps1`)
+A single unified script replaces the former 3-script chain for faster, less error-prone updates:
 
-* **Launcher Path:** `D:\Lens\Dashboard\RUN_AUTO_UPDATE.bat`
-* **Execution Workflow (4 Steps):**
-  1. **Step 1:** Executes [`auto_process_update.ps1`](file:///d:/Lens/Dashboard/auto_process_update.ps1):
-     * Extracts sales cash (Gross, Refund, Net), orders, and individual targets from `Individual_Rankings`.
-     * Associates individual refunds with active sales reps to display next to their names.
-     * Computes small team totals strictly from active team members' net cash (protecting small teams from unassigned/leaver refunds).
-     * Extracts Upgrade M2 metrics dynamically from `Student_Detail32` (or `POOL_Detail16`): Sector Total Upgrade M2 renewals (34 renewals across all accounts, or 33 across the 25 active sales reps + 1 former rep `EGSS-hussienmo`), Sector Upgrade Base (673 leads), and Sector Normal Renewals (131).
-     * Updates `dashboard.js` data matrices (`REPS_DATA`, `POOL22_M2_COVERAGE`, `daysPassed`, `totalUpgradeM2`, `totalUpgradeBase`, `totalNormalRenewals`).
-     * Dynamically updates `index.html` headers, download timestamps, and Day benchmark pins.
-  2. **Step 2:** Executes [`generate_rep_leads_fast.ps1`](file:///d:/Lens/Dashboard/generate_rep_leads_fast.ps1):
-     * Reads all 4 raw detail sheets from `All in one Master.xlsx`.
-     * Generates 24 clean, personalized rep CSV files in `leads/{rep}.csv`.
-     * Generates `leads_summary.json` for the personal portal mini-cockpit cards.
-  3. **Step 3:** Executes [`extract_full_master.ps1`](file:///d:/Lens/Dashboard/extract_full_master.ps1):
-     * Extracts the 4 operational summary sheets (`1- Pending SOP`, `2- Unfixed Teacher`, `3- Class Consumption`, `4- English Club`).
-     * Injects `MASTER_OPERATIONS_DATA` and `LEADS_SUMMARY` directly into `dashboard.js`.
-  4. **Step 4:** Stages, commits, and pushes changes to GitHub (`git commit -m "Auto Update..." && git push origin master`).
+* **Launcher Path:** `D:\Lens\Dashboard\UPDATE.bat`
+* **Unified Script:** [`update_dashboard.ps1`](file:///d:/Lens/Dashboard/update_dashboard.ps1) (replaces `auto_process_update.ps1` + `generate_rep_leads_fast.ps1` + `extract_full_master.ps1`)
+* **Execution Workflow (2 Steps — was 4):**
+  1. **Step 1 (All-in-One):** Executes `update_dashboard.ps1`:
+     * **Phase 1 — File Discovery:** Single-pass scan across all input directories for all required files.
+     * **Phase 2 — KPI Extraction:** Extracts sector KPIs (指标看板), individual rep data, Upgrade M2 (Student_Detail32), M2 coverage.
+     * **Phase 3 — Smart Recommendations:** Auto-generates daily actionable notes (pacing alerts, zero-sales reps, top performers, team gaps, upgrade push, end-of-month sprint).
+     * **Phase 4 — Operations & Leads:** Parses 4 operational modules + generates 25 personalized rep CSV files.
+     * **Phase 5 — Git Deploy:** Auto-commits and pushes to GitHub Pages.
+  2. **Step 2 (Verification):** Script prints timing, summary, and recommendation count at completion.
+* **Flags for Faster Partial Updates:**
+  * `-SkipGit` — Run data extraction without deploying.
+  * `-SkipLeads` — Skip rep CSV generation (sales-only update).
+  * `-SkipOps` — Skip operations master extraction.
+* **Smart Daily Recommendations Engine:**
+  * Injected as `DAILY_RECOMMENDATIONS` array into `dashboard.js`.
+  * Generates 6-8 context-aware recommendations based on live data:
+    * 🔴 Sector pacing alerts (behind/within/ahead of pace)
+    * 🚨 Zero-sales rep intervention alerts
+    * 📋 Bottom 5 reps needing support
+    * ⭐ Top 3 performers recognition
+    * ⚠️ Team-level gap warnings
+    * 🎯 Upgrade M2 push status
+    * 🏁 End-of-month sprint mode (Day ≥ 25)
+* **Legacy Scripts (Still Functional):**
+  * `RUN_AUTO_UPDATE.bat` → calls old 3-script chain (kept for backward compatibility).
+  * `auto_process_update.ps1`, `generate_rep_leads_fast.ps1`, `extract_full_master.ps1` remain operational.
 
 ---
 
