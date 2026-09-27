@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    Big Team 01 Executive Dashboard — Styles v2.0
    Design: Premium dark glassmorphism + micro-animations
    ============================================ */
@@ -702,19 +702,19 @@ body::after {
   opacity: 0.4;
 }
 .data-table th {
-  padding: 12px 14px;
+  padding: 8px 10px;
   text-align: center !important;
   vertical-align: middle !important;
   font-weight: 700;
   color: var(--text-secondary);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   border-bottom: 1px solid var(--border-glass);
   white-space: nowrap;
 }
 .data-table td {
-  padding: 11px 14px;
+  padding: 8px 10px;
   text-align: center !important;
   vertical-align: middle !important;
   border-bottom: 1px solid var(--border-glass);

@@ -774,6 +774,40 @@ function renderOverviewTable(model) {
         </span>
         <div style="font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(expRepCash)}</div>
       </td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'};">${r.upgradeM2}</td>
+      <td style="font-family: var(--font-mono);">${r.upgradeBase}</td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(192, 132, 252, 0.05); border-left: 1px solid rgba(192, 132, 252, 0.2); border-right: 1px solid rgba(192, 132, 252, 0.2); min-width: 140px;">
+        <strong style="color: #c084fc; font-size: 0.95rem;">${r.upgrade20Target}</strong>
+        <div style="margin-top: 2px;">
+          <span style="font-size: 0.72rem; font-weight: 800; padding: 1px 6px; border-radius: 4px; background: ${r.upgrade20Needed > 0 ? 'rgba(244, 63, 94, 0.18)' : 'rgba(16, 185, 129, 0.18)'}; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'}; border: 1px solid ${r.upgrade20Needed > 0 ? 'rgba(244, 63, 94, 0.35)' : 'rgba(16, 185, 129, 0.35)'};">
+            ${r.upgrade20Needed > 0 ? r.upgrade20Needed + ' needed' : 'Achieved'}
+          </span>
+        </div>
+      </td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa;">${fmtPct(r.upgradeRate)}</td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(16, 185, 129, 0.04); border-left: 1px solid rgba(16, 185, 129, 0.25); min-width: 110px;">
+        <div style="font-size: 0.98rem; font-weight: 800; color: #10b981;">${fmt(r.commission.totalPayout)}</div>
+        <div style="font-size: 0.68rem; color: #a5b4fc; font-weight: 600; margin-top: 1px;">
+          ${r.commission.baseRatePct}${r.commission.hasTeamBonus ? ' +0.5% &#128293;' : ''}
+        </div>
+      </td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(56, 189, 248, 0.03); min-width: 110px;">
+        ${r.commission.nextTier ? `
+          <div style="font-size: 0.92rem; font-weight: 800; color: #38bdf8;">${fmt(r.commission.expectedNextEarning)}</div>
+          <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 1px;">${r.commission.nextRatePct}</div>
+        ` : `
+          <div style="font-size: 0.85rem; font-weight: 800; color: #facc15;">&#127942; Top</div>
+        `}
+      </td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(250, 204, 21, 0.03); border-right: 1px solid rgba(250, 204, 21, 0.25); min-width: 100px;">
+        ${r.commission.nextTier ? `
+          <div style="font-size: 0.92rem; font-weight: 800; color: ${r.commission.remainingToNext <= 1500 ? '#facc15' : '#fff'};">
+            ${fmt(r.commission.remainingToNext)}
+          </div>
+        ` : `
+          <div style="font-size: 0.78rem; color: #10b981; font-weight: 700;">Reached</div>
+        `}
+      </td>
       <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;" title="51Talk POOL22 Touchpoint Frequency: ${(r.coverRate / 100).toFixed(1)} calls/student (100% Unique Coverage in POOL_Detail23)">${fmtPct(r.coverRate)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(r.coverRate / 100).toFixed(1)}x)</span></td>
       <td style="font-family: var(--font-mono); color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'}; font-weight: ${r.upgradeM2 > 0 ? '700' : '400'};">
         ${r.upgradeM2}
@@ -1105,40 +1139,40 @@ function renderIndividualsTab(model) {
         </span>
         <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(expRepCash)}</div>
       </td>
-      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(16, 185, 129, 0.04); border-left: 1px solid rgba(16, 185, 129, 0.25); border-right: 1px solid rgba(16, 185, 129, 0.25); min-width: 150px;">
-        <div style="font-size: 1.05rem; font-weight: 800; color: #10b981;">${fmt(r.commission.totalPayout)}</div>
-        <div style="font-size: 0.72rem; color: #a5b4fc; font-weight: 700; margin-top: 2px;">
-          ${r.commission.baseRatePct}${r.commission.hasTeamBonus ? ' + 0.5% &#128640;' : ''} (${r.commission.tierName})
-        </div>
-        ${r.commission.hasTeamBonus ? `
-          <div style="font-size: 0.65rem; color: #34d399; font-weight: 700; margin-top: 2px;">
-            &#128293; Team >100% (+${fmt(r.commission.bonusPayout)})
-          </div>
-        ` : ''}
-      </td>
-      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(56, 189, 248, 0.03); border-right: 1px solid rgba(56, 189, 248, 0.2); min-width: 155px;">
-        ${r.commission.nextTier ? `
-          <div style="font-size: 1.02rem; font-weight: 800; color: #38bdf8;">${fmt(r.commission.expectedNextEarning)}</div>
-          <div style="font-size: 0.7rem; color: #94a3b8; margin-top: 2px;">at ${fmt(r.commission.nextTier.min)} (${r.commission.nextRatePct})</div>
-        ` : `
-          <div style="font-size: 0.88rem; font-weight: 800; color: #facc15;">&#127942; Top Tier</div>
-          <div style="font-size: 0.7rem; color: var(--text-muted);">(4.0% Max)</div>
-        `}
-      </td>
-      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(250, 204, 21, 0.03); border-right: 1px solid rgba(250, 204, 21, 0.2); min-width: 140px;">
-        ${r.commission.nextTier ? `
-          <div style="font-size: 0.98rem; font-weight: 800; color: ${r.commission.remainingToNext <= 1500 ? '#facc15' : '#fff'};">
-            ${fmt(r.commission.remainingToNext)}
-          </div>
-          <div style="font-size: 0.68rem; color: var(--text-muted); margin-top: 2px;">Cash to Upgrade</div>
-        ` : `
-          <div style="font-size: 0.85rem; color: #10b981; font-weight: 700;">Reached</div>
-        `}
-      </td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'};">${r.upgradeM2}</td>
       <td style="font-family: var(--font-mono);">${r.upgradeBase}</td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${r.upgrade20Target} <span style="font-size: 0.75rem; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">(${r.upgrade20Needed} needed)</span></td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(192, 132, 252, 0.05); border-left: 1px solid rgba(192, 132, 252, 0.2); border-right: 1px solid rgba(192, 132, 252, 0.2); min-width: 140px;">
+        <strong style="color: #c084fc; font-size: 0.95rem;">${r.upgrade20Target}</strong>
+        <div style="margin-top: 2px;">
+          <span style="font-size: 0.72rem; font-weight: 800; padding: 1px 6px; border-radius: 4px; background: ${r.upgrade20Needed > 0 ? 'rgba(244, 63, 94, 0.18)' : 'rgba(16, 185, 129, 0.18)'}; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'}; border: 1px solid ${r.upgrade20Needed > 0 ? 'rgba(244, 63, 94, 0.35)' : 'rgba(16, 185, 129, 0.35)'};">
+            ${r.upgrade20Needed > 0 ? r.upgrade20Needed + ' needed' : 'Achieved'}
+          </span>
+        </div>
+      </td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa;">${fmtPct(r.upgradeRate)}</td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(16, 185, 129, 0.04); border-left: 1px solid rgba(16, 185, 129, 0.25); min-width: 110px;">
+        <div style="font-size: 0.98rem; font-weight: 800; color: #10b981;">${fmt(r.commission.totalPayout)}</div>
+        <div style="font-size: 0.68rem; color: #a5b4fc; font-weight: 600; margin-top: 1px;">
+          ${r.commission.baseRatePct}${r.commission.hasTeamBonus ? ' +0.5% &#128293;' : ''}
+        </div>
+      </td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(56, 189, 248, 0.03); min-width: 110px;">
+        ${r.commission.nextTier ? `
+          <div style="font-size: 0.92rem; font-weight: 800; color: #38bdf8;">${fmt(r.commission.expectedNextEarning)}</div>
+          <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 1px;">${r.commission.nextRatePct}</div>
+        ` : `
+          <div style="font-size: 0.85rem; font-weight: 800; color: #facc15;">&#127942; Top</div>
+        `}
+      </td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(250, 204, 21, 0.03); border-right: 1px solid rgba(250, 204, 21, 0.25); min-width: 100px;">
+        ${r.commission.nextTier ? `
+          <div style="font-size: 0.92rem; font-weight: 800; color: ${r.commission.remainingToNext <= 1500 ? '#facc15' : '#fff'};">
+            ${fmt(r.commission.remainingToNext)}
+          </div>
+        ` : `
+          <div style="font-size: 0.78rem; color: #10b981; font-weight: 700;">Reached</div>
+        `}
+      </td>
       <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;" title="51Talk POOL22 Touchpoint Frequency: ${(r.coverRate / 100).toFixed(1)} calls/student (100% Unique Coverage in POOL_Detail23)">${fmtPct(r.coverRate)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(r.coverRate / 100).toFixed(1)}x)</span></td>
       <td style="font-family: var(--font-mono); font-weight: 600;">${r.contracts}</td>
       <td><span class="status-badge" style="background: ${r.statusColor}20; color: ${r.statusColor};">${r.status}</span></td>
@@ -1170,22 +1204,16 @@ function renderIndividualsTab(model) {
             </span>
             <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(sectorExpCash)}</div>
           </td>
-          <td style="font-family: var(--font-mono); color: #10b981; font-weight: 800; text-align: center; font-size: 0.95rem; background: rgba(16, 185, 129, 0.08); border-left: 1px solid rgba(16, 185, 129, 0.3); border-right: 1px solid rgba(16, 185, 129, 0.3);">
-            <div>${fmt(filtered.reduce((sum, r) => sum + (r.commission ? r.commission.totalPayout : 0), 0))}</div>
-            <div style="font-size: 0.68rem; color: #a7f3d0; font-weight: 600;">Sector Payout</div>
-          </td>
-          <td style="font-family: var(--font-mono); color: #38bdf8; font-weight: 800; text-align: center; font-size: 0.92rem; background: rgba(56, 189, 248, 0.06); border-right: 1px solid rgba(56, 189, 248, 0.3);">
-            <div>${fmt(filtered.reduce((sum, r) => sum + (r.commission && r.commission.nextTier ? r.commission.expectedNextEarning : (r.commission ? r.commission.totalPayout : 0)), 0))}</div>
-            <div style="font-size: 0.68rem; color: #93c5fd; font-weight: 600;">Potential Payout</div>
-          </td>
-          <td style="font-family: var(--font-mono); color: #facc15; font-weight: 800; text-align: center; font-size: 0.92rem; background: rgba(250, 204, 21, 0.06); border-right: 1px solid rgba(250, 204, 21, 0.3);">
-            <div>${fmt(filtered.reduce((sum, r) => sum + (r.commission ? r.commission.remainingToNext : 0), 0))}</div>
-            <div style="font-size: 0.68rem; color: #fef08a; font-weight: 600;">Total Gap to Next</div>
-          </td>
           <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
           <td style="font-family: var(--font-mono);">${s.totalUpgradeBase}</td>
-          <td style="font-family: var(--font-mono); color: #c084fc;">${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)</td>
+          <td style="font-family: var(--font-mono); color: #c084fc; text-align: center;">
+            <strong style="font-size: 0.95rem;">${s.totalUpgrade20Target}</strong>
+            <span style="font-size: 0.75rem; color: #f43f5e; margin-left: 3px;">(${s.totalUpgrade20Needed} needed)</span>
+          </td>
           <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(s.upgradeRate)}</td>
+          <td style="font-family: var(--font-mono); color: var(--text-muted); text-align: center;">&mdash;</td>
+          <td style="font-family: var(--font-mono); color: var(--text-muted); text-align: center;">&mdash;</td>
+          <td style="font-family: var(--font-mono); color: var(--text-muted); text-align: center;">&mdash;</td>
           <td style="font-family: var(--font-mono); color: #facc15; text-align: center;">${fmtPct(avgCover)}</td>
           <td style="font-family: var(--font-mono); color: #fff;">${s.totalContracts}</td>
           <td><span class="status-badge" style="background: #6366f120; color: #818cf8;">Sector Total</span></td>
@@ -1224,22 +1252,16 @@ function renderIndividualsTab(model) {
             </span>
             <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(teamExpCash)}</div>
           </td>
-          <td style="font-family: var(--font-mono); color: #10b981; font-weight: 800; text-align: center; font-size: 0.95rem; background: rgba(16, 185, 129, 0.08); border-left: 1px solid rgba(16, 185, 129, 0.3); border-right: 1px solid rgba(16, 185, 129, 0.3);">
-            <div>${fmt(filtered.reduce((sum, r) => sum + (r.commission ? r.commission.totalPayout : 0), 0))}</div>
-            <div style="font-size: 0.68rem; color: #a7f3d0; font-weight: 600;">Team Payout</div>
-          </td>
-          <td style="font-family: var(--font-mono); color: #38bdf8; font-weight: 800; text-align: center; font-size: 0.92rem; background: rgba(56, 189, 248, 0.06); border-right: 1px solid rgba(56, 189, 248, 0.3);">
-            <div>${fmt(filtered.reduce((sum, r) => sum + (r.commission && r.commission.nextTier ? r.commission.expectedNextEarning : (r.commission ? r.commission.totalPayout : 0)), 0))}</div>
-            <div style="font-size: 0.68rem; color: #93c5fd; font-weight: 600;">Team Potential</div>
-          </td>
-          <td style="font-family: var(--font-mono); color: #facc15; font-weight: 800; text-align: center; font-size: 0.92rem; background: rgba(250, 204, 21, 0.06); border-right: 1px solid rgba(250, 204, 21, 0.3);">
-            <div>${fmt(filtered.reduce((sum, r) => sum + (r.commission ? r.commission.remainingToNext : 0), 0))}</div>
-            <div style="font-size: 0.68rem; color: #fef08a; font-weight: 600;">Team Gap to Next</div>
-          </td>
           <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${teamUpgradeM2}</td>
           <td style="font-family: var(--font-mono);">${teamUpgradeBase}</td>
-          <td style="font-family: var(--font-mono); color: #c084fc;">${teamUpgrade20Target} (${teamUpgrade20Needed} needed)</td>
+          <td style="font-family: var(--font-mono); color: #c084fc; text-align: center;">
+            <strong style="font-size: 0.95rem;">${teamUpgrade20Target}</strong>
+            <span style="font-size: 0.75rem; color: ${teamUpgrade20Needed > 0 ? '#f43f5e' : '#10b981'}; margin-left: 3px;">(${teamUpgrade20Needed} needed)</span>
+          </td>
           <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(teamUpgradeRate)}</td>
+          <td style="font-family: var(--font-mono); color: var(--text-muted); text-align: center;">&mdash;</td>
+          <td style="font-family: var(--font-mono); color: var(--text-muted); text-align: center;">&mdash;</td>
+          <td style="font-family: var(--font-mono); color: var(--text-muted); text-align: center;">&mdash;</td>
           <td style="font-family: var(--font-mono); color: #facc15; text-align: center;">${fmtPct(teamAvgCover)}</td>
           <td style="font-family: var(--font-mono); color: #fff;">${teamContracts}</td>
           <td><span class="status-badge" style="background: ${teamColor}25; color: ${teamColor}; border: 1px solid ${teamColor}50;">${teamFilter} Total</span></td>
