@@ -273,22 +273,56 @@ Linear pacing is strictly superseded by the official non-linear cumulative targe
 
 ---
 
-### 🌐 8. Production Deployment & Hourly Automated Schedule
-1. **Official Live Production URL (Shareable Link):**
-   * **Public Shareable Link:** `https://husseinelaasar.github.io/big-team-01-dashboard/`
-   * Hosted cloud-native on GitHub Pages. Accessible worldwide to any team member or executive on Desktop, Mobile, and inside the DingTalk in-app browser without requiring VPN or local access.
-   * **Local File vs Public Link Distinction:**
-     - `file:///D:/Lens/Dashboard/index.html` is a local hard-drive file path that works **only on your physical machine** and cannot be opened by anyone else.
-     - To share updates with the team, local changes must be committed and pushed to GitHub (`git push origin master`). Once pushed, GitHub Pages builds and serves the updated figures globally within 30–60 seconds.
-2. **Automated Hourly Cron Schedule:**
-   * **Timing:** Runs every hour at **10 minutes past the hour (XX:10)**.
-   * **Windows Task:** `51Talk_Dashboard_Hourly_Update`
-   * **Script:** [`hourly_update_and_publish.ps1`](file:///d:/Lens/Dashboard/hourly_update_and_publish.ps1)
-   * **Log:** [`hourly_update.log`](file:///d:/Lens/Dashboard/hourly_update.log)
-3. **Automated Cache-Busting Protocol:**
-   * **Versioned Asset Query Strings:** `index.html` must always reference scripts and stylesheets using timestamped version tags (e.g. `<script src="dashboard.js?v=20260919_1425"></script>` and `<link rel="stylesheet" href="styles.css?v=20260919_1425">`). This prevents browser disk caching and GitHub Pages CDN edge cache delays, ensuring updates reflect instantly.
-   * **Anti-Caching HTTP Meta Directives:** Embedded directly in `<head>` (`Cache-Control: no-cache, no-store, must-revalidate`, `Pragma: no-cache`, `Expires: 0`).
-   * **Client Verification:** Users can immediately view fresh figures via `Ctrl + F5` or `Shift + F5` in any browser.
+### 🌐 8. Production Deployment, Public Shareable Link & Link Sharing Guide
+
+#### A. The Official Live Production Link (Shareable with Anyone):
+* **Official Public URL:**  
+  `https://husseinelaasar.github.io/big-team-01-dashboard/`
+* **Direct Cache-Busted Link (Instant Refresh):**  
+  `https://husseinelaasar.github.io/big-team-01-dashboard/?v=20260927_214825`
+* Hosted cloud-native on GitHub Pages. Accessible worldwide 24/7 on any iPhone, Android, Mac, Windows PC, tablet, and inside the DingTalk in-app browser without requiring local files, corporate VPN, or network access.
+
+---
+
+#### B. ⚠️ Why Couldn't You Share the Link? (Common Mistakes & Solutions):
+
+> [!CAUTION]
+> **COMMON LINK SHARING PITFALLS:**
+> If team members or executives report that the link "doesn't open", "shows file not found", or "shows yesterday's data", review these 4 reasons:
+
+1. **Pitfall 1: Copying the Local Browser URL (`file:///D:/Lens/Dashboard/...`)**
+   * **Why it fails:** When you open `index.html` or double-click `RUN_BUILDER.bat`, your computer opens:
+     `file:///D:/Lens/Dashboard/index.html`
+   * This is a **local disk address** that exists ONLY on your physical hard drive. If you copy this link and paste it into DingTalk, WhatsApp, or email, nobody else can open it because their device has no access to your `D:\` drive.
+   * **Solution:** NEVER share `file:///` URLs. Always share the public web link:  
+     `https://husseinelaasar.github.io/big-team-01-dashboard/`
+
+2. **Pitfall 2: Local Edits Not Pushed to GitHub (`git push origin master`)**
+   * **Why it fails:** When you update Excel files or run extraction locally, the updated numbers are written to `dashboard.js` on your computer. If those changes are not pushed to GitHub, the live website will continue serving the old version.
+   * **Solution:** Running [`UPDATE.bat`](file:///d:/Lens/Dashboard/UPDATE.bat) or [`update_dashboard.ps1`](file:///d:/Lens/Dashboard/update_dashboard.ps1) automatically stages, commits, and pushes changes to GitHub (`origin/master`). GitHub Pages then deploys the update globally within 30–60 seconds.
+
+3. **Pitfall 3: Browser Edge/Disk Caching (Showing Old Numbers)**
+   * **Why it fails:** Modern browsers (especially mobile Chrome, Safari, and DingTalk WebView) aggressively cache JavaScript files to save data. If someone opens the link, their phone might reuse the cached `dashboard.js` from earlier in the day.
+   * **Solution:** 
+     - On Desktop: Press **`Ctrl + F5`** (Windows) or **`Cmd + Shift + R`** (Mac) to force a hard cache refresh.
+     - On Mobile / DingTalk: Append a query parameter like `?v=2` or share the versioned link `https://husseinelaasar.github.io/big-team-01-dashboard/?v=20260927_214825`.
+     - In DingTalk: Tap the top-right three dots (`...`) and choose **"Refresh"** or **"Open in Default Browser"**.
+
+4. **Pitfall 4: Corporate Network / Proxy Firewall Filtering**
+   * **Why it fails:** Some strict corporate Wi-Fi networks block `.github.io` subdomains.
+   * **Solution:** Switching to cellular mobile data (4G/5G) or standard home internet will load the dashboard immediately.
+
+---
+
+#### C. Automated Hourly Cron Schedule:
+* **Timing:** Runs every hour at **10 minutes past the hour (XX:10)**.
+* **Windows Task:** `51Talk_Dashboard_Hourly_Update`
+* **Script:** [`hourly_update_and_publish.ps1`](file:///d:/Lens/Dashboard/hourly_update_and_publish.ps1)
+* **Log:** [`hourly_update.log`](file:///d:/Lens/Dashboard/hourly_update.log)
+
+#### D. Automated Cache-Busting Protocol:
+* **Versioned Asset Query Strings:** `index.html` references scripts and stylesheets using timestamped version tags (e.g. `<script src="dashboard.js?v=20260927_214825"></script>`). This forces CDNs and browsers to fetch fresh code immediately.
+* **Anti-Caching HTTP Meta Directives:** Embedded directly in `<head>` (`Cache-Control: no-cache, no-store, must-revalidate`, `Pragma: no-cache`, `Expires: 0`).
 
 ---
 
@@ -375,7 +409,7 @@ flowchart TD
 
 ---
 
-### 🛡️ 6. Troubleshooting & System Integrity (Resolution of Infinite Loader Bug)
+### 🛡️ 11. Troubleshooting & System Integrity (Resolution of Infinite Loader Bug)
 
 > [!CAUTION]
 > **INCIDENT ROOT CAUSE ANALYSIS — STUCK ON LOADING SPINNER:**
@@ -415,7 +449,7 @@ flowchart TD
 
 ---
 
-### ⚙️ 7. PowerShell 5.1 Compatibility & Script Performance Standards
+### ⚙️ 12. PowerShell 5.1 Compatibility & Script Performance Standards
 
 To guarantee that [`update_dashboard.ps1`](file:///d:/Lens/Dashboard/update_dashboard.ps1) and [`UPDATE.bat`](file:///d:/Lens/Dashboard/UPDATE.bat) execute seamlessly on standard Windows environments without requiring PowerShell Core (pwsh 7+):
 
@@ -436,7 +470,7 @@ To guarantee that [`update_dashboard.ps1`](file:///d:/Lens/Dashboard/update_dash
 
 ---
 
-### 🚀 8. One-Click Builder Architecture & Deployment Hardening SOP
+### 🚀 13. One-Click Builder Architecture & Deployment Hardening SOP
 
 #### A. One-Click Builder Launcher (`RUN_BUILDER.bat` & Desktop Shortcut):
 1. **Zero-Friction Execution:**
@@ -489,7 +523,7 @@ To guarantee that [`update_dashboard.ps1`](file:///d:/Lens/Dashboard/update_dash
 
 ---
 
-### 9. 51Talk SS Commission Scheme & Team Booster Specification
+### 💰 14. 51Talk SS Commission Scheme & Team Booster Specification (+0.5% Dual-Qualification Rule)
 
 #### A. Commission Scheme Banding Tiers (Individual Net Cash Revenue):
 The expected individual commission payout for each Sales Specialist (SS) is calculated dynamically based on their individual Net Cash Revenue (USD):
@@ -497,12 +531,12 @@ The expected individual commission payout for each Sales Specialist (SS) is calc
 | Tier | Net Cash Revenue Band (USD) | Base Commission Rate | Description |
 | :--- | :--- | :---: | :--- |
 | **Tier 7** | **$22,000 and above** | **4.0%** | Pinnacle Band |
-| **Tier 6** | **$18,000 â€“ $21,999.99** | **3.5%** | High Producer |
-| **Tier 5** | **$12,000 â€“ $17,999.99** | **3.0%** | Senior Target Band |
-| **Tier 4** | **$8,000 â€“ $11,999.99** | **2.5%** | Benchmark Band |
-| **Tier 3** | **$6,000 â€“ $7,999.99** | **2.0%** | Growth Band |
-| **Tier 2** | **$4,000 â€“ $5,999.99** | **1.5%** | Developing Band |
-| **Tier 1** | **$0 â€“ $3,999.99** | **0.5%** | Foundation Band |
+| **Tier 6** | **$18,000 - $21,999.99** | **3.5%** | High Producer |
+| **Tier 5** | **$12,000 - $17,999.99** | **3.0%** | Senior Target Band |
+| **Tier 4** | **$8,000 - $11,999.99** | **2.5%** | Benchmark Band |
+| **Tier 3** | **$6,000 - $7,999.99** | **2.0%** | Growth Band |
+| **Tier 2** | **$4,000 - $5,999.99** | **1.5%** | Developing Band |
+| **Tier 1** | **$0 - $3,999.99** | **0.5%** | Foundation Band |
 
 #### B. Small Team Target Booster (+0.5% Extra Earning Rule):
 - **Dual-Qualification Rule (Team + Individual):** 
@@ -516,22 +550,41 @@ The expected individual commission payout for each Sales Specialist (SS) is calc
   $$\text{Extra Earning Bonus Rate} = \begin{cases} +0.5\% & \text{if } \text{Team Ach} \ge 100\% \text{ AND } \text{Individual Ach} \ge 100\% \\ 0.0\% & \text{otherwise} \end{cases}$$
   $$\text{Effective Commission Rate} = \text{Base Tier Rate} + \text{Extra Earning Bonus Rate}$$
   $$\text{Total Commission Payout} = \text{Individual Net Cash} \times \text{Effective Commission Rate}$$
-- **UI Visibility:**
-  1. **Small Teams Tab (`#tab-teams`):**
-     - When team ach $\ge 100\%$: Glowing green booster banner: `🔥 TEAM TARGET MET (≥100%) — +0.5% BONUS UNLOCKED FOR QUALIFIERS!` (Reps with individual achievement $\ge 100\%$ earn the booster).
-     - When team ach $< 100\%$: Actionable sprint message showing cash gap needed for the team to unlock the +0.5% bonus for individual $\ge 100\%$ qualifiers.
-  2. **Individual Cards View (`#tab-individuals`):**
-     - Prominent Expected Commission badge displaying Base Rate plus Team Booster indicator (`+0.5% 🚀`) for qualified reps.
-     - Next Band projection showing expected dollar earnings upon stepping into the next tier and exact remaining cash required.
-  3. **Individual Table View (`#individualFullTable`):**
-     - Column 8: `💰 Expected Commission & Next Band (USD)` displaying total payout in USD, scheme tier, booster status, and next tier gap.
-     - Footer totals: Displays aggregate commission accrued for Sector Total and Team Total.
-  4. **Sorting:**
-     - Added `💰 Expected Commission (Highest Payout)` option to `#sortFilter` for instant leaderboard sorting by earnings.
+
+#### C. Official Day 27 SS Booster Audit (Team 30 & Team 13):
+
+| Rep Name | Small Team | Team Ach % | Individual Target | Individual Net Cash | Individual Ach % | Meets Team (≥100%)? | Meets Individual (≥100%)? | Base Rate | +0.5% Booster? | Final Effective Rate | Expected Comm ($) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **alihesham01** | ME-EGSS30 | **119.8%** | $6,560 | $9,207.00 | **140.3%** | ✅ Yes | ✅ Yes | 1.5% | **+0.5% 🚀** | **2.0%** | **$184.14** |
+| **abdelrhmanshehata** | ME-EGSS30 | **119.8%** | $4,580 | $5,260.00 | **114.9%** | ✅ Yes | ✅ Yes | 1.5% | **+0.5% 🚀** | **2.0%** | **$105.20** |
+| **adhmgadallah** | ME-EGSS30 | **119.8%** | $4,120 | $4,640.00 | **112.7%** | ✅ Yes | ✅ Yes | 2.5% | **+0.5% 🚀** | **3.0%** | **$139.20** |
+| **EGSS-marwaahmed** | ME-EGSS13 | **100.8%** | $8,640 | $11,087.49 | **128.3%** | ✅ Yes | ✅ Yes | 2.5% | **+0.5% 🚀** | **3.0%** | **$332.62** |
+| **EGSS-mohamedha** | ME-EGSS13 | **100.8%** | $9,300 | $10,940.00 | **117.6%** | ✅ Yes | ✅ Yes | 2.5% | **+0.5% 🚀** | **3.0%** | **$328.20** |
+| **EGSS-amrsafwat** | ME-EGSS13 | **100.8%** | $12,240 | $12,600.00 | **102.9%** | ✅ Yes | ✅ Yes | 3.0% | **+0.5% 🚀** | **3.5%** | **$441.00** |
+| **EGSS-hayamhassan** | ME-EGSS13 | **100.8%** | $8,820 | $8,451.69 | **95.8%** | ✅ Yes | ❌ No (<100%) | 2.5% | **+0.0%** | **2.5%** | **$211.29** |
+| **EGLP-shahdmahmoud** | ME-EGSS13 | **100.8%** | $9,220 | $4,339.50 | **47.1%** | ✅ Yes | ❌ No (<100%) | 1.5% | **+0.0%** | **1.5%** | **$65.09** |
+
+> [!IMPORTANT]
+> **Key Audit Takeaways:**
+> 1. **Team 30:** All 3 active members met $\ge 100\%$ individually, so **all 3 members** unlock and receive the +0.5% booster.
+> 2. **Team 13:** Team achieved 100.8% ($47,419 / $47,060). **Marwa, Mohamedha, and Amr** met $\ge 100\%$ individually and receive the +0.5% booster. **Hayam (95.8%)** and **Shahd (47.1%)** fell short of 100% individually, so by definition of the Dual-Qualification Rule, they receive their standard base tier rates (2.5% and 1.5%) with **$0.0\% extra booster**.
+
+#### D. UI Visibility:
+1. **Small Teams Tab (`#tab-teams`):**
+   - When team ach $\ge 100\%$: Glowing green booster banner: `🔥 TEAM TARGET MET (≥100%) — +0.5% BONUS UNLOCKED FOR QUALIFIERS!` (Reps with individual achievement $\ge 100\%$ earn the booster).
+   - When team ach $< 100\%$: Actionable sprint message showing cash gap needed for the team to unlock the +0.5% bonus for individual $\ge 100\%$ qualifiers.
+2. **Individual Cards View (`#tab-individuals`):**
+   - Prominent Expected Commission badge displaying Base Rate plus Team Booster indicator (`+0.5% 🚀`) for qualified reps.
+   - Next Band projection showing expected dollar earnings upon stepping into the next tier and exact remaining cash required.
+3. **Individual Table View (`#individualFullTable`):**
+   - Column 8: `💰 Expected Commission & Next Band (USD)` displaying total payout in USD, scheme tier, booster status, and next tier gap.
+   - Footer totals: Displays aggregate commission accrued for Sector Total and Team Total.
+4. **Sorting:**
+   - Added `💰 Expected Commission (Highest Payout)` option to `#sortFilter` for instant leaderboard sorting by earnings.
 
 ---
 
-### 10. Zero-Scroll Viewport Layout & Compact Table Standard
+### 📐 15. Zero-Scroll Viewport Layout & Compact Table Standard
 
 #### A. Architecture Principle (Zero Horizontal Scroll):
 Tables must render 100% visible on standard executive laptops and desktop displays (>=1100px) without generating horizontal scrollbars or sliders (`overflow-x: hidden`).
@@ -555,7 +608,7 @@ Tables must render 100% visible on standard executive laptops and desktop displa
 
 ---
 
-### 11. Individual Reps Table Export Specification (Excel & Image)
+### 📤 16. Individual Reps Table Export Specification (Excel & Image)
 
 #### A. Architecture & Dual-Export Capability:
 The Individual Performance Deep Dive (`#tab-individuals`) provides one-click export controls to enable leadership to share, archive, and audit sales rep metrics instantly:
@@ -578,7 +631,7 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
 
 ---
 
-### 12. Direct Table Display, Zero-Scroll Viewport Standard & Prominent Export Banner (Day 27 Audit)
+### 🎯 17. Direct Table Display, Zero-Scroll Viewport Standard & Prominent Export Banner (Day 27 Audit)
 
 #### A. Direct Display Standard (Eliminating Hidden Views):
 1. **Immediate Table Accessibility:**
@@ -630,7 +683,7 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
 
 ---
 
-### 🛡️ 11. Tab Navigation & Defensive Initialization Architecture
+### 🛡️ 18. Tab Navigation & Defensive Initialization Architecture
 
 > [!IMPORTANT]
 > **PERMANENT RESILIENCE RULE FOR NAVIGATION & APP INITIALIZATION:**
@@ -653,7 +706,7 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
 
 ---
 
-### 📸 12. Local High-Fidelity Image & Excel Export Architecture
+### 📸 19. Local High-Fidelity Image & Excel Export Architecture
 
 > [!IMPORTANT]
 > **MANDATORY RULES FOR BULLETPROOF TABLE EXPORTS:**
