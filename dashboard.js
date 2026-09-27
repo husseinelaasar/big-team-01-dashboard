@@ -3836,31 +3836,146 @@ function checkSheetSyncStatus() {
   });
 }
 
+// =========================================================================
+// Individual Reps Performance Table Exporters (Excel & Image)
+// =========================================================================
+function exportIndividualTableToExcel() {
+  const table = document.getElementById('individualFullTable');
+  if (!table) return;
 
+  const btn = document.getElementById('btnExportExcel');
+  const origHtml = btn ? btn.innerHTML : '';
+  if (btn) btn.innerHTML = '<span>â³</span> Exporting...';
 
+  const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  const fileName = `Big_Team_01_Individual_Performance_${dateStr}`;
 
+  try {
+    // 1. If SheetJS (XLSX) is available, export high-fidelity .xlsx
+    if (typeof XLSX !== 'undefined') {
+      const wb = XLSX.utils.table_to_book(table, { sheet: "Individual Reps" });
+      XLSX.writeFile(wb, `${fileName}.xlsx`);
+      if (btn) {
+        btn.innerHTML = '<span>âœ“</span> Downloaded!';
+        setTimeout(() => { btn.innerHTML = origHtml; }, 2000);
+      }
+      return;
+    }
 
+    // 2. Pure JavaScript Fallback: XML / HTML Excel Spreadsheet (.xls)
+    const tableClone = table.cloneNode(true);
+    let html = `
+      <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+      <head>
+        <!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>
+        <x:Name>Individual Reps</x:Name>
+        <x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions>
+        </x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
+        <meta charset="utf-8">
+        <style>
+          table { border-collapse: collapse; width: 100%; font-family: 'Segoe UI', Calibri, sans-serif; font-size: 11pt; }
+          th { background-color: #1e1b4b; color: #ffffff; font-weight: bold; border: 1px solid #4338ca; text-align: center; padding: 8px; }
+          td { border: 1px solid #cbd5e1; padding: 6px; text-align: center; }
+          tfoot tr { background-color: #e0e7ff; font-weight: bold; }
+        </style>
+      </head>
+      <body>
+        <h2 style="font-family: sans-serif; color: #1e1b4b;">51Talk Big Team 01 â€” Individual Sales Specialists Performance Report</h2>
+        <p style="font-family: sans-serif; font-size: 10pt; color: #64748b;">Exported on: ${new Date().toLocaleString()}</p>
+        ${tableClone.outerHTML}
+      </body>
+      </html>
+    `;
+    const blob = new Blob([html], { type: 'application/vnd.ms-excel;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${fileName}.xls`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
 
+    if (btn) {
+      btn.innerHTML = '<span>âœ“</span> Downloaded!';
+      setTimeout(() => { btn.innerHTML = origHtml; }, 2000);
+    }
+  } catch (err) {
+    console.error('Excel Export Error:', err);
+    if (btn) btn.innerHTML = origHtml;
+    alert('Export error. Please ensure table is visible.');
+  }
+}
 
+function exportIndividualTableToImage() {
+  const tableView = document.getElementById('individualTableView');
+  const cardsView = document.getElementById('individualCards');
+  if (!tableView) return;
 
+  const btn = document.getElementById('btnExportImage');
+  const origHtml = btn ? btn.innerHTML : '';
+  if (btn) btn.innerHTML = '<span>â³</span> Capturing...';
 
+  // Make sure table view is displayed for capture
+  const wasHidden = tableView.classList.contains('hidden');
+  if (wasHidden) {
+    tableView.classList.remove('hidden');
+    if (cardsView) cardsView.classList.add('hidden');
+  }
 
+  const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  const fileName = `Big_Team_01_Individual_Performance_${dateStr}.png`;
 
+  function doCapture() {
+    if (typeof html2canvas !== 'undefined') {
+      html2canvas(tableView, {
+        backgroundColor: '#0a0e1a',
+        scale: 2, // High resolution (retina 2x)
+        logging: false,
+        useCORS: true,
+        windowWidth: 1400
+      }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = fileName;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
 
+        // Restore view if it was in cards view
+        if (wasHidden) {
+          tableView.classList.add('hidden');
+          if (cardsView) cardsView.classList.remove('hidden');
+        }
 
+        if (btn) {
+          btn.innerHTML = '<span>âœ“</span> Downloaded!';
+          setTimeout(() => { btn.innerHTML = origHtml; }, 2000);
+        }
+      }).catch(err => {
+        console.error('Image capture error:', err);
+        if (wasHidden) {
+          tableView.classList.add('hidden');
+          if (cardsView) cardsView.classList.remove('hidden');
+        }
+        if (btn) btn.innerHTML = origHtml;
+        alert('Could not capture image. You can use Print Screen or Ctrl+P.');
+      });
+    } else {
+      // Dynamic load fallback
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+      script.onload = () => { doCapture(); };
+      script.onerror = () => {
+        if (wasHidden) {
+          tableView.classList.add('hidden');
+          if (cardsView) cardsView.classList.remove('hidden');
+        }
+        if (btn) btn.innerHTML = origHtml;
+        alert('Image export library could not be loaded.');
+      };
+      document.head.appendChild(script);
+    }
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Small timeout to allow DOM layout reflow if unhidden
+  setTimeout(doCapture, 100);
+}

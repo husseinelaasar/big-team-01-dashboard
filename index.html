@@ -345,7 +345,13 @@
           </select>
         </div>
 
-        <div style="display: flex; gap: 10px;">
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <button id="btnExportExcel" onclick="exportIndividualTableToExcel()" class="view-btn" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;" title="Download Table as Excel Spreadsheet (.xlsx)">
+            <span>ðŸ“Š</span> Export Excel
+          </button>
+          <button id="btnExportImage" onclick="exportIndividualTableToImage()" class="view-btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s;" title="Download Table as High-Resolution Image (.png)">
+            <span>ðŸ–¼ï¸</span> Export Image
+          </button>
           <button id="viewToggleCards" class="view-btn active">Cards View</button>
           <button id="viewToggleTable" class="view-btn">Table View</button>
         </div>
@@ -711,6 +717,8 @@
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="dashboard.js?v=20260927_181314"></script>
 </body>
 </html>

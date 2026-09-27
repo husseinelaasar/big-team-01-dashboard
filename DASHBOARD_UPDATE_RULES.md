@@ -520,3 +520,26 @@ Tables must render 100% visible on standard executive laptops and desktop displa
 5. **Footer Totals Standard:**
    * **Cumulative Metrics (Maintained):** Total Cash, Target, Ach %, Pace Exp Cash, Upgrade M2, Base, 20% Upgrade Target (`${totalTarget} (${totalNeeded} needed)`), Conversion Rate, Coverage %, and Contracts.
    * **Individual Commission Columns (Cleared):** `Expected Commission`, `Next Band Commission`, and `Gap to Next` display `â€”` (dash) in the footer row, as commission schemes are evaluated on individual representative tiers rather than summed as team totals.
+
+---
+
+### 11. Individual Reps Table Export Specification (Excel & Image)
+
+#### A. Architecture & Dual-Export Capability:
+The Individual Performance Deep Dive (`#tab-individuals`) provides one-click export controls to enable leadership to share, archive, and audit sales rep metrics instantly:
+
+| Export Option | Primary Engine | Fallback Engine | Output Format | Default File Naming |
+| :--- | :--- | :--- | :---: | :--- |
+| **Export Excel** | SheetJS (`XLSX.js`) | Styled XML / HTML Spreadsheet Blob | `.xlsx` / `.xls` | `Big_Team_01_Individual_Performance_YYYYMMDD.xlsx` |
+| **Export Image** | `html2canvas` (Scale 2x) | Dynamic CDN injection / Browser Print | `.png` (Hi-Res) | `Big_Team_01_Individual_Performance_YYYYMMDD.png` |
+
+#### B. Implementation Specifications:
+1. **Interactive Controls Placement:**
+   * Located directly in the `#tab-individuals` control bar adjacent to Cards/Table view toggles.
+   * `ðŸ“Š Export Excel`: Styled in emerald (`rgba(16, 185, 129, 0.15)`), triggers full table parse.
+   * `ðŸ–¼ï¸ Export Image`: Styled in sky cyan (`rgba(56, 189, 248, 0.15)`), renders 2x pixel density retina image.
+2. **View State Auto-Negotiation (Image Export):**
+   * If the user is currently on **Cards View**, `exportIndividualTableToImage()` seamlessly un-hides `#individualTableView`, renders the canvas snapshot, and immediately restores the user back to Cards View without disrupting UX.
+3. **Data Integrity & Footer Preservation:**
+   * Exported files contain all 17 active performance columns (Rank, Rep, Team, Cash, Target, Ach %, Pace, Upgrade M2, Base, 20% Goal, Conv %, Expected Commission, Next Band, Gap, Touch Freq, Contracts, Status).
+   * Footers correctly display official operational totals and dash placeholders for individual-tier commission cells.
