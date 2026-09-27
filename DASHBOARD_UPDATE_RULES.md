@@ -1,4 +1,4 @@
-﻿# 🚨 DASHBOARD_UPDATE_RULES.md
+# 🚨 DASHBOARD_UPDATE_RULES.md
 ## Executive Dashboard Standard Operating Procedure (SOP) & Update Rules
 
 > [!CAUTION]
@@ -594,3 +594,27 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
      - **📸 حفظ كصورة (Export Image)**: Glowing cyan button (`linear-gradient(135deg, #0284c7, #38bdf8)`) with box-shadow.
 2. **Synchronized State Feedback:**
    * Both header buttons and banner buttons synchronize during export: showing `⏳ Exporting...` / `⏳ Capturing...` and `✓ Downloaded!`.
+
+---
+
+### 🛡️ 11. Tab Navigation & Defensive Initialization Architecture
+
+> [!IMPORTANT]
+> **PERMANENT RESILIENCE RULE FOR NAVIGATION & APP INITIALIZATION:**
+> To ensure that the top navigation tabs (`Executive Overview`, `Small Teams`, `Individual Reps`, `Renewal vs Upgrade Detail`, `SOP Compliance`, `Actionable Recommendations`, `Operations Master`) can **never** become unresponsive or unclickable:
+
+1. **Dual-Layered Click Handlers (HTML Inline + Event Delegation):**
+   * All navigation buttons in `index.html` must define both `data-tab="..."` and direct inline `onclick="switchTab('...')"` attributes.
+   * `switchTab(tabKey)` must always be explicitly exported to `window.switchTab = switchTab;`.
+   * This guarantees that tabs switch instantly even before external scripts finish executing or if a secondary render routine encounters an issue.
+
+2. **Scoped Loop Variables Rule:**
+   * In `renderIndividualsTab(model)` and all table-rendering loops, all calculation variables (`deltaPace`, `paceStatusClr`, `pacePct`, `isAhead`, `isNear`) must be explicitly declared within the function and loop scope before use.
+
+3. **Isolated Defensive Execution in `DOMContentLoaded`:**
+   * Every component render function (`renderKPIs`, `renderTeamBars`, `renderOverviewTable`, `renderSmallTeamsTab`, `renderIndividualsTab`, `renderBreakdownTab`, `renderSOPTab`, `renderRecommendationsTab`, `renderOperationsTab`, `initPersonalRepSelect`) must be wrapped in its own isolated `try...catch` block.
+   * A failure in one view or calculation must **never** prevent subsequent tabs, event bindings (`setupEvents`), or the loading overlay from running.
+
+4. **Non-Blocking Loader & Pointer-Events:**
+   * `.loader-overlay.fade-out` must enforce `pointer-events: none !important; display: none !important;` to ensure that a fading or dismissed overlay can never intercept user clicks.
+
