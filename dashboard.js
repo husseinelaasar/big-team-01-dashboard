@@ -255,9 +255,9 @@ function buildDataModel() {
   const sectorAchPct = 67.52; // Official Sector Ach % (from SS Lens æŒ‡æ ‡çœ‹æ¿ Col I: Cash-Refund ACHIEVEMENT)
   const totalTarget = 225600; // Official Sector Cash Target (from SS Lens æŒ‡æ ‡çœ‹æ¿ Col F)
   const totalContracts = 170; // Official Sector Total Orders (from SS Lens æŒ‡æ ‡çœ‹æ¿ Col D)
-  const totalUpgradeM2 = 29; // Official POOL_Detail16 Total M2 Upgrades
-  const totalNormalRenewals = 103; // Official POOL_Detail16 Total Normal Renewals
-  const totalUpgradeBase = 687; // Official POOL_Detail16 Total Upgrade Base
+  const totalUpgradeM2 = 34; // Official Student_Detail32 Total M2 Upgrades
+  const totalNormalRenewals = 131; // Official Student_Detail32 Total Normal Renewals
+  const totalUpgradeBase = 673; // Official Student_Detail32 Total Upgrade Base
   const totalUpgrade20Target = Math.ceil(totalUpgradeBase * 0.20);
   const totalUpgrade20Needed = Math.max(0, totalUpgrade20Target - totalUpgradeM2);
 
@@ -3661,6 +3661,7 @@ function downloadSelectedRepLeads() {
   link.click();
   document.body.removeChild(link);
 }
+
 
 
 

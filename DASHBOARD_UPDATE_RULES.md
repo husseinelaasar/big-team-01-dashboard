@@ -40,8 +40,8 @@ A universal, one-click Windows launcher is provided for instant updates without 
      * Extracts sales cash (Gross, Refund, Net), orders, and individual targets from `Individual_Rankings`.
      * Associates individual refunds with active sales reps to display next to their names.
      * Computes small team totals strictly from active team members' net cash (protecting small teams from unassigned/leaver refunds).
-     * Extracts Upgrade M2 metrics from `POOL_Detail16` and M2 Touch Frequency from `POOL22`.
-     * Updates `dashboard.js` data matrices (`REPS_DATA`, `POOL22_M2_COVERAGE`, `daysPassed`).
+     * Extracts Upgrade M2 metrics dynamically from `Student_Detail32` (or `POOL_Detail16`): Sector Total Upgrade M2 renewals (34 renewals across all accounts, or 33 across the 25 active sales reps + 1 former rep `EGSS-hussienmo`), Sector Upgrade Base (673 leads), and Sector Normal Renewals (131).
+     * Updates `dashboard.js` data matrices (`REPS_DATA`, `POOL22_M2_COVERAGE`, `daysPassed`, `totalUpgradeM2`, `totalUpgradeBase`, `totalNormalRenewals`).
      * Dynamically updates `index.html` headers, download timestamps, and Day benchmark pins.
   2. **Step 2:** Executes [`generate_rep_leads_fast.ps1`](file:///d:/Lens/Dashboard/generate_rep_leads_fast.ps1):
      * Reads all 4 raw detail sheets from `All in one Master.xlsx`.
