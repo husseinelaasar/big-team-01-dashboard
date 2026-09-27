@@ -348,3 +348,65 @@ flowchart TD
   * Stage, commit with standardized audit message, and push to GitHub (`origin/master`).
   * Verify live site status at `https://husseinelaasar.github.io/big-team-01-dashboard/`.
 
+---
+
+### 🛡️ 6. Troubleshooting & System Integrity (Resolution of Infinite Loader Bug)
+
+> [!CAUTION]
+> **INCIDENT ROOT CAUSE ANALYSIS — STUCK ON LOADING SPINNER:**
+> On Sep 27, 2026, the dashboard link became stuck on the loading spinner (*"Big Team 01 — Synchronizing Performance Intelligence..."*).
+> 
+> **Technical Investigation Revealed Two Simultaneous Fatal Errors:**
+> 1. **Duplicate Block Accumulation (`dashboard.js` bloat to 12,580 lines):**
+>    * Multiple sequential executions of older scripts had appended operations logic repeatedly, resulting in `const MASTER_OPERATIONS_DATA = { ... };` being redeclared **5 separate times** in global scope.
+>    * In JavaScript, redeclaring a `const` throws a fatal `Uncaught SyntaxError: Identifier 'MASTER_OPERATIONS_DATA' has already been declared`.
+> 2. **Unclosed String Literal in Legacy Recommendations Code:**
+>    * A dangling fragment (`detail: s.daysLeft + ' days left. Gap:`) was present without a closing quotation mark, throwing `SyntaxError: Invalid or unexpected token`.
+> 3. **Consequence:**
+>    * Because these errors occurred at parse-time, the browser completely aborted script execution.
+>    * `window.addEventListener('DOMContentLoaded', ...)` was never called, meaning the loader removal instruction (`loader.classList.add('fade-out')`) never fired, leaving the screen permanently frozen.
+
+#### Architectural Safeguards Implemented:
+1. **Single-Declaration Enforcement in `dashboard.js`:**
+   * Clean architectural pipeline maintained at strictly **~3,700 lines** (down from 12,580 lines).
+   * Every constant (`DATA_SOURCES`, `TL_MAPPING`, `NEW_TARGETS`, `OFFICIAL_TEAMS_DATA`, `REPS_DATA`, `DAILY_RECOMMENDATIONS`, `MASTER_OPERATIONS_DATA`) and function is declared **EXACTLY ONCE**.
+   * Code order: Configuration & Targets $\rightarrow$ Data Model $\rightarrow$ Render Functions $\rightarrow$ Operations Master $\rightarrow$ Navigation $\rightarrow$ Initialization.
+2. **Autonomous Loader Failsafe Timer in `index.html`:**
+   * Embedded directly after `#loader` to guarantee dismissal even if any script or external network asset fails:
+     ```html
+     <script>
+       // Bulletproof Failsafe: Dismiss loader after 1.2s under all circumstances
+       setTimeout(function() {
+         var l = document.getElementById('loader');
+         if (l) {
+           l.classList.add('fade-out');
+           setTimeout(function() { if (l && l.parentNode) l.parentNode.removeChild(l); }, 500);
+         }
+       }, 1200);
+     </script>
+     ```
+3. **Tab Class Uniformity:**
+   * All tab view containers in `index.html` must strictly use `class="tab-content"` (not `class="tab-pane"`), matching the `switchTab(tabKey)` selector in `dashboard.js`.
+
+---
+
+### ⚙️ 7. PowerShell 5.1 Compatibility & Script Performance Standards
+
+To guarantee that [`update_dashboard.ps1`](file:///d:/Lens/Dashboard/update_dashboard.ps1) and [`UPDATE.bat`](file:///d:/Lens/Dashboard/UPDATE.bat) execute seamlessly on standard Windows environments without requiring PowerShell Core (pwsh 7+):
+
+1. **No Null-Coalescing Operators (`??`):**
+   * PowerShell 5.1 does not support `??`. Use explicit conditional syntax:
+     ```powershell
+     # Correct:
+     $cohort = if ($c['D']) { $c['D'] } else { 'Unfixed' }
+     # Banned:
+     $cohort = ($c['D'] ?? 'Unfixed')
+     ```
+2. **Safe Regex Pattern Quoting:**
+   * Regex strings passed to `[regex]::Replace()` must always be enclosed in **single quotes** (`'...'`) to prevent PowerShell from interpreting `[` or `$` as variable/array syntax.
+3. **Safe Unicode & Character Encoding:**
+   * In scripts, avoid raw multibyte characters that can be misread in Windows ANSI/code-page environments. Use `[char]::ConvertFromUtf32(0x1F534)` for emojis or save with UTF-8 BOM.
+4. **Performance Benchmark:**
+   * The unified single-pass updater v2.0 completes full extraction (KPIs + Operations + 25 Rep CSVs + Git deploy) in **20 to 26 seconds** (a 78% reduction from legacy ~120s runtime).
+
+
