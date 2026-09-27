@@ -369,15 +369,15 @@ flowchart TD
   * **Dedicated Reps Ledger (`$repsFile`):** Must specifically match `*Area_Big*Team_Small*Team_SS*.xlsx`.
 * **Concurrency Protection:** Must use `[System.IO.FileShare]::ReadWrite` in all file streams so extraction never fails when files are simultaneously open in Microsoft Excel.
 
-#### Gate 2: Sector KPI Extraction Gate (`指标看板`)
-* **Target Worksheet:** Sheet index 1 / `rId1` (`指标看板`).
+#### Gate 2: Sector KPI Extraction Gate (`Area_Big_Team_Small_Team_SS` / `指标看板`)
+* **Primary Worksheet:** Sheet `Area_Big_Team_Small_Team_SS` (Row 2 / Total Row) in `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx`.
 * **Row 2 Metric Extraction:**
-  * **Column C (`Cash-Refund`):** Sector Net Cash Revenue MTD ($152,326).
-  * **Column I (`Cash-Refund ACHIEVEMENT`):** Sector Cash Achievement % (67.52%).
-  * **Column D (`CONTRACTS`):** Total Sector Contracts / Orders (170).
-  * **Column F (`Basic Cash Target`):** Sector Target ($225,600).
+  * **Column G (`Cash-Refund`):** Sector Net Cash Revenue MTD ($175,273.49).
+  * **Column M (`Cash-Refund ACHIEVEMENT`):** Sector Cash Achievement % (77.69%).
+  * **Column H (`CONTRACTS`):** Total Sector Contracts / Orders (195).
+  * **Column J (`Basic Cash Target`):** Sector Target ($225,600).
 * **Mathematical Invariant Check:**
-  $$\left|\frac{\text{Col C}}{\text{Col F}} - \text{Col I}\right| < 0.0001 \quad \left(\frac{\$152,326.49}{\$225,600} = 67.52\%\right)$$
+  $$\left|\frac{\text{Col G}}{\text{Col J}} - \text{Col M}\right| < 0.0001 \quad \left(\frac{\$175,273.49}{\$225,600} = 77.69\%\right)$$
   If this equality fails, extraction must trigger a schema mismatch alert.
 
 #### Gate 3: Upgrade M2 & Pool Reconciliation Gate (`Student_Detail32`)
@@ -517,7 +517,7 @@ To guarantee that [`update_dashboard.ps1`](file:///d:/Lens/Dashboard/update_dash
 2. **Cascade Search Hierarchy:**
    * **Renewals & Upgrade M2:** Look for `Student_Detail30` $\rightarrow$ fallback to `Student_Detail32` $\rightarrow$ fallback to `POOL_Detail16`.
    * **Effective M2 Coverage:** Look for `Student_Detail25` $\rightarrow$ fallback to `Student_Detail26` $\rightarrow$ fallback to `POOL23`.
-3. **Validation Threshold:** Confirm that `Upgrade M2 Total == 34` and `Upgrade Base == 673` on Day 27.
+3. **Validation Threshold:** Confirm that `Upgrade M2 Total == 34` and `Upgrade Base == 765` on Day 27 (759 active reps + 6 former rep leads from official 51Talk photo pivot).
 
 #### D. Git Deploy Error Isolation (Preventing `NativeCommandError`):
 1. **Root Cause:** In PowerShell 5.1 with `$ErrorActionPreference = "Stop"`, Git commands that write informational messages (such as `To https://github.com/...` or remote pack progress) to `stderr` will throw a fatal `NativeCommandError` if captured via `2>&1` or run under strict error preferences.
