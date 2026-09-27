@@ -9,6 +9,8 @@
 > 3. Individual active rep refunds are explicitly displayed next to their names, while leaver/unassigned refunds are charged **ONLY** to Big Team 01 (Sector Total) and **NEVER** deducted from Small Teams.
 > 4. Early Upgrade M2 Touch Frequency / Call Intensity metrics (POOL22) are mathematically clarified alongside the 100% unique student coverage.
 > 5. The live dashboard is fully synchronized and verified.
+> 6. Sector Total Net Cash Revenue MTD ($152,326) and Cash Achievement % (67.52%) MUST be extracted directly from sheet **`指标看板`** (Col C & Col I) of `SS Lens Dashboard`.
+> 7. Upgrade M2 renewals and pool base MUST be dynamically parsed from **`Student_Detail32`** (or `POOL_Detail16`), separating sector macro totals (34 renewals / 673 base) from active reps totals (33 renewals), with zero hardcoded constants.
 
 ---
 
@@ -142,14 +144,31 @@ $$\text{Team 30 Achievement} = \frac{\$13,240}{\$15,980} \times 100 = \mathbf{82
 
 #### Upgrade M2 Key Metrics:
 1. **Upgrade Student Base (`Upgrade Base`):**
-   * **Official Source:** Pivot Table (`M-2 Cumulative Upgrade Students`) in `POOL_Detail16`.
-   * **Big Team 01 Sector Total:** **763 students** (EGSS05: 232, EGSS01: 200, EGSS13: 186, EGSS10: 112, EGSS30: 33).
+   * **Official Source:** Sheet **`Student_Detail32`** (or `POOL_Detail16`) filtered by `POOL IN DETAIL == Upgrade M2`.
+   * **Big Team 01 Sector Base:** **673 leads** (Day 27).
 2. **Early Upgrade Conversion Rate (`Upgrade M2 Conversion Rate`):**
    $$\text{Upgrade M2 Conversion Rate \%} = \frac{\text{Upgrade M2 Contracts}}{\text{Upgrade Base}} \times 100$$
-   * **Source:** Sheet **`POOL_Detail16`** / **`POOL15`**.
+   * **Source:** Sheet **`Student_Detail32`** (or `POOL_Detail16`) / **`POOL15`**.
 3. **20% Upgrade Target Contracts & Needed Gap:**
    $$\text{20\% Target Contracts} = \lceil \text{Upgrade Base} \times 0.20 \rceil$$
    $$\text{20\% Upgrade Needed} = \max(0, \text{20\% Target Contracts} - \text{Upgrade M2 Achieved})$$
+
+#### 🔄 Upgrade M2 Counting & Macro Reconciliation Protocol:
+
+> [!IMPORTANT]
+> **RECONCILING SECTOR MACRO TOTALS (34) VS ACTIVE REPS TOTALS (33):**
+> 1. **Filter Criteria in `Student_Detail32`:**
+>    * Column F (`POOL IN DETAIL`): `"Upgrade M2"`
+>    * Column J (`Is This Month Renew`): `"1"`
+> 2. **Exact Day 27 Renewal Distribution (34 Total Renewals):**
+>    * **Active Sales Representatives (33 Renewals):**
+>      * EGSS-mahmoud04 (4), EGSS-hayamhassan (4), EGSS-ibrahimismaiel (4), EGSS-mohamedha (4), EGSS-amrsafwat (3), EGSS-abdelrahmannasef (2), EGSS-ehabzaky01 (2), EGLP-shahdmahmoud (1), EGSS-abdelrhmanshehata (1), EGSS-adhmgadallah (1), EGSS-ashraqatal (1), EGSS-khaledgonam (1), EGSS-mahmoudkhamis (1), EGSS-marwaahmed (1), EGSS-negma (1), EGSS-nohayoussry (1), EGSS-samira01 (1).
+>    * **Former / Inactive Reps (1 Renewal):**
+>      * `EGSS-hussienmo` (Student ID: `63833199`, Team: `ME-EGSS01`) accounts for 1 renewal.
+>    * **Sector Macro Total:** $33 \text{ (Active)} + 1 \text{ (Former)} = \mathbf{34 \text{ Upgrades}}$.
+> 3. **Elimination of Frozen Constants:**
+>    * Under no circumstances should `totalUpgradeM2`, `totalNormalRenewals`, or `totalUpgradeBase` be hardcoded in `dashboard.js`.
+>    * All three constants MUST be dynamically computed and injected directly from `Student_Detail32` on every automated run.
 
 ---
 
@@ -241,3 +260,81 @@ Linear pacing is strictly superseded by the official non-linear cumulative targe
 ### 🚫 9. Strict Security & SM Scheme Isolation
 * **Security Boundary:** All calculations, cards, formulas, or links related to the Senior Manager Commission Scheme (`sm-scheme.*`) or SM Portal are strictly isolated and excluded from the public executive dashboard (`index.html`), scripts, and GitHub repositories.
 * The public dashboard remains 100% operational and team-facing.
+
+---
+
+### 🛡️ 10. Automated Pre-Flight & Post-Flight Validation Quality Gates
+
+To prevent data corruption, desynchronized metrics, or display regressions, every dashboard update execution must pass through **5 Mandatory Quality Gates**:
+
+```mermaid
+flowchart TD
+    G1["Gate 1: Ingestion & File Freshness"] --> G2["Gate 2: Sector KPI Direct Extraction (指标看板)"]
+    G2 --> G3["Gate 3: Upgrade M2 Dynamic Reconciliation (Student_Detail32)"]
+    G3 --> G4["Gate 4: Small Teams Protection & Safety Guards"]
+    G4 --> G5["Gate 5: Code Injection, Cache-Buster & Deployment"]
+
+    style G1 fill:#6366f1,color:#fff
+    style G2 fill:#38bdf8,color:#fff
+    style G3 fill:#10b981,color:#fff
+    style G4 fill:#f59e0b,color:#fff
+    style G5 fill:#8b5cf6,color:#fff
+```
+
+#### Gate 1: Ingestion & File Freshness Gate
+* **Source Priority:** Search `Dashboard_Input_Files` $\rightarrow$ `Downloads` $\rightarrow$ `D:\Lens`.
+* **File Separation:**
+  * **Main Lens Dashboard (`$lensFile`):** `SS Lens Dashboard*.xlsx` (must strictly EXCLUDE `*Area_Big*Team_Small*Team_SS*`).
+  * **Dedicated Reps Ledger (`$repsFile`):** Must specifically match `*Area_Big*Team_Small*Team_SS*.xlsx`.
+* **Concurrency Protection:** Must use `[System.IO.FileShare]::ReadWrite` in all file streams so extraction never fails when files are simultaneously open in Microsoft Excel.
+
+#### Gate 2: Sector KPI Extraction Gate (`指标看板`)
+* **Target Worksheet:** Sheet index 1 / `rId1` (`指标看板`).
+* **Row 2 Metric Extraction:**
+  * **Column C (`Cash-Refund`):** Sector Net Cash Revenue MTD ($152,326).
+  * **Column I (`Cash-Refund ACHIEVEMENT`):** Sector Cash Achievement % (67.52%).
+  * **Column D (`CONTRACTS`):** Total Sector Contracts / Orders (170).
+  * **Column F (`Basic Cash Target`):** Sector Target ($225,600).
+* **Mathematical Invariant Check:**
+  $$\left|\frac{\text{Col C}}{\text{Col F}} - \text{Col I}\right| < 0.0001 \quad \left(\frac{\$152,326.49}{\$225,600} = 67.52\%\right)$$
+  If this equality fails, extraction must trigger a schema mismatch alert.
+
+#### Gate 3: Upgrade M2 & Pool Reconciliation Gate (`Student_Detail32`)
+* **Target Worksheet:** Sheet `Student_Detail32` (or `POOL_Detail16`).
+* **Exact Filtering Rules:**
+  * `POOL IN DETAIL == Upgrade M2` AND `Is This Month Renew == 1`.
+* **Macro Sector vs Active Reps Invariant:**
+  $$\text{Sector Upgrade M2 (34)} = \sum \text{Active Reps Upgrades (33)} + \text{Former Reps Upgrades (1: EGSS-hussienmo)}$$
+* **Pool Base Extraction:** Count total rows with `POOL IN DETAIL == Upgrade M2` (673 leads).
+* **Normal Renewals Extraction:** Count total rows with `Is This Month Renew == 1` and `POOL IN DETAIL != Upgrade M2` (131 renewals).
+* **Zero Hardcoding Enforcement:** The script must replace `totalUpgradeM2`, `totalUpgradeBase`, and `totalNormalRenewals` dynamically. Static constants are strictly banned.
+
+#### Gate 4: Small Teams Protection & Safety Guards
+* **Active Rep Refund Rule:** Associate individual clawbacks strictly with the responsible active sales rep, displaying the red refund tag next to their name.
+* **Small Team Net Cash Rule:** Small Team net revenue is strictly the sum of its active team members' net cash. Leaver refunds are NEVER deducted from small teams.
+* **Ranking Invariant:** Verify that Small Teams are sorted descending by `officialAch` from highest to lowest.
+* **Safety Guards:**
+  * Active reps parsed count $\ge 20$.
+  * Total reconciled cash $> \$0$.
+  * If either safety guard fails, **ABORT** update immediately and preserve existing verified figures.
+
+#### Gate 5: Code Injection, HTML Sync & Cache-Buster Deployment Gate
+* **JavaScript Model Injection:** Dynamically inject updated data structures into `dashboard.js`:
+  * `OFFICIAL_TEAMS_DATA`
+  * `REPS_DATA`
+  * `POOL22_M2_COVERAGE`
+  * `daysPassed`
+  * `totalCash` ($152,326)
+  * `sectorAchPct` (67.52%)
+  * `totalTarget` ($225,600)
+  * `totalContracts` (170)
+  * `totalUpgradeM2` (34)
+  * `totalUpgradeBase` (673)
+  * `totalNormalRenewals` (131)
+* **Static HTML Synchronization:** Synchronize placeholder tags in `index.html` (`#totalCash`, `#cashPct`, `#achPct`, `#totalContracts`, `#contractsSub`, `#baseLeads`, `#repsPct`) to eliminate visual render flicker before JavaScript execution.
+* **Zero-Cache Deployment:**
+  * Generate unique timestamped cache-buster token: `?v=yyyyMMdd_HHmmss`.
+  * Append token to script and stylesheet paths in `index.html`.
+  * Stage, commit with standardized audit message, and push to GitHub (`origin/master`).
+  * Verify live site status at `https://husseinelaasar.github.io/big-team-01-dashboard/`.
+
