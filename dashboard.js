@@ -70,11 +70,11 @@ const NEW_TARGETS = {
 
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS30": { gross: 19147, refund: 1750, cash: 17397, target: 15980, contracts: 22, officialAch: 108.9 },
-  "EGSS13": { gross: 47419, refund: 2068, cash: 45351, target: 47060, contracts: 47, officialAch: 96.4 },
-  "EGSS05": { gross: 71210, refund: 880, cash: 70330, target: 76590, contracts: 78, officialAch: 91.8 },
-  "EGSS01": { gross: 29939, refund: 2974, cash: 26965, target: 50760, contracts: 30, officialAch: 53.1 },
-  "EGSS10": { gross: 17296, refund: 2063, cash: 15233, target: 35210, contracts: 18, officialAch: 43.3 },
+  "EGSS30": { gross: 19147, refund: 0, cash: 19147, target: 15980, contracts: 22, officialAch: 119.8 },
+  "EGSS13": { gross: 47419, refund: 0, cash: 47419, target: 47060, contracts: 47, officialAch: 100.8 },
+  "EGSS05": { gross: 70578, refund: 0, cash: 70578, target: 76590, contracts: 77, officialAch: 92.2 },
+  "EGSS01": { gross: 29939, refund: 1660, cash: 28279, target: 50760, contracts: 30, officialAch: 55.7 },
+  "EGSS10": { gross: 17296, refund: 0, cash: 17296, target: 35210, contracts: 18, officialAch: 49.1 },
 };
 
 const REPS_DATA = [
@@ -166,13 +166,13 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 77.69% vs 80% benchmark. Push $16776/day to stay on track.', time: '20260927_213406' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260927_213406' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-mahmoudkhamis (52.3%). Schedule targeted coaching sessions today.', time: '20260927_213406' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-alihesham01 (140.3%), EGSS-ibrahimismaiel (145.4%). Recognize in team channel!', time: '20260927_213406' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $6659/day', detail: 'Currently at 43.3% (15233/35210). Gap: $19977.', time: '20260927_213406' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 101 more renewals', detail: 'Current: 34/673 (5.1%). 20% target = 135. Focus on high-base reps.', time: '20260927_213406' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $194748 (86.3%). 3 days left. Daily need: $16776. Push all pending deals!', time: '20260927_213406' },
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 77.69% vs 80% benchmark. Push $16776/day to stay on track.', time: '20260927_214825' },
+  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260927_214825' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-mahmoudkhamis (52.3%). Schedule targeted coaching sessions today.', time: '20260927_214825' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-alihesham01 (140.3%), EGSS-ibrahimismaiel (145.4%). Recognize in team channel!', time: '20260927_214825' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $5971/day', detail: 'Currently at 49.1% (17296/35210). Gap: $17914.', time: '20260927_214825' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 101 more renewals', detail: 'Current: 34/673 (5.1%). 20% target = 135. Focus on high-base reps.', time: '20260927_214825' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $194748 (86.3%). 3 days left. Daily need: $16776. Push all pending deals!', time: '20260927_214825' },
 ];
 
 // =========================================================================
@@ -4130,6 +4130,7 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
 
 
 
