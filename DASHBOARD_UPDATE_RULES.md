@@ -496,3 +496,27 @@ The expected individual commission payout for each Sales Specialist (SS) is calc
      - Footer totals: Displays aggregate commission accrued for Sector Total and Team Total.
   4. **Sorting:**
      - Added `ðŸ’° Expected Commission (Highest Payout)` option to `#sortFilter` for instant leaderboard sorting by earnings.
+
+---
+
+### 10. Zero-Scroll Viewport Layout & Compact Table Standard
+
+#### A. Architecture Principle (Zero Horizontal Scroll):
+Tables must render 100% visible on standard executive laptops and desktop displays (>=1100px) without generating horizontal scrollbars or sliders (`overflow-x: hidden`).
+
+#### B. Column Width & Content Engineering Rules:
+1. **Header Text Wrapping (`white-space: normal`):**
+   * Table headers must allow clean multi-line wrapping with `line-height: 1.15;` and concise wording (e.g. `20% Goal (Needed)`, `Exp. Comm ($)`, `Next Band ($)`, `Gap ($)`).
+   * Prevents single-line header text from artificially forcing columns to 150px+.
+2. **Compact Padding & Typography:**
+   * Cell padding standard: `padding: 5px 3px;` for body cells, `6px 3px;` for headers.
+   * Font size: `0.72rem` monospace for numerical values; monospace font `JetBrains Mono` for rapid scanning.
+3. **Rep Name Streamlining:**
+   * Technical prefixes (`EGSS-`, `EOSS-`, `EGLP-`) are stripped inside table rows via `r.name.replace(/^(EGSS|EOSS|EGLP)-/i, '')` because the dedicated `Team` column already displays the team identifier.
+   * The full official name is preserved in the HTML `title` tooltip attribute for hover inspection.
+4. **Proportional Column Ordering (Natural Flow):**
+   * Standard order: `Rank -> Rep Name -> Team -> Cash ($) -> Target ($) -> Ach % -> Pace -> Upgrade M2 -> Base -> ðŸŽ¯ 20% Goal (Needed) -> Conv % -> ðŸ’° Exp. Comm ($) -> ðŸš€ Next Band ($) -> ðŸŽ¯ Gap ($) -> Touch Freq -> Contr. -> Status`.
+   * Puts the core Upgrade M2 and 20% Goal metrics immediately adjacent to performance indicators, preventing them from being pushed off-screen.
+5. **Footer Totals Standard:**
+   * **Cumulative Metrics (Maintained):** Total Cash, Target, Ach %, Pace Exp Cash, Upgrade M2, Base, 20% Upgrade Target (`${totalTarget} (${totalNeeded} needed)`), Conversion Rate, Coverage %, and Contracts.
+   * **Individual Commission Columns (Cleared):** `Expected Commission`, `Next Band Commission`, and `Gap to Next` display `â€”` (dash) in the footer row, as commission schemes are evaluated on individual representative tiers rather than summed as team totals.
