@@ -176,6 +176,81 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $179573 (79.6%). 3 days left. Daily need: $21328. Push all pending deals!', time: '20260927_171019' },
 ];
 
+// =========================================================================
+// 51Talk SS Commission Scheme Intelligence Engine
+// =========================================================================
+const SS_COMMISSION_TIERS = [
+  { min: 22000, max: Infinity, rate: 0.040, label: '4.0%', name: 'Tier 7' },
+  { min: 18000, max: 22000,    rate: 0.035, label: '3.5%', name: 'Tier 6' },
+  { min: 12000, max: 18000,    rate: 0.030, label: '3.0%', name: 'Tier 5' },
+  { min: 8000,  max: 12000,    rate: 0.025, label: '2.5%', name: 'Tier 4' },
+  { min: 6000,  max: 8000,     rate: 0.020, label: '2.0%', name: 'Tier 3' },
+  { min: 4000,  max: 6000,     rate: 0.015, label: '1.5%', name: 'Tier 2' },
+  { min: 0,     max: 4000,     rate: 0.005, label: '0.5%', name: 'Tier 1' }
+];
+
+function calculateSSCommission(netCash, teamAch, teamTarget, teamCash) {
+  const cash = Math.max(0, netCash || 0);
+  
+  let currentTierIndex = -1;
+  for (let i = 0; i < SS_COMMISSION_TIERS.length; i++) {
+    const t = SS_COMMISSION_TIERS[i];
+    if (cash >= t.min) {
+      currentTierIndex = i;
+      break;
+    }
+  }
+  if (currentTierIndex === -1) currentTierIndex = SS_COMMISSION_TIERS.length - 1;
+  const currentTier = SS_COMMISSION_TIERS[currentTierIndex];
+  
+  // Small Team Bonus: +0.5% if Small Team achieved >= 100%
+  const hasTeamBonus = (teamAch !== undefined && teamAch !== null && teamAch >= 100);
+  const teamBonusRate = hasTeamBonus ? 0.005 : 0.0;
+  
+  const baseRate = currentTier.rate;
+  const effectiveRate = baseRate + teamBonusRate;
+  const basePayout = Math.round(cash * baseRate * 100) / 100;
+  const bonusPayout = Math.round(cash * teamBonusRate * 100) / 100;
+  const totalPayout = Math.round((basePayout + bonusPayout) * 100) / 100;
+  
+  let nextTier = null;
+  let remainingToNext = 0;
+  let expectedNextEarning = 0;
+  let nextRatePct = '';
+  
+  if (currentTierIndex > 0) {
+    nextTier = SS_COMMISSION_TIERS[currentTierIndex - 1];
+    remainingToNext = Math.max(0, nextTier.min - cash);
+    const nextEffectiveRate = nextTier.rate + teamBonusRate;
+    expectedNextEarning = Math.round(nextTier.min * nextEffectiveRate * 100) / 100;
+    nextRatePct = (nextTier.rate * 100).toFixed(1) + '%' + (hasTeamBonus ? ' + 0.5% Bonus' : '');
+  }
+  
+  const teamGapTo100 = (teamTarget && teamCash && teamCash < teamTarget) ? (teamTarget - teamCash) : 0;
+  
+  return {
+    netCash: cash,
+    rawCash: netCash,
+    currentTier,
+    tierName: currentTier.name,
+    baseRate,
+    baseRatePct: (baseRate * 100).toFixed(1) + '%',
+    hasTeamBonus,
+    teamBonusRate,
+    effectiveRate,
+    effectiveRatePct: (effectiveRate * 100).toFixed(1) + '%',
+    basePayout,
+    bonusPayout,
+    totalPayout,
+    nextTier,
+    remainingToNext,
+    expectedNextEarning,
+    nextRatePct,
+    teamAch: teamAch !== undefined ? Math.round(teamAch * 10) / 10 : 0,
+    teamGapTo100
+  };
+}
+
 // Build Unified Data Intelligence Model
 function buildDataModel() {
   const daysPassed = 27; // Current MTD Day (Sep 19, 2026)
@@ -259,6 +334,15 @@ function buildDataModel() {
     t.upgradeRate = t.upgradeBase > 0 ? ((t.upgradeM2 / t.upgradeBase) * 100) : 0;
     t.upgrade20Target = Math.ceil(t.upgradeBase * 0.20);
     t.upgrade20Needed = Math.max(0, t.upgrade20Target - t.upgradeM2);
+    const off = (typeof OFFICIAL_TEAMS_DATA !== 'undefined' && OFFICIAL_TEAMS_DATA[tk]) ? OFFICIAL_TEAMS_DATA[tk] : null;
+    t.officialAch = (off && off.officialAch !== undefined) ? off.officialAch : (t.target > 0 ? ((t.cash / t.target) * 100) : 0);
+  });
+
+  // Calculate Commission for each individual rep
+  individuals.forEach(rep => {
+    const t = teams[rep.team];
+    const teamAch = t ? (t.officialAch !== undefined ? t.officialAch : t.achievement) : 0;
+    rep.commission = calculateSSCommission(rep.cash, teamAch, t ? t.target : 0, t ? t.cash : 0);
   });
 
   // Reconciled Sector Totals (Official Data Center Reconciliation & POOL_Detail16)
@@ -810,6 +894,23 @@ function renderSmallTeamsTab(model) {
           </span>
           <strong style="color: ${teamSopAvg >= 80 ? '#10b981' : '#f59e0b'}; font-family: var(--font-mono); font-size: 0.95rem;">${teamSopAvg}%</strong>
         </div>
+        <div style="grid-column: span 3; margin-top: 6px;">
+          ${((t.officialAch !== undefined ? t.officialAch : t.achievement) >= 100) ? `
+            <div style="background: linear-gradient(90deg, rgba(16, 185, 129, 0.22), rgba(6, 182, 212, 0.15)); border: 1.5px solid #10b981; border-radius: var(--radius-sm); padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 10px rgba(16, 185, 129, 0.2);">
+              <span style="font-size: 0.82rem; font-weight: 800; color: #34d399; display: flex; align-items: center; gap: 6px;">
+                ðŸ”¥ TEAM TARGET MET (${fmtPct(t.officialAch !== undefined ? t.officialAch : t.achievement)}) â€” +0.5% BONUS UNLOCKED!
+              </span>
+              <span style="font-size: 0.72rem; color: #a7f3d0; font-weight: 700; background: rgba(16, 185, 129, 0.25); padding: 2px 8px; border-radius: 4px;">All reps earn +0.5% Booster</span>
+            </div>
+          ` : `
+            <div style="background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,255,255,0.14); border-radius: var(--radius-sm); padding: 6px 12px; display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.74rem; color: var(--text-muted);">
+                ðŸŽ¯ Reach 100% to unlock <strong style="color: #6ee7b7;">+0.5% Team Commission Booster</strong> for all reps (Gap: <strong style="color: #f59e0b;">${fmt(Math.max(0, t.target - t.cash))}</strong>)
+              </span>
+              <span style="font-size: 0.72rem; color: #f59e0b; font-weight: 800; font-family: var(--font-mono);">${fmtPct(t.officialAch !== undefined ? t.officialAch : t.achievement)}</span>
+            </div>
+          `}
+        </div>
       </div>
       <div style="margin-top: 10px;">
         <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; font-weight: 600;">Team Member Roster (Sorted by Cash Ach %)</div>
@@ -871,7 +972,8 @@ function renderIndividualsTab(model) {
   }
 
   // 3. Sort reps (Always defaults to Cash Achievement %)
-  if (sortFilter === 'upg-rate-desc') filtered.sort((a, b) => b.upgradeRate - a.upgradeRate || b.achievement - a.achievement);
+  if (sortFilter === 'comm-desc') filtered.sort((a, b) => b.commission.totalPayout - a.commission.totalPayout || b.cash - a.cash);
+  else if (sortFilter === 'upg-rate-desc') filtered.sort((a, b) => b.upgradeRate - a.upgradeRate || b.achievement - a.achievement);
   else if (sortFilter === 'cover-rate-desc') filtered.sort((a, b) => b.coverRate - a.coverRate || b.achievement - a.achievement);
   else if (sortFilter === 'ach-desc') filtered.sort((a, b) => b.achievement - a.achievement || b.cash - a.cash || b.contracts - a.contracts);
   else if (sortFilter === 'cash-desc') filtered.sort((a, b) => b.cash - a.cash || b.achievement - a.achievement);
@@ -907,6 +1009,29 @@ function renderIndividualsTab(model) {
         <div><span style="color: var(--text-muted);">Target:</span> <span style="color: var(--text-secondary); font-family: var(--font-mono);">${fmt(r.target)}</span></div>
         <div><span style="color: var(--text-muted);">Ach:</span> <strong style="color: ${r.statusColor}; font-family: var(--font-mono);">${fmtPct(r.achievement)}</strong></div>
         <div><span style="color: var(--text-muted);">M2 Conv %:</span> <strong style="color: #a78bfa; font-family: var(--font-mono);">${fmtPct(r.upgradeRate)}</strong></div>
+      </div>
+
+      <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(15, 23, 42, 0.85)); border: 1.5px solid rgba(16, 185, 129, 0.35); border-radius: var(--radius-sm); padding: 10px 12px; margin-bottom: 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.2);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+          <span style="color: #6ee7b7; font-size: 0.8rem; font-weight: 800; display: flex; align-items: center; gap: 5px;">
+            ðŸ’° Expected Commission:
+          </span>
+          <strong style="color: #10b981; font-family: var(--font-mono); font-size: 1.05rem;">${fmt(r.commission.totalPayout)}</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; color: var(--text-secondary); margin-bottom: 6px;">
+          <span>Scheme Tier: <strong style="color: #fff;">${r.commission.baseRatePct}</strong> (${r.commission.tierName})</span>
+          <span>Team Booster: <strong style="color: ${r.commission.hasTeamBonus ? '#10b981' : 'var(--text-muted)'};">${r.commission.hasTeamBonus ? '+0.5% (Unlocked ðŸ”¥)' : '0% (Team <100%)'}</strong></span>
+        </div>
+        ${r.commission.nextTier ? `
+          <div style="font-size: 0.72rem; color: #38bdf8; background: rgba(56, 189, 248, 0.09); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 4px; padding: 5px 8px; display: flex; justify-content: space-between; align-items: center;">
+            <span>ðŸš€ <strong>Next Band (${r.commission.nextRatePct}):</strong> Earn <strong>${fmt(r.commission.expectedNextEarning)}</strong></span>
+            <span style="color: ${r.commission.remainingToNext <= 1000 ? '#facc15' : '#fff'}; font-weight: 800;">Need: ${fmt(r.commission.remainingToNext)}</span>
+          </div>
+        ` : `
+          <div style="font-size: 0.72rem; color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.1); border: 1px solid rgba(250, 204, 21, 0.3); border-radius: 4px; padding: 4px 8px;">
+            ðŸ† Top Commission Band Achieved (4.0%)
+          </div>
+        `}
       </div>
 
       <div style="background: rgba(255,255,255,0.02); padding: 10px; border-radius: var(--radius-sm); font-size: 0.8rem; border: 1px solid var(--border-glass);">
@@ -966,6 +1091,35 @@ function renderIndividualsTab(model) {
         </span>
         <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(expRepCash)}</div>
       </td>
+      <td style="font-family: var(--font-mono); text-align: left; vertical-align: middle; background: rgba(16, 185, 129, 0.03); border-left: 1px solid rgba(16, 185, 129, 0.2); border-right: 1px solid rgba(16, 185, 129, 0.2); min-width: 230px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+          <strong style="color: #10b981; font-size: 0.98rem;">${fmt(r.commission.totalPayout)}</strong>
+          <span style="font-size: 0.72rem; color: #a5b4fc; background: rgba(99,102,241,0.18); padding: 2px 7px; border-radius: 4px; border: 1px solid rgba(99,102,241,0.3); font-weight: 700;">
+            ${r.commission.baseRatePct}${r.commission.hasTeamBonus ? ' + 0.5% ðŸš€' : ''}
+          </span>
+        </div>
+        ${r.commission.hasTeamBonus ? `
+          <div style="font-size: 0.68rem; color: #34d399; font-weight: 700; margin-top: 3px; display: flex; align-items: center; gap: 4px;">
+            <span>ðŸ”¥ Team >100% (+0.5% Bonus: <strong>${fmt(r.commission.bonusPayout)}</strong>)</span>
+          </div>
+        ` : `
+          <div style="font-size: 0.66rem; color: var(--text-muted); margin-top: 2px;">
+            Base: ${fmt(r.commission.basePayout)} (Team ${r.commission.teamAch}% &lt; 100%)
+          </div>
+        `}
+        ${r.commission.nextTier ? `
+          <div style="font-size: 0.72rem; color: #38bdf8; margin-top: 5px; border-top: 1px dashed rgba(255,255,255,0.09); padding-top: 3px; display: flex; justify-content: space-between; align-items: center;">
+            <span>Next: <strong>${fmt(r.commission.expectedNextEarning)}</strong> (${r.commission.nextRatePct})</span>
+            <span style="color: ${r.commission.remainingToNext <= 1000 ? '#facc15' : '#94a3b8'}; font-weight: 800; background: ${r.commission.remainingToNext <= 1000 ? 'rgba(250,204,21,0.15)' : 'rgba(255,255,255,0.05)'}; padding: 1px 5px; border-radius: 3px;">
+              Need ${fmt(r.commission.remainingToNext)}
+            </span>
+          </div>
+        ` : `
+          <div style="font-size: 0.72rem; color: #facc15; font-weight: 800; margin-top: 4px;">
+            ðŸ† Max Tier Reached (4.0%)
+          </div>
+        `}
+      </td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'};">${r.upgradeM2}</td>
       <td style="font-family: var(--font-mono);">${r.upgradeBase}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${r.upgrade20Target} <span style="font-size: 0.75rem; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">(${r.upgrade20Needed} needed)</span></td>
@@ -1000,6 +1154,10 @@ function renderIndividualsTab(model) {
               ${sectorDeltaPace >= 0 ? '+' : ''}${sectorDeltaPace}%
             </span>
             <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(sectorExpCash)}</div>
+          </td>
+          <td style="font-family: var(--font-mono); color: #10b981; font-weight: 800; text-align: left; font-size: 0.95rem; background: rgba(16, 185, 129, 0.08); border-left: 1px solid rgba(16, 185, 129, 0.3); border-right: 1px solid rgba(16, 185, 129, 0.3);">
+            <div>${fmt(filtered.reduce((sum, r) => sum + (r.commission ? r.commission.totalPayout : 0), 0))}</div>
+            <div style="font-size: 0.68rem; color: #a7f3d0; font-weight: 600;">Total Payout Accrued</div>
           </td>
           <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
           <td style="font-family: var(--font-mono);">${s.totalUpgradeBase}</td>
@@ -1042,6 +1200,10 @@ function renderIndividualsTab(model) {
               ${teamDeltaPace >= 0 ? '+' : ''}${teamDeltaPace}%
             </span>
             <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(teamExpCash)}</div>
+          </td>
+          <td style="font-family: var(--font-mono); color: #10b981; font-weight: 800; text-align: left; font-size: 0.95rem; background: rgba(16, 185, 129, 0.08); border-left: 1px solid rgba(16, 185, 129, 0.3); border-right: 1px solid rgba(16, 185, 129, 0.3);">
+            <div>${fmt(filtered.reduce((sum, r) => sum + (r.commission ? r.commission.totalPayout : 0), 0))}</div>
+            <div style="font-size: 0.68rem; color: #a7f3d0; font-weight: 600;">Team Total Payout</div>
           </td>
           <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${teamUpgradeM2}</td>
           <td style="font-family: var(--font-mono);">${teamUpgradeBase}</td>

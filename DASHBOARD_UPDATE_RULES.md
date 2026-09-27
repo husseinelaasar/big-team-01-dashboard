@@ -1,4 +1,4 @@
-# 🚨 DASHBOARD_UPDATE_RULES.md
+﻿# 🚨 DASHBOARD_UPDATE_RULES.md
 ## Executive Dashboard Standard Operating Procedure (SOP) & Update Rules
 
 > [!CAUTION]
@@ -462,5 +462,37 @@ To guarantee that [`update_dashboard.ps1`](file:///d:/Lens/Dashboard/update_dash
      ```
    * Ensures that normal Git standard error stream output does not trigger script abortion or batch error codes.
 
+---
 
+### 9. 51Talk SS Commission Scheme & Team Booster Specification
 
+#### A. Commission Scheme Banding Tiers (Individual Net Cash Revenue):
+The expected individual commission payout for each Sales Specialist (SS) is calculated dynamically based on their individual Net Cash Revenue (USD):
+
+| Tier | Net Cash Revenue Band (USD) | Base Commission Rate | Description |
+| :--- | :--- | :---: | :--- |
+| **Tier 7** | **$22,000 and above** | **4.0%** | Pinnacle Band |
+| **Tier 6** | **$18,000 â€“ $21,999.99** | **3.5%** | High Producer |
+| **Tier 5** | **$12,000 â€“ $17,999.99** | **3.0%** | Senior Target Band |
+| **Tier 4** | **$8,000 â€“ $11,999.99** | **2.5%** | Benchmark Band |
+| **Tier 3** | **$6,000 â€“ $7,999.99** | **2.0%** | Growth Band |
+| **Tier 2** | **$4,000 â€“ $5,999.99** | **1.5%** | Developing Band |
+| **Tier 1** | **$0 â€“ $3,999.99** | **0.5%** | Foundation Band |
+
+#### B. Small Team Target Booster (+0.5%):
+- **Rule:** When any Small Team achieves **$\ge 100\%$** of its team target (e.g. `ME-EGSS30` at 103.4%), all active Sales Specialists in that team unlock an **additional +0.5% commission booster** applied to their entire net cash revenue.
+- **Formula:**
+  $$\text{Effective Rate} = \text{Base Rate} + (\text{Team Ach} \ge 100\% \ ?\ 0.5\% : 0\%)$$
+  $$\text{Total Payout} = \text{Net Cash} \times \text{Effective Rate}$$
+- **UI Visibility:**
+  1. **Small Teams Tab (`#tab-teams`):**
+     - When team ach $\ge 100\%$: Glowing green booster banner: `ðŸ”¥ TEAM TARGET MET (>100%) â€” +0.5% BONUS UNLOCKED!`
+     - When team ach $< 100\%$: Actionable sprint message showing cash gap needed to unlock the +0.5% bonus for all team members.
+  2. **Individual Cards View (`#tab-individuals`):**
+     - Prominent Expected Commission badge with Base Rate + Team Booster indicator (`+ 0.5% ðŸš€`).
+     - Next Band projection showing expected dollar earnings upon stepping into the next tier and exact remaining cash required.
+  3. **Individual Table View (`#individualFullTable`):**
+     - Column 8: `ðŸ’° Expected Commission & Next Band (USD)` displaying total payout in USD, scheme tier, booster status, and next tier gap.
+     - Footer totals: Displays aggregate commission accrued for Sector Total and Team Total.
+  4. **Sorting:**
+     - Added `ðŸ’° Expected Commission (Highest Payout)` option to `#sortFilter` for instant leaderboard sorting by earnings.
