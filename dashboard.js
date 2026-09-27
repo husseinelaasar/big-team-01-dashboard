@@ -1,4 +1,4 @@
-/* =========================================================================
+﻿/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -166,13 +166,13 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 77.69% vs 80% benchmark. Push $16776/day to stay on track.', time: '20260927_214825' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260927_214825' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-mahmoudkhamis (52.3%). Schedule targeted coaching sessions today.', time: '20260927_214825' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-alihesham01 (140.3%), EGSS-ibrahimismaiel (145.4%). Recognize in team channel!', time: '20260927_214825' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $5971/day', detail: 'Currently at 49.1% (17296/35210). Gap: $17914.', time: '20260927_214825' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 101 more renewals', detail: 'Current: 34/673 (5.1%). 20% target = 135. Focus on high-base reps.', time: '20260927_214825' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $194748 (86.3%). 3 days left. Daily need: $16776. Push all pending deals!', time: '20260927_214825' },
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 77.69% vs 80% benchmark. Push $16776/day to stay on track.', time: '20260927_221040' },
+  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260927_221040' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-mahmoudkhamis (52.3%). Schedule targeted coaching sessions today.', time: '20260927_221040' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-alihesham01 (140.3%), EGSS-ibrahimismaiel (145.4%). Recognize in team channel!', time: '20260927_221040' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $5971/day', detail: 'Currently at 49.1% (17296/35210). Gap: $17914.', time: '20260927_221040' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 119 more renewals', detail: 'Current: 34/765 (4.4%). 20% target = 153. Focus on high-base reps.', time: '20260927_221040' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $194748 (86.3%). 3 days left. Daily need: $16776. Push all pending deals!', time: '20260927_221040' },
 ];
 
 // =========================================================================
@@ -354,7 +354,7 @@ function buildDataModel() {
   const totalContracts = 195; // from æŒ‡æ ‡çœ‹æ¿ Col D
   const totalUpgradeM2 = 34; // from Student_Detail32
   const totalNormalRenewals = 131; // from Student_Detail32
-  const totalUpgradeBase = 765; // from official 51Talk Data Center pivot (Day 27)
+  const totalUpgradeBase = 765; // from Student_Detail32
   const totalUpgrade20Target = Math.ceil(totalUpgradeBase * 0.20);
   const totalUpgrade20Needed = Math.max(0, totalUpgrade20Target - totalUpgradeM2);
 
@@ -3106,6 +3106,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4130,6 +4132,8 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
 
 
 
