@@ -251,9 +251,10 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official Data Center Reconciliation & POOL_Detail16)
-  const totalCash = 115234; // Official Sector Net Cash
-  const totalTarget = 225600; // Official Sector Cash Target
-  const totalContracts = 136; // Official Sector Total Orders
+  const totalCash = 152326; // Official Sector Net Cash (from SS Lens æŒ‡æ ‡çœ‹æ¿ Col C: Cash-Refund)
+  const sectorAchPct = 67.52; // Official Sector Ach % (from SS Lens æŒ‡æ ‡çœ‹æ¿ Col I: Cash-Refund ACHIEVEMENT)
+  const totalTarget = 225600; // Official Sector Cash Target (from SS Lens æŒ‡æ ‡çœ‹æ¿ Col F)
+  const totalContracts = 170; // Official Sector Total Orders (from SS Lens æŒ‡æ ‡çœ‹æ¿ Col D)
   const totalUpgradeM2 = 29; // Official POOL_Detail16 Total M2 Upgrades
   const totalNormalRenewals = 103; // Official POOL_Detail16 Total Normal Renewals
   const totalUpgradeBase = 687; // Official POOL_Detail16 Total Upgrade Base
@@ -272,7 +273,7 @@ function buildDataModel() {
       totalUpgradeBase,
       totalUpgrade20Target,
       totalUpgrade20Needed,
-      achievement: ((totalCash / totalTarget) * 100),
+      achievement: typeof sectorAchPct !== 'undefined' ? sectorAchPct : ((totalCash / totalTarget) * 100),
       projectedCash: Math.round((totalCash / daysPassed) * daysInMonth),
       totalGap: totalTarget - totalCash,
       dailyNeeded: Math.round((totalTarget - totalCash) / daysLeft),
@@ -280,7 +281,7 @@ function buildDataModel() {
       activeReps: individuals.length,
       zeroReps: individuals.filter(r => r.cash === 0).length,
       targetPacePct: expectedPace,
-      pacingGapPct: Math.round((((totalCash / totalTarget) * 100) - expectedPace) * 10) / 10,
+      pacingGapPct: Math.round(((typeof sectorAchPct !== 'undefined' ? sectorAchPct : ((totalCash / totalTarget) * 100)) - expectedPace) * 10) / 10,
       daysPassed,
       daysLeft,
       daysInMonth
@@ -3658,6 +3659,7 @@ function downloadSelectedRepLeads() {
   link.click();
   document.body.removeChild(link);
 }
+
 
 
 

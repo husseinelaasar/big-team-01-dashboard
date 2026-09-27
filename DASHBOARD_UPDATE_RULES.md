@@ -55,9 +55,17 @@ A universal, one-click Windows launcher is provided for instant updates without 
 ---
 
 ### 📊 3. Sales Cash Revenue, Contracts, Target Updates & Small Team Sorting
+0. **Official Sector Total Cash & Achievement Source (MANDATORY RULE):**
+   * Total Cash Revenue MTD MUST BE EXTRACTED DIRECTLY from `SS Lens Dashboard` workbook, subsheet **`指标看板`** (Row 2):
+     * **Column C (`Cash-Refund`):** Official Sector Total Cash Revenue MTD.
+     * **Column I (`Cash-Refund ACHIEVEMENT`):** Official Sector Cash Achievement %.
+     * **Column D (`CONTRACTS`):** Official Sector Total Contracts / Orders.
+     * **Column F (`Basic Cash Target`):** Official Sector Target ($225,600).
+   * Under no circumstances should sector total cash or achievement % be hardcoded or derived from any other source.
 1. **Designated Source Sheets:**
-   * **Individual Sales Reps:** Sheet **`Individual_Rankings`**
-   * **Official Small Teams:** Sheet **`Small_Team`**
+   * **Sector Metrics:** Sheet **`指标看板`** (First sheet of `SS Lens Dashboard*.xlsx`).
+   * **Individual Sales Reps:** Dedicated file `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx` (Sheet `Area_Big_Team_Small_Team_SS`).
+   * **Official Small Teams:** Dedicated file `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx` aggregated under Small Team Protection Rule.
 2. **Rep Data Extraction (`Individual_Rankings`):**
    * **Rep Name:** Column B (`Sales Representative`).
    * **Gross Cash:** Column C (`Revenue Cash` / Col 2).
