@@ -37,8 +37,12 @@ if %BUILD_STATUS% EQU 0 (
     echo    Live URL: https://husseinelaasar.github.io/big-team-01-dashboard/
     echo  =================================================================================
     echo.
-    echo  Opening live dashboard in your default browser...
+    echo  Opening dashboard in your default browser...
+    start "" "%~dp0index.html"
     start https://husseinelaasar.github.io/big-team-01-dashboard/
+    echo.
+    echo  [NOTE] Local dashboard opened instantly! 
+    echo  GitHub Pages updates online in ~45 seconds (press Ctrl+F5 if cached).
 ) else (
     color 0C
     echo.
