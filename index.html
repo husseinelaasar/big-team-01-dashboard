@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260927_181314">
+  <link rel="stylesheet" href="styles.css?v=20260927_185500">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -124,31 +124,31 @@
 
     <!-- Tab Bar Navigation -->
     <div class="tab-bar">
-      <button class="tab active" data-tab="overview">
+      <button class="tab active" data-tab="overview" onclick="switchTab('overview')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
         Executive Overview
       </button>
-      <button class="tab" data-tab="teams">
+      <button class="tab" data-tab="teams" onclick="switchTab('teams')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         Small Teams (5)
       </button>
-      <button class="tab" data-tab="individuals">
+      <button class="tab" data-tab="individuals" onclick="switchTab('individuals')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         Individual Reps (23)
       </button>
-      <button class="tab" data-tab="breakdown">
+      <button class="tab" data-tab="breakdown" onclick="switchTab('breakdown')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
         Renewal vs Upgrade Detail
       </button>
-      <button class="tab" data-tab="sop">
+      <button class="tab" data-tab="sop" onclick="switchTab('sop')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
         SOP Compliance
       </button>
-      <button class="tab" data-tab="recommendations">
+      <button class="tab" data-tab="recommendations" onclick="switchTab('recommendations')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         Actionable Recommendations
       </button>
-      <button class="tab" data-tab="operations">
+      <button class="tab" data-tab="operations" onclick="switchTab('operations')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
         Operations Master
         <span style="background: linear-gradient(135deg, #10b981, #06b6d4); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">TRIAL</span>
@@ -738,7 +738,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script src="dashboard.js?v=20260927_181314"></script>
+  <script src="dashboard.js?v=20260927_185500"></script>
 </body>
 </html>
 

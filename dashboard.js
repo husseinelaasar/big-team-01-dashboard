@@ -1,4 +1,4 @@
-﻿﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -1018,7 +1018,12 @@ function renderIndividualsTab(model) {
 
   // 4. Render Cards
   container.innerHTML = '';
+  const pacePct = model.summary.targetPacePct || 46;
   filtered.forEach((r, idx) => {
+    const deltaPace = Math.round((r.achievement - pacePct) * 10) / 10;
+    const isAhead = r.achievement >= pacePct;
+    const isNear = r.achievement >= (pacePct - 10);
+    const paceStatusClr = isAhead ? '#10b981' : (isNear ? '#f59e0b' : '#f43f5e');
     const repRank = teamFilter === 'all' ? sectorRankMap.get(r.name) : teamRankMap.get(r.name);
     const cleanRepName = r.name.replace(/^(ME-|EGSS\d+-|EOSS\d+-|EGLP\d+-)/i, '');
 
@@ -3701,6 +3706,7 @@ function downloadSelectedRepLeads() {
 // NAVIGATION, EVENTS & APPLICATION INITIALIZATION
 // =========================================================================
 
+window.switchTab = switchTab;
 function switchTab(tabKey) {
   document.querySelectorAll('.tab').forEach(b => {
     if (b.dataset.tab === tabKey) b.classList.add('active');
@@ -3760,31 +3766,57 @@ function setupEvents(model) {
 
 // App Initialization
 window.addEventListener('DOMContentLoaded', () => {
-  const model = buildDataModel();
-  window.__model = model;
+  let model;
+  try {
+    model = buildDataModel();
+    window.__model = model;
+  } catch (err) {
+    console.error('CRITICAL: Failed to buildDataModel:', err);
+  }
 
-  renderKPIs(model);
-  renderTeamBars(model);
-  renderOverviewTable(model);
-  renderSmallTeamsTab(model);
-  renderIndividualsTab(model);
-  renderBreakdownTab(model);
-  renderSOPTab();
-  renderRecommendationsTab(model);
-  renderOperationsTab();
-  initPersonalRepSelect();
+  const renderSteps = [
+    { name: 'renderKPIs', fn: () => renderKPIs(model) },
+    { name: 'renderTeamBars', fn: () => renderTeamBars(model) },
+    { name: 'renderOverviewTable', fn: () => renderOverviewTable(model) },
+    { name: 'renderSmallTeamsTab', fn: () => renderSmallTeamsTab(model) },
+    { name: 'renderIndividualsTab', fn: () => renderIndividualsTab(model) },
+    { name: 'renderBreakdownTab', fn: () => renderBreakdownTab(model) },
+    { name: 'renderSOPTab', fn: () => renderSOPTab() },
+    { name: 'renderRecommendationsTab', fn: () => renderRecommendationsTab(model) },
+    { name: 'renderOperationsTab', fn: () => renderOperationsTab() },
+    { name: 'initPersonalRepSelect', fn: () => initPersonalRepSelect() }
+  ];
 
-  setupEvents(model);
-  checkSheetSyncStatus();
+  renderSteps.forEach(step => {
+    try {
+      step.fn();
+    } catch (e) {
+      console.error('Error executing ' + step.name + ':', e);
+    }
+  });
+
+  try {
+    setupEvents(model);
+  } catch (e) {
+    console.error('Error in setupEvents:', e);
+  }
+
+  try {
+    checkSheetSyncStatus();
+  } catch (e) {
+    console.error('Error in checkSheetSyncStatus:', e);
+  }
 
   // Smooth Loader Fade-Out
   setTimeout(() => {
     const loader = document.getElementById('loader');
     if (loader) {
       loader.classList.add('fade-out');
-      setTimeout(() => loader.remove(), 600);
+      setTimeout(() => {
+        if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+      }, 500);
     }
-  }, 400);
+  }, 300);
 });
 
 // Sheet Synchronization Status Inspector
