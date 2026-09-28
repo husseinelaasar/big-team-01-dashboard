@@ -1,21 +1,14 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGLP-saraht | Generated: 2026-09-28 13:17
+# Representative: EGLP-saraht | Generated: 2026-09-28 13:26
 
-=== 1. SOP PENDING TASKS (2) ===
+=== 1. SOP PENDING TASKS (0) ===
 Student_ID,Task_Name,Expiration_Time
-58565770,"Round 3 Habit Cultivation (1st Unit Assessment)",20260927 18:55:00
-58565770,"English Club Booking",20260929 18:55:00
 
-=== 2. UNFIXED TEACHER BINDING (2) ===
-Student_ID,Pool_Cohort,Classes,Priority
-58565770,"M1 Pool",0,"HIGH BINDING"
-64409920,"M0 Pool",0,"CRITICAL (0 Classes)"
+=== 2. UNFIXED TEACHER BINDING LEADS (0) ===
+Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 
-=== 3. CLASS CONSUMPTION RESCUE (2) ===
-Student_ID,Pool_Cohort,Classes,Action
-60361741,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
-58565770,"M1 Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (0) ===
+Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 
-=== 4. ENGLISH CLUB LEADS () ===
-Student_ID,Level,Completed,Status
-58565770,"0",0,"Booking Required"
+=== 4. ENGLISH CLUB ACTIONABLE LEADS (0) ===
+Student_ID,Level,Completed_Classes,Booking_Status
