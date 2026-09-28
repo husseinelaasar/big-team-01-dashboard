@@ -243,7 +243,7 @@ $$\text{Team 13 Achievement} = \frac{\$47,418.68}{\$47,060} \times 100 = \mathbf
 >      - 6 Top Metric Cards: Actual (46), Base (765), Conv Rate (6.01%), 20% Goal (153), Remaining (107), Touch Intensity (74.8%).
 >      - Small Teams Upgrade Comparison Cards (5 teams with 20% goal progress bars).
 >      - Strategic Tactical Playbook (4 priorities: High-Base Zero Alert, 20% Sprint Candidates, Top Champions, Outreach Deficit).
->      - Interactive Team filter, multi-criteria sorting with **Default Sort: Highest Coverage / Touch Intensity % to Lowest (`cov-desc`)**, and instant rep search.
+>      - Interactive Team filter, multi-criteria sorting with **Default Sort: Highest Conversion Rate % to Lowest (`rate-desc`)**, and instant rep search.
 
 ---
 
@@ -855,27 +855,45 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
 > **STRICT SCOPE RULE:** This section and the Executive Overview tab must **NEVER** contain individual sales rep tables, cards, names, or individual breakdowns. All individual metrics are strictly confined to the dedicated **Individual Reps Deep Dive** (`#tab-individuals`).
 
 #### Architecture of the Achievement Summary & Strategic Performance Section:
-1. **Three Macro Executive KPI Cards (Totals Level):**
+1. **Three Macro Executive KPI Cards (Row 1 — Totals Level):**
    * **⭐ Sector Net Cash Standing:** Total cash MTD ($179,942 / $225,600, 79.76% achieved), total target gap ($45,658), and exact daily run-rate required ($22,829/day across final 2 days).
    * **🏆 Small Teams Target Distribution:** Teams meeting target (≥100%: ME-EGSS30 at 126.2%, ME-EGSS13 at 100.8%), teams within striking distance (≥90%: ME-EGSS05 at 94.4%), and teams in final sprint (ME-EGSS01, ME-EGSS10).
-   * **📦 Total Orders & Early Upgrades:** 201 orders (Avg $895/order), 46 M2 upgrades (6.01% conversion rate), 155 normal renewals.
+   * **📦 Total Orders & Revenue Velocity:** 201 orders (Avg $895/order), 46 early upgrades vs 155 normal renewals, 22.9% upgrade order share.
 
-2. **Executive Sector Feedback Note (Senior Manager: Saber Hussien):**
-   * Contextual macro synthesis dynamically evaluating sector pace vs the official Day 28 benchmark (87.0%).
+2. **🚀 Big Team 01 Early Upgrade (M2) Macro Intelligence & 20% Target Milestone Hub (Row 2):**
+   * **Dedicated Sector Upgrade Command Strip:**
+     - **Card 1 (Sector Upgrade Conversion):** 46 upgrades achieved from 765 eligible student pool = **6.01% Conversion Rate**.
+     - **Card 2 (20% Milestone Deficit):** Benchmark target is 153 contracts (20% of 765). Progress: 46/153 (30.1% achieved), remaining deficit is **-107 contracts** (highlighted in rose).
+     - **Card 3 (Daily Velocity Required):** **53.5 upgrades/day** needed over final 2 days to achieve the 20% benchmark milestone (vs 1.64/day historical MTD velocity).
+     - **Card 4 (Contract Share & Retention Leverage):** Early upgrades account for **22.9% of all sector contracts**, generating immediate high-margin revenue and extending customer lifecycle retention.
+   * **Small Teams Early Upgrade Ranking & Conversion Leaderboard Grid (5 Small Teams — Strictly No Individuals):**
+     - Ranks all 5 small teams by Conversion Rate %:
+       1. 🥇 **ME-EGSS13 (Mohamedha):** 8.29% Conv Rate (16/193 Base), 20% Target: 39 (23 needed), Sector Share: 34.8%. (Sector Upgrade Benchmark Leader)
+       2. 🥈 **ME-EGSS05 (Ibrahimismaiel):** 6.85% Conv Rate (10/146 Base), 20% Target: 30 (20 needed), Sector Share: 21.7%. (High-Conversion Upgrade Engine)
+       3. 🥉 **ME-EGSS30 (AdhmGadAllah):** 5.71% Conv Rate (8/140 Base), 20% Target: 28 (20 needed), Sector Share: 17.4%. (Consistent Conversion Contributor)
+       4. **ME-EGSS01 (Ashraqatal):** 5.37% Conv Rate (8/149 Base), 20% Target: 30 (22 needed), Sector Share: 17.4%. (Steady Pace, Sprint Focus)
+       5. **ME-EGSS10 (Mohamed06):** 1.77% Conv Rate (4/226 Base), 20% Target: 46 (42 needed), Sector Share: 8.7%. (Massive Untapped Opportunity — holds 29.5% of Big Team pool).
+     - Each card features a live visual progress bar to the 20% milestone target.
 
-3. **Small Teams & Totals Master Performance Table (`#bigTeamSummaryTable`):**
-   * Expansive content-fitting layout (`min-width: 1420px; table-layout: auto !important`).
-   * **Table Columns (9 Columns):**
+3. **Executive Sector Feedback Note (Senior Manager: Saber Hussien):**
+   * Contextual macro synthesis dynamically evaluating sector pace vs the official Day 28 benchmark (87.0%) combined with actionable Early Upgrade Acceleration Directives.
+
+4. **Small Teams & Totals Master Performance Table (`#bigTeamSummaryTable`):**
+   * Expansive content-fitting layout (`min-width: 1560px; table-layout: auto !important`).
+   * **Table Columns (12 Columns):**
      1. `#` (Rank by Cash Achievement % descending)
      2. `Small Team & Team Leader` (with colored identity dot & TL crown)
      3. `Net Cash MTD` ($)
      4. `Target` ($)
      5. `Ach %` (official percentage with status color coding)
      6. `Benchmark Variance` (Day 28 benchmark variance % and pacing badge)
-     7. `Orders (M2)` (Total orders and early upgrade breakdown)
-     8. `Target Gap` (Remaining dollar gap to 100% target or `✓ MET`)
-     9. `Detailed Strategic Feedback & Operational Directives` (Rich, actionable directives covering team velocity, pipeline status, and immediate managerial next steps).
+     7. `Orders` (Total orders count)
+     8. `Upgrade Base` (Eligible M-2 leads pool)
+     9. `M2 Upgrades (Conv %)` (Actual upgrades achieved & conversion rate %)
+     10. `20% Goal (Gap)` (20% target milestone contracts and remaining gap)
+     11. `Target Gap` (Remaining dollar gap to 100% net cash target or `✓ MET`)
+     12. `Detailed Strategic Feedback & Operational Directives` (Rich, actionable directives covering both Net Cash revenue run-rate AND specific Early Upgrade operational levers per team).
    * **Table Footer (`tfoot` Totals Row):**
-     - Summarizes **⭐ BIG TEAM 01 — SECTOR TOTAL (Saber Hussien)** with full consolidated figures ($179,942 cash, $225,600 target, 79.76% ach, 201 orders, $45,658 gap) and overarching sector operational synthesis.
+     - Consolidated figures: **$179,942 Net Cash**, **$225,600 Target**, **79.76% Ach**, **201 Orders**, **765 Upgrade Base**, **46 M2 Upgrades (6.01%)**, **153 (Gap: -107) 20% Target**, **$45,658 Cash Gap**, and Senior Manager sector synthesis.
 
 

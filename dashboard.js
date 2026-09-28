@@ -166,12 +166,12 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 79.76% vs 87% benchmark. Push $22829/day to stay on track.', time: '20260928_151018' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260928_151018' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260928_151018' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-ibrahimismaiel (145.4%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260928_151018' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260928_151018' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $192795 (85.5%). 2 days left. Daily need: $22829. Push all pending deals!', time: '20260928_151018' },
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 79.76% vs 87% benchmark. Push $22829/day to stay on track.', time: '20260928_151713' },
+  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260928_151713' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260928_151713' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-ibrahimismaiel (145.4%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260928_151713' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260928_151713' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $192795 (85.5%). 2 days left. Daily need: $22829. Push all pending deals!', time: '20260928_151713' },
 ];
 
 // =========================================================================
@@ -758,6 +758,20 @@ function renderBigTeamSummary(model) {
   const nearCount = sortedTeams.filter(t => t.displayAch >= 90 && t.displayAch < 100).length;
   const inRecoveryCount = sortedTeams.filter(t => t.displayAch < 90).length;
 
+  // Upgrade metrics calculation for Big Team
+  const totalUpgradeBase = s.totalUpgradeBase || 765;
+  const totalUpgradeM2 = s.totalUpgradeM2 || 46;
+  const totalUpgradeRate = totalUpgradeBase > 0 ? ((totalUpgradeM2 / totalUpgradeBase) * 100) : 0;
+  const totalUpgrade20Target = s.totalUpgrade20Target || 153;
+  const totalUpgrade20Needed = s.totalUpgrade20Needed || 107;
+  const upgradeProgressPct = totalUpgrade20Target > 0 ? ((totalUpgradeM2 / totalUpgrade20Target) * 100).toFixed(1) : '0.0';
+  const dailyUpgradeNeeded = daysLeft > 0 ? (totalUpgrade20Needed / daysLeft).toFixed(1) : '0';
+  const currentUpgradeVelocity = (totalUpgradeM2 / daysPassed).toFixed(2);
+  const upgradeShareOfOrders = s.totalContracts > 0 ? ((totalUpgradeM2 / s.totalContracts) * 100).toFixed(1) : '0.0';
+
+  // Small Teams sorted by Upgrade Conversion Rate % descending
+  const teamsByUpgradeRate = [...sortedTeams].sort((a, b) => b.upgradeRate - a.upgradeRate);
+
   // Macro commentary for Big Team 01 Sector
   let macroStatusBadge = '';
   let macroCommentary = '';
@@ -775,24 +789,50 @@ function renderBigTeamSummary(model) {
     macroCommentary = `Big Team 01 requires an intensive final ${daysLeft}-day revenue sprint. Remaining deficit is ${fmt(s.totalGap)} (${fmt(s.dailyNeeded)}/day needed). Sponsoring closing blitzes across high-base pools is essential to recover pace.`;
   }
 
-  // Detailed strategic feedback generator for each small team (strictly team-level feedback)
+  // Detailed strategic feedback generator for each small team (incorporating Revenue + Early Upgrade directives)
   function getTeamFeedbackText(t) {
     const diffPct = Math.round((t.displayAch - pacePct) * 10) / 10;
     const diffSign = diffPct >= 0 ? '+' : '';
+    let revFeedback = '';
     if (t.displayAch >= 100) {
       const surplus = t.cash - t.target;
-      return `<strong style="color: #10b981;">🏆 100% Target Met (${fmtPct(t.displayAch)} | ${diffSign}${diffPct}% vs Day Benchmark):</strong> Delivered outstanding performance, securing a revenue surplus of +${fmt(surplus)}. Team members qualify for the dual-condition +0.5% team booster bonus. Maintain active outreach to expand leadership margin.`;
+      revFeedback = `<strong style="color: #10b981;">🏆 100% Target Met (${fmtPct(t.displayAch)} | ${diffSign}${diffPct}% vs Day Benchmark):</strong> Delivered outstanding performance, securing a revenue surplus of +${fmt(surplus)}. Team members qualify for the dual-condition +0.5% team booster bonus. Maintain active outreach to expand leadership margin.`;
+    } else if (t.displayAch >= 90) {
+      revFeedback = `<strong style="color: #38bdf8;">⚡ High-Velocity Target Sprint (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Within striking distance of 100% threshold (only ${fmt(t.dailyNeeded)}/day needed over remaining ${daysLeft} days). Anchored by ${t.contracts} contracts and strong pipeline momentum. Sponsoring closing blitzes on warm renewal candidates will ensure 100% target clearance.`;
+    } else if (t.displayAch >= 70) {
+      revFeedback = `<strong style="color: #f59e0b;">🟡 Steady Pacing (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Requires ${fmt(t.dailyNeeded)}/day run-rate. Priority focus on unblocking pending proposals, accelerating touchpoints on high-base accounts, and driving demo class conversions.`;
+    } else if (t.displayAch >= 55) {
+      revFeedback = `<strong style="color: #f97316;">⚠️ Moderate Gap (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Behind the Day ${daysPassed} benchmark of ${pacePct}%. Requires ${fmt(t.dailyNeeded)}/day to close. Team Leader must actively monitor zero-class consuming students and re-engage inactive student base.`;
+    } else {
+      revFeedback = `<strong style="color: #f43f5e;">🚨 Recovery Plan Required (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Deficit requires immediate intervention (${fmt(t.dailyNeeded)}/day run-rate). Focus on rapid contact of all uncontacted leads, student rescue campaigns, and structured 1:1 coaching with the Team Leader.`;
     }
-    if (t.displayAch >= 90) {
-      return `<strong style="color: #38bdf8;">⚡ High-Velocity Target Sprint (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Within striking distance of 100% threshold (only ${fmt(t.dailyNeeded)}/day needed over remaining ${daysLeft} days). Anchored by ${t.contracts} contracts and strong pipeline momentum. Sponsoring closing blitzes on warm renewal candidates will ensure 100% target clearance.`;
+
+    // Specific Early Upgrade Directive for this team
+    let upgFeedback = '';
+    const upgContribution = totalUpgradeM2 > 0 ? ((t.upgradeM2 / totalUpgradeM2) * 100).toFixed(1) : '0';
+    if (t.upgradeRate >= 8) {
+      upgFeedback = `<div style="margin-top: 6px; padding: 6px 10px; background: rgba(192, 132, 252, 0.08); border-left: 3px solid #c084fc; border-radius: 4px;">
+        <span style="color: #c084fc; font-weight: 800;">🚀 Early Upgrade Benchmark Leader (${t.upgradeRate.toFixed(1)}% | ${t.upgradeM2} Upgrades):</span>
+        Top upgrade producer in Big Team 01 (contributes ${upgContribution}% of sector upgrades). 20% milestone target is ${t.upgrade20Target} (${t.upgrade20Needed} needed). Leverage active student touchpoints to convert remaining 60-90 day renewal candidates into multi-month upgrades.
+      </div>`;
+    } else if (t.upgradeRate >= 6.5) {
+      upgFeedback = `<div style="margin-top: 6px; padding: 6px 10px; background: rgba(56, 189, 248, 0.08); border-left: 3px solid #38bdf8; border-radius: 4px;">
+        <span style="color: #38bdf8; font-weight: 800;">⚡ High-Conversion Upgrade Engine (${t.upgradeRate.toFixed(1)}% | ${t.upgradeM2} Upgrades):</span>
+        Strong upgrade pace (contributes ${upgContribution}% of sector upgrades). 20% milestone target is ${t.upgrade20Target} (${t.upgrade20Needed} needed). Closing 10 more warm upgrades will lock in both 100% net cash target and individual commission booster.
+      </div>`;
+    } else if (t.upgradeRate >= 5.0) {
+      upgFeedback = `<div style="margin-top: 6px; padding: 6px 10px; background: rgba(245, 158, 11, 0.08); border-left: 3px solid #f59e0b; border-radius: 4px;">
+        <span style="color: #f59e0b; font-weight: 800;">🔄 Solid Upgrade Volume (${t.upgradeRate.toFixed(1)}% | ${t.upgradeM2} Upgrades):</span>
+        Stable conversion across ${t.upgradeBase} base (${t.upgrade20Needed} contracts away from 20% target of ${t.upgrade20Target}). Prioritize calling students who consumed 8+ classes this month with bundled discount proposals.
+      </div>`;
+    } else {
+      upgFeedback = `<div style="margin-top: 6px; padding: 6px 10px; background: rgba(244, 63, 94, 0.08); border-left: 3px solid #f43f5e; border-radius: 4px;">
+        <span style="color: #f43f5e; font-weight: 800;">🎯 Massive Untapped Upgrade Opportunity (${t.upgradeRate.toFixed(1)}% | ${t.upgradeM2} Upgrades):</span>
+        Holds the largest lead base in Big Team 01 (${t.upgradeBase} students, 29.5% of sector total), but lowest conversion (${t.upgrade20Needed} contracts to 20% target). A targeted calling blitz on active students represents the highest upside to propel both team and sector to month-end victory.
+      </div>`;
     }
-    if (t.displayAch >= 70) {
-      return `<strong style="color: #f59e0b;">🟡 Steady Pacing (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Requires ${fmt(t.dailyNeeded)}/day run-rate. Priority focus on unblocking pending proposals, accelerating touchpoints on high-base accounts, and driving demo class conversions.`;
-    }
-    if (t.displayAch >= 55) {
-      return `<strong style="color: #f97316;">⚠️ Moderate Gap (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Behind the Day ${daysPassed} benchmark of ${pacePct}%. Requires ${fmt(t.dailyNeeded)}/day to close. Team Leader must actively monitor zero-class consuming students and re-engage inactive student base.`;
-    }
-    return `<strong style="color: #f43f5e;">🚨 Recovery Plan Required (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Deficit requires immediate intervention (${fmt(t.dailyNeeded)}/day run-rate). Focus on rapid contact of all uncontacted leads, student rescue campaigns, and structured 1:1 coaching with the Team Leader.`;
+
+    return revFeedback + upgFeedback;
   }
 
   // Build small team rows
@@ -828,16 +868,73 @@ function renderBigTeamSummary(model) {
           </span>
           <div style="margin-top: 3px;">${targetStatusBadge}</div>
         </td>
-        <td style="font-family: var(--font-mono); text-align: center; color: #fff;">
-          <strong>${t.contracts}</strong> <span style="font-size: 0.72rem; color: #10b981;">(M2: ${t.upgradeM2})</span>
+        <td style="font-family: var(--font-mono); text-align: center; color: #fff; font-weight: 700;">
+          ${t.contracts}
+        </td>
+        <td style="font-family: var(--font-mono); text-align: center; color: #cbd5e1;">
+          ${t.upgradeBase}
+        </td>
+        <td style="font-family: var(--font-mono); text-align: center; background: rgba(192, 132, 252, 0.05); border-left: 1px solid rgba(192, 132, 252, 0.15);">
+          <strong style="color: #c084fc; font-size: 0.92rem;">${t.upgradeM2}</strong>
+          <span style="font-size: 0.74rem; color: #e9d5ff; font-weight: 700;"> (${t.upgradeRate.toFixed(1)}%)</span>
+        </td>
+        <td style="font-family: var(--font-mono); text-align: center; background: rgba(192, 132, 252, 0.05); border-right: 1px solid rgba(192, 132, 252, 0.15);">
+          <div style="font-size: 0.8rem; color: #fff; font-weight: 700;">${t.upgrade20Target}</div>
+          <div style="font-size: 0.72rem; color: ${t.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'}; font-weight: 700;">
+            ${t.upgrade20Needed > 0 ? 'Gap: -' + t.upgrade20Needed : '✓ Met'}
+          </div>
         </td>
         <td style="font-family: var(--font-mono); text-align: center; font-weight: 700; color: ${t.gap === 0 ? '#10b981' : '#f43f5e'};">
           ${t.gap === 0 ? '✓ MET' : fmt(t.gap)}
         </td>
-        <td style="text-align: left !important; font-size: 0.8rem; line-height: 1.45; color: #cbd5e1; min-width: 380px; max-width: 580px;">
+        <td style="text-align: left !important; font-size: 0.8rem; line-height: 1.45; color: #cbd5e1; min-width: 420px; max-width: 620px;">
           ${getTeamFeedbackText(t)}
         </td>
       </tr>
+    `;
+  }).join('');
+
+  // Small Teams Upgrade Leaderboard Cards (5 teams sorted by upgrade rate)
+  const teamUpgradeCardsHtml = teamsByUpgradeRate.map((t, idx) => {
+    const share = totalUpgradeM2 > 0 ? ((t.upgradeM2 / totalUpgradeM2) * 100).toFixed(1) : '0';
+    const rateClr = t.upgradeRate >= 8 ? '#10b981' : (t.upgradeRate >= 6 ? '#38bdf8' : (t.upgradeRate >= 5 ? '#f59e0b' : '#f43f5e'));
+    const rankBadge = idx === 0 ? '🥇' : (idx === 1 ? '🥈' : (idx === 2 ? '🥉' : `#${idx + 1}`));
+    return `
+      <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(192, 132, 252, 0.2); border-radius: var(--radius-md); padding: 14px; position: relative; overflow: hidden;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 1rem;">${rankBadge}</span>
+            <strong style="color: #fff; font-size: 0.88rem;">${t.label || t.key}</strong>
+          </div>
+          <span style="background: ${t.color}25; color: ${t.color}; border: 1px solid ${t.color}50; font-size: 0.7rem; font-weight: 800; padding: 2px 6px; border-radius: 4px;">
+            ${t.tl}
+          </span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 4px;">
+          <div style="font-family: var(--font-mono); font-size: 1.35rem; font-weight: 900; color: ${rateClr};">
+            ${t.upgradeRate.toFixed(1)}%
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #cbd5e1;">
+            <strong style="color: #fff;">${t.upgradeM2}</strong> / ${t.upgradeBase} Base
+          </div>
+        </div>
+        <!-- Progress to 20% target bar -->
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #94a3b8; margin-bottom: 3px;">
+            <span>20% Milestone Target: <strong>${t.upgrade20Target}</strong></span>
+            <span style="color: ${t.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'}; font-weight: 700;">
+              ${t.upgrade20Needed > 0 ? t.upgrade20Needed + ' remaining' : '✓ 100% Met'}
+            </span>
+          </div>
+          <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
+            <div style="height: 100%; width: ${Math.min(100, (t.upgradeM2 / t.upgrade20Target) * 100)}%; background: linear-gradient(90deg, #c084fc, ${rateClr}); border-radius: 3px;"></div>
+          </div>
+        </div>
+        <div style="margin-top: 8px; font-size: 0.72rem; color: #94a3b8; display: flex; justify-content: space-between;">
+          <span>Sector Share: <strong style="color: #c084fc;">${share}%</strong></span>
+          <span>Orders: <strong style="color: #fff;">${t.contracts}</strong></span>
+        </div>
+      </div>
     `;
   }).join('');
 
@@ -873,8 +970,8 @@ function renderBigTeamSummary(model) {
         </div>
       </div>
 
-      <!-- Macro Executive Summary Cards -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 22px;">
+      <!-- Macro Executive Summary Cards (Net Cash & Small Team Distribution) -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 20px;">
         
         <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: var(--radius-md); padding: 16px;">
           <div style="font-size: 0.74rem; color: #818cf8; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">⭐ Sector Net Cash Standing</div>
@@ -904,15 +1001,95 @@ function renderBigTeamSummary(model) {
         </div>
 
         <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-md); padding: 16px;">
-          <div style="font-size: 0.74rem; color: #38bdf8; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">📦 Total Orders & Early Upgrades</div>
+          <div style="font-size: 0.74rem; color: #38bdf8; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">📦 Total Orders & Revenue Velocity</div>
           <div style="font-family: var(--font-mono); font-size: 1.7rem; font-weight: 900; color: #fff; margin-top: 4px;">
             ${s.totalContracts} <span style="font-size: 0.9rem; color: var(--text-muted);">Orders</span>
           </div>
           <div style="font-size: 0.8rem; color: #a78bfa; font-weight: 700; margin-top: 2px;">
-            ${s.totalUpgradeM2} Upgrade M2 (${fmtPct(s.upgradeRate)} conv. rate)
+            ${totalUpgradeM2} Early Upgrades | ${s.totalNormalRenewals} Normal Renewals
           </div>
           <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 6px;">
-            Normal Renewals: <strong style="color: #fff;">${s.totalNormalRenewals}</strong> | Avg order: <strong style="color: #fff;">${fmt(s.totalContracts > 0 ? s.totalCash / s.totalContracts : 0)}</strong>
+            Avg order value: <strong style="color: #fff;">${fmt(s.totalContracts > 0 ? s.totalCash / s.totalContracts : 0)}</strong> | Upgrade share: <strong style="color: #c084fc;">${upgradeShareOfOrders}%</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DEDICATED BIG TEAM UPGRADE PART: Macro Intelligence & 20% Milestone Benchmark -->
+      <div style="background: rgba(192, 132, 252, 0.05); border: 1px solid rgba(192, 132, 252, 0.3); border-radius: var(--radius-md); padding: 18px; margin-bottom: 22px;">
+        
+        <!-- Upgrade Subtitle & Badge -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; border-bottom: 1px solid rgba(192, 132, 252, 0.15); padding-bottom: 10px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.3rem;">🚀</span>
+            <div>
+              <h4 style="font-size: 1.05rem; font-weight: 900; color: #e9d5ff; margin: 0;">
+                Big Team 01 Early Upgrade (M2) Macro Intelligence & 20% Target Milestone
+              </h4>
+              <p style="font-size: 0.76rem; color: #c084fc; margin-top: 2px;">
+                Official upgrade tracking across 765 eligible leads pool, 20% milestone progress, and small team conversion dynamics.
+              </p>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="background: rgba(192, 132, 252, 0.2); color: #e9d5ff; border: 1px solid rgba(192, 132, 252, 0.4); padding: 3px 10px; border-radius: var(--radius-sm); font-size: 0.76rem; font-weight: 800;">
+              20% Milestone Target: ${totalUpgrade20Target} Upgrades
+            </span>
+          </div>
+        </div>
+
+        <!-- 4 Upgrade Macro KPI Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-bottom: 16px;">
+          
+          <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(192, 132, 252, 0.25); border-radius: var(--radius-sm); padding: 12px 14px;">
+            <div style="font-size: 0.7rem; color: #c084fc; font-weight: 800; text-transform: uppercase;">Sector Upgrade Conversion</div>
+            <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: #fff; margin-top: 2px;">
+              ${totalUpgradeRate.toFixed(2)}%
+            </div>
+            <div style="font-size: 0.74rem; color: #e9d5ff; margin-top: 2px;">
+              <strong>${totalUpgradeM2}</strong> achieved from <strong>${totalUpgradeBase}</strong> pool
+            </div>
+          </div>
+
+          <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(244, 63, 94, 0.25); border-radius: var(--radius-sm); padding: 12px 14px;">
+            <div style="font-size: 0.7rem; color: #f43f5e; font-weight: 800; text-transform: uppercase;">20% Milestone Deficit</div>
+            <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: #f43f5e; margin-top: 2px;">
+              -${totalUpgrade20Needed} <span style="font-size: 0.85rem; color: #fda4af;">Contracts</span>
+            </div>
+            <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 2px;">
+              Milestone Progress: <strong style="color: #38bdf8;">${upgradeProgressPct}%</strong> (${totalUpgradeM2}/${totalUpgrade20Target})
+            </div>
+          </div>
+
+          <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-sm); padding: 12px 14px;">
+            <div style="font-size: 0.7rem; color: #38bdf8; font-weight: 800; text-transform: uppercase;">Daily Velocity Required</div>
+            <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: #38bdf8; margin-top: 2px;">
+              ${dailyUpgradeNeeded} <span style="font-size: 0.85rem; color: #7dd3fc;">/ Day</span>
+            </div>
+            <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 2px;">
+              MTD velocity: <strong style="color: #fff;">${currentUpgradeVelocity}/day</strong> across 5 teams
+            </div>
+          </div>
+
+          <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-sm); padding: 12px 14px;">
+            <div style="font-size: 0.7rem; color: #34d399; font-weight: 800; text-transform: uppercase;">Contract Share & Revenue Impact</div>
+            <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: #10b981; margin-top: 2px;">
+              ${upgradeShareOfOrders}%
+            </div>
+            <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 2px;">
+              46 of 201 total orders | Secures multi-month retention
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Small Teams Upgrade Leaderboard Cards Grid (Strictly Teams, No Individuals) -->
+        <div style="margin-top: 14px;">
+          <div style="font-size: 0.75rem; color: #e9d5ff; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+            Small Teams Early Upgrade Ranking & Conversion Leaderboard
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px;">
+            ${teamUpgradeCardsHtml}
           </div>
         </div>
 
@@ -924,13 +1101,13 @@ function renderBigTeamSummary(model) {
           Executive Sector Feedback & Strategic Direction (Senior Manager: Saber Hussien)
         </div>
         <p style="font-size: 0.86rem; color: #e2e8f0; line-height: 1.5; margin: 0;">
-          ${macroCommentary}
+          ${macroCommentary} <strong>Early Upgrade Acceleration Directive:</strong> Big Team 01 has achieved 46 M2 upgrades (${fmtPct(s.upgradeRate)} conversion rate) against the 20% milestone target of 153 contracts (107 remaining). Small Teams 13 (8.29%) and 05 (6.85%) are delivering high upgrade productivity, while Team 10 represents the single largest untapped reservoir (226 leads, 1.77% conversion). Sponsoring a dedicated upgrade phone blitz on warm renewals and 60-90 day remaining students will directly propel team net cash past 100% and unlock commission boosters.
         </p>
       </div>
 
       <!-- Small Teams Achievement & Detailed Strategic Feedback Table -->
       <div class="table-wrapper" style="overflow-x: auto; margin-top: 10px;">
-        <table class="data-table" id="bigTeamSummaryTable" style="width: 100%; min-width: 1420px; table-layout: auto !important;">
+        <table class="data-table" id="bigTeamSummaryTable" style="width: 100%; min-width: 1560px; table-layout: auto !important;">
           <thead>
             <tr>
               <th style="min-width: 44px; text-align: center;">#</th>
@@ -939,9 +1116,12 @@ function renderBigTeamSummary(model) {
               <th style="min-width: 110px; text-align: center;">Target</th>
               <th style="min-width: 110px; text-align: center; color: #10b981; font-weight: 800;">Ach %</th>
               <th style="min-width: 140px; text-align: center;">Benchmark Variance (D${daysPassed}: ${pacePct}%)</th>
-              <th style="min-width: 110px; text-align: center;">Orders (M2)</th>
-              <th style="min-width: 120px; text-align: center; color: #f43f5e; font-weight: 800;">Target Gap</th>
-              <th style="min-width: 400px; text-align: left !important; color: #38bdf8; font-weight: 800;">Detailed Strategic Feedback & Operational Directives</th>
+              <th style="min-width: 90px; text-align: center;">Orders</th>
+              <th style="min-width: 90px; text-align: center;">Upgrade Base</th>
+              <th style="min-width: 120px; text-align: center; color: #c084fc; font-weight: 800;">M2 Upgrades (Conv %)</th>
+              <th style="min-width: 120px; text-align: center; color: #e9d5ff;">20% Goal (Gap)</th>
+              <th style="min-width: 110px; text-align: center; color: #f43f5e; font-weight: 800;">Target Gap</th>
+              <th style="min-width: 440px; text-align: left !important; color: #38bdf8; font-weight: 800;">Detailed Strategic Feedback & Operational Directives</th>
             </tr>
           </thead>
           <tbody>
@@ -958,14 +1138,23 @@ function renderBigTeamSummary(model) {
               <td style="text-align: center; font-family: var(--font-mono); color: ${sectorPaceClr}; font-weight: 800;">
                 ${sectorDiffSign}${sectorDiffPct}% (${sectorPaceLabel})
               </td>
-              <td style="font-family: var(--font-mono); color: #fff; text-align: center;">
-                ${s.totalContracts} <span style="font-size: 0.72rem; color: #10b981;">(M2: ${s.totalUpgradeM2})</span>
+              <td style="font-family: var(--font-mono); color: #fff; text-align: center; font-weight: 800;">
+                ${s.totalContracts}
+              </td>
+              <td style="font-family: var(--font-mono); color: #cbd5e1; text-align: center;">
+                ${totalUpgradeBase}
+              </td>
+              <td style="font-family: var(--font-mono); color: #c084fc; text-align: center; font-size: 1rem;">
+                <strong>${totalUpgradeM2}</strong> <span style="font-size: 0.78rem; color: #e9d5ff;">(${totalUpgradeRate.toFixed(1)}%)</span>
+              </td>
+              <td style="font-family: var(--font-mono); text-align: center; font-size: 0.85rem;">
+                <span style="color: #fff;">${totalUpgrade20Target}</span> <span style="color: #f43f5e; font-size: 0.78rem;">(-${totalUpgrade20Needed})</span>
               </td>
               <td style="font-family: var(--font-mono); color: #f43f5e; text-align: center; font-weight: 800;">
                 ${fmt(s.totalGap)}
               </td>
               <td style="text-align: left !important; font-size: 0.82rem; line-height: 1.45; color: #e2e8f0; padding: 12px 14px;">
-                <strong>Sector Synthesis:</strong> Overall Big Team 01 performance is anchored by strong overachievement in Team 30 & Team 13, and near-target volume in Team 05. Sponsoring a decisive closing blitz across Teams 05, 01, and 10 over the final 48 hours is the primary operational priority to maximize monthly realization.
+                <strong>Sector Synthesis:</strong> Overall Big Team 01 performance is anchored by strong overachievement in Team 30 & Team 13, and near-target volume in Team 05. On Early Upgrades, Big Team 01 has achieved 46 M2 contracts (6.01% conversion rate) towards the 20% milestone target of 153 contracts (107 remaining). Sponsoring a decisive closing blitz across Teams 05, 01, and 10 over the final 48 hours is the primary operational priority to maximize monthly realization.
               </td>
             </tr>
           </tfoot>
@@ -1568,7 +1757,7 @@ function renderUpgradeTab(model) {
     tbody.innerHTML = '';
 
     const selTeam = document.getElementById('upgradeTeamFilter')?.value || 'ALL';
-    const selSort = document.getElementById('upgradeSortFilter')?.value || 'cov-desc';
+    const selSort = document.getElementById('upgradeSortFilter')?.value || 'rate-desc';
     const searchTxt = (document.getElementById('upgradeSearchInput')?.value || '').trim().toLowerCase();
 
     let list = [...model.individuals];
@@ -1581,14 +1770,14 @@ function renderUpgradeTab(model) {
     }
 
     list.sort((a, b) => {
+      if (selSort === 'rate-desc') return (b.upgradeRate - a.upgradeRate) || (b.upgradeM2 - a.upgradeM2) || (b.upgradeBase - a.upgradeBase);
+      if (selSort === 'upgrades-desc') return (b.upgradeM2 - a.upgradeM2) || (b.upgradeRate - a.upgradeRate) || (b.upgradeBase - a.upgradeBase);
       if (selSort === 'cov-desc') return (b.coverRate - a.coverRate) || (b.upgradeRate - a.upgradeRate) || (b.upgradeM2 - a.upgradeM2);
       if (selSort === 'cov-asc' || selSort === 'touch-asc') return (a.coverRate - b.coverRate);
-      if (selSort === 'upgrades-desc') return (b.upgradeM2 - a.upgradeM2) || (b.upgradeRate - a.upgradeRate) || (b.upgradeBase - a.upgradeBase);
-      if (selSort === 'rate-desc') return (b.upgradeRate - a.upgradeRate) || (b.upgradeM2 - a.upgradeM2);
       if (selSort === 'needed-asc') return (a.upgrade20Needed - b.upgrade20Needed) || (b.upgradeM2 - a.upgradeM2);
       if (selSort === 'needed-desc') return (b.upgrade20Needed - a.upgrade20Needed);
       if (selSort === 'base-desc') return (b.upgradeBase - a.upgradeBase);
-      return (b.coverRate - a.coverRate) || (b.upgradeRate - a.upgradeRate);
+      return (b.upgradeRate - a.upgradeRate) || (b.upgradeM2 - a.upgradeM2);
     });
 
     list.forEach((r, idx) => {
@@ -3563,6 +3752,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4595,6 +4786,8 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
 
 
 

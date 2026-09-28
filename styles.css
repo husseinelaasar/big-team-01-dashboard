@@ -1504,7 +1504,7 @@ body::after {
 
 #bigTeamSummaryTable {
   width: 100% !important;
-  min-width: 1420px;
+  min-width: 1560px;
   table-layout: auto !important;
 }
 
@@ -1516,8 +1516,8 @@ body::after {
 
 #bigTeamSummaryTable td:last-child {
   white-space: normal !important;
-  min-width: 380px;
-  max-width: 580px;
+  min-width: 420px;
+  max-width: 620px;
   line-height: 1.45;
   text-align: left !important;
 }
