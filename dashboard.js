@@ -166,12 +166,11 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 79.76% vs 87% benchmark. Push $22829/day to stay on track.', time: '20260928_161013' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260928_161013' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260928_161013' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-ibrahimismaiel (145.4%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260928_161013' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260928_161013' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $192795 (85.5%). 2 days left. Daily need: $22829. Push all pending deals!', time: '20260928_161013' },
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 82.36% vs 87% benchmark. Push $-702/day to stay on track.', time: '20260928_163149' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20260928_163149' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20260928_163149' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260928_163149' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $1503 (0%). 2 days left. Daily need: $-702. Push all pending deals!', time: '20260928_163149' },
 ];
 
 // =========================================================================
@@ -347,10 +346,10 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official Data Center Reconciliation & POOL_Detail16)
-  const totalCash = 179942; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
-  const sectorAchPct = 79.76; // from Individual Sheet Col M (or æŒ‡æ ‡çœ‹æ¿ Col I)
+  const totalCash = 1403; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
+  const sectorAchPct = 82.36; // from Individual Sheet Col M (or æŒ‡æ ‡çœ‹æ¿ Col I)
   const totalTarget = 225600; // from æŒ‡æ ‡çœ‹æ¿ Col F
-  const totalContracts = 201; // from æŒ‡æ ‡çœ‹æ¿ Col D
+  const totalContracts = 1; // from æŒ‡æ ‡çœ‹æ¿ Col D
   const totalUpgradeM2 = 46; // from Student_Detail32
   const totalNormalRenewals = 155; // from Student_Detail32
   const totalUpgradeBase = 765; // from Student_Detail32
@@ -3785,6 +3784,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4524,7 +4525,7 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-09-28 13:18:01', name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-09-28 16:30:07', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
@@ -4817,6 +4818,8 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
 
 
 
