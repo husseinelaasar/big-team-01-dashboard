@@ -1502,6 +1502,26 @@ body::after {
   text-align: left !important;
 }
 
+#bigTeamSummaryTable {
+  width: 100% !important;
+  min-width: 1420px;
+  table-layout: auto !important;
+}
+
+#bigTeamSummaryTable th,
+#bigTeamSummaryTable td {
+  white-space: nowrap;
+  padding: 10px 8px !important;
+}
+
+#bigTeamSummaryTable td:last-child {
+  white-space: normal !important;
+  min-width: 380px;
+  max-width: 580px;
+  line-height: 1.45;
+  text-align: left !important;
+}
+
 /* Sleek High-Performance Scrollbar for Wide Data Tables */
 .table-wrapper::-webkit-scrollbar,
 #individualTableView::-webkit-scrollbar {

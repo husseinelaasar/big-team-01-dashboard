@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260928_142230">
+  <link rel="stylesheet" href="styles.css?v=20260928_144037">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -222,6 +222,11 @@
         <span class="source-tag">Source: CRM live data (Sep 1–21, 2026)</span>
       </div>
       <div class="chart-container" id="teamBarsContainer"></div>
+
+      <!-- ========================================================================= -->
+      <!-- BIG TEAM 01 ACHIEVEMENT SUMMARY & SMALL TEAMS STRATEGIC FEEDBACK (TOTALS ONLY) -->
+      <!-- ========================================================================= -->
+      <div id="bigTeamAchievementSummaryContainer" style="margin-top: 32px;"></div>
 
       <!-- ============================================== -->
       <!-- OFFICIAL MASTER WORKBOOKS & ATTACHMENTS HUB -->
@@ -527,12 +532,13 @@
           </select>
           <!-- Sort Filter -->
           <select id="upgradeSortFilter" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 7px 12px; border-radius: var(--radius-sm); font-size: 0.82rem; cursor: pointer;">
+            <option value="cov-desc" selected>Coverage / Touch Intensity % (Highest → Lowest)</option>
             <option value="upgrades-desc">Actual Upgrades (High → Low)</option>
             <option value="rate-desc">Conversion Rate % (High → Low)</option>
             <option value="needed-asc">Remaining Needed (Closest to 20% Goal)</option>
             <option value="needed-desc">Remaining Needed (Largest Gap First)</option>
             <option value="base-desc">Leads Base (Largest Pool First)</option>
-            <option value="touch-asc">Outreach Coverage % (Lowest Touch First)</option>
+            <option value="cov-asc">Coverage / Touch Intensity % (Lowest → Highest)</option>
           </select>
         </div>
         <div style="display: flex; align-items: center; gap: 8px;">
@@ -813,9 +819,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="assets/html2canvas.min.js" defer></script>
-  <script src="dashboard.js?v=20260928_142230" defer></script>
+  <script src="dashboard.js?v=20260928_144037" defer></script>
 </body>
 </html>
+
 
 
 

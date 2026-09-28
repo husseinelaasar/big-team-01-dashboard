@@ -166,12 +166,12 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 79.76% vs 87% benchmark. Push $22829/day to stay on track.', time: '20260928_142230' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260928_142230' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260928_142230' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-ibrahimismaiel (145.4%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260928_142230' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260928_142230' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $192795 (85.5%). 2 days left. Daily need: $22829. Push all pending deals!', time: '20260928_142230' },
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 79.76% vs 87% benchmark. Push $22829/day to stay on track.', time: '20260928_144037' },
+  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260928_144037' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260928_144037' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-ibrahimismaiel (145.4%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260928_144037' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260928_144037' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $192795 (85.5%). 2 days left. Daily need: $22829. Push all pending deals!', time: '20260928_144037' },
 ];
 
 // =========================================================================
@@ -738,6 +738,243 @@ function renderTeamBars(model) {
   container.appendChild(wrapper);
 }
 
+function renderBigTeamSummary(model) {
+  const container = document.getElementById('bigTeamAchievementSummaryContainer');
+  if (!container) return;
+
+  const s = model.summary;
+  const daysPassed = s.daysPassed || 28;
+  const daysLeft = s.daysLeft || 2;
+  const pacePct = s.targetPacePct || 87;
+
+  // Reconciled Small Teams sorted by Official Achievement % descending
+  const sortedTeams = Object.values(model.teams).map(t => {
+    const ach = (t.officialAch !== undefined && t.officialAch !== null) ? t.officialAch : t.achievement;
+    return { ...t, displayAch: ach };
+  }).sort((a, b) => b.displayAch - a.displayAch);
+
+  // Milestone counts
+  const metCount = sortedTeams.filter(t => t.displayAch >= 100).length;
+  const nearCount = sortedTeams.filter(t => t.displayAch >= 90 && t.displayAch < 100).length;
+  const inRecoveryCount = sortedTeams.filter(t => t.displayAch < 90).length;
+
+  // Macro commentary for Big Team 01 Sector
+  let macroStatusBadge = '';
+  let macroCommentary = '';
+  if (s.achievement >= 100) {
+    macroStatusBadge = `<span class="status-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4);">🏆 TARGET SURPASSED</span>`;
+    macroCommentary = `Big Team 01 has officially surpassed the $225,600 monthly target with ${fmt(s.totalCash)} achieved (${fmtPct(s.achievement)}). Outstanding performance across small teams with strong revenue surplus.`;
+  } else if (s.achievement >= pacePct) {
+    macroStatusBadge = `<span class="status-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4);">🟢 AHEAD OF BENCHMARK</span>`;
+    macroCommentary = `Big Team 01 is pacing ahead of schedule at ${fmtPct(s.achievement)} vs Day ${daysPassed} benchmark (${pacePct}%). Sector momentum is strong with positive revenue variance.`;
+  } else if (s.achievement >= pacePct - 8) {
+    macroStatusBadge = `<span class="status-badge" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4);">🟡 WITHIN STRIKING RANGE</span>`;
+    macroCommentary = `Big Team 01 stands at ${fmt(s.totalCash)} (${fmtPct(s.achievement)}) against the $225,600 sector target (Day ${daysPassed} Benchmark: ${pacePct}%). Remaining gap is ${fmt(s.totalGap)} across the final ${daysLeft} days (${fmt(s.dailyNeeded)}/day). Two small teams (ME-EGSS30 and ME-EGSS13) have fully cleared 100%, and ME-EGSS05 is within striking distance at 94.4%. High conversion of warm renewals will maximize month-end completion.`;
+  } else {
+    macroStatusBadge = `<span class="status-badge" style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.4);">🔴 SPRINT FOCUS REQUIRED</span>`;
+    macroCommentary = `Big Team 01 requires an intensive final ${daysLeft}-day revenue sprint. Remaining deficit is ${fmt(s.totalGap)} (${fmt(s.dailyNeeded)}/day needed). Sponsoring closing blitzes across high-base pools is essential to recover pace.`;
+  }
+
+  // Detailed strategic feedback generator for each small team (strictly team-level feedback)
+  function getTeamFeedbackText(t) {
+    const diffPct = Math.round((t.displayAch - pacePct) * 10) / 10;
+    const diffSign = diffPct >= 0 ? '+' : '';
+    if (t.displayAch >= 100) {
+      const surplus = t.cash - t.target;
+      return `<strong style="color: #10b981;">🏆 100% Target Met (${fmtPct(t.displayAch)} | ${diffSign}${diffPct}% vs Day Benchmark):</strong> Delivered outstanding performance, securing a revenue surplus of +${fmt(surplus)}. Team members qualify for the dual-condition +0.5% team booster bonus. Maintain active outreach to expand leadership margin.`;
+    }
+    if (t.displayAch >= 90) {
+      return `<strong style="color: #38bdf8;">⚡ High-Velocity Target Sprint (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Within striking distance of 100% threshold (only ${fmt(t.dailyNeeded)}/day needed over remaining ${daysLeft} days). Anchored by ${t.contracts} contracts and strong pipeline momentum. Sponsoring closing blitzes on warm renewal candidates will ensure 100% target clearance.`;
+    }
+    if (t.displayAch >= 70) {
+      return `<strong style="color: #f59e0b;">🟡 Steady Pacing (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Requires ${fmt(t.dailyNeeded)}/day run-rate. Priority focus on unblocking pending proposals, accelerating touchpoints on high-base accounts, and driving demo class conversions.`;
+    }
+    if (t.displayAch >= 55) {
+      return `<strong style="color: #f97316;">⚠️ Moderate Gap (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Behind the Day ${daysPassed} benchmark of ${pacePct}%. Requires ${fmt(t.dailyNeeded)}/day to close. Team Leader must actively monitor zero-class consuming students and re-engage inactive student base.`;
+    }
+    return `<strong style="color: #f43f5e;">🚨 Recovery Plan Required (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Deficit requires immediate intervention (${fmt(t.dailyNeeded)}/day run-rate). Focus on rapid contact of all uncontacted leads, student rescue campaigns, and structured 1:1 coaching with the Team Leader.`;
+  }
+
+  // Build small team rows
+  const rowsHtml = sortedTeams.map((t, idx) => {
+    const diffPct = Math.round((t.displayAch - pacePct) * 10) / 10;
+    const diffSign = diffPct >= 0 ? '+' : '';
+    const paceClr = t.displayAch >= pacePct ? '#10b981' : (t.displayAch >= pacePct - 8 ? '#f59e0b' : '#f43f5e');
+    const paceLabel = t.displayAch >= pacePct ? 'Ahead' : (t.displayAch >= pacePct - 8 ? 'Near' : 'Behind');
+    const targetStatusBadge = t.displayAch >= 100 
+      ? `<span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35);">🥇 Met ≥100%</span>`
+      : (t.displayAch >= 90 
+          ? `<span class="status-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35);">⚡ Near 100%</span>`
+          : `<span class="status-badge" style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.35);">Gap</span>`);
+
+    return `
+      <tr>
+        <td style="font-family: var(--font-mono); color: var(--text-dim); text-align: center; font-weight: 700;">#${idx + 1}</td>
+        <td style="text-align: left !important;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: ${t.color}; box-shadow: 0 0 6px ${t.color}80;"></span>
+            <strong style="color: #fff; font-size: 0.92rem;">${t.label || t.key}</strong>
+          </div>
+          <div style="font-size: 0.76rem; color: #94a3b8; margin-top: 2px;">👑 Team Leader: <strong>${t.tl}</strong></div>
+        </td>
+        <td style="font-family: var(--font-mono); font-weight: 800; color: #fff; text-align: center;">${fmt(t.cash)}</td>
+        <td style="font-family: var(--font-mono); color: var(--text-secondary); text-align: center;">${fmt(t.target)}</td>
+        <td style="font-family: var(--font-mono); font-weight: 800; text-align: center; color: ${getStatusColor(t.displayAch)}; font-size: 0.95rem;">
+          ${fmtPct(t.displayAch)}
+        </td>
+        <td style="text-align: center;">
+          <span style="font-family: var(--font-mono); font-weight: 700; color: ${paceClr}; font-size: 0.78rem;">
+            ${diffSign}${diffPct}% (${paceLabel})
+          </span>
+          <div style="margin-top: 3px;">${targetStatusBadge}</div>
+        </td>
+        <td style="font-family: var(--font-mono); text-align: center; color: #fff;">
+          <strong>${t.contracts}</strong> <span style="font-size: 0.72rem; color: #10b981;">(M2: ${t.upgradeM2})</span>
+        </td>
+        <td style="font-family: var(--font-mono); text-align: center; font-weight: 700; color: ${t.gap === 0 ? '#10b981' : '#f43f5e'};">
+          ${t.gap === 0 ? '✓ MET' : fmt(t.gap)}
+        </td>
+        <td style="text-align: left !important; font-size: 0.8rem; line-height: 1.45; color: #cbd5e1; min-width: 380px; max-width: 580px;">
+          ${getTeamFeedbackText(t)}
+        </td>
+      </tr>
+    `;
+  }).join('');
+
+  // Sector variance calculations
+  const sectorDiffPct = Math.round((s.achievement - pacePct) * 10) / 10;
+  const sectorDiffSign = sectorDiffPct >= 0 ? '+' : '';
+  const sectorPaceClr = s.achievement >= pacePct ? '#10b981' : (s.achievement >= pacePct - 8 ? '#f59e0b' : '#f43f5e');
+  const sectorPaceLabel = s.achievement >= pacePct ? 'Ahead' : (s.achievement >= pacePct - 8 ? 'Near' : 'Behind');
+
+  container.innerHTML = `
+    <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9)); border: 1.5px solid rgba(99, 102, 241, 0.4); border-radius: var(--radius-lg); padding: 24px; box-shadow: 0 12px 36px rgba(0,0,0,0.35);">
+      
+      <!-- Section Header -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 16px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.6rem;">📊</span>
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 900; color: #fff; margin: 0;">
+                Big Team 01 Achievement Summary & Strategic Performance Feedback
+              </h3>
+              <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">
+                Comprehensive executive synthesis covering small team velocity, target gaps, and strategic leadership directives (Exclusively Team & Sector Totals).
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          ${macroStatusBadge}
+          <span style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.35); padding: 4px 12px; border-radius: var(--radius-sm); font-size: 0.78rem; font-weight: 700;">
+            Day ${daysPassed} of 30 (${daysLeft} Days Remaining)
+          </span>
+        </div>
+      </div>
+
+      <!-- Macro Executive Summary Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 22px;">
+        
+        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: var(--radius-md); padding: 16px;">
+          <div style="font-size: 0.74rem; color: #818cf8; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">⭐ Sector Net Cash Standing</div>
+          <div style="font-family: var(--font-mono); font-size: 1.7rem; font-weight: 900; color: #fff; margin-top: 4px;">
+            ${fmt(s.totalCash)} <span style="font-size: 0.95rem; color: var(--text-muted);">/ ${fmt(s.totalTarget)}</span>
+          </div>
+          <div style="font-size: 0.8rem; color: ${getStatusColor(s.achievement)}; font-weight: 700; margin-top: 2px;">
+            ${fmtPct(s.achievement)} Achieved (Gap: ${fmt(s.totalGap)})
+          </div>
+          <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 6px;">
+            Required run-rate: <strong style="color: #38bdf8;">${fmt(s.dailyNeeded)}/day</strong> across remaining ${daysLeft} days
+          </div>
+        </div>
+
+        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-md); padding: 16px;">
+          <div style="font-size: 0.74rem; color: #34d399; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">🏆 Small Teams Target Distribution</div>
+          <div style="font-family: var(--font-mono); font-size: 1.7rem; font-weight: 900; color: #fff; margin-top: 4px;">
+            ${metCount} <span style="font-size: 0.95rem; color: #10b981; font-weight: 700;">Met ≥100%</span>
+            <span style="font-size: 0.95rem; color: var(--text-muted);"> / 5 Teams</span>
+          </div>
+          <div style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; margin-top: 2px;">
+            ${nearCount} Team Near 100% (ME-EGSS05 at 94.4%)
+          </div>
+          <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 6px;">
+            Teams in final sprint: <strong style="color: #f59e0b;">ME-EGSS01, ME-EGSS10</strong>
+          </div>
+        </div>
+
+        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-md); padding: 16px;">
+          <div style="font-size: 0.74rem; color: #38bdf8; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">📦 Total Orders & Early Upgrades</div>
+          <div style="font-family: var(--font-mono); font-size: 1.7rem; font-weight: 900; color: #fff; margin-top: 4px;">
+            ${s.totalContracts} <span style="font-size: 0.9rem; color: var(--text-muted);">Orders</span>
+          </div>
+          <div style="font-size: 0.8rem; color: #a78bfa; font-weight: 700; margin-top: 2px;">
+            ${s.totalUpgradeM2} Upgrade M2 (${fmtPct(s.upgradeRate)} conv. rate)
+          </div>
+          <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 6px;">
+            Normal Renewals: <strong style="color: #fff;">${s.totalNormalRenewals}</strong> | Avg order: <strong style="color: #fff;">${fmt(s.totalContracts > 0 ? s.totalCash / s.totalContracts : 0)}</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sector Executive Leadership Feedback Note -->
+      <div style="background: rgba(99, 102, 241, 0.08); border-left: 4px solid var(--accent-indigo); padding: 14px 18px; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: 22px;">
+        <div style="font-size: 0.78rem; font-weight: 800; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">
+          Executive Sector Feedback & Strategic Direction (Senior Manager: Saber Hussien)
+        </div>
+        <p style="font-size: 0.86rem; color: #e2e8f0; line-height: 1.5; margin: 0;">
+          ${macroCommentary}
+        </p>
+      </div>
+
+      <!-- Small Teams Achievement & Detailed Strategic Feedback Table -->
+      <div class="table-wrapper" style="overflow-x: auto; margin-top: 10px;">
+        <table class="data-table" id="bigTeamSummaryTable" style="width: 100%; min-width: 1420px; table-layout: auto !important;">
+          <thead>
+            <tr>
+              <th style="min-width: 44px; text-align: center;">#</th>
+              <th style="min-width: 180px; text-align: left !important;">Small Team & Team Leader</th>
+              <th style="min-width: 120px; text-align: center;">Net Cash MTD</th>
+              <th style="min-width: 110px; text-align: center;">Target</th>
+              <th style="min-width: 110px; text-align: center; color: #10b981; font-weight: 800;">Ach %</th>
+              <th style="min-width: 140px; text-align: center;">Benchmark Variance (D${daysPassed}: ${pacePct}%)</th>
+              <th style="min-width: 110px; text-align: center;">Orders (M2)</th>
+              <th style="min-width: 120px; text-align: center; color: #f43f5e; font-weight: 800;">Target Gap</th>
+              <th style="min-width: 400px; text-align: left !important; color: #38bdf8; font-weight: 800;">Detailed Strategic Feedback & Operational Directives</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rowsHtml}
+          </tbody>
+          <tfoot>
+            <tr style="background: rgba(99, 102, 241, 0.16); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
+              <td colspan="2" style="color: #fff; text-align: left; font-size: 0.92rem; padding: 12px 14px;">
+                ⭐ BIG TEAM 01 — SECTOR TOTAL (Saber Hussien)
+              </td>
+              <td style="font-family: var(--font-mono); font-size: 1.05rem; color: #fff; text-align: center;">${fmt(s.totalCash)}</td>
+              <td style="font-family: var(--font-mono); color: var(--text-secondary); text-align: center;">${fmt(s.totalTarget)}</td>
+              <td style="font-family: var(--font-mono); font-size: 1.05rem; color: ${getStatusColor(s.achievement)}; text-align: center;">${fmtPct(s.achievement)}</td>
+              <td style="text-align: center; font-family: var(--font-mono); color: ${sectorPaceClr}; font-weight: 800;">
+                ${sectorDiffSign}${sectorDiffPct}% (${sectorPaceLabel})
+              </td>
+              <td style="font-family: var(--font-mono); color: #fff; text-align: center;">
+                ${s.totalContracts} <span style="font-size: 0.72rem; color: #10b981;">(M2: ${s.totalUpgradeM2})</span>
+              </td>
+              <td style="font-family: var(--font-mono); color: #f43f5e; text-align: center; font-weight: 800;">
+                ${fmt(s.totalGap)}
+              </td>
+              <td style="text-align: left !important; font-size: 0.82rem; line-height: 1.45; color: #e2e8f0; padding: 12px 14px;">
+                <strong>Sector Synthesis:</strong> Overall Big Team 01 performance is anchored by strong overachievement in Team 30 & Team 13, and near-target volume in Team 05. Sponsoring a decisive closing blitz across Teams 05, 01, and 10 over the final 48 hours is the primary operational priority to maximize monthly realization.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+    </div>
+  `;
+}
 
 function renderOverviewTable(model) {
   const tbody = document.getElementById('overviewTableBody');
@@ -1331,7 +1568,7 @@ function renderUpgradeTab(model) {
     tbody.innerHTML = '';
 
     const selTeam = document.getElementById('upgradeTeamFilter')?.value || 'ALL';
-    const selSort = document.getElementById('upgradeSortFilter')?.value || 'upgrades-desc';
+    const selSort = document.getElementById('upgradeSortFilter')?.value || 'cov-desc';
     const searchTxt = (document.getElementById('upgradeSearchInput')?.value || '').trim().toLowerCase();
 
     let list = [...model.individuals];
@@ -1344,13 +1581,14 @@ function renderUpgradeTab(model) {
     }
 
     list.sort((a, b) => {
+      if (selSort === 'cov-desc') return (b.coverRate - a.coverRate) || (b.upgradeRate - a.upgradeRate) || (b.upgradeM2 - a.upgradeM2);
+      if (selSort === 'cov-asc' || selSort === 'touch-asc') return (a.coverRate - b.coverRate);
       if (selSort === 'upgrades-desc') return (b.upgradeM2 - a.upgradeM2) || (b.upgradeRate - a.upgradeRate) || (b.upgradeBase - a.upgradeBase);
       if (selSort === 'rate-desc') return (b.upgradeRate - a.upgradeRate) || (b.upgradeM2 - a.upgradeM2);
       if (selSort === 'needed-asc') return (a.upgrade20Needed - b.upgrade20Needed) || (b.upgradeM2 - a.upgradeM2);
       if (selSort === 'needed-desc') return (b.upgrade20Needed - a.upgrade20Needed);
       if (selSort === 'base-desc') return (b.upgradeBase - a.upgradeBase);
-      if (selSort === 'touch-asc') return (a.coverRate - b.coverRate);
-      return (b.upgradeM2 - a.upgradeM2);
+      return (b.coverRate - a.coverRate) || (b.upgradeRate - a.upgradeRate);
     });
 
     list.forEach((r, idx) => {
@@ -3321,6 +3559,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4009,6 +4249,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const renderSteps = [
     { name: 'renderKPIs', fn: () => renderKPIs(model) },
     { name: 'renderTeamBars', fn: () => renderTeamBars(model) },
+    { name: 'renderBigTeamSummary', fn: () => renderBigTeamSummary(model) },
     { name: 'renderOverviewTable', fn: () => renderOverviewTable(model) },
     { name: 'renderSmallTeamsTab', fn: () => renderSmallTeamsTab(model) },
     { name: 'renderIndividualsTab', fn: () => renderIndividualsTab(model) },
@@ -4352,6 +4593,8 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
 
 
 

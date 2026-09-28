@@ -243,7 +243,7 @@ $$\text{Team 13 Achievement} = \frac{\$47,418.68}{\$47,060} \times 100 = \mathbf
 >      - 6 Top Metric Cards: Actual (46), Base (765), Conv Rate (6.01%), 20% Goal (153), Remaining (107), Touch Intensity (74.8%).
 >      - Small Teams Upgrade Comparison Cards (5 teams with 20% goal progress bars).
 >      - Strategic Tactical Playbook (4 priorities: High-Base Zero Alert, 20% Sprint Candidates, Top Champions, Outreach Deficit).
->      - Interactive Team filter, multi-criteria sorting, and instant rep search.
+>      - Interactive Team filter, multi-criteria sorting with **Default Sort: Highest Coverage / Touch Intensity % to Lowest (`cov-desc`)**, and instant rep search.
 
 ---
 
@@ -843,4 +843,39 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
 
 5. **Safe Concurrent File Sharing (`ReadWrite`):**
    * Uses `[System.IO.FileShare]::ReadWrite` in all file streams so automated hourly updates never crash or lock up if a team leader or manager has an Excel sheet open in the background.
+
+---
+
+### 📊 22. Executive Overview Big Team Achievement Summary & Small Teams Strategic Performance Standard
+
+> [!IMPORTANT]
+> **EXECUTIVE OVERVIEW POLICY — STRICT TEAM & SECTOR TOTALS ONLY (ZERO INDIVIDUAL REPS):**
+> To preserve the macro executive perspective of the primary dashboard tab (`#tab-overview`), an executive synthesis section is anchored directly under the Small Teams & Big Team 01 comparison chart (`#bigTeamAchievementSummaryContainer`).
+> 
+> **STRICT SCOPE RULE:** This section and the Executive Overview tab must **NEVER** contain individual sales rep tables, cards, names, or individual breakdowns. All individual metrics are strictly confined to the dedicated **Individual Reps Deep Dive** (`#tab-individuals`).
+
+#### Architecture of the Achievement Summary & Strategic Performance Section:
+1. **Three Macro Executive KPI Cards (Totals Level):**
+   * **⭐ Sector Net Cash Standing:** Total cash MTD ($179,942 / $225,600, 79.76% achieved), total target gap ($45,658), and exact daily run-rate required ($22,829/day across final 2 days).
+   * **🏆 Small Teams Target Distribution:** Teams meeting target (≥100%: ME-EGSS30 at 126.2%, ME-EGSS13 at 100.8%), teams within striking distance (≥90%: ME-EGSS05 at 94.4%), and teams in final sprint (ME-EGSS01, ME-EGSS10).
+   * **📦 Total Orders & Early Upgrades:** 201 orders (Avg $895/order), 46 M2 upgrades (6.01% conversion rate), 155 normal renewals.
+
+2. **Executive Sector Feedback Note (Senior Manager: Saber Hussien):**
+   * Contextual macro synthesis dynamically evaluating sector pace vs the official Day 28 benchmark (87.0%).
+
+3. **Small Teams & Totals Master Performance Table (`#bigTeamSummaryTable`):**
+   * Expansive content-fitting layout (`min-width: 1420px; table-layout: auto !important`).
+   * **Table Columns (9 Columns):**
+     1. `#` (Rank by Cash Achievement % descending)
+     2. `Small Team & Team Leader` (with colored identity dot & TL crown)
+     3. `Net Cash MTD` ($)
+     4. `Target` ($)
+     5. `Ach %` (official percentage with status color coding)
+     6. `Benchmark Variance` (Day 28 benchmark variance % and pacing badge)
+     7. `Orders (M2)` (Total orders and early upgrade breakdown)
+     8. `Target Gap` (Remaining dollar gap to 100% target or `✓ MET`)
+     9. `Detailed Strategic Feedback & Operational Directives` (Rich, actionable directives covering team velocity, pipeline status, and immediate managerial next steps).
+   * **Table Footer (`tfoot` Totals Row):**
+     - Summarizes **⭐ BIG TEAM 01 — SECTOR TOTAL (Saber Hussien)** with full consolidated figures ($179,942 cash, $225,600 target, 79.76% ach, 201 orders, $45,658 gap) and overarching sector operational synthesis.
+
 
