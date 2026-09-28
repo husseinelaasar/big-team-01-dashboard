@@ -946,3 +946,31 @@ To transcend traditional spreadsheet-style enterprise dashboards, the interface 
 
 #### C. Cross-Sector Uniformity Invariant:
 All new dashboard sectors, command strips, and modal popups MUST inherit the tokens and classes from Modern Executive Design System v3.0 to guarantee a unified, polished, and cohesive executive experience across all tabs.
+---
+
+### ðŸ”„ 24. Real-Time Cache Invalidation, Browser Refresh Protocols & Change Visibility Guide
+
+#### A. Root Cause Analysis: Why Updates May Not Appear Immediately
+When changes are pushed to GitHub or built locally, clients may experience visibility delays due to:
+1. **Aggressive Browser Disk & Memory Caching:**
+   - Modern browsers (Chrome, Edge, Safari) aggressively cache HTML documents, CSS files, and JS bundles to accelerate load times.
+   - Standard refresh (F5 or browser reload icon) frequently sends conditional `304 Not Modified` or serves directly from memory cache without refetching changed assets.
+2. **GitHub Pages Edge CDN Deployment Lag:**
+   - GitHub Pages builds take approximately 60â€“180 seconds after `git push origin master` to compile and distribute static assets across Fastly/Cloudflare CDN edge nodes.
+3. **Multi-Tab Layout & Spatial Separation:**
+   - **Executive Overview (`#tab-overview`):** The new "Big Team 01 Leadership Synthesis & Tactical Intelligence" section is located *directly below* the Pacing Scale chart (`#teamBarsContainer`). Users must scroll down past the benchmark ruler to view the executive synthesis, 4 upgrade command tiles, and 12-column small teams performance table.
+   - **Early Upgrade Hub (`#tab-upgrade`):** The sorted conversion rate table and modernized tactical playbooks are located in Tab 4, requiring explicit navigation via the top tab bar.
+
+#### B. Mandatory Client-Side Refresh Protocols:
+To guarantee immediate visibility of all UI and data updates:
+1. **Hard Browser Refresh:**
+   - **Windows (Chrome / Edge / Firefox):** Press `Ctrl + F5` or `Ctrl + Shift + R`.
+   - **Mac (Chrome / Safari):** Press `Cmd + Shift + R`.
+2. **Private / Incognito Window Verification:**
+   - Open a fresh Incognito window (`Ctrl + Shift + N`) and navigate to `https://husseinelaasar.github.io/big-team-01-dashboard/` to bypass all local storage, cookies, and cached stylesheets.
+3. **Local File Direct Inspection (Instant 0-Delay Verification):**
+   - Double-click `d:\Lens\Dashboard\index.html` or run `RUN_BUILDER.bat` on the Desktop. Local files bypass CDN edge propagation entirely and render changes instantaneously.
+
+#### C. Verification Checklist for Modern Executive Updates:
+- [ ] **Tab 1: Executive Overview:** Scroll down below the Pacing Scale ruler. Verify presence of `.glass-panel-executive` containing 3 top financial tiles, the violet Upgrade Command Center, 5 small team upgrade leaderboard cards, and the 12-column table with two-tier strategic memos.
+- [ ] **Tab 4: Early Upgrade Hub:** Click the "Early Upgrade Hub (M2)" tab. Verify that the 6 top KPI tiles use `.metric-tile-modern`, tactical playbook cards have colored accent borders, and `#masterUpgradeTable` defaults to Conversion Rate % descending (`rate-desc`).
