@@ -897,3 +897,52 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
      - Consolidated figures: **$179,942 Net Cash**, **$225,600 Target**, **79.76% Ach**, **201 Orders**, **765 Upgrade Base**, **46 M2 Upgrades (6.01%)**, **153 (Gap: -107) 20% Target**, **$45,658 Cash Gap**, and Senior Manager sector synthesis.
 
 
+
+
+---
+
+### 💎 23. Modern Executive Design System v3.0 (Glassmorphism, High-Density Organization & Visual Hierarchy)
+
+#### A. Rationale & Design Philosophy
+To transcend traditional spreadsheet-style enterprise dashboards, the interface is standardized on the **Modern Executive Design System v3.0**. This architecture balances dense operational intelligence with high-clarity visual hierarchy, employing deep frosted glassmorphism, micro-animations, dedicated accent lines, and structured two-tier memo blocks.
+
+#### B. Core Component Specifications:
+1. **Executive Frosted Glass Panels (`.glass-panel-executive`):**
+   - Translucent background (`rgba(15, 23, 42, 0.75)`) layered over a 16px backdrop blur.
+   - Dual-layer border with subtle white alpha (`1px solid rgba(255, 255, 255, 0.08)`).
+   - Inset top highlight border and glowing 2px top gradient accent bar (`linear-gradient(90deg, #6366f1, #a855f7, #38bdf8, #10b981)`).
+   - Soft deep shadow elevation (`0 16px 36px -8px rgba(0, 0, 0, 0.5)`).
+
+2. **Modern Metric Tiles (`.metric-tile-modern`):**
+   - Self-contained frosted cards (`rgba(15, 23, 42, 0.65)`) with 12px backdrop blur.
+   - Top accent border (2px–3px solid colored by team or status).
+   - Ergonomic hover lift (`transform: translateY(-2px)`) with glowing border transition (`rgba(99, 102, 241, 0.35)`).
+   - High-contrast typography: Uppercase 0.72rem tracking labels, bold tabular mono values (`var(--font-mono)`), and muted contextual progress cues.
+
+3. **Status Pill Badges with Rhythmic Pulsing Dots:**
+   - Pill containers (`.pill-badge`) with themed colorways:
+     - `.pill-badge-emerald`: Target Met / Ahead / Leader (`rgba(16, 185, 129, 0.12)`)
+     - `.pill-badge-cyan`: Near Target / High Velocity (`rgba(56, 189, 248, 0.12)`)
+     - `.pill-badge-purple`: Milestone Focus / Benchmark Leader (`rgba(192, 132, 252, 0.12)`)
+     - `.pill-badge-amber`: Pacing / Steady Cadence (`rgba(245, 158, 11, 0.12)`)
+     - `.pill-badge-rose`: Gap Alert / Sprint Focus (`rgba(244, 63, 94, 0.12)`)
+   - Animated pulsing status dots (`.pulse-dot`, `.pulse-dot-emerald`, `.pulse-dot-amber`, `.pulse-dot-rose`) with 2-second ease-in-out breathing keyframes.
+
+4. **Sleek Frosted Form Controls:**
+   - Custom select dropdowns (`.modern-select`) and search input fields (`.modern-input`).
+   - Frosted dark slate background (`rgba(15, 23, 42, 0.85)`), 10px rounded corners, and glowing focus outline (`box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2)`).
+
+5. **Modern SaaS Table Architecture (`.modern-table-card`):**
+   - High-density table container with clean rounded corners and 1px border.
+   - Sticky frosted glass headers (`position: sticky; top: 0; backdrop-filter: blur(12px); z-index: 5`) preventing disorientation when scrolling wide datasets.
+   - Distinct row hover highlights (`background: rgba(99, 102, 241, 0.06)`).
+   - Built-in custom dark-mode scrollbars (`::-webkit-scrollbar` with 6px–7px indigo thumb) preventing dated browser default scrollbars.
+
+6. **Structured Strategic Directive Memo Cards (`.strategic-memo-box`):**
+   - Replaces unstructured plain text in table cells with a standardized two-tier card layout:
+     - **Tier 1 (Revenue & Pacing):** Pill badge + net cash surplus/deficit + exact daily run-rate required.
+     - **Tier 2 (Upgrade & Levers):** Colored upgrade badge + pool contribution share + tactical coaching directives.
+   - Clean slate background (`rgba(15, 23, 42, 0.6)`) with subtle hairline dividers.
+
+#### C. Cross-Sector Uniformity Invariant:
+All new dashboard sectors, command strips, and modal popups MUST inherit the tokens and classes from Modern Executive Design System v3.0 to guarantee a unified, polished, and cohesive executive experience across all tabs.

@@ -1556,3 +1556,269 @@ body::after {
 .tab-content {
   contain: layout style;
 }
+
+/* ====================================================
+   Modern Executive Design System & Visual Polish v3.0
+   ==================================================== */
+
+/* Glassmorphism Surface Container */
+.glass-panel-executive {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.75));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle glowing accent strip at the top of cards */
+.glass-panel-executive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1 0%, #a855f7 35%, #38bdf8 70%, #10b981 100%);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* Modern Metric Tile */
+.metric-tile-modern {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.25);
+}
+
+.metric-tile-modern:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.4), 0 0 15px rgba(99, 102, 241, 0.1);
+}
+
+/* Modern Pill Badges */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.pill-badge-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.pill-badge-cyan {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.pill-badge-purple {
+  background: rgba(192, 132, 252, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+.pill-badge-amber {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.pill-badge-rose {
+  background: rgba(244, 63, 94, 0.12);
+  color: #f43f5e;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+/* Pulsing Status Dot */
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.pulse-dot-emerald {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.pulse-dot-amber {
+  background: #f59e0b;
+  box-shadow: 0 0 8px #f59e0b;
+}
+
+.pulse-dot-rose {
+  background: #f43f5e;
+  box-shadow: 0 0 8px #f43f5e;
+}
+
+/* Modern Form Controls */
+.modern-select {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  padding: 8px 14px !important;
+  border-radius: 10px !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer;
+}
+
+.modern-select:hover,
+.modern-select:focus {
+  border-color: rgba(99, 102, 241, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15), 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.modern-input {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  padding: 8px 16px !important;
+  border-radius: 10px !important;
+  font-size: 0.82rem !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.modern-input:focus {
+  border-color: rgba(99, 102, 241, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15), 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Modern SaaS Table Styling */
+.modern-table-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.3);
+  background: rgba(11, 17, 32, 0.8);
+}
+
+.modern-table-card table {
+  margin: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+.modern-table-card th {
+  background: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #94a3b8 !important;
+  padding: 12px 10px !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.modern-table-card td {
+  padding: 12px 10px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  transition: background 0.15s ease;
+}
+
+.modern-table-card tbody tr:hover td {
+  background: rgba(99, 102, 241, 0.06) !important;
+}
+
+/* Strategic Directive Memo Card inside table */
+.strategic-memo-box {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 8px 12px;
+  line-height: 1.45;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+}
+
+/* Pulse Glow Keyframes for Modern Status Dots */
+.pulse-dot-emerald {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseEmerald 2s infinite ease-in-out;
+}
+.pulse-dot-amber {
+  background: #f59e0b;
+  box-shadow: 0 0 8px #f59e0b;
+  animation: pulseAmber 2s infinite ease-in-out;
+}
+.pulse-dot-rose {
+  background: #f43f5e;
+  box-shadow: 0 0 8px #f43f5e;
+  animation: pulseRose 2s infinite ease-in-out;
+}
+
+@keyframes pulseEmerald {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 6px #10b981; }
+  50% { opacity: 0.6; transform: scale(1.18); box-shadow: 0 0 12px #10b981; }
+}
+@keyframes pulseAmber {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 6px #f59e0b; }
+  50% { opacity: 0.6; transform: scale(1.18); box-shadow: 0 0 12px #f59e0b; }
+}
+@keyframes pulseRose {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 6px #f43f5e; }
+  50% { opacity: 0.6; transform: scale(1.18); box-shadow: 0 0 12px #f43f5e; }
+}
+
+/* Modern Dark-Mode Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}
+
+.table-wrapper::-webkit-scrollbar,
+.modern-table-card::-webkit-scrollbar {
+  height: 6px;
+}
+.table-wrapper::-webkit-scrollbar-thumb,
+.modern-table-card::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.35);
+  border-radius: 3px;
+}
+.table-wrapper::-webkit-scrollbar-thumb:hover,
+.modern-table-card::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.7);
+}

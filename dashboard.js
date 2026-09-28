@@ -166,12 +166,12 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 79.76% vs 87% benchmark. Push $22829/day to stay on track.', time: '20260928_151713' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260928_151713' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260928_151713' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-ibrahimismaiel (145.4%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260928_151713' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260928_151713' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $192795 (85.5%). 2 days left. Daily need: $22829. Push all pending deals!', time: '20260928_151713' },
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 79.76% vs 87% benchmark. Push $22829/day to stay on track.', time: '20260928_154024' },
+  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260928_154024' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260928_154024' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-ibrahimismaiel (145.4%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260928_154024' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260928_154024' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $192795 (85.5%). 2 days left. Daily need: $22829. Push all pending deals!', time: '20260928_154024' },
 ];
 
 // =========================================================================
@@ -776,63 +776,69 @@ function renderBigTeamSummary(model) {
   let macroStatusBadge = '';
   let macroCommentary = '';
   if (s.achievement >= 100) {
-    macroStatusBadge = `<span class="status-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4);">🏆 TARGET SURPASSED</span>`;
+    macroStatusBadge = `<span class="pill-badge pill-badge-emerald"><span class="pulse-dot pulse-dot-emerald"></span> 🏆 TARGET SURPASSED</span>`;
     macroCommentary = `Big Team 01 has officially surpassed the $225,600 monthly target with ${fmt(s.totalCash)} achieved (${fmtPct(s.achievement)}). Outstanding performance across small teams with strong revenue surplus.`;
   } else if (s.achievement >= pacePct) {
-    macroStatusBadge = `<span class="status-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4);">🟢 AHEAD OF BENCHMARK</span>`;
+    macroStatusBadge = `<span class="pill-badge pill-badge-emerald"><span class="pulse-dot pulse-dot-emerald"></span> 🟢 AHEAD OF BENCHMARK</span>`;
     macroCommentary = `Big Team 01 is pacing ahead of schedule at ${fmtPct(s.achievement)} vs Day ${daysPassed} benchmark (${pacePct}%). Sector momentum is strong with positive revenue variance.`;
   } else if (s.achievement >= pacePct - 8) {
-    macroStatusBadge = `<span class="status-badge" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4);">🟡 WITHIN STRIKING RANGE</span>`;
+    macroStatusBadge = `<span class="pill-badge pill-badge-amber"><span class="pulse-dot pulse-dot-amber"></span> 🟡 WITHIN STRIKING RANGE</span>`;
     macroCommentary = `Big Team 01 stands at ${fmt(s.totalCash)} (${fmtPct(s.achievement)}) against the $225,600 sector target (Day ${daysPassed} Benchmark: ${pacePct}%). Remaining gap is ${fmt(s.totalGap)} across the final ${daysLeft} days (${fmt(s.dailyNeeded)}/day). Two small teams (ME-EGSS30 and ME-EGSS13) have fully cleared 100%, and ME-EGSS05 is within striking distance at 94.4%. High conversion of warm renewals will maximize month-end completion.`;
   } else {
-    macroStatusBadge = `<span class="status-badge" style="background: rgba(244, 63, 94, 0.2); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.4);">🔴 SPRINT FOCUS REQUIRED</span>`;
+    macroStatusBadge = `<span class="pill-badge pill-badge-rose"><span class="pulse-dot pulse-dot-rose"></span> 🔴 SPRINT FOCUS REQUIRED</span>`;
     macroCommentary = `Big Team 01 requires an intensive final ${daysLeft}-day revenue sprint. Remaining deficit is ${fmt(s.totalGap)} (${fmt(s.dailyNeeded)}/day needed). Sponsoring closing blitzes across high-base pools is essential to recover pace.`;
   }
 
-  // Detailed strategic feedback generator for each small team (incorporating Revenue + Early Upgrade directives)
+  // Detailed strategic feedback generator for each small team (structured modern two-tier memo)
   function getTeamFeedbackText(t) {
     const diffPct = Math.round((t.displayAch - pacePct) * 10) / 10;
     const diffSign = diffPct >= 0 ? '+' : '';
-    let revFeedback = '';
+    let revHeader = '';
+    let revBody = '';
     if (t.displayAch >= 100) {
       const surplus = t.cash - t.target;
-      revFeedback = `<strong style="color: #10b981;">🏆 100% Target Met (${fmtPct(t.displayAch)} | ${diffSign}${diffPct}% vs Day Benchmark):</strong> Delivered outstanding performance, securing a revenue surplus of +${fmt(surplus)}. Team members qualify for the dual-condition +0.5% team booster bonus. Maintain active outreach to expand leadership margin.`;
+      revHeader = `<span class="pill-badge pill-badge-emerald" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-emerald"></span> 100% Met (${fmtPct(t.displayAch)})</span>`;
+      revBody = `Revenue surplus of <strong style="color:#10b981;">+${fmt(surplus)}</strong> (${diffSign}${diffPct}% vs D${daysPassed} pace). Unlocks team booster bonus (+0.5%). Maintain closing cadence to expand sector margin.`;
     } else if (t.displayAch >= 90) {
-      revFeedback = `<strong style="color: #38bdf8;">⚡ High-Velocity Target Sprint (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Within striking distance of 100% threshold (only ${fmt(t.dailyNeeded)}/day needed over remaining ${daysLeft} days). Anchored by ${t.contracts} contracts and strong pipeline momentum. Sponsoring closing blitzes on warm renewal candidates will ensure 100% target clearance.`;
+      revHeader = `<span class="pill-badge pill-badge-cyan" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-emerald"></span> Near 100% (${fmtPct(t.displayAch)})</span>`;
+      revBody = `Within striking distance of target (only <strong style="color:#38bdf8;">${fmt(t.dailyNeeded)}/day</strong> needed over remaining ${daysLeft} days). Anchored by ${t.contracts} contracts; closing warm renewals will clear 100% threshold.`;
     } else if (t.displayAch >= 70) {
-      revFeedback = `<strong style="color: #f59e0b;">🟡 Steady Pacing (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Requires ${fmt(t.dailyNeeded)}/day run-rate. Priority focus on unblocking pending proposals, accelerating touchpoints on high-base accounts, and driving demo class conversions.`;
-    } else if (t.displayAch >= 55) {
-      revFeedback = `<strong style="color: #f97316;">⚠️ Moderate Gap (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Behind the Day ${daysPassed} benchmark of ${pacePct}%. Requires ${fmt(t.dailyNeeded)}/day to close. Team Leader must actively monitor zero-class consuming students and re-engage inactive student base.`;
+      revHeader = `<span class="pill-badge pill-badge-amber" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-amber"></span> Steady Run-Rate (${fmtPct(t.displayAch)})</span>`;
+      revBody = `Requires <strong style="color:#f59e0b;">${fmt(t.dailyNeeded)}/day</strong> run-rate. Priority focus on unblocking pending proposals, accelerating touchpoints on high-base accounts, and driving demo class conversions.`;
     } else {
-      revFeedback = `<strong style="color: #f43f5e;">🚨 Recovery Plan Required (${fmtPct(t.displayAch)} | Gap: ${fmt(t.gap)}):</strong> Deficit requires immediate intervention (${fmt(t.dailyNeeded)}/day run-rate). Focus on rapid contact of all uncontacted leads, student rescue campaigns, and structured 1:1 coaching with the Team Leader.`;
+      revHeader = `<span class="pill-badge pill-badge-rose" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-rose"></span> Final Sprint Focus (${fmtPct(t.displayAch)})</span>`;
+      revBody = `Requires immediate intervention (<strong style="color:#f43f5e;">${fmt(t.dailyNeeded)}/day</strong>). Priority on uncontacted leads rescue, inactive student re-engagement, and structured 1:1 coaching with the Team Leader.`;
     }
 
-    // Specific Early Upgrade Directive for this team
-    let upgFeedback = '';
     const upgContribution = totalUpgradeM2 > 0 ? ((t.upgradeM2 / totalUpgradeM2) * 100).toFixed(1) : '0';
+    let upgHeader = '';
+    let upgBody = '';
     if (t.upgradeRate >= 8) {
-      upgFeedback = `<div style="margin-top: 6px; padding: 6px 10px; background: rgba(192, 132, 252, 0.08); border-left: 3px solid #c084fc; border-radius: 4px;">
-        <span style="color: #c084fc; font-weight: 800;">🚀 Early Upgrade Benchmark Leader (${t.upgradeRate.toFixed(1)}% | ${t.upgradeM2} Upgrades):</span>
-        Top upgrade producer in Big Team 01 (contributes ${upgContribution}% of sector upgrades). 20% milestone target is ${t.upgrade20Target} (${t.upgrade20Needed} needed). Leverage active student touchpoints to convert remaining 60-90 day renewal candidates into multi-month upgrades.
-      </div>`;
+      upgHeader = `<span class="pill-badge pill-badge-purple" style="font-size:0.7rem; padding: 2px 7px;">🚀 Upgrade Leader (${t.upgradeRate.toFixed(1)}%)</span>`;
+      upgBody = `Top producer in Big Team 01 (contributes <strong>${upgContribution}%</strong> of sector upgrades). 20% milestone target is ${t.upgrade20Target} (${t.upgrade20Needed} needed). Harvest remaining 60-90 day renewal candidates into long-term upgrades.`;
     } else if (t.upgradeRate >= 6.5) {
-      upgFeedback = `<div style="margin-top: 6px; padding: 6px 10px; background: rgba(56, 189, 248, 0.08); border-left: 3px solid #38bdf8; border-radius: 4px;">
-        <span style="color: #38bdf8; font-weight: 800;">⚡ High-Conversion Upgrade Engine (${t.upgradeRate.toFixed(1)}% | ${t.upgradeM2} Upgrades):</span>
-        Strong upgrade pace (contributes ${upgContribution}% of sector upgrades). 20% milestone target is ${t.upgrade20Target} (${t.upgrade20Needed} needed). Closing 10 more warm upgrades will lock in both 100% net cash target and individual commission booster.
-      </div>`;
+      upgHeader = `<span class="pill-badge pill-badge-cyan" style="font-size:0.7rem; padding: 2px 7px;">⚡ High Velocity (${t.upgradeRate.toFixed(1)}%)</span>`;
+      upgBody = `Strong conversion momentum (contributes <strong>${upgContribution}%</strong> of sector upgrades). Only ${t.upgrade20Needed} contracts to 20% target (${t.upgrade20Target}). Closing warm upgrades will lock in team bonus.`;
     } else if (t.upgradeRate >= 5.0) {
-      upgFeedback = `<div style="margin-top: 6px; padding: 6px 10px; background: rgba(245, 158, 11, 0.08); border-left: 3px solid #f59e0b; border-radius: 4px;">
-        <span style="color: #f59e0b; font-weight: 800;">🔄 Solid Upgrade Volume (${t.upgradeRate.toFixed(1)}% | ${t.upgradeM2} Upgrades):</span>
-        Stable conversion across ${t.upgradeBase} base (${t.upgrade20Needed} contracts away from 20% target of ${t.upgrade20Target}). Prioritize calling students who consumed 8+ classes this month with bundled discount proposals.
-      </div>`;
+      upgHeader = `<span class="pill-badge pill-badge-amber" style="font-size:0.7rem; padding: 2px 7px;">🔄 Steady Volume (${t.upgradeRate.toFixed(1)}%)</span>`;
+      upgBody = `Consistent conversion across ${t.upgradeBase} base (${t.upgrade20Needed} to 20% target of ${t.upgrade20Target}). Prioritize calling students who consumed 8+ classes this month with bundled discount proposals.`;
     } else {
-      upgFeedback = `<div style="margin-top: 6px; padding: 6px 10px; background: rgba(244, 63, 94, 0.08); border-left: 3px solid #f43f5e; border-radius: 4px;">
-        <span style="color: #f43f5e; font-weight: 800;">🎯 Massive Untapped Upgrade Opportunity (${t.upgradeRate.toFixed(1)}% | ${t.upgradeM2} Upgrades):</span>
-        Holds the largest lead base in Big Team 01 (${t.upgradeBase} students, 29.5% of sector total), but lowest conversion (${t.upgrade20Needed} contracts to 20% target). A targeted calling blitz on active students represents the highest upside to propel both team and sector to month-end victory.
-      </div>`;
+      upgHeader = `<span class="pill-badge pill-badge-rose" style="font-size:0.7rem; padding: 2px 7px;">🎯 Untapped Reserve (${t.upgradeRate.toFixed(1)}%)</span>`;
+      upgBody = `Holds the largest pool in Big Team 01 (${t.upgradeBase} leads, 29.5% of sector total), but lowest conversion (${t.upgrade20Needed} to 20% goal). A targeted upgrade phone blitz represents the highest upside to propel sector completion.`;
     }
 
-    return revFeedback + upgFeedback;
+    return `
+      <div class="strategic-memo-box">
+        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 5px; flex-wrap: wrap;">
+          ${revHeader}
+          <span style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">${revBody}</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 5px; margin-top: 4px; flex-wrap: wrap;">
+          ${upgHeader}
+          <span style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">${upgBody}</span>
+        </div>
+      </div>
+    `;
   }
 
   // Build small team rows
@@ -841,11 +847,7 @@ function renderBigTeamSummary(model) {
     const diffSign = diffPct >= 0 ? '+' : '';
     const paceClr = t.displayAch >= pacePct ? '#10b981' : (t.displayAch >= pacePct - 8 ? '#f59e0b' : '#f43f5e');
     const paceLabel = t.displayAch >= pacePct ? 'Ahead' : (t.displayAch >= pacePct - 8 ? 'Near' : 'Behind');
-    const targetStatusBadge = t.displayAch >= 100 
-      ? `<span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35);">🥇 Met ≥100%</span>`
-      : (t.displayAch >= 90 
-          ? `<span class="status-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35);">⚡ Near 100%</span>`
-          : `<span class="status-badge" style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.35);">Gap</span>`);
+    const achClr = getStatusColor(t.displayAch);
 
     return `
       <tr>
@@ -859,14 +861,19 @@ function renderBigTeamSummary(model) {
         </td>
         <td style="font-family: var(--font-mono); font-weight: 800; color: #fff; text-align: center;">${fmt(t.cash)}</td>
         <td style="font-family: var(--font-mono); color: var(--text-secondary); text-align: center;">${fmt(t.target)}</td>
-        <td style="font-family: var(--font-mono); font-weight: 800; text-align: center; color: ${getStatusColor(t.displayAch)}; font-size: 0.95rem;">
-          ${fmtPct(t.displayAch)}
+        <td style="text-align: center;">
+          <span class="pill-badge" style="background: ${achClr}18; color: ${achClr}; border: 1px solid ${achClr}40; font-family: var(--font-mono); font-size: 0.85rem;">
+            <span class="pulse-dot" style="background: ${achClr}; box-shadow: 0 0 6px ${achClr};"></span>
+            ${fmtPct(t.displayAch)}
+          </span>
         </td>
         <td style="text-align: center;">
           <span style="font-family: var(--font-mono); font-weight: 700; color: ${paceClr}; font-size: 0.78rem;">
-            ${diffSign}${diffPct}% (${paceLabel})
+            ${diffSign}${diffPct}%
           </span>
-          <div style="margin-top: 3px;">${targetStatusBadge}</div>
+          <span class="pill-badge" style="background: ${paceClr}15; color: ${paceClr}; border: 1px solid ${paceClr}30; font-size: 0.68rem; margin-left: 4px; padding: 2px 6px;">
+            ${paceLabel}
+          </span>
         </td>
         <td style="font-family: var(--font-mono); text-align: center; color: #fff; font-weight: 700;">
           ${t.contracts}
@@ -874,20 +881,20 @@ function renderBigTeamSummary(model) {
         <td style="font-family: var(--font-mono); text-align: center; color: #cbd5e1;">
           ${t.upgradeBase}
         </td>
-        <td style="font-family: var(--font-mono); text-align: center; background: rgba(192, 132, 252, 0.05); border-left: 1px solid rgba(192, 132, 252, 0.15);">
-          <strong style="color: #c084fc; font-size: 0.92rem;">${t.upgradeM2}</strong>
-          <span style="font-size: 0.74rem; color: #e9d5ff; font-weight: 700;"> (${t.upgradeRate.toFixed(1)}%)</span>
+        <td style="font-family: var(--font-mono); text-align: center; background: rgba(192, 132, 252, 0.04); border-left: 1px solid rgba(192, 132, 252, 0.15);">
+          <strong style="color: #c084fc; font-size: 0.95rem;">${t.upgradeM2}</strong>
+          <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem; padding: 1px 6px; margin-left: 4px;">${t.upgradeRate.toFixed(1)}%</span>
         </td>
-        <td style="font-family: var(--font-mono); text-align: center; background: rgba(192, 132, 252, 0.05); border-right: 1px solid rgba(192, 132, 252, 0.15);">
+        <td style="font-family: var(--font-mono); text-align: center; background: rgba(192, 132, 252, 0.04); border-right: 1px solid rgba(192, 132, 252, 0.15);">
           <div style="font-size: 0.8rem; color: #fff; font-weight: 700;">${t.upgrade20Target}</div>
           <div style="font-size: 0.72rem; color: ${t.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'}; font-weight: 700;">
             ${t.upgrade20Needed > 0 ? 'Gap: -' + t.upgrade20Needed : '✓ Met'}
           </div>
         </td>
-        <td style="font-family: var(--font-mono); text-align: center; font-weight: 700; color: ${t.gap === 0 ? '#10b981' : '#f43f5e'};">
+        <td style="font-family: var(--font-mono); text-align: center; font-weight: 800; color: ${t.gap === 0 ? '#10b981' : '#f43f5e'};">
           ${t.gap === 0 ? '✓ MET' : fmt(t.gap)}
         </td>
-        <td style="text-align: left !important; font-size: 0.8rem; line-height: 1.45; color: #cbd5e1; min-width: 420px; max-width: 620px;">
+        <td style="text-align: left !important; min-width: 440px; max-width: 640px;">
           ${getTeamFeedbackText(t)}
         </td>
       </tr>
@@ -900,37 +907,37 @@ function renderBigTeamSummary(model) {
     const rateClr = t.upgradeRate >= 8 ? '#10b981' : (t.upgradeRate >= 6 ? '#38bdf8' : (t.upgradeRate >= 5 ? '#f59e0b' : '#f43f5e'));
     const rankBadge = idx === 0 ? '🥇' : (idx === 1 ? '🥈' : (idx === 2 ? '🥉' : `#${idx + 1}`));
     return `
-      <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(192, 132, 252, 0.2); border-radius: var(--radius-md); padding: 14px; position: relative; overflow: hidden;">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+      <div class="metric-tile-modern" style="border-top: 3px solid ${t.color}; padding: 14px 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
           <div style="display: flex; align-items: center; gap: 6px;">
-            <span style="font-size: 1rem;">${rankBadge}</span>
+            <span style="font-size: 1.1rem;">${rankBadge}</span>
             <strong style="color: #fff; font-size: 0.88rem;">${t.label || t.key}</strong>
           </div>
-          <span style="background: ${t.color}25; color: ${t.color}; border: 1px solid ${t.color}50; font-size: 0.7rem; font-weight: 800; padding: 2px 6px; border-radius: 4px;">
-            ${t.tl}
+          <span class="pill-badge" style="background: ${t.color}20; color: ${t.color}; border: 1px solid ${t.color}45; font-size: 0.68rem; padding: 2px 7px;">
+            👑 ${t.tl}
           </span>
         </div>
         <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 4px;">
-          <div style="font-family: var(--font-mono); font-size: 1.35rem; font-weight: 900; color: ${rateClr};">
+          <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: ${rateClr};">
             ${t.upgradeRate.toFixed(1)}%
           </div>
-          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #cbd5e1;">
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #cbd5e1;">
             <strong style="color: #fff;">${t.upgradeM2}</strong> / ${t.upgradeBase} Base
           </div>
         </div>
         <!-- Progress to 20% target bar -->
         <div style="margin-top: 8px;">
           <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #94a3b8; margin-bottom: 3px;">
-            <span>20% Milestone Target: <strong>${t.upgrade20Target}</strong></span>
+            <span>20% Goal Target: <strong>${t.upgrade20Target}</strong></span>
             <span style="color: ${t.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'}; font-weight: 700;">
-              ${t.upgrade20Needed > 0 ? t.upgrade20Needed + ' remaining' : '✓ 100% Met'}
+              ${t.upgrade20Needed > 0 ? t.upgrade20Needed + ' needed' : '✓ 100% Met'}
             </span>
           </div>
-          <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
-            <div style="height: 100%; width: ${Math.min(100, (t.upgradeM2 / t.upgrade20Target) * 100)}%; background: linear-gradient(90deg, #c084fc, ${rateClr}); border-radius: 3px;"></div>
+          <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden;">
+            <div style="height: 100%; width: ${Math.min(100, (t.upgradeM2 / t.upgrade20Target) * 100)}%; background: linear-gradient(90deg, #c084fc, ${rateClr}); border-radius: 999px;"></div>
           </div>
         </div>
-        <div style="margin-top: 8px; font-size: 0.72rem; color: #94a3b8; display: flex; justify-content: space-between;">
+        <div style="margin-top: 10px; font-size: 0.72rem; color: #94a3b8; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 8px;">
           <span>Sector Share: <strong style="color: #c084fc;">${share}%</strong></span>
           <span>Orders: <strong style="color: #fff;">${t.contracts}</strong></span>
         </div>
@@ -945,105 +952,122 @@ function renderBigTeamSummary(model) {
   const sectorPaceLabel = s.achievement >= pacePct ? 'Ahead' : (s.achievement >= pacePct - 8 ? 'Near' : 'Behind');
 
   container.innerHTML = `
-    <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9)); border: 1.5px solid rgba(99, 102, 241, 0.4); border-radius: var(--radius-lg); padding: 24px; box-shadow: 0 12px 36px rgba(0,0,0,0.35);">
+    <div class="glass-panel-executive" style="padding: 26px 28px; margin-bottom: 28px;">
       
       <!-- Section Header -->
       <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 16px;">
         <div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <span style="font-size: 1.6rem;">📊</span>
-            <div>
-              <h3 style="font-size: 1.25rem; font-weight: 900; color: #fff; margin: 0;">
-                Big Team 01 Achievement Summary & Strategic Performance Feedback
-              </h3>
-              <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">
-                Comprehensive executive synthesis covering small team velocity, target gaps, and strategic leadership directives (Exclusively Team & Sector Totals).
-              </p>
-            </div>
-          </div>
+          <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: #818cf8; background: rgba(99, 102, 241, 0.12); padding: 4px 12px; border-radius: 999px; border: 1px solid rgba(99, 102, 241, 0.25); margin-bottom: 8px;">
+            👑 Sector Executive Synthesis &amp; Directives
+          </span>
+          <h3 style="font-size: 1.32rem; font-weight: 900; color: #fff; margin: 0; letter-spacing: -0.02em;">
+            Big Team 01 Leadership Synthesis &amp; Tactical Intelligence
+          </h3>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 4px; line-height: 1.5;">
+            Reconciled small team financial delivery, early upgrade velocity, and leadership directives (Exclusively Team &amp; Sector Totals).
+          </p>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
           ${macroStatusBadge}
-          <span style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.35); padding: 4px 12px; border-radius: var(--radius-sm); font-size: 0.78rem; font-weight: 700;">
-            Day ${daysPassed} of 30 (${daysLeft} Days Remaining)
+          <span style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; padding: 5px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; font-family: var(--font-mono);">
+            📅 Day ${daysPassed} of 30 (${daysLeft}d remaining)
           </span>
         </div>
       </div>
 
       <!-- Macro Executive Summary Cards (Net Cash & Small Team Distribution) -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 20px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 22px;">
         
-        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: var(--radius-md); padding: 16px;">
-          <div style="font-size: 0.74rem; color: #818cf8; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">⭐ Sector Net Cash Standing</div>
-          <div style="font-family: var(--font-mono); font-size: 1.7rem; font-weight: 900; color: #fff; margin-top: 4px;">
-            ${fmt(s.totalCash)} <span style="font-size: 0.95rem; color: var(--text-muted);">/ ${fmt(s.totalTarget)}</span>
+        <div class="metric-tile-modern" style="border-top: 3px solid #6366f1;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #818cf8; text-transform: uppercase; letter-spacing: 0.06em;">💰 Sector Net Cash</span>
+            <span class="pill-badge pill-badge-cyan" style="font-size: 0.68rem;">D${daysPassed} Pace: ${pacePct}%</span>
           </div>
-          <div style="font-size: 0.8rem; color: ${getStatusColor(s.achievement)}; font-weight: 700; margin-top: 2px;">
-            ${fmtPct(s.achievement)} Achieved (Gap: ${fmt(s.totalGap)})
+          <div style="font-family: var(--font-mono); font-size: 1.85rem; font-weight: 900; color: #fff; margin-top: 6px; letter-spacing: -0.02em;">
+            ${fmt(s.totalCash)} <span style="font-size: 0.95rem; color: #64748b; font-weight: 500;">/ ${fmt(s.totalTarget)}</span>
           </div>
-          <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 6px;">
-            Required run-rate: <strong style="color: #38bdf8;">${fmt(s.dailyNeeded)}/day</strong> across remaining ${daysLeft} days
+          <div style="margin-top: 8px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.76rem; font-weight: 700; margin-bottom: 4px;">
+              <span style="color: ${getStatusColor(s.achievement)};">${fmtPct(s.achievement)} Achieved</span>
+              <span style="color: #f43f5e;">Gap: ${fmt(s.totalGap)}</span>
+            </div>
+            <div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 999px; overflow: hidden;">
+              <div style="height: 100%; width: ${Math.min(100, s.achievement)}%; background: linear-gradient(90deg, #6366f1, #38bdf8); border-radius: 999px;"></div>
+            </div>
           </div>
-        </div>
-
-        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-md); padding: 16px;">
-          <div style="font-size: 0.74rem; color: #34d399; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">🏆 Small Teams Target Distribution</div>
-          <div style="font-family: var(--font-mono); font-size: 1.7rem; font-weight: 900; color: #fff; margin-top: 4px;">
-            ${metCount} <span style="font-size: 0.95rem; color: #10b981; font-weight: 700;">Met ≥100%</span>
-            <span style="font-size: 0.95rem; color: var(--text-muted);"> / 5 Teams</span>
-          </div>
-          <div style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; margin-top: 2px;">
-            ${nearCount} Team Near 100% (ME-EGSS05 at 94.4%)
-          </div>
-          <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 6px;">
-            Teams in final sprint: <strong style="color: #f59e0b;">ME-EGSS01, ME-EGSS10</strong>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 8px;">
+            Required run-rate: <strong style="color: #38bdf8; font-family: var(--font-mono);">${fmt(s.dailyNeeded)}/day</strong> (${daysLeft}d sprint)
           </div>
         </div>
 
-        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-md); padding: 16px;">
-          <div style="font-size: 0.74rem; color: #38bdf8; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px;">📦 Total Orders & Revenue Velocity</div>
-          <div style="font-family: var(--font-mono); font-size: 1.7rem; font-weight: 900; color: #fff; margin-top: 4px;">
-            ${s.totalContracts} <span style="font-size: 0.9rem; color: var(--text-muted);">Orders</span>
+        <div class="metric-tile-modern" style="border-top: 3px solid #10b981;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #34d399; text-transform: uppercase; letter-spacing: 0.06em;">🏆 Teams Distribution</span>
+            <span class="pill-badge pill-badge-emerald" style="font-size: 0.68rem;">5 Small Teams</span>
           </div>
-          <div style="font-size: 0.8rem; color: #a78bfa; font-weight: 700; margin-top: 2px;">
-            ${totalUpgradeM2} Early Upgrades | ${s.totalNormalRenewals} Normal Renewals
+          <div style="font-family: var(--font-mono); font-size: 1.85rem; font-weight: 900; color: #fff; margin-top: 6px; letter-spacing: -0.02em;">
+            ${metCount} <span style="font-size: 1.05rem; color: #10b981; font-weight: 800;">Met ≥100%</span>
+            <span style="font-size: 0.95rem; color: #64748b; font-weight: 500;">/ 5 Teams</span>
           </div>
-          <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 6px;">
-            Avg order value: <strong style="color: #fff;">${fmt(s.totalContracts > 0 ? s.totalCash / s.totalContracts : 0)}</strong> | Upgrade share: <strong style="color: #c084fc;">${upgradeShareOfOrders}%</strong>
+          <div style="margin-top: 8px;">
+            <div style="display: flex; gap: 4px; height: 6px; border-radius: 999px; overflow: hidden; background: rgba(255,255,255,0.06);">
+              <div style="flex: 2; background: #10b981; border-radius: 999px;" title="2 Teams Met ≥100%"></div>
+              <div style="flex: 1; background: #38bdf8; border-radius: 999px;" title="1 Team Near ≥90%"></div>
+              <div style="flex: 2; background: #f59e0b; border-radius: 999px;" title="2 Teams Sprinting"></div>
+            </div>
+          </div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 8px;">
+            Near target: <strong style="color: #38bdf8;">ME-EGSS05 (94.4%)</strong> | Sprint: <strong style="color: #f59e0b;">ME-EGSS01, 10</strong>
+          </div>
+        </div>
+
+        <div class="metric-tile-modern" style="border-top: 3px solid #38bdf8;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.06em;">📦 Order Velocity &amp; ASP</span>
+            <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">MTD Contracts</span>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 1.85rem; font-weight: 900; color: #fff; margin-top: 6px; letter-spacing: -0.02em;">
+            ${s.totalContracts} <span style="font-size: 1rem; color: #64748b; font-weight: 500;">Orders</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 0.76rem;">
+            <span style="color: #cbd5e1;"><strong style="color: #c084fc;">${totalUpgradeM2}</strong> Early Upgrades</span>
+            <span style="color: #94a3b8;">${s.totalNormalRenewals} Normal Renewals</span>
+          </div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 8px;">
+            Avg order value: <strong style="color: #fff; font-family: var(--font-mono);">${fmt(s.totalContracts > 0 ? s.totalCash / s.totalContracts : 0)}</strong> | Upgrade share: <strong style="color: #c084fc;">${upgradeShareOfOrders}%</strong>
           </div>
         </div>
 
       </div>
 
       <!-- DEDICATED BIG TEAM UPGRADE PART: Macro Intelligence & 20% Milestone Benchmark -->
-      <div style="background: rgba(192, 132, 252, 0.05); border: 1px solid rgba(192, 132, 252, 0.3); border-radius: var(--radius-md); padding: 18px; margin-bottom: 22px;">
+      <div style="background: linear-gradient(135deg, rgba(88, 28, 135, 0.12), rgba(15, 23, 42, 0.7)); border: 1px solid rgba(168, 85, 247, 0.25); border-radius: var(--radius-lg); padding: 22px; margin-bottom: 22px; position: relative; overflow: hidden; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.4);">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #c084fc, #a855f7, #38bdf8);"></div>
         
         <!-- Upgrade Subtitle & Badge -->
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; border-bottom: 1px solid rgba(192, 132, 252, 0.15); padding-bottom: 10px;">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 1.3rem;">🚀</span>
-            <div>
-              <h4 style="font-size: 1.05rem; font-weight: 900; color: #e9d5ff; margin: 0;">
-                Big Team 01 Early Upgrade (M2) Macro Intelligence & 20% Target Milestone
-              </h4>
-              <p style="font-size: 0.76rem; color: #c084fc; margin-top: 2px;">
-                Official upgrade tracking across 765 eligible leads pool, 20% milestone progress, and small team conversion dynamics.
-              </p>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; border-bottom: 1px solid rgba(192, 132, 252, 0.12); padding-bottom: 12px;">
+          <div>
+            <div style="font-size: 0.72rem; font-weight: 800; color: #c084fc; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px;">
+              🚀 Sector Macro Intelligence
             </div>
+            <h4 style="font-size: 1.15rem; font-weight: 900; color: #fff; margin: 0;">
+              Big Team 01 Early Upgrade (M2) Macro Velocity &amp; 20% Target Milestone
+            </h4>
           </div>
           <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="background: rgba(192, 132, 252, 0.2); color: #e9d5ff; border: 1px solid rgba(192, 132, 252, 0.4); padding: 3px 10px; border-radius: var(--radius-sm); font-size: 0.76rem; font-weight: 800;">
-              20% Milestone Target: ${totalUpgrade20Target} Upgrades
+            <span class="pill-badge pill-badge-purple" style="font-size: 0.76rem; padding: 4px 12px;">
+              <span class="pulse-dot" style="background:#c084fc; box-shadow:0 0 8px #c084fc;"></span>
+              20% Milestone Target: ${totalUpgrade20Target} Upgrades (${totalUpgradeBase} Pool)
             </span>
           </div>
         </div>
 
         <!-- 4 Upgrade Macro KPI Cards -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-bottom: 16px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-bottom: 18px;">
           
-          <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(192, 132, 252, 0.25); border-radius: var(--radius-sm); padding: 12px 14px;">
-            <div style="font-size: 0.7rem; color: #c084fc; font-weight: 800; text-transform: uppercase;">Sector Upgrade Conversion</div>
-            <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: #fff; margin-top: 2px;">
+          <div class="metric-tile-modern" style="border-top: 2px solid #c084fc; padding: 14px 16px;">
+            <div style="font-size: 0.7rem; color: #c084fc; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Sector Upgrade Conversion</div>
+            <div style="font-family: var(--font-mono); font-size: 1.55rem; font-weight: 900; color: #fff; margin-top: 4px;">
               ${totalUpgradeRate.toFixed(2)}%
             </div>
             <div style="font-size: 0.74rem; color: #e9d5ff; margin-top: 2px;">
@@ -1051,9 +1075,9 @@ function renderBigTeamSummary(model) {
             </div>
           </div>
 
-          <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(244, 63, 94, 0.25); border-radius: var(--radius-sm); padding: 12px 14px;">
-            <div style="font-size: 0.7rem; color: #f43f5e; font-weight: 800; text-transform: uppercase;">20% Milestone Deficit</div>
-            <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: #f43f5e; margin-top: 2px;">
+          <div class="metric-tile-modern" style="border-top: 2px solid #f43f5e; padding: 14px 16px;">
+            <div style="font-size: 0.7rem; color: #f43f5e; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">20% Milestone Deficit</div>
+            <div style="font-family: var(--font-mono); font-size: 1.55rem; font-weight: 900; color: #f43f5e; margin-top: 4px;">
               -${totalUpgrade20Needed} <span style="font-size: 0.85rem; color: #fda4af;">Contracts</span>
             </div>
             <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 2px;">
@@ -1061,9 +1085,9 @@ function renderBigTeamSummary(model) {
             </div>
           </div>
 
-          <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-sm); padding: 12px 14px;">
-            <div style="font-size: 0.7rem; color: #38bdf8; font-weight: 800; text-transform: uppercase;">Daily Velocity Required</div>
-            <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: #38bdf8; margin-top: 2px;">
+          <div class="metric-tile-modern" style="border-top: 2px solid #38bdf8; padding: 14px 16px;">
+            <div style="font-size: 0.7rem; color: #38bdf8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Daily Velocity Required</div>
+            <div style="font-family: var(--font-mono); font-size: 1.55rem; font-weight: 900; color: #38bdf8; margin-top: 4px;">
               ${dailyUpgradeNeeded} <span style="font-size: 0.85rem; color: #7dd3fc;">/ Day</span>
             </div>
             <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 2px;">
@@ -1071,9 +1095,9 @@ function renderBigTeamSummary(model) {
             </div>
           </div>
 
-          <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-sm); padding: 12px 14px;">
-            <div style="font-size: 0.7rem; color: #34d399; font-weight: 800; text-transform: uppercase;">Contract Share & Revenue Impact</div>
-            <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: #10b981; margin-top: 2px;">
+          <div class="metric-tile-modern" style="border-top: 2px solid #10b981; padding: 14px 16px;">
+            <div style="font-size: 0.7rem; color: #34d399; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Contract Share &amp; ASP Impact</div>
+            <div style="font-family: var(--font-mono); font-size: 1.55rem; font-weight: 900; color: #10b981; margin-top: 4px;">
               ${upgradeShareOfOrders}%
             </div>
             <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 2px;">
@@ -1085,10 +1109,10 @@ function renderBigTeamSummary(model) {
 
         <!-- Small Teams Upgrade Leaderboard Cards Grid (Strictly Teams, No Individuals) -->
         <div style="margin-top: 14px;">
-          <div style="font-size: 0.75rem; color: #e9d5ff; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
-            Small Teams Early Upgrade Ranking & Conversion Leaderboard
+          <div style="font-size: 0.75rem; color: #e9d5ff; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+            <span>🏅</span> Small Teams Upgrade Conversion Leaderboard
           </div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px;">
             ${teamUpgradeCardsHtml}
           </div>
         </div>
@@ -1096,45 +1120,47 @@ function renderBigTeamSummary(model) {
       </div>
 
       <!-- Sector Executive Leadership Feedback Note -->
-      <div style="background: rgba(99, 102, 241, 0.08); border-left: 4px solid var(--accent-indigo); padding: 14px 18px; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: 22px;">
-        <div style="font-size: 0.78rem; font-weight: 800; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">
-          Executive Sector Feedback & Strategic Direction (Senior Manager: Saber Hussien)
+      <div style="background: rgba(99, 102, 241, 0.07); border-left: 4px solid var(--accent-indigo); padding: 16px 20px; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: 22px;">
+        <div style="font-size: 0.76rem; font-weight: 800; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px;">
+          Executive Sector Feedback &amp; Strategic Direction (Senior Manager: Saber Hussien)
         </div>
-        <p style="font-size: 0.86rem; color: #e2e8f0; line-height: 1.5; margin: 0;">
+        <p style="font-size: 0.85rem; color: #e2e8f0; line-height: 1.55; margin: 0;">
           ${macroCommentary} <strong>Early Upgrade Acceleration Directive:</strong> Big Team 01 has achieved 46 M2 upgrades (${fmtPct(s.upgradeRate)} conversion rate) against the 20% milestone target of 153 contracts (107 remaining). Small Teams 13 (8.29%) and 05 (6.85%) are delivering high upgrade productivity, while Team 10 represents the single largest untapped reservoir (226 leads, 1.77% conversion). Sponsoring a dedicated upgrade phone blitz on warm renewals and 60-90 day remaining students will directly propel team net cash past 100% and unlock commission boosters.
         </p>
       </div>
 
       <!-- Small Teams Achievement & Detailed Strategic Feedback Table -->
-      <div class="table-wrapper" style="overflow-x: auto; margin-top: 10px;">
-        <table class="data-table" id="bigTeamSummaryTable" style="width: 100%; min-width: 1560px; table-layout: auto !important;">
+      <div class="modern-table-card" style="margin-top: 12px; overflow-x: auto;">
+        <table class="data-table" id="bigTeamSummaryTable" style="width: 100%; min-width: 1580px; table-layout: auto !important;">
           <thead>
             <tr>
               <th style="min-width: 44px; text-align: center;">#</th>
-              <th style="min-width: 180px; text-align: left !important;">Small Team & Team Leader</th>
+              <th style="min-width: 180px; text-align: left !important;">Small Team &amp; Team Leader</th>
               <th style="min-width: 120px; text-align: center;">Net Cash MTD</th>
               <th style="min-width: 110px; text-align: center;">Target</th>
-              <th style="min-width: 110px; text-align: center; color: #10b981; font-weight: 800;">Ach %</th>
+              <th style="min-width: 115px; text-align: center; color: #10b981; font-weight: 800;">Ach %</th>
               <th style="min-width: 140px; text-align: center;">Benchmark Variance (D${daysPassed}: ${pacePct}%)</th>
               <th style="min-width: 90px; text-align: center;">Orders</th>
               <th style="min-width: 90px; text-align: center;">Upgrade Base</th>
-              <th style="min-width: 120px; text-align: center; color: #c084fc; font-weight: 800;">M2 Upgrades (Conv %)</th>
-              <th style="min-width: 120px; text-align: center; color: #e9d5ff;">20% Goal (Gap)</th>
+              <th style="min-width: 125px; text-align: center; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08);">M2 Upgrades (Conv %)</th>
+              <th style="min-width: 120px; text-align: center; color: #e9d5ff; background: rgba(192, 132, 252, 0.08);">20% Goal (Gap)</th>
               <th style="min-width: 110px; text-align: center; color: #f43f5e; font-weight: 800;">Target Gap</th>
-              <th style="min-width: 440px; text-align: left !important; color: #38bdf8; font-weight: 800;">Detailed Strategic Feedback & Operational Directives</th>
+              <th style="min-width: 460px; text-align: left !important; color: #38bdf8; font-weight: 800;">Detailed Strategic Feedback &amp; Operational Directives</th>
             </tr>
           </thead>
           <tbody>
             ${rowsHtml}
           </tbody>
           <tfoot>
-            <tr style="background: rgba(99, 102, 241, 0.16); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
-              <td colspan="2" style="color: #fff; text-align: left; font-size: 0.92rem; padding: 12px 14px;">
+            <tr style="background: rgba(99, 102, 241, 0.14); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
+              <td colspan="2" style="color: #fff; text-align: left; font-size: 0.92rem; padding: 14px 16px;">
                 ⭐ BIG TEAM 01 — SECTOR TOTAL (Saber Hussien)
               </td>
               <td style="font-family: var(--font-mono); font-size: 1.05rem; color: #fff; text-align: center;">${fmt(s.totalCash)}</td>
               <td style="font-family: var(--font-mono); color: var(--text-secondary); text-align: center;">${fmt(s.totalTarget)}</td>
-              <td style="font-family: var(--font-mono); font-size: 1.05rem; color: ${getStatusColor(s.achievement)}; text-align: center;">${fmtPct(s.achievement)}</td>
+              <td style="font-family: var(--font-mono); font-size: 1.05rem; color: ${getStatusColor(s.achievement)}; text-align: center;">
+                <span class="pill-badge pill-badge-emerald">${fmtPct(s.achievement)}</span>
+              </td>
               <td style="text-align: center; font-family: var(--font-mono); color: ${sectorPaceClr}; font-weight: 800;">
                 ${sectorDiffSign}${sectorDiffPct}% (${sectorPaceLabel})
               </td>
@@ -1144,17 +1170,17 @@ function renderBigTeamSummary(model) {
               <td style="font-family: var(--font-mono); color: #cbd5e1; text-align: center;">
                 ${totalUpgradeBase}
               </td>
-              <td style="font-family: var(--font-mono); color: #c084fc; text-align: center; font-size: 1rem;">
+              <td style="font-family: var(--font-mono); color: #c084fc; text-align: center; font-size: 1rem; background: rgba(192, 132, 252, 0.08);">
                 <strong>${totalUpgradeM2}</strong> <span style="font-size: 0.78rem; color: #e9d5ff;">(${totalUpgradeRate.toFixed(1)}%)</span>
               </td>
-              <td style="font-family: var(--font-mono); text-align: center; font-size: 0.85rem;">
+              <td style="font-family: var(--font-mono); text-align: center; font-size: 0.85rem; background: rgba(192, 132, 252, 0.08);">
                 <span style="color: #fff;">${totalUpgrade20Target}</span> <span style="color: #f43f5e; font-size: 0.78rem;">(-${totalUpgrade20Needed})</span>
               </td>
               <td style="font-family: var(--font-mono); color: #f43f5e; text-align: center; font-weight: 800;">
                 ${fmt(s.totalGap)}
               </td>
-              <td style="text-align: left !important; font-size: 0.82rem; line-height: 1.45; color: #e2e8f0; padding: 12px 14px;">
-                <strong>Sector Synthesis:</strong> Overall Big Team 01 performance is anchored by strong overachievement in Team 30 & Team 13, and near-target volume in Team 05. On Early Upgrades, Big Team 01 has achieved 46 M2 contracts (6.01% conversion rate) towards the 20% milestone target of 153 contracts (107 remaining). Sponsoring a decisive closing blitz across Teams 05, 01, and 10 over the final 48 hours is the primary operational priority to maximize monthly realization.
+              <td style="text-align: left !important; font-size: 0.82rem; line-height: 1.45; color: #e2e8f0; padding: 14px 16px;">
+                <strong>Sector Synthesis:</strong> Overall Big Team 01 performance is anchored by strong overachievement in Team 30 &amp; Team 13, and near-target volume in Team 05. On Early Upgrades, Big Team 01 has achieved 46 M2 contracts (6.01% conversion rate) towards the 20% milestone target of 153 contracts (107 remaining). Sponsoring a decisive closing blitz across Teams 05, 01, and 10 over the final 48 hours is the primary operational priority to maximize monthly realization.
               </td>
             </tr>
           </tfoot>
@@ -1691,44 +1717,45 @@ function renderUpgradeTab(model) {
     }).sort((a, b) => b.tRate - a.tRate);
 
     smallTeamsContainer.innerHTML = teamList.map(item => {
-      const badgeClr = item.tRate >= 6.5 ? '#10b981' : (item.tRate >= 5.0 ? '#38bdf8' : (item.tRate >= 3.0 ? '#f59e0b' : '#f43f5e'));
+      const badgeClass = item.tRate >= 6.5 ? 'pill-badge-emerald' : (item.tRate >= 5.0 ? 'pill-badge-cyan' : (item.tRate >= 3.0 ? 'pill-badge-amber' : 'pill-badge-rose'));
+      const pulseClass = item.tRate >= 6.5 ? 'pulse-dot-emerald' : (item.tRate >= 3.0 ? 'pulse-dot-amber' : 'pulse-dot-rose');
       const badgeTxt = item.tRate >= 6.5 ? '⭐ Leader' : (item.tRate >= 5.0 ? 'Ahead' : (item.tRate >= 3.0 ? 'Pacing' : 'Gap'));
       return `
-        <div class="calc-card" style="border-top: 4px solid ${item.t.color}; padding: 18px 20px;">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+        <div class="metric-tile-modern" style="border-top: 3px solid ${item.t.color}; padding: 18px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
             <div>
-              <div style="font-weight: 800; color: #fff; font-size: 1.02rem;">${item.t.label || item.t.key}</div>
-              <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px;">👑 ${item.tl}</div>
+              <div style="font-weight: 800; color: #fff; font-size: 1.02rem; letter-spacing: -0.01em;">${item.t.label || item.t.key}</div>
+              <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 3px;">👑 ${item.tl}</div>
             </div>
-            <span class="status-badge" style="background: ${badgeClr}20; color: ${badgeClr}; border: 1px solid ${badgeClr}40; font-size: 0.72rem;">${badgeTxt}</span>
+            <span class="pill-badge ${badgeClass}"><span class="pulse-dot ${pulseClass}"></span> ${badgeTxt}</span>
           </div>
 
-          <div style="margin-bottom: 10px;">
-            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
-              <span style="color: #94a3b8;">20% Goal Velocity</span>
-              <strong style="color: #c084fc;">${item.tAch20.toFixed(1)}% (${item.tUp}/${item.tTarget20})</strong>
+          <div style="margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;">
+              <span style="color: #94a3b8; font-weight: 500;">20% Goal Velocity</span>
+              <strong style="color: #c084fc; font-family: var(--font-mono);">${item.tAch20.toFixed(1)}% <span style="font-size: 0.74rem; color: #94a3b8; font-weight: 500;">(${item.tUp}/${item.tTarget20})</span></strong>
             </div>
             <div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
-              <div style="height: 100%; width: ${Math.min(100, item.tAch20)}%; background: linear-gradient(90deg, ${item.t.color}, #c084fc); border-radius: 6px;"></div>
+              <div style="height: 100%; width: ${Math.min(100, item.tAch20)}%; background: linear-gradient(90deg, ${item.t.color}, #c084fc); border-radius: 6px; box-shadow: 0 0 8px ${item.t.color}60;"></div>
             </div>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px;">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; background: rgba(15,23,42,0.35); border-radius: 8px; padding: 10px;">
             <div>
-              <span style="color: #64748b;">Base / Actual:</span>
-              <div style="font-weight: 700; color: #fff;">${item.tBase} / <span style="color: #10b981;">${item.tUp} upg</span></div>
+              <span style="color: #64748b; font-size: 0.72rem; text-transform: uppercase; font-weight: 600; display: block;">Base / Actual</span>
+              <div style="font-weight: 700; color: #fff; font-family: var(--font-mono); margin-top: 2px;">${item.tBase} / <span style="color: #10b981;">${item.tUp} upg</span></div>
             </div>
             <div>
-              <span style="color: #64748b;">Conv. Rate:</span>
-              <div style="font-weight: 800; color: #a78bfa;">${item.tRate.toFixed(2)}%</div>
+              <span style="color: #64748b; font-size: 0.72rem; text-transform: uppercase; font-weight: 600; display: block;">Conv. Rate</span>
+              <div style="font-weight: 800; color: #a78bfa; font-family: var(--font-mono); margin-top: 2px;">${item.tRate.toFixed(2)}%</div>
             </div>
             <div>
-              <span style="color: #64748b;">Remaining Needed:</span>
-              <div style="font-weight: 700; color: ${item.tNeeded > 0 ? '#f43f5e' : '#10b981'};">${item.tNeeded} needed</div>
+              <span style="color: #64748b; font-size: 0.72rem; text-transform: uppercase; font-weight: 600; display: block;">Remaining Needed</span>
+              <div style="font-weight: 700; color: ${item.tNeeded > 0 ? '#f43f5e' : '#10b981'}; font-family: var(--font-mono); margin-top: 2px;">${item.tNeeded} needed</div>
             </div>
             <div>
-              <span style="color: #64748b;">Touch Intensity:</span>
-              <div style="font-weight: 700; color: #facc15;">${item.tCover.toFixed(1)}% <span style="font-size: 0.7rem; color: #fde047;">(${(item.tCover/100*1.7).toFixed(1)}x)</span></div>
+              <span style="color: #64748b; font-size: 0.72rem; text-transform: uppercase; font-weight: 600; display: block;">Touch Intensity</span>
+              <div style="font-weight: 700; color: #facc15; font-family: var(--font-mono); margin-top: 2px;">${item.tCover.toFixed(1)}% <span style="font-size: 0.7rem; color: #fde047; font-weight: 500;">(${(item.tCover/100*1.7).toFixed(1)}x)</span></div>
             </div>
           </div>
         </div>
@@ -3754,6 +3781,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4786,6 +4815,8 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
 
 
 

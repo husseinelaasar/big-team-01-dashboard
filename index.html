@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260928_151713">
+  <link rel="stylesheet" href="styles.css?v=20260928_154024">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -413,48 +413,68 @@
       </div>
 
       <!-- 1. Top Executive Upgrade KPI Deck (6 Metric Cards) -->
-      <div class="upgrade-kpi-deck" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+      <div class="upgrade-kpi-deck" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 24px;">
         <!-- Card 1: Actual Upgrades -->
-        <div class="calc-card" style="border-left: 4px solid #10b981;">
-          <div class="kpi-label">Actual M-2 Upgrades</div>
-          <div class="kpi-value" style="color: #10b981;" id="upgCardActual">46</div>
-          <div class="kpi-sub" style="color: #94a3b8;">Official SCRM Col F (+12 newly verified)</div>
-          <div class="kpi-pct" style="color: #10b981; font-weight: 700;" id="upgCardRate">6.01% Conv. Rate</div>
+        <div class="metric-tile-modern" style="border-top: 3px solid #10b981;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #34d399; text-transform: uppercase; letter-spacing: 0.05em;">Actual M-2 Upgrades</span>
+            <span class="pill-badge pill-badge-emerald" id="upgCardRate">6.01% Conv.</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #fff; margin-top: 6px;" id="upgCardActual">46</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Official SCRM Col F (+12 newly verified)</div>
         </div>
         <!-- Card 2: M-2 Pool Base -->
-        <div class="calc-card" style="border-left: 4px solid #6366f1;">
-          <div class="kpi-label">M-2 Students Pool Base</div>
-          <div class="kpi-value" style="color: #fff;" id="upgCardBase">765</div>
-          <div class="kpi-sub" style="color: #94a3b8;">Assigned Students (SCRM Col C)</div>
-          <div class="kpi-pct" style="color: #a5b4fc;">Across 5 Small Teams</div>
+        <div class="metric-tile-modern" style="border-top: 3px solid #6366f1;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #818cf8; text-transform: uppercase; letter-spacing: 0.05em;">M-2 Students Pool Base</span>
+            <span class="pill-badge pill-badge-cyan" style="font-size: 0.68rem;">5 Small Teams</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #fff; margin-top: 6px;" id="upgCardBase">765</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Assigned Students (SCRM Col C)</div>
         </div>
         <!-- Card 3: 20% Benchmark Target -->
-        <div class="calc-card" style="border-left: 4px solid #c084fc;">
-          <div class="kpi-label">20% Benchmark Goal</div>
-          <div class="kpi-value" style="color: #c084fc;" id="upgCardTarget">153</div>
-          <div class="kpi-sub" style="color: #94a3b8;">Target Contracts (Base × 20%)</div>
-          <div class="kpi-pct" style="color: #d8b4fe;">Official 20% Standard</div>
+        <div class="metric-tile-modern" style="border-top: 3px solid #c084fc;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #c084fc; text-transform: uppercase; letter-spacing: 0.05em;">20% Benchmark Goal</span>
+            <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">Official Target</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #c084fc; margin-top: 6px;" id="upgCardTarget">153</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Target Contracts (Base × 20%)</div>
         </div>
         <!-- Card 4: Remaining to Target -->
-        <div class="calc-card" style="border-left: 4px solid #f43f5e;">
-          <div class="kpi-label">Remaining to 20% Target</div>
-          <div class="kpi-value" style="color: #f43f5e;" id="upgCardNeeded">107</div>
-          <div class="kpi-sub" style="color: #94a3b8;">Sector Contracts Deficit</div>
-          <div class="kpi-pct" style="color: #fda4af;">Pacing Gap: -14.0%</div>
+        <div class="metric-tile-modern" style="border-top: 3px solid #f43f5e;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #f43f5e; text-transform: uppercase; letter-spacing: 0.05em;">Remaining to 20% Goal</span>
+            <span class="pill-badge pill-badge-rose" style="font-size: 0.68rem;">Deficit Gap</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #f43f5e; margin-top: 6px;" id="upgCardNeeded">107</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Pacing Gap: -14.0% to milestone</div>
         </div>
         <!-- Card 5: Target Progress -->
-        <div class="calc-card" style="border-left: 4px solid #38bdf8;">
-          <div class="kpi-label">Target Progress</div>
-          <div class="kpi-value" style="color: #38bdf8;" id="upgCardProg">30.1%</div>
-          <div class="kpi-sub" style="color: #94a3b8;">46 of 153 Contracts Achieved</div>
-          <div class="kpi-progress"><div class="kpi-bar" id="upgCardProgBar" style="width: 30.1%; background: #38bdf8;"></div></div>
+        <div class="metric-tile-modern" style="border-top: 3px solid #38bdf8;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.05em;">Milestone Progress</span>
+            <span class="pill-badge pill-badge-cyan" id="upgCardProg">30.1%</span>
+          </div>
+          <div style="margin-top: 14px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-bottom: 5px;">
+              <span>46 / 153 Contracts</span>
+              <strong style="color: #38bdf8;">30.1%</strong>
+            </div>
+            <div style="height: 7px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden;">
+              <div id="upgCardProgBar" style="height: 100%; width: 30.1%; background: linear-gradient(90deg, #6366f1, #38bdf8); border-radius: 999px;"></div>
+            </div>
+          </div>
+          <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 8px;">Days 29-30 final sprint to milestone</div>
         </div>
         <!-- Card 6: Outreach Intensity -->
-        <div class="calc-card" style="border-left: 4px solid #facc15;">
-          <div class="kpi-label">Outreach Intensity</div>
-          <div class="kpi-value" style="color: #facc15;" id="upgCardTouch">74.8%</div>
-          <div class="kpi-sub" style="color: #94a3b8;">1.3x Call Multiplier per Lead</div>
-          <div class="kpi-pct" style="color: #fde047;">POOL22 Effective Coverage</div>
+        <div class="metric-tile-modern" style="border-top: 3px solid #facc15;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #facc15; text-transform: uppercase; letter-spacing: 0.05em;">Outreach Touch Rate</span>
+            <span class="pill-badge pill-badge-amber" style="font-size: 0.68rem;">POOL22</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #facc15; margin-top: 6px;" id="upgCardTouch">74.8%</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">1.3x Call Multiplier per Lead</div>
         </div>
       </div>
 
@@ -467,52 +487,55 @@
       </div>
 
       <!-- 3. Strategic Actionable Playbook (4 Key Tactical Directives) -->
-      <div style="margin-bottom: 28px; background: rgba(17, 24, 39, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: 20px; backdrop-filter: blur(12px);">
+      <div class="glass-panel-executive" style="margin-bottom: 28px; padding: 22px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
-          <h3 style="font-size: 1.1rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
-            <span>🎯</span> Executive Upgrade Playbook &amp; Tactical Interventions
-          </h3>
-          <span style="font-size: 0.75rem; color: #94a3b8; background: rgba(255,255,255,0.05); padding: 3px 10px; border-radius: 6px;">Live Tactical Directives</span>
+          <div>
+            <span style="font-size: 0.72rem; font-weight: 800; color: #818cf8; text-transform: uppercase; letter-spacing: 0.06em;">Operational Intervention Hub</span>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 2px 0 0 0; display: flex; align-items: center; gap: 8px;">
+              <span>🎯</span> Executive Upgrade Playbook &amp; Tactical Directives
+            </h3>
+          </div>
+          <span class="pill-badge pill-badge-cyan"><span class="pulse-dot pulse-dot-emerald"></span> Live Directives Active</span>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;" id="upgradePlaybookCards">
           <!-- Card 1: High Base Zero Upgrade Alert -->
-          <div style="background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: var(--radius-md); padding: 16px;">
-            <div style="display: flex; align-items: center; gap: 8px; color: #f43f5e; font-weight: 800; font-size: 0.88rem; margin-bottom: 6px;">
+          <div class="metric-tile-modern" style="border-left: 3px solid #f43f5e; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #f43f5e; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
               <span>🚨</span> PRIORITY 1: High-Base Zero-Upgrade Alert
             </div>
-            <div style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.5;">
+            <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
               <strong>4 Reps (109 Leads):</strong> Tito (31), Mohamed06 (33), Julia (23), Omar (22).<br>
-              <span style="color: #f87171;">Directive:</span> Immediate TL 1:1 call audit. Re-engage top 10 engaged students per rep with special upgrade curriculum packages today.
+              <span style="color: #f87171; font-weight: 600;">Directive:</span> Immediate TL 1:1 call audit. Re-engage top 10 engaged students per rep with special upgrade curriculum packages today.
             </div>
           </div>
           <!-- Card 2: 20% Goal Sprint Group -->
-          <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 16px;">
-            <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-weight: 800; font-size: 0.88rem; margin-bottom: 6px;">
+          <div class="metric-tile-modern" style="border-left: 3px solid #10b981; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
               <span>⚡</span> PRIORITY 2: 20% Benchmark Sprint (≤ 3 Needed)
             </div>
-            <div style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.5;">
+            <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
               <strong>Close Candidates:</strong> Mahmoud04 (1 needed), Abdelrhman Shehata (1 needed), Marwa (1 needed), Mohamedha (2 needed), Amr Safwat (3 needed), Khaled (4 needed).<br>
-              <span style="color: #34d399;">Directive:</span> Blitz pending proposals. Closing these contracts unlocks team milestone commission booster!
+              <span style="color: #34d399; font-weight: 600;">Directive:</span> Blitz pending proposals. Closing these contracts unlocks team milestone commission booster!
             </div>
           </div>
           <!-- Card 3: Sector Champions -->
-          <div style="background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-md); padding: 16px;">
-            <div style="display: flex; align-items: center; gap: 8px; color: #818cf8; font-weight: 800; font-size: 0.88rem; margin-bottom: 6px;">
+          <div class="metric-tile-modern" style="border-left: 3px solid #818cf8; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #818cf8; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
               <span>⭐</span> PRIORITY 3: Top Upgrade Champions
             </div>
-            <div style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.5;">
+            <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
               <strong>Top Producers:</strong> Hayam Hassan (7 upgrades), Ibrahim Ismaiel (5), Mahmoud04 (4 | 18.2%), Mohamedha (4 | 15.4%), Ehab Zaky (4 | 10.0%).<br>
-              <span style="color: #a5b4fc;">Directive:</span> Showcase winning call pitches in tomorrow's morning sector standup.
+              <span style="color: #a5b4fc; font-weight: 600;">Directive:</span> Showcase winning call pitches in tomorrow's morning sector standup.
             </div>
           </div>
           <!-- Card 4: Outreach Touch Deficit -->
-          <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-md); padding: 16px;">
-            <div style="display: flex; align-items: center; gap: 8px; color: #f59e0b; font-weight: 800; font-size: 0.88rem; margin-bottom: 6px;">
+          <div class="metric-tile-modern" style="border-left: 3px solid #f59e0b; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #f59e0b; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
               <span>📞</span> PRIORITY 4: Call Frequency Deficit (&lt; 60%)
             </div>
-            <div style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.5;">
+            <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
               <strong>Coverage Lag:</strong> Ashraqat (41.5%), Mahmoud Khamis (48.8%), Julia (54.5%).<br>
-              <span style="color: #fde047;">Directive:</span> Require minimum 2 calls per uncontacted student before month-end cutoff to unlock upgrade interest.
+              <span style="color: #fde047; font-weight: 600;">Directive:</span> Require minimum 2 calls per uncontacted student before month-end cutoff to unlock upgrade interest.
             </div>
           </div>
         </div>
@@ -522,7 +545,7 @@
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 14px;">
         <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
           <!-- Team Filter -->
-          <select id="upgradeTeamFilter" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 7px 12px; border-radius: var(--radius-sm); font-size: 0.82rem; cursor: pointer;">
+          <select id="upgradeTeamFilter" class="modern-select">
             <option value="ALL">All Small Teams (5)</option>
             <option value="EGSS01">ME-EGSS01 (Ashraqatal)</option>
             <option value="EGSS05">ME-EGSS05 (Ibrahimismaiel)</option>
@@ -531,7 +554,7 @@
             <option value="EGSS30">ME-EGSS30 (AdhmGadAllah)</option>
           </select>
           <!-- Sort Filter -->
-          <select id="upgradeSortFilter" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 7px 12px; border-radius: var(--radius-sm); font-size: 0.82rem; cursor: pointer;">
+          <select id="upgradeSortFilter" class="modern-select">
             <option value="rate-desc" selected>Conversion Rate % (Highest → Lowest)</option>
             <option value="upgrades-desc">Actual Upgrades (High → Low)</option>
             <option value="cov-desc">Coverage / Touch Intensity % (Highest → Lowest)</option>
@@ -542,12 +565,12 @@
           </select>
         </div>
         <div style="display: flex; align-items: center; gap: 8px;">
-          <input type="text" id="upgradeSearchInput" placeholder="🔍 Search rep name..." style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 7px 14px; border-radius: var(--radius-sm); font-size: 0.82rem; width: 220px;">
+          <input type="text" id="upgradeSearchInput" class="modern-input" placeholder="🔍 Search rep name..." style="width: 230px;">
         </div>
       </div>
 
       <!-- 5. Master Full Upgrade Performance Table -->
-      <div class="table-wrapper" style="overflow-x: auto;">
+      <div class="table-wrapper modern-table-card" style="overflow-x: auto;">
         <table class="data-table" id="masterUpgradeTable" style="width: 100%; min-width: 1540px;">
           <thead>
             <tr>
@@ -819,9 +842,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="assets/html2canvas.min.js" defer></script>
-  <script src="dashboard.js?v=20260928_151713" defer></script>
+  <script src="dashboard.js?v=20260928_154024" defer></script>
 </body>
 </html>
+
 
 
 
