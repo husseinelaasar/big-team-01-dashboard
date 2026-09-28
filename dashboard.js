@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -70,39 +70,39 @@ const NEW_TARGETS = {
 
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS30": { gross: 19147, refund: 0, cash: 19147, target: 15980, contracts: 22, officialAch: 119.8 },
-  "EGSS13": { gross: 47419, refund: 0, cash: 47419, target: 47060, contracts: 47, officialAch: 100.8 },
-  "EGSS05": { gross: 70578, refund: 0, cash: 70578, target: 76590, contracts: 77, officialAch: 92.2 },
-  "EGSS01": { gross: 29939, refund: 1660, cash: 28279, target: 50760, contracts: 30, officialAch: 55.7 },
-  "EGSS10": { gross: 17296, refund: 0, cash: 17296, target: 35210, contracts: 18, officialAch: 49.1 },
+  "EGSS30": { gross: 20167, refund: 1750, cash: 18417, target: 15980, contracts: 23, officialAch: 115.2 },
+  "EGSS13": { gross: 47419, refund: 2068, cash: 45351, target: 47060, contracts: 47, officialAch: 96.4 },
+  "EGSS05": { gross: 72960, refund: 880, cash: 72080, target: 76590, contracts: 80, officialAch: 94.1 },
+  "EGSS01": { gross: 30959, refund: 2974, cash: 27984, target: 50760, contracts: 31, officialAch: 55.1 },
+  "EGSS10": { gross: 18174, refund: 2063, cash: 16111, target: 35210, contracts: 20, officialAch: 45.8 },
 };
 
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 4632, refund: 0, target: 8040, contracts: 7, officialAch: 57.6, upgradeM2: 1, normalRenewals: 2, upgradeBase: 56, poolRenewals: 3 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 4632, refund: 0, target: 8040, contracts: 7, officialAch: 57.6, upgradeM2: 2, normalRenewals: 5, upgradeBase: 56, poolRenewals: 7 },
   { name: "EGSS-ashraqatal", team: "EGSS01", cash: -380, refund: 1660, target: 10880, contracts: 1, officialAch: -3.5, upgradeM2: 1, normalRenewals: 0, upgradeBase: 47, poolRenewals: 1 },
-  { name: "EGSS-negma", team: "EGSS01", cash: 8140, refund: 0, target: 7790, contracts: 5, officialAch: 104.5, upgradeM2: 1, normalRenewals: 3, upgradeBase: 51, poolRenewals: 4 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 5100, refund: 0, target: 8050, contracts: 5, officialAch: 63.4, upgradeM2: 0, normalRenewals: 4, upgradeBase: 23, poolRenewals: 4 },
-  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 10787, refund: 0, target: 10420, contracts: 12, officialAch: 103.5, upgradeM2: 4, normalRenewals: 7, upgradeBase: 22, poolRenewals: 11 },
+  { name: "EGSS-negma", team: "EGSS01", cash: 8140, refund: 0, target: 7790, contracts: 5, officialAch: 104.5, upgradeM2: 3, normalRenewals: 2, upgradeBase: 51, poolRenewals: 5 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 5100, refund: 0, target: 8050, contracts: 5, officialAch: 63.4, upgradeM2: 0, normalRenewals: 5, upgradeBase: 23, poolRenewals: 5 },
+  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 11807, refund: 0, target: 10420, contracts: 13, officialAch: 113.3, upgradeM2: 4, normalRenewals: 9, upgradeBase: 22, poolRenewals: 13 },
   { name: "EGLP-yasmin01", team: "EGSS01", cash: 0, refund: 0, target: 5580, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 10498, refund: 0, target: 9710, contracts: 12, officialAch: 108.1, upgradeM2: 2, normalRenewals: 12, upgradeBase: 28, poolRenewals: 14 },
-  { name: "EGSS-titooooo", team: "EGSS05", cash: 8920, refund: 0, target: 8920, contracts: 8, officialAch: 100, upgradeM2: 0, normalRenewals: 7, upgradeBase: 31, poolRenewals: 7 },
-  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 7560, refund: 0, target: 9550, contracts: 9, officialAch: 79.2, upgradeM2: 0, normalRenewals: 7, upgradeBase: 22, poolRenewals: 7 },
-  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 12301, refund: 0, target: 10360, contracts: 13, officialAch: 118.7, upgradeM2: 1, normalRenewals: 14, upgradeBase: 26, poolRenewals: 15 },
-  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 14788, refund: 0, target: 10170, contracts: 17, officialAch: 145.4, upgradeM2: 4, normalRenewals: 11, upgradeBase: 44, poolRenewals: 15 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 8831, refund: 0, target: 10190, contracts: 11, officialAch: 86.7, upgradeM2: 1, normalRenewals: 7, upgradeBase: 28, poolRenewals: 8 },
-  { name: "EGLP-saraht", team: "EGSS05", cash: 1020, refund: 0, target: 7340, contracts: 1, officialAch: 13.9, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 6660, refund: 0, target: 10350, contracts: 6, officialAch: 64.3, upgradeM2: 2, normalRenewals: 3, upgradeBase: 40, poolRenewals: 5 },
-  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 6090, refund: 0, target: 11640, contracts: 6, officialAch: 52.3, upgradeM2: 1, normalRenewals: 5, upgradeBase: 41, poolRenewals: 6 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 8709, refund: 0, target: 16450, contracts: 9, officialAch: 52.9, upgradeM2: 0, normalRenewals: 8, upgradeBase: 39, poolRenewals: 8 },
-  { name: "EGLP-mohamed06", team: "EGSS10", cash: 2497, refund: 0, target: 7120, contracts: 3, officialAch: 35.1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 33, poolRenewals: 0 },
+  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 10498, refund: 0, target: 9710, contracts: 12, officialAch: 108.1, upgradeM2: 2, normalRenewals: 10, upgradeBase: 28, poolRenewals: 12 },
+  { name: "EGSS-titooooo", team: "EGSS05", cash: 8920, refund: 0, target: 8920, contracts: 8, officialAch: 100, upgradeM2: 0, normalRenewals: 8, upgradeBase: 31, poolRenewals: 8 },
+  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 7560, refund: 0, target: 9550, contracts: 9, officialAch: 79.2, upgradeM2: 0, normalRenewals: 9, upgradeBase: 22, poolRenewals: 9 },
+  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 12301, refund: 0, target: 10360, contracts: 13, officialAch: 118.7, upgradeM2: 2, normalRenewals: 11, upgradeBase: 26, poolRenewals: 13 },
+  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 14788, refund: 0, target: 10170, contracts: 17, officialAch: 145.4, upgradeM2: 5, normalRenewals: 12, upgradeBase: 44, poolRenewals: 17 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 8831, refund: 0, target: 10190, contracts: 11, officialAch: 86.7, upgradeM2: 2, normalRenewals: 9, upgradeBase: 28, poolRenewals: 11 },
+  { name: "EGLP-saraht", team: "EGSS05", cash: 1020, refund: 0, target: 7340, contracts: 1, officialAch: 13.9, upgradeM2: 0, normalRenewals: 1, upgradeBase: 0, poolRenewals: 1 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 8410, refund: 0, target: 10350, contracts: 8, officialAch: 81.3, upgradeM2: 4, normalRenewals: 4, upgradeBase: 40, poolRenewals: 8 },
+  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 6969, refund: 0, target: 11640, contracts: 8, officialAch: 59.9, upgradeM2: 1, normalRenewals: 7, upgradeBase: 41, poolRenewals: 8 },
+  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 8709, refund: 0, target: 16450, contracts: 9, officialAch: 52.9, upgradeM2: 1, normalRenewals: 8, upgradeBase: 39, poolRenewals: 9 },
+  { name: "EGLP-mohamed06", team: "EGSS10", cash: 2497, refund: 0, target: 7120, contracts: 3, officialAch: 35.1, upgradeM2: 0, normalRenewals: 3, upgradeBase: 33, poolRenewals: 3 },
   { name: "EGSS-mohamedha", team: "EGSS13", cash: 10940, refund: 0, target: 9300, contracts: 11, officialAch: 117.6, upgradeM2: 4, normalRenewals: 7, upgradeBase: 26, poolRenewals: 11 },
-  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 12600, refund: 0, target: 12240, contracts: 11, officialAch: 102.9, upgradeM2: 3, normalRenewals: 5, upgradeBase: 29, poolRenewals: 8 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 8452, refund: 0, target: 10560, contracts: 10, officialAch: 80, upgradeM2: 4, normalRenewals: 3, upgradeBase: 83, poolRenewals: 7 },
-  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 11087, refund: 0, target: 8640, contracts: 10, officialAch: 128.3, upgradeM2: 1, normalRenewals: 7, upgradeBase: 9, poolRenewals: 8 },
-  { name: "EGLP-shahdmahmoud", team: "EGSS13", cash: 4340, refund: 0, target: 6320, contracts: 5, officialAch: 68.7, upgradeM2: 1, normalRenewals: 0, upgradeBase: 46, poolRenewals: 1 },
+  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 12600, refund: 0, target: 12240, contracts: 11, officialAch: 102.9, upgradeM2: 3, normalRenewals: 8, upgradeBase: 29, poolRenewals: 11 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 8452, refund: 0, target: 10560, contracts: 10, officialAch: 80, upgradeM2: 7, normalRenewals: 3, upgradeBase: 83, poolRenewals: 10 },
+  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 11087, refund: 0, target: 8640, contracts: 10, officialAch: 128.3, upgradeM2: 1, normalRenewals: 9, upgradeBase: 9, poolRenewals: 10 },
+  { name: "EGLP-shahdmahmoud", team: "EGSS13", cash: 4340, refund: 0, target: 6320, contracts: 5, officialAch: 68.7, upgradeM2: 1, normalRenewals: 4, upgradeBase: 46, poolRenewals: 5 },
   { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 9560, refund: 0, target: 8480, contracts: 11, officialAch: 112.7, upgradeM2: 1, normalRenewals: 10, upgradeBase: 24, poolRenewals: 11 },
   { name: "EGSS-abdelrhmanshehata", team: "EGSS30", cash: 4240, refund: 0, target: 3690, contracts: 5, officialAch: 114.9, upgradeM2: 1, normalRenewals: 4, upgradeBase: 6, poolRenewals: 5 },
-  { name: "EGSS-alihesham01", team: "EGSS30", cash: 5347, refund: 0, target: 3810, contracts: 6, officialAch: 140.3, upgradeM2: 0, normalRenewals: 5, upgradeBase: 5, poolRenewals: 5 },
+  { name: "EGSS-alihesham01", team: "EGSS30", cash: 6367, refund: 0, target: 3810, contracts: 7, officialAch: 167.1, upgradeM2: 0, normalRenewals: 7, upgradeBase: 5, poolRenewals: 7 },
 ];
 
 // SOP Process Compliance Data (51Talk Data Center)
@@ -348,15 +348,15 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official Data Center Reconciliation & POOL_Detail16)
-  const totalCash = 175273; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
-  const sectorAchPct = 77.69; // from Individual Sheet Col M (or æŒ‡æ ‡çœ‹æ¿ Col I)
+  const totalCash = 179942; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
+  const sectorAchPct = 79.76; // from Individual Sheet Col M (or æŒ‡æ ‡çœ‹æ¿ Col I)
   const totalTarget = 225600; // from æŒ‡æ ‡çœ‹æ¿ Col F
-  const totalContracts = 195; // from æŒ‡æ ‡çœ‹æ¿ Col D
-  const totalUpgradeM2 = 34; // from Student_Detail32
-  const totalNormalRenewals = 131; // from Student_Detail32
+  const totalContracts = 201; // from æŒ‡æ ‡çœ‹æ¿ Col D
+  const totalUpgradeM2 = 46; // from Student_Detail32
+  const totalNormalRenewals = 155; // from Student_Detail32
   const totalUpgradeBase = 765; // from Student_Detail32
-  const totalUpgrade20Target = Math.ceil(totalUpgradeBase * 0.20);
-  const totalUpgrade20Needed = Math.max(0, totalUpgrade20Target - totalUpgradeM2);
+  const totalUpgrade20Target = 153;
+  const totalUpgrade20Needed = 107;
 
   return {
     teams,
@@ -1173,107 +1173,285 @@ function renderIndividualsTab(model) {
     }
   }
 }
+// =========================================================================
+// EARLY UPGRADE HUB (M2) STRATEGIC INTELLIGENCE ENGINE
+// =========================================================================
 
+function getUpgradeRecommendation(rep) {
+  if (rep.upgradeBase === 0) {
+    return '⚪ No M-2 student pool assigned this month.';
+  }
+  if (rep.upgradeM2 === 0) {
+    if (rep.upgradeBase >= 20) {
+      return `⚠️ High-Base Zero Alert (${rep.upgradeBase} leads). Urgent 1:1 call audit with TL; target top 10 most engaged students today.`;
+    }
+    return `🚨 Zero Upgrades across ${rep.upgradeBase} leads. Review call round 1 recordings and schedule demo review calls.`;
+  }
+  if (rep.upgrade20Needed === 0) {
+    return `🎉 Benchmark Mastered (${rep.upgradeRate.toFixed(1)}% conv). 20% milestone achieved! Drive stretch goals on warm leads.`;
+  }
+  if (rep.upgrade20Needed <= 2) {
+    return `🔥 SPRINT ALERT! Only ${rep.upgrade20Needed} upgrade${rep.upgrade20Needed > 1 ? 's' : ''} needed to hit official 20% benchmark (${rep.upgradeRate.toFixed(1)}% conv). Close today!`;
+  }
+  if (rep.upgradeRate >= 15) {
+    return `🌟 Sector Star (${rep.upgradeRate.toFixed(1)}% conv). Share winning closing script in tomorrow's morning huddle.`;
+  }
+  if (rep.coverRate < 60) {
+    return `📞 Outreach Gap (${rep.coverRate.toFixed(1)}% touch). Accelerate callback frequency to achieve ≥1.5x touchpoint intensity.`;
+  }
+  if (rep.upgrade20Needed <= 4) {
+    return `⚡ Strong Potential! Only ${rep.upgrade20Needed} more needed for 20% target (${rep.upgradeRate.toFixed(1)}% achieved). Blitz pending proposals.`;
+  }
+  return `🟢 Steady Progress (${rep.upgradeM2}/${rep.upgradeBase}). Drive secondary touchpoints for remaining ${rep.upgradeBase - rep.upgradeM2} students.`;
+}
+
+function getUpgradeStatusBadge(rep) {
+  if (rep.upgradeBase === 0) {
+    return `<span class="status-badge" style="background: rgba(100,116,139,0.15); color: #94a3b8; border: 1px solid rgba(100,116,139,0.3);">No Pool</span>`;
+  }
+  if (rep.upgradeM2 === 0) {
+    return `<span class="status-badge" style="background: rgba(244,63,94,0.15); color: #f43f5e; border: 1px solid rgba(244,63,94,0.3);">🚨 Zero Upgrades</span>`;
+  }
+  if (rep.upgradeRate >= 15) {
+    return `<span class="status-badge" style="background: rgba(192,132,252,0.15); color: #c084fc; border: 1px solid rgba(192,132,252,0.3);">⭐ Star Benchmark</span>`;
+  }
+  if (rep.upgradeRate >= 8) {
+    return `<span class="status-badge" style="background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.3);">🟢 On Track</span>`;
+  }
+  if (rep.upgradeRate >= 4) {
+    return `<span class="status-badge" style="background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3);">🟡 Pacing</span>`;
+  }
+  return `<span class="status-badge" style="background: rgba(244,63,94,0.15); color: #f43f5e; border: 1px solid rgba(244,63,94,0.3);">🔴 Action Needed</span>`;
+}
+
+function renderUpgradeTab(model) {
+  const s = model.summary;
+
+  // 1. Synchronize Executive KPI Cards
+  const elActual = document.getElementById('upgCardActual');
+  const elBase = document.getElementById('upgCardBase');
+  const elRate = document.getElementById('upgCardRate');
+  const elTarget = document.getElementById('upgCardTarget');
+  const elNeeded = document.getElementById('upgCardNeeded');
+  const elProg = document.getElementById('upgCardProg');
+  const elProgBar = document.getElementById('upgCardProgBar');
+  const elTouch = document.getElementById('upgCardTouch');
+
+  if (elActual) elActual.textContent = s.totalUpgradeM2;
+  if (elBase) elBase.textContent = s.totalUpgradeBase;
+  if (elRate) elRate.textContent = `${fmtPct(s.upgradeRate)} Conv. Rate`;
+  if (elTarget) elTarget.textContent = s.totalUpgrade20Target;
+  if (elNeeded) elNeeded.textContent = s.totalUpgrade20Needed;
+
+  const targetAchPct = s.totalUpgrade20Target > 0 ? ((s.totalUpgradeM2 / s.totalUpgrade20Target) * 100) : 0;
+  if (elProg) elProg.textContent = `${targetAchPct.toFixed(1)}%`;
+  if (elProgBar) elProgBar.style.width = `${Math.min(100, targetAchPct)}%`;
+
+  const avgTouchSector = model.individuals.length > 0 ? (model.individuals.reduce((sum, r) => sum + r.coverRate, 0) / model.individuals.length) : 0;
+  if (elTouch) elTouch.innerHTML = `${avgTouchSector.toFixed(1)}% <span style="font-size:0.75rem; color:#fde047;">(${(avgTouchSector / 100 * 1.7).toFixed(1)}x)</span>`;
+
+  // 2. Render Small Teams Upgrade Comparison Cards
+  const smallTeamsContainer = document.getElementById('upgradeSmallTeamsCards');
+  if (smallTeamsContainer) {
+    const teamList = Object.values(model.teams).map(t => {
+      const tBase = t.members.reduce((sum, r) => sum + (r.upgradeBase || 0), 0);
+      const tUp = t.members.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
+      const tRate = tBase > 0 ? ((tUp / tBase) * 100) : 0;
+      const tTarget20 = Math.ceil(tBase * 0.20);
+      const tNeeded = Math.max(0, tTarget20 - tUp);
+      const tAch20 = tTarget20 > 0 ? ((tUp / tTarget20) * 100) : 0;
+      const tCover = t.members.length > 0 ? (t.members.reduce((sum, r) => sum + (r.coverRate || 0), 0) / t.members.length) : 0;
+      const tl = t.members.find(m => m.isTL)?.name || t.leader || 'Team Leader';
+      return { t, tBase, tUp, tRate, tTarget20, tNeeded, tAch20, tCover, tl };
+    }).sort((a, b) => b.tRate - a.tRate);
+
+    smallTeamsContainer.innerHTML = teamList.map(item => {
+      const badgeClr = item.tRate >= 6.5 ? '#10b981' : (item.tRate >= 5.0 ? '#38bdf8' : (item.tRate >= 3.0 ? '#f59e0b' : '#f43f5e'));
+      const badgeTxt = item.tRate >= 6.5 ? '⭐ Leader' : (item.tRate >= 5.0 ? 'Ahead' : (item.tRate >= 3.0 ? 'Pacing' : 'Gap'));
+      return `
+        <div class="calc-card" style="border-top: 4px solid ${item.t.color}; padding: 18px 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div>
+              <div style="font-weight: 800; color: #fff; font-size: 1.02rem;">${item.t.label || item.t.key}</div>
+              <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px;">👑 ${item.tl}</div>
+            </div>
+            <span class="status-badge" style="background: ${badgeClr}20; color: ${badgeClr}; border: 1px solid ${badgeClr}40; font-size: 0.72rem;">${badgeTxt}</span>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+              <span style="color: #94a3b8;">20% Goal Velocity</span>
+              <strong style="color: #c084fc;">${item.tAch20.toFixed(1)}% (${item.tUp}/${item.tTarget20})</strong>
+            </div>
+            <div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden;">
+              <div style="height: 100%; width: ${Math.min(100, item.tAch20)}%; background: linear-gradient(90deg, ${item.t.color}, #c084fc); border-radius: 6px;"></div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px;">
+            <div>
+              <span style="color: #64748b;">Base / Actual:</span>
+              <div style="font-weight: 700; color: #fff;">${item.tBase} / <span style="color: #10b981;">${item.tUp} upg</span></div>
+            </div>
+            <div>
+              <span style="color: #64748b;">Conv. Rate:</span>
+              <div style="font-weight: 800; color: #a78bfa;">${item.tRate.toFixed(2)}%</div>
+            </div>
+            <div>
+              <span style="color: #64748b;">Remaining Needed:</span>
+              <div style="font-weight: 700; color: ${item.tNeeded > 0 ? '#f43f5e' : '#10b981'};">${item.tNeeded} needed</div>
+            </div>
+            <div>
+              <span style="color: #64748b;">Touch Intensity:</span>
+              <div style="font-weight: 700; color: #facc15;">${item.tCover.toFixed(1)}% <span style="font-size: 0.7rem; color: #fde047;">(${(item.tCover/100*1.7).toFixed(1)}x)</span></div>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // 3. Render Master Full Upgrade Table
+  renderUpgradeTableRows();
+
+  // 4. Attach Dynamic Filter/Sort Listeners once
+  if (!window.__upgradeEventsBound) {
+    window.__upgradeEventsBound = true;
+    const teamFilter = document.getElementById('upgradeTeamFilter');
+    const sortFilter = document.getElementById('upgradeSortFilter');
+    const searchInput = document.getElementById('upgradeSearchInput');
+
+    if (teamFilter) teamFilter.addEventListener('change', () => renderUpgradeTableRows());
+    if (sortFilter) sortFilter.addEventListener('change', () => renderUpgradeTableRows());
+    if (searchInput) searchInput.addEventListener('input', () => renderUpgradeTableRows());
+  }
+
+  function renderUpgradeTableRows() {
+    const tbody = document.getElementById('masterUpgradeTableBody');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+
+    const selTeam = document.getElementById('upgradeTeamFilter')?.value || 'ALL';
+    const selSort = document.getElementById('upgradeSortFilter')?.value || 'upgrades-desc';
+    const searchTxt = (document.getElementById('upgradeSearchInput')?.value || '').trim().toLowerCase();
+
+    let list = [...model.individuals];
+
+    if (selTeam !== 'ALL') {
+      list = list.filter(r => r.team === selTeam);
+    }
+    if (searchTxt) {
+      list = list.filter(r => r.name.toLowerCase().includes(searchTxt));
+    }
+
+    list.sort((a, b) => {
+      if (selSort === 'upgrades-desc') return (b.upgradeM2 - a.upgradeM2) || (b.upgradeRate - a.upgradeRate) || (b.upgradeBase - a.upgradeBase);
+      if (selSort === 'rate-desc') return (b.upgradeRate - a.upgradeRate) || (b.upgradeM2 - a.upgradeM2);
+      if (selSort === 'needed-asc') return (a.upgrade20Needed - b.upgrade20Needed) || (b.upgradeM2 - a.upgradeM2);
+      if (selSort === 'needed-desc') return (b.upgrade20Needed - a.upgrade20Needed);
+      if (selSort === 'base-desc') return (b.upgradeBase - a.upgradeBase);
+      if (selSort === 'touch-asc') return (a.coverRate - b.coverRate);
+      return (b.upgradeM2 - a.upgradeM2);
+    });
+
+    list.forEach((r, idx) => {
+      const ach20 = r.upgrade20Target > 0 ? ((r.upgradeM2 / r.upgrade20Target) * 100) : 0;
+      const rec = getUpgradeRecommendation(r);
+      const statusBadge = getUpgradeStatusBadge(r);
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td style="font-family: var(--font-mono); color: var(--text-dim); text-align: center;">${idx + 1}</td>
+        <td style="text-align: left !important;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <strong style="color: #fff;">${r.name}</strong>
+            ${r.isTL ? '<span title="Team Leader" style="cursor:help;">👑</span>' : ''}
+          </div>
+        </td>
+        <td style="text-align: center;">
+          <span class="status-badge" style="background: ${r.teamColor}20; color: ${r.teamColor}; border: 1px solid ${r.teamColor}40;">${r.team}</span>
+        </td>
+        <td style="font-family: var(--font-mono); font-weight: 700; color: #fff; text-align: center;">${r.upgradeBase}</td>
+        <td style="font-family: var(--font-mono); font-weight: 700; color: #facc15; text-align: center;">
+          ${r.coverRate.toFixed(1)}% <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(r.coverRate / 100 * 1.7).toFixed(1)}x)</span>
+        </td>
+        <td style="font-family: var(--font-mono); font-weight: 800; color: #10b981; font-size: 1.05rem; text-align: center; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.2);">
+          ${r.upgradeM2}
+        </td>
+        <td style="font-family: var(--font-mono); text-align: center;">
+          <div style="font-weight: 700; color: #a78bfa;">${r.upgradeRate.toFixed(1)}%</div>
+          <div style="height: 4px; width: 65px; background: rgba(255,255,255,0.08); border-radius: 3px; margin: 3px auto 0; overflow: hidden;">
+            <div style="height: 100%; width: ${Math.min(100, (r.upgradeRate / 20) * 100)}%; background: linear-gradient(90deg, #6366f1, #a78bfa);"></div>
+          </div>
+        </td>
+        <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc; text-align: center; background: rgba(192, 132, 252, 0.05);">
+          ${r.upgrade20Target}
+        </td>
+        <td style="font-family: var(--font-mono); text-align: center; background: rgba(244, 63, 94, 0.05); border-right: 1px solid rgba(244, 63, 94, 0.2);">
+          ${r.upgrade20Needed === 0 ? '<span style="color:#10b981; font-weight:800;">🎉 MET</span>' : (r.upgrade20Needed <= 2 ? `<span style="color:#f59e0b; font-weight:800; background:rgba(245,158,11,0.15); padding:2px 7px; border-radius:4px; border:1px solid rgba(245,158,11,0.3);">🔥 ${r.upgrade20Needed} needed</span>` : `<span style="color:#f43f5e; font-weight:700;">${r.upgrade20Needed} needed</span>`)}
+        </td>
+        <td style="font-family: var(--font-mono); font-weight: 700; text-align: center; color: ${ach20 >= 100 ? '#10b981' : (ach20 >= 50 ? '#38bdf8' : '#94a3b8')};">
+          ${ach20.toFixed(1)}%
+        </td>
+        <td style="text-align: center;">${statusBadge}</td>
+        <td style="text-align: left !important; font-size: 0.8rem; line-height: 1.4; color: #cbd5e1;">
+          ${rec}
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    // Render Table Footer
+    const tfoot = document.getElementById('masterUpgradeTableFoot');
+    if (tfoot) {
+      const s = model.summary;
+      const totalActiveBase = list.reduce((sum, r) => sum + r.upgradeBase, 0);
+      const totalActiveUp = list.reduce((sum, r) => sum + r.upgradeM2, 0);
+      const totalActiveTgt = list.reduce((sum, r) => sum + r.upgrade20Target, 0);
+      const totalActiveNeed = list.reduce((sum, r) => sum + r.upgrade20Needed, 0);
+      const avgTouch = list.length > 0 ? (list.reduce((sum, r) => sum + r.coverRate, 0) / list.length) : 0;
+      const macroRate = totalActiveBase > 0 ? ((totalActiveUp / totalActiveBase) * 100) : 0;
+      const totalAch20 = totalActiveTgt > 0 ? ((totalActiveUp / totalActiveTgt) * 100) : 0;
+
+      tfoot.innerHTML = `
+        <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
+          <td colspan="3" style="color: #fff; text-align: left; font-size: 0.88rem;">
+            ${selTeam === 'ALL' ? 'SECTOR GRAND TOTAL / BENCHMARK' : `${selTeam} TEAM TOTAL`}
+          </td>
+          <td style="font-family: var(--font-mono); color: #fff; text-align: center;">${totalActiveBase}</td>
+          <td style="font-family: var(--font-mono); color: #facc15; text-align: center;">
+            ${avgTouch.toFixed(1)}% <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(avgTouch / 100 * 1.7).toFixed(1)}x)</span>
+          </td>
+          <td style="font-family: var(--font-mono); color: #10b981; font-size: 1.1rem; text-align: center; background: rgba(16, 185, 129, 0.1); border-left: 1px solid rgba(16, 185, 129, 0.3);">
+            ${totalActiveUp}
+          </td>
+          <td style="font-family: var(--font-mono); color: #a78bfa; text-align: center; font-size: 0.95rem;">
+            ${macroRate.toFixed(2)}%
+          </td>
+          <td style="font-family: var(--font-mono); color: #c084fc; text-align: center; background: rgba(192, 132, 252, 0.1);">
+            ${totalActiveTgt}
+          </td>
+          <td style="font-family: var(--font-mono); color: #f43f5e; text-align: center; background: rgba(244, 63, 94, 0.1); border-right: 1px solid rgba(244, 63, 94, 0.3);">
+            ${totalActiveNeed} needed
+          </td>
+          <td style="font-family: var(--font-mono); color: #38bdf8; text-align: center;">
+            ${totalAch20.toFixed(1)}%
+          </td>
+          <td style="text-align: center;">
+            <span class="status-badge" style="background: #6366f120; color: #818cf8; border: 1px solid #6366f140;">SCRM Benchmark</span>
+          </td>
+          <td style="text-align: left !important; color: #38bdf8; font-size: 0.8rem; font-weight: 600;">
+            ${totalActiveNeed > 0 ? `Sector Gap: Close ${totalActiveNeed} contracts across remaining ${totalActiveBase - totalActiveUp} students to reach 20% standard.` : 'Goal fully met!'}
+          </td>
+        </tr>
+      `;
+    }
+  }
+}
+
+// Alias for backwards compatibility
 function renderBreakdownTab(model) {
-  // Synchronize Left Summary Card with Official Day 21 POOL_Detail16 Data
-  const elTitle = document.getElementById('poolBreakdownTitle');
-  const elTotal = document.getElementById('poolTotalRenewals');
-  const elUpgrade = document.getElementById('poolUpgradeM2Renewals');
-  const elNormal = document.getElementById('poolNormalRenewals');
-  const elBase = document.getElementById('poolUpgradeBase');
-  const elRate = document.getElementById('poolUpgradeRate');
-
-  if (elTitle) elTitle.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Pool Breakdown Summary (Sep 1–${model.summary.daysPassed || 21}, 2026)`;
-  if (elTotal) elTotal.textContent = `132 students`;
-  if (elUpgrade) elUpgrade.textContent = `${model.summary.totalUpgradeM2} students`;
-  if (elNormal) elNormal.textContent = `${model.summary.totalNormalRenewals} students`;
-  if (elBase) elBase.textContent = `${model.summary.totalUpgradeBase} leads`;
-  if (elRate) elRate.textContent = `${fmtPct(model.summary.upgradeRate)} (${model.summary.totalUpgradeM2} / ${model.summary.totalUpgradeBase})`;
-
-  // Top Upgrade Producers Leaderboard Card
-  const leadersContainer = document.getElementById('upgradeLeadersList');
-  if (leadersContainer) {
-    const topUpgraders = [...model.individuals]
-      .filter(r => r.upgradeM2 > 0)
-      .sort((a, b) => b.upgradeRate - a.upgradeRate || b.upgradeM2 - a.upgradeM2);
-
-    leadersContainer.innerHTML = topUpgraders.map((r, idx) => `
-      <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);">
-        <div>
-          <span style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 700; margin-right: 6px;">#${idx + 1}</span>
-          <strong style="color: #fff;">${r.name}</strong>
-          <span style="color: ${r.teamColor}; font-size: 0.75rem; margin-left: 6px;">(${r.team})</span>
-        </div>
-        <div style="font-family: var(--font-mono);">
-          <span style="color: #10b981; font-weight: 800; font-size: 0.95rem;">${fmtPct(r.upgradeRate)} M2 Conv. %</span>
-          <span style="color: var(--text-muted); font-size: 0.78rem; margin-left: 4px;">(${r.upgradeM2}/${r.upgradeBase})</span>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  // Small Teams Upgrade M2 Comparison Matrix (Non-Redundant Team Level)
-  const tbody = document.getElementById('upgradeTeamTableBody') || document.getElementById('upgradeDetailTableBody');
-  if (!tbody) return;
-  tbody.innerHTML = '';
-
-  const teamList = Object.values(model.teams).sort((a, b) => {
-    const aBase = a.members.reduce((sum, r) => sum + (r.upgradeBase || 0), 0);
-    const aUp = a.members.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
-    const aRate = aBase > 0 ? (aUp / aBase) : 0;
-    const bBase = b.members.reduce((sum, r) => sum + (r.upgradeBase || 0), 0);
-    const bUp = b.members.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
-    const bRate = bBase > 0 ? (bUp / bBase) : 0;
-    return bRate - aRate;
-  });
-
-  teamList.forEach((t, idx) => {
-    const tBase = t.members.reduce((sum, r) => sum + (r.upgradeBase || 0), 0);
-    const tUp = t.members.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
-    const tNorm = t.members.reduce((sum, r) => sum + (r.normalRenewals || 0), 0);
-    const tContracts = t.members.reduce((sum, r) => sum + (r.contracts || 0), 0);
-    const tRate = tBase > 0 ? ((tUp / tBase) * 100) : 0;
-    const tTarget20 = Math.ceil(tBase * 0.20);
-    const tNeeded = Math.max(0, tTarget20 - tUp);
-    const tCover = t.members.length > 0 ? (t.members.reduce((sum, r) => sum + (r.coverRate || 0), 0) / t.members.length) : 0;
-    const tl = t.members.find(m => m.isTL)?.name || t.leader || 'Team Leader';
-    const statusClr = tRate >= 5.0 ? '#10b981' : (tRate >= 3.0 ? '#f59e0b' : '#f43f5e');
-    const statusTxt = tRate >= 5.0 ? 'Ahead' : (tRate >= 3.0 ? 'On Track' : 'Gap');
-
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td><span style="color: ${t.color}; font-weight: 700;">${t.label || t.key}</span></td>
-      <td><strong style="color: #fff;">👑 ${tl}</strong></td>
-      <td style="font-family: var(--font-mono); color: #fff;">${tBase}</td>
-      <td style="font-family: var(--font-mono); font-weight: 800; color: #10b981;">${tUp}</td>
-      <td style="font-family: var(--font-mono); color: #38bdf8;">${tNorm}</td>
-      <td style="font-family: var(--font-mono); font-weight: 600; color: #fff;">${tContracts}</td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa;">${fmtPct(tRate)}</td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${tTarget20} <span style="font-size: 0.75rem; color: ${tNeeded > 0 ? '#f43f5e' : '#10b981'};">(${tNeeded} needed)</span></td>
-      <td style="font-family: var(--font-mono); font-weight: 800; color: #facc15; text-align: center;">${fmtPct(tCover)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(tCover / 100).toFixed(1)}x)</span></td>
-      <td><span class="status-badge" style="background: ${statusClr}20; color: ${statusClr}; border: 1px solid ${statusClr}40;">${statusTxt}</span></td>
-    `;
-    tbody.appendChild(tr);
-  });
-
-  const tfoot = document.getElementById('upgradeTeamTableFoot') || document.getElementById('upgradeDetailTableFoot');
-  if (tfoot) {
-    const s = model.summary;
-    const avgCover = model.individuals.length > 0 ? (model.individuals.reduce((sum, r) => sum + r.coverRate, 0) / model.individuals.length) : 0;
-    tfoot.innerHTML = `
-      <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
-        <td colspan="2" style="color: #fff; text-align: left; font-size: 0.9rem;">TOTAL / SECTOR AVERAGE</td>
-        <td style="font-family: var(--font-mono); color: #fff;">${s.totalUpgradeBase}</td>
-        <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
-        <td style="font-family: var(--font-mono); color: #38bdf8;">${s.totalNormalRenewals}</td>
-        <td style="font-family: var(--font-mono); color: #fff;">${s.totalContracts}</td>
-        <td style="font-family: var(--font-mono); color: #a78bfa;">${fmtPct(s.upgradeRate)}</td>
-        <td style="font-family: var(--font-mono); color: #c084fc;">${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)</td>
-        <td style="font-family: var(--font-mono); color: #facc15; text-align: center;" title="Sector Touchpoint Frequency: ${(avgCover / 100).toFixed(1)} calls/student (100% Unique Coverage)">${fmtPct(avgCover)} <span style="font-size: 0.72rem; color: #fde047; font-weight: 600;">(${(avgCover / 100).toFixed(1)}x)</span></td>
-        <td><span class="status-badge" style="background: #6366f120; color: #818cf8;">Sector Total</span></td>
-      </tr>
-    `;
-  }
+  renderUpgradeTab(model);
 }
 
 function renderSOPTab() {
@@ -3750,13 +3928,20 @@ function downloadSelectedRepLeads() {
 
 window.switchTab = switchTab;
 function switchTab(tabKey) {
+  const isUpg = (tabKey === 'upgrade' || tabKey === 'breakdown');
   document.querySelectorAll('.tab').forEach(b => {
-    if (b.dataset.tab === tabKey) b.classList.add('active');
-    else b.classList.remove('active');
+    if (b.dataset.tab === tabKey || (isUpg && (b.dataset.tab === 'upgrade' || b.dataset.tab === 'breakdown'))) {
+      b.classList.add('active');
+    } else {
+      b.classList.remove('active');
+    }
   });
   document.querySelectorAll('.tab-content').forEach(c => {
-    if (c.id === `tab-${tabKey}`) c.classList.add('active');
-    else c.classList.remove('active');
+    if (c.id === `tab-${tabKey}` || (isUpg && (c.id === 'tab-upgrade' || c.id === 'tab-breakdown'))) {
+      c.classList.add('active');
+    } else {
+      c.classList.remove('active');
+    }
   });
 }
 

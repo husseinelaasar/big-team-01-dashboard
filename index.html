@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -136,9 +136,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         Individual Reps (23)
       </button>
-      <button class="tab" data-tab="breakdown" onclick="switchTab('breakdown')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
-        Renewal vs Upgrade Detail
+      <button class="tab" data-tab="upgrade" onclick="switchTab('upgrade')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Early Upgrade Hub (M2)
+        <span style="background: linear-gradient(135deg, #10b981, #06b6d4); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">46 / 153</span>
       </button>
       <button class="tab" data-tab="sop" onclick="switchTab('sop')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
@@ -167,10 +168,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <div class="kpi-label">Total Cash Revenue (MTD)</div>
-          <div class="kpi-value" id="totalCash">$175,273</div>
-          <div class="kpi-sub" id="cashTarget">Target: $225,600 | Projected: $164,621</div>
-          <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 51.1%;"></div></div>
-          <div class="kpi-pct" id="cashPct">77.69% Achieved</div>
+          <div class="kpi-value" id="totalCash">$179,942</div>
+          <div class="kpi-sub" id="cashTarget">Target: $225,600 | Projected: $192,795</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 79.8%;"></div></div>
+          <div class="kpi-pct" id="cashPct">79.76% Achieved</div>
         </div>
 
         <!-- 2. Total Contracts & Breakdown -->
@@ -179,10 +180,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
           <div class="kpi-label">Total Contracts (Orders)</div>
-          <div class="kpi-value" id="totalContracts">195</div>
-          <div class="kpi-sub" id="contractsSub">Normal: 131 | Upgrade M2: 34</div>
-          <div class="kpi-progress"><div class="kpi-bar" id="contractsBar" style="width: 75.6%;"></div></div>
-          <div class="kpi-pct" id="contractsPct">Avg: $896 / contract</div>
+          <div class="kpi-value" id="totalContracts">201</div>
+          <div class="kpi-sub" id="contractsSub">Normal: 155 | Upgrade M2: 46</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="contractsBar" style="width: 78.0%;"></div></div>
+          <div class="kpi-pct" id="contractsPct">Avg: $895 / contract</div>
         </div>
 
         <!-- 3. Target Achievement & Daily Benchmark Pacing -->
@@ -191,10 +192,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div class="kpi-label">Day 28 Target Benchmark</div>
-          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">77.69%</div>
-          <div class="kpi-sub" id="achSub">Day 27 Target: <strong>80.0% ($180,480)</strong> | Pacing Gap: <span style="color: #f43f5e;">-12.5%</span></div>
-          <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 67.5%; background: linear-gradient(90deg, #6366f1, #38bdf8);"></div></div>
-          <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 27 of 30 | Expected Target Pace: 80.0% (3 Days Left)</div>
+          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">79.76%</div>
+          <div class="kpi-sub" id="achSub">Day 28 Target: <strong>87.0% ($196,272)</strong> | Pacing Gap: <span style="color: #f43f5e;">-7.2%</span></div>
+          <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 79.8%; background: linear-gradient(90deg, #6366f1, #38bdf8);"></div></div>
+          <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 28 of 30 | Expected Target Pace: 87.0% (2 Days Left)</div>
         </div>
 
         <!-- 4. Active Reps & Upgrade Conversion -->
@@ -203,10 +204,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <div class="kpi-label">Active Reps & M2 Conversion</div>
-          <div class="kpi-value" id="totalReps">25 Reps</div>
-          <div class="kpi-sub" id="baseLeads">34 M2 Upgrades / 765 Pool Base</div>
+          <div class="kpi-value" id="totalReps">23 Reps</div>
+          <div class="kpi-sub" id="baseLeads">46 M2 Upgrades / 765 Pool Base</div>
           <div class="kpi-progress"><div class="kpi-bar" id="repsBar" style="width: 88%;"></div></div>
-          <div class="kpi-pct" id="repsPct">4.4% M2 Upgrade Conversion</div>
+          <div class="kpi-pct" id="repsPct">6.01% M2 Upgrade Conversion</div>
         </div>
       </div>
 
@@ -411,73 +412,174 @@
     <!-- TAB 4: RENEWAL VS UPGRADE DETAIL -->
     <!-- ============================================== -->
     <section id="tab-breakdown" class="tab-content">
+      <!-- Section Header -->
       <div class="section-header">
-        <h2>Renewal vs Upgrade M2 Analytics</h2>
-        <span class="source-tag">Extracted from SS Lens Dashboard: Sub-sheet POOL_Detail16</span>
-      </div>
-
-      <div class="breakdown-grid">
-        <!-- Left Summary Card -->
-        <div class="calc-card">
-          <div class="calc-title" id="poolBreakdownTitle">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            Pool Breakdown Summary (Sep 1–21, 2026)
-          </div>
-          <div style="line-height: 1.8; color: var(--text-secondary); font-size: 0.9rem; margin-top: 14px;">
-            <p>• <strong>Total Pool Renewals:</strong> <span style="color:#fff; font-weight:700;" id="poolTotalRenewals">132 students</span> made "Is This Month Renew" = 1</p>
-            <p>• <strong>Upgrade M2 Renewals:</strong> <span style="color:#10b981; font-weight:700;" id="poolUpgradeM2Renewals">29 students</span> (Column F: "Upgrade M2", Column J: 1)</p>
-            <p>• <strong>Normal Renewals:</strong> <span style="color:#38bdf8; font-weight:700;" id="poolNormalRenewals">103 students</span> (Exp Non-0, Exp 0-cr, period, outside pool, FOE)</p>
-            <p>• <strong>Total M2 Upgrade Potential Base:</strong> <span style="color:#f59e0b; font-weight:700;" id="poolUpgradeBase">687 leads</span></p>
-            <p>• <strong>Team M2 Conversion Rate:</strong> <span style="color:#a78bfa; font-weight:700;" id="poolUpgradeRate">4.22%</span> (29 / 687)</p>
-          </div>
-        </div>
-
-        <!-- Right Upgrade Leaders Card -->
-        <div class="calc-card">
-          <div class="calc-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            Top Upgrade M2 Producers
-          </div>
-          <div id="upgradeLeadersList" style="margin-top: 14px;"></div>
-        </div>
-      </div>
-
-      <!-- Small Teams Upgrade M2 & Call Intensity Comparison Matrix (Non-Redundant Team Summary) -->
-      <div class="section-header" style="margin-top: 28px;">
         <div>
-          <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff;">Small Teams Upgrade M2 & Outreach Intensity Comparison</h3>
-          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 4px;">
-            Sector-wide comparison by Small Team for Early Upgrade M2 conversion, 20% target achievement, and contact frequency. (Individual reps viewable in Individuals tab).
+          <h2 style="display: flex; align-items: center; gap: 10px;">
+            <span>🚀</span> Early Upgrade (M2) Strategic Intelligence Hub
+            <span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; padding: 2px 8px;">OFFICIAL SCRM RECONCILED</span>
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Dedicated conversion cockpit: M-2 student pool base, outreach contact intensity, 20% milestone pacing, remaining gaps, and rep-level actionable directives.
           </p>
         </div>
-        <span class="source-tag">Source: POOL_Detail16 & POOL22</span>
+        <span class="source-tag">Source: 海外SS-SCRM看板 (Subsheet: 升舱率达成 Col F &amp; POOL22)</span>
       </div>
 
-      <div class="table-wrapper">
-        <table class="data-table" id="upgradeTeamTable">
+      <!-- 1. Top Executive Upgrade KPI Deck (6 Metric Cards) -->
+      <div class="upgrade-kpi-deck" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+        <!-- Card 1: Actual Upgrades -->
+        <div class="calc-card" style="border-left: 4px solid #10b981;">
+          <div class="kpi-label">Actual M-2 Upgrades</div>
+          <div class="kpi-value" style="color: #10b981;" id="upgCardActual">46</div>
+          <div class="kpi-sub" style="color: #94a3b8;">Official SCRM Col F (+12 newly verified)</div>
+          <div class="kpi-pct" style="color: #10b981; font-weight: 700;" id="upgCardRate">6.01% Conv. Rate</div>
+        </div>
+        <!-- Card 2: M-2 Pool Base -->
+        <div class="calc-card" style="border-left: 4px solid #6366f1;">
+          <div class="kpi-label">M-2 Students Pool Base</div>
+          <div class="kpi-value" style="color: #fff;" id="upgCardBase">765</div>
+          <div class="kpi-sub" style="color: #94a3b8;">Assigned Students (SCRM Col C)</div>
+          <div class="kpi-pct" style="color: #a5b4fc;">Across 5 Small Teams</div>
+        </div>
+        <!-- Card 3: 20% Benchmark Target -->
+        <div class="calc-card" style="border-left: 4px solid #c084fc;">
+          <div class="kpi-label">20% Benchmark Goal</div>
+          <div class="kpi-value" style="color: #c084fc;" id="upgCardTarget">153</div>
+          <div class="kpi-sub" style="color: #94a3b8;">Target Contracts (Base × 20%)</div>
+          <div class="kpi-pct" style="color: #d8b4fe;">Official 20% Standard</div>
+        </div>
+        <!-- Card 4: Remaining to Target -->
+        <div class="calc-card" style="border-left: 4px solid #f43f5e;">
+          <div class="kpi-label">Remaining to 20% Target</div>
+          <div class="kpi-value" style="color: #f43f5e;" id="upgCardNeeded">107</div>
+          <div class="kpi-sub" style="color: #94a3b8;">Sector Contracts Deficit</div>
+          <div class="kpi-pct" style="color: #fda4af;">Pacing Gap: -14.0%</div>
+        </div>
+        <!-- Card 5: Target Progress -->
+        <div class="calc-card" style="border-left: 4px solid #38bdf8;">
+          <div class="kpi-label">Target Progress</div>
+          <div class="kpi-value" style="color: #38bdf8;" id="upgCardProg">30.1%</div>
+          <div class="kpi-sub" style="color: #94a3b8;">46 of 153 Contracts Achieved</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="upgCardProgBar" style="width: 30.1%; background: #38bdf8;"></div></div>
+        </div>
+        <!-- Card 6: Outreach Intensity -->
+        <div class="calc-card" style="border-left: 4px solid #facc15;">
+          <div class="kpi-label">Outreach Intensity</div>
+          <div class="kpi-value" style="color: #facc15;" id="upgCardTouch">74.8%</div>
+          <div class="kpi-sub" style="color: #94a3b8;">1.3x Call Multiplier per Lead</div>
+          <div class="kpi-pct" style="color: #fde047;">POOL22 Effective Coverage</div>
+        </div>
+      </div>
+
+      <!-- 2. Small Teams Upgrade Comparison Grid -->
+      <div style="margin-bottom: 24px;">
+        <h3 style="font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>📊</span> Small Teams Upgrade Conversion &amp; 20% Target Velocity
+        </h3>
+        <div id="upgradeSmallTeamsCards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;"></div>
+      </div>
+
+      <!-- 3. Strategic Actionable Playbook (4 Key Tactical Directives) -->
+      <div style="margin-bottom: 28px; background: rgba(17, 24, 39, 0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: 20px; backdrop-filter: blur(12px);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <h3 style="font-size: 1.1rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+            <span>🎯</span> Executive Upgrade Playbook &amp; Tactical Interventions
+          </h3>
+          <span style="font-size: 0.75rem; color: #94a3b8; background: rgba(255,255,255,0.05); padding: 3px 10px; border-radius: 6px;">Live Tactical Directives</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;" id="upgradePlaybookCards">
+          <!-- Card 1: High Base Zero Upgrade Alert -->
+          <div style="background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: var(--radius-md); padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #f43f5e; font-weight: 800; font-size: 0.88rem; margin-bottom: 6px;">
+              <span>🚨</span> PRIORITY 1: High-Base Zero-Upgrade Alert
+            </div>
+            <div style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.5;">
+              <strong>4 Reps (109 Leads):</strong> Tito (31), Mohamed06 (33), Julia (23), Omar (22).<br>
+              <span style="color: #f87171;">Directive:</span> Immediate TL 1:1 call audit. Re-engage top 10 engaged students per rep with special upgrade curriculum packages today.
+            </div>
+          </div>
+          <!-- Card 2: 20% Goal Sprint Group -->
+          <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-weight: 800; font-size: 0.88rem; margin-bottom: 6px;">
+              <span>⚡</span> PRIORITY 2: 20% Benchmark Sprint (≤ 3 Needed)
+            </div>
+            <div style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.5;">
+              <strong>Close Candidates:</strong> Mahmoud04 (1 needed), Abdelrhman Shehata (1 needed), Marwa (1 needed), Mohamedha (2 needed), Amr Safwat (3 needed), Khaled (4 needed).<br>
+              <span style="color: #34d399;">Directive:</span> Blitz pending proposals. Closing these contracts unlocks team milestone commission booster!
+            </div>
+          </div>
+          <!-- Card 3: Sector Champions -->
+          <div style="background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-md); padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #818cf8; font-weight: 800; font-size: 0.88rem; margin-bottom: 6px;">
+              <span>⭐</span> PRIORITY 3: Top Upgrade Champions
+            </div>
+            <div style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.5;">
+              <strong>Top Producers:</strong> Hayam Hassan (7 upgrades), Ibrahim Ismaiel (5), Mahmoud04 (4 | 18.2%), Mohamedha (4 | 15.4%), Ehab Zaky (4 | 10.0%).<br>
+              <span style="color: #a5b4fc;">Directive:</span> Showcase winning call pitches in tomorrow's morning sector standup.
+            </div>
+          </div>
+          <!-- Card 4: Outreach Touch Deficit -->
+          <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-md); padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #f59e0b; font-weight: 800; font-size: 0.88rem; margin-bottom: 6px;">
+              <span>📞</span> PRIORITY 4: Call Frequency Deficit (&lt; 60%)
+            </div>
+            <div style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.5;">
+              <strong>Coverage Lag:</strong> Ashraqat (41.5%), Mahmoud Khamis (48.8%), Julia (54.5%).<br>
+              <span style="color: #fde047;">Directive:</span> Require minimum 2 calls per uncontacted student before month-end cutoff to unlock upgrade interest.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Interactive Table Controls (Filters, Search & Sort) -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <!-- Team Filter -->
+          <select id="upgradeTeamFilter" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 7px 12px; border-radius: var(--radius-sm); font-size: 0.82rem; cursor: pointer;">
+            <option value="ALL">All Small Teams (5)</option>
+            <option value="EGSS01">ME-EGSS01 (Ashraqatal)</option>
+            <option value="EGSS05">ME-EGSS05 (Ibrahimismaiel)</option>
+            <option value="EGSS10">ME-EGSS10 (Mohamed06)</option>
+            <option value="EGSS13">ME-EGSS13 (Mohamedha)</option>
+            <option value="EGSS30">ME-EGSS30 (AdhmGadAllah)</option>
+          </select>
+          <!-- Sort Filter -->
+          <select id="upgradeSortFilter" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 7px 12px; border-radius: var(--radius-sm); font-size: 0.82rem; cursor: pointer;">
+            <option value="upgrades-desc">Actual Upgrades (High → Low)</option>
+            <option value="rate-desc">Conversion Rate % (High → Low)</option>
+            <option value="needed-asc">Remaining Needed (Closest to 20% Goal)</option>
+            <option value="needed-desc">Remaining Needed (Largest Gap First)</option>
+            <option value="base-desc">Leads Base (Largest Pool First)</option>
+            <option value="touch-asc">Outreach Coverage % (Lowest Touch First)</option>
+          </select>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <input type="text" id="upgradeSearchInput" placeholder="🔍 Search rep name..." style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 7px 14px; border-radius: var(--radius-sm); font-size: 0.82rem; width: 220px;">
+        </div>
+      </div>
+
+      <!-- 5. Master Full Upgrade Performance Table -->
+      <div class="table-wrapper" style="overflow-x: auto;">
+        <table class="data-table" id="masterUpgradeTable" style="width: 100%;">
           <thead>
             <tr>
-              <th>#</th>
-              <th style="text-align: left !important;">Rep Name</th>
-              <th>Team</th>
-              <th>Cash ($)</th>
-              <th>Target ($)</th>
-              <th>Ach %</th>
-              <th style="color: #38bdf8; font-weight: 800;">Pace</th>
-              <th>M2</th>
-              <th>Base</th>
-              <th style="color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); border-left: 1px solid rgba(192, 132, 252, 0.25); border-right: 1px solid rgba(192, 132, 252, 0.25);">&#127919; 20% Goal (Needed)</th>
-              <th>Conv %</th>
-              <th style="color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.25);">&#128176; Exp. Comm ($)</th>
-              <th style="color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.05);">&#128640; Next Band ($)</th>
-              <th style="color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.05); border-right: 1px solid rgba(250, 204, 21, 0.25);">&#127919; Gap ($)</th>
-              <th style="color: #facc15; font-weight: 800;">Touch</th>
-              <th>Contr.</th>
-              <th>Status</th>
+              <th style="width: 40px;">#</th>
+              <th style="text-align: left !important; min-width: 160px;">Rep Name</th>
+              <th style="width: 90px;">Team</th>
+              <th style="width: 70px;">Base</th>
+              <th style="width: 110px; color: #facc15; font-weight: 800;">Coverage Rate</th>
+              <th style="width: 95px; color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.08); border-left: 1px solid rgba(16, 185, 129, 0.25);">Actual Upgrades</th>
+              <th style="width: 100px; color: #a78bfa; font-weight: 800;">Conv %</th>
+              <th style="width: 95px; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08);">20% Target</th>
+              <th style="width: 110px; color: #f43f5e; font-weight: 800; background: rgba(244, 63, 94, 0.08); border-right: 1px solid rgba(244, 63, 94, 0.25);">Remaining to Target</th>
+              <th style="width: 85px;">Target Ach %</th>
+              <th style="width: 105px;">Status</th>
+              <th style="text-align: left !important; min-width: 280px; color: #38bdf8; font-weight: 700;">Actionable Recommendations</th>
             </tr>
           </thead>
-          <tbody id="upgradeTeamTableBody"></tbody>
-          <tfoot id="upgradeTeamTableFoot"></tfoot>
+          <tbody id="masterUpgradeTableBody"></tbody>
+          <tfoot id="masterUpgradeTableFoot"></tfoot>
         </table>
       </div>
     </section>

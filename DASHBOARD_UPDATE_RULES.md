@@ -10,7 +10,8 @@
 > 4. Early Upgrade M2 Touch Frequency / Call Intensity metrics (POOL22) are mathematically clarified alongside the 100% unique student coverage.
 > 5. The live dashboard is fully synchronized and verified.
 > 6. Sector Total Net Cash Revenue MTD and Cash Achievement %: MUST be extracted directly from the individual sheet **`Area_Big_Team_Small_Team_SS`** (Row 2 / Total Row) in `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx`: **Column G (`Cash-Refund`)** for Net Cash Revenue MTD and **Column M (`Cash-Refund ACHIEVEMENT`)** for MTD Cash Achievement %, with sheet **`指标看板`** (Col C & Col I) of `SS Lens Dashboard` as fallback.
-> 7. Upgrade M2 renewals and pool base MUST be synchronized with the official 51Talk Data Center pivot baseline (34 renewals / 765 base), separating sector macro totals (34 renewals / 765 base) from active reps totals (33 renewals / 759 base), with zero hardcoded constants.
+> 7. **Official Source & Counting Rule for Upgrade M2 Achievements:** The primary authoritative source for upgrade counts is officially designated as **`海外SS-SCRM看板_*.xlsx`** -> subsheet **`升舱率达成`**, **Column F (`M-2 Cumulative Upgrades M-2累计升舱数`)**, with assigned student leads base from **Column C (`M-2 Students M-2新生数`)**. Sector total is officially 46 upgrades across 765 base leads (6.01% macro conversion rate).
+> 8. **Dedicated Early Upgrade Hub (M2) Page:** The dashboard must feature a dedicated, standalone page/tab exclusively for Early Upgrade M2 intelligence, including executive KPI cards, small teams comparison cards, a 4-directive tactical playbook, and a comprehensive 12-column table covering Base, Coverage Rate, Actual Upgrades, 20% Target, Remaining to Target, and individualized Actionable Recommendations.
 
 ---
 
@@ -23,6 +24,8 @@ To eliminate path confusion, browser download delays, and manual file-hunting er
   1. **SS Lens Dashboard:** `SS Lens Dashboard*.xlsx` or `ME Lens Dashboard*.xlsx` (Contains `Individual_Rankings`, `Small_Team`, `POOL_Detail16`, `POOL23`, `POOL_Detail24`).
      * *Schema Note:* In latest 51Talk exports, coverage rate sheet is named `POOL23` (Coverage rate in Column H), and `POOL_Detail16` has 1-column shift (Col B = Small Team, Col C = Agent, Col F = Pool in Detail, Col J = Is Renew).
   2. **Overseas NEW SOP:** `海外NEW_SOP*.xlsx` (Contains `By_group`, `SOP_by_group`, `New_SOP_detail`).
+  3. **Area Big Team Small Team SS:** `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx` (Primary source for net cash, individual cash, and refunds).
+  4. **Overseas SS-SCRM Dashboard:** `海外SS-SCRM看板_*.xlsx` (Authoritative primary source for Upgrade M-2: Subsheet **`升舱率达成`**, Column C for Base, Column F for Cumulative Upgrades, and Column H for Upgrade Rate).
   3. **Middle East English Club:** `中东English Club数据看板*.xlsx` or `English Club*.xlsx` (Contains `English_club_bygroup`, `English_club_detail`).
   4. **Operations Master (Legacy/Merged):** `All in one Master.xlsx` (Can be used as fallback).
 * **Multi-Tier Search Priority:**
@@ -198,21 +201,48 @@ $$\text{Team 13 Achievement} = \frac{\$47,418.68}{\$47,060} \times 100 = \mathbf
 #### 🔄 Upgrade M2 Counting & Macro Reconciliation Protocol:
 
 > [!IMPORTANT]
-> **RECONCILING SECTOR MACRO TOTALS (34) VS ACTIVE REPS TOTALS (33):**
-> 1. **Filter Criteria in `Student_Detail32`:**
->    * Column F (`POOL IN DETAIL`): `"Upgrade M2"`
->    * Column J (`Is This Month Renew`): `"1"`
-> 2. **Exact Day 27 Renewal Distribution (34 Total Renewals):**
->    * **Active Sales Representatives (33 Renewals):**
->      * EGSS-mahmoud04 (4), EGSS-hayamhassan (4), EGSS-ibrahimismaiel (4), EGSS-mohamedha (4), EGSS-amrsafwat (3), EGSS-abdelrahmannasef (2), EGSS-ehabzaky01 (2), EGLP-shahdmahmoud (1), EGSS-abdelrhmanshehata (1), EGSS-adhmgadallah (1), EGSS-ashraqatal (1), EGSS-khaledgonam (1), EGSS-mahmoudkhamis (1), EGSS-marwaahmed (1), EGSS-negma (1), EGSS-nohayoussry (1), EGSS-samira01 (1).
->    * **Former / Inactive Reps (1 Renewal):**
->      * `EGSS-hussienmo` (Student ID: `63833199`, Team: `ME-EGSS01`) accounts for 1 renewal.
->    * **Sector Macro Total:** $33 \text{ (Active)} + 1 \text{ (Former)} = \mathbf{34 \text{ Upgrades}}$.
-> 3. **Elimination of Frozen Constants:**
->    * Total upgrade base is locked to the official 51Talk Data Center pivot baseline of **765 leads**.
->    * Rep-level upgrade targets and needed gaps adapt dynamically:
->      $$\text{Rep 20\% Target} = \lceil \text{rep.upgradeBase} \times 0.20 \rceil$$
->      $$\text{Rep 20\% Needed} = \max(0, \text{Rep 20\% Target} - \text{rep.upgradeM2})$$
+> **OFFICIAL PRIMARY SOURCE: `海外SS-SCRM看板_*.xlsx` (Sheet: `升舱率达成`)**
+> 1. **Extraction Coordinates:**
+>    * **Row 2 (总计):** Col C (`M-2 Students M-2新生数`) = **765 Base**, Col F (`M-2 Cumulative Upgrades M-2累计升舱数`) = **46 Upgrades**, Col H = **6.01% Upgrade Rate**.
+>    * **Rows 3+ (Individual Reps):** Col B = Rep Name, Col C = Base, Col F = Cumulative Upgrades.
+> 2. **Official Day 28 Renewal & Upgrade Distribution (46 Total Upgrades):**
+>    * **ME-EGSS01 (11 Upgrades / 205 Base = 5.37%):**
+>      * `EGSS-mahmoud04` (4), `EGSS-negma` (3), `EGSS-nohayoussry` (2), `EGSS-ashraqatal` (1), `EGSS-juliamonir01` (0), `EGLP-yasmin01` (0), Former/HQ `EGSS-hussienmo` (1).
+>    * **ME-EGSS05 (15 Upgrades / 219 Base = 6.85%):**
+>      * `EGSS-ibrahimismaiel` (5), `EGSS-ehabzaky01` (4), `EGSS-abdelrahmannasef` (2), `EGSS-khaledgonam` (2), `EGSS-samira01` (2), `EGSS-omarmoneb` (0), `EGSS-titooooo` (0), `EGLP-saraht` (0).
+>    * **ME-EGSS10 (2 Upgrades / 113 Base = 1.77%):**
+>      * `EGSS-ahmedshoukry` (1), `EGSS-mahmoudkhamis` (1), `EGLP-mohamed06` (0).
+>    * **ME-EGSS13 (16 Upgrades / 193 Base = 8.29%):**
+>      * `EGSS-hayamhassan` (7), `EGSS-mohamedha` (4), `EGSS-amrsafwat` (3), `EGSS-marwaahmed` (1), `EGLP-shahdmahmoud` (1).
+>    * **ME-EGSS30 (2 Upgrades / 35 Base = 5.71%):**
+>      * `EGSS-abdelrhmanshehata` (1), `EGSS-adhmgadallah` (1), `EGSS-alihesham01` (0).
+>    * **Sector Macro Total:** $\mathbf{46 \text{ Upgrades}} \text{ across } \mathbf{765 \text{ Base Leads}} = \mathbf{6.01\% \text{ Conversion Rate}}$.
+> 3. **Dynamic 20% Target Benchmark Math:**
+>    * Sector 20% Target Contracts: $\lceil 765 \times 0.20 \rceil = \mathbf{153 \text{ Contracts}}$.
+>    * Sector Remaining to Target: $153 - 46 = \mathbf{107 \text{ Contracts Needed}}$.
+>    * Rep 20% Target: $\lceil \text{rep.upgradeBase} \times 0.20 \rceil$.
+>    * Rep 20% Needed: $\max(0, \text{Rep 20\% Target} - \text{rep.upgradeM2})$.
+>
+> 4. **Dedicated Early Upgrade Hub (M2) Architecture:**
+>    * Accessible via Tab 4: `🚀 Early Upgrade Hub (M2)` (supporting both `switchTab('upgrade')` and `switchTab('breakdown')`).
+>    * **Required Master Table Columns:**
+>      1. `#` (Rank / Priority)
+>      2. `Rep Name` (with TL crown icon)
+>      3. `Team` (colored badge)
+>      4. `Base` (M-2 Students Col C from SCRM)
+>      5. `Coverage Rate` (Contact intensity % and call multiplier from POOL22)
+>      6. `Actual Upgrades` (Column F from `升舱率达成`, highlighted in emerald badge)
+>      7. `Conv %` (Actual / Base % with visual progress bar)
+>      8. `20% Target` ($\lceil \text{Base} \times 0.20 \rceil$)
+>      9. `Remaining to Target` ($\max(0, \text{Target} - \text{Actual})$ contracts needed)
+>      10. `Target Ach %` (Actual / Target %)
+>      11. `Status` (Star Benchmark, On Track, Pacing, Behind, Zero Upgrades)
+>      12. `Actionable Recommendations` (Contextual, rep-specific tactical coaching directives).
+>    * **Executive Components Included:**
+>      - 6 Top Metric Cards: Actual (46), Base (765), Conv Rate (6.01%), 20% Goal (153), Remaining (107), Touch Intensity (74.8%).
+>      - Small Teams Upgrade Comparison Cards (5 teams with 20% goal progress bars).
+>      - Strategic Tactical Playbook (4 priorities: High-Base Zero Alert, 20% Sprint Candidates, Top Champions, Outreach Deficit).
+>      - Interactive Team filter, multi-criteria sorting, and instant rep search.
 
 ---
 
