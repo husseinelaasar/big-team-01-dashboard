@@ -164,10 +164,10 @@ body::after {
 .app {
   position: relative;
   z-index: 1;
-  max-width: 1480px;
-  width: 95%;
+  max-width: 1880px;
+  width: 98%;
   margin: 0 auto;
-  padding: 0 16px 40px;
+  padding: 0 20px 40px;
 }
 
 /* ============ TOP NAV ============ */
@@ -679,24 +679,20 @@ body::after {
   font-family: var(--font-mono);
 }
 
-/* ============ DATA TABLE (ZERO-SCROLL FIT) ============ */
+/* ============ DATA TABLE (CONTENT-FIT & EXPANSIVE VIEW) ============ */
 .table-wrapper {
-  overflow-x: hidden;
+  overflow-x: auto;
   width: 100%;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-glass);
   backdrop-filter: blur(8px);
-}
-@media (max-width: 850px) {
-  .table-wrapper {
-    overflow-x: auto;
-  }
+  -webkit-overflow-scrolling: touch;
 }
 .data-table {
   width: 100%;
-  table-layout: fixed !important;
+  table-layout: auto;
   border-collapse: collapse;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
 }
 .data-table thead {
   background: rgba(99, 102, 241, 0.08);
@@ -713,27 +709,27 @@ body::after {
   opacity: 0.4;
 }
 .data-table th {
-  padding: 6px 3px !important;
+  padding: 10px 8px !important;
   text-align: center !important;
   vertical-align: middle !important;
   font-weight: 700;
   color: var(--text-secondary);
-  font-size: 0.67rem !important;
+  font-size: 0.73rem !important;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   border-bottom: 1px solid var(--border-glass);
-  white-space: normal !important;
-  line-height: 1.15 !important;
+  white-space: nowrap;
+  line-height: 1.25 !important;
 }
 .data-table td {
-  padding: 5px 3px !important;
+  padding: 9px 8px !important;
   text-align: center !important;
   vertical-align: middle !important;
   border-bottom: 1px solid var(--border-glass);
   color: var(--text-primary);
-  font-size: 0.72rem !important;
+  font-size: 0.78rem !important;
   transition: background 0.2s ease;
-  white-space: nowrap !important;
+  white-space: nowrap;
 }
 .data-table td > div {
   margin-left: auto;
@@ -1463,17 +1459,45 @@ body::after {
 }
 
 
-/* Ensure Individual Table Never Forces Horizontal Scroll */
-#individualTableView {
-  overflow-x: hidden !important;
+/* ============ WIDE EXPANSIVE TABLE & CONTENT-FIT RULES ============ */
+#individualTableView,
+.table-wrapper {
+  overflow-x: auto !important;
   width: 100% !important;
+  border-radius: var(--radius-lg);
+  -webkit-overflow-scrolling: touch;
 }
+
 #individualFullTable {
   width: 100% !important;
-  table-layout: fixed !important;
+  min-width: 1560px;
+  table-layout: auto !important;
 }
+
+#individualFullTable th,
 #individualFullTable td {
-  overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  padding: 9px 8px !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+#masterUpgradeTable {
+  width: 100% !important;
+  min-width: 1520px;
+  table-layout: auto !important;
+}
+
+#masterUpgradeTable th,
+#masterUpgradeTable td {
+  white-space: nowrap;
+  padding: 10px 8px !important;
+}
+
+#masterUpgradeTable td:last-child {
+  white-space: normal !important;
+  min-width: 340px;
+  max-width: 560px;
+  line-height: 1.45;
+  text-align: left !important;
 }

@@ -12,6 +12,7 @@
 > 6. Sector Total Net Cash Revenue MTD and Cash Achievement %: MUST be extracted directly from the individual sheet **`Area_Big_Team_Small_Team_SS`** (Row 2 / Total Row) in `SS Lens Dashboard_Area_Big Team_Small Team_SS_*.xlsx`: **Column G (`Cash-Refund`)** for Net Cash Revenue MTD and **Column M (`Cash-Refund ACHIEVEMENT`)** for MTD Cash Achievement %, with sheet **`指标看板`** (Col C & Col I) of `SS Lens Dashboard` as fallback.
 > 7. **Official Source & Counting Rule for Upgrade M2 Achievements:** The primary authoritative source for upgrade counts is officially designated as **`海外SS-SCRM看板_*.xlsx`** -> subsheet **`升舱率达成`**, **Column F (`M-2 Cumulative Upgrades M-2累计升舱数`)**, with assigned student leads base from **Column C (`M-2 Students M-2新生数`)**. Sector total is officially 46 upgrades across 765 base leads (6.01% macro conversion rate).
 > 8. **Dedicated Early Upgrade Hub (M2) Page:** The dashboard must feature a dedicated, standalone page/tab exclusively for Early Upgrade M2 intelligence, including executive KPI cards, small teams comparison cards, a 4-directive tactical playbook, and a comprehensive 12-column table covering Base, Coverage Rate, Actual Upgrades, 20% Target, Remaining to Target, and individualized Actionable Recommendations.
+> 9. **Executive Wide-Canvas Layout & Content-First Column Fitting Standard:** The dashboard container (`.app`) must be wide (`max-width: 1880px; width: 98%`) to leverage widescreen displays. All table columns must fit their contents cleanly and legibly without artificial clipping, text-overflow truncation, or squishing. Table wrappers must always enable `overflow-x: auto;` so that data is 100% visible on any screen size.
 
 ---
 
@@ -673,46 +674,33 @@ The Individual Performance Deep Dive (`#tab-individuals`) provides one-click exp
 
 ---
 
-### 🎯 17. Direct Table Display, Zero-Scroll Viewport Standard & Prominent Export Banner (Day 27 Audit)
+### 🎯 17. Executive Wide-Canvas Layout Standard & Content-First Column Fitting Rule
 
-#### A. Direct Display Standard (Eliminating Hidden Views):
-1. **Immediate Table Accessibility:**
-   * When opening the **Individual Performance Deep Dive** (`#tab-individuals`), the complete 17-column performance table is rendered **DIRECTLY** by default.
-   * `#individualTableView` no longer carries the `hidden` class upon tab load, eliminating friction and redundant clicks.
-   * `viewToggleTable` is active by default; `#individualCards` is gracefully hidden.
+#### A. Executive Wide-Canvas Container Standard:
+1. **Expansive Viewport Utilization (`max-width: 1880px; width: 98%`):**
+   * The root application container (`.app`) is configured at `max-width: 1880px; width: 98%; margin: 0 auto; padding: 0 20px 40px;`.
+   * This expansive layout takes full advantage of modern widescreen monitors and high-resolution displays (1080p, 1440p, 4K), eliminating cramped margins and providing generous breathing room for multi-column tables, KPI cards, and tactical playbooks.
 
-#### B. Zero-Scroll Strict Geometry (No Left-Right Scrolling):
-> **Mandatory Executive Layout Rule:**  
-> "Ø£Ù† ØªÙƒÙˆÙ† ÙƒØ§ÙØ© Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª ÙˆØ§Ø¶Ø­Ø© Ø¨Ø¹Ø±Ø¶ Ø§Ù„Ø´Ø§Ø´Ø© Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ Ø¨Ø¯ÙˆÙ† Ø£ÙŠ Ø¥Ø¬Ø¨Ø§Ø± Ù„Ù„Ù…Ø³ØªØ®Ø¯Ù… Ø¹Ù„Ù‰ Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„Ù€ Scroll ÙŠÙ…ÙŠÙ† ÙˆÙŠØ³Ø§Ø± Ù„Ø±Ø¤ÙŠØ© Ø§Ù„Ù…Ø­ØªÙˆÙ‰."  
-> All 17 performance and commission columns must fit cleanly and legibly across standard executive monitor and laptop viewports with zero horizontal scrollbar (`overflow-x: hidden !important`).
-1. **Strict Container Containment (`overflow-x: hidden !important`):**
-   * `#individualTableView` and `.table-wrapper` strictly enforce `overflow-x: hidden !important` on desktop/laptop viewports.
-2. **Fixed Table Layout (`table-layout: fixed !important`):**
-   * `#individualFullTable` enforces `table-layout: fixed !important; width: 100% !important;` preventing individual cells from blowing out column widths.
-3. **Deterministic 100% Colgroup Percentages:**
-   Exact widths defined via `<colgroup>` summing precisely to 100.0%:
-   * `# (Rank)`: 3.2%
-   * `Rep Name`: 11.5%
-   * `Team`: 5.2%
-   * `Cash ($)`: 7.2%
-   * `Target ($)`: 7.0%
-   * `Ach %`: 5.8%
-   * `Pace`: 5.2%
-   * `Upg M2`: 4.2%
-   * `Base`: 4.0%
-   * `🎯 20% Goal (Needed)`: 7.5%
-   * `Conv %`: 5.0%
-   * `💰 Exp. Comm ($)`: 8.2%
-   * `🚀 Next Band ($)`: 7.8%
-   * `🎯 Gap ($)`: 7.2%
-   * `Touch Freq`: 5.0%
-   * `Contr.`: 4.2%
-   * `Status`: 6.8%
-4. **Content Wrapping Standard (`white-space: normal !important`):**
-   * Table cells and headers wrap text naturally with compact line-height (`1.15`) and font size (`0.68rem`), ensuring no column ever forces a horizontal viewport shift.
-5. **Executive Balanced Container Width (No Extreme Wide Stretching):**
-   * `.app` container is balanced at `max-width: 1480px; width: 95%; margin: 0 auto;`.
-   * This prevents awkward, extreme edge-to-edge stretching across ultrawide and 4K displays while preserving a clean, centered desktop layout where all 17 table columns fit with zero horizontal scroll.
+#### B. Content-First Column Fitting Standard (No Data Truncation):
+1. **Fit Columns to Content (Zero Truncation Rule):**
+   * Tables must size columns to fit their real-world contents so that every number, status chip, commission tier, and recommendation is fully visible at a glance without truncation or awkward squishing.
+   * `text-overflow: ellipsis` and rigid percentage `<colgroup>` rules that previously compressed columns into unreadable widths are strictly prohibited.
+2. **Deterministic Column Geometry & Sizing:**
+   * **Individual Performance Master Table (`#individualFullTable`):**
+     - Table min-width: `min-width: 1560px; table-layout: auto;`
+     - Columns configured with dedicated minimum widths: `#` (44px), `Rep Name` (min 160px), `Team` (95px), `Cash` (95px), `Target` (95px), `Ach %` (80px), `Pace` (95px), `M2` (65px), `Base` (65px), `🎯 20% Goal` (135px), `Conv %` (80px), `💰 Exp. Comm` (120px), `🚀 Next Band` (120px), `🎯 Gap` (110px), `Touch` (85px), `Contr.` (70px), `Status` (110px).
+     - Cell padding: `padding: 9px 8px !important;` with sharp, comfortable typography (`0.76rem` to `0.88rem`).
+   * **Early Upgrade Hub Master Table (`#masterUpgradeTable`):**
+     - Table min-width: `min-width: 1540px; table-layout: auto;`
+     - Dedicated minimum widths: `#` (44px), `Rep Name` (min 160px), `Team` (100px), `Base` (80px), `Coverage Rate` (125px), `Actual Upgrades` (110px), `Conv %` (110px), `20% Target` (105px), `Remaining to Target` (140px), `Target Ach %` (100px), `Status` (125px), `Actionable Recommendations` (min 340px, max 560px, `white-space: normal`, line-height 1.45).
+   * **SOP Matrix Comparison Table (`#sopMatrixTable`):**
+     - Table min-width: `min-width: 980px; table-layout: auto;`
+     - 9 SOP compliance columns properly aligned with headers (`SOP Lifecycle Stage`, `Benchmark`, `Big Team 01`, and 5 small teams + `Compliance`).
+3. **Graceful Responsive Scrolling (`overflow-x: auto`):**
+   * `.table-wrapper` and `#individualTableView` strictly enforce `overflow-x: auto !important;` with `-webkit-overflow-scrolling: touch;`.
+   * On smaller screens or when users zoom in, smooth horizontal scrolling is enabled so no column is ever forced to shrink below its minimum readable width.
+4. **Direct Table Display by Default:**
+   * When opening the **Individual Performance Deep Dive** (`#tab-individuals`), the full 17-column performance table is rendered **DIRECTLY** by default (`#individualTableView` visible, `#individualCards` hidden).
 
 #### C. Prominent High-Visibility Action & Download Toolbar:
 1. **Dedicated Action Banner (`.table-export-banner`):**

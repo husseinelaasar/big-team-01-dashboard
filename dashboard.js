@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -1030,54 +1030,54 @@ function renderIndividualsTab(model) {
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 0.70rem;">#${repRank}</td>
-      <td style="text-align: left !important; font-weight: 700;"><strong title="${r.name}">${r.isTL ? '👑 ' : ''}${cleanRepName}</strong></td>
-      <td><span style="color: ${r.teamColor}; font-weight: 700; font-size: 0.68rem;">${r.team}</span></td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${fmt(r.cash)}</td>
-      <td style="font-family: var(--font-mono); color: var(--text-secondary); font-size: 0.68rem;">${fmt(r.target)}</td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.statusColor};">${fmtPct(r.achievement)}</td>
-      <td style="text-align: center;">
-        <span style="background: ${paceStatusClr}18; color: ${paceStatusClr}; border: 1px solid ${paceStatusClr}35; padding: 1px 4px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.68rem;">
+      <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 0.76rem;">#${repRank}</td>
+      <td style="text-align: left !important; font-weight: 700; white-space: nowrap;"><strong title="${r.name}">${r.isTL ? '👑 ' : ''}${cleanRepName}</strong></td>
+      <td style="white-space: nowrap;"><span style="color: ${r.teamColor}; font-weight: 700; font-size: 0.74rem;">${r.team}</span></td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: #fff; font-size: 0.84rem;">${fmt(r.cash)}</td>
+      <td style="font-family: var(--font-mono); color: var(--text-secondary); font-size: 0.74rem;">${fmt(r.target)}</td>
+      <td style="font-family: var(--font-mono); font-weight: 800; color: ${r.statusColor}; font-size: 0.84rem;">${fmtPct(r.achievement)}</td>
+      <td style="text-align: center; white-space: nowrap;">
+        <span style="background: ${paceStatusClr}18; color: ${paceStatusClr}; border: 1px solid ${paceStatusClr}35; padding: 2px 6px; border-radius: 4px; font-weight: 800; font-family: var(--font-mono); font-size: 0.74rem;">
           ${deltaPace >= 0 ? '+' : ''}${deltaPace}%
         </span>
       </td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'};">${r.upgradeM2}</td>
-      <td style="font-family: var(--font-mono); color: var(--text-secondary);">${r.upgradeBase}</td>
-      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(192, 132, 252, 0.05); border-left: 1px solid rgba(192, 132, 252, 0.2); border-right: 1px solid rgba(192, 132, 252, 0.2);">
-        <strong style="color: #c084fc; font-size: 0.84rem;">${r.upgrade20Target}</strong>
-        <div style="margin-top: 1px;">
-          <span style="font-size: 0.64rem; font-weight: 800; padding: 1px 4px; border-radius: 3px; background: ${r.upgrade20Needed > 0 ? 'rgba(244, 63, 94, 0.18)' : 'rgba(16, 185, 129, 0.18)'}; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">
+      <td style="font-family: var(--font-mono); font-weight: 800; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'}; font-size: 0.85rem;">${r.upgradeM2}</td>
+      <td style="font-family: var(--font-mono); color: var(--text-secondary); font-size: 0.80rem;">${r.upgradeBase}</td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(192, 132, 252, 0.05); border-left: 1px solid rgba(192, 132, 252, 0.2); border-right: 1px solid rgba(192, 132, 252, 0.2); white-space: nowrap;">
+        <strong style="color: #c084fc; font-size: 0.88rem;">${r.upgrade20Target}</strong>
+        <div style="margin-top: 2px;">
+          <span style="font-size: 0.68rem; font-weight: 800; padding: 2px 5px; border-radius: 3px; background: ${r.upgrade20Needed > 0 ? 'rgba(244, 63, 94, 0.18)' : 'rgba(16, 185, 129, 0.18)'}; color: ${r.upgrade20Needed > 0 ? '#f43f5e' : '#10b981'};">
             ${r.upgrade20Needed > 0 ? r.upgrade20Needed + ' n' : '✓'}
           </span>
         </div>
       </td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa; font-size: 0.68rem;">${fmtPct(r.upgradeRate)}</td>
-      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(16, 185, 129, 0.04); border-left: 1px solid rgba(16, 185, 129, 0.25);">
-        <div style="font-size: 0.84rem; font-weight: 800; color: #10b981;">${fmt(r.commission.totalPayout)}</div>
-        <div style="font-size: 0.60rem; color: #a5b4fc; font-weight: 600;">
+      <td style="font-family: var(--font-mono); font-weight: 700; color: #a78bfa; font-size: 0.78rem;">${fmtPct(r.upgradeRate)}</td>
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(16, 185, 129, 0.04); border-left: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;">
+        <div style="font-size: 0.86rem; font-weight: 800; color: #10b981;">${fmt(r.commission.totalPayout)}</div>
+        <div style="font-size: 0.66rem; color: #a5b4fc; font-weight: 600;">
           ${r.commission.baseRatePct}${r.commission.hasTeamBonus ? ' +0.5% &#128293;' : ''}
         </div>
       </td>
-      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(56, 189, 248, 0.03);">
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(56, 189, 248, 0.03); white-space: nowrap;">
         ${r.commission.nextTier ? `
-          <div style="font-size: 0.82rem; font-weight: 800; color: #38bdf8;">${fmt(r.commission.expectedNextEarning)}</div>
-          <div style="font-size: 0.60rem; color: #94a3b8;">${r.commission.nextRatePct}</div>
+          <div style="font-size: 0.84rem; font-weight: 800; color: #38bdf8;">${fmt(r.commission.expectedNextEarning)}</div>
+          <div style="font-size: 0.66rem; color: #94a3b8;">${r.commission.nextRatePct}</div>
         ` : `
-          <div style="font-size: 0.78rem; font-weight: 800; color: #facc15;">🏆 Top</div>
+          <div style="font-size: 0.82rem; font-weight: 800; color: #facc15;">🏆 Top</div>
         `}
       </td>
-      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(250, 204, 21, 0.03); border-right: 1px solid rgba(250, 204, 21, 0.25);">
+      <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(250, 204, 21, 0.03); border-right: 1px solid rgba(250, 204, 21, 0.25); white-space: nowrap;">
         ${r.commission.nextTier ? `
-          <div style="font-size: 0.82rem; font-weight: 800; color: ${r.commission.remainingToNext <= 1500 ? '#facc15' : '#fff'};">
+          <div style="font-size: 0.84rem; font-weight: 800; color: ${r.commission.remainingToNext <= 1500 ? '#facc15' : '#fff'};">
             ${fmt(r.commission.remainingToNext)}
           </div>
         ` : `
-          <div style="font-size: 0.72rem; color: #10b981; font-weight: 700;">✓</div>
+          <div style="font-size: 0.78rem; color: #10b981; font-weight: 700;">✓</div>
         `}
       </td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: #facc15; font-size: 0.68rem;" title="Touch Frequency">${(r.coverRate / 100).toFixed(1)}x</td>
-      <td style="font-family: var(--font-mono); font-weight: 600; font-size: 0.70rem;">${r.contracts}</td>
-      <td><span class="status-badge" style="background: ${r.statusColor}20; color: ${r.statusColor}; font-size: 0.60rem; padding: 2px 4px;">${r.status}</span></td>
+      <td style="font-family: var(--font-mono); font-weight: 700; color: #facc15; font-size: 0.76rem;" title="Touch Frequency">${(r.coverRate / 100).toFixed(1)}x</td>
+      <td style="font-family: var(--font-mono); font-weight: 700; font-size: 0.78rem;">${r.contracts}</td>
+      <td style="white-space: nowrap;"><span class="status-badge" style="background: ${r.statusColor}20; color: ${r.statusColor}; font-size: 0.70rem; padding: 3px 6px;">${r.status}</span></td>
     `;
     tableBody.appendChild(tr);
   });

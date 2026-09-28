@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260928_135459">
+  <link rel="stylesheet" href="styles.css?v=20260928_140400">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -360,46 +360,27 @@
 
       <div id="individualCards" class="individual-cards-grid"></div>
       
-      <div id="individualTableView" class="table-wrapper" style="margin-top: 14px; overflow-x: hidden !important; width: 100% !important;">
-        <table class="data-table" id="individualFullTable" style="table-layout: fixed !important; width: 100% !important;">
-          <colgroup>
-            <col style="width: 3.2%;">
-            <col style="width: 12.0%;">
-            <col style="width: 5.2%;">
-            <col style="width: 7.2%;">
-            <col style="width: 6.8%;">
-            <col style="width: 5.6%;">
-            <col style="width: 5.2%;">
-            <col style="width: 4.2%;">
-            <col style="width: 4.0%;">
-            <col style="width: 8.0%;">
-            <col style="width: 5.0%;">
-            <col style="width: 8.0%;">
-            <col style="width: 7.6%;">
-            <col style="width: 7.0%;">
-            <col style="width: 4.8%;">
-            <col style="width: 4.0%;">
-            <col style="width: 6.2%;">
-          </colgroup>
+      <div id="individualTableView" class="table-wrapper" style="margin-top: 14px; overflow-x: auto; width: 100%;">
+        <table class="data-table" id="individualFullTable" style="width: 100%; min-width: 1560px;">
           <thead>
             <tr>
-              <th>#</th>
-              <th style="text-align: left !important;">Rep Name</th>
-              <th>Team</th>
-              <th>Cash ($)</th>
-              <th>Target ($)</th>
-              <th>Ach %</th>
-              <th style="color: #38bdf8; font-weight: 800;">Pace</th>
-              <th>M2</th>
-              <th>Base</th>
-              <th style="color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); border-left: 1px solid rgba(192, 132, 252, 0.25); border-right: 1px solid rgba(192, 132, 252, 0.25);">&#127919; 20% Goal (Needed)</th>
-              <th>Conv %</th>
-              <th style="color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.25);">&#128176; Exp. Comm ($)</th>
-              <th style="color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.05);">&#128640; Next Band ($)</th>
-              <th style="color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.05); border-right: 1px solid rgba(250, 204, 21, 0.25);">&#127919; Gap ($)</th>
-              <th style="color: #facc15; font-weight: 800;">Touch</th>
-              <th>Contr.</th>
-              <th>Status</th>
+              <th style="min-width: 44px;">#</th>
+              <th style="text-align: left !important; min-width: 160px;">Rep Name</th>
+              <th style="min-width: 95px;">Team</th>
+              <th style="min-width: 95px;">Cash ($)</th>
+              <th style="min-width: 95px;">Target ($)</th>
+              <th style="min-width: 80px;">Ach %</th>
+              <th style="min-width: 95px; color: #38bdf8; font-weight: 800;">Pace</th>
+              <th style="min-width: 65px;">M2</th>
+              <th style="min-width: 65px;">Base</th>
+              <th style="min-width: 135px; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); border-left: 1px solid rgba(192, 132, 252, 0.25); border-right: 1px solid rgba(192, 132, 252, 0.25);">&#127919; 20% Goal (Needed)</th>
+              <th style="min-width: 80px;">Conv %</th>
+              <th style="min-width: 120px; color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.25);">&#128176; Exp. Comm ($)</th>
+              <th style="min-width: 120px; color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.05);">&#128640; Next Band ($)</th>
+              <th style="min-width: 110px; color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.05); border-right: 1px solid rgba(250, 204, 21, 0.25);">&#127919; Gap ($)</th>
+              <th style="min-width: 85px; color: #facc15; font-weight: 800;">Touch</th>
+              <th style="min-width: 70px;">Contr.</th>
+              <th style="min-width: 110px;">Status</th>
             </tr>
           </thead>
           <tbody id="individualFullTableBody"></tbody>
@@ -561,21 +542,21 @@
 
       <!-- 5. Master Full Upgrade Performance Table -->
       <div class="table-wrapper" style="overflow-x: auto;">
-        <table class="data-table" id="masterUpgradeTable" style="width: 100%;">
+        <table class="data-table" id="masterUpgradeTable" style="width: 100%; min-width: 1540px;">
           <thead>
             <tr>
-              <th style="width: 40px;">#</th>
+              <th style="min-width: 44px;">#</th>
               <th style="text-align: left !important; min-width: 160px;">Rep Name</th>
-              <th style="width: 90px;">Team</th>
-              <th style="width: 70px;">Base</th>
-              <th style="width: 110px; color: #facc15; font-weight: 800;">Coverage Rate</th>
-              <th style="width: 95px; color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.08); border-left: 1px solid rgba(16, 185, 129, 0.25);">Actual Upgrades</th>
-              <th style="width: 100px; color: #a78bfa; font-weight: 800;">Conv %</th>
-              <th style="width: 95px; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08);">20% Target</th>
-              <th style="width: 110px; color: #f43f5e; font-weight: 800; background: rgba(244, 63, 94, 0.08); border-right: 1px solid rgba(244, 63, 94, 0.25);">Remaining to Target</th>
-              <th style="width: 85px;">Target Ach %</th>
-              <th style="width: 105px;">Status</th>
-              <th style="text-align: left !important; min-width: 280px; color: #38bdf8; font-weight: 700;">Actionable Recommendations</th>
+              <th style="min-width: 100px;">Team</th>
+              <th style="min-width: 80px;">Base</th>
+              <th style="min-width: 125px; color: #facc15; font-weight: 800;">Coverage Rate</th>
+              <th style="min-width: 110px; color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.08); border-left: 1px solid rgba(16, 185, 129, 0.25);">Actual Upgrades</th>
+              <th style="min-width: 110px; color: #a78bfa; font-weight: 800;">Conv %</th>
+              <th style="min-width: 105px; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08);">20% Target</th>
+              <th style="min-width: 140px; color: #f43f5e; font-weight: 800; background: rgba(244, 63, 94, 0.08); border-right: 1px solid rgba(244, 63, 94, 0.25);">Remaining to Target</th>
+              <th style="min-width: 100px;">Target Ach %</th>
+              <th style="min-width: 125px;">Status</th>
+              <th style="text-align: left !important; min-width: 340px; color: #38bdf8; font-weight: 700;">Actionable Recommendations</th>
             </tr>
           </thead>
           <tbody id="masterUpgradeTableBody"></tbody>
@@ -614,26 +595,18 @@
             <span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; padding: 2px 8px; border-radius: 4px; font-weight: 600;">🔴 Action Needed (&lt; -10%)</span>
           </div>
         </div>
-        <table class="data-table" id="sopMatrixTable">
+        <table class="data-table" id="sopMatrixTable" style="width: 100%; min-width: 980px;">
           <thead>
             <tr>
-              <th>#</th>
-              <th style="text-align: left !important;">Rep Name</th>
-              <th>Team</th>
-              <th>Cash ($)</th>
-              <th>Target ($)</th>
-              <th>Ach %</th>
-              <th style="color: #38bdf8; font-weight: 800;">Pace</th>
-              <th>M2</th>
-              <th>Base</th>
-              <th style="color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); border-left: 1px solid rgba(192, 132, 252, 0.25); border-right: 1px solid rgba(192, 132, 252, 0.25);">&#127919; 20% Goal (Needed)</th>
-              <th>Conv %</th>
-              <th style="color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.25);">&#128176; Exp. Comm ($)</th>
-              <th style="color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.05);">&#128640; Next Band ($)</th>
-              <th style="color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.05); border-right: 1px solid rgba(250, 204, 21, 0.25);">&#127919; Gap ($)</th>
-              <th style="color: #facc15; font-weight: 800;">Touch</th>
-              <th>Contr.</th>
-              <th>Status</th>
+              <th style="text-align: left !important; min-width: 240px;">SOP Lifecycle Stage</th>
+              <th style="min-width: 90px;">Benchmark</th>
+              <th style="min-width: 120px; background: rgba(99, 102, 241, 0.2); color: #fff; font-weight: 800;">Big Team 01</th>
+              <th style="min-width: 100px;">ME-EGSS01</th>
+              <th style="min-width: 100px;">ME-EGSS05</th>
+              <th style="min-width: 100px;">ME-EGSS10</th>
+              <th style="min-width: 100px;">ME-EGSS13</th>
+              <th style="min-width: 100px;">ME-EGSS30</th>
+              <th style="min-width: 110px;">Compliance</th>
             </tr>
           </thead>
           <tbody id="sopMatrixTableBody"></tbody>
