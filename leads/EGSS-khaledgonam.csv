@@ -28,8 +28,8 @@ Student_ID,Task_Name,Expiration_Time
 62637283,"SS：Service warning - class interruption",20260930 23:59:59
 63809911,"SS：Service warning - class interruption",20260930 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING LEADS (73) ===
-Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
+=== 2. UNFIXED TEACHER BINDING (73) ===
+Student_ID,Pool_Cohort,Classes,Priority
 58339614,"M1 Pool",0,"HIGH BINDING"
 58368088,"M3+ Pool",0,"UNFIXED BINDING"
 58541296,"M3+ Pool",0,"UNFIXED BINDING"
@@ -104,8 +104,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 64438092,"M0 Pool",0,"CRITICAL (0 Classes)"
 64444839,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (282) ===
-Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
+=== 3. CLASS CONSUMPTION RESCUE (282) ===
+Student_ID,Pool_Cohort,Classes,Action
 58368088,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58541296,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58811857,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -389,8 +389,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 62821219,"M3+ Pool",29,"🏆 Star Student — Top Tier Achieved (Retention & Referral)"
 62940181,"M3+ Pool",34,"🏆 Star Student — Top Tier Achieved (Retention & Referral)"
 
-=== 4. ENGLISH CLUB ACTIONABLE LEADS (81) ===
-Student_ID,Level,Completed_Classes,Booking_Status
+=== 4. ENGLISH CLUB LEADS (81) ===
+Student_ID,Level,Completed,Status
 63086572,"3",1,"Attended"
 59841842,"0",0,"Booking Required"
 61428105,"1",0,"Booking Required"

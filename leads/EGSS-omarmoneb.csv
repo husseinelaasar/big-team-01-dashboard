@@ -5,8 +5,8 @@
 Student_ID,Task_Name,Expiration_Time
 64316107,"Round 2  Trust Enhancement (First Class Follow-up)",20260930 18:55:00
 
-=== 2. UNFIXED TEACHER BINDING LEADS (82) ===
-Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
+=== 2. UNFIXED TEACHER BINDING (82) ===
+Student_ID,Pool_Cohort,Classes,Priority
 58712129,"M3+ Pool",0,"UNFIXED BINDING"
 58855945,"M3+ Pool",0,"UNFIXED BINDING"
 59019680,"M3+ Pool",0,"UNFIXED BINDING"
@@ -90,8 +90,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 64457029,"M0 Pool",0,"CRITICAL (0 Classes)"
 64476948,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (213) ===
-Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
+=== 3. CLASS CONSUMPTION RESCUE (213) ===
+Student_ID,Pool_Cohort,Classes,Action
 58236949,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58855945,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 60165439,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -306,8 +306,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 62788019,"M3+ Pool",20,"🏆 Star Student — Top Tier Achieved (Retention & Referral)"
 62979499,"M3+ Pool",20,"🏆 Star Student — Top Tier Achieved (Retention & Referral)"
 
-=== 4. ENGLISH CLUB ACTIONABLE LEADS (67) ===
-Student_ID,Level,Completed_Classes,Booking_Status
+=== 4. ENGLISH CLUB LEADS (67) ===
+Student_ID,Level,Completed,Status
 63078556,"0",1,"Attended"
 63080264,"0",0,"Booked"
 63050503,"3",0,"Booked"
