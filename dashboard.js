@@ -166,12 +166,12 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 83.51% vs Day 29 target 94%. Gap: 10.5pp. Need $37198/day to close.', time: '20260929_122820' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_122820' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_122820' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-ibrahimismaiel (145.4%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_122820' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_122820' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $194899 (86.4%). 1 days left. Daily need: $37198. Push all pending deals!', time: '20260929_122820' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 83.51% vs Day 29 target 94%. Gap: 10.5pp. Need $37198/day to close.', time: '20260929_131014' },
+  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_131014' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (-3.5%), EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_131014' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (128.3%), EGSS-ibrahimismaiel (145.4%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_131014' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_131014' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $194899 (86.4%). 1 days left. Daily need: $37198. Push all pending deals!', time: '20260929_131014' },
 ];
 
 // =========================================================================
@@ -3815,6 +3815,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4847,6 +4849,8 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
 
 
 
