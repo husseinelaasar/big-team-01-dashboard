@@ -974,3 +974,47 @@ To guarantee immediate visibility of all UI and data updates:
 #### C. Verification Checklist for Modern Executive Updates:
 - [ ] **Tab 1: Executive Overview:** Scroll down below the Pacing Scale ruler. Verify presence of `.glass-panel-executive` containing 3 top financial tiles, the violet Upgrade Command Center, 5 small team upgrade leaderboard cards, and the 12-column table with two-tier strategic memos.
 - [ ] **Tab 4: Early Upgrade Hub:** Click the "Early Upgrade Hub (M2)" tab. Verify that the 6 top KPI tiles use `.metric-tile-modern`, tactical playbook cards have colored accent borders, and `#masterUpgradeTable` defaults to Conversion Rate % descending (`rate-desc`).
+
+---
+
+### 🛡️ 25. Day 29 Data Reconciliation, Root Cause Analysis & Filter Execution Fix
+
+#### A. Issue Context (Day 29 - Sep 29, 2026):
+During the Day 29 update cycle, fresh input workbooks were downloaded at 16:35–16:40. Two critical discrepancies were investigated:
+1. **Numbers Not Matching Between Dashboard, Teams, and Sector Ledger:**
+   - Website displayed prior morning export data ($188,402 cash / 46 upgrades) instead of fresh 16:35 exports ($192,192 cash / 55 upgrades).
+   - Inherent mathematical gap between Big Team 01 Net Cash ($192,192) and the sum of active Small Teams ($199,638).
+2. **Small Team Dropdown Filter Not Reflecting:**
+   - In Tab 3 ("Individual Reps"), selecting a specific small team from the dropdown (e.g. `ME-EGSS10`) did not appear to change the table; reps from other teams remained visible.
+
+#### B. Root Cause Analysis:
+
+##### 1. Refresh Timing & Browser/CDN Caching:
+- The scheduled automation daemon (`hourly_update_and_publish.ps1`) runs strictly at `:10` past the hour (e.g. 16:10).
+- At 16:10, only morning files existed. Fresh files arrived in `Dashboard_Input_Files` between 16:35 and 16:40.
+- When opening the site prior to explicit execution and CDN cache expiration (~60–120s on GitHub Pages), browsers served stale cached JavaScript bundles.
+
+##### 2. The $7,446 Refund Absorption Gap (Small Team Protection Rule):
+- **Sector Total Ledger (`Area_Big_Team_Small_Team_SS` Row 2):**
+  - Gross Revenue: `$201,928.03`
+  - Total Refunds: `-$9,735.54`
+  - **Net Cash Revenue: `$192,192.49` (85.19% of $225,600 target)**.
+- **Active Team Roster Breakdown ($199,638 Sum):**
+  - Active reps refunds total `-$2,289` (e.g. Ashraqat `-$1,660` on Team 01).
+  - Cross-team / Leaver refunds total `-$7,446` (Ahmed Abdulhamid `-$1,314.47`, Rokaya `-$2,063.36`, Suhaila `-$880.00`, Ibrahim Ismaiel cross-ledger `-$2,067.84`, Hayam Hassan cross-ledger `-$1,749.87`).
+  - **Governance Rule:** Under the **Small Team Protection Rule**, non-member and cross-team refunds are **NEVER deducted from Small Teams**. They are charged solely to Big Team 01 (Sector Total). Hence, the sum of active small teams ($199,638) is higher than Sector Net Cash ($192,192) by design.
+
+##### 3. Authoritative SCRM Upgrade M2 Surge:
+- Fresh export of `海外SS-SCRM看板_升舱率达成_20260929_1637.xlsx` recorded an increase from 46 to **55 cumulative M2 upgrades** across a pool base of **767 students** (7.17% macro conversion):
+  - `ME-EGSS01`: 13 upgrades (12 active + 1 leaver Hussienmo) / 205 base
+  - `ME-EGSS05`: 17 upgrades / 221 base
+  - `ME-EGSS10`: 4 upgrades / 113 base
+  - `ME-EGSS13`: 17 upgrades / 193 base
+  - `ME-EGSS30`: 4 upgrades / 35 base
+  - **Total**: 55 upgrades / 767 base.
+
+##### 4. Small Team Filter Inaction Bug & Fix:
+- **Bug Location:** `dashboard.js` -> `renderIndividualsTab(model)`.
+- **Defect:** Line 1473 executed `container.innerHTML = '';` (clearing the hidden cards view), but failed to call `tableBody.innerHTML = '';` on `#individualFullTableBody`.
+- **Result:** Whenever a user changed `#teamFilter` (e.g. to `EGSS10`), the newly filtered 3 rows were appended to the bottom of the table beneath all existing 23 rows. The user saw no change at the top of the table.
+- **Fix Applied:** Added `tableBody.innerHTML = '';` before iterating over `filtered`, ensuring immediate, clean re-rendering of filtered team members and synchronized context-aware footer summaries. Also added card generation so Cards View renders correctly.

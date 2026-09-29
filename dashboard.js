@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -1469,8 +1469,9 @@ function renderIndividualsTab(model) {
   else if (sortFilter === 'contracts-desc') filtered.sort((a, b) => b.contracts - a.contracts || b.achievement - a.achievement);
   else filtered.sort((a, b) => b.achievement - a.achievement || b.cash - a.cash || b.contracts - a.contracts);
 
-  // 4. Render Cards
+  // 4. Render Table and Cards
   container.innerHTML = '';
+  tableBody.innerHTML = '';
   const pacePct = model.summary.targetPacePct || 46;
   filtered.forEach((r, idx) => {
     const deltaPace = Math.round((r.achievement - pacePct) * 10) / 10;
@@ -1480,6 +1481,29 @@ function renderIndividualsTab(model) {
     const repRank = teamFilter === 'all' ? sectorRankMap.get(r.name) : teamRankMap.get(r.name);
     const cleanRepName = r.name.replace(/^(ME-|EGSS\d+-|EOSS\d+-|EGLP\d+-)/i, '');
 
+    // Card View Card
+    const card = document.createElement('div');
+    card.className = 'metric-tile-modern';
+    card.style.borderTop = `3px solid ${r.teamColor}`;
+    card.innerHTML = `
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.72rem; font-weight: 800; color: ${r.teamColor}; text-transform: uppercase;">#${repRank} ${r.team}</span>
+        <span class="status-badge" style="background: ${r.statusColor}20; color: ${r.statusColor}; font-size: 0.70rem; padding: 2px 6px;">${r.status}</span>
+      </div>
+      <div style="font-size: 1.05rem; font-weight: 800; color: #fff; margin-top: 4px;">${r.isTL ? '👑 ' : ''}${cleanRepName}</div>
+      <div style="display: flex; justify-content: space-between; margin-top: 8px; font-family: var(--font-mono); font-size: 0.82rem;">
+        <span style="color: #fff; font-weight: 700;">${fmt(r.cash)}</span>
+        <span style="color: var(--text-secondary);">${fmt(r.target)}</span>
+        <span style="color: ${r.statusColor}; font-weight: 800;">${fmtPct(r.achievement)}</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.72rem; color: #94a3b8;">
+        <span>M2 Upgrades: <strong style="color: #10b981;">${r.upgradeM2}</strong>/${r.upgradeBase}</span>
+        <span>Orders: <strong style="color: #fff;">${r.contracts}</strong></span>
+      </div>
+    `;
+    container.appendChild(card);
+
+    // Table View Row
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 0.76rem;">#${repRank}</td>
