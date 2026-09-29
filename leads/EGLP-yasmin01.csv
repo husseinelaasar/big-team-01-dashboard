@@ -1,14 +1,14 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGLP-yasmin01 | Generated: 2026-09-29 16:10
+# Representative: EGLP-yasmin01 | Generated: 2026-09-29 16:41
 
 === 1. SOP PENDING TASKS (0) ===
 Student_ID,Task_Name,Expiration_Time
 
-=== 2. UNFIXED TEACHER BINDING (0) ===
-Student_ID,Pool_Cohort,Classes,Priority
+=== 2. UNFIXED TEACHER BINDING LEADS (0) ===
+Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 
-=== 3. CLASS CONSUMPTION RESCUE (0) ===
-Student_ID,Pool_Cohort,Classes,Action
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (0) ===
+Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 
-=== 4. ENGLISH CLUB LEADS (0) ===
-Student_ID,Level,Completed,Status
+=== 4. ENGLISH CLUB ACTIONABLE LEADS (0) ===
+Student_ID,Level,Completed_Classes,Booking_Status
