@@ -71,15 +71,15 @@ const NEW_TARGETS = {
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
   "EGSS30": { gross: 21707, refund: 0, cash: 21707, target: 15980, contracts: 27, officialAch: 135.8 },
-  "EGSS13": { gross: 51649, refund: 0, cash: 51649, target: 47060, contracts: 52, officialAch: 109.8 },
-  "EGSS05": { gross: 78408, refund: 0, cash: 78408, target: 76590, contracts: 85, officialAch: 102.4 },
-  "EGSS01": { gross: 39559, refund: 1660, cash: 37899, target: 50760, contracts: 40, officialAch: 74.7 },
-  "EGSS10": { gross: 20335, refund: 0, cash: 20335, target: 35210, contracts: 22, officialAch: 57.8 },
+  "EGSS13": { gross: 52349, refund: 0, cash: 52349, target: 47060, contracts: 53, officialAch: 111.2 },
+  "EGSS05": { gross: 79428, refund: 0, cash: 79428, target: 76590, contracts: 86, officialAch: 103.7 },
+  "EGSS01": { gross: 42839, refund: 1660, cash: 41179, target: 50760, contracts: 42, officialAch: 81.1 },
+  "EGSS10": { gross: 22765, refund: 0, cash: 22765, target: 35210, contracts: 25, officialAch: 64.7 },
 };
 
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 7332, refund: 0, target: 8040, contracts: 9, officialAch: 91.2, upgradeM2: 3, normalRenewals: 0, upgradeBase: 56, poolRenewals: 3 },
-  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 1780, refund: 1660, target: 10880, contracts: 3, officialAch: 16.4, upgradeM2: 2, normalRenewals: 0, upgradeBase: 47, poolRenewals: 2 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 8792, refund: 0, target: 8040, contracts: 10, officialAch: 109.4, upgradeM2: 3, normalRenewals: 0, upgradeBase: 56, poolRenewals: 3 },
+  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 3600, refund: 1660, target: 10880, contracts: 4, officialAch: 33.1, upgradeM2: 2, normalRenewals: 0, upgradeBase: 47, poolRenewals: 2 },
   { name: "EGSS-negma", team: "EGSS01", cash: 8140, refund: 0, target: 7790, contracts: 5, officialAch: 104.5, upgradeM2: 3, normalRenewals: 0, upgradeBase: 51, poolRenewals: 3 },
   { name: "EGSS-juliamonir01", team: "EGSS01", cash: 8140, refund: 0, target: 8050, contracts: 9, officialAch: 101.1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 23, poolRenewals: 0 },
   { name: "EGSS-mahmoud04", team: "EGSS01", cash: 12507, refund: 0, target: 10420, contracts: 14, officialAch: 120, upgradeM2: 5, normalRenewals: 0, upgradeBase: 22, poolRenewals: 5 },
@@ -89,15 +89,15 @@ const REPS_DATA = [
   { name: "EGSS-omarmoneb", team: "EGSS05", cash: 8580, refund: 0, target: 9550, contracts: 10, officialAch: 89.8, upgradeM2: 0, normalRenewals: 0, upgradeBase: 22, poolRenewals: 0 },
   { name: "EGSS-khaledgonam", team: "EGSS05", cash: 12301, refund: 0, target: 10360, contracts: 13, officialAch: 118.7, upgradeM2: 2, normalRenewals: 0, upgradeBase: 27, poolRenewals: 2 },
   { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 16068, refund: 0, target: 10170, contracts: 18, officialAch: 158, upgradeM2: 5, normalRenewals: 0, upgradeBase: 44, poolRenewals: 5 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 9911, refund: 0, target: 10190, contracts: 13, officialAch: 97.3, upgradeM2: 4, normalRenewals: 0, upgradeBase: 28, poolRenewals: 4 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 10931, refund: 0, target: 10190, contracts: 14, officialAch: 107.3, upgradeM2: 4, normalRenewals: 0, upgradeBase: 28, poolRenewals: 4 },
   { name: "EGLP-saraht", team: "EGSS05", cash: 1020, refund: 0, target: 7340, contracts: 1, officialAch: 13.9, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 8410, refund: 0, target: 10350, contracts: 8, officialAch: 81.3, upgradeM2: 4, normalRenewals: 0, upgradeBase: 40, poolRenewals: 4 },
   { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 9129, refund: 0, target: 11640, contracts: 10, officialAch: 78.4, upgradeM2: 3, normalRenewals: 0, upgradeBase: 52, poolRenewals: 3 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 8709, refund: 0, target: 16450, contracts: 9, officialAch: 52.9, upgradeM2: 1, normalRenewals: 0, upgradeBase: 52, poolRenewals: 1 },
+  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 11139, refund: 0, target: 16450, contracts: 12, officialAch: 67.7, upgradeM2: 1, normalRenewals: 0, upgradeBase: 52, poolRenewals: 1 },
   { name: "EGLP-mohamed06", team: "EGSS10", cash: 2497, refund: 0, target: 7120, contracts: 3, officialAch: 35.1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-mohamedha", team: "EGSS13", cash: 10940, refund: 0, target: 9300, contracts: 11, officialAch: 117.6, upgradeM2: 4, normalRenewals: 0, upgradeBase: 26, poolRenewals: 4 },
   { name: "EGSS-amrsafwat", team: "EGSS13", cash: 14350, refund: 0, target: 12240, contracts: 13, officialAch: 117.2, upgradeM2: 3, normalRenewals: 0, upgradeBase: 29, poolRenewals: 3 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 9032, refund: 0, target: 10560, contracts: 11, officialAch: 85.5, upgradeM2: 8, normalRenewals: 0, upgradeBase: 83, poolRenewals: 8 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 9732, refund: 0, target: 10560, contracts: 12, officialAch: 92.2, upgradeM2: 8, normalRenewals: 0, upgradeBase: 83, poolRenewals: 8 },
   { name: "EGSS-marwaahmed", team: "EGSS13", cash: 12987, refund: 0, target: 8640, contracts: 12, officialAch: 150.3, upgradeM2: 1, normalRenewals: 0, upgradeBase: 9, poolRenewals: 1 },
   { name: "EGLP-shahdmahmoud", team: "EGSS13", cash: 4340, refund: 0, target: 6320, contracts: 5, officialAch: 68.7, upgradeM2: 1, normalRenewals: 0, upgradeBase: 46, poolRenewals: 1 },
   { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 11100, refund: 0, target: 8480, contracts: 15, officialAch: 130.9, upgradeM2: 5, normalRenewals: 0, upgradeBase: 24, poolRenewals: 5 },
@@ -166,11 +166,12 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 93.08% vs Day 30 target 103%. Gap: 9.9pp. Need $0/day to close.', time: '20260930_175614' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20260930_175614' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20260930_175614' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_175614' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209982 (93.1%). 0 days left. Daily need: $0. Push all pending deals!', time: '20260930_175614' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 93.08% vs Day 30 target 103%. Gap: 9.9pp. Need $0/day to close.', time: '20260930_180053' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_180053' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (33.1%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (67.7%). Schedule targeted coaching sessions today.', time: '20260930_180053' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_180053' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_180053' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209982 (93.1%). 0 days left. Daily need: $0. Push all pending deals!', time: '20260930_180053' },
 ];
 
 // =========================================================================
@@ -3886,6 +3887,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4918,6 +4921,8 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
 
 
 
