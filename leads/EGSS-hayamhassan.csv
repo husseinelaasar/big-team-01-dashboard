@@ -1,11 +1,11 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-hayamhassan | Generated: 2026-09-30 12:18
+# Representative: EGSS-hayamhassan | Generated: 2026-09-30 12:37
 
 === 1. SOP PENDING TASKS (0) ===
 Student_ID,Task_Name,Expiration_Time
 
-=== 2. UNFIXED TEACHER BINDING LEADS (18) ===
-Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
+=== 2. UNFIXED TEACHER BINDING (18) ===
+Student_ID,Pool_Cohort,Classes,Priority
 63595698,"M2 Pool",0,"MEDIUM BINDING"
 63605140,"M2 Pool",0,"MEDIUM BINDING"
 63711216,"M2 Pool",0,"MEDIUM BINDING"
@@ -25,8 +25,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 64482494,"M0 Pool",0,"CRITICAL (0 Classes)"
 64487969,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (115) ===
-Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
+=== 3. CLASS CONSUMPTION RESCUE (115) ===
+Student_ID,Pool_Cohort,Classes,Action
 63602621,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63757854,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63762996,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -143,8 +143,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 62826545,"M2 Pool",21,"🏆 Star Student — Top Tier Achieved (Retention & Referral)"
 63603120,"M2 Pool",23,"🏆 Star Student — Top Tier Achieved (Retention & Referral)"
 
-=== 4. ENGLISH CLUB ACTIONABLE LEADS (71) ===
-Student_ID,Level,Completed_Classes,Booking_Status
+=== 4. ENGLISH CLUB LEADS (71) ===
+Student_ID,Level,Completed,Status
 60676118,"3",1,"Attended"
 63462759,"3",1,"Attended"
 58640246,"1",1,"Attended"

@@ -1,11 +1,11 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-juliamonir01 | Generated: 2026-09-30 12:18
+# Representative: EGSS-juliamonir01 | Generated: 2026-09-30 12:37
 
 === 1. SOP PENDING TASKS (0) ===
 Student_ID,Task_Name,Expiration_Time
 
-=== 2. UNFIXED TEACHER BINDING LEADS (85) ===
-Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
+=== 2. UNFIXED TEACHER BINDING (85) ===
+Student_ID,Pool_Cohort,Classes,Priority
 58086978,"M3+ Pool",0,"UNFIXED BINDING"
 58432337,"M3+ Pool",0,"UNFIXED BINDING"
 58505359,"M3+ Pool",0,"UNFIXED BINDING"
@@ -92,8 +92,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 64437117,"M0 Pool",0,"CRITICAL (0 Classes)"
 64484089,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (262) ===
-Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
+=== 3. CLASS CONSUMPTION RESCUE (262) ===
+Student_ID,Pool_Cohort,Classes,Action
 59105294,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 59320590,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 59689461,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -357,8 +357,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 63495185,"M3+ Pool",22,"🏆 Star Student — Top Tier Achieved (Retention & Referral)"
 63854359,"M2 Pool",23,"🏆 Star Student — Top Tier Achieved (Retention & Referral)"
 
-=== 4. ENGLISH CLUB ACTIONABLE LEADS (61) ===
-Student_ID,Level,Completed_Classes,Booking_Status
+=== 4. ENGLISH CLUB LEADS (61) ===
+Student_ID,Level,Completed,Status
 63071903,"1",1,"Attended"
 63036788,"1",1,"Attended"
 63064431,"3",1,"Attended"
