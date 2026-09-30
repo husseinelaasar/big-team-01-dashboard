@@ -1018,3 +1018,25 @@ During the Day 29 update cycle, fresh input workbooks were downloaded at 16:35�
 - **Defect:** Line 1473 executed `container.innerHTML = '';` (clearing the hidden cards view), but failed to call `tableBody.innerHTML = '';` on `#individualFullTableBody`.
 - **Result:** Whenever a user changed `#teamFilter` (e.g. to `EGSS10`), the newly filtered 3 rows were appended to the bottom of the table beneath all existing 23 rows. The user saw no change at the top of the table.
 - **Fix Applied:** Added `tableBody.innerHTML = '';` before iterating over `filtered`, ensuring immediate, clean re-rendering of filtered team members and synchronized context-aware footer summaries. Also added card generation so Cards View renders correctly.
+
+---
+
+### 🛡️ 26. Regex Dollar-Sign ($) Immunity & Tab Clickability Resilience (Day 30 Standard)
+
+> [!CRITICAL]
+> **PERMANENT RULE FOR CODE INJECTION & SCRIPT MODIFICATION IN POWERSHELL:**
+> When using PowerShell's `[regex]::Replace()` to inject code or data structures (such as `DAILY_RECOMMENDATIONS`) into `dashboard.js`, never pass strings containing literal currency symbols (`$`) directly into the third parameter.
+
+1. **The .NET Regex Substitution Hazard:**
+   - In .NET, `$` in a replacement string denotes substitution groups (`$&`, `$'`, etc.).
+   - If the replacement payload contains `$23,048` or `$$dailyNeed`, .NET treats it as a directive to copy portions of the matched source code, creating recursive duplicate blocks and unbalanced brackets (`{` and `[`).
+
+2. **Mandatory MatchEvaluator Pattern:**
+   - Always use a `MatchEvaluator` delegate or escape `$` as `$$`:
+     ```powershell
+     # Compliant Pattern:
+     $jsContent = [regex]::Replace($jsContent, 'const DAILY_RECOMMENDATIONS = \[[\s\S]*?\];', [System.Text.RegularExpressions.MatchEvaluator]{ param($m) $recsJs })
+     ```
+
+3. **Syntax Balance Invariant:**
+   - Prior to deploying or committing `dashboard.js`, automated checks must confirm 0 difference between open and close braces (`{}`), brackets (`[]`), and parentheses (`()`).
