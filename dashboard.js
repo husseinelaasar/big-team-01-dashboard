@@ -171,17 +171,53 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -193,6 +229,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];/day to close.', time: '20260930_123723' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_123723' },
@@ -204,17 +241,51 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -225,6 +296,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];. Push all pending deals!', time: '20260930_123723' },
 ];/day to close.', time: '20260930_121014' },
@@ -237,17 +309,51 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -258,6 +364,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];/day to close.', time: '20260930_123723' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_123723' },
@@ -268,17 +375,49 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -288,6 +427,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];. Push all pending deals!', time: '20260930_123723' },
 ];. Push all pending deals!', time: '20260930_121014' },
@@ -301,17 +441,51 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -322,6 +496,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];/day to close.', time: '20260930_123723' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_123723' },
@@ -332,17 +507,49 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -352,6 +559,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];. Push all pending deals!', time: '20260930_123723' },
 ];/day to close.', time: '20260930_121014' },
@@ -363,17 +571,49 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -383,6 +623,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];/day to close.', time: '20260930_123723' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_123723' },
@@ -392,17 +633,47 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
@@ -411,6 +682,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];. Push all pending deals!', time: '20260930_123723' },
 ];. Push all pending deals!', time: '20260930_121014' },
@@ -425,17 +697,51 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -446,6 +752,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];/day to close.', time: '20260930_123723' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_123723' },
@@ -456,17 +763,49 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -476,6 +815,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];. Push all pending deals!', time: '20260930_123723' },
 ];/day to close.', time: '20260930_121014' },
@@ -487,17 +827,49 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -507,6 +879,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];/day to close.', time: '20260930_123723' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_123723' },
@@ -516,17 +889,47 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
@@ -535,6 +938,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];. Push all pending deals!', time: '20260930_123723' },
 ];. Push all pending deals!', time: '20260930_121014' },
@@ -547,17 +951,49 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
@@ -567,6 +1003,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];/day to close.', time: '20260930_123723' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_123723' },
@@ -576,17 +1013,47 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
@@ -595,6 +1062,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];. Push all pending deals!', time: '20260930_123723' },
 ];/day to close.', time: '20260930_121014' },
@@ -605,17 +1073,47 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
@@ -624,6 +1122,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];/day to close.', time: '20260930_123723' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_123723' },
@@ -632,17 +1131,45 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_123723' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];/day to close.', time: '20260930_131012' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_131012' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_131012' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_131012' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_131012' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_132027' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_132027' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_132027' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_132027' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20260930_132027' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
@@ -650,6 +1177,7 @@ const DAILY_RECOMMENDATIONS = [
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_132027' },
 ];. Push all pending deals!', time: '20260930_131012' },
 ];. Push all pending deals!', time: '20260930_123723' },
 ];. Push all pending deals!', time: '20260930_121014' },
@@ -3904,82 +4432,82 @@ const MASTER_OPERATIONS_DATA = {
                         {
                             "name":  "EGSS-adhmgadallah",
                             "team":  "ME-EGSS30",
-                            "base":  47,
-                            "book":  20,
-                            "att":  15,
-                            "pct":  "31.9%",
-                            "goal":  19,
-                            "need":  4
+                            "base":  64,
+                            "book":  24,
+                            "att":  19,
+                            "pct":  "29.7%",
+                            "goal":  26,
+                            "need":  7
                         },
                         {
                             "name":  "EGSS-alihesham01",
                             "team":  "ME-EGSS30",
-                            "base":  15,
-                            "book":  14,
-                            "att":  13,
-                            "pct":  "86.7%",
-                            "goal":  6,
+                            "base":  29,
+                            "book":  27,
+                            "att":  23,
+                            "pct":  "79.3%",
+                            "goal":  12,
                             "need":  0
                         },
                         {
                             "name":  "EGSS-abdelrhmanshehata",
                             "team":  "ME-EGSS30",
-                            "base":  35,
-                            "book":  17,
-                            "att":  14,
-                            "pct":  "40%",
-                            "goal":  14,
+                            "base":  56,
+                            "book":  30,
+                            "att":  25,
+                            "pct":  "44.6%",
+                            "goal":  22,
                             "need":  0
                         },
                         {
                             "name":  "EGSS-ehabzaky01",
                             "team":  "ME-EGSS05",
-                            "base":  72,
-                            "book":  59,
-                            "att":  26,
-                            "pct":  "36.1%",
-                            "goal":  29,
-                            "need":  3
+                            "base":  87,
+                            "book":  68,
+                            "att":  34,
+                            "pct":  "39.1%",
+                            "goal":  35,
+                            "need":  1
                         },
                         {
                             "name":  "EGSS-ibrahimismaiel",
                             "team":  "ME-EGSS05",
-                            "base":  69,
-                            "book":  41,
-                            "att":  23,
-                            "pct":  "33.3%",
-                            "goal":  28,
-                            "need":  5
+                            "base":  99,
+                            "book":  52,
+                            "att":  30,
+                            "pct":  "30.3%",
+                            "goal":  40,
+                            "need":  10
                         },
                         {
                             "name":  "EGSS-titooooo",
                             "team":  "ME-EGSS05",
-                            "base":  68,
-                            "book":  25,
-                            "att":  14,
-                            "pct":  "20.6%",
-                            "goal":  27,
-                            "need":  13
+                            "base":  85,
+                            "book":  35,
+                            "att":  22,
+                            "pct":  "25.9%",
+                            "goal":  34,
+                            "need":  12
                         },
                         {
                             "name":  "EGSS-abdelrahmannasef",
                             "team":  "ME-EGSS05",
-                            "base":  54,
-                            "book":  21,
-                            "att":  20,
-                            "pct":  "37%",
-                            "goal":  22,
-                            "need":  2
+                            "base":  73,
+                            "book":  31,
+                            "att":  30,
+                            "pct":  "41.1%",
+                            "goal":  29,
+                            "need":  0
                         },
                         {
                             "name":  "EGSS-omarmoneb",
                             "team":  "ME-EGSS05",
-                            "base":  53,
-                            "book":  40,
-                            "att":  14,
-                            "pct":  "26.4%",
-                            "goal":  21,
-                            "need":  7
+                            "base":  67,
+                            "book":  49,
+                            "att":  15,
+                            "pct":  "22.4%",
+                            "goal":  27,
+                            "need":  12
                         },
                         {
                             "name":  "EGLP-saraht",
@@ -3994,41 +4522,41 @@ const MASTER_OPERATIONS_DATA = {
                         {
                             "name":  "EGSS-samira01",
                             "team":  "ME-EGSS05",
-                            "base":  50,
-                            "book":  34,
-                            "att":  20,
-                            "pct":  "40%",
-                            "goal":  20,
+                            "base":  65,
+                            "book":  45,
+                            "att":  27,
+                            "pct":  "41.5%",
+                            "goal":  26,
                             "need":  0
                         },
                         {
                             "name":  "EGSS-khaledgonam",
                             "team":  "ME-EGSS05",
-                            "base":  69,
-                            "book":  19,
-                            "att":  12,
-                            "pct":  "17.4%",
-                            "goal":  28,
+                            "base":  81,
+                            "book":  25,
+                            "att":  16,
+                            "pct":  "19.8%",
+                            "goal":  32,
                             "need":  16
                         },
                         {
                             "name":  "EGSS-ahmedshoukry",
                             "team":  "ME-EGSS10",
-                            "base":  101,
-                            "book":  47,
-                            "att":  35,
-                            "pct":  "34.7%",
-                            "goal":  40,
-                            "need":  5
+                            "base":  127,
+                            "book":  57,
+                            "att":  44,
+                            "pct":  "34.6%",
+                            "goal":  51,
+                            "need":  7
                         },
                         {
                             "name":  "EGSS-mahmoudkhamis",
                             "team":  "ME-EGSS10",
-                            "base":  81,
-                            "book":  53,
-                            "att":  36,
-                            "pct":  "44.4%",
-                            "goal":  32,
+                            "base":  108,
+                            "book":  63,
+                            "att":  45,
+                            "pct":  "41.7%",
+                            "goal":  43,
                             "need":  0
                         },
                         {
@@ -4044,81 +4572,81 @@ const MASTER_OPERATIONS_DATA = {
                         {
                             "name":  "EGSS-mohamedha",
                             "team":  "ME-EGSS13",
-                            "base":  49,
-                            "book":  10,
-                            "att":  7,
-                            "pct":  "14.3%",
-                            "goal":  20,
-                            "need":  13
+                            "base":  67,
+                            "book":  11,
+                            "att":  8,
+                            "pct":  "11.9%",
+                            "goal":  27,
+                            "need":  19
                         },
                         {
                             "name":  "EGSS-hayamhassan",
                             "team":  "ME-EGSS13",
-                            "base":  71,
-                            "book":  40,
-                            "att":  28,
-                            "pct":  "39.4%",
-                            "goal":  28,
-                            "need":  0
+                            "base":  86,
+                            "book":  51,
+                            "att":  32,
+                            "pct":  "37.2%",
+                            "goal":  34,
+                            "need":  2
                         },
                         {
                             "name":  "EGSS-marwaahmed",
                             "team":  "ME-EGSS13",
-                            "base":  68,
-                            "book":  33,
-                            "att":  20,
-                            "pct":  "29.4%",
-                            "goal":  27,
-                            "need":  7
+                            "base":  80,
+                            "book":  37,
+                            "att":  23,
+                            "pct":  "28.7%",
+                            "goal":  32,
+                            "need":  9
                         },
                         {
                             "name":  "EGLP-shahdmahmoud",
                             "team":  "ME-EGSS13",
-                            "base":  43,
-                            "book":  34,
-                            "att":  19,
-                            "pct":  "44.2%",
-                            "goal":  17,
-                            "need":  0
+                            "base":  68,
+                            "book":  41,
+                            "att":  26,
+                            "pct":  "38.2%",
+                            "goal":  27,
+                            "need":  1
                         },
                         {
                             "name":  "EGSS-amrsafwat",
                             "team":  "ME-EGSS13",
-                            "base":  73,
-                            "book":  53,
-                            "att":  35,
-                            "pct":  "47.9%",
-                            "goal":  29,
+                            "base":  95,
+                            "book":  66,
+                            "att":  44,
+                            "pct":  "46.3%",
+                            "goal":  38,
                             "need":  0
                         },
                         {
                             "name":  "EGSS-mahmoud04",
                             "team":  "ME-EGSS01",
-                            "base":  61,
-                            "book":  13,
-                            "att":  7,
-                            "pct":  "11.5%",
-                            "goal":  24,
-                            "need":  17
+                            "base":  83,
+                            "book":  20,
+                            "att":  12,
+                            "pct":  "14.5%",
+                            "goal":  33,
+                            "need":  21
                         },
                         {
                             "name":  "EGSS-nohayoussry",
                             "team":  "ME-EGSS01",
-                            "base":  90,
-                            "book":  51,
-                            "att":  37,
-                            "pct":  "41.1%",
-                            "goal":  36,
+                            "base":  110,
+                            "book":  59,
+                            "att":  44,
+                            "pct":  "40%",
+                            "goal":  44,
                             "need":  0
                         },
                         {
                             "name":  "EGSS-juliamonir01",
                             "team":  "ME-EGSS01",
-                            "base":  61,
-                            "book":  31,
-                            "att":  25,
-                            "pct":  "41%",
-                            "goal":  24,
+                            "base":  76,
+                            "book":  38,
+                            "att":  30,
+                            "pct":  "39.5%",
+                            "goal":  30,
                             "need":  0
                         },
                         {
@@ -4134,25 +4662,27 @@ const MASTER_OPERATIONS_DATA = {
                         {
                             "name":  "EGSS-ashraqatal",
                             "team":  "ME-EGSS01",
-                            "base":  76,
-                            "book":  36,
-                            "att":  16,
-                            "pct":  "21.1%",
-                            "goal":  30,
-                            "need":  14
+                            "base":  100,
+                            "book":  43,
+                            "att":  22,
+                            "pct":  "22%",
+                            "goal":  40,
+                            "need":  18
                         },
                         {
                             "name":  "EGSS-negma",
                             "team":  "ME-EGSS01",
-                            "base":  68,
-                            "book":  42,
-                            "att":  31,
-                            "pct":  "45.6%",
-                            "goal":  27,
+                            "base":  96,
+                            "book":  56,
+                            "att":  39,
+                            "pct":  "40.6%",
+                            "goal":  38,
                             "need":  0
                         }
                     ]
 };
+
+
 
 
 
@@ -5104,7 +5634,7 @@ function checkSheetSyncStatus() {
       chkId: 'chkECSheet',
       timeId: 'timeECSheet',
       itemId: 'syncItemEC',
-      latestTime: '2026-09-30 12:09:00', name: 'English Club Sheet'
+      latestTime: '2026-09-30 13:11:06', name: 'English Club Sheet'
     },
     {
       idPrefix: 'SOP',
@@ -5390,6 +5920,8 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
 
 
 
