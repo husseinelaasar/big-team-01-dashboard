@@ -166,12 +166,26 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 89.78% vs Day 30 target 103%. Gap: 13.2pp. Need const DAILY_RECOMMENDATIONS = [
   { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
   { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
   { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
   { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
   { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
   { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];/day to close.', time: '20260930_034322' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260930_034322' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260930_034322' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260930_034322' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260930_034322' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $202552 (89.8%). 0 days left. Daily need: const DAILY_RECOMMENDATIONS = [
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 89.78% vs 94% benchmark. Push $23048/day to stay on track.', time: '20260929_221015' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGLP-yasmin01. Immediate 1:1 coaching required.', time: '20260929_221015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGLP-yasmin01 (0%), EGLP-saraht (13.9%), EGSS-ashraqatal (16.4%), EGLP-mohamed06 (35.1%), EGSS-ahmedshoukry (52.9%). Schedule targeted coaching sessions today.', time: '20260929_221015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20260929_221015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20260929_221015' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $209537 (92.9%). 1 days left. Daily need: $23048. Push all pending deals!', time: '20260929_221015' },
+];. Push all pending deals!', time: '20260930_034322' },
 ];
 
 // =========================================================================
@@ -254,7 +268,7 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 29; // Current MTD Day (Sep 19, 2026)
+  const daysPassed = 30; // Current MTD Day (Sep 19, 2026)
   const daysInMonth = 30;
   const daysLeft = daysInMonth - daysPassed;
   const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 51;
@@ -3865,6 +3879,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4897,6 +4913,8 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
 
 
 
