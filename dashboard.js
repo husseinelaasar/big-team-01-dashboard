@@ -154,10 +154,10 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'success', icon: '🟢', title: 'Sector AHEAD of Pace', detail: 'Ach 93.08% exceeds Day 1 target 5% by 88.1pp. Maintain momentum!', time: '20261001_201012' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (33.1%), EGSS-ahmedshoukry (67.7%), EGSS-mahmoudkhamis (78.4%), EGSS-ehabzaky01 (81.3%), EGSS-omarmoneb (89.8%). Schedule targeted coaching sessions today.', time: '20261001_201012' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20261001_201012' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20261001_201012' },
+  { type: 'success', icon: '🟢', title: 'Sector AHEAD of Pace', detail: 'Ach 93.08% exceeds Day 1 target 5% by 88.1pp. Maintain momentum!', time: '20261001_211015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (33.1%), EGSS-ahmedshoukry (67.7%), EGSS-mahmoudkhamis (78.4%), EGSS-ehabzaky01 (81.3%), EGSS-omarmoneb (89.8%). Schedule targeted coaching sessions today.', time: '20261001_211015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20261001_211015' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20261001_211015' },
 ];
 
 // =========================================================================
@@ -3672,6 +3672,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4683,6 +4685,9 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
 
 
 
