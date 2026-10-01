@@ -25,7 +25,7 @@ const DATA_SOURCES = {
 const TL_MAPPING = {
   "EGSS01": { tl: "EGSS-ashraqatal", fullName: "ME-EGSS01 (Ashraqatal)", color: "#6366f1" },
   "EGSS05": { tl: "EGSS-Ibrahimismaiel", fullName: "ME-EGSS05 (Ibrahimismaiel)", color: "#06b6d4" },
-  "EGSS10": { tl: "EGSS-AhmedShoukry", fullName: "ME-EGSS10 (AhmedShoukry)", color: "#10b981" },
+  "EGSS10": { tl: "EGSS-abdelrhmanshehata", fullName: "ME-EGSS10 (AbdelrhmanShehata)", color: "#10b981" },
   "EGSS13": { tl: "EGSS-mohamedha", fullName: "ME-EGSS13 (Mohamedha)", color: "#f59e0b" },
   "EGSS30": { tl: "EGSS-AdhmGadAllah", fullName: "ME-EGSS30 (AdhmGadAllah)", color: "#f43f5e" }
 };
@@ -154,10 +154,10 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'success', icon: '🟢', title: 'Sector AHEAD of Pace', detail: 'Ach 93.08% exceeds Day 1 target 5% by 88.1pp. Maintain momentum!', time: '20261001_161014' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (33.1%), EGSS-ahmedshoukry (67.7%), EGSS-mahmoudkhamis (78.4%), EGSS-ehabzaky01 (81.3%), EGSS-omarmoneb (89.8%). Schedule targeted coaching sessions today.', time: '20261001_161014' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20261001_161014' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20261001_161014' },
+  { type: 'success', icon: '🟢', title: 'Sector AHEAD of Pace', detail: 'Ach 93.08% exceeds Day 1 target 5% by 88.1pp. Maintain momentum!', time: '20261001_191510' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (33.1%), EGSS-ahmedshoukry (67.7%), EGSS-mahmoudkhamis (78.4%), EGSS-ehabzaky01 (81.3%), EGSS-omarmoneb (89.8%). Schedule targeted coaching sessions today.', time: '20261001_191510' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20261001_191510' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20261001_191510' },
 ];
 
 // =========================================================================
@@ -3664,6 +3664,12 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
+
+
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4675,6 +4681,15 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
+
+
+
+
+
+
 
 
 
