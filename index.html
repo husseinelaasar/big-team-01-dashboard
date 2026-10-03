@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261003_171014">
+  <link rel="stylesheet" href="styles.css?v=20261003_172500">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -696,18 +696,20 @@
         <span class="source-tag">Source: All in one Master.xlsx (Operational Live Feed)</span>
       </div>
 
-      <!-- Rep Personal Self-Service Download Portal -->
+      <!-- Sales Rep & Small Teams Self-Service Download Portal -->
       <div class="rep-self-portal" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.95)); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-lg); padding: 22px 26px; margin-bottom: 28px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35); position: relative; overflow: hidden; backdrop-filter: blur(10px);">
         <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gradient-primary);"></div>
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        
+        <!-- Header & Attachments row -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
           <div>
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-              <span style="font-size: 1.25rem;">👤</span>
-              <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff;">Sales Rep Actionable Leads Portal (Self-Service Download)</h3>
+              <span style="font-size: 1.25rem;">📥</span>
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 0;">Operational Leads & Tasks Download Center (بوابة تحميل المهام والبيانات)</h3>
               <span class="pulse-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.7rem; padding: 2px 8px; border-radius: 6px; font-weight: 700;">LIVE EXPORT</span>
             </div>
-            <p style="font-size: 0.84rem; color: var(--text-secondary);">
-              Select your name from the dropdown to review task metrics and download your assigned student leads CSV for immediate outreach.
+            <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 4px 0 0 0;">
+              Download assigned student leads and actionable operational task lists by Individual Sales Representative or Consolidated Small Team.
             </p>
             <div style="display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap;">
               <a href="attachments/All in one Master.xlsx" download="All in one Master.xlsx" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.74rem; color: #a5b4fc; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: 600;">
@@ -721,20 +723,82 @@
               </a>
             </div>
           </div>
+        </div>
 
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <select id="personalRepSelect" onchange="onPersonalRepSelected()" style="padding: 10px 16px; font-size: 0.88rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff; min-width: 240px; cursor: pointer;">
-              <option value="">-- Select Your Name (Sales Rep) --</option>
-            </select>
-            <button id="btnDownloadMyLeads" onclick="downloadSelectedRepLeads()" style="display: none; padding: 10px 20px; font-size: 0.88rem; font-weight: 700; border-radius: var(--radius-md); background: linear-gradient(135deg, #10b981, #059669); color: #fff; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); transition: all 0.2s ease;">
-              📥 Download My Leads (.CSV)
-            </button>
+        <!-- Two-Column Interactive Download Hub (Rep Leads & Small Teams Leads) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 16px; margin-top: 14px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+          
+          <!-- Column 1: Individual Sales Rep Download -->
+          <div style="background: rgba(30, 41, 59, 0.55); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 1.1rem;">👤</span>
+                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">1. Individual Sales Rep (تحميل بيانات الموظف)</h4>
+                </div>
+                <span style="font-size: 0.68rem; background: rgba(99, 102, 241, 0.15); color: #818cf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">21 REPS</span>
+              </div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0 0 12px 0;">Select rep name to review personal task counts and download their CSV leads.</p>
+            </div>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <select id="personalRepSelect" onchange="onPersonalRepSelected()" style="flex: 1; min-width: 190px; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff; cursor: pointer;">
+                <option value="">-- Select Your Name (Sales Rep) --</option>
+              </select>
+              <button id="btnDownloadMyLeads" onclick="downloadSelectedRepLeads()" style="display: none; padding: 10px 18px; font-size: 0.84rem; font-weight: 700; border-radius: var(--radius-md); background: linear-gradient(135deg, #10b981, #059669); color: #fff; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); transition: all 0.2s ease;">
+                📥 Download Leads (.CSV)
+              </button>
+            </div>
           </div>
+
+          <!-- Column 2: Small Team Download (الفريق الصغير) -->
+          <div style="background: rgba(30, 41, 59, 0.55); border: 1px solid rgba(6, 182, 212, 0.35); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 1.1rem;">👥</span>
+                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">2. Small Team Leads (تحميل بيانات الفريق الصغير)</h4>
+                </div>
+                <span style="font-size: 0.68rem; background: rgba(6, 182, 212, 0.15); color: #38bdf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">5 SMALL TEAMS</span>
+              </div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0 0 12px 0;">Select Small Team to download combined operational leads for all team members.</p>
+            </div>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <select id="personalTeamSelect" onchange="onPersonalTeamSelected()" style="flex: 1; min-width: 190px; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(6, 182, 212, 0.4); color: #fff; cursor: pointer;">
+                <option value="">-- Select Small Team (اختر الفريق الصغير) --</option>
+                <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal - Team 01)</option>
+                <option value="ME-EGSS05">ME-EGSS05 (Abdelrahman Nasef - Team 05)</option>
+                <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata - Team 10)</option>
+                <option value="ME-EGSS13">ME-EGSS13 (Amr Safwat - Team 13)</option>
+                <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah - Team 30)</option>
+                <option value="BIG_TEAM_01">⭐ Big Team 01 (All Teams Combined / القطاع)</option>
+              </select>
+              <button id="btnDownloadTeamLeads" onclick="downloadSelectedTeamLeads()" style="display: none; padding: 10px 18px; font-size: 0.84rem; font-weight: 700; border-radius: var(--radius-md); background: linear-gradient(135deg, #0284c7, #0369a1); color: #fff; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3); transition: all 0.2s ease;">
+                📥 Download Team Leads (.CSV)
+              </button>
+            </div>
+          </div>
+
         </div>
 
         <!-- Dynamic Rep Personal Mini-Cockpit -->
         <div id="repPersonalSummary" style="display: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
-          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;" id="repSummaryCards">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <span style="font-size: 0.84rem; font-weight: 800; color: #10b981;">👤 Representative Individual Summary:</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;" id="repSummaryCards">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Dynamic Small Team Mini-Cockpit -->
+        <div id="teamPersonalSummary" style="display: none; margin-top: 20px; padding-top: 18px; border-top: 1px dashed rgba(6, 182, 212, 0.35);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+            <span id="teamSummaryTitle" style="font-size: 0.88rem; font-weight: 800; color: #38bdf8;"></span>
+            <span id="teamRepsCountBadge" style="font-size: 0.74rem; color: #94a3b8; background: rgba(255,255,255,0.06); padding: 3px 10px; border-radius: 12px;"></span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;" id="teamSummaryCards">
             <!-- Injected dynamically -->
           </div>
         </div>

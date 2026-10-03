@@ -4167,7 +4167,63 @@ const LEADS_SUMMARY = {
                              "sopCount":  13,
                              "ecCount":  91,
                              "totalLeads":  438
-                         }
+                         },
+    "_TEAMS": {
+        "ME-EGSS01": {
+                "ecCount": 554,
+                "label": "ME-EGSS01 (Ashraqatal)",
+                "totalLeads": 2380,
+                "ftCount": 322,
+                "repsCount": 5,
+                "ccCount": 1312,
+                "sopCount": 192
+        },
+        "BIG_TEAM_01": {
+                "ecCount": 2111,
+                "label": "Big Team 01 (Sector Total)",
+                "totalLeads": 9127,
+                "ftCount": 1247,
+                "repsCount": 21,
+                "ccCount": 5098,
+                "sopCount": 671
+        },
+        "ME-EGSS30": {
+                "ecCount": 234,
+                "label": "ME-EGSS30 (Adhm GadAllah)",
+                "totalLeads": 1106,
+                "ftCount": 149,
+                "repsCount": 3,
+                "ccCount": 637,
+                "sopCount": 86
+        },
+        "ME-EGSS13": {
+                "ecCount": 401,
+                "label": "ME-EGSS13 (Amr Safwat)",
+                "totalLeads": 1620,
+                "ftCount": 213,
+                "repsCount": 4,
+                "ccCount": 878,
+                "sopCount": 128
+        },
+        "ME-EGSS10": {
+                "ecCount": 351,
+                "label": "ME-EGSS10 (Abdelrhman Shehata)",
+                "totalLeads": 1421,
+                "ftCount": 173,
+                "repsCount": 3,
+                "ccCount": 796,
+                "sopCount": 101
+        },
+        "ME-EGSS05": {
+                "ecCount": 571,
+                "label": "ME-EGSS05 (Abdelrahman Nasef)",
+                "totalLeads": 2600,
+                "ftCount": 390,
+                "repsCount": 6,
+                "ccCount": 1475,
+                "sopCount": 164
+        }
+}
 };
 
 
@@ -4184,11 +4240,157 @@ const LEADS_SUMMARY = {
 
 
 
+// Helper for robust file downloads via Blob & UTF-8 BOM
+async function downloadFileWithBlob(url, filename, fallbackGenerator) {
+  try {
+    const res = await fetch(url, { cache: 'no-store' });
+    if (res.ok) {
+      const text = await res.text();
+      const blob = new Blob(["\uFEFF" + text], { type: 'text/csv;charset=utf-8;' });
+      const blobUrl = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 3000);
+      return true;
+    }
+  } catch (err) {
+    console.warn('Direct fetch failed for', url, err);
+  }
+
+  // Dynamic In-Memory Generation Fallback
+  if (typeof fallbackGenerator === 'function') {
+    try {
+      const generatedCsv = fallbackGenerator();
+      if (generatedCsv) {
+        const blob = new Blob(["\uFEFF" + generatedCsv], { type: 'text/csv;charset=utf-8;' });
+        const blobUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 3000);
+        return true;
+      }
+    } catch (e) {
+      console.error('Error generating fallback CSV:', e);
+    }
+  }
+  return false;
+}
+
+// Generate in-memory CSV for an individual rep
+function generateRepCsvContent(rep) {
+  if (!window.MASTER_OPERATIONS_DATA) return '';
+  const now = new Date().toISOString().replace('T', ' ').substring(0, 16);
+  const lines = [
+    `# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS`,
+    `# Representative: ${rep} | Generated: ${now}`,
+    ``
+  ];
+
+  // 1. SOP
+  const sopItems = (window.MASTER_OPERATIONS_DATA.sop || []).filter(r => r.name === rep);
+  lines.push(`=== 1. SOP PENDING TASKS (${sopItems.length}) ===`);
+  lines.push(`Student_ID,Task_Name,Expiration_Time`);
+  sopItems.forEach(item => {
+    lines.push(`${item.name || rep},"SOP Pending Tasks (EC:${item.ec}, R1:${item.r1}, R2:${item.r2})",Immediate`);
+  });
+  lines.push(``);
+
+  // 2. Unfixed
+  const unfixedItems = (window.MASTER_OPERATIONS_DATA.unfixed || []).filter(r => r.name === rep);
+  lines.push(`=== 2. UNFIXED TEACHER BINDING LEADS (${unfixedItems.length}) ===`);
+  lines.push(`Student_ID,Pool_Cohort,Classes_Attended,Call_Priority`);
+  unfixedItems.forEach(item => {
+    lines.push(`${item.name || rep},"M0:${item.m0Tot} (Fix:${item.m0Fix}) M1:${item.m1Tot}",Priority`);
+  });
+  lines.push(``);
+
+  // 3. Consumption
+  const ccItems = (window.MASTER_OPERATIONS_DATA.consumption || []).filter(r => r.name === rep);
+  lines.push(`=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (${ccItems.length}) ===`);
+  lines.push(`Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action`);
+  ccItems.forEach(item => {
+    lines.push(`${item.name || rep},"EndClasses:${item.end_classes} ZeroClass:${item.c0}",Rescue`);
+  });
+  lines.push(``);
+
+  // 4. English Club
+  const ecItems = (window.MASTER_OPERATIONS_DATA.englishClub || []).filter(r => r.name === rep);
+  lines.push(`=== 4. ENGLISH CLUB ACTIONABLE LEADS (${ecItems.length}) ===`);
+  lines.push(`Student_ID,Level,Completed_Classes,Booking_Status`);
+  ecItems.forEach(item => {
+    lines.push(`${item.name || rep},General,0,Unattended`);
+  });
+
+  return lines.join('\r\n');
+}
+
+// Generate in-memory CSV for a Small Team or Sector
+function generateTeamCsvContent(teamKey) {
+  if (!window.MASTER_OPERATIONS_DATA) return '';
+  const now = new Date().toISOString().replace('T', ' ').substring(0, 16);
+  const isSector = (teamKey === 'BIG_TEAM_01');
+  const teamLabel = (LEADS_SUMMARY._TEAMS && LEADS_SUMMARY._TEAMS[teamKey]?.label) || teamKey;
+
+  const filterFn = (item) => {
+    if (isSector) return true;
+    const t = (item.team || '').toUpperCase();
+    return t.includes(teamKey.replace('ME-', '')) || t === teamKey;
+  };
+
+  const sops = (window.MASTER_OPERATIONS_DATA.sop || []).filter(filterFn);
+  const unfixed = (window.MASTER_OPERATIONS_DATA.unfixed || []).filter(filterFn);
+  const cc = (window.MASTER_OPERATIONS_DATA.consumption || []).filter(filterFn);
+  const ec = (window.MASTER_OPERATIONS_DATA.englishClub || []).filter(filterFn);
+
+  const lines = [
+    `# 51TALK BIG TEAM 01 - SMALL TEAM ACTIONABLE STUDENT LEADS`,
+    `# Team: ${teamLabel} | Generated: ${now}`,
+    ``,
+    `=== 1. SOP PENDING TASKS (${sops.length}) ===`,
+    `Representative,Student_ID,Task_Name,Expiration_Time`
+  ];
+  sops.forEach(item => {
+    lines.push(`"${item.name}","TASK_${item.name}","SOP Pending (EC:${item.ec}, R1:${item.r1}, R2:${item.r2})",Immediate`);
+  });
+  lines.push(``);
+
+  lines.push(`=== 2. UNFIXED TEACHER BINDING LEADS (${unfixed.length}) ===`);
+  lines.push(`Representative,Student_ID,Pool_Cohort,Classes_Attended,Call_Priority`);
+  unfixed.forEach(item => {
+    lines.push(`"${item.name}","UNFIX_${item.name}","M0:${item.m0Tot} (Fix:${item.m0Fix}) M1:${item.m1Tot}",Priority`);
+  });
+  lines.push(``);
+
+  lines.push(`=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (${cc.length}) ===`);
+  lines.push(`Representative,Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action`);
+  cc.forEach(item => {
+    lines.push(`"${item.name}","CC_${item.name}","EndClasses:${item.end_classes} ZeroClass:${item.c0}",Rescue`);
+  });
+  lines.push(``);
+
+  lines.push(`=== 4. ENGLISH CLUB ACTIONABLE LEADS (${ec.length}) ===`);
+  lines.push(`Representative,Student_ID,Level,Completed_Classes,Booking_Status`);
+  ec.forEach(item => {
+    lines.push(`"${item.name}","EC_${item.name}",General,0,Unattended`);
+  });
+
+  return lines.join('\r\n');
+}
+
+// Rep Selection & Download Logic
 function initPersonalRepSelect() {
   const sel = document.getElementById('personalRepSelect');
   if (!sel || !window.MASTER_OPERATIONS_DATA) return;
 
-  const reps = MASTER_OPERATIONS_DATA.sop.map(r => r.name).sort();
+  const reps = (window.MASTER_OPERATIONS_DATA.sop || []).map(r => r.name).sort();
   sel.innerHTML = '<option value="">-- Select Your Name (Sales Rep) --</option>';
 
   reps.forEach(rep => {
@@ -4217,7 +4419,7 @@ function onPersonalRepSelected() {
     btn.innerHTML = `📥 Download Leads for ${rep} (.CSV)`;
   }
 
-  const info = LEADS_SUMMARY[rep] || { sopCount: 0, ftCount: 0, ccCount: 0, ecCount: 0, totalLeads: 0 };
+  const info = (window.LEADS_SUMMARY && window.LEADS_SUMMARY[rep]) || { sopCount: 0, ftCount: 0, ccCount: 0, ecCount: 0, totalLeads: 0 };
   
   if (summaryBox && cardsContainer) {
     summaryBox.style.display = 'block';
@@ -4249,7 +4451,7 @@ function onPersonalRepSelected() {
   }
 }
 
-function downloadSelectedRepLeads() {
+async function downloadSelectedRepLeads() {
   const sel = document.getElementById('personalRepSelect');
   const rep = sel ? sel.value : '';
   if (!rep) {
@@ -4257,13 +4459,118 @@ function downloadSelectedRepLeads() {
     return;
   }
 
-  const link = document.createElement('a');
-  link.href = `leads/${rep}.csv`;
-  link.download = `${rep}_Daily_Actionable_Leads.csv`;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  const btn = document.getElementById('btnDownloadMyLeads');
+  const origText = btn ? btn.innerHTML : '';
+  if (btn) btn.innerHTML = '⏳ Preparing Download...';
+
+  // Strict case normalization matching files in leads/ directory
+  const cleanRep = rep.substring(0, 5).toUpperCase() + rep.substring(5).toLowerCase();
+  const fileUrl = `leads/${cleanRep}.csv`;
+  const downloadName = `${rep}_Daily_Actionable_Leads.csv`;
+
+  const fallbackGen = () => generateRepCsvContent(rep);
+  const success = await downloadFileWithBlob(fileUrl, downloadName, fallbackGen);
+
+  if (btn) {
+    btn.innerHTML = success ? '✅ Downloaded!' : '❌ Error';
+    setTimeout(() => { if (btn) btn.innerHTML = origText; }, 2500);
+  }
 }
+
+// Small Team Selection & Download Logic
+function initPersonalTeamSelect() {
+  const sel = document.getElementById('personalTeamSelect');
+  if (!sel) return;
+  // Team options are preserved in HTML
+}
+
+function onPersonalTeamSelected() {
+  const sel = document.getElementById('personalTeamSelect');
+  const teamKey = sel ? sel.value : '';
+  const btn = document.getElementById('btnDownloadTeamLeads');
+  const summaryBox = document.getElementById('teamPersonalSummary');
+  const titleElem = document.getElementById('teamSummaryTitle');
+  const badgeElem = document.getElementById('teamRepsCountBadge');
+  const cardsContainer = document.getElementById('teamSummaryCards');
+
+  if (!teamKey) {
+    if (btn) btn.style.display = 'none';
+    if (summaryBox) summaryBox.style.display = 'none';
+    return;
+  }
+
+  const teamsMap = (window.LEADS_SUMMARY && window.LEADS_SUMMARY._TEAMS) || {};
+  const teamData = teamsMap[teamKey] || {
+    label: teamKey, repsCount: 0, sopCount: 0, ftCount: 0, ccCount: 0, ecCount: 0, totalLeads: 0
+  };
+
+  if (btn) {
+    btn.style.display = 'inline-flex';
+    btn.innerHTML = `📥 Download Leads for ${teamKey} (.CSV)`;
+  }
+
+  if (summaryBox && cardsContainer) {
+    summaryBox.style.display = 'block';
+    if (titleElem) titleElem.textContent = `📊 ${teamData.label} — Live Operational Summary`;
+    if (badgeElem) badgeElem.textContent = `${teamData.repsCount} Sales Reps Active`;
+
+    cardsContainer.innerHTML = `
+      <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
+        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 Pending SOP Tasks</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.sopCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">tasks</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Team follow-up pipeline</div>
+      </div>
+
+      <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
+        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 Students Without Fixed Teachers</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ftCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">students</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 80%</div>
+      </div>
+
+      <div style="background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
+        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 Class Consumption Rescue</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ccCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">accounts</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Zero-Class focus</div>
+      </div>
+
+      <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
+        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ English Club Qualified Leads</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ecCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">qualified</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Targeting 40% adoption</div>
+      </div>
+    `;
+  }
+}
+
+async function downloadSelectedTeamLeads() {
+  const sel = document.getElementById('personalTeamSelect');
+  const teamKey = sel ? sel.value : '';
+  if (!teamKey) {
+    alert('Please select a Small Team first!');
+    return;
+  }
+
+  const btn = document.getElementById('btnDownloadTeamLeads');
+  const origText = btn ? btn.innerHTML : '';
+  if (btn) btn.innerHTML = '⏳ Preparing Download...';
+
+  const fileName = `${teamKey}_Team_Leads.csv`;
+  const url = `leads/${fileName}`;
+
+  const fallbackGen = () => generateTeamCsvContent(teamKey);
+  const success = await downloadFileWithBlob(url, fileName, fallbackGen);
+
+  if (btn) {
+    btn.innerHTML = success ? '✅ Downloaded!' : '❌ Error';
+    setTimeout(() => { if (btn) btn.innerHTML = origText; }, 2500);
+  }
+}
+
+window.onPersonalRepSelected = onPersonalRepSelected;
+window.downloadSelectedRepLeads = downloadSelectedRepLeads;
+window.initPersonalTeamSelect = initPersonalTeamSelect;
+window.onPersonalTeamSelected = onPersonalTeamSelected;
+window.downloadSelectedTeamLeads = downloadSelectedTeamLeads;
 
 // =========================================================================
 // NAVIGATION, EVENTS & APPLICATION INITIALIZATION
@@ -4355,7 +4662,8 @@ window.addEventListener('DOMContentLoaded', () => {
     { name: 'renderSOPTab', fn: () => renderSOPTab() },
     { name: 'renderRecommendationsTab', fn: () => renderRecommendationsTab(model) },
     { name: 'renderOperationsTab', fn: () => renderOperationsTab() },
-    { name: 'initPersonalRepSelect', fn: () => initPersonalRepSelect() }
+    { name: 'initPersonalRepSelect', fn: () => initPersonalRepSelect() },
+    { name: 'initPersonalTeamSelect', fn: () => initPersonalTeamSelect() }
   ];
 
   renderSteps.forEach(step => {
