@@ -156,9 +156,9 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 3 target 11%. Gap: 11pp. Need $-312/day to close.', time: '20261003_171014' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20261003_171014' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20261003_171014' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 3 target 11%. Gap: 11pp. Need $-312/day to close.', time: '20261003_181012' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20261003_181012' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20261003_181012' },
 ];
 
 // =========================================================================
@@ -3680,6 +3680,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4167,63 +4169,7 @@ const LEADS_SUMMARY = {
                              "sopCount":  13,
                              "ecCount":  91,
                              "totalLeads":  438
-                         },
-    "_TEAMS": {
-        "ME-EGSS01": {
-                "ecCount": 554,
-                "label": "ME-EGSS01 (Ashraqatal)",
-                "totalLeads": 2380,
-                "ftCount": 322,
-                "repsCount": 5,
-                "ccCount": 1312,
-                "sopCount": 192
-        },
-        "BIG_TEAM_01": {
-                "ecCount": 2111,
-                "label": "Big Team 01 (Sector Total)",
-                "totalLeads": 9127,
-                "ftCount": 1247,
-                "repsCount": 21,
-                "ccCount": 5098,
-                "sopCount": 671
-        },
-        "ME-EGSS30": {
-                "ecCount": 234,
-                "label": "ME-EGSS30 (Adhm GadAllah)",
-                "totalLeads": 1106,
-                "ftCount": 149,
-                "repsCount": 3,
-                "ccCount": 637,
-                "sopCount": 86
-        },
-        "ME-EGSS13": {
-                "ecCount": 401,
-                "label": "ME-EGSS13 (Mohamedha)",
-                "totalLeads": 1620,
-                "ftCount": 213,
-                "repsCount": 4,
-                "ccCount": 878,
-                "sopCount": 128
-        },
-        "ME-EGSS10": {
-                "ecCount": 351,
-                "label": "ME-EGSS10 (Abdelrhman Shehata)",
-                "totalLeads": 1421,
-                "ftCount": 173,
-                "repsCount": 3,
-                "ccCount": 796,
-                "sopCount": 101
-        },
-        "ME-EGSS05": {
-                "ecCount": 571,
-                "label": "ME-EGSS05 (Abdelrahman Nasef)",
-                "totalLeads": 2600,
-                "ftCount": 390,
-                "repsCount": 6,
-                "ccCount": 1475,
-                "sopCount": 164
-        }
-}
+                         }
 };
 
 
@@ -4999,6 +4945,9 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
 
 
 
