@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -17,7 +17,7 @@ const DATA_SOURCES = {
   crmRenewalPerf: 'CRM: crm.51talk.com -> Column: "Renewal performance(USD)"',
   crmContracts: 'CRM: crm.51talk.com -> Column: "Number of students who choose renewal"',
   poolDetail16: 'SS Lens Dashboard -> POOL_Detail16 (Col E: Upgrade M2, Col I: Is This Month Renew)',
-  userTargets: 'Official September 2026 Target Allocation Table',
+  userTargets: 'Official October 2026 Target Allocation Table',
   sopData: '51Talk Data Center (lp.51talkjr.com/#/data-center/business/SA-SSdata)'
 };
 
@@ -30,6 +30,7 @@ const TL_MAPPING = {
   "EGSS30": { tl: "EGSS-AdhmGadAllah", fullName: "ME-EGSS30 (AdhmGadAllah)", color: "#f43f5e" }
 };
 
+// October 2026 Cash Targets: Awaiting official announcement from Senior Management
 // October 2026 Cash Targets: Awaiting official announcement from Senior Management
 const NEW_TARGETS = {
   // ME-EGSS01 (5 Reps)
@@ -164,10 +165,10 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 3 target 11%. Gap: 11pp. Need $-312/day to close.', time: '20261003_142214' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20261003_142214' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20261003_142214' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20261003_142214' },
+  { type: 'action', icon: '🎯', title: 'October 2026 Kickoff', detail: 'Clean slate: Awaiting official October Cash Targets & Upgrade allocations from Senior Management.', time: '20261003_140000' },
+  { type: 'success', icon: '📊', title: 'Benchmark Pace: Day 3 Target 11%', detail: 'Official 31-day October pacing schedule active (Day 3 = 11%).', time: '20261003_140000' },
+  { type: 'action', icon: '📚', title: 'Module 3: Class Consumption (65% Overall)', detail: 'Operational focus on student attendance and zero-class student rescue.', time: '20261003_140000' },
+  { type: 'action', icon: '🗣️', title: 'Module 4: English Club (45% Goal)', detail: 'Operational goal set to 45% of assigned student base.', time: '20261003_140000' }
 ];
 
 // =========================================================================
@@ -250,10 +251,10 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 3; // Current MTD Day (Sep 19, 2026)
+  const daysPassed = 3; // Current MTD Day (Oct 3, 2026)
   const daysInMonth = 31;
   const daysLeft = daysInMonth - daysPassed;
-  const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 51;
+  const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 11;
 
   const teams = {};
   const teamKeys = ["EGSS01", "EGSS05", "EGSS10", "EGSS13", "EGSS30"];
@@ -342,14 +343,14 @@ function buildDataModel() {
     rep.commission = calculateSSCommission(rep.cash, teamAch, t ? t.target : 0, t ? t.cash : 0, rep.achievement);
   });
 
-    // Reconciled Sector Totals (October 2026 Kickoff - Targets & Base Pending Announcement)
-  const totalCash = 8745; // from Individual Sheet Col G (or 指标看板 Col C)
-  const sectorAchPct = 0; // from Individual Sheet Col M (or 指标看板 Col I)
+      // Reconciled Sector Totals (October 2026 Kickoff - Targets & Base Pending Announcement)
+  const totalCash = 0;
+  const sectorAchPct = 0;
   const totalTarget = 0; // Awaiting official October Cash Target
-  const totalContracts = 8; // from 指标看板 Col D
-  const totalUpgradeM2 = 46; // from Student_Detail32
+  const totalContracts = 0;
+  const totalUpgradeM2 = 0;
   const totalNormalRenewals = 0;
-  const totalUpgradeBase = 765; // from Student_Detail32
+  const totalUpgradeBase = 0; // Awaiting official October Upgrade Base
   const totalUpgrade20Target = 0;
   const totalUpgrade20Needed = 0;
 
@@ -464,8 +465,8 @@ function renderTeamBars(model) {
   container.innerHTML = '';
 
   const MAX_SCALE = 103; // Official pacing curve ends at 103%
-  const daysPassed = model.summary.daysPassed || 16;
-  const pacePct = model.summary.targetPacePct || 46;
+  const daysPassed = model.summary.daysPassed || 3;
+  const pacePct = model.summary.targetPacePct || 11;
   const posToday = Math.min(100, Math.max(0, (pacePct / MAX_SCALE) * 100));
   const pos100 = (100 / MAX_SCALE) * 100; // 97.087%
 
@@ -651,7 +652,7 @@ function renderTeamBars(model) {
       <div style="height: 100%; width: ${bigTeamWidthPct}%; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 9px; transition: width 0.8s ease; box-shadow: 0 0 12px rgba(99, 102, 241, 0.55);"></div>
       <!-- 100% Target Marker -->
       <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 26px; background: rgba(255,255,255,0.85); border-radius: 1px;" title="Full Target (100%): ${model.summary.totalTarget > 0 ? fmt(model.summary.totalTarget) : 'Target Pending'}"></div>
-      <!-- Day 16 (46%) Benchmark Marker Line -->
+      <!-- Day Benchmark Marker Line -->
       <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 30px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="Day ${daysPassed} Benchmark (${pacePct}%)"></div>
     </div>
 
@@ -714,7 +715,7 @@ function renderTeamBars(model) {
         <div style="height: 100%; width: ${cashWidthPct}%; background: ${t.color}; border-radius: 8px; transition: width 0.8s ease; box-shadow: 0 0 10px ${t.color}45;"></div>
         <!-- 100% Target Line Marker at 97.1% -->
         <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 24px; background: rgba(255,255,255,0.8); border-radius: 1px;" title="Full Target (100%): ${t.target > 0 ? fmt(t.target) : 'Target Pending'}"></div>
-        <!-- Official Benchmark Pace Line Marker (Day 16 = 46%) -->
+        <!-- Official Benchmark Pace Line Marker -->
         <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 28px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="Day ${daysPassed} Benchmark (${pacePct}%)"></div>
       </div>
 
@@ -754,11 +755,11 @@ function renderBigTeamSummary(model) {
   const inRecoveryCount = sortedTeams.filter(t => t.displayAch < 90).length;
 
   // Upgrade metrics calculation for Big Team
-  const totalUpgradeBase = s.totalUpgradeBase || 765;
-  const totalUpgradeM2 = s.totalUpgradeM2 || 46;
+  const totalUpgradeBase = s.totalUpgradeBase || 0;
+  const totalUpgradeM2 = s.totalUpgradeM2 || 0;
   const totalUpgradeRate = totalUpgradeBase > 0 ? ((totalUpgradeM2 / totalUpgradeBase) * 100) : 0;
-  const totalUpgrade20Target = s.totalUpgrade20Target || 153;
-  const totalUpgrade20Needed = s.totalUpgrade20Needed || 107;
+  const totalUpgrade20Target = s.totalUpgrade20Target || 0;
+  const totalUpgrade20Needed = s.totalUpgrade20Needed || 0;
   const upgradeProgressPct = totalUpgrade20Target > 0 ? ((totalUpgradeM2 / totalUpgrade20Target) * 100).toFixed(1) : '0.0';
   const dailyUpgradeNeeded = daysLeft > 0 ? (totalUpgrade20Needed / daysLeft).toFixed(1) : '0';
   const currentUpgradeVelocity = (totalUpgradeM2 / daysPassed).toFixed(2);
@@ -1104,7 +1105,7 @@ function renderBigTeamSummary(model) {
           Executive Sector Feedback &amp; Strategic Direction (Senior Manager: Saber Hussien)
         </div>
         <p style="font-size: 0.85rem; color: #e2e8f0; line-height: 1.55; margin: 0;">
-          ${macroCommentary} <strong>Early Upgrade Acceleration Directive:</strong> Big Team 01 has achieved 46 M2 upgrades (${fmtPct(s.upgradeRate)} conversion rate) against the 20% milestone target of 153 contracts (107 remaining). Small Teams 13 (8.29%) and 05 (6.85%) are delivering high upgrade productivity, while Team 10 represents the single largest untapped reservoir (226 leads, 1.77% conversion). Sponsoring a dedicated upgrade phone blitz on warm renewals and 60-90 day remaining students will directly propel team net cash past 100% and unlock commission boosters.
+          ${macroCommentary} <strong>October 2026 Kickoff &amp; Strategic Direction:</strong> Big Team 01 has commenced October operations with a clean baseline. Official Cash Targets &amp; Upgrade allocations are pending announcement from Senior Management. Sponsoring early renewal outreach and proactive touchpoints on warm leads will directly position the team for peak commission tiers from Day 1.
         </p>
       </div>
 
@@ -1159,7 +1160,7 @@ function renderBigTeamSummary(model) {
                 ${fmt(s.totalGap)}
               </td>
               <td style="text-align: left !important; font-size: 0.82rem; line-height: 1.45; color: #e2e8f0; padding: 14px 16px;">
-                <strong>Sector Synthesis:</strong> Overall Big Team 01 performance is anchored by strong overachievement in Team 30 &amp; Team 13, and near-target volume in Team 05. On Early Upgrades, Big Team 01 has achieved 46 M2 contracts (6.01% conversion rate) towards the 20% milestone target of 153 contracts (107 remaining). Sponsoring a decisive closing blitz across Teams 05, 01, and 10 over the final 48 hours is the primary operational priority to maximize monthly realization.
+                <strong>Sector Synthesis:</strong> October 2026 clean kickoff is active. All baseline cash, target, and upgrade figures are reset to zero awaiting official October corporate allocations. Core operational priority is early momentum across all 5 Small Teams.
               </td>
             </tr>
           </tfoot>
@@ -1176,7 +1177,7 @@ function renderOverviewTable(model) {
   tbody.innerHTML = '';
 
   const sorted = [...model.individuals].sort((a, b) => b.achievement - a.achievement || b.cash - a.cash);
-  const pacePct = model.summary.targetPacePct || 46;
+  const pacePct = model.summary.targetPacePct || 11;
 
   sorted.forEach((r, idx) => {
     const expRepCash = Math.round(r.target * (pacePct / 100));
@@ -1451,7 +1452,7 @@ function renderIndividualsTab(model) {
   // 4. Render Table and Cards
   container.innerHTML = '';
   tableBody.innerHTML = '';
-  const pacePct = model.summary.targetPacePct || 46;
+  const pacePct = model.summary.targetPacePct || 11;
   filtered.forEach((r, idx) => {
     const deltaPace = Math.round((r.achievement - pacePct) * 10) / 10;
     const isAhead = r.achievement >= pacePct;
@@ -1540,7 +1541,7 @@ function renderIndividualsTab(model) {
   // 6. Dynamic Context-Aware Footer Row (Selected Team vs Sector)
   const tfoot = document.getElementById('individualFullTableFoot');
   if (tfoot) {
-    const pacePct = model.summary.targetPacePct || 46;
+    const pacePct = model.summary.targetPacePct || 11;
 
     if (teamFilter === 'all') {
       const s = model.summary;
@@ -1693,7 +1694,7 @@ function renderUpgradeTab(model) {
 
   if (elActual) elActual.textContent = s.totalUpgradeM2;
   if (elBase) elBase.textContent = s.totalUpgradeBase;
-  if (elRate) elRate.textContent = `${fmtPct(s.upgradeRate)} Conv. Rate`;
+  if (elRate) elRate.textContent = s.totalUpgradeBase > 0 ? `${fmtPct(s.upgradeRate)} Conv.` : '0.0% Conv.';
   if (elTarget) elTarget.textContent = s.totalUpgrade20Target;
   if (elNeeded) elNeeded.textContent = s.totalUpgrade20Needed;
 
