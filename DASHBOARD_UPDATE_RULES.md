@@ -1143,3 +1143,21 @@ The dashboard update pipelines are currently running with the verified 21-rep Oc
 > | **Day 30** | Friday | Final Stretch | **Official Image** | **96%** | +6% |
 > | **Day 31** | Saturday | **Month Finish** | **Official Image** | **102%** | +6% |
 
+#### E. October 2026 Zero Baseline Enforcement (Clean Slate - تصفير بيانات الشهر الماضي بالكامل):
+
+> [!CAUTION]
+> **COMPLETE WIPE OF SEPTEMBER HISTORICAL DATA:**
+> By explicit executive instruction from Senior Management:
+> 1. **Zero Phantom Data:** All historical September revenue numbers, cash targets, orders, and upgrade counts must be completely erased from all dashboard views.
+> 2. **Clean October Slate:**
+>    - **Big Team 01 (Sector Total):** Cash = $0, Target = Pending Announcement, Orders = 0, Achievement = 0.0%.
+>    - **5 Small Teams:** Cash = $0, Target = Target Pending, Orders = 0, Achievement = 0.0%, Status = ⚪ Target Pending.
+>    - **21 Active Sales Specialists:** Cash = $0, Target = $0, Orders = 0, Achievement = 0.0%, Upgrade M2 = 0.
+> 3. **Prohibition of Prior Month Fallbacks:** Update pipelines (`update_dashboard.ps1`, `auto_process_update.ps1`) must NEVER inject September targets ($225,600 sector, individual fallback dictionaries, or 765 upgrade base) as placeholders. All targets remain $0 / Pending until officially declared by Senior Management.
+> 4. **Only Confirmed October Metrics Active:**
+>    - 21-Rep Verified Headcount across 5 Small Teams (ME-EGSS01, 05, 10, 13, 30).
+>    - 31-Day Official BM Benchmark Pacing Curve (Oct 1: 5% ... Oct 31: 102%).
+>    - Module 3 Class Consumption Target = 65% Overall.
+>    - Module 4 English Club Target = 45% of Student Base.
+
+

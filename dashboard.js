@@ -30,71 +30,80 @@ const TL_MAPPING = {
   "EGSS30": { tl: "EGSS-AdhmGadAllah", fullName: "ME-EGSS30 (AdhmGadAllah)", color: "#f43f5e" }
 };
 
-// September 2026 Cash Targets (Total: $225,600)
+// October 2026 Cash Targets: Awaiting official announcement from Senior Management
 const NEW_TARGETS = {
   // ME-EGSS01 (5 Reps)
-  "EGSS-ashraqatal": 10880,
-  "EGSS-juliamonir01": 8050,
-  "EGSS-mahmoud04": 10420,
-  "EGSS-negma": 7790,
-  "EGSS-nohayoussry": 8040,
+  "EGSS-ashraqatal": 0,
+  "EGSS-juliamonir01": 0,
+  "EGSS-mahmoud04": 0,
+  "EGSS-negma": 0,
+  "EGSS-nohayoussry": 0,
 
   // ME-EGSS05 (6 Reps)
-  "EGSS-AbdelrahmanNASEF": 9710,
-  "EGSS-Ibrahimismaiel": 10170,
-  "EGSS-KhaledGonam": 10360,
-  "EGSS-OmarMoneb": 9550,
-  "EGSS-ehabzaky01": 10350,
-  "EGSS-samira01": 10190,
+  "EGSS-AbdelrahmanNASEF": 0,
+  "EGSS-ehabzaky01": 0,
+  "EGSS-Ibrahimismaiel": 0,
+  "EGSS-KhaledGonam": 0,
+  "EGSS-OmarMoneb": 0,
+  "EGSS-samira01": 0,
 
   // ME-EGSS10 (3 Reps)
-  "EGSS-abdelrhmanshehata": 3690,
-  "EGSS-AhmedShoukry": 16450,
-  "EGSS-Mahmoudkhamis": 11640,
+  "EGSS-abdelrhmanshehata": 0,
+  "EGSS-AhmedShoukry": 0,
+  "EGSS-Mahmoudkhamis": 0,
 
   // ME-EGSS13 (4 Reps)
-  "EGSS-Amrsafwat": 12240,
-  "EGSS-hayamhassan": 10560,
-  "EGSS-marwaahmed": 8640,
-  "EGSS-mohamedha": 9300,
+  "EGSS-Amrsafwat": 0,
+  "EGSS-hayamhassan": 0,
+  "EGSS-marwaahmed": 0,
+  "EGSS-mohamedha": 0,
 
   // ME-EGSS30 (3 Reps)
-  "EGSS-AdhmGadAllah": 8480,
-  "EGSS-alihesham01": 3810,
-  "EGSS-titooooo": 8920
+  "EGSS-AdhmGadAllah": 0,
+  "EGSS-alihesham01": 0,
+  "EGSS-titooooo": 0
 };
 
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS30": { gross: 27267, refund: 0, cash: 27267, target: 21210, contracts: 31, officialAch: 128.6 },
-  "EGSS13": { gross: 48009, refund: 0, cash: 48009, target: 40740, contracts: 48, officialAch: 117.8 },
-  "EGSS05": { gross: 68608, refund: 0, cash: 68608, target: 60330, contracts: 76, officialAch: 113.7 },
-  "EGSS01": { gross: 42839, refund: 1660, cash: 41179, target: 45180, contracts: 42, officialAch: 91.1 },
-  "EGSS10": { gross: 24508, refund: 0, cash: 24508, target: 31780, contracts: 27, officialAch: 77.1 },
+  "EGSS01": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
+  "EGSS05": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
+  "EGSS10": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
+  "EGSS13": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 },
+  "EGSS30": { gross: 0, refund: 0, cash: 0, target: 0, contracts: 0, officialAch: 0 }
 };
 
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 8792, refund: 0, target: 8040, contracts: 10, officialAch: 109.4, upgradeM2: 3, normalRenewals: 0, upgradeBase: 56, poolRenewals: 3 },
-  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 3600, refund: 1660, target: 10880, contracts: 4, officialAch: 33.1, upgradeM2: 2, normalRenewals: 0, upgradeBase: 47, poolRenewals: 2 },
-  { name: "EGSS-negma", team: "EGSS01", cash: 8140, refund: 0, target: 7790, contracts: 5, officialAch: 104.5, upgradeM2: 3, normalRenewals: 0, upgradeBase: 51, poolRenewals: 3 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 8140, refund: 0, target: 8050, contracts: 9, officialAch: 101.1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 23, poolRenewals: 0 },
-  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 12507, refund: 0, target: 10420, contracts: 14, officialAch: 120, upgradeM2: 5, normalRenewals: 0, upgradeBase: 22, poolRenewals: 5 },
-  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 12318, refund: 0, target: 9710, contracts: 13, officialAch: 126.9, upgradeM2: 2, normalRenewals: 0, upgradeBase: 28, poolRenewals: 2 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 8410, refund: 0, target: 10350, contracts: 8, officialAch: 81.3, upgradeM2: 4, normalRenewals: 0, upgradeBase: 40, poolRenewals: 4 },
-  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 16068, refund: 0, target: 10170, contracts: 18, officialAch: 158, upgradeM2: 5, normalRenewals: 0, upgradeBase: 44, poolRenewals: 5 },
-  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 12301, refund: 0, target: 10360, contracts: 13, officialAch: 118.7, upgradeM2: 2, normalRenewals: 0, upgradeBase: 27, poolRenewals: 2 },
-  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 8580, refund: 0, target: 9550, contracts: 10, officialAch: 89.8, upgradeM2: 0, normalRenewals: 0, upgradeBase: 22, poolRenewals: 0 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 10931, refund: 0, target: 10190, contracts: 14, officialAch: 107.3, upgradeM2: 4, normalRenewals: 0, upgradeBase: 28, poolRenewals: 4 },
-  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 4240, refund: 0, target: 3690, contracts: 5, officialAch: 114.9, upgradeM2: 1, normalRenewals: 0, upgradeBase: 15, poolRenewals: 1 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 11139, refund: 0, target: 16450, contracts: 12, officialAch: 67.7, upgradeM2: 1, normalRenewals: 0, upgradeBase: 52, poolRenewals: 1 },
-  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 9129, refund: 0, target: 11640, contracts: 10, officialAch: 78.4, upgradeM2: 3, normalRenewals: 0, upgradeBase: 52, poolRenewals: 3 },
-  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 14350, refund: 0, target: 12240, contracts: 13, officialAch: 117.2, upgradeM2: 3, normalRenewals: 0, upgradeBase: 29, poolRenewals: 3 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 9732, refund: 0, target: 10560, contracts: 12, officialAch: 92.2, upgradeM2: 8, normalRenewals: 0, upgradeBase: 83, poolRenewals: 8 },
-  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 12987, refund: 0, target: 8640, contracts: 12, officialAch: 150.3, upgradeM2: 1, normalRenewals: 0, upgradeBase: 9, poolRenewals: 1 },
-  { name: "EGSS-mohamedha", team: "EGSS13", cash: 10940, refund: 0, target: 9300, contracts: 11, officialAch: 117.6, upgradeM2: 4, normalRenewals: 0, upgradeBase: 26, poolRenewals: 4 },
-  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 11100, refund: 0, target: 8480, contracts: 15, officialAch: 130.9, upgradeM2: 5, normalRenewals: 0, upgradeBase: 24, poolRenewals: 5 },
-  { name: "EGSS-alihesham01", team: "EGSS30", cash: 6367, refund: 0, target: 3810, contracts: 7, officialAch: 167.1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 5, poolRenewals: 0 },
-  { name: "EGSS-titooooo", team: "EGSS30", cash: 9800, refund: 0, target: 8920, contracts: 9, officialAch: 109.9, upgradeM2: 1, normalRenewals: 0, upgradeBase: 32, poolRenewals: 1 },
+  // ME-EGSS01 (5 Reps)
+  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-negma", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+
+  // ME-EGSS05 (6 Reps)
+  { name: "EGSS-AbdelrahmanNASEF", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-Ibrahimismaiel", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-KhaledGonam", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-OmarMoneb", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+
+  // ME-EGSS10 (3 Reps)
+  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-AhmedShoukry", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-Mahmoudkhamis", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+
+  // ME-EGSS13 (4 Reps)
+  { name: "EGSS-Amrsafwat", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mohamedha", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+
+  // ME-EGSS30 (3 Reps)
+  { name: "EGSS-AdhmGadAllah", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-alihesham01", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-titooooo", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 }
 ];
 
 // SOP Process Compliance Data (51Talk Data Center)
@@ -120,27 +129,27 @@ const SOP_ROUNDS = [
 
 // Verified POOL22 Column G (Upgrade M2 Effective Coverage %)
 const POOL22_M2_COVERAGE = {
-  "EGSS-nohayoussry": 61.7,
-  "EGSS-ashraqatal": 48.8,
-  "EGSS-negma": 77.8,
-  "EGSS-juliamonir01": 59.1,
-  "EGSS-mahmoud04": 83.3,
-  "EGSS-abdelrahmannasef": 68,
-  "EGSS-ehabzaky01": 73.7,
-  "EGSS-ibrahimismaiel": 89.7,
-  "EGSS-khaledgonam": 86.4,
-  "EGSS-omarmoneb": 65,
-  "EGSS-samira01": 86.4,
-  "EGSS-abdelrhmanshehata": 93.3,
-  "EGSS-ahmedshoukry": 70.8,
-  "EGSS-mahmoudkhamis": 58.8,
-  "EGSS-amrsafwat": 79.2,
-  "EGSS-hayamhassan": 86.1,
-  "EGSS-marwaahmed": 100,
-  "EGSS-mohamedha": 59.1,
-  "EGSS-adhmgadallah": 73.9,
-  "EGSS-alihesham01": 100,
-  "EGSS-titooooo": 76.7,
+  "EGSS-ashraqatal": 0.0,
+  "EGSS-juliamonir01": 0.0,
+  "EGSS-mahmoud04": 0.0,
+  "EGSS-negma": 0.0,
+  "EGSS-nohayoussry": 0.0,
+  "EGSS-AbdelrahmanNASEF": 0.0,
+  "EGSS-ehabzaky01": 0.0,
+  "EGSS-Ibrahimismaiel": 0.0,
+  "EGSS-KhaledGonam": 0.0,
+  "EGSS-OmarMoneb": 0.0,
+  "EGSS-samira01": 0.0,
+  "EGSS-abdelrhmanshehata": 0.0,
+  "EGSS-AhmedShoukry": 0.0,
+  "EGSS-Mahmoudkhamis": 0.0,
+  "EGSS-Amrsafwat": 0.0,
+  "EGSS-hayamhassan": 0.0,
+  "EGSS-marwaahmed": 0.0,
+  "EGSS-mohamedha": 0.0,
+  "EGSS-AdhmGadAllah": 0.0,
+  "EGSS-alihesham01": 0.0,
+  "EGSS-titooooo": 0.0
 };
 
 // Official Cumulative Expected Pacing Benchmark Curve (October Day 1 to 31)
@@ -155,14 +164,10 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 3 target 11%. Gap: 11pp. Need $7745/day to close.', time: '20261003_140129' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ibrahimismaiel (3.6%), EGSS-titooooo (8.1%), EGSS-nohayoussry (10%), EGSS-samira01 (10%), EGSS-mahmoudkhamis (12.5%). Schedule targeted coaching sessions today.', time: '20261003_140129' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-juliamonir01 (12.7%), EGSS-mahmoud04 (22.5%), EGSS-alihesham01 (26.8%). Recognize in team channel!', time: '20261003_140129' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $798/day', detail: 'Currently at 15.7% (4160/26510). Gap: $22350.', time: '20261003_140129' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $392/day', detail: 'Currently at 13.7% (1740/12730). Gap: $10990.', time: '20261003_140129' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $364/day', detail: 'Currently at 12.5% (1460/11640). Gap: $10180.', time: '20261003_140129' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $678/day', detail: 'Currently at 6.8% (1385/20360). Gap: $18975.', time: '20261003_140129' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20261003_140129' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 3 target 11%. Gap: 11pp. Need $-312/day to close.', time: '20261003_141854' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20261003_141854' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20261003_141854' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 107 more renewals', detail: 'Current: 46/765 (6%). 20% target = 153. Focus on high-base reps.', time: '20261003_141854' },
 ];
 
 // =========================================================================
@@ -337,16 +342,16 @@ function buildDataModel() {
     rep.commission = calculateSSCommission(rep.cash, teamAch, t ? t.target : 0, t ? t.cash : 0, rep.achievement);
   });
 
-  // Reconciled Sector Totals (Official Data Center Reconciliation & POOL_Detail16)
+    // Reconciled Sector Totals (October 2026 Kickoff - Targets & Base Pending Announcement)
   const totalCash = 8745; // from Individual Sheet Col G (or 指标看板 Col C)
   const sectorAchPct = 0; // from Individual Sheet Col M (or 指标看板 Col I)
-  const totalTarget = 225600; // from 指标看板 Col F
+  const totalTarget = 0; // Awaiting official October Cash Target
   const totalContracts = 8; // from 指标看板 Col D
   const totalUpgradeM2 = 46; // from Student_Detail32
-  const totalNormalRenewals = 6; // from Student_Detail32
+  const totalNormalRenewals = 0;
   const totalUpgradeBase = 765; // from Student_Detail32
-  const totalUpgrade20Target = 153;
-  const totalUpgrade20Needed = 107;
+  const totalUpgrade20Target = 0;
+  const totalUpgrade20Needed = 0;
 
   return {
     teams,
@@ -360,11 +365,11 @@ function buildDataModel() {
       totalUpgradeBase,
       totalUpgrade20Target,
       totalUpgrade20Needed,
-      achievement: typeof sectorAchPct !== 'undefined' ? sectorAchPct : ((totalCash / totalTarget) * 100),
-      projectedCash: Math.round((totalCash / daysPassed) * daysInMonth),
-      totalGap: totalTarget - totalCash,
-      dailyNeeded: Math.round((totalTarget - totalCash) / daysLeft),
-      upgradeRate: ((totalUpgradeM2 / totalUpgradeBase) * 100),
+      achievement: totalTarget > 0 ? (typeof sectorAchPct !== 'undefined' ? sectorAchPct : ((totalCash / totalTarget) * 100)) : 0,
+      projectedCash: daysPassed > 0 ? Math.round((totalCash / daysPassed) * daysInMonth) : 0,
+      totalGap: Math.max(0, totalTarget - totalCash),
+      dailyNeeded: (daysLeft > 0 && totalTarget > 0) ? Math.round((totalTarget - totalCash) / daysLeft) : 0,
+      upgradeRate: totalUpgradeBase > 0 ? ((totalUpgradeM2 / totalUpgradeBase) * 100) : 0,
       activeReps: individuals.length,
       zeroReps: individuals.filter(r => r.cash === 0).length,
       targetPacePct: expectedPace,
@@ -471,7 +476,9 @@ function renderTeamBars(model) {
   const bigTeamWidthPct = Math.min(100, Math.max(0, (model.summary.achievement / MAX_SCALE) * 100));
 
   let bigTeamBadge = '';
-  if (model.summary.achievement >= pacePct) {
+  if (model.summary.totalTarget === 0) {
+    bigTeamBadge = '<span style="background: rgba(148, 163, 184, 0.2); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">⚪ Target Pending</span>';
+  } else if (model.summary.achievement >= pacePct) {
     bigTeamBadge = `<span style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🟢 Ahead of Pace (+${diffBigTeamPct}%)</span>`;
   } else if (model.summary.achievement >= pacePct - 8) {
     bigTeamBadge = `<span style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4); padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.78rem;">🟡 Near Pace (${diffBigTeamPct}%)</span>`;
@@ -633,7 +640,7 @@ function renderTeamBars(model) {
       </div>
       <div style="font-family: var(--font-mono); font-size: 1rem;">
         <span style="color: #fff; font-weight: 900;">${fmt(model.summary.totalCash)}</span>
-        <span style="color: var(--text-muted);"> / ${fmt(model.summary.totalTarget)}</span>
+        <span style="color: var(--text-muted);"> / ${model.summary.totalTarget > 0 ? fmt(model.summary.totalTarget) : 'Target Pending'}</span>
         <span style="color: ${getStatusColor(model.summary.achievement)}; font-weight: 900; margin-left: 8px;">(${fmtPct(model.summary.achievement)})</span>
       </div>
     </div>
@@ -643,7 +650,7 @@ function renderTeamBars(model) {
       <!-- Filled Bar -->
       <div style="height: 100%; width: ${bigTeamWidthPct}%; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 9px; transition: width 0.8s ease; box-shadow: 0 0 12px rgba(99, 102, 241, 0.55);"></div>
       <!-- 100% Target Marker -->
-      <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 26px; background: rgba(255,255,255,0.85); border-radius: 1px;" title="Full Target (100%): ${fmt(model.summary.totalTarget)}"></div>
+      <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 26px; background: rgba(255,255,255,0.85); border-radius: 1px;" title="Full Target (100%): ${model.summary.totalTarget > 0 ? fmt(model.summary.totalTarget) : 'Target Pending'}"></div>
       <!-- Day 16 (46%) Benchmark Marker Line -->
       <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 30px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="Day ${daysPassed} Benchmark (${pacePct}%)"></div>
     </div>
@@ -652,7 +659,7 @@ function renderTeamBars(model) {
       <span>
         🎯 <strong>Day ${daysPassed} Target (${pacePct}%):</strong> 
         <strong style="color: #38bdf8;">${fmt(expCashBigTeam)}</strong>
-        (${diffBigTeamCash >= 0 ? '<span style="color:#10b981; font-weight:700;">+' + fmt(diffBigTeamCash) + ' Surplus</span>' : '<span style="color:#f43f5e; font-weight:700;">-' + fmt(Math.abs(diffBigTeamCash)) + ' Deficit</span>'})
+        (${model.summary.totalTarget > 0 ? (diffBigTeamCash >= 0 ? '<span style="color:#10b981; font-weight:700;">+' + fmt(diffBigTeamCash) + ' Surplus</span>' : '<span style="color:#f43f5e; font-weight:700;">-' + fmt(Math.abs(diffBigTeamCash)) + ' Deficit</span>') : '<span style="color:#94a3b8;">Awaiting Target</span>'})
       </span>
       <span>Orders: <strong>${model.summary.totalContracts}</strong> (M2: ${model.summary.totalUpgradeM2}) | MTD Projected: <strong style="color: #38bdf8;">${fmt(model.summary.projectedCash)}</strong> | Daily Run-Rate Needed: <strong>${fmt(model.summary.dailyNeeded)}/day</strong></span>
     </div>
@@ -670,7 +677,9 @@ function renderTeamBars(model) {
     const paceDiffCash = t.cash - expCashAtPace;
 
     let paceBadge = '';
-    if (t.achievement >= pacePct) {
+    if (t.target === 0) {
+      paceBadge = '<span style="background: rgba(148, 163, 184, 0.15); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">⚪ Target Pending</span>';
+    } else if (t.achievement >= pacePct) {
       paceBadge = `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🟢 Ahead of Pace (+${paceDiffPct}%)</span>`;
     } else if (t.achievement >= pacePct - 8) {
       paceBadge = `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">🟡 Near Pace (${paceDiffPct}%)</span>`;
@@ -695,7 +704,7 @@ function renderTeamBars(model) {
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.95rem;">
           <span style="color: #fff; font-weight: 800;">${fmt(t.cash)}</span>
-          <span style="color: var(--text-muted);"> / ${fmt(t.target)}</span>
+          <span style="color: var(--text-muted);"> / ${t.target > 0 ? fmt(t.target) : 'Target Pending'}</span>
           <span style="color: ${getStatusColor(t.achievement)}; font-weight: 800; margin-left: 8px;">(${fmtPct(t.achievement)})</span>
         </div>
       </div>
@@ -704,7 +713,7 @@ function renderTeamBars(model) {
         <!-- Filled progress bar matching achievement on 103% scale -->
         <div style="height: 100%; width: ${cashWidthPct}%; background: ${t.color}; border-radius: 8px; transition: width 0.8s ease; box-shadow: 0 0 10px ${t.color}45;"></div>
         <!-- 100% Target Line Marker at 97.1% -->
-        <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 24px; background: rgba(255,255,255,0.8); border-radius: 1px;" title="Full Target (100%): ${fmt(t.target)}"></div>
+        <div style="position: absolute; top: -4px; left: ${pos100}%; width: 2px; height: 24px; background: rgba(255,255,255,0.8); border-radius: 1px;" title="Full Target (100%): ${t.target > 0 ? fmt(t.target) : 'Target Pending'}"></div>
         <!-- Official Benchmark Pace Line Marker (Day 16 = 46%) -->
         <div style="position: absolute; top: -6px; left: ${posToday}%; width: 2px; height: 28px; background: #38bdf8; border-left: 2px dashed #38bdf8; box-shadow: 0 0 10px rgba(56,189,248,0.9); z-index: 5;" title="Day ${daysPassed} Benchmark (${pacePct}%)"></div>
       </div>
@@ -713,7 +722,7 @@ function renderTeamBars(model) {
         <span>
           🎯 <strong>Day ${daysPassed} Target (${pacePct}%):</strong> 
           <strong style="color: #38bdf8;">${fmt(expCashAtPace)}</strong>
-          (${paceDiffCash >= 0 ? '<span style="color:#10b981; font-weight:700;">+' + fmt(paceDiffCash) + ' Surplus</span>' : '<span style="color:#f43f5e; font-weight:700;">-' + fmt(Math.abs(paceDiffCash)) + ' Deficit</span>'})
+          (${t.target > 0 ? (paceDiffCash >= 0 ? '<span style="color:#10b981; font-weight:700;">+' + fmt(paceDiffCash) + ' Surplus</span>' : '<span style="color:#f43f5e; font-weight:700;">-' + fmt(Math.abs(paceDiffCash)) + ' Deficit</span>') : '<span style="color:#94a3b8;">Awaiting Target</span>'})
         </span>
         <span>Orders: <strong>${t.contracts}</strong> (M2: ${t.upgradeM2}) | Proj: <strong style="color: #38bdf8;">${fmt(t.projected)}</strong> | Need: <strong>${fmt(t.dailyNeeded)}/day</strong></span>
       </div>
@@ -759,60 +768,44 @@ function renderBigTeamSummary(model) {
   const teamsByUpgradeRate = [...sortedTeams].sort((a, b) => b.upgradeRate - a.upgradeRate);
 
   // Macro commentary for Big Team 01 Sector
-  let macroStatusBadge = '';
-  let macroCommentary = '';
-  if (s.achievement >= 100) {
-    macroStatusBadge = `<span class="pill-badge pill-badge-emerald"><span class="pulse-dot pulse-dot-emerald"></span> 🏆 TARGET SURPASSED</span>`;
-    macroCommentary = `Big Team 01 has officially surpassed the $225,600 monthly target with ${fmt(s.totalCash)} achieved (${fmtPct(s.achievement)}). Outstanding performance across small teams with strong revenue surplus.`;
-  } else if (s.achievement >= pacePct) {
-    macroStatusBadge = `<span class="pill-badge pill-badge-emerald"><span class="pulse-dot pulse-dot-emerald"></span> 🟢 AHEAD OF BENCHMARK</span>`;
-    macroCommentary = `Big Team 01 is pacing ahead of schedule at ${fmtPct(s.achievement)} vs Day ${daysPassed} benchmark (${pacePct}%). Sector momentum is strong with positive revenue variance.`;
-  } else if (s.achievement >= pacePct - 8) {
-    macroStatusBadge = `<span class="pill-badge pill-badge-amber"><span class="pulse-dot pulse-dot-amber"></span> 🟡 WITHIN STRIKING RANGE</span>`;
-    macroCommentary = `Big Team 01 stands at ${fmt(s.totalCash)} (${fmtPct(s.achievement)}) against the $225,600 sector target (Day ${daysPassed} Benchmark: ${pacePct}%). Remaining gap is ${fmt(s.totalGap)} across the final ${daysLeft} days (${fmt(s.dailyNeeded)}/day). Two small teams (ME-EGSS30 and ME-EGSS13) have fully cleared 100%, and ME-EGSS05 is within striking distance at 94.4%. High conversion of warm renewals will maximize month-end completion.`;
-  } else {
-    macroStatusBadge = `<span class="pill-badge pill-badge-rose"><span class="pulse-dot pulse-dot-rose"></span> 🔴 SPRINT FOCUS REQUIRED</span>`;
-    macroCommentary = `Big Team 01 requires an intensive final ${daysLeft}-day revenue sprint. Remaining deficit is ${fmt(s.totalGap)} (${fmt(s.dailyNeeded)}/day needed). Sponsoring closing blitzes across high-base pools is essential to recover pace.`;
+    let macroStatusBadge = '<span class="pill-badge" style="background: rgba(148, 163, 184, 0.15); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.3);"><span class="pulse-dot" style="background: #94a3b8;"></span> ⚪ OCTOBER KICKOFF</span>';
+  let macroCommentary = 'Big Team 01 is starting October 2026 with a clean slate. Awaiting official Cash Targets and Upgrade M2 allocations from Senior Management. Current operational focuses: 65% Class Consumption and 45% English Club attendance.';
+  if (s.totalTarget > 0) {
+    if (s.achievement >= 100) {
+      macroStatusBadge = `<span class="pill-badge pill-badge-emerald"><span class="pulse-dot pulse-dot-emerald"></span> 🏆 TARGET SURPASSED</span>`;
+      macroCommentary = `Big Team 01 has officially surpassed monthly target with ${fmt(s.totalCash)} achieved (${fmtPct(s.achievement)}).`;
+    } else if (s.achievement >= pacePct) {
+      macroStatusBadge = `<span class="pill-badge pill-badge-emerald"><span class="pulse-dot pulse-dot-emerald"></span> 🟢 AHEAD OF BENCHMARK</span>`;
+      macroCommentary = `Big Team 01 is pacing ahead of schedule at ${fmtPct(s.achievement)} vs Day ${daysPassed} benchmark (${pacePct}%).`;
+    } else if (s.achievement >= pacePct - 8) {
+      macroStatusBadge = `<span class="pill-badge pill-badge-amber"><span class="pulse-dot pulse-dot-amber"></span> 🟡 WITHIN STRIKING RANGE</span>`;
+      macroCommentary = `Big Team 01 stands at ${fmt(s.totalCash)} (${fmtPct(s.achievement)}) against sector target.`;
+    } else {
+      macroStatusBadge = `<span class="pill-badge pill-badge-rose"><span class="pulse-dot pulse-dot-rose"></span> 🔴 SPRINT FOCUS REQUIRED</span>`;
+      macroCommentary = `Big Team 01 requires a revenue sprint. Deficit is ${fmt(s.totalGap)}.`;
+    }
   }
 
   // Detailed strategic feedback generator for each small team (structured modern two-tier memo)
   function getTeamFeedbackText(t) {
+    if (t.target === 0) {
+      return `
+        <div class="strategic-memo-box">
+          <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 5px; flex-wrap: wrap;">
+            <span class="pill-badge" style="font-size:0.7rem; padding: 2px 7px; background: rgba(148,163,184,0.15); color: #94a3b8;">⚪ Target Pending</span>
+            <span style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">Awaiting official October cash target allocation from Senior Management.</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
+            <span class="pill-badge" style="font-size:0.7rem; padding: 2px 7px; background: rgba(148,163,184,0.15); color: #94a3b8;">⚪ Upgrade Base Pending</span>
+            <span style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">Awaiting official October M-2 student allocation from SCRM.</span>
+          </div>
+        </div>
+      `;
+    }
     const diffPct = Math.round((t.displayAch - pacePct) * 10) / 10;
     const diffSign = diffPct >= 0 ? '+' : '';
     let revHeader = '';
     let revBody = '';
-    if (t.displayAch >= 100) {
-      const surplus = t.cash - t.target;
-      revHeader = `<span class="pill-badge pill-badge-emerald" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-emerald"></span> 100% Met (${fmtPct(t.displayAch)})</span>`;
-      revBody = `Revenue surplus of <strong style="color:#10b981;">+${fmt(surplus)}</strong> (${diffSign}${diffPct}% vs D${daysPassed} pace). Unlocks team booster bonus (+0.5%). Maintain closing cadence to expand sector margin.`;
-    } else if (t.displayAch >= 90) {
-      revHeader = `<span class="pill-badge pill-badge-cyan" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-emerald"></span> Near 100% (${fmtPct(t.displayAch)})</span>`;
-      revBody = `Within striking distance of target (only <strong style="color:#38bdf8;">${fmt(t.dailyNeeded)}/day</strong> needed over remaining ${daysLeft} days). Anchored by ${t.contracts} contracts; closing warm renewals will clear 100% threshold.`;
-    } else if (t.displayAch >= 70) {
-      revHeader = `<span class="pill-badge pill-badge-amber" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-amber"></span> Steady Run-Rate (${fmtPct(t.displayAch)})</span>`;
-      revBody = `Requires <strong style="color:#f59e0b;">${fmt(t.dailyNeeded)}/day</strong> run-rate. Priority focus on unblocking pending proposals, accelerating touchpoints on high-base accounts, and driving demo class conversions.`;
-    } else {
-      revHeader = `<span class="pill-badge pill-badge-rose" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-rose"></span> Final Sprint Focus (${fmtPct(t.displayAch)})</span>`;
-      revBody = `Requires immediate intervention (<strong style="color:#f43f5e;">${fmt(t.dailyNeeded)}/day</strong>). Priority on uncontacted leads rescue, inactive student re-engagement, and structured 1:1 coaching with the Team Leader.`;
-    }
-
-    const upgContribution = totalUpgradeM2 > 0 ? ((t.upgradeM2 / totalUpgradeM2) * 100).toFixed(1) : '0';
-    let upgHeader = '';
-    let upgBody = '';
-    if (t.upgradeRate >= 8) {
-      upgHeader = `<span class="pill-badge pill-badge-purple" style="font-size:0.7rem; padding: 2px 7px;">🚀 Upgrade Leader (${t.upgradeRate.toFixed(1)}%)</span>`;
-      upgBody = `Top producer in Big Team 01 (contributes <strong>${upgContribution}%</strong> of sector upgrades). 20% milestone target is ${t.upgrade20Target} (${t.upgrade20Needed} needed). Harvest remaining 60-90 day renewal candidates into long-term upgrades.`;
-    } else if (t.upgradeRate >= 6.5) {
-      upgHeader = `<span class="pill-badge pill-badge-cyan" style="font-size:0.7rem; padding: 2px 7px;">⚡ High Velocity (${t.upgradeRate.toFixed(1)}%)</span>`;
-      upgBody = `Strong conversion momentum (contributes <strong>${upgContribution}%</strong> of sector upgrades). Only ${t.upgrade20Needed} contracts to 20% target (${t.upgrade20Target}). Closing warm upgrades will lock in team bonus.`;
-    } else if (t.upgradeRate >= 5.0) {
-      upgHeader = `<span class="pill-badge pill-badge-amber" style="font-size:0.7rem; padding: 2px 7px;">🔄 Steady Volume (${t.upgradeRate.toFixed(1)}%)</span>`;
-      upgBody = `Consistent conversion across ${t.upgradeBase} base (${t.upgrade20Needed} to 20% target of ${t.upgrade20Target}). Prioritize calling students who consumed 8+ classes this month with bundled discount proposals.`;
-    } else {
-      upgHeader = `<span class="pill-badge pill-badge-rose" style="font-size:0.7rem; padding: 2px 7px;">🎯 Untapped Reserve (${t.upgradeRate.toFixed(1)}%)</span>`;
-      upgBody = `Holds the largest pool in Big Team 01 (${t.upgradeBase} leads, 29.5% of sector total), but lowest conversion (${t.upgrade20Needed} to 20% goal). A targeted upgrade phone blitz represents the highest upside to propel sector completion.`;
-    }
-
     return `
       <div class="strategic-memo-box">
         <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 5px; flex-wrap: wrap;">
@@ -846,7 +839,7 @@ function renderBigTeamSummary(model) {
           <div style="font-size: 0.76rem; color: #94a3b8; margin-top: 2px;">👑 Team Leader: <strong>${t.tl}</strong></div>
         </td>
         <td style="font-family: var(--font-mono); font-weight: 800; color: #fff; text-align: center;">${fmt(t.cash)}</td>
-        <td style="font-family: var(--font-mono); color: var(--text-secondary); text-align: center;">${fmt(t.target)}</td>
+        <td style="font-family: var(--font-mono); color: var(--text-secondary); text-align: center;">${t.target > 0 ? fmt(t.target) : 'Target Pending'}</td>
         <td style="text-align: center;">
           <span class="pill-badge" style="background: ${achClr}18; color: ${achClr}; border: 1px solid ${achClr}40; font-family: var(--font-mono); font-size: 0.85rem;">
             <span class="pulse-dot" style="background: ${achClr}; box-shadow: 0 0 6px ${achClr};"></span>
@@ -1003,7 +996,7 @@ function renderBigTeamSummary(model) {
             </div>
           </div>
           <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 8px;">
-            Near target: <strong style="color: #38bdf8;">ME-EGSS05 (94.4%)</strong> | Sprint: <strong style="color: #f59e0b;">ME-EGSS01, 10</strong>
+            October 2026 Kickoff | All 5 Teams Active
           </div>
         </div>
 
@@ -1087,7 +1080,7 @@ function renderBigTeamSummary(model) {
               ${upgradeShareOfOrders}%
             </div>
             <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 2px;">
-              46 of 201 total orders | Secures multi-month retention
+              0 of 0 total orders | October 2026 Kickoff
             </div>
           </div>
 
@@ -1342,7 +1335,7 @@ function renderSmallTeamsTab(model) {
         </div>
         <div>
           <div style="font-size: 0.72rem; color: var(--text-muted);">Target</div>
-          <div style="font-size: 1.1rem; font-weight: 800; color: var(--text-secondary); font-family: var(--font-mono);">${fmt(t.target)}</div>
+          <div style="font-size: 1.1rem; font-weight: 800; color: var(--text-secondary); font-family: var(--font-mono);">${t.target > 0 ? fmt(t.target) : 'Target Pending'}</div>
         </div>
         <div>
           <div style="font-size: 0.72rem; color: var(--text-muted);">Achievement %</div>
@@ -3686,6 +3679,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -4697,6 +4692,9 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
 
 
 
