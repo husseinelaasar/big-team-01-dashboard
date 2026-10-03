@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261003_172500">
+  <link rel="stylesheet" href="styles.css?v=20261003_174700">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -705,21 +705,21 @@
           <div>
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
               <span style="font-size: 1.25rem;">📥</span>
-              <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 0;">Operational Leads & Tasks Download Center (بوابة تحميل المهام والبيانات)</h3>
-              <span class="pulse-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.7rem; padding: 2px 8px; border-radius: 6px; font-weight: 700;">LIVE EXPORT</span>
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 0;">مركز تحميل قوائم الطلاب والمهام التشغيلية (Actionable Leads Portal)</h3>
+              <span class="pulse-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.7rem; padding: 2px 8px; border-radius: 6px; font-weight: 700;">تحديث لحظي</span>
             </div>
             <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 4px 0 0 0;">
-              Download assigned student leads and actionable operational task lists by Individual Sales Representative or Consolidated Small Team.
+              تحميل قوائم الطلاب والمهام اليومية المخصصة لكل موظف مبيعات أو تحميل مجمّع لكل فريق صغير للمتابعة الميدانية الفورية.
             </p>
             <div style="display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap;">
               <a href="attachments/All in one Master.xlsx" download="All in one Master.xlsx" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.74rem; color: #a5b4fc; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: 600;">
-                📘 All in one Master.xlsx
+                📘 ملف ماستر الميداني الشامل (All in one Master.xlsx)
               </a>
               <a href="attachments/Class_Consumption_Leads_Report.xlsx" download="Class_Consumption_Leads_Report.xlsx" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.74rem; color: #fde68a; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: 600;">
-                📙 Class_Consumption_Leads_Report.xlsx
+                📙 تقرير استهلاك الحصص (Class_Consumption_Leads_Report.xlsx)
               </a>
               <a href="attachments/Unfixed_Teacher_Leads_Report.xlsx" download="Unfixed_Teacher_Leads_Report.xlsx" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.74rem; color: #6ee7b7; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: 600;">
-                📗 Unfixed_Teacher_Leads_Report.xlsx
+                📗 تقرير ربط المعلم الثابت (Unfixed_Teacher_Leads_Report.xlsx)
               </a>
             </div>
           </div>
@@ -734,19 +734,19 @@
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                 <div style="display: flex; align-items: center; gap: 8px;">
                   <span style="font-size: 1.1rem;">👤</span>
-                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">1. Individual Sales Rep (تحميل بيانات الموظف)</h4>
+                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">١. تحميل بيانات موظف المبيعات (Individual Rep Leads)</h4>
                 </div>
-                <span style="font-size: 0.68rem; background: rgba(99, 102, 241, 0.15); color: #818cf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">21 REPS</span>
+                <span style="font-size: 0.68rem; background: rgba(99, 102, 241, 0.15); color: #818cf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">21 موظف مبيعات</span>
               </div>
-              <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0 0 12px 0;">Select rep name to review personal task counts and download their CSV leads.</p>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0 0 12px 0;">اختر اسمك لمراجعة إجمالي المهام المعلقة وتحميل ملف CSV المخصص لك.</p>
             </div>
 
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
               <select id="personalRepSelect" onchange="onPersonalRepSelected()" style="flex: 1; min-width: 190px; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff; cursor: pointer;">
-                <option value="">-- Select Your Name (Sales Rep) --</option>
+                <option value="">-- اختر اسم موظف المبيعات (Sales Rep) --</option>
               </select>
               <button id="btnDownloadMyLeads" onclick="downloadSelectedRepLeads()" style="display: none; padding: 10px 18px; font-size: 0.84rem; font-weight: 700; border-radius: var(--radius-md); background: linear-gradient(135deg, #10b981, #059669); color: #fff; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); transition: all 0.2s ease;">
-                📥 Download Leads (.CSV)
+                📥 تحميل قوائم الموظف (.CSV)
               </button>
             </div>
           </div>
@@ -757,25 +757,25 @@
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                 <div style="display: flex; align-items: center; gap: 8px;">
                   <span style="font-size: 1.1rem;">👥</span>
-                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">2. Small Team Leads (تحميل بيانات الفريق الصغير)</h4>
+                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">٢. تحميل بيانات الفريق الصغير (Small Team Leads)</h4>
                 </div>
-                <span style="font-size: 0.68rem; background: rgba(6, 182, 212, 0.15); color: #38bdf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">5 SMALL TEAMS</span>
+                <span style="font-size: 0.68rem; background: rgba(6, 182, 212, 0.15); color: #38bdf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">5 فرق صغيرة</span>
               </div>
-              <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0 0 12px 0;">Select Small Team to download combined operational leads for all team members.</p>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0 0 12px 0;">اختر الفريق الصغير لتحميل القوائم والمهام الميدانية المجمعة لكافة أفراد الفريق.</p>
             </div>
 
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
               <select id="personalTeamSelect" onchange="onPersonalTeamSelected()" style="flex: 1; min-width: 190px; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(6, 182, 212, 0.4); color: #fff; cursor: pointer;">
-                <option value="">-- Select Small Team (اختر الفريق الصغير) --</option>
-                <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal - Team 01)</option>
-                <option value="ME-EGSS05">ME-EGSS05 (Abdelrahman Nasef - Team 05)</option>
-                <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata - Team 10)</option>
-                <option value="ME-EGSS13">ME-EGSS13 (Amr Safwat - Team 13)</option>
-                <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah - Team 30)</option>
-                <option value="BIG_TEAM_01">⭐ Big Team 01 (All Teams Combined / القطاع)</option>
+                <option value="">-- اختر الفريق الصغير (Small Team) --</option>
+                <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal - فريق 01)</option>
+                <option value="ME-EGSS05">ME-EGSS05 (Abdelrahman Nasef - فريق 05)</option>
+                <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata - فريق 10)</option>
+                <option value="ME-EGSS13">ME-EGSS13 (Mohamedha - فريق 13)</option>
+                <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah - فريق 30)</option>
+                <option value="BIG_TEAM_01">⭐ القطاع بالكامل (Big Team 01 - All Teams Combined)</option>
               </select>
               <button id="btnDownloadTeamLeads" onclick="downloadSelectedTeamLeads()" style="display: none; padding: 10px 18px; font-size: 0.84rem; font-weight: 700; border-radius: var(--radius-md); background: linear-gradient(135deg, #0284c7, #0369a1); color: #fff; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3); transition: all 0.2s ease;">
-                📥 Download Team Leads (.CSV)
+                📥 تحميل قوائم الفريق (.CSV)
               </button>
             </div>
           </div>
@@ -785,7 +785,7 @@
         <!-- Dynamic Rep Personal Mini-Cockpit -->
         <div id="repPersonalSummary" style="display: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span style="font-size: 0.84rem; font-weight: 800; color: #10b981;">👤 Representative Individual Summary:</span>
+            <span style="font-size: 0.84rem; font-weight: 800; color: #10b981;">👤 ملخص المهام الميدانية الفردية للموظف:</span>
           </div>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;" id="repSummaryCards">
             <!-- Injected dynamically -->
@@ -808,7 +808,7 @@
       <div class="op-kpi-grid">
         <!-- Module 1 Card -->
         <div class="op-card m1 active" onclick="switchOperationsModule(1)" id="opCard1">
-          <div class="op-title">Module 1: SOP Pending Tasks</div>
+          <div class="op-title">القسم 1: مهام الـ SOP المعلقة (SOP Tasks)</div>
           <div class="op-value" id="opSopTotal">0</div>
           <div class="op-sub">
             <strong style="color: #94a3b8;">0</strong> Round 1 Awareness Leads<br>
@@ -818,7 +818,7 @@
 
         <!-- Module 2 Card -->
         <div class="op-card m2" onclick="switchOperationsModule(2)" id="opCard2">
-          <div class="op-title">Module 2: Unfixed Teachers</div>
+          <div class="op-title">القسم 2: ربط المعلم الثابت (Unfixed Teachers)</div>
           <div class="op-value" id="opFtTotal">0</div>
           <div class="op-sub">
             M0 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 80%)<br>
@@ -828,7 +828,7 @@
 
         <!-- Module 3 Card -->
         <div class="op-card m3" onclick="switchOperationsModule(3)" id="opCard3">
-          <div class="op-title">Module 3: Class Consumption</div>
+          <div class="op-title">القسم 3: استهلاك الحصص (Class Consumption)</div>
           <div class="op-value" id="opCcTotal">0</div>
           <div class="op-sub">
             <strong style="color: #94a3b8;">0</strong> Zero-Class Leads (Rescue)<br>
@@ -838,7 +838,7 @@
 
         <!-- Module 4 Card -->
         <div class="op-card m4" onclick="switchOperationsModule(4)" id="opCard4">
-          <div class="op-title">Module 4: English Club (45%)</div>
+          <div class="op-title">القسم 4: نادي اللغة الإنجليزية (English Club 45%)</div>
           <div class="op-value" id="opEcGoal">0</div>
           <div class="op-sub">
             Base: 0 | Attended: <strong style="color: #94a3b8;">0</strong><br>
@@ -851,23 +851,23 @@
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
         <div class="op-module-pills" style="margin-bottom: 0;">
           <button class="op-pill p1 active" onclick="switchOperationsModule(1)" id="opPill1">
-            <span>📋</span> Module 1: SOP Pending (557 Tasks)
+            <span>📋</span> القسم 1: مهام الـ SOP المعلقة (SOP Tasks)
           </button>
           <button class="op-pill p2" onclick="switchOperationsModule(2)" id="opPill2">
-            <span>👩‍🏫</span> Module 2: Unfixed Teachers (817 Leads)
+            <span>👩‍🏫</span> القسم 2: ربط المعلم الثابت (Unfixed Teachers)
           </button>
           <button class="op-pill p3" onclick="switchOperationsModule(3)" id="opPill3">
-            <span>🎓</span> Module 3: Class Consumption & Zero-Class (65% Goal)
+            <span>🎓</span> القسم 3: استهلاك الحصص وإنقاذ الصفر حصة (65%)
           </button>
           <button class="op-pill p4" onclick="switchOperationsModule(4)" id="opPill4">
-            <span>🗣️</span> Module 4: English Club 45% Goal
+            <span>🗣️</span> القسم 4: نادي اللغة الإنجليزية (مستهدف 45%)
           </button>
         </div>
 
         <div style="display: flex; gap: 10px; align-items: center;">
-          <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
+          <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">تصفية حسب الفريق:</label>
           <select id="opTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;">
-            <option value="ALL">All Teams (Big Team 01)</option>
+            <option value="ALL">جميع الفرق (القطاع بالكامل)</option>
             <option value="ME-EGSS01">ME-EGSS01</option>
             <option value="ME-EGSS05">ME-EGSS05</option>
             <option value="ME-EGSS10">ME-EGSS10</option>

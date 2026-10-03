@@ -4198,7 +4198,7 @@ const LEADS_SUMMARY = {
         },
         "ME-EGSS13": {
                 "ecCount": 401,
-                "label": "ME-EGSS13 (Amr Safwat)",
+                "label": "ME-EGSS13 (Mohamedha)",
                 "totalLeads": 1620,
                 "ftCount": 213,
                 "repsCount": 4,
@@ -4416,7 +4416,7 @@ function onPersonalRepSelected() {
 
   if (btn) {
     btn.style.display = 'inline-flex';
-    btn.innerHTML = `📥 Download Leads for ${rep} (.CSV)`;
+    btn.innerHTML = `📥 تحميل مهام ${rep} (.CSV)`;
   }
 
   const info = (window.LEADS_SUMMARY && window.LEADS_SUMMARY[rep]) || { sopCount: 0, ftCount: 0, ccCount: 0, ecCount: 0, totalLeads: 0 };
@@ -4425,27 +4425,27 @@ function onPersonalRepSelected() {
     summaryBox.style.display = 'block';
     cardsContainer.innerHTML = `
       <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 Pending SOP Tasks</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.sopCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">tasks</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Immediate follow-up & awareness</div>
+        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 مهام الـ SOP المعلقة (SOP Tasks)</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.sopCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">مهمة</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">متابعة وتوعية فورية للطلاب</div>
       </div>
 
       <div style="background: rgba(160, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 Students Without Fixed Teachers</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ftCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">students</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 80%</div>
+        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 طلاب بدون معلم ثابت (Unfixed Teachers)</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ftCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طالب</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف الربط 80%</div>
       </div>
 
       <div style="background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 Class Consumption Rescue</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ccCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">accounts</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Zero-Class focus</div>
+        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 استنقاذ استهلاك الحصص (Consumption Rescue)</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ccCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">حساب</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">التركيز على حسابات الصفر حصة</div>
       </div>
 
       <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ English Club Qualified Leads</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ecCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">qualified</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Targeting 40% adoption</div>
+        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ نادي اللغة الإنجليزية (English Club Leads)</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ecCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طالب مؤهل</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف التفعيل 40%</div>
       </div>
     `;
   }
@@ -4506,37 +4506,37 @@ function onPersonalTeamSelected() {
 
   if (btn) {
     btn.style.display = 'inline-flex';
-    btn.innerHTML = `📥 Download Leads for ${teamKey} (.CSV)`;
+    btn.innerHTML = `📥 تحميل مهام ${teamKey} (.CSV)`;
   }
 
   if (summaryBox && cardsContainer) {
     summaryBox.style.display = 'block';
-    if (titleElem) titleElem.textContent = `📊 ${teamData.label} — Live Operational Summary`;
-    if (badgeElem) badgeElem.textContent = `${teamData.repsCount} Sales Reps Active`;
+    if (titleElem) titleElem.textContent = `📊 ملخص المهام الميدانية: ${teamData.label}`;
+    if (badgeElem) badgeElem.textContent = `${teamData.repsCount} موظف مبيعات نشط بالفريق`;
 
     cardsContainer.innerHTML = `
       <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 Pending SOP Tasks</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.sopCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">tasks</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Team follow-up pipeline</div>
+        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 مهام الـ SOP المعلقة (SOP Tasks)</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.sopCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">مهمة</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">إجمالي مهام المتابعة للفريق</div>
       </div>
 
       <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 Students Without Fixed Teachers</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ftCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">students</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 80%</div>
+        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 طلاب بدون معلم ثابت (Unfixed Teachers)</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ftCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طالب</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف الربط 80%</div>
       </div>
 
       <div style="background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 Class Consumption Rescue</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ccCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">accounts</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Zero-Class focus</div>
+        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 استنقاذ استهلاك الحصص (Consumption Rescue)</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ccCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">حساب</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">التركيز على حسابات الصفر حصة</div>
       </div>
 
       <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ English Club Qualified Leads</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ecCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">qualified</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Targeting 40% adoption</div>
+        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ نادي اللغة الإنجليزية (English Club Leads)</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ecCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طالب مؤهل</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف التفعيل 40%</div>
       </div>
     `;
   }
