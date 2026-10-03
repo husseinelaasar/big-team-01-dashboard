@@ -247,26 +247,27 @@ $$\text{Team 13 Achievement} = \frac{\$47,418.68}{\$47,060} \times 100 = \mathbf
 
 ---
 
-### 📈 6. Official 30-Day Cumulative Target Pacing Curve & Dynamic Day Pacing
-Linear pacing is strictly superseded by the official non-linear cumulative target pacing schedule:
+### ðŸ“ˆ 6. Official 31-Day October Cumulative Target Pacing Curve & Dynamic Day Pacing
+Linear pacing is strictly superseded by the official October 31-day non-linear cumulative target pacing schedule (see [OCTOBER_BM_PACE.md](OCTOBER_BM_PACE.md)):
 
 | Day of Month | Expected Cumulative Pace % | Day of Month | Expected Cumulative Pace % |
 |:---:|:---:|:---:|:---:|
-| **Day 1** | 5% | **Day 16** | **46%** *(Mid-Month Benchmark)* |
-| **Day 2** | 10% | **Day 17** | 49% |
-| **Day 3** | 11% | **Day 18** | 50% |
-| **Day 4** | 12% | **Day 19** | **51%** *(e.g. $115,056)* |
-| **Day 5** | 14% | **Day 20** | 54% |
-| **Day 6** | 16% | **Day 21** | 57% |
-| **Day 7** | 19% | **Day 22** | 59% |
-| **Day 8** | 22% | **Day 23** | 62% |
-| **Day 9** | 26% | **Day 24** | 66% |
-| **Day 10** | 29% | **Day 25** | 65% |
-| **Day 11** | 31% | **Day 26** | 68% |
-| **Day 12** | 32% | **Day 27** | 80% |
-| **Day 13** | 36% | **Day 28** | 87% |
-| **Day 14** | 40% | **Day 29** | 94% |
-| **Day 15** | 43% | **Day 30** | **103%** *(Excellence Stretch Goal)* |
+| **Day 1** | 5% | **Day 17** | 43% |
+| **Day 2** | 8% *(OFF DAY - Midpoint)* | **Day 18** | 46% |
+| **Day 3** | 11% | **Day 19** | 49% |
+| **Day 4** | 14% | **Day 20** | 51% |
+| **Day 5** | 17% | **Day 21** | 54% |
+| **Day 6** | 20% | **Day 22** | 56% |
+| **Day 7** | 23% | **Day 23** | 57% *(OFF DAY)* |
+| **Day 8** | 24% *(OFF DAY)* | **Day 24** | 58% *(OFF DAY)* |
+| **Day 9** | 25% *(OFF DAY)* | **Day 25** | 60% |
+| **Day 10** | 26% | **Day 26** | 64% |
+| **Day 11** | 29% | **Day 27** | 76% |
+| **Day 12** | 32% | **Day 28** | 83% |
+| **Day 13** | 35% | **Day 29** | 90% |
+| **Day 14** | 38% | **Day 30** | 96% |
+| **Day 15** | 40% | **Day 31** | **102%** *(Month-End Finish)* |
+| **Day 16** | 41% *(OFF DAY)* | | |
 
 #### Dynamic Pacing Logic:
 1. **Dynamic Day Calculation:**
@@ -1057,20 +1058,88 @@ The dashboard update pipelines are currently running with the verified 21-rep Oc
 *(Note: Until official October targets are submitted, pipelines maintain last confirmed baseline values with zero errors).*
 
 #### B. Newly Added Operational Performance Targets (Effective October 2026):
-The following operational standards are permanently established for daily monitoring and automated reporting:
 
-1. **Class Consumption Target: 65% Overall**
+> [!IMPORTANT]
+> **CRITICAL SEPARATION RULE (كل على حدا):**
+> 1. **51Talk Data Center SOP Compliance (`SOP_ROUNDS`):**
+>    - **SOP Round R4 (Class Consumption SOP):** Target remains strictly **80%** (Process compliance standard).
+>    - **SOP Round EC (English Club SOP):** Target remains strictly **70%** (Process compliance standard).
+> 2. **Operations Master Module Tracking (Independent Operational Goals):**
+>    - **Module 3 (Class Consumption):** Independent operational benchmark is **65% Overall** across total active student leads.
+>    - **Module 4 (English Club):** Independent operational benchmark is **45% of Base** ($\lceil \text{Base} \times 0.45 \rceil$).
+> 3. **Zero Coupling:** The newly added operational targets (65% & 45%) have **NO relationship** to SOP R4 (80%) or SOP EC (70%). Each dimension operates and is audited completely separately.
+
+1. **Module 3: Class Consumption Operational Target (65% Overall)**
    - **Target Benchmark:** **65%** overall consumption across total active student leads.
    - **Calculation Standard:** Total students who attended classes / Total assigned students $\ge \mathbf{65\%}$.
    - **Rescue Priority:** Zero-class student leads (Cohort 0 classes attended) are flagged as critical rescue targets to push the team past the 65% macro threshold.
-   - **Pipeline Configuration:** Round R4 in `SOP_ROUNDS` updated to `target: 65` (formerly 80%).
+   - **Independence Note:** This macro operational target does not alter the 51Talk Data Center SOP R4 process target (which stays at 80%).
 
-2. **English Club Attendance Target: 45% from Base**
+2. **Module 4: English Club Operational Target (45% from Base)**
    - **Target Benchmark:** **45%** of assigned student base must attend English Club sessions.
    - **Formula:** 
      $$\text{English Club Goal (IDs)} = \left\lceil \text{Student Base} \times 0.45 \right\rceil$$
      $$\text{Remaining Needed} = \max\left(0, \text{Goal}_{45\%} - \text{Attended}\right)$$
    - **Pipeline Configuration:** 
-     - Round EC in `SOP_ROUNDS` updated to `target: 45` (formerly 70%).
      - Module 4 in `update_dashboard.ps1` extracts English Club goal dynamically as `[math]::Ceiling($base * 0.45)`.
-     - Operations Module 4 card, pill, and table headers updated to display the **45% Goal**.
+     - Operations Module 4 card, pill, and table headers display the **45% Goal**.
+     - **Independence Note:** This operational target does not alter the SOP EC process compliance target (which stays at 70%).
+#### C. Strict 21-Rep Roster Whitelist & Total Exclusion Policy (Ø§Ø³ØªØ«Ù†Ø§Ø¡ ØºÙŠØ± Ø§Ù„Ù…Ø¯Ø±Ø¬ÙŠÙ† Ø¨Ø§Ù„ØµÙˆØ±Ø©)
+
+> [!CAUTION]
+> **MANDATORY EXCLUSION OF UNLISTED EMPLOYEES:**
+> Any employee whose name is **NOT listed in the official October 2026 team structure photo** (Grand Total: exactly 21 Reps across 5 teams) **MUST BE COMPLETELY EXCLUDED** from:
+> 1. All monthly sales targets (Target = $0, no target assigned).
+> 2. All operational tracking (Class Consumption, English Club, Upgrade M2, SOP).
+> 3. All team rosters, tables, rankings, and lead CSV exports.
+> 
+> **Even if their name appears in incoming company Excel files** (e.g. Area_Big_Team_Small_Team_SS, SCRM, Data Center exports), they are **NOT** considered an employee working with Big Team 01 this month under any circumstances.
+> 
+> **Small Team Protection Enforcement:**
+> If an excluded/unlisted employee has sales, refunds, or clawbacks recorded in the raw company ledger:
+> - They are **NEVER** assigned to or counted inside any Small Team.
+> - Their transaction is absorbed solely into the Big Team 01 macro total (SectorNetCash), guaranteeing that small team performance reflects strictly its active October members.
+
+#### D. October 2026 31-Day BM Benchmark Pacing Schedule (Frozen & Fixed - تثبيت معدل الـ BM لشهر أكتوبر):
+
+> [!IMPORTANT]
+> **IMMUTABLE OCTOBER PACING CURVE (ثابت ومجمد طوال شهر أكتوبر):**
+> By explicit executive instruction, the October 2026 31-day Benchmark (BM) Pacing Curve is permanently locked for the entire month.
+> No script, manual edit, or automated update may alter these values throughout October.
+>
+> All daily pacing lines, BM indicators, variance calculations, and recommendations in `dashboard.js`, `update_dashboard.ps1`, and report templates must strictly adhere to this exact 31-day schedule:
+>
+> | Day | Day of Week | Status | Source | BM Pace % | Daily Step ($\Delta$) |
+> | :---: | :---: | :---: | :---: | :---: | :---: |
+> | **Day 1** | Thursday | Working | **Official Image** | **5%** | +5% |
+> | **Day 2** | Friday | **OFF DAY** | Interpolated Average | **8%** | +3% |
+> | **Day 3** | Saturday | Working | **Official Image** | **11%** *(Today)* | +3% |
+> | **Day 4** | Sunday | Rest / Catch-up | Interpolated Average | **14%** | +3% |
+> | **Day 5** | Monday | Working | Interpolated Average | **17%** | +3% |
+> | **Day 6** | Tuesday | Working | Interpolated Average | **20%** | +3% |
+> | **Day 7** | Wednesday | Working | **Official Image** | **23%** | +3% |
+> | **Day 8** | Thursday | **OFF DAY** | Interpolated Average | **24%** | +1% |
+> | **Day 9** | Friday | **OFF DAY** | Interpolated Average | **25%** | +1% |
+> | **Day 10** | Saturday | Working | **Official Image** | **26%** | +1% |
+> | **Day 11** | Sunday | Rest / Catch-up | Interpolated Average | **29%** | +3% |
+> | **Day 12** | Monday | Working | Interpolated Average | **32%** | +3% |
+> | **Day 13** | Tuesday | Working | Interpolated Average | **35%** | +3% |
+> | **Day 14** | Wednesday | Working | **Official Image** | **38%** | +3% |
+> | **Day 15** | Thursday | Working | Interpolated Average | **40%** | +2% |
+> | **Day 16** | Friday | **OFF DAY** | Interpolated Average | **41%** | +1% |
+> | **Day 17** | Saturday | Working | **Official Image** | **43%** | +2% |
+> | **Day 18** | Sunday | Rest / Catch-up | Interpolated Average | **46%** | +3% |
+> | **Day 19** | Monday | Working | Interpolated Average | **49%** | +3% |
+> | **Day 20** | Tuesday | Working | Interpolated Average | **51%** | +2% |
+> | **Day 21** | Wednesday | Working | **Official Image** | **54%** | +3% |
+> | **Day 22** | Thursday | Working | Interpolated Average | **56%** | +2% |
+> | **Day 23** | Friday | **OFF DAY** | Interpolated Average | **57%** | +1% |
+> | **Day 24** | Saturday | **OFF DAY** | Interpolated Average | **58%** | +1% |
+> | **Day 25** | Sunday | Working | **Official Image** | **60%** | +2% |
+> | **Day 26** | Monday | Working | **Official Image** | **64%** | +4% |
+> | **Day 27** | Tuesday | High Sprint | **Official Image** | **76%** | +12% |
+> | **Day 28** | Wednesday | High Sprint | **Official Image** | **83%** | +7% |
+> | **Day 29** | Thursday | Final Stretch | **Official Image** | **90%** | +7% |
+> | **Day 30** | Friday | Final Stretch | **Official Image** | **96%** | +6% |
+> | **Day 31** | Saturday | **Month Finish** | **Official Image** | **102%** | +6% |
+

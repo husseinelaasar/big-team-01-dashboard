@@ -1,6 +1,7 @@
 # 📋 SM Group Report Templates (Deadline: 15:30 Today - October 2026 Structure)
 
-> **October 2026 Operational Targets:**
+> **October 2026 Operational Targets & Benchmarks:**
+> - 📈 **BM Pacing Target (Day 3):** **11%** (Official October 31-Day BM Schedule)
 > - 🎯 **Class Consumption Target:** **65% Overall** (Focus on 0-class rescue)
 > - 🗣️ **English Club Target:** **45% from Base**
 > - 🚀 **Upgrade M2 Target:** **20% Goal**
@@ -8,7 +9,7 @@
 📢 *[ME-EGSS01] Daily BM Progress & Support Plan (Ashraqatal Team - 5 Reps)*
 ⏰ *Report Time: 15:30 Today*
 
-*1. Team Members Below BM & Gaps (BM Pace: 68%):*
+*1. Team Members Below BM & Gaps (BM Pace: 11% - Day 3 Target):*
 - EGSS-mahmoud04: Cash $6,800 / $10,420 (65.3%) | *Gap: $286* ⚡ (1 small renewal)
 - EGSS-negma: Cash $4,160 / $7,790 (53.4%) | *Gap: $1,137*
 - EGSS-juliamonir01: Cash $4,080 / $8,050 (50.7%) | *Gap: $1,394*
@@ -36,7 +37,7 @@
 📢 *[ME-EGSS05] Daily BM Progress & Support Plan (Ibrahimismaiel Team - 6 Reps)*
 ⏰ *Report Time: 15:30 Today*
 
-*1. Team Members Below BM & Gaps (BM Pace: 68%):*
+*1. Team Members Below BM & Gaps (BM Pace: 11% - Day 3 Target):*
 - EGSS-samira01: Cash $5,806 / $10,190 (57.0%) | *Gap: $1,123*
 - EGSS-omarmoneb: Cash $5,240 / $9,550 (54.9%) | *Gap: $1,254*
 - EGSS-ehabzaky01: Cash $2,920 / $10,350 (28.2%) | *Gap: $4,118*
@@ -62,7 +63,7 @@
 📢 *[ME-EGSS10] Daily BM Progress & Support Plan (AbdelrhmanShehata Team - 3 Reps)*
 ⏰ *Report Time: 15:30 Today*
 
-*1. Team Members Below BM & Gaps (BM Pace: 68%):*
+*1. Team Members Below BM & Gaps (BM Pace: 11% - Day 3 Target):*
 - EGSS-mahmoudkhamis: Cash $6,090 / $11,640 (52.3%) | *Gap: $1,825* (Primary focus)
 - EGSS-ahmedshoukry: Cash $7,110 / $16,450 (43.2%) | *Gap: $4,076*
 - EGSS-abdelrhmanshehata (TL): Achieved BM (90.0% / $4,240 Net Cash) 🏆
@@ -85,7 +86,7 @@
 📢 *[ME-EGSS13] Daily BM Progress & Support Plan (Mohamedha Team - 4 Reps)*
 ⏰ *Report Time: 15:30 Today*
 
-*1. Team Members Below BM & Gaps (BM Pace: 68%):*
+*1. Team Members Below BM & Gaps (BM Pace: 11% - Day 3 Target):*
 - EGSS-marwaahmed: Cash $4,160 / $8,640 (48.1%) | *Gap: $1,715*
 - EGSS-hayamhassan: Cash $3,662 / $10,560 (34.7%) | *Gap: $3,519*
 *(Achieved BM: Mohamedha 117.6% 🏆, Amrsafwat 71.1%)*
@@ -109,7 +110,7 @@
 📢 *[ME-EGSS30] Daily BM Progress & Support Plan (AdhmGadAllah Team - 3 Reps)*
 ⏰ *Report Time: 15:30 Today*
 
-*1. Team Members Below BM & Gaps (BM Pace: 68%):*
+*1. Team Members Below BM & Gaps (BM Pace: 11% - Day 3 Target):*
 - EGSS-titooooo: Cash $5,640 / $8,920 (63.2%) | *Gap: $426* ⚡ (1 small renewal to BM)
 - EGSS-alihesham01: Cash $1,820 / $3,810 (47.8%) | *Gap: $771* ⚡ (1 renewal to BM)
 *(Achieved BM: Adhmgadallah 95.5% 🏆)*
