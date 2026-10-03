@@ -110,10 +110,10 @@ const SOP_ROUNDS = [
   { key: 'R1', label: 'R1 Leads Coverage', target: 95 },
   { key: 'R2', label: 'R2 Timely Callback', target: 90 },
   { key: 'R3', label: 'R3 Demo Class Reserved', target: 85 },
-  { key: 'R4', label: 'R4 Class Consumption', target: 80 },
+  { key: 'R4', label: 'R4 Class Consumption', target: 65 },
   { key: 'R5', label: 'R5 Outside Pool Recovery', target: 70 },
   { key: 'R6', label: 'R6 Pipeline Follow-up', target: 75 },
-  { key: 'EC', label: 'English Club Attendance', target: 70 },
+  { key: 'EC', label: 'English Club Attendance', target: 45 },
   { key: 'U1', label: 'R1 M2 Upgrade Pitch', target: 85 },
   { key: 'U2', label: 'R2 M2 Upgrade Close', target: 80 }
 ];
@@ -154,10 +154,10 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'success', icon: '🟢', title: 'Sector AHEAD of Pace', detail: 'Ach 93.08% exceeds Day 2 target 10% by 83.1pp. Maintain momentum!', time: '20261002_081738' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (33.1%), EGSS-ahmedshoukry (67.7%), EGSS-mahmoudkhamis (78.4%), EGSS-ehabzaky01 (81.3%), EGSS-omarmoneb (89.8%). Schedule targeted coaching sessions today.', time: '20261002_081738' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20261002_081738' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20261002_081738' },
+  { type: 'success', icon: '🟢', title: 'Sector AHEAD of Pace', detail: 'Ach 93.08% exceeds Day 3 target 11% by 82.1pp. Maintain momentum!', time: '20261003_122441' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (33.1%), EGSS-ahmedshoukry (67.7%), EGSS-mahmoudkhamis (78.4%), EGSS-ehabzaky01 (81.3%), EGSS-omarmoneb (89.8%). Schedule targeted coaching sessions today.', time: '20261003_122441' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-marwaahmed (150.3%), EGSS-ibrahimismaiel (158%), EGSS-alihesham01 (167.1%). Recognize in team channel!', time: '20261003_122441' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 95 more renewals', detail: 'Current: 59/767 (7.7%). 20% target = 154. Focus on high-base reps.', time: '20261003_122441' },
 ];
 
 // =========================================================================
@@ -240,7 +240,7 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 2; // Current MTD Day (Sep 19, 2026)
+  const daysPassed = 3; // Current MTD Day (Sep 19, 2026)
   const daysInMonth = 30;
   const daysLeft = daysInMonth - daysPassed;
   const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 51;
@@ -3676,6 +3676,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -3947,11 +3949,11 @@ function renderOperationsTab() {
       </table>
     `;
   } else if (currentOperationsModule === 4) {
-    // Module 4: English Club (40% Target)
+    // Module 4: English Club (45% Target)
     const data = filterByTeam(MASTER_OPERATIONS_DATA.englishClub);
     let rowsHtml = data.map((r, idx) => {
       const pctNum = parseFloat(r.pct) || 0;
-      const pctClr = pctNum >= 40 ? '#10b981' : pctNum >= 25 ? '#f59e0b' : '#f43f5e';
+      const pctClr = pctNum >= 45 ? '#10b981' : pctNum >= 30 ? '#f59e0b' : '#f43f5e';
       const needBadge = r.need === 0 
         ? `<span class="op-badge-met">Goal Met 🎉</span>` 
         : `<span style="font-family: var(--font-mono); font-weight: 700; color: #fbbf24;">${r.need} IDs needed</span>`;
@@ -3989,8 +3991,8 @@ function renderOperationsTab() {
             <th>Bookings</th>
             <th style="color: #c084fc;">Attended</th>
             <th>Attendance %</th>
-            <th style="color: #60a5fa;">40% Goal (IDs)</th>
-            <th style="text-align: center; color: #fbbf24;">Gap to 40% Goal</th>
+            <th style="color: #60a5fa;">45% Goal (IDs)</th>
+            <th style="text-align: center; color: #fbbf24;">Gap to 45% Goal</th>
           </tr>
         </thead>
         <tbody>${rowsHtml}</tbody>
@@ -4687,6 +4689,9 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
 
 
 

@@ -18,7 +18,7 @@ echo        - Parsing Sector KPIs (Cash, Ach %%, Orders from Sheet 1)
 echo        - Parsing Individual Reps ^& Small Team Standings
 echo        - Reconciling Upgrade M2 and Normal Renewals
 echo        - Generating 8 Daily Smart Actionable Recommendations
-echo        - Extracting 4 Operations Modules ^& 25 Rep Leads CSVs
+echo        - Extracting 4 Operations Modules ^& 21 Rep Leads CSVs
 echo        - Auto-Deploying to GitHub Pages (Live)
 echo.
 echo  ---------------------------------------------------------------------------------

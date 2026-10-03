@@ -1040,3 +1040,37 @@ During the Day 29 update cycle, fresh input workbooks were downloaded at 16:35�
 
 3. **Syntax Balance Invariant:**
    - Prior to deploying or committing `dashboard.js`, automated checks must confirm 0 difference between open and close braces (`{}`), brackets (`[]`), and parentheses (`()`).
+
+---
+
+### 🎯 27. October 2026 Operational Targets & Target Input Dependencies
+
+#### A. Target Input Dependencies (Awaiting User Submission for October 2026):
+The dashboard update pipelines are currently running with the verified 21-rep October team structure, pending official receipt of the following monthly allocations:
+1. **October Cash Targets:**
+   - Big Team 01 Sector Cash Target ($).
+   - Individual Sales Representative Cash Targets ($) for all 21 active reps.
+2. **October Upgrade Rate Baseline & Targets:**
+   - Authoritative M-2 Student Lead Base (`M-2 Students M-2新生数`) per rep & team from `海外SS-SCRM看板_*.xlsx` (`升舱率达成`).
+   - Official 20% Upgrade Goal allocations and cumulative upgrade targets for October.
+
+*(Note: Until official October targets are submitted, pipelines maintain last confirmed baseline values with zero errors).*
+
+#### B. Newly Added Operational Performance Targets (Effective October 2026):
+The following operational standards are permanently established for daily monitoring and automated reporting:
+
+1. **Class Consumption Target: 65% Overall**
+   - **Target Benchmark:** **65%** overall consumption across total active student leads.
+   - **Calculation Standard:** Total students who attended classes / Total assigned students $\ge \mathbf{65\%}$.
+   - **Rescue Priority:** Zero-class student leads (Cohort 0 classes attended) are flagged as critical rescue targets to push the team past the 65% macro threshold.
+   - **Pipeline Configuration:** Round R4 in `SOP_ROUNDS` updated to `target: 65` (formerly 80%).
+
+2. **English Club Attendance Target: 45% from Base**
+   - **Target Benchmark:** **45%** of assigned student base must attend English Club sessions.
+   - **Formula:** 
+     $$\text{English Club Goal (IDs)} = \left\lceil \text{Student Base} \times 0.45 \right\rceil$$
+     $$\text{Remaining Needed} = \max\left(0, \text{Goal}_{45\%} - \text{Attended}\right)$$
+   - **Pipeline Configuration:** 
+     - Round EC in `SOP_ROUNDS` updated to `target: 45` (formerly 70%).
+     - Module 4 in `update_dashboard.ps1` extracts English Club goal dynamically as `[math]::Ceiling($base * 0.45)`.
+     - Operations Module 4 card, pill, and table headers updated to display the **45% Goal**.

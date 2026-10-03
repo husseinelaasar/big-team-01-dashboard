@@ -90,7 +90,25 @@ with zipfile.ZipFile(excel_path, 'r') as z:
         if not agent or agent.lower() == 'total':
             continue
 
-        team = row_vals[col_team].strip()
+        # Authoritative October 2026 Team Mapping (21 Active Reps)
+        oct_teams_casefold = {
+            'egss-abdelrahmannasef': 'ME-EGSS05小组', 'egss-ehabzaky01': 'ME-EGSS05小组',
+            'egss-ibrahimismaiel': 'ME-EGSS05小组', 'egss-khaledgonam': 'ME-EGSS05小组',
+            'egss-omarmoneb': 'ME-EGSS05小组', 'egss-samira01': 'ME-EGSS05小组',
+            'egss-ashraqatal': 'ME-EGSS01小组', 'egss-juliamonir01': 'ME-EGSS01小组',
+            'egss-mahmoud04': 'ME-EGSS01小组', 'egss-negma': 'ME-EGSS01小组',
+            'egss-nohayoussry': 'ME-EGSS01小组',
+            'egss-amrsafwat': 'ME-EGSS13小组', 'egss-hayamhassan': 'ME-EGSS13小组',
+            'egss-marwaahmed': 'ME-EGSS13小组', 'egss-mohamedha': 'ME-EGSS13小组',
+            'egss-adhmgadallah': 'ME-EGSS30小组', 'egss-alihesham01': 'ME-EGSS30小组',
+            'egss-titooooo': 'ME-EGSS30小组',
+            'egss-abdelrhmanshehata': 'ME-EGSS10小组', 'egss-ahmedshoukry': 'ME-EGSS10小组',
+            'egss-mahmoudkhamis': 'ME-EGSS10小组'
+        }
+        agent_key = agent.lower()
+        if agent_key not in oct_teams_casefold:
+            continue
+        team = oct_teams_casefold[agent_key]
         student_id = row_vals[col_sid].strip()
         
         try:
