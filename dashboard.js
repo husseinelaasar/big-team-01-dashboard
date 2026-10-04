@@ -4708,9 +4708,16 @@ function renderConsumptionTab() {
     `;
   }).join('');
 
-  // 3. Render Individual Rep Consumption Table
+  // 3. Render Individual Rep Consumption Table (Strictly Sorted Highest to Lowest %)
   const filterVal = document.getElementById('consumptionTeamFilter')?.value || 'ALL';
-  const filteredData = (filterVal === 'ALL') ? allData : allData.filter(r => r.team === filterVal);
+  let filteredData = (filterVal === 'ALL') ? [...allData] : allData.filter(r => r.team === filterVal);
+
+  // Strictly sort ranks from highest to lowest Active Consuming Rate %
+  filteredData.sort((a, b) => {
+    const rateA = a.total > 0 ? ((a.total - a.c0) / a.total) : 0;
+    const rateB = b.total > 0 ? ((b.total - b.c0) / b.total) : 0;
+    return (rateB - rateA) || ((b.total - b.c0) - (a.total - a.c0)) || (b.total - a.total);
+  });
 
   let rowsHtml = filteredData.map((r, idx) => {
     const active = r.total - r.c0;
@@ -4919,9 +4926,16 @@ function renderEnglishClubTab() {
     `;
   }).join('');
 
-  // 3. Render Individual Rep English Club Table
+  // 3. Render Individual Rep English Club Table (Strictly Sorted Highest to Lowest %)
   const filterVal = document.getElementById('englishClubTeamFilter')?.value || 'ALL';
-  const filteredData = (filterVal === 'ALL') ? allData : allData.filter(r => r.team === filterVal);
+  let filteredData = (filterVal === 'ALL') ? [...allData] : allData.filter(r => r.team === filterVal);
+
+  // Strictly sort ranks from highest to lowest adoption rate %
+  filteredData.sort((a, b) => {
+    const rateA = parseFloat(a.pct) || 0;
+    const rateB = parseFloat(b.pct) || 0;
+    return (rateB - rateA) || ((b.att || 0) - (a.att || 0)) || ((b.book || 0) - (a.book || 0)) || ((b.base || 0) - (a.base || 0));
+  });
 
   let rowsHtml = filteredData.map((r, idx) => {
     const pctNum = parseFloat(r.pct) || 0;
@@ -4932,7 +4946,7 @@ function renderEnglishClubTab() {
 
     return `
       <tr>
-        <td style="font-family:var(--font-mono); color:var(--text-muted);">${idx + 1}</td>
+        <td style="font-family:var(--font-mono); font-weight:800; color:var(--accent-indigo); text-align:center;">#${idx + 1}</td>
         <td style="font-weight:600; color:#fff;">${r.name}</td>
         <td>${renderTeamBadge(r.team)}</td>
         <td style="font-family:var(--font-mono); font-weight:800; color:#fff;">${r.base}</td>

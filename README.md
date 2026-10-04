@@ -37,12 +37,40 @@ The executive dashboard features three dedicated, standalone intelligence hubs m
   - Deficit Gap to 65% Target: **`-24.9%`** (**+1,257** additional active students required)
   - Zero-Class Accounts (0 Classes Completed): **3,024** (**`59.9%`** of base requiring urgent rescue)
   - Total Lesson Units Ended: **4,625 units** (2.3 classes per active student)
-- **Small Teams Ranking Matrix (Sorted Highest to Lowest %)**:
-  1. 🥇 **ME-EGSS13 (Mohamedha)**: **`41.7%`** (451 active / 1,081 base | Gap: -252)
-  2. 🥈 **ME-EGSS10 (Abdelrhman Shehata)**: **`41.2%`** (412 active / 1,000 base | Gap: -238)
-  3. 🥉 **ME-EGSS01 (Ashraqatal)**: **`41.0%`** (384 active / 936 base | Gap: -224)
-  4. 🎖️ **ME-EGSS30 (Adhm GadAllah)**: **`39.4%`** (385 active / 978 base | Gap: -251)
-  5. 🎖️ **ME-EGSS05 (Abdelrahman Nasef)**: **`38.2%`** (394 active / 1,032 base | Gap: -277)
+
+#### Small Teams Comparison Matrix vs 65% Target (Strictly Sorted Highest to Lowest %):
+| Rank | Small Team | Team Leader | Total Accounts | Active Consuming | Consumption Rate % | Gap vs 65% Target | Zero-Class (0) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **#1** | **ME-EGSS13** | Mohamedha | 1,081 | 451 | **`41.7%`** | -23.3pp (+252 needed) | 514 (47.5%) |
+| **#2** | **ME-EGSS10** | Abdelrhman Shehata | 1,000 | 412 | **`41.2%`** | -23.8pp (+238 needed) | 443 (44.3%) |
+| **#3** | **ME-EGSS01** | Ashraqatal | 936 | 384 | **`41.0%`** | -24.0pp (+224 needed) | 777 (83.0%) |
+| **#4** | **ME-EGSS30** | Adhm GadAllah | 978 | 385 | **`39.4%`** | -25.6pp (+251 needed) | 388 (39.7%) |
+| **#5** | **ME-EGSS05** | Abdelrahman Nasef | 1,032 | 394 | **`38.2%`** | -26.8pp (+277 needed) | 902 (87.4%) |
+
+#### 21 Representatives Official Leaderboard (Strictly Sorted Highest to Lowest Consumption Rate %):
+| Rank | Representative | Team | Total Accounts | Zero-Class (0) | Active Consuming | **Consumption Rate %** | Ended Classes | Status vs 65% Goal |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **#1** | `EGSS-abdelrhmanshehata` | ME-EGSS10 | 192 | 102 (53.1%) | 90 | **`46.9%`** | 135 | +35 needed |
+| **#2** | `EGSS-negma` | ME-EGSS01 | 252 | 139 (55.2%) | 113 | **`44.8%`** | 162 | +51 needed |
+| **#3** | `EGSS-juliamonir01` | ME-EGSS01 | 264 | 146 (55.3%) | 118 | **`44.7%`** | 161 | +54 needed |
+| **#4** | `EGSS-AbdelrahmanNASEF` | ME-EGSS05 | 219 | 122 (55.7%) | 97 | **`44.3%`** | 147 | +46 needed |
+| **#5** | `EGSS-ehabzaky01` | ME-EGSS05 | 238 | 133 (55.9%) | 105 | **`44.1%`** | 160 | +50 needed |
+| **#6** | `EGSS-ashraqatal` | ME-EGSS01 | 253 | 142 (56.1%) | 111 | **`43.9%`** | 160 | +54 needed |
+| **#7** | `EGSS-AhmedShoukry` | ME-EGSS10 | 281 | 158 (56.2%) | 123 | **`43.8%`** | 189 | +60 needed |
+| **#8** | `EGSS-titooooo` | ME-EGSS30 | 248 | 141 (56.9%) | 107 | **`43.1%`** | 157 | +55 needed |
+| **#9** | `EGSS-hayamhassan` | ME-EGSS13 | 149 | 86 (57.7%) | 63 | **`42.3%`** | 101 | +34 needed |
+| **#10** | `EGSS-Amrsafwat` | ME-EGSS13 | 268 | 155 (57.8%) | 113 | **`42.2%`** | 163 | +62 needed |
+| **#11** | `EGSS-alihesham01` | ME-EGSS30 | 143 | 83 (58.0%) | 60 | **`42.0%`** | 92 | +33 needed |
+| **#12** | `EGSS-mohamedha` | ME-EGSS13 | 213 | 125 (58.7%) | 88 | **`41.3%`** | 119 | +51 needed |
+| **#13** | `EGSS-marwaahmed` | ME-EGSS13 | 251 | 148 (59.0%) | 103 | **`41.0%`** | 155 | +61 needed |
+| **#14** | `EGSS-Ibrahimismaiel` | ME-EGSS05 | 275 | 168 (61.1%) | 107 | **`38.9%`** | 141 | +72 needed |
+| **#15** | `EGSS-nohayoussry` | ME-EGSS01 | 253 | 156 (61.7%) | 97 | **`38.3%`** | 140 | +68 needed |
+| **#16** | `EGSS-OmarMoneb` | ME-EGSS05 | 219 | 140 (63.9%) | 79 | **`36.1%`** | 116 | +64 needed |
+| **#17** | `EGSS-Mahmoudkhamis` | ME-EGSS10 | 280 | 183 (65.4%) | 97 | **`34.6%`** | 144 | +85 needed |
+| **#18** | `EGSS-samira01` | ME-EGSS05 | 243 | 159 (65.4%) | 84 | **`34.6%`** | 115 | +74 needed |
+| **#19** | `EGSS-AdhmGadAllah` | ME-EGSS30 | 249 | 164 (65.9%) | 85 | **`34.1%`** | 148 | +77 needed |
+| **#20** | `EGSS-mahmoud04` | ME-EGSS01 | 294 | 194 (66.0%) | 100 | **`34.0%`** | 140 | +92 needed |
+| **#21** | `EGSS-KhaledGonam` | ME-EGSS05 | 266 | 180 (67.7%) | 86 | **`32.3%`** | 118 | +87 needed |
 
 ---
 
@@ -63,12 +91,40 @@ The executive dashboard features three dedicated, standalone intelligence hubs m
   - Current Attended: **7 students** (**`0.3%`**)
   - Deficit Gap to Milestone: **938 students**
   - Booked Reservations: **13**
-- **Small Teams Ranking Matrix (Sorted Highest to Lowest %)**:
-  1. 🥇 **ME-EGSS05 (Abdelrahman Nasef)**: **`0.9%`** (4 attended / 431 base | Need: +190)
-  2. 🥈 **ME-EGSS30 (Adhm GadAllah)**: **`0.8%`** (3 attended / 391 base | Need: +173)
-  3. 🥉 **ME-EGSS01 (Ashraqatal)**: **`0.0%`** (0 attended / 460 base | Need: +207)
-  4. 🥉 **ME-EGSS10 (Abdelrhman Shehata)**: **`0.0%`** (0 attended / 403 base | Need: +181)
-  5. 🥉 **ME-EGSS13 (Mohamedha)**: **`0.0%`** (0 attended / 415 base | Need: +187)
+
+#### Small Teams Ranking Matrix vs 45% Goal (Strictly Sorted Highest to Lowest %):
+| Rank | Small Team | Team Leader | Qualified Base | Booked Classes | Attended Classes | **Adoption Rate %** | Deficit Gap to 45% |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **#1** | **ME-EGSS05** | Abdelrahman Nasef | 431 | 8 | 4 | **`0.9%`** | -44.1pp (+190 needed) |
+| **#2** | **ME-EGSS30** | Adhm GadAllah | 391 | 5 | 3 | **`0.8%`** | -44.2pp (+173 needed) |
+| **#3** | **ME-EGSS01** | Ashraqatal | 460 | 0 | 0 | **`0.0%`** | -45.0pp (+207 needed) |
+| **#4** | **ME-EGSS10** | Abdelrhman Shehata | 403 | 0 | 0 | **`0.0%`** | -45.0pp (+181 needed) |
+| **#5** | **ME-EGSS13** | Mohamedha | 415 | 0 | 0 | **`0.0%`** | -45.0pp (+187 needed) |
+
+#### 21 Representatives English Club Leaderboard (Strictly Sorted Highest to Lowest %):
+| Rank | Representative | Team | Student Base | Booked Classes | Attended Classes | **Adoption Rate %** | Status vs 45% Goal |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **#1** | `EGSS-AbdelrahmanNASEF` | ME-EGSS05 | 91 | 3 | 2 | **`2.2%`** | +39 needed |
+| **#2** | `EGSS-ehabzaky01` | ME-EGSS05 | 109 | 3 | 2 | **`1.8%`** | +47 needed |
+| **#3** | `EGSS-titooooo` | ME-EGSS30 | 109 | 3 | 2 | **`1.8%`** | +47 needed |
+| **#4** | `EGSS-samira01` | ME-EGSS05 | 77 | 2 | 1 | **`1.3%`** | +34 needed |
+| **#5** | `EGSS-Ibrahimismaiel` | ME-EGSS05 | 112 | 0 | 0 | **`0.0%`** | +50 needed |
+| **#6** | `EGSS-abdelrhmanshehata` | ME-EGSS10 | 77 | 0 | 0 | **`0.0%`** | +35 needed |
+| **#7** | `EGSS-marwaahmed` | ME-EGSS13 | 95 | 0 | 0 | **`0.0%`** | +43 needed |
+| **#8** | `EGSS-juliamonir01` | ME-EGSS01 | 87 | 0 | 0 | **`0.0%`** | +39 needed |
+| **#9** | `EGSS-negma` | ME-EGSS01 | 113 | 0 | 0 | **`0.0%`** | +51 needed |
+| **#10** | `EGSS-OmarMoneb` | ME-EGSS05 | 86 | 0 | 0 | **`0.0%`** | +39 needed |
+| **#11** | `EGSS-ashraqatal` | ME-EGSS01 | 119 | 0 | 0 | **`0.0%`** | +54 needed |
+| **#12** | `EGSS-nohayoussry` | ME-EGSS01 | 135 | 0 | 0 | **`0.0%`** | +61 needed |
+| **#13** | `EGSS-alihesham01` | ME-EGSS30 | 47 | 0 | 0 | **`0.0%`** | +21 needed |
+| **#14** | `EGSS-AhmedShoukry` | ME-EGSS10 | 133 | 0 | 0 | **`0.0%`** | +60 needed |
+| **#15** | `EGSS-Mahmoudkhamis` | ME-EGSS10 | 124 | 0 | 0 | **`0.0%`** | +56 needed |
+| **#16** | `EGSS-hayamhassan` | ME-EGSS13 | 109 | 0 | 0 | **`0.0%`** | +49 needed |
+| **#17** | `EGSS-KhaledGonam` | ME-EGSS05 | 92 | 0 | 0 | **`0.0%`** | +41 needed |
+| **#18** | `EGSS-AdhmGadAllah` | ME-EGSS30 | 81 | 0 | 0 | **`0.0%`** | +36 needed |
+| **#19** | `EGSS-mahmoud04` | ME-EGSS01 | 104 | 0 | 0 | **`0.0%`** | +47 needed |
+| **#20** | `EGSS-Amrsafwat` | ME-EGSS13 | 115 | 0 | 0 | **`0.0%`** | +52 needed |
+| **#21** | `EGSS-mohamedha` | ME-EGSS13 | 85 | 0 | 0 | **`0.0%`** | +38 needed |
 
 ---
 
@@ -76,14 +132,14 @@ The executive dashboard features three dedicated, standalone intelligence hubs m
 
 In compliance with executive directives, **all rankings across all pages and tables are strictly sorted from Highest to Lowest Percentage**:
 
-1. **Executive Overview**: Individual sales specialists ranked #1 to #21 by Cash Achievement % descending.
+1. **Executive Overview**: Individual sales specialists ranked #1 to #21 by Cash Achievement % descending (`ach-desc`).
 2. **Small Teams Performance**: Teams ranked #1 to #5 by Cash Achievement % descending; individual member rosters inside cards sorted by Achievement % descending.
 3. **Class Consumption Hub**: Small team comparison matrix and the 21-rep data table ranked from highest to lowest Consumption Rate % (`(Total - C0) / Total`).
-4. **Early Upgrade Hub**: Small teams and individual reps ranked by M2 Conversion Rate % descending.
+4. **Early Upgrade Hub**: Small teams and individual reps ranked by M2 Conversion Rate % descending (`rate-desc`).
 5. **English Club Hub**: Small teams and individual reps ranked by Adoption % descending.
 6. **SOP Compliance Matrix**: Ranked by overall stage compliance % descending.
 7. **Operations Master Modules**:
-   - Module 1 (SOP Pending): Sorted by total pending volume / critical urgency.
+   - Module 1 (SOP Pending): Sorted by total pending volume / critical urgency descending.
    - Module 2 (Unfixed Teachers): Sorted by M0 Teacher Binding % descending.
    - Module 3 (Class Consumption): Sorted by Active Student Rate % descending.
    - Module 4 (English Club): Sorted by Attendance Rate % descending.
