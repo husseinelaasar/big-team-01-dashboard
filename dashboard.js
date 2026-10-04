@@ -4370,7 +4370,7 @@ function onPersonalRepSelected() {
 
   if (btn) {
     btn.style.display = 'inline-flex';
-    btn.innerHTML = `📥 تحميل مهام ${rep} (.CSV)`;
+    btn.innerHTML = `📥 Download Leads for ${rep} (.CSV)`;
   }
 
   const info = (window.LEADS_SUMMARY && window.LEADS_SUMMARY[rep]) || { sopCount: 0, ftCount: 0, ccCount: 0, ecCount: 0, totalLeads: 0 };
@@ -4379,27 +4379,27 @@ function onPersonalRepSelected() {
     summaryBox.style.display = 'block';
     cardsContainer.innerHTML = `
       <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 مهام الـ SOP المعلقة (SOP Tasks)</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.sopCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">مهمة</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">متابعة وتوعية فورية للطلاب</div>
+        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 Pending SOP Tasks</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.sopCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">tasks</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Immediate follow-up & awareness</div>
       </div>
 
       <div style="background: rgba(160, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 طلاب بدون معلم ثابت (Unfixed Teachers)</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ftCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طالب</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف الربط 80%</div>
+        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 Students Without Fixed Teachers</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ftCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">students</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 80%</div>
       </div>
 
       <div style="background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 استنقاذ استهلاك الحصص (Consumption Rescue)</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ccCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">حساب</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">التركيز على حسابات الصفر حصة</div>
+        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 Class Consumption Rescue</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ccCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">accounts</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Zero-Class focus</div>
       </div>
 
       <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ نادي اللغة الإنجليزية (English Club Leads)</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ecCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طالب مؤهل</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف التفعيل 40%</div>
+        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ English Club Qualified Leads</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ecCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">qualified</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Targeting 40% adoption</div>
       </div>
     `;
   }
@@ -4460,37 +4460,37 @@ function onPersonalTeamSelected() {
 
   if (btn) {
     btn.style.display = 'inline-flex';
-    btn.innerHTML = `📥 تحميل مهام ${teamKey} (.CSV)`;
+    btn.innerHTML = `📥 Download Leads for ${teamKey} (.CSV)`;
   }
 
   if (summaryBox && cardsContainer) {
     summaryBox.style.display = 'block';
-    if (titleElem) titleElem.textContent = `📊 ملخص المهام الميدانية: ${teamData.label}`;
-    if (badgeElem) badgeElem.textContent = `${teamData.repsCount} موظف مبيعات نشط بالفريق`;
+    if (titleElem) titleElem.textContent = `📊 ${teamData.label} — Live Operational Summary`;
+    if (badgeElem) badgeElem.textContent = `${teamData.repsCount} Sales Reps Active`;
 
     cardsContainer.innerHTML = `
       <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 مهام الـ SOP المعلقة (SOP Tasks)</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.sopCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">مهمة</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">إجمالي مهام المتابعة للفريق</div>
+        <div style="font-size: 0.72rem; color: #93c5fd; font-weight: 700; text-transform: uppercase;">📋 Pending SOP Tasks</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.sopCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">tasks</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Team follow-up pipeline</div>
       </div>
 
       <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 طلاب بدون معلم ثابت (Unfixed Teachers)</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ftCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طالب</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف الربط 80%</div>
+        <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 Students Without Fixed Teachers</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ftCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">students</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 80%</div>
       </div>
 
       <div style="background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 استنقاذ استهلاك الحصص (Consumption Rescue)</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ccCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">حساب</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">التركيز على حسابات الصفر حصة</div>
+        <div style="font-size: 0.72rem; color: #fdba74; font-weight: 700; text-transform: uppercase;">🎓 Class Consumption Rescue</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ccCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">accounts</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Zero-Class focus</div>
       </div>
 
       <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
-        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ نادي اللغة الإنجليزية (English Club Leads)</div>
-        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ecCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">طالب مؤهل</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">مستهدف التفعيل 40%</div>
+        <div style="font-size: 0.72rem; color: #d8b4fe; font-weight: 700; text-transform: uppercase;">🗣️ English Club Qualified Leads</div>
+        <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ecCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">qualified</span></div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Targeting 40% adoption</div>
       </div>
     `;
   }
@@ -4525,10 +4525,425 @@ window.downloadSelectedRepLeads = downloadSelectedRepLeads;
 window.initPersonalTeamSelect = initPersonalTeamSelect;
 window.onPersonalTeamSelected = onPersonalTeamSelected;
 window.downloadSelectedTeamLeads = downloadSelectedTeamLeads;
+window.renderConsumptionTab = renderConsumptionTab;
+window.renderEnglishClubTab = renderEnglishClubTab;
 
 // =========================================================================
 // NAVIGATION, EVENTS & APPLICATION INITIALIZATION
 // =========================================================================
+
+
+// =========================================================================
+// DEDICATED CLASS CONSUMPTION INTELLIGENCE HUB (TARGET: 65.0% OVERALL)
+// =========================================================================
+function renderConsumptionTab() {
+  const kpisContainer = document.getElementById('consumptionKpis');
+  const teamsGrid = document.getElementById('consumptionTeamsGrid');
+  const tableContainer = document.getElementById('consumptionTableContainer');
+  if (!kpisContainer || !teamsGrid || !tableContainer || !window.MASTER_OPERATIONS_DATA) return;
+
+  const teamKeys = ["ME-EGSS01", "ME-EGSS05", "ME-EGSS10", "ME-EGSS13", "ME-EGSS30"];
+  const allData = window.MASTER_OPERATIONS_DATA.consumption || [];
+
+  let bigTot = 0, bigC0 = 0, bigEnd = 0, bigActive = 0;
+  const teamMetrics = {};
+
+  teamKeys.forEach(tk => {
+    const reps = allData.filter(r => r.team === tk);
+    const total = reps.reduce((s, r) => s + (r.total || 0), 0);
+    const c0 = reps.reduce((s, r) => s + (r.c0 || 0), 0);
+    const end = reps.reduce((s, r) => s + (r.end_classes || 0), 0);
+    const active = total - c0;
+    const rate = total > 0 ? ((active / total) * 100) : 0;
+    const goal65 = Math.ceil(total * 0.65);
+    const gap = Math.max(0, goal65 - active);
+    const gapPct = rate - 65.0;
+
+    teamMetrics[tk] = { total, c0, end, active, rate, goal65, gap, gapPct, repsCount: reps.length };
+    bigTot += total; bigC0 += c0; bigEnd += end; bigActive += active;
+  });
+
+  const bigRate = bigTot > 0 ? ((bigActive / bigTot) * 100) : 0;
+  const bigGoal65 = Math.ceil(bigTot * 0.65);
+  const bigGap = Math.max(0, bigGoal65 - bigActive);
+  const bigGapPct = bigRate - 65.0;
+  const zeroPct = bigTot > 0 ? ((bigC0 / bigTot) * 100).toFixed(1) : '0.0';
+
+  // 1. Render Top Executive KPI Deck
+  kpisContainer.innerHTML = `
+    <div class="kpi-card" style="border-top: 4px solid #10b981;">
+      <div class="kpi-label">Big Team 01 — Sector Consumption Rate</div>
+      <div class="kpi-value" style="color: #10b981; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
+        ${bigRate.toFixed(1)}%
+        <span style="font-size: 0.82rem; color: #94a3b8; font-weight: 600;">(vs 65.0% Target)</span>
+      </div>
+      <div class="kpi-sub" style="display:flex; justify-content:space-between; margin-top:4px;">
+        <span>Deficit Gap: <strong style="color: #f59e0b;">${bigGapPct.toFixed(1)}pp</strong></span>
+        <span>Goal: <strong>65.0%</strong></span>
+      </div>
+      <div class="kpi-progress" style="margin-top: 10px; position:relative; background:rgba(255,255,255,0.08); height:9px; border-radius:6px; overflow:hidden;">
+        <div class="kpi-bar" style="width: ${Math.min(100, bigRate)}%; background: linear-gradient(90deg, #10b981, #06b6d4); height:100%;"></div>
+      </div>
+      <div class="kpi-pct" style="color: var(--text-secondary); margin-top:6px;">${bigActive.toLocaleString()} active students out of ${bigTot.toLocaleString()} total accounts</div>
+    </div>
+
+    <div class="kpi-card" style="border-top: 4px solid #f43f5e;">
+      <div class="kpi-label">Zero-Class Accounts (Rescue Priority)</div>
+      <div class="kpi-value" style="color: #f43f5e; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
+        ${bigC0.toLocaleString()}
+        <span style="font-size: 0.85rem; color: #fda4af;">(${zeroPct}%)</span>
+      </div>
+      <div class="kpi-sub">Students with 0 completed classes this month</div>
+      <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
+        <div class="kpi-bar" style="width: ${zeroPct}%; background: #f43f5e; height:100%;"></div>
+      </div>
+      <div class="kpi-pct" style="color: #f43f5e; margin-top:6px;">Immediate reactivation outreach required</div>
+    </div>
+
+    <div class="kpi-card" style="border-top: 4px solid #06b6d4;">
+      <div class="kpi-label">Total Completed Classes MTD</div>
+      <div class="kpi-value" style="color: #06b6d4; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
+        ${bigEnd.toLocaleString()}
+      </div>
+      <div class="kpi-sub">Total ended lesson units across 5 Small Teams</div>
+      <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
+        <div class="kpi-bar" style="width: ${Math.min(100, (bigEnd / 4000) * 100)}%; background: #06b6d4; height:100%;"></div>
+      </div>
+      <div class="kpi-pct" style="color: #38bdf8; margin-top:6px;">Average ${(bigEnd / (bigActive || 1)).toFixed(1)} classes per active student</div>
+    </div>
+
+    <div class="kpi-card" style="border-top: 4px solid #c084fc;">
+      <div class="kpi-label">Active Students Needed for 65% Goal</div>
+      <div class="kpi-value" style="color: #c084fc; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
+        +${bigGap.toLocaleString()}
+      </div>
+      <div class="kpi-sub">Target: ${bigGoal65.toLocaleString()} active students (65% of ${bigTot.toLocaleString()})</div>
+      <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
+        <div class="kpi-bar" style="width: ${((bigActive / (bigGoal65 || 1)) * 100).toFixed(1)}%; background: #c084fc; height:100%;"></div>
+      </div>
+      <div class="kpi-pct" style="color: #c084fc; margin-top:6px;">Pacing ${((bigActive / (bigGoal65 || 1)) * 100).toFixed(1)}% towards milestone</div>
+    </div>
+  `;
+
+  // 2. Render Small Teams Comparison Matrix vs 65% Benchmark
+  const sortedTeams = [...teamKeys].sort((a, b) => teamMetrics[b].rate - teamMetrics[a].rate);
+  teamsGrid.innerHTML = sortedTeams.map((tk, idx) => {
+    const tm = teamMetrics[tk];
+    const shortKey = tk.replace('ME-', '');
+    const tl = TL_MAPPING[shortKey];
+    const isTop = idx === 0;
+    const rateClr = tm.rate >= 65 ? '#10b981' : tm.rate >= 40 ? '#f59e0b' : '#f43f5e';
+    const statusBadge = tm.rate >= 65 
+      ? '<span style="background:rgba(16,185,129,0.15); color:#10b981; padding:3px 8px; border-radius:4px; font-size:0.72rem; font-weight:700;">🟢 MET 65%</span>'
+      : `<span style="background:rgba(245,158,11,0.15); color:#f59e0b; padding:3px 8px; border-radius:4px; font-size:0.72rem; font-weight:700;">🟡 GAP: ${tm.gapPct.toFixed(1)}pp</span>`;
+
+    return `
+      <div class="calc-card" style="border-top: 4px solid ${tl?.color || '#6366f1'}; background: var(--bg-card); position:relative; overflow:hidden;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <h4 style="font-size:1.1rem; font-weight:800; color:#fff; margin:0;">${tl?.fullName || tk}</h4>
+              <span style="font-size:0.7rem; font-weight:800; background:rgba(255,255,255,0.06); color:${tl?.color || '#6366f1'}; padding:2px 8px; border-radius:4px;">Rank #${idx + 1}</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">${tm.repsCount} SS Representatives</div>
+          </div>
+          <div>${statusBadge}</div>
+        </div>
+
+        <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:8px;">
+          <div>
+            <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;">Consumption Rate:</span>
+            <div style="font-family:var(--font-mono); font-size:1.85rem; font-weight:900; color:${rateClr};">
+              ${tm.rate.toFixed(1)}%
+              <span style="font-size:0.8rem; color:#94a3b8; font-weight:600;">/ 65.0%</span>
+            </div>
+          </div>
+          <div style="text-align:right;">
+            <span style="font-size:0.72rem; color:var(--text-muted);">Active / Total:</span>
+            <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:#fff;">${tm.active} / ${tm.total}</div>
+          </div>
+        </div>
+
+        <!-- Progress Bar with Target Marker -->
+        <div style="position:relative; height:8px; background:rgba(255,255,255,0.06); border-radius:4px; overflow:hidden; margin-bottom:14px;">
+          <div style="height:100%; width:${Math.min(100, (tm.rate / 65) * 100)}%; background:${rateClr};"></div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; background:rgba(255,255,255,0.02); padding:10px; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,0.04); font-size:0.78rem;">
+          <div>
+            <span style="color:var(--text-muted); display:block; font-size:0.7rem;">Zero-Class</span>
+            <strong style="color:#f43f5e; font-family:var(--font-mono); font-size:0.95rem;">${tm.c0}</strong>
+          </div>
+          <div>
+            <span style="color:var(--text-muted); display:block; font-size:0.7rem;">Classes Ended</span>
+            <strong style="color:#38bdf8; font-family:var(--font-mono); font-size:0.95rem;">${tm.end}</strong>
+          </div>
+          <div>
+            <span style="color:var(--text-muted); display:block; font-size:0.7rem;">Need to 65%</span>
+            <strong style="color:#c084fc; font-family:var(--font-mono); font-size:0.95rem;">+${tm.gap}</strong>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // 3. Render Individual Rep Consumption Table
+  const filterVal = document.getElementById('consumptionTeamFilter')?.value || 'ALL';
+  const filteredData = (filterVal === 'ALL') ? allData : allData.filter(r => r.team === filterVal);
+
+  let rowsHtml = filteredData.map((r, idx) => {
+    const active = r.total - r.c0;
+    const rate = r.total > 0 ? ((active / r.total) * 100).toFixed(1) : '0.0';
+    const zeroPct = r.total > 0 ? ((r.c0 / r.total) * 100).toFixed(1) : '0.0';
+    const rateClr = parseFloat(rate) >= 65 ? '#10b981' : parseFloat(rate) >= 40 ? '#f59e0b' : '#f43f5e';
+    const zeroClr = parseFloat(zeroPct) > 60 ? '#f43f5e' : parseFloat(zeroPct) > 40 ? '#f59e0b' : '#10b981';
+    const goal65 = Math.ceil(r.total * 0.65);
+    const need = Math.max(0, goal65 - active);
+
+    const badge = parseFloat(rate) >= 65 
+      ? '<span style="background:rgba(16,185,129,0.15); color:#10b981; padding:2px 8px; border-radius:4px; font-weight:700; font-size:0.72rem;">Goal Met 🎉</span>'
+      : `<span style="color:#f59e0b; font-family:var(--font-mono); font-size:0.78rem; font-weight:700;">+${need} needed</span>`;
+
+    return `
+      <tr>
+        <td style="font-family:var(--font-mono); color:var(--text-muted);">${idx + 1}</td>
+        <td style="font-weight:600; color:#fff;">${r.name}</td>
+        <td><span class="team-badge" style="font-size:0.72rem;">${r.team}</span></td>
+        <td style="font-family:var(--font-mono); font-weight:800; color:#fff;">${r.total}</td>
+        <td style="font-family:var(--font-mono); color:${zeroClr}; font-weight:700;">${r.c0} <span style="font-size:0.72rem; color:var(--text-muted);">(${zeroPct}%)</span></td>
+        <td style="font-family:var(--font-mono); font-weight:800; color:${rateClr};">${active} (${rate}%)</td>
+        <td style="font-family:var(--font-mono); color:#cbd5e1;">${r.c1_3 || 0}</td>
+        <td style="font-family:var(--font-mono); color:#cbd5e1;">${r.c4_7 || 0}</td>
+        <td style="font-family:var(--font-mono); color:#cbd5e1;">${r.c8_11 || 0}</td>
+        <td style="font-family:var(--font-mono); color:#cbd5e1;">${r.c12_14 || 0}</td>
+        <td style="font-family:var(--font-mono); color:#cbd5e1;">${r.c15 || 0}</td>
+        <td style="font-family:var(--font-mono); font-weight:800; color:#38bdf8;">${r.end_classes || 0}</td>
+        <td style="font-family:var(--font-mono); text-align:center;">${badge}</td>
+      </tr>
+    `;
+  }).join('');
+
+  tableContainer.innerHTML = `
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Representative</th>
+          <th>Team</th>
+          <th>Total Accounts</th>
+          <th>Zero-Class (0)</th>
+          <th>Active Consuming (Rate %)</th>
+          <th>1-3</th>
+          <th>4-7</th>
+          <th>8-11</th>
+          <th>12-14</th>
+          <th>15+</th>
+          <th style="color:#38bdf8;">Ended Classes</th>
+          <th style="text-align:center;">Status vs 65% Target</th>
+        </tr>
+      </thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>
+  `;
+}
+
+// =========================================================================
+// DEDICATED ENGLISH CLUB STRATEGIC ADOPTION HUB (TARGET: 45.0% OF BASE)
+// =========================================================================
+function renderEnglishClubTab() {
+  const kpisContainer = document.getElementById('englishClubKpis');
+  const teamsGrid = document.getElementById('englishClubTeamsGrid');
+  const tableContainer = document.getElementById('englishClubTableContainer');
+  if (!kpisContainer || !teamsGrid || !tableContainer || !window.MASTER_OPERATIONS_DATA) return;
+
+  const teamKeys = ["ME-EGSS01", "ME-EGSS05", "ME-EGSS10", "ME-EGSS13", "ME-EGSS30"];
+  const allData = window.MASTER_OPERATIONS_DATA.englishClub || [];
+
+  let bigBase = 0, bigBook = 0, bigAtt = 0;
+  const teamMetrics = {};
+
+  teamKeys.forEach(tk => {
+    const reps = allData.filter(r => r.team === tk);
+    const base = reps.reduce((s, r) => s + (r.base || 0), 0);
+    const book = reps.reduce((s, r) => s + (r.book || 0), 0);
+    const att = reps.reduce((s, r) => s + (r.att || 0), 0);
+    const rate = base > 0 ? ((att / base) * 100) : 0;
+    const goal45 = Math.ceil(base * 0.45);
+    const gap = Math.max(0, goal45 - att);
+    const gapPct = rate - 45.0;
+
+    teamMetrics[tk] = { base, book, att, rate, goal45, gap, gapPct, repsCount: reps.length };
+    bigBase += base; bigBook += book; bigAtt += att;
+  });
+
+  const bigRate = bigBase > 0 ? ((bigAtt / bigBase) * 100) : 0;
+  const bigGoal45 = Math.ceil(bigBase * 0.45);
+  const bigGap = Math.max(0, bigGoal45 - bigAtt);
+  const bigGapPct = bigRate - 45.0;
+
+  // 1. Render Top Executive KPI Deck
+  kpisContainer.innerHTML = `
+    <div class="kpi-card" style="border-top: 4px solid #38bdf8;">
+      <div class="kpi-label">Big Team 01 — English Club Adoption Rate</div>
+      <div class="kpi-value" style="color: #38bdf8; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
+        ${bigRate.toFixed(1)}%
+        <span style="font-size: 0.82rem; color: #94a3b8; font-weight: 600;">(vs 45.0% Goal)</span>
+      </div>
+      <div class="kpi-sub" style="display:flex; justify-content:space-between; margin-top:4px;">
+        <span>Deficit Gap: <strong style="color: #f43f5e;">${bigGapPct.toFixed(1)}pp</strong></span>
+        <span>Goal: <strong>45.0%</strong></span>
+      </div>
+      <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
+        <div class="kpi-bar" style="width: ${Math.min(100, (bigRate / 45) * 100)}%; background: #38bdf8; height:100%;"></div>
+      </div>
+      <div class="kpi-pct" style="color: var(--text-secondary); margin-top:6px;">${bigAtt} attended lessons out of ${bigBase.toLocaleString()} base</div>
+    </div>
+
+    <div class="kpi-card" style="border-top: 4px solid #6366f1;">
+      <div class="kpi-label">Total Qualified Student Base</div>
+      <div class="kpi-value" style="color: #818cf8; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
+        ${bigBase.toLocaleString()}
+      </div>
+      <div class="kpi-sub">Total students eligible across 5 Small Teams</div>
+      <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
+        <div class="kpi-bar" style="width: 100%; background: #6366f1; height:100%;"></div>
+      </div>
+      <div class="kpi-pct" style="color: #818cf8; margin-top:6px;">21 active SS representatives handling cohort</div>
+    </div>
+
+    <div class="kpi-card" style="border-top: 4px solid #c084fc;">
+      <div class="kpi-label">Sector 45% Milestone Target</div>
+      <div class="kpi-value" style="color: #c084fc; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
+        ${bigGoal45.toLocaleString()} <span style="font-size:0.8rem; color:#94a3b8; font-weight:normal;">attendances</span>
+      </div>
+      <div class="kpi-sub">Benchmark: 45.0% of total student base</div>
+      <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
+        <div class="kpi-bar" style="width: ${((bigAtt / (bigGoal45 || 1)) * 100).toFixed(1)}%; background: #c084fc; height:100%;"></div>
+      </div>
+      <div class="kpi-pct" style="color: #c084fc; margin-top:6px;">${bigBook} total booked reservations so far</div>
+    </div>
+
+    <div class="kpi-card" style="border-top: 4px solid #f43f5e;">
+      <div class="kpi-label">Deficit Gap to 45% Milestone</div>
+      <div class="kpi-value" style="color: #f43f5e; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
+        +${bigGap.toLocaleString()}
+      </div>
+      <div class="kpi-sub">Additional student attendances needed</div>
+      <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
+        <div class="kpi-bar" style="width: ${Math.min(100, (bigGap / bigGoal45) * 100)}%; background: #f43f5e; height:100%;"></div>
+      </div>
+      <div class="kpi-pct" style="color: #f43f5e; margin-top:6px;">Push needed on lesson reservation confirmations</div>
+    </div>
+  `;
+
+  // 2. Render Small Teams Benchmark Matrix
+  const sortedTeams = [...teamKeys].sort((a, b) => teamMetrics[b].rate - teamMetrics[a].rate);
+  teamsGrid.innerHTML = sortedTeams.map((tk, idx) => {
+    const tm = teamMetrics[tk];
+    const shortKey = tk.replace('ME-', '');
+    const tl = TL_MAPPING[shortKey];
+    const rateClr = tm.rate >= 45 ? '#10b981' : tm.rate >= 20 ? '#f59e0b' : '#38bdf8';
+    const statusBadge = tm.rate >= 45 
+      ? '<span style="background:rgba(16,185,129,0.15); color:#10b981; padding:3px 8px; border-radius:4px; font-size:0.72rem; font-weight:700;">🟢 MET 45%</span>'
+      : `<span style="background:rgba(244,63,94,0.15); color:#f43f5e; padding:3px 8px; border-radius:4px; font-size:0.72rem; font-weight:700;">🔴 GAP: ${tm.gapPct.toFixed(1)}pp</span>`;
+
+    return `
+      <div class="calc-card" style="border-top: 4px solid ${tl?.color || '#06b6d4'}; background: var(--bg-card); position:relative; overflow:hidden;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <h4 style="font-size:1.1rem; font-weight:800; color:#fff; margin:0;">${tl?.fullName || tk}</h4>
+              <span style="font-size:0.7rem; font-weight:800; background:rgba(255,255,255,0.06); color:${tl?.color || '#06b6d4'}; padding:2px 8px; border-radius:4px;">Rank #${idx + 1}</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">${tm.repsCount} SS Representatives</div>
+          </div>
+          <div>${statusBadge}</div>
+        </div>
+
+        <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:8px;">
+          <div>
+            <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;">Adoption Rate:</span>
+            <div style="font-family:var(--font-mono); font-size:1.85rem; font-weight:900; color:${rateClr};">
+              ${tm.rate.toFixed(1)}%
+              <span style="font-size:0.8rem; color:#94a3b8; font-weight:600;">/ 45.0%</span>
+            </div>
+          </div>
+          <div style="text-align:right;">
+            <span style="font-size:0.72rem; color:var(--text-muted);">Attended / Goal:</span>
+            <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:#fff;">${tm.att} / ${tm.goal45}</div>
+          </div>
+        </div>
+
+        <!-- Progress Bar with Target Marker -->
+        <div style="position:relative; height:8px; background:rgba(255,255,255,0.06); border-radius:4px; overflow:hidden; margin-bottom:14px;">
+          <div style="height:100%; width:${Math.min(100, (tm.rate / 45) * 100)}%; background:${rateClr};"></div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; background:rgba(255,255,255,0.02); padding:10px; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,0.04); font-size:0.78rem;">
+          <div>
+            <span style="color:var(--text-muted); display:block; font-size:0.7rem;">Base</span>
+            <strong style="color:#fff; font-family:var(--font-mono); font-size:0.95rem;">${tm.base}</strong>
+          </div>
+          <div>
+            <span style="color:var(--text-muted); display:block; font-size:0.7rem;">Booked</span>
+            <strong style="color:#38bdf8; font-family:var(--font-mono); font-size:0.95rem;">${tm.book}</strong>
+          </div>
+          <div>
+            <span style="color:var(--text-muted); display:block; font-size:0.7rem;">Need to 45%</span>
+            <strong style="color:#f43f5e; font-family:var(--font-mono); font-size:0.95rem;">+${tm.gap}</strong>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // 3. Render Individual Rep English Club Table
+  const filterVal = document.getElementById('englishClubTeamFilter')?.value || 'ALL';
+  const filteredData = (filterVal === 'ALL') ? allData : allData.filter(r => r.team === filterVal);
+
+  let rowsHtml = filteredData.map((r, idx) => {
+    const pctNum = parseFloat(r.pct) || 0;
+    const rateClr = pctNum >= 45 ? '#10b981' : pctNum >= 25 ? '#f59e0b' : '#38bdf8';
+    const statusBadge = r.need === 0 
+      ? '<span style="background:rgba(16,185,129,0.15); color:#10b981; padding:2px 8px; border-radius:4px; font-weight:700; font-size:0.72rem;">Goal Met 🎉</span>'
+      : `<span style="color:#f43f5e; font-family:var(--font-mono); font-size:0.78rem; font-weight:700;">+${r.need} needed</span>`;
+
+    return `
+      <tr>
+        <td style="font-family:var(--font-mono); color:var(--text-muted);">${idx + 1}</td>
+        <td style="font-weight:600; color:#fff;">${r.name}</td>
+        <td><span class="team-badge" style="font-size:0.72rem;">${r.team}</span></td>
+        <td style="font-family:var(--font-mono); font-weight:800; color:#fff;">${r.base}</td>
+        <td style="font-family:var(--font-mono); color:#38bdf8;">${r.book}</td>
+        <td style="font-family:var(--font-mono); font-weight:800; color:#c084fc;">${r.att}</td>
+        <td style="font-family:var(--font-mono); font-weight:800; color:${rateClr};">${r.pct}</td>
+        <td style="font-family:var(--font-mono); color:#60a5fa;">${r.goal}</td>
+        <td style="text-align:center;">${statusBadge}</td>
+      </tr>
+    `;
+  }).join('');
+
+  tableContainer.innerHTML = `
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Representative</th>
+          <th>Team</th>
+          <th>Qualified Base</th>
+          <th>Booked Lessons</th>
+          <th style="color:#c084fc;">Completed Attendances</th>
+          <th>Adoption Rate (%)</th>
+          <th>45% Target Goal</th>
+          <th style="text-align:center;">Status vs 45% Milestone</th>
+        </tr>
+      </thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>
+  `;
+}
 
 window.switchTab = switchTab;
 function switchTab(tabKey) {
@@ -4613,6 +5028,8 @@ window.addEventListener('DOMContentLoaded', () => {
     { name: 'renderSmallTeamsTab', fn: () => renderSmallTeamsTab(model) },
     { name: 'renderIndividualsTab', fn: () => renderIndividualsTab(model) },
     { name: 'renderBreakdownTab', fn: () => renderBreakdownTab(model) },
+    { name: 'renderConsumptionTab', fn: () => renderConsumptionTab() },
+    { name: 'renderEnglishClubTab', fn: () => renderEnglishClubTab() },
     { name: 'renderSOPTab', fn: () => renderSOPTab() },
     { name: 'renderRecommendationsTab', fn: () => renderRecommendationsTab(model) },
     { name: 'renderOperationsTab', fn: () => renderOperationsTab() },
