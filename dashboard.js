@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -4755,6 +4755,26 @@ function renderConsumptionTab() {
     `;
   }).join('');
 
+  const totTotal = filteredData.reduce((s, r) => s + (r.total || 0), 0);
+  const totC0 = filteredData.reduce((s, r) => s + (r.c0 || 0), 0);
+  const totActive = totTotal - totC0;
+  const totRate = totTotal > 0 ? ((totActive / totTotal) * 100).toFixed(1) : '0.0';
+  const totZeroPct = totTotal > 0 ? ((totC0 / totTotal) * 100).toFixed(1) : '0.0';
+  const totC1_3 = filteredData.reduce((s, r) => s + (r.c1_3 || 0), 0);
+  const totC4_7 = filteredData.reduce((s, r) => s + (r.c4_7 || 0), 0);
+  const totC8_11 = filteredData.reduce((s, r) => s + (r.c8_11 || 0), 0);
+  const totC12_14 = filteredData.reduce((s, r) => s + (r.c12_14 || 0), 0);
+  const totC15 = filteredData.reduce((s, r) => s + (r.c15 || 0), 0);
+  const totEnd = filteredData.reduce((s, r) => s + (r.end_classes || 0), 0);
+  const totGoal65 = Math.ceil(totTotal * 0.65);
+  const totNeed = Math.max(0, totGoal65 - totActive);
+  const totRateClr = parseFloat(totRate) >= 65 ? '#10b981' : parseFloat(totRate) >= 40 ? '#f59e0b' : '#f43f5e';
+  const totZeroClr = parseFloat(totZeroPct) > 60 ? '#f43f5e' : parseFloat(totZeroPct) > 40 ? '#f59e0b' : '#10b981';
+
+  const totStatusBadge = parseFloat(totRate) >= 65 
+    ? '<span style="background:rgba(16,185,129,0.2); color:#10b981; padding:3px 10px; border-radius:4px; font-weight:800; font-size:0.75rem;">Goal Met 🎉</span>'
+    : `<span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:3px 10px; border-radius:4px; font-weight:800; font-size:0.75rem;">+${totNeed.toLocaleString()} needed</span>`;
+
   tableContainer.innerHTML = `
     <table class="data-table">
       <thead>
@@ -4775,6 +4795,24 @@ function renderConsumptionTab() {
         </tr>
       </thead>
       <tbody>${rowsHtml}</tbody>
+      <tfoot>
+        <tr style="background: linear-gradient(90deg, rgba(99, 102, 241, 0.18), rgba(15, 23, 42, 0.85)); font-weight: 800; border-top: 2px solid var(--accent-indigo); font-size: 0.88rem;">
+          <td colspan="2" style="color: #fff; text-align: left; padding: 12px 14px; font-weight: 800;">
+            ⭐ TOTAL (${filterVal === 'ALL' ? 'SECTOR OVERALL — 21 REPS' : filterVal})
+          </td>
+          <td>${filterVal === 'ALL' ? '<span class="team-badge" style="background:rgba(56,189,248,0.15); color:#38bdf8; border:1px solid rgba(56,189,248,0.4);">Sector Total</span>' : renderTeamBadge(filterVal)}</td>
+          <td style="font-family:var(--font-mono); font-weight:900; color:#fff; font-size:0.95rem;">${totTotal.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); color:${totZeroClr}; font-weight:800;">${totC0.toLocaleString()} <span style="font-size:0.72rem; color:var(--text-muted);">(${totZeroPct}%)</span></td>
+          <td style="font-family:var(--font-mono); font-weight:900; color:${totRateClr}; font-size:0.95rem;">${totActive.toLocaleString()} (${totRate}%)</td>
+          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC1_3.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC4_7.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC8_11.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC12_14.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC15.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); font-weight:900; color:#38bdf8; font-size:0.95rem;">${totEnd.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); text-align:center;">${totStatusBadge}</td>
+        </tr>
+      </tfoot>
     </table>
   `;
 }
@@ -4963,11 +5001,23 @@ function renderEnglishClubTab() {
     `;
   }).join('');
 
+  const totBase = filteredData.reduce((s, r) => s + (r.base || 0), 0);
+  const totBook = filteredData.reduce((s, r) => s + (r.book || 0), 0);
+  const totAtt = filteredData.reduce((s, r) => s + (r.att || 0), 0);
+  const totEcRate = totBase > 0 ? ((totAtt / totBase) * 100).toFixed(1) : '0.0';
+  const totGoal45 = Math.ceil(totBase * 0.45);
+  const totEcNeed = Math.max(0, totGoal45 - totAtt);
+  const totEcRateClr = parseFloat(totEcRate) >= 45 ? '#10b981' : parseFloat(totEcRate) >= 20 ? '#f59e0b' : '#38bdf8';
+
+  const totEcBadge = totEcNeed === 0 
+    ? '<span style="background:rgba(16,185,129,0.2); color:#10b981; padding:3px 10px; border-radius:4px; font-weight:800; font-size:0.75rem;">Goal Met 🎉</span>'
+    : `<span style="background:rgba(244,63,94,0.18); color:#f43f5e; padding:3px 10px; border-radius:4px; font-weight:800; font-size:0.75rem;">+${totEcNeed.toLocaleString()} needed</span>`;
+
   tableContainer.innerHTML = `
     <table class="data-table">
       <thead>
         <tr>
-          <th>#</th>
+          <th style="text-align:center;">#</th>
           <th>Representative</th>
           <th>Team</th>
           <th>Qualified Base</th>
@@ -4979,6 +5029,20 @@ function renderEnglishClubTab() {
         </tr>
       </thead>
       <tbody>${rowsHtml}</tbody>
+      <tfoot>
+        <tr style="background: linear-gradient(90deg, rgba(6, 182, 212, 0.18), rgba(15, 23, 42, 0.85)); font-weight: 800; border-top: 2px solid #06b6d4; font-size: 0.88rem;">
+          <td colspan="2" style="color: #fff; text-align: left; padding: 12px 14px; font-weight: 800;">
+            ⭐ TOTAL (${filterVal === 'ALL' ? 'SECTOR OVERALL — 21 REPS' : filterVal})
+          </td>
+          <td>${filterVal === 'ALL' ? '<span class="team-badge" style="background:rgba(56,189,248,0.15); color:#38bdf8; border:1px solid rgba(56,189,248,0.4);">Sector Total</span>' : renderTeamBadge(filterVal)}</td>
+          <td style="font-family:var(--font-mono); font-weight:900; color:#fff; font-size:0.95rem;">${totBase.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); color:#38bdf8; font-weight:800;">${totBook.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); font-weight:900; color:#c084fc; font-size:0.95rem;">${totAtt.toLocaleString()}</td>
+          <td style="font-family:var(--font-mono); font-weight:900; color:${totEcRateClr}; font-size:0.95rem;">${totEcRate}%</td>
+          <td style="font-family:var(--font-mono); color:#60a5fa; font-weight:800;">${totGoal45.toLocaleString()}</td>
+          <td style="text-align:center;">${totEcBadge}</td>
+        </tr>
+      </tfoot>
     </table>
   `;
 }

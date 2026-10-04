@@ -69,8 +69,8 @@ The executive dashboard features three dedicated, standalone intelligence hubs m
 | **#17** | `EGSS-Mahmoudkhamis` | ME-EGSS10 | 280 | 183 (65.4%) | 97 | **`34.6%`** | 144 | +85 needed |
 | **#18** | `EGSS-samira01` | ME-EGSS05 | 243 | 159 (65.4%) | 84 | **`34.6%`** | 115 | +74 needed |
 | **#19** | `EGSS-AdhmGadAllah` | ME-EGSS30 | 249 | 164 (65.9%) | 85 | **`34.1%`** | 148 | +77 needed |
-| **#20** | `EGSS-mahmoud04` | ME-EGSS01 | 294 | 194 (66.0%) | 100 | **`34.0%`** | 140 | +92 needed |
 | **#21** | `EGSS-KhaledGonam` | ME-EGSS05 | 266 | 180 (67.7%) | 86 | **`32.3%`** | 118 | +87 needed |
+| **TOTAL** | **⭐ Big Team 01 (Sector Total)** | **All 5 Teams** | **5,050** | **3,024 (59.9%)** | **2,026** | **`40.1%`** | **4,625** | **+1,257 needed** |
 
 ---
 
@@ -125,6 +125,7 @@ The executive dashboard features three dedicated, standalone intelligence hubs m
 | **#19** | `EGSS-mahmoud04` | ME-EGSS01 | 104 | 0 | 0 | **`0.0%`** | +47 needed |
 | **#20** | `EGSS-Amrsafwat` | ME-EGSS13 | 115 | 0 | 0 | **`0.0%`** | +52 needed |
 | **#21** | `EGSS-mohamedha` | ME-EGSS13 | 85 | 0 | 0 | **`0.0%`** | +38 needed |
+| **TOTAL** | **⭐ Big Team 01 (Sector Total)** | **All 5 Teams** | **2,100** | **13** | **7** | **`0.3%`** | **+938 needed** |
 
 ---
 
