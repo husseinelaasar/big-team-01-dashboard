@@ -1,26 +1,14 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-hayamhassan | Generated: 2026-10-04 05:18
+# Representative: EGSS-hayamhassan | Generated: 2026-10-04 13:26
 
-=== 1. SOP PENDING TASKS (28) ===
+=== 1. SOP PENDING TASKS (16) ===
 Student_ID,Task_Name,Expiration_Time
-64353739,"Round 1  Awareness building (First call)",20261005 18:55:00
-58115208,"Round 6 Premium Service(Outside Renewal Pool)",20261006 18:55:00
-58660535,"English Club Booking",20261006 18:55:00
-61617671,"English Club Booking",20261006 18:55:00
-63462442,"English Club Booking",20261006 18:55:00
-63603120,"English Club Booking",20261006 18:55:00
-63661989,"English Club Booking",20261006 18:55:00
-63891622,"English Club Booking",20261006 18:55:00
-63986210,"English Club Booking",20261006 18:55:00
-64348440,"English Club Booking",20261006 18:55:00
+60146292,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261007 18:55:00
+63441841,"English Club Booking",20261007 18:55:00
+63886277,"English Club Booking",20261007 18:55:00
 58660535,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 60500285,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
-61586385,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
-63902700,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
-63912482,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63920539,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
-63924737,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
-63928664,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63954159,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63966889,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63986210,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
@@ -28,12 +16,12 @@ Student_ID,Task_Name,Expiration_Time
 64105746,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 64113273,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 64113613,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
-64170627,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63925269,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 18:59:59
 61524054,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
+63891622,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (23) ===
-Student_ID,Pool_Cohort,Classes,Priority
+=== 2. UNFIXED TEACHER BINDING LEADS (18) ===
+Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 61524054,"M1 Pool",0,"HIGH BINDING"
 63595698,"M2 Pool",0,"MEDIUM BINDING"
 63605140,"M2 Pool",0,"MEDIUM BINDING"
@@ -47,19 +35,14 @@ Student_ID,Pool_Cohort,Classes,Priority
 63789772,"M2 Pool",0,"MEDIUM BINDING"
 63801429,"M2 Pool",0,"MEDIUM BINDING"
 63868002,"M2 Pool",0,"MEDIUM BINDING"
+63925269,"M1 Pool",0,"HIGH BINDING"
 64191615,"M0 Pool",0,"CRITICAL (0 Classes)"
 64327809,"M0 Pool",0,"CRITICAL (0 Classes)"
-64353739,"M0 Pool",0,"CRITICAL (0 Classes)"
-64418743,"M0 Pool",0,"CRITICAL (0 Classes)"
 64466473,"M0 Pool",0,"CRITICAL (0 Classes)"
 64466569,"M0 Pool",0,"CRITICAL (0 Classes)"
-64477246,"M0 Pool",0,"CRITICAL (0 Classes)"
-64477518,"M0 Pool",0,"CRITICAL (0 Classes)"
-64478090,"M0 Pool",0,"CRITICAL (0 Classes)"
-64482494,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. CLASS CONSUMPTION RESCUE (148) ===
-Student_ID,Pool_Cohort,Classes,Action
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (149) ===
+Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 57937832,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 57940129,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58043108,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -67,7 +50,6 @@ Student_ID,Pool_Cohort,Classes,Action
 58513557,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58603971,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58640246,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-58653432,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58831873,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58846797,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58929523,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -75,12 +57,8 @@ Student_ID,Pool_Cohort,Classes,Action
 59294936,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 59438569,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 59792243,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-60110633,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 60146292,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 60146320,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-60152016,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-60206865,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-60299565,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 60344669,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 60500285,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 60676118,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -88,8 +66,6 @@ Student_ID,Pool_Cohort,Classes,Action
 61414952,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 61524054,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 61617671,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-61724557,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-62826545,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63028427,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63035223,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63144559,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -101,9 +77,7 @@ Student_ID,Pool_Cohort,Classes,Action
 63456265,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63462759,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63566644,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-63567223,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63595698,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-63603120,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63604457,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63605143,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63627401,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -121,7 +95,6 @@ Student_ID,Pool_Cohort,Classes,Action
 63730360,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63730900,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63735765,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-63743259,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63747393,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63757854,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63764411,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -129,17 +102,13 @@ Student_ID,Pool_Cohort,Classes,Action
 63782743,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63785454,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63789772,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-63793694,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63821948,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63847885,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-63863357,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63877766,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63886277,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-63888032,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-63901943,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63902700,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63917493,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-63920539,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
+63925269,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63966889,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64057444,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64164227,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -149,7 +118,6 @@ Student_ID,Pool_Cohort,Classes,Action
 64180190,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64191615,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64202682,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-64207640,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64234902,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64258334,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64258408,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -158,59 +126,75 @@ Student_ID,Pool_Cohort,Classes,Action
 64373840,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64388847,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64418743,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-64463591,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64466473,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-64466569,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64482494,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64487969,"M0 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58115208,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 58251232,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+58653432,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 58660535,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 58713040,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-58890502,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 59790908,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-60713073,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-60720247,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+60110633,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+60152016,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+60206865,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+60299565,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 61044815,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-61586385,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+61724557,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+62826545,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 62861314,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 62864918,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-63462442,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+63567223,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+63603120,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63626979,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63628875,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-63661989,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63673288,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63730358,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63730359,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-63753234,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+63743259,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+63793694,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+63863357,"M2 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63891622,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63912482,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-63924737,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-63928664,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+63920539,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63954159,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63986210,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-64105746,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 64113273,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 64113613,"M1 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 64181087,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 64202091,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-64301780,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-64316696,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+64207640,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 64341723,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-63581704,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-63661394,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-63661801,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-63734285,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-63801429,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-63868002,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-64477246,"M0 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-64477518,"M0 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+64463591,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+64466569,"M0 Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+58890502,"M0 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+60713073,"M0 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+60720247,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+61586385,"M1 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+63661989,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+63753234,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+63888032,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+63901943,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+63924737,"M1 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+63928664,"M1 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+64105746,"M1 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+64301780,"M0 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+64316696,"M0 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 64478090,"M0 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 58205983,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+63462442,"M2 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+63581704,"M2 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 63605140,"M2 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+63734285,"M2 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+63801429,"M2 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+63868002,"M2 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+64477246,"M0 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+64477518,"M0 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+63661394,"M2 Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
+63661801,"M2 Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 
-=== 4. ENGLISH CLUB LEADS (108) ===
-Student_ID,Level,Completed,Status
+=== 4. ENGLISH CLUB ACTIONABLE LEADS (109) ===
+Student_ID,Level,Completed_Classes,Booking_Status
 63213408,"0",0,"Booking Required"
 60676118,"3",0,"Booking Required"
 63462759,"3",0,"Booking Required"
@@ -227,8 +211,8 @@ Student_ID,Level,Completed,Status
 63628875,"0",0,"Booking Required"
 63441841,"1",0,"Booking Required"
 63629087,"3",0,"Booking Required"
-63462442,"1",0,"Booking Required"
 63658537,"1",0,"Booking Required"
+63462442,"1",0,"Booking Required"
 63144559,"3",0,"Booking Required"
 63602621,"2",0,"Booking Required"
 63641114,"1",0,"Booking Required"
@@ -255,8 +239,8 @@ Student_ID,Level,Completed,Status
 63673288,"2",0,"Booking Required"
 63730359,"1",0,"Booking Required"
 63782743,"3",0,"Booking Required"
-60110633,"1",0,"Booking Required"
 63757854,"1",0,"Booking Required"
+60110633,"1",0,"Booking Required"
 63764411,"2",0,"Booking Required"
 63793694,"2",0,"Booking Required"
 63730358,"0",0,"Booking Required"
@@ -282,9 +266,9 @@ Student_ID,Level,Completed,Status
 63877766,"0",0,"Booking Required"
 63901943,"0",0,"Booking Required"
 63891622,"1",0,"Booking Required"
-61586385,"3",0,"Booking Required"
+61586385,"3",0,"Booked"
 63917493,"2",0,"Booking Required"
-63912482,"1",0,"Booking Required"
+63912482,"1",0,"Booked"
 63902700,"0",0,"Booking Required"
 63920539,"3",0,"Booking Required"
 58660535,"1",0,"Booking Required"
@@ -317,5 +301,6 @@ Student_ID,Level,Completed,Status
 64180190,"0",0,"Booking Required"
 64463591,"2",0,"Booking Required"
 64316696,"2",0,"Booking Required"
+64482494,"1",0,"Booking Required"
 64181087,"1",0,"Booking Required"
 64487969,"1",0,"Booking Required"
