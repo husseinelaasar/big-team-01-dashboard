@@ -21,14 +21,32 @@ const DATA_SOURCES = {
   sopData: '51Talk Data Center (lp.51talkjr.com/#/data-center/business/SA-SSdata)'
 };
 
-// Verified TL & Team Configuration
+// Verified TL & Unified Team Configuration
 const TL_MAPPING = {
-  "EGSS01": { tl: "EGSS-ashraqatal", fullName: "ME-EGSS01 (Ashraqatal)", color: "#6366f1" },
-  "EGSS05": { tl: "EGSS-Ibrahimismaiel", fullName: "ME-EGSS05 (Ibrahimismaiel)", color: "#06b6d4" },
-  "EGSS10": { tl: "EGSS-abdelrhmanshehata", fullName: "ME-EGSS10 (AbdelrhmanShehata)", color: "#10b981" },
-  "EGSS13": { tl: "EGSS-mohamedha", fullName: "ME-EGSS13 (Mohamedha)", color: "#f59e0b" },
-  "EGSS30": { tl: "EGSS-AdhmGadAllah", fullName: "ME-EGSS30 (AdhmGadAllah)", color: "#f43f5e" }
+  "EGSS01": { tl: "EGSS-ashraqatal", leaderName: "Ashraqatal", fullName: "ME-EGSS01 (Ashraqatal)", color: "#6366f1", bg: "rgba(99, 102, 241, 0.15)", border: "rgba(99, 102, 241, 0.4)", text: "#818cf8", badgeClass: "team-badge-01" },
+  "EGSS05": { tl: "EGSS-AbdelrahmanNASEF", leaderName: "Abdelrahman Nasef", fullName: "ME-EGSS05 (Abdelrahman Nasef)", color: "#06b6d4", bg: "rgba(6, 182, 212, 0.15)", border: "rgba(6, 182, 212, 0.4)", text: "#22d3ee", badgeClass: "team-badge-05" },
+  "EGSS10": { tl: "EGSS-abdelrhmanshehata", leaderName: "Abdelrhman Shehata", fullName: "ME-EGSS10 (Abdelrhman Shehata)", color: "#10b981", bg: "rgba(16, 185, 129, 0.15)", border: "rgba(16, 185, 129, 0.4)", text: "#34d399", badgeClass: "team-badge-10" },
+  "EGSS13": { tl: "EGSS-mohamedha", leaderName: "Mohamedha", fullName: "ME-EGSS13 (Mohamedha)", color: "#f59e0b", bg: "rgba(245, 158, 11, 0.15)", border: "rgba(245, 158, 11, 0.4)", text: "#fbbf24", badgeClass: "team-badge-13" },
+  "EGSS30": { tl: "EGSS-AdhmGadAllah", leaderName: "Adhm GadAllah", fullName: "ME-EGSS30 (Adhm GadAllah)", color: "#f43f5e", bg: "rgba(244, 63, 94, 0.15)", border: "rgba(244, 63, 94, 0.4)", text: "#fb7185", badgeClass: "team-badge-30" }
 };
+
+function getTeamConfig(teamKey) {
+  if (!teamKey) return { color: "#94a3b8", bg: "rgba(148, 163, 184, 0.15)", border: "rgba(148, 163, 184, 0.3)", text: "#cbd5e1", fullName: "Unknown", tl: "Unknown", badgeClass: "" };
+  const cleanKey = String(teamKey).toUpperCase().replace(/^ME-/, "").trim();
+  if (TL_MAPPING[cleanKey]) return TL_MAPPING[cleanKey];
+  if (cleanKey.indexOf("01") !== -1) return TL_MAPPING["EGSS01"];
+  if (cleanKey.indexOf("05") !== -1) return TL_MAPPING["EGSS05"];
+  if (cleanKey.indexOf("10") !== -1) return TL_MAPPING["EGSS10"];
+  if (cleanKey.indexOf("13") !== -1) return TL_MAPPING["EGSS13"];
+  if (cleanKey.indexOf("30") !== -1) return TL_MAPPING["EGSS30"];
+  return { color: "#38bdf8", bg: "rgba(56, 189, 248, 0.15)", border: "rgba(56, 189, 248, 0.4)", text: "#38bdf8", fullName: teamKey, tl: "Sector", badgeClass: "" };
+}
+
+function renderTeamBadge(teamKey) {
+  const cfg = getTeamConfig(teamKey);
+  const displayLabel = String(teamKey).startsWith("ME-") ? teamKey : ("ME-" + teamKey);
+  return "<span class=\"team-badge " + cfg.badgeClass + "\" style=\"background: " + cfg.bg + "; color: " + cfg.text + "; border: 1px solid " + cfg.border + ";\"><span style=\"width: 6px; height: 6px; border-radius: 50%; background: " + cfg.color + "; display: inline-block;\"></span>" + displayLabel + "</span>";
+}
 
 // October 2026 Cash Targets: Awaiting official announcement from Senior Management
 // October 2026 Cash Targets: Awaiting official announcement from Senior Management
@@ -1183,7 +1201,7 @@ function renderOverviewTable(model) {
       <td>
         <strong style="color: #fff;">${r.isTL ? '👑 ' : ''}${r.name}</strong>
       </td>
-      <td><span style="color: ${r.teamColor}; font-weight: 600;">${r.team}</span></td>
+      <td>${renderTeamBadge(r.team)}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${fmt(r.cash)}</td>
       <td style="font-family: var(--font-mono); color: var(--text-secondary);">${fmt(r.target)}</td>
       <td>
@@ -1476,9 +1494,9 @@ function renderIndividualsTab(model) {
     // Table View Row
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 0.76rem;">#${repRank}</td>
+      <td style="font-family: var(--font-mono); color: var(--accent-indigo); font-weight: 800; font-size: 0.76rem;">#${idx + 1}</td>
       <td style="text-align: left !important; font-weight: 700; white-space: nowrap;"><strong title="${r.name}">${r.isTL ? '👑 ' : ''}${cleanRepName}</strong></td>
-      <td style="white-space: nowrap;"><span style="color: ${r.teamColor}; font-weight: 700; font-size: 0.74rem;">${r.team}</span></td>
+      <td style="white-space: nowrap;">${renderTeamBadge(r.team)}</td>
       <td style="font-family: var(--font-mono); font-weight: 700; color: #fff; font-size: 0.84rem;">${fmt(r.cash)}</td>
       <td style="font-family: var(--font-mono); color: var(--text-secondary); font-size: 0.74rem;">${fmt(r.target)}</td>
       <td style="font-family: var(--font-mono); font-weight: 800; color: ${r.statusColor}; font-size: 0.84rem;">${fmtPct(r.achievement)}</td>
@@ -3728,7 +3746,7 @@ function renderOperationsTab() {
 
   if (currentOperationsModule === 1) {
     // Module 1: SOP Pending Tasks
-    const data = filterByTeam(MASTER_OPERATIONS_DATA.sop);
+    const data = filterByTeam(MASTER_OPERATIONS_DATA.sop).sort((a, b) => b.total - a.total);
     let rowsHtml = data.map((r, idx) => {
       const r1Alert = r.r1 > 0 
         ? `<span class="op-badge-below" style="animation: pulse 2s infinite;">${r.r1} Critical</span>` 
@@ -3740,7 +3758,7 @@ function renderOperationsTab() {
         <tr>
           <td style="font-family: var(--font-mono); color: var(--text-muted);">${idx + 1}</td>
           <td style="font-weight: 600; color: #fff;">${r.name}</td>
-          <td><span class="team-badge" style="font-size: 0.72rem;">${r.team}</span></td>
+          <td>${renderTeamBadge(r.team)}</td>
           <td style="font-family: var(--font-mono);">${r.ec}</td>
           <td style="font-family: var(--font-mono); text-align: center;">${r1Alert}</td>
           <td style="font-family: var(--font-mono);">${r.r2}</td>
@@ -3801,7 +3819,7 @@ function renderOperationsTab() {
     `;
   } else if (currentOperationsModule === 2) {
     // Module 2: Unfixed Teacher Binding
-    const data = filterByTeam(MASTER_OPERATIONS_DATA.unfixed);
+    const data = filterByTeam(MASTER_OPERATIONS_DATA.unfixed).sort((a, b) => (parseFloat(b.m0Pct) || 0) - (parseFloat(a.m0Pct) || 0) || (parseFloat(b.m1Pct) || 0) - (parseFloat(a.m1Pct) || 0));
     let rowsHtml = data.map((r, idx) => {
       const m0PctNum = parseFloat(r.m0Pct) || 0;
       const m1PctNum = parseFloat(r.m1Pct) || 0;
@@ -3814,7 +3832,7 @@ function renderOperationsTab() {
         <tr>
           <td style="font-family: var(--font-mono); color: var(--text-muted);">${idx + 1}</td>
           <td style="font-weight: 600; color: #fff;">${r.name}</td>
-          <td><span class="team-badge" style="font-size: 0.72rem;">${r.team}</span></td>
+          <td>${renderTeamBadge(r.team)}</td>
           <td style="font-family: var(--font-mono);">${r.m0Tot}</td>
           <td style="font-family: var(--font-mono); color: #34d399;">${r.m0Fix}</td>
           <td style="font-family: var(--font-mono); font-weight: 700; color: ${m0Clr};">${r.m0Pct}</td>
@@ -3870,7 +3888,7 @@ function renderOperationsTab() {
     `;
   } else if (currentOperationsModule === 3) {
     // Module 3: Class Consumption & Zero-Class (Official 16-Column Pure Schema)
-    const data = filterByTeam(MASTER_OPERATIONS_DATA.consumption || []);
+    const data = filterByTeam(MASTER_OPERATIONS_DATA.consumption || []).sort((a, b) => { const rateA = a.total > 0 ? ((a.total - a.c0) / a.total) : 0; const rateB = b.total > 0 ? ((b.total - b.c0) / b.total) : 0; return rateB - rateA || (b.total - a.total); });
     let rowsHtml = data.map((r, idx) => {
       const zeroPct = r.total > 0 ? ((r.c0 / r.total) * 100).toFixed(1) : '0.0';
       const c12_14 = r.c12_14 || 0;
@@ -3886,7 +3904,7 @@ function renderOperationsTab() {
         <tr>
           <td style="font-family: var(--font-mono); color: var(--text-muted);">${idx + 1}</td>
           <td style="font-weight: 600; color: #fff;">${r.name}</td>
-          <td><span class="team-badge" style="font-size: 0.72rem;">${r.team}</span></td>
+          <td>${renderTeamBadge(r.team)}</td>
           <td style="font-family: var(--font-mono); font-weight: 800; color: #fff;">${r.total}</td>
           <td style="font-family: var(--font-mono); color: #38bdf8; font-weight: 600;">${avgClasses}</td>
           <td style="font-family: var(--font-mono); font-weight: 800; color: #f43f5e; text-align: center; background: rgba(244, 63, 94, 0.08);">${r.c0}</td>
@@ -3976,7 +3994,7 @@ function renderOperationsTab() {
         <tr>
           <td style="font-family: var(--font-mono); color: var(--text-muted);">${idx + 1}</td>
           <td style="font-weight: 600; color: #fff;">${r.name}</td>
-          <td><span class="team-badge" style="font-size: 0.72rem;">${r.team}</span></td>
+          <td>${renderTeamBadge(r.team)}</td>
           <td style="font-family: var(--font-mono); color: #fff;">${r.base}</td>
           <td style="font-family: var(--font-mono);">${r.book}</td>
           <td style="font-family: var(--font-mono); font-weight: 700; color: #c084fc;">${r.att}</td>
@@ -4709,9 +4727,9 @@ function renderConsumptionTab() {
 
     return `
       <tr>
-        <td style="font-family:var(--font-mono); color:var(--text-muted);">${idx + 1}</td>
+        <td style="font-family:var(--font-mono); font-weight:800; color:var(--accent-indigo); text-align:center;">#${idx + 1}</td>
         <td style="font-weight:600; color:#fff;">${r.name}</td>
-        <td><span class="team-badge" style="font-size:0.72rem;">${r.team}</span></td>
+        <td>${renderTeamBadge(r.team)}</td>
         <td style="font-family:var(--font-mono); font-weight:800; color:#fff;">${r.total}</td>
         <td style="font-family:var(--font-mono); color:${zeroClr}; font-weight:700;">${r.c0} <span style="font-size:0.72rem; color:var(--text-muted);">(${zeroPct}%)</span></td>
         <td style="font-family:var(--font-mono); font-weight:800; color:${rateClr};">${active} (${rate}%)</td>
@@ -4916,7 +4934,7 @@ function renderEnglishClubTab() {
       <tr>
         <td style="font-family:var(--font-mono); color:var(--text-muted);">${idx + 1}</td>
         <td style="font-weight:600; color:#fff;">${r.name}</td>
-        <td><span class="team-badge" style="font-size:0.72rem;">${r.team}</span></td>
+        <td>${renderTeamBadge(r.team)}</td>
         <td style="font-family:var(--font-mono); font-weight:800; color:#fff;">${r.base}</td>
         <td style="font-family:var(--font-mono); color:#38bdf8;">${r.book}</td>
         <td style="font-family:var(--font-mono); font-weight:800; color:#c084fc;">${r.att}</td>
