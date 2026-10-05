@@ -18,7 +18,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261005_143500">
+  <link rel="stylesheet" href="styles.css?v=20261005_154500">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
   <!-- Loading Screen -->
@@ -168,6 +169,11 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         Performance Comparison
         <span style="background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">YD vs TD</span>
+      </button>
+      <button class="tab" data-tab="mtd" onclick="switchTab('mtd')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        MTD Trajectory
+        <span style="background: linear-gradient(135deg, #10b981, #6366f1); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">Day 3-31</span>
       </button>
     </div>
 
@@ -1054,6 +1060,69 @@
         <div id="cmpTableContent"><p style="color: var(--text-muted); padding: 20px;">Loading comparison data...</p></div>
       </div>
     </section>
+    
+    <!-- ============================================== -->
+    <!-- TAB: MTD PERFORMANCE TRAJECTORY (DAY 3 - 31) -->
+    <!-- ============================================== -->
+    <section id="tab-mtd" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2>MTD Performance Trajectory &amp; Daily Evolution (Day 3 — 31)</h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Cumulative month-to-date tracking across all October operational days with interactive multi-metric charts and rep velocity.
+          </p>
+        </div>
+        <span class="source-tag">Timeline: 3 Oct → 5 Oct (MTD Day 5/31)</span>
+      </div>
+
+      <!-- Controls & Filters -->
+      <div style="display: flex; gap: 14px; align-items: center; margin-bottom: 24px; flex-wrap: wrap; background: rgba(15, 23, 42, 0.4); padding: 14px 18px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Operational Metric:</label>
+          <select id="mtdMetricFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff;" onchange="renderMtdTab()">
+            <option value="consumption">🟢 Class Consumption (65% Goal)</option>
+            <option value="englishClub">🔵 English Club (45% Goal)</option>
+            <option value="unfixed">🟡 Unfixed Teacher Binding (80% Goal)</option>
+            <option value="upgrade">🟣 Early Upgrade M2 (20% Goal)</option>
+          </select>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Filter Team:</label>
+          <select id="mtdTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderMtdTab()">
+            <option value="ALL">⭐ All Teams (Big Team 01 - Sector Overview)</option>
+            <option value="ME-EGSS01" style="color: #818cf8;">ME-EGSS01 (Ashraqatal - Team 01)</option>
+            <option value="ME-EGSS05" style="color: #22d3ee;">ME-EGSS05 (Ibrahim Abd El Shakour - Team 05)</option>
+            <option value="ME-EGSS10" style="color: #34d399;">ME-EGSS10 (Abdelrhman Shehata - Team 10)</option>
+            <option value="ME-EGSS13" style="color: #fbbf24;">ME-EGSS13 (Mohamedha - Team 13)</option>
+            <option value="ME-EGSS30" style="color: #fb7185;">ME-EGSS30 (Adhm GadAllah - Team 30)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- KPI Summary Banners -->
+      <div id="mtdKpiBanners" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-bottom: 24px;"></div>
+
+      <!-- Interactive Chart Section -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 28px; box-shadow: var(--shadow-glass);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: #fff; margin: 0;">Multi-Day Trajectory Curve</h3>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 3px;">Dynamic day-by-day progression against official benchmark targets.</p>
+          </div>
+          <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px;">Day 3 → Day 31 Progression</span>
+        </div>
+        <div style="position: relative; height: 340px; width: 100%;">
+          <canvas id="mtdChartCanvas"></canvas>
+        </div>
+      </div>
+
+      <!-- Detailed Progression Table -->
+      <div class="table-container" id="mtdTableContainer">
+        <div id="mtdTableContent"><p style="color: var(--text-muted); padding: 20px;">Loading MTD trajectory data...</p></div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="dashboard-footer">
       <div class="footer-left">
@@ -1073,7 +1142,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="assets/html2canvas.min.js" defer></script>
-  <script src="dashboard.js?v=20261005_143500" defer></script>
+  <script src="dashboard.js?v=20261005_154500" defer></script>
 </body>
 </html>
 

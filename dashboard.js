@@ -4860,6 +4860,1417 @@ const YESTERDAY_DATA = {
 };
 window.YESTERDAY_DATA = YESTERDAY_DATA;
 
+const MTD_TIMELINE_DATA = [
+  {
+    "day": "2026-10-03",
+    "label": "Oct 3",
+    "reps": [
+      {
+        "name": "EGSS-AbdelrahmanNASEF",
+        "team": "ME-EGSS05",
+        "ccRate": 34.1,
+        "ccAct": 74,
+        "ccTot": 217,
+        "ecRate": 0,
+        "ftRate": 92.3,
+        "ftUnf": 3,
+        "ftTot": 39,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-ehabzaky01",
+        "team": "ME-EGSS05",
+        "ccRate": 29.1,
+        "ccAct": 69,
+        "ccTot": 237,
+        "ecRate": 1.9,
+        "ftRate": 77.6,
+        "ftUnf": 11,
+        "ftTot": 49,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-Ibrahimismaiel",
+        "team": "ME-EGSS05",
+        "ccRate": 31.9,
+        "ccAct": 94,
+        "ccTot": 295,
+        "ecRate": 0,
+        "ftRate": 61.4,
+        "ftUnf": 22,
+        "ftTot": 57,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-KhaledGonam",
+        "team": "ME-EGSS05",
+        "ccRate": 20.4,
+        "ccAct": 54,
+        "ccTot": 265,
+        "ecRate": 0,
+        "ftRate": 50,
+        "ftUnf": 13,
+        "ftTot": 26,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-OmarMoneb",
+        "team": "ME-EGSS05",
+        "ccRate": 23.9,
+        "ccAct": 52,
+        "ccTot": 218,
+        "ecRate": 0,
+        "ftRate": 78.8,
+        "ftUnf": 7,
+        "ftTot": 33,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-samira01",
+        "team": "ME-EGSS05",
+        "ccRate": 23.5,
+        "ccAct": 57,
+        "ccTot": 243,
+        "ecRate": 1.3,
+        "ftRate": 74.2,
+        "ftUnf": 8,
+        "ftTot": 31,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-ashraqatal",
+        "team": "ME-EGSS01",
+        "ccRate": 29.8,
+        "ccAct": 75,
+        "ccTot": 252,
+        "ecRate": 0,
+        "ftRate": 66,
+        "ftUnf": 18,
+        "ftTot": 53,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-juliamonir01",
+        "team": "ME-EGSS01",
+        "ccRate": 28.2,
+        "ccAct": 74,
+        "ccTot": 262,
+        "ecRate": 0,
+        "ftRate": 62.5,
+        "ftUnf": 12,
+        "ftTot": 32,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-mahmoud04",
+        "team": "ME-EGSS01",
+        "ccRate": 19,
+        "ccAct": 56,
+        "ccTot": 294,
+        "ecRate": 0,
+        "ftRate": 83.7,
+        "ftUnf": 8,
+        "ftTot": 49,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-negma",
+        "team": "ME-EGSS01",
+        "ccRate": 27.1,
+        "ccAct": 68,
+        "ccTot": 251,
+        "ecRate": 0,
+        "ftRate": 78,
+        "ftUnf": 13,
+        "ftTot": 59,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-nohayoussry",
+        "team": "ME-EGSS01",
+        "ccRate": 26.1,
+        "ccAct": 66,
+        "ccTot": 253,
+        "ecRate": 0,
+        "ftRate": 90.9,
+        "ftUnf": 4,
+        "ftTot": 44,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-Amrsafwat",
+        "team": "ME-EGSS13",
+        "ccRate": 30.5,
+        "ccAct": 81,
+        "ccTot": 266,
+        "ecRate": 0,
+        "ftRate": 80.4,
+        "ftUnf": 9,
+        "ftTot": 46,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-hayamhassan",
+        "team": "ME-EGSS13",
+        "ccRate": 30.4,
+        "ccAct": 45,
+        "ccTot": 148,
+        "ecRate": 0,
+        "ftRate": 80,
+        "ftUnf": 11,
+        "ftTot": 55,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-marwaahmed",
+        "team": "ME-EGSS13",
+        "ccRate": 25.1,
+        "ccAct": 63,
+        "ccTot": 251,
+        "ecRate": 0,
+        "ftRate": 72.5,
+        "ftUnf": 11,
+        "ftTot": 40,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-mohamedha",
+        "team": "ME-EGSS13",
+        "ccRate": 26.3,
+        "ccAct": 56,
+        "ccTot": 213,
+        "ecRate": 0,
+        "ftRate": 25,
+        "ftUnf": 30,
+        "ftTot": 40,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-AdhmGadAllah",
+        "team": "ME-EGSS30",
+        "ccRate": 27.5,
+        "ccAct": 68,
+        "ccTot": 247,
+        "ecRate": 0,
+        "ftRate": 93,
+        "ftUnf": 3,
+        "ftTot": 43,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-alihesham01",
+        "team": "ME-EGSS30",
+        "ccRate": 35.2,
+        "ccAct": 50,
+        "ccTot": 142,
+        "ecRate": 0,
+        "ftRate": 83.3,
+        "ftUnf": 6,
+        "ftTot": 36,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-titooooo",
+        "team": "ME-EGSS30",
+        "ccRate": 29.4,
+        "ccAct": 73,
+        "ccTot": 248,
+        "ecRate": 1.8,
+        "ftRate": 79.2,
+        "ftUnf": 10,
+        "ftTot": 48,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-abdelrhmanshehata",
+        "team": "ME-EGSS10",
+        "ccRate": 28.8,
+        "ccAct": 55,
+        "ccTot": 191,
+        "ecRate": 0,
+        "ftRate": 81.5,
+        "ftUnf": 10,
+        "ftTot": 54,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-AhmedShoukry",
+        "team": "ME-EGSS10",
+        "ccRate": 25.7,
+        "ccAct": 81,
+        "ccTot": 315,
+        "ecRate": 0,
+        "ftRate": 83.3,
+        "ftUnf": 10,
+        "ftTot": 60,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-Mahmoudkhamis",
+        "team": "ME-EGSS10",
+        "ccRate": 23.1,
+        "ccAct": 67,
+        "ccTot": 290,
+        "ecRate": 0,
+        "ftRate": 86.9,
+        "ftUnf": 8,
+        "ftTot": 61,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      }
+    ]
+  },
+  {
+    "day": "2026-10-04",
+    "label": "Oct 4",
+    "reps": [
+      {
+        "name": "EGSS-AbdelrahmanNASEF",
+        "team": "ME-EGSS05",
+        "ccRate": 44.3,
+        "ccAct": 97,
+        "ccTot": 219,
+        "ecRate": 2.2,
+        "ftRate": 89.7,
+        "ftUnf": 4,
+        "ftTot": 39,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-ehabzaky01",
+        "team": "ME-EGSS05",
+        "ccRate": 44.1,
+        "ccAct": 105,
+        "ccTot": 238,
+        "ecRate": 1.8,
+        "ftRate": 80,
+        "ftUnf": 10,
+        "ftTot": 50,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-Ibrahimismaiel",
+        "team": "ME-EGSS05",
+        "ccRate": 38.9,
+        "ccAct": 107,
+        "ccTot": 275,
+        "ecRate": 0,
+        "ftRate": 68,
+        "ftUnf": 16,
+        "ftTot": 50,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-KhaledGonam",
+        "team": "ME-EGSS05",
+        "ccRate": 32.3,
+        "ccAct": 86,
+        "ccTot": 266,
+        "ecRate": 0,
+        "ftRate": 50,
+        "ftUnf": 14,
+        "ftTot": 28,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-OmarMoneb",
+        "team": "ME-EGSS05",
+        "ccRate": 36.1,
+        "ccAct": 79,
+        "ccTot": 219,
+        "ecRate": 0,
+        "ftRate": 78.8,
+        "ftUnf": 7,
+        "ftTot": 33,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-samira01",
+        "team": "ME-EGSS05",
+        "ccRate": 34.6,
+        "ccAct": 84,
+        "ccTot": 243,
+        "ecRate": 1.3,
+        "ftRate": 81.3,
+        "ftUnf": 6,
+        "ftTot": 32,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-ashraqatal",
+        "team": "ME-EGSS01",
+        "ccRate": 43.9,
+        "ccAct": 111,
+        "ccTot": 253,
+        "ecRate": 0,
+        "ftRate": 64.8,
+        "ftUnf": 19,
+        "ftTot": 54,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-juliamonir01",
+        "team": "ME-EGSS01",
+        "ccRate": 44.7,
+        "ccAct": 118,
+        "ccTot": 264,
+        "ecRate": 0,
+        "ftRate": 69.4,
+        "ftUnf": 11,
+        "ftTot": 36,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-mahmoud04",
+        "team": "ME-EGSS01",
+        "ccRate": 34,
+        "ccAct": 100,
+        "ccTot": 294,
+        "ecRate": 0,
+        "ftRate": 83.7,
+        "ftUnf": 8,
+        "ftTot": 49,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-negma",
+        "team": "ME-EGSS01",
+        "ccRate": 44.8,
+        "ccAct": 113,
+        "ccTot": 252,
+        "ecRate": 0,
+        "ftRate": 79.7,
+        "ftUnf": 12,
+        "ftTot": 59,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-nohayoussry",
+        "team": "ME-EGSS01",
+        "ccRate": 38.3,
+        "ccAct": 97,
+        "ccTot": 253,
+        "ecRate": 0,
+        "ftRate": 90.9,
+        "ftUnf": 4,
+        "ftTot": 44,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-Amrsafwat",
+        "team": "ME-EGSS13",
+        "ccRate": 42.2,
+        "ccAct": 113,
+        "ccTot": 268,
+        "ecRate": 0,
+        "ftRate": 82.6,
+        "ftUnf": 8,
+        "ftTot": 46,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-hayamhassan",
+        "team": "ME-EGSS13",
+        "ccRate": 42.3,
+        "ccAct": 63,
+        "ccTot": 149,
+        "ecRate": 0,
+        "ftRate": 89.3,
+        "ftUnf": 6,
+        "ftTot": 56,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-marwaahmed",
+        "team": "ME-EGSS13",
+        "ccRate": 41,
+        "ccAct": 103,
+        "ccTot": 251,
+        "ecRate": 0,
+        "ftRate": 85,
+        "ftUnf": 6,
+        "ftTot": 40,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-mohamedha",
+        "team": "ME-EGSS13",
+        "ccRate": 41.3,
+        "ccAct": 88,
+        "ccTot": 213,
+        "ecRate": 0,
+        "ftRate": 27.5,
+        "ftUnf": 29,
+        "ftTot": 40,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-AdhmGadAllah",
+        "team": "ME-EGSS30",
+        "ccRate": 34.1,
+        "ccAct": 85,
+        "ccTot": 249,
+        "ecRate": 0,
+        "ftRate": 90.9,
+        "ftUnf": 4,
+        "ftTot": 44,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-alihesham01",
+        "team": "ME-EGSS30",
+        "ccRate": 42,
+        "ccAct": 60,
+        "ccTot": 143,
+        "ecRate": 0,
+        "ftRate": 78.9,
+        "ftUnf": 8,
+        "ftTot": 38,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-titooooo",
+        "team": "ME-EGSS30",
+        "ccRate": 43.1,
+        "ccAct": 107,
+        "ccTot": 248,
+        "ecRate": 1.8,
+        "ftRate": 77.6,
+        "ftUnf": 11,
+        "ftTot": 49,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-abdelrhmanshehata",
+        "team": "ME-EGSS10",
+        "ccRate": 46.9,
+        "ccAct": 90,
+        "ccTot": 192,
+        "ecRate": 0,
+        "ftRate": 81.8,
+        "ftUnf": 10,
+        "ftTot": 55,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-AhmedShoukry",
+        "team": "ME-EGSS10",
+        "ccRate": 43.8,
+        "ccAct": 123,
+        "ccTot": 281,
+        "ecRate": 0,
+        "ftRate": 86.7,
+        "ftUnf": 8,
+        "ftTot": 60,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-Mahmoudkhamis",
+        "team": "ME-EGSS10",
+        "ccRate": 34.6,
+        "ccAct": 97,
+        "ccTot": 280,
+        "ecRate": 0,
+        "ftRate": 87.9,
+        "ftUnf": 7,
+        "ftTot": 58,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      }
+    ]
+  },
+  {
+    "day": "2026-10-05",
+    "label": "Oct 5",
+    "reps": [
+      {
+        "name": "EGSS-AbdelrahmanNASEF",
+        "team": "ME-EGSS05",
+        "ccRate": 70.8,
+        "ccAct": 155,
+        "ccTot": 219,
+        "ecRate": 2.2,
+        "ftRate": 89.7,
+        "ftUnf": 4,
+        "ftTot": 39,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-ehabzaky01",
+        "team": "ME-EGSS05",
+        "ccRate": 66.8,
+        "ccAct": 159,
+        "ccTot": 238,
+        "ecRate": 1.8,
+        "ftRate": 78.4,
+        "ftUnf": 11,
+        "ftTot": 51,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-Ibrahimismaiel",
+        "team": "ME-EGSS05",
+        "ccRate": 55.3,
+        "ccAct": 152,
+        "ccTot": 275,
+        "ecRate": 0,
+        "ftRate": 74,
+        "ftUnf": 13,
+        "ftTot": 50,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-KhaledGonam",
+        "team": "ME-EGSS05",
+        "ccRate": 60.4,
+        "ccAct": 160,
+        "ccTot": 265,
+        "ecRate": 0,
+        "ftRate": 55.2,
+        "ftUnf": 13,
+        "ftTot": 29,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-OmarMoneb",
+        "team": "ME-EGSS05",
+        "ccRate": 59.4,
+        "ccAct": 130,
+        "ccTot": 219,
+        "ecRate": 0,
+        "ftRate": 79.4,
+        "ftUnf": 7,
+        "ftTot": 34,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-samira01",
+        "team": "ME-EGSS05",
+        "ccRate": 63.9,
+        "ccAct": 156,
+        "ccTot": 244,
+        "ecRate": 1.3,
+        "ftRate": 81.3,
+        "ftUnf": 6,
+        "ftTot": 32,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-ashraqatal",
+        "team": "ME-EGSS01",
+        "ccRate": 66.4,
+        "ccAct": 168,
+        "ccTot": 253,
+        "ecRate": 0,
+        "ftRate": 65.5,
+        "ftUnf": 19,
+        "ftTot": 55,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-juliamonir01",
+        "team": "ME-EGSS01",
+        "ccRate": 70.5,
+        "ccAct": 186,
+        "ccTot": 264,
+        "ecRate": 0,
+        "ftRate": 65.8,
+        "ftUnf": 13,
+        "ftTot": 38,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-mahmoud04",
+        "team": "ME-EGSS01",
+        "ccRate": 62.2,
+        "ccAct": 183,
+        "ccTot": 294,
+        "ecRate": 0,
+        "ftRate": 89.8,
+        "ftUnf": 5,
+        "ftTot": 49,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-negma",
+        "team": "ME-EGSS01",
+        "ccRate": 70.2,
+        "ccAct": 177,
+        "ccTot": 252,
+        "ecRate": 0,
+        "ftRate": 79.7,
+        "ftUnf": 12,
+        "ftTot": 59,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-nohayoussry",
+        "team": "ME-EGSS01",
+        "ccRate": 65.2,
+        "ccAct": 165,
+        "ccTot": 253,
+        "ecRate": 0,
+        "ftRate": 91.1,
+        "ftUnf": 4,
+        "ftTot": 45,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-Amrsafwat",
+        "team": "ME-EGSS13",
+        "ccRate": 68.3,
+        "ccAct": 183,
+        "ccTot": 268,
+        "ecRate": 0,
+        "ftRate": 80.9,
+        "ftUnf": 9,
+        "ftTot": 47,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-hayamhassan",
+        "team": "ME-EGSS13",
+        "ccRate": 77.2,
+        "ccAct": 115,
+        "ccTot": 149,
+        "ecRate": 0,
+        "ftRate": 91.1,
+        "ftUnf": 5,
+        "ftTot": 56,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-marwaahmed",
+        "team": "ME-EGSS13",
+        "ccRate": 66.1,
+        "ccAct": 166,
+        "ccTot": 251,
+        "ecRate": 0,
+        "ftRate": 87.5,
+        "ftUnf": 5,
+        "ftTot": 40,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-mohamedha",
+        "team": "ME-EGSS13",
+        "ccRate": 61,
+        "ccAct": 130,
+        "ccTot": 213,
+        "ecRate": 0,
+        "ftRate": 30,
+        "ftUnf": 28,
+        "ftTot": 40,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-AdhmGadAllah",
+        "team": "ME-EGSS30",
+        "ccRate": 65.9,
+        "ccAct": 164,
+        "ccTot": 249,
+        "ecRate": 0,
+        "ftRate": 93.2,
+        "ftUnf": 3,
+        "ftTot": 44,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-alihesham01",
+        "team": "ME-EGSS30",
+        "ccRate": 71.3,
+        "ccAct": 102,
+        "ccTot": 143,
+        "ecRate": 0,
+        "ftRate": 87.2,
+        "ftUnf": 5,
+        "ftTot": 39,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-titooooo",
+        "team": "ME-EGSS30",
+        "ccRate": 69.4,
+        "ccAct": 172,
+        "ccTot": 248,
+        "ecRate": 1.8,
+        "ftRate": 79.6,
+        "ftUnf": 10,
+        "ftTot": 49,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-abdelrhmanshehata",
+        "team": "ME-EGSS10",
+        "ccRate": 69.3,
+        "ccAct": 133,
+        "ccTot": 192,
+        "ecRate": 0,
+        "ftRate": 80.4,
+        "ftUnf": 11,
+        "ftTot": 56,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-AhmedShoukry",
+        "team": "ME-EGSS10",
+        "ccRate": 73.7,
+        "ccAct": 207,
+        "ccTot": 281,
+        "ecRate": 0,
+        "ftRate": 86.7,
+        "ftUnf": 8,
+        "ftTot": 60,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      },
+      {
+        "name": "EGSS-Mahmoudkhamis",
+        "team": "ME-EGSS10",
+        "ccRate": 71.4,
+        "ccAct": 200,
+        "ccTot": 280,
+        "ecRate": 0,
+        "ftRate": 86.2,
+        "ftUnf": 8,
+        "ftTot": 58,
+        "upgRate": 0,
+        "upgM2": 0,
+        "upgBase": 0,
+        "cash": 0,
+        "contracts": 0
+      }
+    ]
+  }
+];
+window.MTD_TIMELINE_DATA = MTD_TIMELINE_DATA;
+
+// =========================================================================
+// MTD PERFORMANCE TRAJECTORY & DAILY EVOLUTION (DAY 3 - 31)
+// =========================================================================
+let mtdChartInstance = null;
+
+function renderMtdTab() {
+  const container = document.getElementById("mtdTabContainer");
+  const bannersEl = document.getElementById("mtdKpiBanners");
+  const tableEl   = document.getElementById("mtdTableContent");
+  const canvas    = document.getElementById("mtdChartCanvas");
+  if (!container || !bannersEl || !tableEl) return;
+
+  const timeline = (window.MTD_TIMELINE_DATA && window.MTD_TIMELINE_DATA.length) ? window.MTD_TIMELINE_DATA : [];
+  if (!timeline.length) {
+    tableEl.innerHTML = '<p style="color:var(--text-muted); padding:20px;">No historical MTD snapshot data available yet.</p>';
+    return;
+  }
+
+  const metric = (document.getElementById("mtdMetricFilter") || {}).value || "consumption";
+  const team   = (document.getElementById("mtdTeamFilter")   || {}).value || "ALL";
+
+  const metricConfig = {
+    consumption: { label: "Class Consumption", key: "ccRate", target: 65, color: "#10b981", unit: "%" },
+    englishClub: { label: "English Club",       key: "ecRate", target: 45, color: "#38bdf8", unit: "%" },
+    unfixed:     { label: "Teacher Binding",   key: "ftRate", target: 80, color: "#f59e0b", unit: "%" },
+    upgrade:     { label: "Early Upgrade M2",  key: "upgRate", target: 20, color: "#c084fc", unit: "%" }
+  };
+
+  const mCfg = metricConfig[metric] || metricConfig.consumption;
+  const dayLabels = timeline.map(t => t.label);
+
+  const teamColors = {
+    "EGSS01": "#6366f1",
+    "EGSS05": "#06b6d4",
+    "EGSS10": "#10b981",
+    "EGSS13": "#f59e0b",
+    "EGSS30": "#f43f5e"
+  };
+
+  function cleanTeamKey(t) { return String(t || '').replace(/^ME-/, '').toUpperCase(); }
+
+  // 1. Calculate macro averages per day for selected team/sector
+  const dailyMacroRates = timeline.map(daySnap => {
+    let reps = daySnap.reps || [];
+    if (team !== "ALL") {
+      reps = reps.filter(r => cleanTeamKey(r.team) === cleanTeamKey(team));
+    }
+    const sum = reps.reduce((s, r) => s + (Number(r[mCfg.key]) || 0), 0);
+    return reps.length ? Math.round((sum / reps.length) * 10) / 10 : 0;
+  });
+
+  const baselineRate = dailyMacroRates[0] || 0;
+  const currentRate  = dailyMacroRates[dailyMacroRates.length - 1] || 0;
+  const netDelta     = currentRate - baselineRate;
+  const targetGap    = Math.max(0, mCfg.target - currentRate);
+
+  // Velocity Calculation (Days remaining in October: 31 - current day 5 = 26 days)
+  const currentDayNum = 5;
+  const daysRemaining = 31 - currentDayNum;
+  const dailyNeeded = daysRemaining > 0 ? (targetGap / daysRemaining) : 0;
+
+  // Render KPI Banners
+  function deltaBadge(d) {
+    if (d > 0.05)  return '<span style="color:#10b981; font-weight:800;">▲ +' + d.toFixed(1) + '%</span>';
+    if (d < -0.05) return '<span style="color:#f43f5e; font-weight:800;">▼ ' + d.toFixed(1) + '%</span>';
+    return '<span style="color:#94a3b8;">= 0.0%</span>';
+  }
+
+  bannersEl.innerHTML =
+    '<div class="kpi-card" style="border-top: 4px solid #64748b;">' +
+      '<div class="kpi-label">Day 3 Starting Baseline</div>' +
+      '<div style="font-size:1.8rem; font-weight:900; color:#e2e8f0; margin:6px 0 2px; font-family:var(--font-mono);">' + baselineRate.toFixed(1) + '%</div>' +
+      '<div style="font-size:0.75rem; color:var(--text-muted);">Recorded on 3 Oct 2026</div>' +
+    '</div>' +
+    '<div class="kpi-card" style="border-top: 4px solid ' + mCfg.color + ';">' +
+      '<div class="kpi-label">Current Live Standing (Day 5)</div>' +
+      '<div style="font-size:1.8rem; font-weight:900; color:' + mCfg.color + '; margin:6px 0 2px; font-family:var(--font-mono);">' + currentRate.toFixed(1) + '%</div>' +
+      '<div style="font-size:0.75rem; color:var(--text-secondary);">' + mCfg.label + ' MTD Snapshot</div>' +
+    '</div>' +
+    '<div class="kpi-card" style="border-top: 4px solid #10b981;">' +
+      '<div class="kpi-label">MTD Net Trajectory Delta</div>' +
+      '<div style="font-size:1.8rem; font-weight:900; color:#10b981; margin:6px 0 2px; font-family:var(--font-mono);">' + (netDelta >= 0 ? '+' : '') + netDelta.toFixed(1) + '%</div>' +
+      '<div style="font-size:0.75rem; color:var(--text-secondary);">' + deltaBadge(netDelta) + ' total month-to-date gain</div>' +
+    '</div>' +
+    '<div class="kpi-card" style="border-top: 4px solid #f59e0b;">' +
+      '<div class="kpi-label">Pacing Target & Velocity</div>' +
+      '<div style="font-size:1.8rem; font-weight:900; color:' + (targetGap === 0 ? '#10b981' : '#f59e0b') + '; margin:6px 0 2px; font-family:var(--font-mono);">' +
+        (targetGap === 0 ? 'GOAL HIT' : (targetGap.toFixed(1) + 'pp gap')) +
+      '</div>' +
+      '<div style="font-size:0.75rem; color:var(--text-muted);">' +
+        (targetGap === 0 ? 'Pacing ahead of official goal' : ('+' + dailyNeeded.toFixed(2) + 'pp / day needed for Day 31')) +
+      '</div>' +
+    '</div>';
+
+  // 2. Render Chart.js Chart
+  if (canvas && typeof Chart !== "undefined") {
+    const ctx = canvas.getContext("2d");
+    if (mtdChartInstance) {
+      mtdChartInstance.destroy();
+    }
+
+    const datasets = [];
+
+    if (team === "ALL") {
+      // Sector Macro Line
+      datasets.push({
+        label: "Big Team 01 (Macro Sector Avg)",
+        data: dailyMacroRates,
+        borderColor: "#a855f7",
+        backgroundColor: "rgba(168, 85, 247, 0.15)",
+        borderWidth: 3.5,
+        tension: 0.35,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        pointBackgroundColor: "#a855f7"
+      });
+
+      // 5 Small Team Lines
+      const teamKeys = ["EGSS01", "EGSS05", "EGSS10", "EGSS13", "EGSS30"];
+      teamKeys.forEach(tk => {
+        const teamColor = teamColors[tk] || "#94a3b8";
+        const teamRates = timeline.map(daySnap => {
+          const reps = (daySnap.reps || []).filter(r => cleanTeamKey(r.team) === tk);
+          const sum = reps.reduce((s, r) => s + (Number(r[mCfg.key]) || 0), 0);
+          return reps.length ? Math.round((sum / reps.length) * 10) / 10 : 0;
+        });
+
+        const cfg = (typeof getTeamConfig === "function") ? getTeamConfig(tk) : {};
+        const teamName = cfg.fullName || ("ME-" + tk);
+
+        datasets.push({
+          label: teamName,
+          data: teamRates,
+          borderColor: teamColor,
+          backgroundColor: "transparent",
+          borderWidth: 2,
+          borderDash: [4, 4],
+          tension: 0.3,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          pointBackgroundColor: teamColor
+        });
+      });
+    } else {
+      // Selected Small Team Line
+      const teamClean = cleanTeamKey(team);
+      const teamColor = teamColors[teamClean] || mCfg.color;
+      datasets.push({
+        label: team + " Team Average",
+        data: dailyMacroRates,
+        borderColor: teamColor,
+        backgroundColor: teamColor.replace(")", ", 0.15)").replace("rgb", "rgba"),
+        borderWidth: 3.5,
+        tension: 0.35,
+        pointRadius: 6,
+        pointBackgroundColor: teamColor
+      });
+
+      // Rep Lines for selected team
+      const latestReps = (timeline[timeline.length - 1].reps || []).filter(r => cleanTeamKey(r.team) === teamClean);
+      latestReps.forEach((rep, idx) => {
+        const repRates = timeline.map(daySnap => {
+          const r = (daySnap.reps || []).find(x => x.name.toLowerCase() === rep.name.toLowerCase());
+          return r ? (Number(r[mCfg.key]) || 0) : 0;
+        });
+
+        const repHue = (idx * 55) % 360;
+        const repColor = 'hsl(' + repHue + ', 75%, 65%)';
+
+        datasets.push({
+          label: rep.name.replace("EGSS-", ""),
+          data: repRates,
+          borderColor: repColor,
+          backgroundColor: "transparent",
+          borderWidth: 1.5,
+          tension: 0.25,
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          hidden: idx >= 4 // Show top 4 by default, allow unhiding
+        });
+      });
+    }
+
+    // Benchmark Horizontal Target Line
+    const targetData = dayLabels.map(() => mCfg.target);
+    datasets.push({
+      label: mCfg.label + " Benchmark Goal (" + mCfg.target + "%)",
+      data: targetData,
+      borderColor: "rgba(255, 255, 255, 0.5)",
+      borderWidth: 2,
+      borderDash: [6, 6],
+      pointRadius: 0,
+      fill: false
+    });
+
+    mtdChartInstance = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: dayLabels,
+        datasets: datasets
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {
+          mode: "index",
+          intersect: false
+        },
+        plugins: {
+          legend: {
+            position: "bottom",
+            labels: {
+              color: "#cbd5e1",
+              font: { size: 11, family: "Inter" },
+              padding: 14,
+              usePointStyle: true
+            }
+          },
+          tooltip: {
+            backgroundColor: "rgba(15, 23, 42, 0.95)",
+            titleColor: "#f8fafc",
+            bodyColor: "#cbd5e1",
+            borderColor: "rgba(99, 102, 241, 0.3)",
+            borderWidth: 1,
+            padding: 10,
+            callbacks: {
+              label: function(context) {
+                return "  " + context.dataset.label + ": " + Number(context.parsed.y).toFixed(1) + "%";
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: "rgba(255, 255, 255, 0.05)" },
+            ticks: { color: "#94a3b8", font: { family: "JetBrains Mono", size: 11 } }
+          },
+          y: {
+            min: 0,
+            max: Math.max(100, Math.ceil((Math.max(...dailyMacroRates) + 15) / 10) * 10),
+            grid: { color: "rgba(255, 255, 255, 0.07)" },
+            ticks: {
+              color: "#94a3b8",
+              font: { family: "JetBrains Mono", size: 11 },
+              callback: function(value) { return value + "%"; }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // 3. Build Detailed Rep Progression Table
+  const latestSnap = timeline[timeline.length - 1];
+  let repsList = latestSnap.reps || [];
+  if (team !== "ALL") {
+    repsList = repsList.filter(r => cleanTeamKey(r.team) === cleanTeamKey(team));
+  }
+
+  // Pre-calculate progression history for each rep
+  const repRows = repsList.map(rep => {
+    const history = timeline.map(daySnap => {
+      const match = (daySnap.reps || []).find(x => x.name.toLowerCase() === rep.name.toLowerCase());
+      return match ? (Number(match[mCfg.key]) || 0) : 0;
+    });
+
+    const valD3 = history[0] || 0;
+    const valD4 = history[1] !== undefined ? history[1] : valD3;
+    const valD5 = history[history.length - 1] || 0;
+    const repDelta = valD5 - valD3;
+
+    let statusBadge = '<span style="background:rgba(148,163,184,0.15); color:#94a3b8; font-size:0.7rem; padding:3px 8px; border-radius:6px; font-weight:700;">🟡 Steady</span>';
+    if (repDelta >= 20 || valD5 >= mCfg.target) {
+      statusBadge = '<span style="background:rgba(16,185,129,0.2); color:#10b981; font-size:0.7rem; padding:3px 8px; border-radius:6px; font-weight:700;">🚀 High Velocity</span>';
+    } else if (repDelta > 5) {
+      statusBadge = '<span style="background:rgba(56,189,248,0.2); color:#38bdf8; font-size:0.7rem; padding:3px 8px; border-radius:6px; font-weight:700;">🟢 On Track</span>';
+    } else if (repDelta < -2) {
+      statusBadge = '<span style="background:rgba(244,63,94,0.2); color:#f43f5e; font-size:0.7rem; padding:3px 8px; border-radius:6px; font-weight:700;">🔴 Needs Push</span>';
+    }
+
+    return {
+      name: rep.name,
+      team: rep.team,
+      valD3, valD4, valD5,
+      delta: repDelta,
+      statusBadge,
+      history
+    };
+  });
+
+  // Sort reps by current day value descending
+  repRows.sort((a, b) => b.valD5 - a.valD5);
+
+  function valCell(v, target) {
+    const color = v >= target ? "#10b981" : v >= target * 0.8 ? "#f59e0b" : "#cbd5e1";
+    return '<td style="font-family:var(--font-mono); font-weight:700; color:' + color + '; text-align:center;">' + v.toFixed(1) + '%</td>';
+  }
+
+  function deltaPill(d) {
+    const c = d > 0.05 ? "#10b981" : d < -0.05 ? "#f43f5e" : "#64748b";
+    const sym = d > 0.05 ? "▲ +" : d < -0.05 ? "▼ " : "= ";
+    return '<td style="color:' + c + '; font-weight:800; font-family:var(--font-mono); text-align:center;">' + sym + Math.abs(d).toFixed(1) + '%</td>';
+  }
+
+  function sparklineBar(history) {
+    const min = Math.min(...history);
+    const max = Math.max(...history);
+    const range = (max - min) || 1;
+    const barsHtml = history.map(h => {
+      const pct = Math.max(15, Math.min(100, Math.round(((h - min) / range) * 85 + 15)));
+      return '<div style="flex:1; background:rgba(99,102,241,0.6); height:' + pct + '%; border-radius:2px 2px 0 0;" title="' + h.toFixed(1) + '%"></div>';
+    }).join("");
+
+    return '<div style="display:flex; align-items:flex-end; gap:3px; height:24px; width:65px; margin:0 auto; background:rgba(255,255,255,0.04); padding:2px; border-radius:4px;">' + barsHtml + '</div>';
+  }
+
+  const tableRows = repRows.map((r, idx) => {
+    const badge = (typeof renderTeamBadge === "function") ? renderTeamBadge(r.team) : r.team;
+    const rowBg = idx % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent";
+
+    return '<tr style="background:' + rowBg + '; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(99,102,241,0.08)\'" onmouseout="this.style.background=\'' + rowBg + '\'">' +
+      '<td style="font-weight:700; color:#e2e8f0; white-space:nowrap; padding:10px 14px;">' + r.name.replace("EGSS-", "") + '</td>' +
+      '<td style="padding:10px 14px;">' + badge + '</td>' +
+      valCell(r.valD3, mCfg.target) +
+      valCell(r.valD4, mCfg.target) +
+      valCell(r.valD5, mCfg.target) +
+      deltaPill(r.delta) +
+      '<td style="text-align:center; padding:6px 10px;">' + sparklineBar(r.history) + '</td>' +
+      '<td style="text-align:center; padding:6px 14px;">' + r.statusBadge + '</td>' +
+    '</tr>';
+  }).join("");
+
+  // Sector Totals Row
+  const totD3 = timeline[0] ? (timeline[0].reps.reduce((s,r) => s + (Number(r[mCfg.key]) || 0), 0) / timeline[0].reps.length) : 0;
+  const totD4 = timeline[1] ? (timeline[1].reps.reduce((s,r) => s + (Number(r[mCfg.key]) || 0), 0) / timeline[1].reps.length) : 0;
+  const totD5 = timeline[2] ? (timeline[2].reps.reduce((s,r) => s + (Number(r[mCfg.key]) || 0), 0) / timeline[2].reps.length) : 0;
+  const totDelta = totD5 - totD3;
+
+  const totalsRowHtml = '<tr style="background:rgba(99,102,241,0.15); border-top: 2px solid rgba(99,102,241,0.4); font-size:0.88rem;">' +
+    '<td style="font-weight:900; color:#a5b4fc; padding:12px 14px;">SECTOR TOTAL (AVG)</td>' +
+    '<td style="font-size:0.74rem; color:#94a3b8; padding:12px 14px;">' + repRows.length + ' Reps</td>' +
+    valCell(totD3, mCfg.target) +
+    valCell(totD4, mCfg.target) +
+    valCell(totD5, mCfg.target) +
+    deltaPill(totDelta) +
+    '<td style="text-align:center;">' + sparklineBar([totD3, totD4, totD5]) + '</td>' +
+    '<td style="text-align:center; font-weight:700; color:#10b981;">' + (totDelta >= 0 ? '▲ Accelerating' : '▼ Declining') + '</td>' +
+  '</tr>';
+
+  tableEl.innerHTML =
+    '<table style="width:100%; border-collapse:collapse; font-size:0.85rem;">' +
+      '<thead>' +
+        '<tr style="background: rgba(99,102,241,0.15); border-bottom: 2px solid rgba(99,102,241,0.3);">' +
+          '<th style="padding:12px 14px; text-align:left; color:#a5b4fc; font-weight:800;">Representative</th>' +
+          '<th style="padding:12px 14px; text-align:left; color:#a5b4fc; font-weight:800;">Team</th>' +
+          '<th style="padding:12px 14px; text-align:center; color:#94a3b8; font-weight:700;">Day 3 (3 Oct)</th>' +
+          '<th style="padding:12px 14px; text-align:center; color:#94a3b8; font-weight:700;">Day 4 (4 Oct)</th>' +
+          '<th style="padding:12px 14px; text-align:center; color:' + mCfg.color + '; font-weight:800;">Day 5 (Today)</th>' +
+          '<th style="padding:12px 14px; text-align:center; color:#10b981; font-weight:800;">MTD Delta</th>' +
+          '<th style="padding:12px 14px; text-align:center; color:#a5b4fc; font-weight:700;">Trajectory</th>' +
+          '<th style="padding:12px 14px; text-align:center; color:#a5b4fc; font-weight:700;">Status</th>' +
+        '</tr>' +
+      '</thead>' +
+      '<tbody>' +
+        (tableRows || '<tr><td colspan="8" style="text-align:center; padding:20px; color:var(--text-muted);">No records match the selected team filter.</td></tr>') +
+      '</tbody>' +
+      '<tfoot>' +
+        totalsRowHtml +
+      '</tfoot>' +
+    '</table>' +
+    '<div style="margin-top:14px; padding:10px 16px; background:rgba(15,23,42,0.5); border-radius:8px; font-size:0.75rem; color:var(--text-muted);">' +
+      '<strong>MTD Progression Legend:</strong>' +
+      '<span style="color:#10b981; margin-left:10px;">▲ Positive Movement since 3 Oct baseline</span>' +
+      '<span style="color:#f43f5e; margin-left:10px;">▼ Rate Drop</span>' +
+      '&nbsp;|&nbsp; Official Target for ' + mCfg.label + ': <strong style="color:#fff;">' + mCfg.target + '%</strong>' +
+    '</div>';
+}
+window.renderMtdTab = renderMtdTab;
+
+
+
 // =========================================================================
 // PERFORMANCE COMPARISON TAB (Yesterday vs Today)
 // =========================================================================
@@ -5738,6 +7149,9 @@ function switchTab(tabKey) {
       c.classList.remove('active');
     }
   });
+  if (tabKey === 'mtd' && typeof renderMtdTab === 'function') {
+    renderMtdTab();
+  }
   if (tabKey === 'comparison' && typeof renderComparisonTab === 'function') {
     renderComparisonTab();
   }
@@ -5813,6 +7227,7 @@ window.addEventListener('DOMContentLoaded', () => {
     { name: 'renderRecommendationsTab', fn: () => renderRecommendationsTab(model) },
     { name: 'renderOperationsTab', fn: () => renderOperationsTab() },
     { name: 'renderComparisonTab', fn: () => renderComparisonTab() },
+    { name: 'renderMtdTab', fn: () => renderMtdTab() },
     { name: 'initPersonalRepSelect', fn: () => initPersonalRepSelect() },
     { name: 'initPersonalTeamSelect', fn: () => initPersonalTeamSelect() }
   ];
