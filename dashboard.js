@@ -5896,11 +5896,11 @@ window.MTD_TIMELINE_DATA = MTD_TIMELINE_DATA;
 let mtdChartInstance = null;
 
 function renderMtdTab() {
-  const container = document.getElementById("mtdTabContainer");
+  const tabEl     = document.getElementById("tab-mtd") || document.getElementById("mtdTabContainer");
   const bannersEl = document.getElementById("mtdKpiBanners");
   const tableEl   = document.getElementById("mtdTableContent");
   const canvas    = document.getElementById("mtdChartCanvas");
-  if (!container || !bannersEl || !tableEl) return;
+  if (!bannersEl || !tableEl) return;
 
   const timeline = (window.MTD_TIMELINE_DATA && window.MTD_TIMELINE_DATA.length) ? window.MTD_TIMELINE_DATA : [];
   if (!timeline.length) {
@@ -5987,8 +5987,10 @@ function renderMtdTab() {
   // 2. Render Chart.js Chart
   if (canvas && typeof Chart !== "undefined") {
     const ctx = canvas.getContext("2d");
-    if (mtdChartInstance) {
-      mtdChartInstance.destroy();
+    const existingChart = (typeof Chart.getChart === "function") ? Chart.getChart(canvas) : mtdChartInstance;
+    if (existingChart) {
+      try { existingChart.destroy(); } catch (e) {}
+      mtdChartInstance = null;
     }
 
     const datasets = [];
@@ -7151,6 +7153,9 @@ function switchTab(tabKey) {
   });
   if (tabKey === 'mtd' && typeof renderMtdTab === 'function') {
     renderMtdTab();
+    setTimeout(() => {
+      if (typeof renderMtdTab === 'function') renderMtdTab();
+    }, 60);
   }
   if (tabKey === 'comparison' && typeof renderComparisonTab === 'function') {
     renderComparisonTab();
