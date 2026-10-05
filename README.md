@@ -24,7 +24,22 @@ To maintain instant visual recognition and executive consistency across all dash
 
 ---
 
-## 🎯 2. Three Dedicated Core Operational Benchmarks
+## 💰 2. Official October 2026 Target Plan ($305,950 Cash | 252 Contracts)
+
+> Detailed breakdown and quota roster: see [OCTOBER_2026_TARGETS_AND_QUOTAS.md](OCTOBER_2026_TARGETS_AND_QUOTAS.md)
+
+| Small Team | Team Leader | Color Code | Active Reps | Cash Target | Contracts Target |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **ME-EGSS05** | Ibrahim Abd El Shakour | `#06b6d4` | 6 Reps | **$90,800** | 72 Orders |
+| **ME-EGSS01** | Ashraqatal | `#6366f1` | 5 Reps | **$88,000** | 63 Orders |
+| **ME-EGSS13** | Mohamedha | `#f59e0b` | 4 Reps | **$48,800** | 40 Orders |
+| **ME-EGSS10** | Abdelrhman Shehata | `#10b981` | 3 Reps | **$45,250** | 43 Orders |
+| **ME-EGSS30** | Adhm GadAllah | `#f43f5e` | 3 Reps | **$33,100** | 34 Orders |
+| **⭐ BIG TEAM 01** | **Saber Hussien** | `#38bdf8` | **21 Reps** | **$305,950** | **252 Orders** |
+
+---
+
+## 🎯 3. Three Dedicated Core Operational Benchmarks
 
 The executive dashboard features three dedicated, standalone intelligence hubs measuring the primary operational pillars against their official corporate targets:
 

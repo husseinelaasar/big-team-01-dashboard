@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -48,72 +48,121 @@ function renderTeamBadge(teamKey) {
   return "<span class=\"team-badge " + cfg.badgeClass + "\" style=\"background: " + cfg.bg + "; color: " + cfg.text + "; border: 1px solid " + cfg.border + ";\"><span style=\"width: 6px; height: 6px; border-radius: 50%; background: " + cfg.color + "; display: inline-block;\"></span>" + displayLabel + "</span>";
 }
 
-// October 2026 Cash Targets: Awaiting official announcement from Senior Management
-// October 2026 Cash Targets: Awaiting official announcement from Senior Management
+// October 2026 Official Cash & Contracts Target Plan (Senior Management)
 const NEW_TARGETS = {
-  // ME-EGSS01 (5 Reps)
-  "EGSS-ashraqatal": 0,
-  "EGSS-juliamonir01": 0,
-  "EGSS-mahmoud04": 0,
-  "EGSS-negma": 0,
-  "EGSS-nohayoussry": 0,
+  // ME-EGSS01 (5 Reps) — Total Cash: $88,000 | Contracts: 63
+  "EGSS-ashraqatal": 20000,
+  "EGSS-negma": 20000,
+  "EGSS-mahmoud04": 18000,
+  "EGSS-juliamonir01": 18000,
+  "EGSS-nohayoussry": 12000,
 
-  // ME-EGSS05 (6 Reps)
-  "EGSS-AbdelrahmanNASEF": 0,
-  "EGSS-ehabzaky01": 0,
-  "EGSS-Ibrahimismaiel": 0,
-  "EGSS-KhaledGonam": 0,
-  "EGSS-OmarMoneb": 0,
-  "EGSS-samira01": 0,
+  // ME-EGSS05 (6 Reps) — Total Cash: $90,800 | Contracts: 72
+  "EGSS-ehabzaky01": 18000,
+  "EGSS-Ibrahimismaiel": 18000,
+  "EGSS-ibrahimismaiel": 18000,
+  "EGSS-KhaledGonam": 18000,
+  "EGSS-khaledgonam": 18000,
+  "EGSS-samira01": 12800,
+  "EGSS-AbdelrahmanNASEF": 12000,
+  "EGSS-abdelrahmannasef": 12000,
+  "EGSS-OmarMoneb": 12000,
+  "EGSS-omarmoneb": 12000,
 
-  // ME-EGSS10 (3 Reps)
-  "EGSS-abdelrhmanshehata": 0,
-  "EGSS-AhmedShoukry": 0,
-  "EGSS-Mahmoudkhamis": 0,
+  // ME-EGSS10 (3 Reps) — Total Cash: $45,250 | Contracts: 43
+  "EGSS-Mahmoudkhamis": 20000,
+  "EGSS-mahmoudkhamis": 20000,
+  "EGSS-AhmedShoukry": 16450,
+  "EGSS-ahmedshoukry": 16450,
+  "EGSS-abdelrhmanshehata": 8800,
 
-  // ME-EGSS13 (4 Reps)
-  "EGSS-Amrsafwat": 0,
-  "EGSS-hayamhassan": 0,
-  "EGSS-marwaahmed": 0,
-  "EGSS-mohamedha": 0,
+  // ME-EGSS13 (4 Reps) — Total Cash: $48,800 | Contracts: 40
+  "EGSS-marwaahmed": 12800,
+  "EGSS-mohamedha": 12000,
+  "EGSS-hayamhassan": 12000,
+  "EGSS-Amrsafwat": 12000,
+  "EGSS-amrsafwat": 12000,
 
-  // ME-EGSS30 (3 Reps)
-  "EGSS-AdhmGadAllah": 0,
-  "EGSS-alihesham01": 0,
-  "EGSS-titooooo": 0
+  // ME-EGSS30 (3 Reps) — Total Cash: $33,100 | Contracts: 34
+  "EGSS-AdhmGadAllah": 12800,
+  "EGSS-adhmgadallah": 12800,
+  "EGSS-titooooo": 11500,
+  "EGSS-alihesham01": 8800
+};
+
+// October 2026 Official Contracts Target Plan
+const NEW_CONTRACTS_TARGETS = {
+  // ME-EGSS01 (5 Reps) — 63 Contracts
+  "EGSS-ashraqatal": 12,
+  "EGSS-negma": 11,
+  "EGSS-mahmoud04": 18,
+  "EGSS-juliamonir01": 13,
+  "EGSS-nohayoussry": 9,
+
+  // ME-EGSS05 (6 Reps) — 72 Contracts
+  "EGSS-ehabzaky01": 10,
+  "EGSS-Ibrahimismaiel": 12,
+  "EGSS-ibrahimismaiel": 12,
+  "EGSS-KhaledGonam": 13,
+  "EGSS-khaledgonam": 13,
+  "EGSS-samira01": 14,
+  "EGSS-AbdelrahmanNASEF": 12,
+  "EGSS-abdelrahmannasef": 12,
+  "EGSS-OmarMoneb": 11,
+  "EGSS-omarmoneb": 11,
+
+  // ME-EGSS10 (3 Reps) — 43 Contracts
+  "EGSS-Mahmoudkhamis": 17,
+  "EGSS-mahmoudkhamis": 17,
+  "EGSS-AhmedShoukry": 16,
+  "EGSS-ahmedshoukry": 16,
+  "EGSS-abdelrhmanshehata": 10,
+
+  // ME-EGSS13 (4 Reps) — 40 Contracts
+  "EGSS-marwaahmed": 13,
+  "EGSS-mohamedha": 9,
+  "EGSS-hayamhassan": 5,
+  "EGSS-Amrsafwat": 13,
+  "EGSS-amrsafwat": 13,
+
+  // ME-EGSS30 (3 Reps) — 34 Contracts
+  "EGSS-AdhmGadAllah": 14,
+  "EGSS-adhmgadallah": 14,
+  "EGSS-titooooo": 11,
+  "EGSS-alihesham01": 9
 };
 
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS30": { gross: 1740, refund: 0, cash: 1740, target: 0, contracts: 2, officialAch: 0 },
-  "EGSS01": { gross: 4960, refund: 0, cash: 4960, target: 0, contracts: 5, officialAch: 0 },
-  "EGSS13": { gross: 2160, refund: 0, cash: 2160, target: 0, contracts: 1, officialAch: 0 },
-  "EGSS10": { gross: 2092, refund: 0, cash: 2092, target: 0, contracts: 2, officialAch: 0 },
-  "EGSS05": { gross: 5175, refund: 0, cash: 5175, target: 0, contracts: 5, officialAch: 0 },
+  "EGSS01": { gross: 4960, refund: 0, cash: 4960, target: 88000, contracts: 5, targetContracts: 63, officialAch: 5.6 },
+  "EGSS05": { gross: 5175, refund: 0, cash: 5175, target: 90800, contracts: 5, targetContracts: 72, officialAch: 5.7 },
+  "EGSS10": { gross: 2092, refund: 0, cash: 2092, target: 45250, contracts: 2, targetContracts: 43, officialAch: 4.6 },
+  "EGSS13": { gross: 2160, refund: 0, cash: 2160, target: 48800, contracts: 1, targetContracts: 40, officialAch: 4.4 },
+  "EGSS30": { gross: 1740, refund: 0, cash: 1740, target: 33100, contracts: 2, targetContracts: 34, officialAch: 5.3 }
 };
 
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 1600, refund: 0, target: 0, contracts: 2, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-negma", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 1020, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 2340, refund: 0, target: 0, contracts: 2, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 365, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 2040, refund: 0, target: 0, contracts: 2, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 1750, refund: 0, target: 0, contracts: 2, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 1020, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 632, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 1460, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mohamedha", team: "EGSS13", cash: 2160, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-alihesham01", team: "EGSS30", cash: 1020, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-titooooo", team: "EGSS30", cash: 720, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 1600, refund: 0, target: 12000, contracts: 2, contractsTarget: 9, officialAch: 13.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 0, refund: 0, target: 20000, contracts: 0, contractsTarget: 12, officialAch: 0.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-negma", team: "EGSS01", cash: 0, refund: 0, target: 20000, contracts: 0, contractsTarget: 11, officialAch: 0.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 1020, refund: 0, target: 18000, contracts: 1, contractsTarget: 13, officialAch: 5.7, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 2340, refund: 0, target: 18000, contracts: 2, contractsTarget: 18, officialAch: 13.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 0, refund: 0, target: 12000, contracts: 0, contractsTarget: 12, officialAch: 0.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 0, refund: 0, target: 18000, contracts: 0, contractsTarget: 10, officialAch: 0.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 365, refund: 0, target: 18000, contracts: 0, contractsTarget: 12, officialAch: 2.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 2040, refund: 0, target: 18000, contracts: 2, contractsTarget: 13, officialAch: 11.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 1750, refund: 0, target: 12000, contracts: 2, contractsTarget: 11, officialAch: 14.6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 1020, refund: 0, target: 12800, contracts: 1, contractsTarget: 14, officialAch: 8.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 632, refund: 0, target: 8800, contracts: 1, contractsTarget: 10, officialAch: 7.2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 0, refund: 0, target: 16450, contracts: 0, contractsTarget: 16, officialAch: 0.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 1460, refund: 0, target: 20000, contracts: 1, contractsTarget: 17, officialAch: 7.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 0, refund: 0, target: 12000, contracts: 0, contractsTarget: 13, officialAch: 0.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 0, refund: 0, target: 12000, contracts: 0, contractsTarget: 5, officialAch: 0.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 0, refund: 0, target: 12800, contracts: 0, contractsTarget: 13, officialAch: 0.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mohamedha", team: "EGSS13", cash: 2160, refund: 0, target: 12000, contracts: 1, contractsTarget: 9, officialAch: 18.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 0, refund: 0, target: 12800, contracts: 0, contractsTarget: 14, officialAch: 0.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-alihesham01", team: "EGSS30", cash: 1020, refund: 0, target: 8800, contracts: 1, contractsTarget: 9, officialAch: 11.6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-titooooo", team: "EGSS30", cash: 720, refund: 0, target: 11500, contracts: 1, contractsTarget: 11, officialAch: 6.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
 ];
 
 // SOP Process Compliance Data (51Talk Data Center)
@@ -277,6 +326,7 @@ function buildDataModel() {
       cash: 0,
       target: 0,
       contracts: 0,
+      contractsTarget: 0,
       upgradeM2: 0,
       normalRenewals: 0,
       upgradeBase: 0,
@@ -287,6 +337,7 @@ function buildDataModel() {
 
   const individuals = REPS_DATA.map(raw => {
     const target = raw.target || NEW_TARGETS[raw.name] || 0;
+    const contractsTarget = raw.contractsTarget || NEW_CONTRACTS_TARGETS[raw.name] || 0;
     const ach = (raw.officialAch !== undefined && raw.officialAch !== null) ? raw.officialAch : (target > 0 ? ((raw.cash / target) * 100) : 0);
     const gap = Math.max(0, target - raw.cash);
     const dailyNeeded = daysLeft > 0 ? (gap / daysLeft) : 0;
@@ -297,6 +348,7 @@ function buildDataModel() {
     const rep = {
       ...raw,
       target,
+      contractsTarget,
       achievement: ach,
       gap,
       dailyNeeded,
@@ -333,6 +385,7 @@ function buildDataModel() {
     t.refund = t.members.reduce((s, m) => s + (m.refund || 0), 0);
     t.gross = t.members.reduce((s, m) => s + (m.cash + (m.refund || 0)), 0);
     t.contracts = t.members.reduce((s, m) => s + m.contracts, 0);
+    t.contractsTarget = t.members.reduce((s, m) => s + (m.contractsTarget || 0), 0);
     t.achievement = t.target > 0 ? ((t.cash / t.target) * 100) : 0;
     t.gap = Math.max(0, t.target - t.cash);
     t.projected = Math.round((t.cash / daysPassed) * daysInMonth);
@@ -351,14 +404,15 @@ function buildDataModel() {
     rep.commission = calculateSSCommission(rep.cash, teamAch, t ? t.target : 0, t ? t.cash : 0, rep.achievement);
   });
 
-      // Reconciled Sector Totals (October 2026 Live: from SS Lens Dashboard_Area_Big Team_Small Team_SS_20261003_1242.xlsx)
-  const totalCash = 16127; // from Individual Sheet Col G (or 指标看板 Col C)
-  const sectorAchPct = 0; // from Individual Sheet Col M (or 指标看板 Col I)
-  const totalTarget = 0; // Awaiting official October Cash Target
-  const totalContracts = 15; // from 指标看板 Col D
+  // Reconciled Sector Totals (Official October 2026 Cash Targets Plan)
+  const totalCash = 16127; // from Individual Sheet Col G
+  const totalTarget = 305950; // Official October Cash Target Plan ($305,950 across 21 reps)
+  const sectorAchPct = Math.round((totalCash / totalTarget) * 1000) / 10; // 5.3%
+  const totalContracts = 15; // from CRM Col D
+  const totalContractsTarget = 252; // Official October Contracts Target Plan (252 contracts)
   const totalUpgradeM2 = 0;
-  const totalNormalRenewals = 15; // from Student_Detail32
-  const totalUpgradeBase = 0; // Awaiting official October Upgrade Base
+  const totalNormalRenewals = 15;
+  const totalUpgradeBase = 0; // Awaiting official October Upgrade Base from SCRM
   const totalUpgrade20Target = 0;
   const totalUpgrade20Needed = 0;
 
@@ -369,12 +423,13 @@ function buildDataModel() {
       totalCash,
       totalTarget,
       totalContracts,
+      totalContractsTarget,
       totalUpgradeM2,
       totalNormalRenewals,
       totalUpgradeBase,
       totalUpgrade20Target,
       totalUpgrade20Needed,
-      achievement: totalTarget > 0 ? (typeof sectorAchPct !== 'undefined' ? sectorAchPct : ((totalCash / totalTarget) * 100)) : 0,
+      achievement: sectorAchPct,
       projectedCash: daysPassed > 0 ? Math.round((totalCash / daysPassed) * daysInMonth) : 0,
       totalGap: Math.max(0, totalTarget - totalCash),
       dailyNeeded: (daysLeft > 0 && totalTarget > 0) ? Math.round((totalTarget - totalCash) / daysLeft) : 0,
@@ -382,7 +437,7 @@ function buildDataModel() {
       activeReps: individuals.length,
       zeroReps: individuals.filter(r => r.cash === 0).length,
       targetPacePct: expectedPace,
-      pacingGapPct: Math.round(((typeof sectorAchPct !== 'undefined' ? sectorAchPct : ((totalCash / totalTarget) * 100)) - expectedPace) * 10) / 10,
+      pacingGapPct: Math.round((sectorAchPct - expectedPace) * 10) / 10,
       daysPassed,
       daysLeft,
       daysInMonth
@@ -450,9 +505,10 @@ function renderKPIs(model) {
 
   // Total Contracts — animated counter
   animateCounter(document.getElementById('totalContracts'), s.totalContracts, '', '', 1200);
-  document.getElementById('contractsSub').textContent = `Normal: ${s.totalNormalRenewals} | Upgrade M2: ${s.totalUpgradeM2}`;
-  document.getElementById('contractsBar').style.width = Math.min(100, (s.totalContracts / 180) * 100) + '%';
-  document.getElementById('contractsPct').textContent = `Avg: ${fmt(s.totalCash / s.totalContracts)} / contract`;
+  const targetContractsTotal = s.totalContractsTarget || 252;
+  document.getElementById('contractsSub').textContent = `Target: ${targetContractsTotal} Contracts | Normal: ${s.totalNormalRenewals} | Upgrade M2: ${s.totalUpgradeM2}`;
+  document.getElementById('contractsBar').style.width = Math.min(100, (s.totalContracts / targetContractsTotal) * 100) + '%';
+  document.getElementById('contractsPct').textContent = `${((s.totalContracts / targetContractsTotal) * 100).toFixed(1)}% Achieved | Avg: ${fmt(s.totalCash / s.totalContracts)} / contract`;
 
   // Pacing
   document.getElementById('achPct').textContent = fmtPct(s.achievement);
@@ -462,7 +518,7 @@ function renderKPIs(model) {
 
   // Reps
   document.getElementById('totalReps').textContent = `${s.activeReps} Reps`;
-  document.getElementById('baseLeads').textContent = `${s.totalUpgradeM2} Upgrades / ${s.totalUpgradeBase} Base | 20% Goal: ${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)`;
+  document.getElementById('baseLeads').textContent = `${s.totalUpgradeM2} Upgrades / ${s.totalUpgradeBase > 0 ? s.totalUpgradeBase : 'Pending SCRM'} Base | 20% Goal: ${s.totalUpgrade20Target} (${s.totalUpgrade20Needed} needed)`;
   document.getElementById('repsBar').style.width = Math.min(100, ((s.activeReps - s.zeroReps) / s.activeReps) * 100) + '%';
   document.getElementById('repsPct').textContent = `${fmtPct(s.upgradeRate)} M2 Upgrade Conversion`;
 }
@@ -815,6 +871,26 @@ function renderBigTeamSummary(model) {
     const diffSign = diffPct >= 0 ? '+' : '';
     let revHeader = '';
     let revBody = '';
+    if (diffPct >= 0) {
+      revHeader = `<span class="pill-badge pill-badge-emerald" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-emerald"></span> 🟢 Ahead of Pace (+${diffPct}%)</span>`;
+      revBody = `Team has achieved ${fmt(t.cash)} (${fmtPct(t.displayAch)}), pacing ahead of Day ${daysPassed} benchmark (${pacePct}%). Target: ${fmt(t.target)} (${t.contractsTarget || 0} orders).`;
+    } else {
+      revHeader = `<span class="pill-badge pill-badge-rose" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-rose"></span> 🔴 Behind Pace (${diffPct}%)</span>`;
+      revBody = `Team has achieved ${fmt(t.cash)} (${fmtPct(t.displayAch)}), deficit is ${fmt(t.gap)}. Required run-rate: ${fmt(t.dailyNeeded)}/day to hit ${fmt(t.target)}.`;
+    }
+
+    let upgHeader = '<span class="pill-badge" style="font-size:0.7rem; padding: 2px 7px; background: rgba(148,163,184,0.15); color: #94a3b8;">⚪ Upgrade Base Pending</span>';
+    let upgBody = 'Awaiting official October M-2 student allocation from SCRM.';
+    if (t.upgradeBase > 0) {
+      if (t.upgradeRate >= 20) {
+        upgHeader = '<span class="pill-badge pill-badge-emerald" style="font-size:0.7rem; padding: 2px 7px;">🟢 20% Goal Met</span>';
+        upgBody = `M2 Conversion: ${fmtPct(t.upgradeRate)} (${t.upgradeM2}/${t.upgradeBase}). Milestone achieved!`;
+      } else {
+        upgHeader = '<span class="pill-badge pill-badge-amber" style="font-size:0.7rem; padding: 2px 7px;">🟡 M2 Upgrade Pace</span>';
+        upgBody = `M2 Conversion: ${fmtPct(t.upgradeRate)} (${t.upgradeM2}/${t.upgradeBase}). Needed for 20%: ${t.upgrade20Needed} contracts.`;
+      }
+    }
+
     return `
       <div class="strategic-memo-box">
         <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 5px; flex-wrap: wrap;">
@@ -1113,7 +1189,7 @@ function renderBigTeamSummary(model) {
           Executive Sector Feedback &amp; Strategic Direction (Senior Manager: Saber Hussien)
         </div>
         <p style="font-size: 0.85rem; color: #e2e8f0; line-height: 1.55; margin: 0;">
-          ${macroCommentary} <strong>October 2026 Kickoff &amp; Strategic Direction:</strong> Big Team 01 has commenced October operations with a clean baseline. Official Cash Targets &amp; Upgrade allocations are pending announcement from Senior Management. Sponsoring early renewal outreach and proactive touchpoints on warm leads will directly position the team for peak commission tiers from Day 1.
+          ${macroCommentary} <strong>Strategic Direction:</strong> Big Team 01 official October cash target is confirmed at <strong>${fmt(s.totalTarget)}</strong> (${s.totalContractsTarget || 252} orders) across 21 sales specialists. Sponsoring proactive renewal outreach on warm leads and closing M2 early upgrades will directly position the team for peak commission tiers from Day 1.
         </p>
       </div>
 
@@ -1168,7 +1244,7 @@ function renderBigTeamSummary(model) {
                 ${fmt(s.totalGap)}
               </td>
               <td style="text-align: left !important; font-size: 0.82rem; line-height: 1.45; color: #e2e8f0; padding: 14px 16px;">
-                <strong>Sector Synthesis:</strong> October 2026 clean kickoff is active. All baseline cash, target, and upgrade figures are reset to zero awaiting official October corporate allocations. Core operational priority is early momentum across all 5 Small Teams.
+                <strong>Sector Synthesis:</strong> Official October cash target is ${fmt(s.totalTarget)} (${s.totalContractsTarget || 252} orders). Current MTD net revenue stands at ${fmt(s.totalCash)} (${fmtPct(s.achievement)}) against Day ${daysPassed} pacing benchmark (${pacePct}%). Target gap is ${fmt(s.totalGap)} requiring a run-rate of ${fmt(s.dailyNeeded)}/day over the remaining ${daysLeft} days.
               </td>
             </tr>
           </tfoot>
