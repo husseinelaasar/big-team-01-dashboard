@@ -1,9 +1,9 @@
-# 📋 Performance Comparison Tab: Root Cause Resolution & Enhanced Insights Roadmap
+# 📋 Performance Comparison Tab: Root Cause Resolution, Team 05 Alignment & Unfixed Teacher Insights
 
 **Date:** October 5, 2026  
 **Senior Manager:** Saber Hussien — 51Talk Big Team 01  
 **Project:** [Big Team 01 Executive Dashboard](https://husseinelaasar.github.io/big-team-01-dashboard/)  
-**Document Status:** Complete & Live (`commit: 5df39d0`)
+**Document Status:** Complete & Live (`commit: f927ab7` + Unfixed Progress Update)
 
 ---
 
@@ -51,8 +51,6 @@ An audit of `renderComparisonTab()` in `dashboard.js` identified an unhandled ob
 
 ## 2. Technical Fix Applied
 
-The following changes were implemented and deployed in commit [`5df39d0`](https://github.com/husseinelaasar/big-team-01-dashboard/commit/5df39d0):
-
 1. **Safe Model Property Resolution & Fallback:**
    ```javascript
    const todayUpg = (window.__model && (window.__model.individuals || window.__model.reps)) 
@@ -64,67 +62,60 @@ The following changes were implemented and deployed in commit [`5df39d0`](https:
    (yd.consumption || []).forEach(r => { ydCcMap[normName(r.name)] = r; });
    (yd.englishClub || []).forEach(r => { ydEcMap[normName(r.name)] = r; });
    (yd.upgrade || []).forEach(r => { ydUpgMap[normName(r.name)] = r; });
+   (yd.unfixed || []).forEach(r => { ydFtMap[normName(r.name)] = r; });
    ```
 3. **Robust Team Key Normalization:**
-   Normalized team filtering to work seamlessly with or without `ME-` prefixes:
-   ```javascript
-   if (teamFilter !== 'ALL') {
-     const cleanFilter = teamFilter.replace(/^ME-/, '').toUpperCase();
-     reps = reps.filter(r => (r.team || '').replace(/^ME-/, '').toUpperCase() === cleanFilter);
-   }
-   ```
+   Normalized team filtering to work seamlessly with or without `ME-` prefixes (`replace(/^ME-/, '').toUpperCase()`).
 4. **Dynamic Re-render on Tab Activation:**
    Updated `switchTab()` so selecting the tab immediately executes `renderComparisonTab()`.
-5. **Cache-Buster Bump:**
-   Updated `index.html` asset query strings to `?v=20261005_135000`.
 
 ---
 
-## 3. Recommended Insights & Details to Enhance the Comparison Page
+## 3. Team 05 Leadership Alignment (Ibrahim Abd El Shakour)
 
-To transform the comparison page from a raw delta table into a strategic decision-making command center, the following enhancements are recommended:
-
-### A. Executive Spotlight Cards (Top Movers & Critical Alerts)
-Place 3 highlight cards directly above the comparison table to identify actionable trends in seconds:
-- 🚀 **Top CC Mover of the Day:** The rep who achieved the highest jump in active students/consumption.
-- 🎯 **Upgrade Deal Closer:** Reps who converted upgrades (M2) between yesterday and today.
-- ⚠️ **Zero-Consumption (C0) Spike Alert:** Flags reps whose inactive student count grew, indicating uncontacted students needing immediate follow-up.
-
-### B. Student Volume Details (Counts in Addition to Percentages)
-Currently, only rates are shown (e.g. `68.2%`). Adding volume subticks provides crucial operational context:
-| Metric | Format in Table | Example |
-| :--- | :--- | :--- |
-| **Class Consumption** | `Rate%` + `(Active / Total Students)` | `68.2% (148/217) [▲ +3]` |
-| **Zero Consumption (C0)** | `C0 Count` + `Change` | `69 students [▼ -2 C0]` *(Fewer C0 = Better)* |
-| **Upgrade M2 Deals** | `M2 Count / Pool Base` | `3 / 12 (+1 deal closed today)` |
-
-### C. Small Team Rollup Comparison (TL Benchmark)
-Add a toggle or summary header comparing the 5 Small Teams against each other:
-- **ME-EGSS01** (Ashraqatal)
-- **ME-EGSS05** (Ibrahim Abd El Shakour)
-- **ME-EGSS10** (Abdelrhman Shehata)
-- **ME-EGSS13** (Mohamedha)
-- **ME-EGSS30** (Adhm GadAllah)
-
-*Displays which team leader’s sector generated the highest aggregate improvement over the 24-hour cycle.*
-
-### D. Interactive Search & Quick Filters
-- **Live Search Input:** Type a rep's name to filter the 21 reps instantly.
-- **Quick Status Pills:** Filter by:
-  - 🟢 `Pacing Ahead` (CC ≥ 65%)
-  - 🟡 `Close to Target` (55% – 64.9%)
-  - 🔴 `Critical Pace` (< 55%)
-
-### E. One-Click Export & Reporting Tools
-- **Export to Excel (`.xlsx`):** Direct download of the side-by-side comparison data for manager review.
-- **Export Snapshot Card (`PNG`):** Generate a clean graphic card for instant sharing in DingTalk leadership groups.
+In accordance with official October organizational restructuring:
+- **`TL_MAPPING["EGSS05"]` in `dashboard.js`** updated to:
+  - `tl: "EGSS-ibrahimismaiel"`
+  - `leaderName: "Ibrahim Abd El Shakour"`
+  - `fullName: "ME-EGSS05 (Ibrahim Abd El Shakour)"`
+- **All Dropdowns in `index.html`** updated:
+  - Section 2 Download Center: `ME-EGSS05 (Ibrahim Abd El Shakour - Team 05)`
+  - Performance Comparison Filter: `ME-EGSS05 (Ibrahim Abd El Shakour)`
+  - Class Consumption Filter: `ME-EGSS05 (Ibrahim Abd El Shakour)`
+  - English Club Filter: `ME-EGSS05 (Ibrahim Abd El Shakour)`
 
 ---
 
-## 4. Verification Checklist
+## 4. Unfixed Teacher Progress Insights (Implemented & Live)
 
-- [x] Syntax audit completed with zero exceptions.
-- [x] Tested all 4 sort modes (`consumption-desc`, `upgrade-desc`, `ec-desc`, `delta-desc`).
-- [x] Tested all 5 team filter views (`EGSS01`, `EGSS05`, `EGSS10`, `EGSS13`, `EGSS30`).
-- [x] Verified full 21-rep data binding and totals row calculation.
-- [x] Changes pushed to GitHub Pages repository.
+To provide management with deep operational visibility over teacher binding and student retention, the **Performance Comparison** page now tracks **Unfixed Teacher Progress (FT)** across all 21 reps:
+
+### A. The 4 Operational Workstream Pillars
+The comparison table now presents all 4 core performance metrics side-by-side:
+1. 🟢 **Class Consumption (65% Target)**
+2. 🔵 **English Club (45% Target)**
+3. 🟣 **Early Upgrade Hub (20% Target)**
+4. 🟡 **Unfixed Teacher Binding (80% Benchmark)**
+
+### B. Sector-Level Progress Highlights (Day 4 vs Day 5)
+* **Overall Teacher Binding Rate:** **78.3% → 79.5% (+1.2% Improvement)**
+* **Pending Unfixed Pipeline:** **208 → 199 Leads (-9 Unbound Leads Resolved into Fixed Bindings 🟢)**
+
+### C. Executive Action Spotlight Cards
+Positioned directly above the comparison table:
+* 🎯 **Fixation Champion of the Day:**  
+  * **Ali Hesham** (`+8.2% Binding Rate`, `-3 Unfixed Leads`)  
+  * **Mahmoud 04** (`+6.1% Binding Rate`, `-3 Unfixed Leads`)  
+  * **Ibrahim Ismaiel** (`+6.0% Binding Rate`, `-3 Unfixed Leads`)
+* ⚠️ **Top Unfixed Pipeline Focus (Immediate Manager Action):**  
+  * **Mohamedha** (28 Pending Unfixed Leads, 30.0% Binding Rate)  
+  * **Ashraqatal** (19 Pending Unfixed Leads, 65.5% Binding Rate)  
+  * **Ibrahim Ismaiel & Khaled Gonam** (13 Pending Leads each)
+* 🚀 **Top Consumption Movement:**  
+  * Highlighting daily active student gains.
+
+### D. New Sorting Dimensions Added
+The sort dropdown now includes 3 dedicated unfixed views:
+- `Teacher Binding % (High to Low)`
+- `Biggest Fixation Improvement (Delta)`
+- `Most Unfixed Leads (High to Low)` (instantly surfaces reps needing triage)

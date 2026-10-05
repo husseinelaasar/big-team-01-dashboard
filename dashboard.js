@@ -4644,6 +4644,218 @@ const YESTERDAY_DATA = {
     { name: "EGSS-AdhmGadAllah",      team: "ME-EGSS30", upgradeM2: 0, upgradeBase: 0 },
     { name: "EGSS-alihesham01",       team: "ME-EGSS30", upgradeM2: 0, upgradeBase: 0 },
     { name: "EGSS-titooooo",          team: "ME-EGSS30", upgradeM2: 0, upgradeBase: 0 }
+  ],
+  unfixed:   [
+      {
+          "name": "EGSS-AbdelrahmanNASEF",
+          "team": "ME-EGSS05",
+          "m0Tot": 21,
+          "m0Fix": 19,
+          "m0Pct": "90.5%",
+          "m1Tot": 18,
+          "m1Fix": 16,
+          "m1Pct": "88.9%"
+      },
+      {
+          "name": "EGSS-ehabzaky01",
+          "team": "ME-EGSS05",
+          "m0Tot": 29,
+          "m0Fix": 24,
+          "m0Pct": "82.8%",
+          "m1Tot": 21,
+          "m1Fix": 16,
+          "m1Pct": "76.2%"
+      },
+      {
+          "name": "EGSS-Ibrahimismaiel",
+          "team": "ME-EGSS05",
+          "m0Tot": 25,
+          "m0Fix": 15,
+          "m0Pct": "60%",
+          "m1Tot": 25,
+          "m1Fix": 19,
+          "m1Pct": "76%"
+      },
+      {
+          "name": "EGSS-KhaledGonam",
+          "team": "ME-EGSS05",
+          "m0Tot": 15,
+          "m0Fix": 6,
+          "m0Pct": "40%",
+          "m1Tot": 13,
+          "m1Fix": 8,
+          "m1Pct": "61.5%"
+      },
+      {
+          "name": "EGSS-OmarMoneb",
+          "team": "ME-EGSS05",
+          "m0Tot": 18,
+          "m0Fix": 15,
+          "m0Pct": "83.3%",
+          "m1Tot": 15,
+          "m1Fix": 11,
+          "m1Pct": "73.3%"
+      },
+      {
+          "name": "EGSS-samira01",
+          "team": "ME-EGSS05",
+          "m0Tot": 15,
+          "m0Fix": 10,
+          "m0Pct": "66.7%",
+          "m1Tot": 17,
+          "m1Fix": 16,
+          "m1Pct": "94.1%"
+      },
+      {
+          "name": "EGSS-ashraqatal",
+          "team": "ME-EGSS01",
+          "m0Tot": 25,
+          "m0Fix": 13,
+          "m0Pct": "52%",
+          "m1Tot": 29,
+          "m1Fix": 22,
+          "m1Pct": "75.9%"
+      },
+      {
+          "name": "EGSS-juliamonir01",
+          "team": "ME-EGSS01",
+          "m0Tot": 14,
+          "m0Fix": 9,
+          "m0Pct": "64.3%",
+          "m1Tot": 22,
+          "m1Fix": 16,
+          "m1Pct": "72.7%"
+      },
+      {
+          "name": "EGSS-mahmoud04",
+          "team": "ME-EGSS01",
+          "m0Tot": 18,
+          "m0Fix": 12,
+          "m0Pct": "66.7%",
+          "m1Tot": 31,
+          "m1Fix": 29,
+          "m1Pct": "93.5%"
+      },
+      {
+          "name": "EGSS-negma",
+          "team": "ME-EGSS01",
+          "m0Tot": 25,
+          "m0Fix": 15,
+          "m0Pct": "60%",
+          "m1Tot": 34,
+          "m1Fix": 32,
+          "m1Pct": "94.1%"
+      },
+      {
+          "name": "EGSS-nohayoussry",
+          "team": "ME-EGSS01",
+          "m0Tot": 17,
+          "m0Fix": 15,
+          "m0Pct": "88.2%",
+          "m1Tot": 27,
+          "m1Fix": 25,
+          "m1Pct": "92.6%"
+      },
+      {
+          "name": "EGSS-Amrsafwat",
+          "team": "ME-EGSS13",
+          "m0Tot": 20,
+          "m0Fix": 17,
+          "m0Pct": "85%",
+          "m1Tot": 26,
+          "m1Fix": 21,
+          "m1Pct": "80.8%"
+      },
+      {
+          "name": "EGSS-hayamhassan",
+          "team": "ME-EGSS13",
+          "m0Tot": 35,
+          "m0Fix": 31,
+          "m0Pct": "88.6%",
+          "m1Tot": 21,
+          "m1Fix": 19,
+          "m1Pct": "90.5%"
+      },
+      {
+          "name": "EGSS-marwaahmed",
+          "team": "ME-EGSS13",
+          "m0Tot": 24,
+          "m0Fix": 20,
+          "m0Pct": "83.3%",
+          "m1Tot": 16,
+          "m1Fix": 14,
+          "m1Pct": "87.5%"
+      },
+      {
+          "name": "EGSS-mohamedha",
+          "team": "ME-EGSS13",
+          "m0Tot": 20,
+          "m0Fix": 0,
+          "m0Pct": "0%",
+          "m1Tot": 20,
+          "m1Fix": 11,
+          "m1Pct": "55%"
+      },
+      {
+          "name": "EGSS-AdhmGadAllah",
+          "team": "ME-EGSS30",
+          "m0Tot": 19,
+          "m0Fix": 17,
+          "m0Pct": "89.5%",
+          "m1Tot": 25,
+          "m1Fix": 23,
+          "m1Pct": "92%"
+      },
+      {
+          "name": "EGSS-alihesham01",
+          "team": "ME-EGSS30",
+          "m0Tot": 20,
+          "m0Fix": 13,
+          "m0Pct": "65%",
+          "m1Tot": 18,
+          "m1Fix": 17,
+          "m1Pct": "94.4%"
+      },
+      {
+          "name": "EGSS-titooooo",
+          "team": "ME-EGSS30",
+          "m0Tot": 30,
+          "m0Fix": 21,
+          "m0Pct": "70%",
+          "m1Tot": 19,
+          "m1Fix": 17,
+          "m1Pct": "89.5%"
+      },
+      {
+          "name": "EGSS-abdelrhmanshehata",
+          "team": "ME-EGSS10",
+          "m0Tot": 29,
+          "m0Fix": 23,
+          "m0Pct": "79.3%",
+          "m1Tot": 26,
+          "m1Fix": 22,
+          "m1Pct": "84.6%"
+      },
+      {
+          "name": "EGSS-AhmedShoukry",
+          "team": "ME-EGSS10",
+          "m0Tot": 26,
+          "m0Fix": 23,
+          "m0Pct": "88.5%",
+          "m1Tot": 34,
+          "m1Fix": 29,
+          "m1Pct": "85.3%"
+      },
+      {
+          "name": "EGSS-Mahmoudkhamis",
+          "team": "ME-EGSS10",
+          "m0Tot": 26,
+          "m0Fix": 22,
+          "m0Pct": "84.6%",
+          "m1Tot": 32,
+          "m1Fix": 29,
+          "m1Pct": "90.6%"
+      }
   ]
 };
 window.YESTERDAY_DATA = YESTERDAY_DATA;
@@ -4652,91 +4864,129 @@ window.YESTERDAY_DATA = YESTERDAY_DATA;
 // PERFORMANCE COMPARISON TAB (Yesterday vs Today)
 // =========================================================================
 function renderComparisonTab() {
-  const bannerEl = document.getElementById('cmpKpiBanners');
-  const tableEl  = document.getElementById('cmpTableContent');
+  const bannerEl = document.getElementById("cmpKpiBanners");
+  const tableEl  = document.getElementById("cmpTableContent");
   if (!bannerEl || !tableEl) return;
 
   const todayCC  = (window.MASTER_OPERATIONS_DATA && window.MASTER_OPERATIONS_DATA.consumption) || [];
   const todayEC  = (window.MASTER_OPERATIONS_DATA && window.MASTER_OPERATIONS_DATA.englishClub) || [];
-  const todayUpg = (window.__model && (window.__model.individuals || window.__model.reps)) || (typeof REPS_DATA !== 'undefined' ? REPS_DATA : []);
-  const yd       = window.YESTERDAY_DATA || { consumption: [], englishClub: [], upgrade: [] };
+  const todayFT  = (window.MASTER_OPERATIONS_DATA && window.MASTER_OPERATIONS_DATA.unfixed) || [];
+  const todayUpg = (window.__model && (window.__model.individuals || window.__model.reps)) || (typeof REPS_DATA !== "undefined" ? REPS_DATA : []);
+  const yd       = window.YESTERDAY_DATA || { consumption: [], englishClub: [], upgrade: [], unfixed: [], label: "Oct 4, 2026" };
 
-  const teamFilter = (document.getElementById('cmpTeamFilter') || {}).value || 'ALL';
-  const sortFilter = (document.getElementById('cmpSortFilter') || {}).value || 'consumption-desc';
+  const teamFilter = (document.getElementById("cmpTeamFilter") || {}).value || "ALL";
+  const sortFilter = (document.getElementById("cmpSortFilter") || {}).value || "consumption-desc";
 
-  // Build a unified rep list (keyed by normalized name, lowercased)
-  function normName(n) { return String(n).toLowerCase().replace(/[^a-z0-9]/g, ''); }
+  function normName(n) { return String(n || "").toLowerCase().replace(/[^a-z0-9]/g, ""); }
 
-  // Index today's data by normalized name
+  // Index today's datasets
   const ccMap  = {};
-  todayCC.forEach(r => { ccMap[normName(r.name)] = r; });
+  (todayCC || []).forEach(r => { ccMap[normName(r.name)] = r; });
 
   const ecMap  = {};
-  todayEC.forEach(r => { ecMap[normName(r.name)] = r; });
+  (todayEC || []).forEach(r => { ecMap[normName(r.name)] = r; });
+
+  const ftMap  = {};
+  (todayFT || []).forEach(r => { ftMap[normName(r.name)] = r; });
 
   const upgMap = {};
-  todayUpg.forEach(r => { upgMap[normName(r.name)] = r; });
+  (todayUpg || []).forEach(r => { upgMap[normName(r.name)] = r; });
 
-  // Index yesterday's data
+  // Index yesterday's datasets
   const ydCcMap  = {};
   (yd.consumption || []).forEach(r => { ydCcMap[normName(r.name)] = r; });
 
   const ydEcMap  = {};
   (yd.englishClub || []).forEach(r => { ydEcMap[normName(r.name)] = r; });
 
+  const ydFtMap  = {};
+  (yd.unfixed || []).forEach(r => { ydFtMap[normName(r.name)] = r; });
+
   const ydUpgMap = {};
   (yd.upgrade || []).forEach(r => { ydUpgMap[normName(r.name)] = r; });
 
-  // Build master rep list from today's consumption data (covers all reps)
   let reps = todayCC.map(r => {
     const nk = normName(r.name);
 
-    // Today values
-    const todayCC_rate = r.total > 0 ? ((r.total - r.c0) / r.total) * 100 : 0;
+    // 1. Class Consumption
+    const todayCC_total = Number(r.total) || 0;
+    const todayCC_c0    = Number(r.c0) || 0;
+    const todayCC_rate  = todayCC_total > 0 ? ((todayCC_total - todayCC_c0) / todayCC_total) * 100 : 0;
+    
+    const ydCC_r     = ydCcMap[nk] || {};
+    const ydCC_total = Number(ydCC_r.total) || 0;
+    const ydCC_c0    = Number(ydCC_r.c0) || 0;
+    const ydCC_rate  = ydCC_total > 0 ? ((ydCC_total - ydCC_c0) / ydCC_total) * 100 : 0;
+    const delta_cc   = todayCC_rate - ydCC_rate;
+
+    // 2. English Club
     const todayEC_r    = ecMap[nk] || {};
-    const todayEC_rate = parseFloat(todayEC_r.pct) || 0;
-    const todayUpg_r   = upgMap[nk] || {};
-    const todayUpg_rate = todayUpg_r.upgradeBase > 0 ? (todayUpg_r.upgradeM2 / todayUpg_r.upgradeBase) * 100 : 0;
+    const todayEC_rate = typeof todayEC_r.pct === "number" ? todayEC_r.pct : (parseFloat(todayEC_r.pct) || 0);
+    const ydEC_r       = ydEcMap[nk] || {};
+    const ydEC_rate    = typeof ydEC_r.pct === "number" ? ydEC_r.pct : (parseFloat(ydEC_r.pct) || 0);
+    const delta_ec     = todayEC_rate - ydEC_rate;
 
-    // Yesterday values
-    const ydCC_r    = ydCcMap[nk] || {};
-    const ydCC_rate = (ydCC_r.total > 0) ? ((ydCC_r.total - ydCC_r.c0) / ydCC_r.total) * 100 : 0;
-    const ydEC_r    = ydEcMap[nk] || {};
-    const ydEC_rate = typeof ydEC_r.pct === 'number' ? ydEC_r.pct : parseFloat(ydEC_r.pct) || 0;
-    const ydUpg_r   = ydUpgMap[nk] || {};
-    const ydUpg_rate = ydUpg_r.upgradeBase > 0 ? (ydUpg_r.upgradeM2 / ydUpg_r.upgradeBase) * 100 : 0;
+    // 3. Early Upgrade Hub
+    const todayUpg_r    = upgMap[nk] || {};
+    const todayUpg_base = Number(todayUpg_r.upgradeBase) || 0;
+    const todayUpg_m2   = Number(todayUpg_r.upgradeM2) || 0;
+    const todayUpg_rate = todayUpg_base > 0 ? (todayUpg_m2 / todayUpg_base) * 100 : 0;
 
-    const delta_cc  = todayCC_rate - ydCC_rate;
-    const delta_ec  = todayEC_rate - ydEC_rate;
-    const delta_upg = todayUpg_rate - ydUpg_rate;
-    const totalDelta = delta_cc + delta_ec + delta_upg;
+    const ydUpg_r    = ydUpgMap[nk] || {};
+    const ydUpg_base = Number(ydUpg_r.upgradeBase) || 0;
+    const ydUpg_m2   = Number(ydUpg_r.upgradeM2) || 0;
+    const ydUpg_rate = ydUpg_base > 0 ? (ydUpg_m2 / ydUpg_base) * 100 : 0;
+    const delta_upg  = todayUpg_rate - ydUpg_rate;
+
+    // 4. Unfixed Teacher Progress
+    const todayFT_r   = ftMap[nk] || {};
+    const todayFT_tot = (Number(todayFT_r.m0Tot) || 0) + (Number(todayFT_r.m1Tot) || 0);
+    const todayFT_fix = (Number(todayFT_r.m0Fix) || 0) + (Number(todayFT_r.m1Fix) || 0);
+    const todayFT_unf = Math.max(0, todayFT_tot - todayFT_fix);
+    const todayFT_rate= todayFT_tot > 0 ? (todayFT_fix / todayFT_tot) * 100 : 0;
+
+    const ydFT_r   = ydFtMap[nk] || {};
+    const ydFT_tot = (Number(ydFT_r.m0Tot) || 0) + (Number(ydFT_r.m1Tot) || 0);
+    const ydFT_fix = (Number(ydFT_r.m0Fix) || 0) + (Number(ydFT_r.m1Fix) || 0);
+    const ydFT_unf = Math.max(0, ydFT_tot - ydFT_fix);
+    const ydFT_rate= ydFT_tot > 0 ? (ydFT_fix / ydFT_tot) * 100 : 0;
+
+    const delta_ft   = todayFT_rate - ydFT_rate;
+    const delta_unf  = todayFT_unf - ydFT_unf; // Negative = fewer unfixed leads (good!)
+
+    const totalDelta = delta_cc + delta_ec + delta_upg + delta_ft;
 
     return {
       name: r.name,
       team: r.team,
-      todayCC_rate, todayEC_rate, todayUpg_rate,
-      ydCC_rate,    ydEC_rate,    ydUpg_rate,
-      delta_cc, delta_ec, delta_upg, totalDelta,
-      todayCC_active: (r.total || 0) - (r.c0 || 0),
-      todayCC_total: r.total || 0,
-      ydCC_active: (ydCC_r.total || 0) - (ydCC_r.c0 || 0),
-      ydCC_total: ydCC_r.total || 0
+      todayCC_rate, todayEC_rate, todayUpg_rate, todayFT_rate,
+      ydCC_rate,    ydEC_rate,    ydUpg_rate,    ydFT_rate,
+      delta_cc, delta_ec, delta_upg, delta_ft, delta_unf, totalDelta,
+      todayCC_active: Math.max(0, todayCC_total - todayCC_c0),
+      todayCC_total: todayCC_total,
+      ydCC_active: Math.max(0, ydCC_total - ydCC_c0),
+      ydCC_total: ydCC_total,
+      todayFT_tot, todayFT_fix, todayFT_unf,
+      ydFT_tot, ydFT_fix, ydFT_unf
     };
   });
 
-  // Apply team filter
-  if (teamFilter !== 'ALL') {
-    const cleanFilter = teamFilter.replace(/^ME-/, '').toUpperCase();
-    reps = reps.filter(r => (r.team || '').replace(/^ME-/, '').toUpperCase() === cleanFilter);
+  // Team filtering
+  if (teamFilter !== "ALL") {
+    const cleanFilter = teamFilter.replace(/^ME-/, "").toUpperCase();
+    reps = reps.filter(r => (r.team || "").replace(/^ME-/, "").toUpperCase() === cleanFilter);
   }
 
-  // Apply sort
-  if (sortFilter === 'consumption-desc')  reps.sort((a, b) => b.todayCC_rate - a.todayCC_rate);
-  else if (sortFilter === 'upgrade-desc') reps.sort((a, b) => b.todayUpg_rate - a.todayUpg_rate);
-  else if (sortFilter === 'ec-desc')      reps.sort((a, b) => b.todayEC_rate - a.todayEC_rate);
-  else if (sortFilter === 'delta-desc')   reps.sort((a, b) => b.totalDelta - a.totalDelta);
+  // Sorting
+  if (sortFilter === "consumption-desc")       reps.sort((a, b) => b.todayCC_rate - a.todayCC_rate);
+  else if (sortFilter === "upgrade-desc")      reps.sort((a, b) => b.todayUpg_rate - a.todayUpg_rate);
+  else if (sortFilter === "ec-desc")           reps.sort((a, b) => b.todayEC_rate - a.todayEC_rate);
+  else if (sortFilter === "unfixed-desc")      reps.sort((a, b) => b.todayFT_rate - a.todayFT_rate);
+  else if (sortFilter === "unfixed-delta-desc") reps.sort((a, b) => b.delta_ft - a.delta_ft);
+  else if (sortFilter === "unfixed-leads-desc") reps.sort((a, b) => b.todayFT_unf - a.todayFT_unf);
+  else if (sortFilter === "delta-desc")        reps.sort((a, b) => b.totalDelta - a.totalDelta);
 
-  // ---- KPI Banners ----
+  // Totals & Averages
   const avgCC_today  = reps.length ? reps.reduce((s,r) => s + r.todayCC_rate, 0) / reps.length : 0;
   const avgCC_yd     = reps.length ? reps.reduce((s,r) => s + r.ydCC_rate,    0) / reps.length : 0;
   const avgEC_today  = reps.length ? reps.reduce((s,r) => s + r.todayEC_rate, 0) / reps.length : 0;
@@ -4744,9 +4994,20 @@ function renderComparisonTab() {
   const avgUpg_today = reps.length ? reps.reduce((s,r) => s + r.todayUpg_rate,0) / reps.length : 0;
   const avgUpg_yd    = reps.length ? reps.reduce((s,r) => s + r.ydUpg_rate,   0) / reps.length : 0;
 
-  const improved = reps.filter(r => r.totalDelta > 0).length;
-  const declined = reps.filter(r => r.totalDelta < 0).length;
-  const unchanged= reps.filter(r => r.totalDelta === 0).length;
+  const totFT_tdTot  = reps.reduce((s,r) => s + r.todayFT_tot, 0);
+  const totFT_tdFix  = reps.reduce((s,r) => s + r.todayFT_fix, 0);
+  const totFT_tdUnf  = reps.reduce((s,r) => s + r.todayFT_unf, 0);
+  const totFT_ydTot  = reps.reduce((s,r) => s + r.ydFT_tot,    0);
+  const totFT_ydFix  = reps.reduce((s,r) => s + r.ydFT_fix,    0);
+  const totFT_ydUnf  = reps.reduce((s,r) => s + r.ydFT_unf,    0);
+
+  const avgFT_today  = totFT_tdTot > 0 ? (totFT_tdFix / totFT_tdTot) * 100 : 0;
+  const avgFT_yd     = totFT_ydTot > 0 ? (totFT_ydFix / totFT_ydTot) * 100 : 0;
+  const deltaFT_unf  = totFT_tdUnf - totFT_ydUnf;
+
+  const improved = reps.filter(r => r.totalDelta > 0.05).length;
+  const declined = reps.filter(r => r.totalDelta < -0.05).length;
+  const unchanged= reps.length - improved - declined;
 
   function deltaArrow(d) {
     if (d > 0.05)  return '<span style="color:#10b981; font-weight:800;">▲ +' + d.toFixed(1) + '%</span>';
@@ -4754,87 +5015,123 @@ function renderComparisonTab() {
     return '<span style="color:#94a3b8;">= 0.0%</span>';
   }
 
-  function kpiBanner(label, today, yd, target, color) {
+  function kpiBanner(label, today, yd, target, color, subExtra) {
     const d = today - yd;
-    const progWidth = Math.min(100, today);
-    const tgtWidth  = Math.min(100, target);
-    return `
-      <div class="kpi-card" style="border-top: 4px solid ${color};">
-        <div class="kpi-label">${label}</div>
-        <div style="display:flex; align-items:baseline; gap:8px; margin:6px 0 2px;">
-          <span style="font-size:1.8rem; font-weight:900; color:${color}; font-family:var(--font-mono);">${today.toFixed(1)}%</span>
-          <span style="font-size:0.8rem; color:var(--text-muted);">today</span>
-        </div>
-        <div style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:8px;">
-          Yesterday: <strong style="color:#e2e8f0;">${yd.toFixed(1)}%</strong> &nbsp;|&nbsp; ${deltaArrow(d)}
-        </div>
-        <div style="position:relative; background:rgba(255,255,255,0.07); height:8px; border-radius:6px; overflow:hidden;">
-          <div style="width:${progWidth}%; background:${color}; height:100%; border-radius:6px;"></div>
-          <div style="position:absolute; top:0; left:${tgtWidth}%; width:2px; height:100%; background:rgba(255,255,255,0.4);" title="Target: ${target}%"></div>
-        </div>
-        <div class="kpi-pct" style="color:var(--text-muted); margin-top:5px; font-size:0.72rem;">Target: ${target}% &nbsp;|&nbsp; Gap: ${(target - today).toFixed(1)}pp</div>
-      </div>`;
+    const progWidth = Math.min(100, Math.max(0, today));
+    const tgtWidth  = Math.min(100, Math.max(0, target));
+    return '<div class="kpi-card" style="border-top: 4px solid ' + color + ';">' +
+      '<div class="kpi-label">' + label + '</div>' +
+      '<div style="display:flex; align-items:baseline; gap:8px; margin:6px 0 2px;">' +
+        '<span style="font-size:1.8rem; font-weight:900; color:' + color + '; font-family:var(--font-mono);">' + today.toFixed(1) + '%</span>' +
+        '<span style="font-size:0.8rem; color:var(--text-muted);">today</span>' +
+      '</div>' +
+      '<div style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:8px;">' +
+        'Yesterday: <strong style="color:#e2e8f0;">' + yd.toFixed(1) + '%</strong> &nbsp;|&nbsp; ' + deltaArrow(d) +
+      '</div>' +
+      '<div style="position:relative; background:rgba(255,255,255,0.07); height:8px; border-radius:6px; overflow:hidden;">' +
+        '<div style="width:' + progWidth + '%; background:' + color + '; height:100%; border-radius:6px;"></div>' +
+        '<div style="position:absolute; top:0; left:' + tgtWidth + '%; width:2px; height:100%; background:rgba(255,255,255,0.4);" title="Target: ' + target + '%"></div>' +
+      '</div>' +
+      '<div class="kpi-pct" style="color:var(--text-muted); margin-top:5px; font-size:0.72rem;">' + (subExtra || ("Target: " + target + "% | Gap: " + (target - today).toFixed(1) + "pp")) + '</div>' +
+    '</div>';
   }
 
   bannerEl.innerHTML =
-    kpiBanner('Class Consumption (Avg)', avgCC_today, avgCC_yd, 65, '#10b981') +
-    kpiBanner('English Club (Avg)', avgEC_today, avgEC_yd, 45, '#38bdf8') +
-    kpiBanner('Upgrade Rate (Avg)', avgUpg_today, avgUpg_yd, 20, '#c084fc') +
-    `<div class="kpi-card" style="border-top: 4px solid #f59e0b;">
-      <div class="kpi-label">Rep Movement Summary</div>
-      <div style="display:flex; gap:12px; margin:12px 0;">
-        <div style="flex:1; text-align:center; background:rgba(16,185,129,0.12); border-radius:8px; padding:10px;">
-          <div style="font-size:1.6rem; font-weight:900; color:#10b981;">${improved}</div>
-          <div style="font-size:0.72rem; color:#10b981; font-weight:700;">IMPROVED</div>
-        </div>
-        <div style="flex:1; text-align:center; background:rgba(244,63,94,0.12); border-radius:8px; padding:10px;">
-          <div style="font-size:1.6rem; font-weight:900; color:#f43f5e;">${declined}</div>
-          <div style="font-size:0.72rem; color:#f43f5e; font-weight:700;">DECLINED</div>
-        </div>
-        <div style="flex:1; text-align:center; background:rgba(148,163,184,0.12); border-radius:8px; padding:10px;">
-          <div style="font-size:1.6rem; font-weight:900; color:#94a3b8;">${unchanged}</div>
-          <div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">SAME</div>
-        </div>
-      </div>
-      <div style="font-size:0.75rem; color:var(--text-muted);">Snapshot: ${yd.label} vs 5oct</div>
-    </div>`;
+    kpiBanner("Class Consumption (Avg)", avgCC_today, avgCC_yd, 65, "#10b981") +
+    kpiBanner("English Club (Avg)", avgEC_today, avgEC_yd, 45, "#38bdf8") +
+    kpiBanner("Upgrade Rate (Avg)", avgUpg_today, avgUpg_yd, 20, "#c084fc") +
+    kpiBanner("Teacher Binding Rate (Avg)", avgFT_today, avgFT_yd, 80, "#f59e0b", "Unfixed Leads: " + totFT_tdUnf + " (" + (deltaFT_unf <= 0 ? ("🟢 " + deltaFT_unf + " resolved") : ("🔴 +" + deltaFT_unf + " new")) + ")") +
+    '<div class="kpi-card" style="border-top: 4px solid #6366f1;">' +
+      '<div class="kpi-label">Rep Movement Summary</div>' +
+      '<div style="display:flex; gap:12px; margin:12px 0;">' +
+        '<div style="flex:1; text-align:center; background:rgba(16,185,129,0.12); border-radius:8px; padding:10px;">' +
+          '<div style="font-size:1.6rem; font-weight:900; color:#10b981;">' + improved + '</div>' +
+          '<div style="font-size:0.72rem; color:#10b981; font-weight:700;">IMPROVED</div>' +
+        '</div>' +
+        '<div style="flex:1; text-align:center; background:rgba(244,63,94,0.12); border-radius:8px; padding:10px;">' +
+          '<div style="font-size:1.6rem; font-weight:900; color:#f43f5e;">' + declined + '</div>' +
+          '<div style="font-size:0.72rem; color:#f43f5e; font-weight:700;">DECLINED</div>' +
+        '</div>' +
+        '<div style="flex:1; text-align:center; background:rgba(148,163,184,0.12); border-radius:8px; padding:10px;">' +
+          '<div style="font-size:1.6rem; font-weight:900; color:#94a3b8;">' + unchanged + '</div>' +
+          '<div style="font-size:0.72rem; color:#94a3b8; font-weight:700;">SAME</div>' +
+        '</div>' +
+      '</div>' +
+      '<div style="font-size:0.75rem; color:var(--text-muted);">Snapshot: ' + (yd.label || "Yesterday") + ' vs 5oct</div>' +
+    '</div>';
 
-  // ---- Comparison Table ----
-  function fmtRate(v) { return v.toFixed(1) + '%'; }
+  const topFtMover = [...reps].sort((a,b) => b.delta_ft - a.delta_ft)[0] || {};
+  const topPendingFt = [...reps].sort((a,b) => b.todayFT_unf - a.todayFT_unf)[0] || {};
+  const topCcMover = [...reps].sort((a,b) => b.delta_cc - a.delta_cc)[0] || {};
 
-  function deltaCell(d) {
-    if (d > 0.05)  return `<td style="color:#10b981; font-weight:800; font-family:var(--font-mono);">▲ +${d.toFixed(1)}%</td>`;
-    if (d < -0.05) return `<td style="color:#f43f5e; font-weight:800; font-family:var(--font-mono);">▼ ${d.toFixed(1)}%</td>`;
-    return `<td style="color:#64748b; font-family:var(--font-mono);">= 0.0%</td>`;
+  const spotlightHtml =
+    '<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:14px; margin-bottom: 22px;">' +
+      '<div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 10px; padding: 12px 16px; display:flex; align-items:center; gap:12px;">' +
+        '<div style="font-size: 1.8rem;">🎯</div>' +
+        '<div>' +
+          '<div style="font-size: 0.72rem; font-weight: 700; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.5px;">Fixation Champion of the Day</div>' +
+          '<div style="font-size: 0.95rem; font-weight: 800; color: #fff;">' + (topFtMover.name ? topFtMover.name.replace("EGSS-", "") : "N/A") + ' <span style="color:#10b981; font-size:0.8rem; font-family:var(--font-mono);">▲ +' + (topFtMover.delta_ft || 0).toFixed(1) + '%</span></div>' +
+          '<div style="font-size: 0.74rem; color: var(--text-muted);">Rate: ' + (topFtMover.todayFT_rate || 0).toFixed(1) + '% | ' + (topFtMover.delta_unf <= 0 ? ("Resolved " + Math.abs(topFtMover.delta_unf || 0) + " leads") : ("+" + topFtMover.delta_unf + " leads")) + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 10px; padding: 12px 16px; display:flex; align-items:center; gap:12px;">' +
+        '<div style="font-size: 1.8rem;">⚠️</div>' +
+        '<div>' +
+          '<div style="font-size: 0.72rem; font-weight: 700; color: #f87171; text-transform: uppercase; letter-spacing: 0.5px;">Top Unfixed Pipeline Focus</div>' +
+          '<div style="font-size: 0.95rem; font-weight: 800; color: #fff;">' + (topPendingFt.name ? topPendingFt.name.replace("EGSS-", "") : "N/A") + ' <span style="color:#f87171; font-size:0.8rem; font-family:var(--font-mono);">' + (topPendingFt.todayFT_unf || 0) + ' Pending</span></div>' +
+          '<div style="font-size: 0.74rem; color: var(--text-muted);">Fixed Rate: ' + (topPendingFt.todayFT_rate || 0).toFixed(1) + '% | Priority teacher binding required</div>' +
+        '</div>' +
+      '</div>' +
+      '<div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 10px; padding: 12px 16px; display:flex; align-items:center; gap:12px;">' +
+        '<div style="font-size: 1.8rem;">🚀</div>' +
+        '<div>' +
+          '<div style="font-size: 0.72rem; font-weight: 700; color: #34d399; text-transform: uppercase; letter-spacing: 0.5px;">Top Consumption Movement</div>' +
+          '<div style="font-size: 0.95rem; font-weight: 800; color: #fff;">' + (topCcMover.name ? topCcMover.name.replace("EGSS-", "") : "N/A") + ' <span style="color:#10b981; font-size:0.8rem; font-family:var(--font-mono);">▲ +' + (topCcMover.delta_cc || 0).toFixed(1) + '%</span></div>' +
+          '<div style="font-size: 0.74rem; color: var(--text-muted);">CC Rate: ' + (topCcMover.todayCC_rate || 0).toFixed(1) + '% | Active: ' + (topCcMover.todayCC_active || 0) + ' students</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+  function fmtRate(v) { return v.toFixed(1) + "%"; }
+
+  function deltaCell(d, sub) {
+    const subHtml = sub ? ('<div style="font-size:0.68rem; color:' + (sub.includes("▼") ? "#10b981" : sub.includes("▲") ? "#f43f5e" : "#94a3b8") + '; font-weight:700; margin-top:2px;">' + sub + '</div>') : "";
+    if (d > 0.05)  return '<td style="color:#10b981; font-weight:800; font-family:var(--font-mono); text-align:center;">▲ +' + d.toFixed(1) + '%' + subHtml + '</td>';
+    if (d < -0.05) return '<td style="color:#f43f5e; font-weight:800; font-family:var(--font-mono); text-align:center;">▼ ' + d.toFixed(1) + '%' + subHtml + '</td>';
+    return '<td style="color:#64748b; font-family:var(--font-mono); text-align:center;">= 0.0%' + subHtml + '</td>';
+  }
+
+  function rateCell(today, yd, target, subText) {
+    const color = today >= target ? "#10b981" : today >= target * 0.8 ? "#f59e0b" : "#f43f5e";
+    const ydColor = yd >= target ? "#10b981" : "#94a3b8";
+    const subHtml = subText ? ('<div style="font-size:0.68rem; color:var(--text-muted); margin-top:2px;">' + subText + '</div>') : "";
+    return '<td style="font-family:var(--font-mono); text-align:center;">' +
+      '<div style="font-weight:700; color:' + color + ';">' + fmtRate(today) + '</div>' +
+      '<div style="font-size:0.72rem; color:' + ydColor + ';">' + fmtRate(yd) + '</div>' +
+      subHtml +
+    '</td>';
   }
 
   const rows = reps.map((r, idx) => {
-    const cfg = getTeamConfig(r.team);
     const badge = renderTeamBadge(r.team);
-    const rowBg = idx % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent';
+    const rowBg = idx % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent";
+    const ftSub = r.delta_unf !== 0 ? (r.delta_unf < 0 ? ("▼ " + Math.abs(r.delta_unf) + " fixed") : ("▲ +" + r.delta_unf + " unf")) : "= 0";
+    const ftPendingDesc = r.todayFT_unf + " unfixed";
 
-    function rateCell(today, yd, target) {
-      const color = today >= target ? '#10b981' : today >= target * 0.8 ? '#f59e0b' : '#f43f5e';
-      const ydColor = yd >= target ? '#10b981' : '#94a3b8';
-      return `<td style="font-family:var(--font-mono);">
-        <div style="font-weight:700; color:${color};">${fmtRate(today)}</div>
-        <div style="font-size:0.72rem; color:${ydColor};">${fmtRate(yd)}</div>
-      </td>`;
-    }
+    return '<tr style="background:' + rowBg + '; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(99,102,241,0.08)\'" onmouseout="this.style.background=\'' + rowBg + '\'">' +
+      '<td style="font-weight:700; color:#e2e8f0; white-space:nowrap; padding:10px 14px;">' + r.name.replace("EGSS-", "") + '</td>' +
+      '<td style="padding:10px 14px;">' + badge + '</td>' +
+      rateCell(r.todayCC_rate,  r.ydCC_rate,  65, r.todayCC_active + "/" + r.todayCC_total) +
+      deltaCell(r.delta_cc) +
+      rateCell(r.todayEC_rate,  r.ydEC_rate,  45) +
+      deltaCell(r.delta_ec) +
+      rateCell(r.todayUpg_rate, r.ydUpg_rate, 20) +
+      deltaCell(r.delta_upg) +
+      rateCell(r.todayFT_rate,  r.ydFT_rate,  80, ftPendingDesc) +
+      deltaCell(r.delta_ft, ftSub) +
+    '</tr>';
+  }).join("");
 
-    return `<tr style="background:${rowBg}; transition: background 0.2s;" onmouseover="this.style.background='rgba(99,102,241,0.08)'" onmouseout="this.style.background='${rowBg}'">
-      <td style="font-weight:700; color:#e2e8f0; white-space:nowrap;">${r.name.replace('EGSS-', '')}</td>
-      <td>${badge}</td>
-      ${rateCell(r.todayCC_rate,  r.ydCC_rate,  65)}
-      ${deltaCell(r.delta_cc)}
-      ${rateCell(r.todayEC_rate,  r.ydEC_rate,  45)}
-      ${deltaCell(r.delta_ec)}
-      ${rateCell(r.todayUpg_rate, r.ydUpg_rate, 20)}
-      ${deltaCell(r.delta_upg)}
-    </tr>`;
-  }).join('');
-
-  // Totals row
   const totCC_today  = reps.reduce((s,r) => s + r.todayCC_active, 0);
   const totCC_ydAct  = reps.reduce((s,r) => s + r.ydCC_active,    0);
   const totCC_total  = reps.reduce((s,r) => s + r.todayCC_total,  0);
@@ -4846,74 +5143,85 @@ function renderComparisonTab() {
   const totUpg_today = reps.length  ? reps.reduce((s,r) => s + r.todayUpg_rate,0) / reps.length : 0;
   const totUpg_yd    = reps.length  ? reps.reduce((s,r) => s + r.ydUpg_rate,   0) / reps.length : 0;
 
-  function totDeltaCell(d) {
-    const c = d > 0.05 ? '#10b981' : d < -0.05 ? '#f43f5e' : '#64748b';
-    const sym = d > 0.05 ? '▲ +' : d < -0.05 ? '▼ ' : '= ';
-    return `<td style="color:${c}; font-weight:900; font-family:var(--font-mono);">${sym}${Math.abs(d).toFixed(1)}%</td>`;
+  function totDeltaCell(d, sub) {
+    const c = d > 0.05 ? "#10b981" : d < -0.05 ? "#f43f5e" : "#64748b";
+    const sym = d > 0.05 ? "▲ +" : d < -0.05 ? "▼ " : "= ";
+    const subHtml = sub ? ('<div style="font-size:0.7rem; color:' + (sub.includes("▼") ? "#10b981" : "#f43f5e") + '; font-weight:700;">' + sub + '</div>') : "";
+    return '<td style="color:' + c + '; font-weight:900; font-family:var(--font-mono); text-align:center;">' + sym + Math.abs(d).toFixed(1) + '%' + subHtml + '</td>';
   }
 
-  function totRateCell(today, yd, target) {
-    const c = today >= target ? '#10b981' : '#f59e0b';
-    const yc = yd >= target ? '#10b981' : '#94a3b8';
-    return `<td style="font-family:var(--font-mono);">
-      <div style="font-weight:900; color:${c};">${today.toFixed(1)}%</div>
-      <div style="font-size:0.72rem; color:${yc};">${yd.toFixed(1)}%</div>
-    </td>`;
+  function totRateCell(today, yd, target, sub) {
+    const c = today >= target ? "#10b981" : "#f59e0b";
+    const yc = yd >= target ? "#10b981" : "#94a3b8";
+    const subHtml = sub ? ('<div style="font-size:0.68rem; color:var(--text-muted); font-weight:600;">' + sub + '</div>') : "";
+    return '<td style="font-family:var(--font-mono); text-align:center;">' +
+      '<div style="font-weight:900; color:' + c + ';">' + today.toFixed(1) + '%</div>' +
+      '<div style="font-size:0.72rem; color:' + yc + ';">' + yd.toFixed(1) + '%</div>' +
+      subHtml +
+    '</td>';
   }
 
-  const totalsRow = `<tr style="background:rgba(99,102,241,0.12); border-top: 2px solid rgba(99,102,241,0.4);">
-    <td style="font-weight:900; color:#a5b4fc;">TOTAL</td>
-    <td style="font-size:0.72rem; color:#94a3b8;">${reps.length} Reps</td>
-    ${totRateCell(totCC_rate, totCC_ydRate, 65)}
-    ${totDeltaCell(totCC_rate - totCC_ydRate)}
-    ${totRateCell(totEC_today, totEC_yd, 45)}
-    ${totDeltaCell(totEC_today - totEC_yd)}
-    ${totRateCell(totUpg_today, totUpg_yd, 20)}
-    ${totDeltaCell(totUpg_today - totUpg_yd)}
-  </tr>`;
+  const ftTotSub = deltaFT_unf !== 0 ? (deltaFT_unf < 0 ? ("▼ " + Math.abs(deltaFT_unf) + " resolved") : ("▲ +" + deltaFT_unf + " unfixed")) : "= 0";
+  const totalsRow = '<tr style="background:rgba(99,102,241,0.12); border-top: 2px solid rgba(99,102,241,0.4); font-size:0.88rem;">' +
+    '<td style="font-weight:900; color:#a5b4fc; padding:12px 14px;">TOTAL</td>' +
+    '<td style="font-size:0.74rem; color:#94a3b8; padding:12px 14px;">' + reps.length + ' Reps</td>' +
+    totRateCell(totCC_rate, totCC_ydRate, 65, totCC_today + "/" + totCC_total) +
+    totDeltaCell(totCC_rate - totCC_ydRate) +
+    totRateCell(totEC_today, totEC_yd, 45) +
+    totDeltaCell(totEC_today - totEC_yd) +
+    totRateCell(totUpg_today, totUpg_yd, 20) +
+    totDeltaCell(totUpg_today - totUpg_yd) +
+    totRateCell(avgFT_today, avgFT_yd, 80, totFT_tdUnf + " unfixed") +
+    totDeltaCell(avgFT_today - avgFT_yd, ftTotSub) +
+  '</tr>';
 
-  tableEl.innerHTML = `
-    <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
-      <thead>
-        <tr style="background: rgba(99,102,241,0.15); border-bottom: 2px solid rgba(99,102,241,0.3);">
-          <th style="padding:12px 14px; text-align:left; color:#a5b4fc; font-weight:800;">Rep</th>
-          <th style="padding:12px 14px; text-align:left; color:#a5b4fc; font-weight:800;">Team</th>
-          <th colspan="2" style="padding:12px 14px; text-align:center; color:#10b981; font-weight:800; border-left: 1px solid rgba(16,185,129,0.3);">
-            Class Consumption<br><span style="font-size:0.7rem; font-weight:600; color:#94a3b8;">Today% / Yesterday% / Delta</span>
-          </th>
-          <th colspan="2" style="padding:12px 14px; text-align:center; color:#38bdf8; font-weight:800; border-left: 1px solid rgba(56,189,248,0.3);">
-            English Club<br><span style="font-size:0.7rem; font-weight:600; color:#94a3b8;">Today% / Yesterday% / Delta</span>
-          </th>
-          <th colspan="2" style="padding:12px 14px; text-align:center; color:#c084fc; font-weight:800; border-left: 1px solid rgba(192,132,252,0.3);">
-            Upgrade Rate<br><span style="font-size:0.7rem; font-weight:600; color:#94a3b8;">Today% / Yesterday% / Delta</span>
-          </th>
-        </tr>
-        <tr style="background:rgba(0,0,0,0.2); border-bottom:1px solid rgba(255,255,255,0.06);">
-          <th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:left;">NAME</th>
-          <th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:left;">TEAM</th>
-          <th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center;">RATE</th>
-          <th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center;">Δ</th>
-          <th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center; border-left: 1px solid rgba(56,189,248,0.2);">RATE</th>
-          <th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center;">Δ</th>
-          <th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center; border-left: 1px solid rgba(192,132,252,0.2);">RATE</th>
-          <th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center;">Δ</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${rows}
-      </tbody>
-      <tfoot>
-        ${totalsRow}
-      </tfoot>
-    </table>
-    <div style="margin-top:14px; padding:10px 16px; background:rgba(15,23,42,0.5); border-radius:8px; font-size:0.75rem; color:var(--text-muted);">
-      <strong>Legend:</strong>
-      <span style="color:#10b981; margin-left:10px;">▲ Improvement</span>
-      <span style="color:#f43f5e; margin-left:10px;">▼ Decline</span>
-      <span style="color:#64748b; margin-left:10px;">= No Change</span>
-      &nbsp;|&nbsp; <em>Top row = Today, Bottom row = Yesterday (${yd.label})</em>
-      &nbsp;|&nbsp; Targets: CC 65% · EC 45% · Upgrade 20%
-    </div>`;
+  tableEl.innerHTML = spotlightHtml +
+    '<table style="width:100%; border-collapse:collapse; font-size:0.85rem;">' +
+      '<thead>' +
+        '<tr style="background: rgba(99,102,241,0.15); border-bottom: 2px solid rgba(99,102,241,0.3);">' +
+          '<th style="padding:12px 14px; text-align:left; color:#a5b4fc; font-weight:800;">Rep</th>' +
+          '<th style="padding:12px 14px; text-align:left; color:#a5b4fc; font-weight:800;">Team</th>' +
+          '<th colspan="2" style="padding:12px 14px; text-align:center; color:#10b981; font-weight:800; border-left: 1px solid rgba(16,185,129,0.3);">' +
+            'Class Consumption<br><span style="font-size:0.7rem; font-weight:600; color:#94a3b8;">Today% / YD% / Delta</span>' +
+          '</th>' +
+          '<th colspan="2" style="padding:12px 14px; text-align:center; color:#38bdf8; font-weight:800; border-left: 1px solid rgba(56,189,248,0.3);">' +
+            'English Club<br><span style="font-size:0.7rem; font-weight:600; color:#94a3b8;">Today% / YD% / Delta</span>' +
+          '</th>' +
+          '<th colspan="2" style="padding:12px 14px; text-align:center; color:#c084fc; font-weight:800; border-left: 1px solid rgba(192,132,252,0.3);">' +
+            'Upgrade Rate<br><span style="font-size:0.7rem; font-weight:600; color:#94a3b8;">Today% / YD% / Delta</span>' +
+          '</th>' +
+          '<th colspan="2" style="padding:12px 14px; text-align:center; color:#f59e0b; font-weight:800; border-left: 1px solid rgba(245,158,11,0.3);">' +
+            'Unfixed Teacher Binding<br><span style="font-size:0.7rem; font-weight:600; color:#94a3b8;">Fixed% / YD% / Unfixed Delta</span>' +
+          '</th>' +
+        '</tr>' +
+        '<tr style="background:rgba(0,0,0,0.2); border-bottom:1px solid rgba(255,255,255,0.06);">' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:left;">NAME</th>' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:left;">TEAM</th>' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center;">RATE</th>' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center;">Δ</th>' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center; border-left: 1px solid rgba(56,189,248,0.2);">RATE</th>' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center;">Δ</th>' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center; border-left: 1px solid rgba(192,132,252,0.2);">RATE</th>' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center;">Δ</th>' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center; border-left: 1px solid rgba(245,158,11,0.2);">FIXED%</th>' +
+          '<th style="padding:6px 14px; color:#64748b; font-size:0.72rem; font-weight:600; text-align:center;">Δ (UNFIXED)</th>' +
+        '</tr>' +
+      '</thead>' +
+      '<tbody>' +
+        (rows || '<tr><td colspan="10" style="text-align:center; padding:20px; color:var(--text-muted);">No representatives match the selected filter.</td></tr>') +
+      '</tbody>' +
+      '<tfoot>' +
+        totalsRow +
+      '</tfoot>' +
+    '</table>' +
+    '<div style="margin-top:14px; padding:10px 16px; background:rgba(15,23,42,0.5); border-radius:8px; font-size:0.75rem; color:var(--text-muted);">' +
+      '<strong>Operational Legend:</strong>' +
+      '<span style="color:#10b981; margin-left:10px;">▲ Improvement (Higher rate / Fewer unfixed leads)</span>' +
+      '<span style="color:#f43f5e; margin-left:10px;">▼ Decline</span>' +
+      '<span style="color:#64748b; margin-left:10px;">= No Change</span>' +
+      '&nbsp;|&nbsp; <em>Top = Today (5 Oct), Bottom = Yesterday (' + (yd.label || "4 Oct") + ')</em>' +
+      '&nbsp;|&nbsp; Benchmarks: CC 65% · EC 45% · Upgrade 20% · Teacher Binding 80%' +
+    '</div>';
 }
 window.renderComparisonTab = renderComparisonTab;
 
