@@ -174,9 +174,9 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 5 target 17%. Gap: 17pp. Need $-443/day to close.', time: '20261005_120244' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20261005_120244' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20261005_120244' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 5 target 17%. Gap: 17pp. Need $-443/day to close.', time: '20261005_121015' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20261005_121015' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20261005_121015' },
 ];
 
 // =========================================================================
@@ -3720,6 +3720,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -5478,6 +5480,9 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
 
 
 
