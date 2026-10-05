@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261005_121015">
+  <link rel="stylesheet" href="styles.css?v=20261005_130000">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -163,6 +163,11 @@
       <button class="tab" data-tab="recommendations" onclick="switchTab('recommendations')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         Actionable Recommendations
+      </button>
+      <button class="tab" data-tab="comparison" onclick="switchTab('comparison')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Performance Comparison
+        <span style="background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">YD vs TD</span>
       </button>
     </div>
 
@@ -1003,6 +1008,49 @@
       </div>
     </section>
 
+
+    <!-- ============================================== -->
+    <!-- TAB: PERFORMANCE COMPARISON (Yesterday vs Today) -->
+    <!-- ============================================== -->
+    <section id="tab-comparison" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2>Performance Comparison — Yesterday vs Today</h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Side-by-side comparison of every rep's Class Consumption, Upgrade Rate, and English Club across two snapshots.
+          </p>
+        </div>
+        <span class="source-tag">4oct (Yesterday) vs 5oct (Today)</span>
+      </div>
+
+      <!-- Filter Bar -->
+      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 24px; flex-wrap: wrap;">
+        <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
+        <select id="cmpTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderComparisonTab()">
+          <option value="ALL">All Teams (Big Team 01)</option>
+          <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal)</option>
+          <option value="ME-EGSS05">ME-EGSS05 (Abdelrahman Nasef)</option>
+          <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata)</option>
+          <option value="ME-EGSS13">ME-EGSS13 (Mohamedha)</option>
+          <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah)</option>
+        </select>
+        <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Sort By:</label>
+        <select id="cmpSortFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderComparisonTab()">
+          <option value="consumption-desc">Class Consumption % (High to Low)</option>
+          <option value="upgrade-desc">Upgrade Rate % (High to Low)</option>
+          <option value="ec-desc">English Club % (High to Low)</option>
+          <option value="delta-desc">Biggest Overall Improvement (Delta)</option>
+        </select>
+      </div>
+
+      <!-- KPI Summary Banners -->
+      <div id="cmpKpiBanners" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 28px;"></div>
+
+      <!-- Comparison Table -->
+      <div class="table-container" id="cmpTableContainer">
+        <div id="cmpTableContent"><p style="color: var(--text-muted); padding: 20px;">Loading comparison data...</p></div>
+      </div>
+    </section>
     <!-- Footer -->
     <footer class="dashboard-footer">
       <div class="footer-left">
@@ -1022,7 +1070,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="assets/html2canvas.min.js" defer></script>
-  <script src="dashboard.js?v=20261005_121015" defer></script>
+  <script src="dashboard.js?v=20261005_130000" defer></script>
 </body>
 </html>
 
