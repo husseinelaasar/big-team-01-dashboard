@@ -1,9 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-amrsafwat | Generated: 2026-10-05 16:10
+# Representative: EGSS-amrsafwat | Generated: 2026-10-05 16:32
 
-=== 1. SOP PENDING TASKS (47) ===
+=== 1. SOP PENDING TASKS (46) ===
 Student_ID,Task_Name,Expiration_Time
-64465144,"Round 2  Trust Enhancement (First Class Follow-up)",20261005 18:55:00
 58060911,"Round 6 Premium Service(Duration Renewal Insidepool)",20261006 18:55:00
 58170683,"Round 6 Premium Service(Outside Renewal Pool)",20261006 18:55:00
 58738059,"English Club Booking",20261006 18:55:00
@@ -51,8 +50,8 @@ Student_ID,Task_Name,Expiration_Time
 62804474,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 62805492,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (61) ===
-Student_ID,Pool_Cohort,Classes,Priority
+=== 2. UNFIXED TEACHER BINDING LEADS (61) ===
+Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 57709419,"M3+ Pool",0,"UNFIXED BINDING"
 58253142,"M3+ Pool",0,"UNFIXED BINDING"
 58356471,"M3+ Pool",0,"UNFIXED BINDING"
@@ -115,8 +114,8 @@ Student_ID,Pool_Cohort,Classes,Priority
 64353804,"M0 Pool",0,"CRITICAL (0 Classes)"
 64353806,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. CLASS CONSUMPTION RESCUE (268) ===
-Student_ID,Pool_Cohort,Classes,Action
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (268) ===
+Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 57779301,"M2 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 57968623,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 57968906,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -386,8 +385,8 @@ Student_ID,Pool_Cohort,Classes,Action
 63256233,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 64267875,"M0 Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
 
-=== 4. ENGLISH CLUB LEADS (115) ===
-Student_ID,Level,Completed,Status
+=== 4. ENGLISH CLUB ACTIONABLE LEADS (115) ===
+Student_ID,Level,Completed_Classes,Booking_Status
 58510788,"0",0,"Booking Required"
 63077884,"2",0,"Booking Required"
 63091926,"0",0,"Booking Required"
@@ -408,12 +407,12 @@ Student_ID,Level,Completed,Status
 63241328,"1",0,"Booking Required"
 63162117,"0",0,"Booking Required"
 63046379,"3",0,"Booking Required"
-63252200,"2",0,"Booking Required"
 63256233,"3",0,"Booking Required"
+63252200,"2",0,"Booking Required"
 59980539,"2",0,"Booking Required"
 60515799,"3",0,"Booking Required"
-59750272,"1",0,"Booking Required"
 59066297,"1",0,"Booking Required"
+59750272,"1",0,"Booking Required"
 63224674,"2",0,"Booking Required"
 59372421,"2",0,"Booking Required"
 58742600,"0",0,"Booking Required"
@@ -433,17 +432,17 @@ Student_ID,Level,Completed,Status
 60219237,"1",0,"Booking Required"
 63531989,"2",0,"Booking Required"
 63571445,"1",0,"Booking Required"
-63570646,"0",0,"Booking Required"
 60149749,"0",0,"Booking Required"
-63584078,"1",0,"Booking Required"
+63570646,"0",0,"Booking Required"
 58370337,"0",0,"Booking Required"
 58963189,"1",0,"Booking Required"
-63580242,"1",0,"Booking Required"
+63584078,"1",0,"Booking Required"
 62204897,"3",0,"Booking Required"
 63596136,"1",0,"Booking Required"
+63580242,"1",0,"Booking Required"
 58738059,"2",0,"Booking Required"
-63625710,"1",0,"Booking Required"
 63630609,"3",0,"Booking Required"
+63625710,"1",0,"Booking Required"
 62310826,"0",0,"Booking Required"
 59704886,"1",0,"Booking Required"
 60711852,"2",0,"Booking Required"
@@ -453,12 +452,12 @@ Student_ID,Level,Completed,Status
 63701039,"2",0,"Booking Required"
 63731390,"1",0,"Booking Required"
 59244604,"1",0,"Booking Required"
-63790262,"3",0,"Booking Required"
 63788057,"1",0,"Booking Required"
+63790262,"3",0,"Booking Required"
 62366953,"1",0,"Booking Required"
 63772973,"1",0,"Booking Required"
-63095268,"1",0,"Booking Required"
 63094900,"3",0,"Booking Required"
+63095268,"1",0,"Booking Required"
 63856096,"1",0,"Booking Required"
 63887920,"1",0,"Booking Required"
 58838709,"2",0,"Booking Required"
@@ -476,22 +475,22 @@ Student_ID,Level,Completed,Status
 64006501,"2",0,"Booking Required"
 61505209,"3",0,"Booking Required"
 64111223,"2",0,"Booking Required"
-64134954,"2",0,"Booking Required"
 64122258,"3",0,"Booking Required"
-64158044,"0",0,"Booking Required"
+64134954,"2",0,"Booking Required"
 63903345,"1",0,"Booking Required"
-64151224,"1",0,"Booking Required"
+64158044,"0",0,"Booking Required"
 64167392,"2",0,"Booking Required"
+64151224,"1",0,"Booking Required"
 64177611,"2",0,"Booking Required"
 60311622,"0",0,"Booking Required"
 64179841,"0",0,"Booking Required"
 61838572,"3",0,"Booking Required"
 60385405,"1",0,"Booking Required"
-64259356,"0",0,"Booking Required"
 64259252,"3",0,"Booking Required"
 64259411,"2",0,"Booking Required"
 64259353,"2",0,"Booking Required"
 64253105,"1",0,"Booking Required"
+64259356,"0",0,"Booking Required"
 64267875,"2",0,"Booking Required"
 64283494,"0",0,"Booking Required"
 64249103,"1",0,"Booking Required"

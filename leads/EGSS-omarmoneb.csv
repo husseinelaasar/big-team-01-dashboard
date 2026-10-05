@@ -1,12 +1,11 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-omarmoneb | Generated: 2026-10-05 16:10
+# Representative: EGSS-omarmoneb | Generated: 2026-10-05 16:32
 
-=== 1. SOP PENDING TASKS (18) ===
+=== 1. SOP PENDING TASKS (17) ===
 Student_ID,Task_Name,Expiration_Time
 58855945,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261006 18:55:00
 59476463,"Round 6 Premium Service(Outside Renewal Pool)",20261006 18:55:00
 63522319,"SS:Service warning - absence",20261006 18:55:00
-64280947,"Round 3 Habit Cultivation (1st Unit Assessment)",20261006 18:55:00
 58905392,"Round 1  Awareness building (First call)",20261007 18:55:00
 60967847,"Round 6 Premium Service(Duration Renewal Insidepool)",20261007 18:55:00
 63708853,"English Club Booking",20261007 18:55:00
@@ -22,8 +21,8 @@ Student_ID,Task_Name,Expiration_Time
 63466885,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 63896878,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (69) ===
-Student_ID,Pool_Cohort,Classes,Priority
+=== 2. UNFIXED TEACHER BINDING LEADS (69) ===
+Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 58712129,"M3+ Pool",0,"UNFIXED BINDING"
 58855945,"M3+ Pool",0,"UNFIXED BINDING"
 58905392,"M0 Pool",0,"CRITICAL (0 Classes)"
@@ -94,8 +93,8 @@ Student_ID,Pool_Cohort,Classes,Priority
 64346595,"M0 Pool",0,"CRITICAL (0 Classes)"
 64476948,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. CLASS CONSUMPTION RESCUE (219) ===
-Student_ID,Pool_Cohort,Classes,Action
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (219) ===
+Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 57940143,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58236949,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58825732,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -316,16 +315,16 @@ Student_ID,Pool_Cohort,Classes,Action
 64157453,"M1 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 60653624,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 
-=== 4. ENGLISH CLUB LEADS (86) ===
-Student_ID,Level,Completed,Status
+=== 4. ENGLISH CLUB ACTIONABLE LEADS (86) ===
+Student_ID,Level,Completed_Classes,Booking_Status
 63078556,"0",0,"Booking Required"
 63080264,"0",0,"Booking Required"
 63050503,"3",0,"Booking Required"
 63126398,"2",0,"Booked"
 63134462,"2",0,"Booking Required"
 63169657,"1",0,"Booking Required"
-58236949,"1",0,"Booked"
 63193429,"0",0,"Booking Required"
+58236949,"1",0,"Booked"
 63177979,"2",0,"Booking Required"
 63236874,"0",0,"Booking Required"
 63136157,"1",0,"Booking Required"
@@ -352,12 +351,12 @@ Student_ID,Level,Completed,Status
 62928953,"0",0,"Booked"
 63537565,"3",0,"Booking Required"
 60620865,"1",0,"Booking Required"
-63546067,"1",0,"Booking Required"
 63583806,"3",0,"Booking Required"
 63584121,"3",0,"Booking Required"
-63603792,"1",0,"Booking Required"
+63546067,"1",0,"Booking Required"
 63596120,"1",0,"Booked"
 63603950,"1",0,"Booking Required"
+63603792,"1",0,"Booking Required"
 63604147,"1",0,"Booking Required"
 63620744,"1",0,"Booking Required"
 63639042,"3",0,"Booking Required"
@@ -366,14 +365,14 @@ Student_ID,Level,Completed,Status
 63673148,"1",0,"Booking Required"
 63673173,"3",0,"Booking Required"
 63708853,"2",0,"Booking Required"
-63719929,"2",0,"Booking Required"
 62417102,"3",0,"Booking Required"
+63719929,"2",0,"Booking Required"
 63742785,"2",0,"Booking Required"
 63732442,"1",0,"Booking Required"
 58033801,"1",0,"Booking Required"
 63844917,"3",0,"Booking Required"
-63857926,"0",0,"Booking Required"
 63848499,"0",0,"Booking Required"
+63857926,"0",0,"Booking Required"
 63896878,"1",0,"Booking Required"
 63888130,"3",0,"Booking Required"
 62683370,"3",0,"Booking Required"
@@ -383,13 +382,13 @@ Student_ID,Level,Completed,Status
 64134737,"2",0,"Booking Required"
 62522812,"0",0,"Booking Required"
 64123333,"1",0,"Booking Required"
-61017228,"1",0,"Booking Required"
 64133977,"2",0,"Booking Required"
-64152118,"2",0,"Booking Required"
+61017228,"1",0,"Booking Required"
 60824154,"0",0,"Booking Required"
+64152118,"2",0,"Booking Required"
 63466885,"1",0,"Booking Required"
-63975949,"2",0,"Booking Required"
 58694392,"0",0,"Booking Required"
+63975949,"2",0,"Booking Required"
 62873261,"1",0,"Booked"
 64254797,"0",0,"Booking Required"
 64255032,"0",0,"Booked"
