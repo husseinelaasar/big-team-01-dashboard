@@ -16,7 +16,7 @@ To maintain instant visual recognition and executive consistency across all dash
 | Team ID | Small Team Label & Leadership | Primary Color | Hex Code | Visual Tone / Family |
 | :---: | :---: | :---: | :---: | :---: |
 | **ME-EGSS01** | `ME-EGSS01 (Ashraqatal)` | Indigo | `#6366f1` | Electric Purple / Indigo |
-| **ME-EGSS05** | `ME-EGSS05 (Abdelrahman Nasef)` | Cyan | `#06b6d4` | Ocean Cyan / Aqua Sky |
+| **ME-EGSS05** | `ME-EGSS05 (Ibrahim Abd El Shakour)` | Cyan | `#06b6d4` | Ocean Cyan / Aqua Sky |
 | **ME-EGSS10** | `ME-EGSS10 (Abdelrhman Shehata)` | Emerald | `#10b981` | Vivid Emerald Green |
 | **ME-EGSS13** | `ME-EGSS13 (Mohamedha)` | Amber | `#f59e0b` | Golden Amber / Warm Orange |
 | **ME-EGSS30** | `ME-EGSS30 (Adhm GadAllah)` | Rose | `#f43f5e` | Crimson Rose / Coral Pink |
@@ -155,7 +155,7 @@ The dashboard includes a full-featured, automated Download Center with UTF-8 Ara
 Managers and team leaders can download one consolidated spreadsheet containing all operational tasks for their team:
 - `BIG_TEAM_01_Team_Leads.csv`: Sector-wide consolidated file (5,050 accounts).
 - `ME-EGSS01_Team_Leads.csv`: Team 01 (Ashraqatal - 5 reps).
-- `ME-EGSS05_Team_Leads.csv`: Team 05 (Abdelrahman Nasef - 6 reps).
+- `ME-EGSS05_Team_Leads.csv`: Team 05 (Ibrahim Abd El Shakour - 6 reps).
 - `ME-EGSS10_Team_Leads.csv`: Team 10 (Abdelrhman Shehata - 3 reps).
 - `ME-EGSS13_Team_Leads.csv`: Team 13 (Mohamedha - 4 reps).
 - `ME-EGSS30_Team_Leads.csv`: Team 30 (Adhm GadAllah - 3 reps).

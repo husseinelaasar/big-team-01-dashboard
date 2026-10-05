@@ -101,7 +101,7 @@ Currently, only rates are shown (e.g. `68.2%`). Adding volume subticks provides 
 ### C. Small Team Rollup Comparison (TL Benchmark)
 Add a toggle or summary header comparing the 5 Small Teams against each other:
 - **ME-EGSS01** (Ashraqatal)
-- **ME-EGSS05** (Abdelrahman Nasef)
+- **ME-EGSS05** (Ibrahim Abd El Shakour)
 - **ME-EGSS10** (Abdelrhman Shehata)
 - **ME-EGSS13** (Mohamedha)
 - **ME-EGSS30** (Adhm GadAllah)

@@ -24,7 +24,7 @@ const DATA_SOURCES = {
 // Verified TL & Unified Team Configuration
 const TL_MAPPING = {
   "EGSS01": { tl: "EGSS-ashraqatal", leaderName: "Ashraqatal", fullName: "ME-EGSS01 (Ashraqatal)", color: "#6366f1", bg: "rgba(99, 102, 241, 0.15)", border: "rgba(99, 102, 241, 0.4)", text: "#818cf8", badgeClass: "team-badge-01" },
-  "EGSS05": { tl: "EGSS-AbdelrahmanNASEF", leaderName: "Abdelrahman Nasef", fullName: "ME-EGSS05 (Abdelrahman Nasef)", color: "#06b6d4", bg: "rgba(6, 182, 212, 0.15)", border: "rgba(6, 182, 212, 0.4)", text: "#22d3ee", badgeClass: "team-badge-05" },
+  "EGSS05": { tl: "EGSS-ibrahimismaiel", leaderName: "Ibrahim Abd El Shakour", fullName: "ME-EGSS05 (Ibrahim Abd El Shakour)", color: "#06b6d4", bg: "rgba(6, 182, 212, 0.15)", border: "rgba(6, 182, 212, 0.4)", text: "#22d3ee", badgeClass: "team-badge-05" },
   "EGSS10": { tl: "EGSS-abdelrhmanshehata", leaderName: "Abdelrhman Shehata", fullName: "ME-EGSS10 (Abdelrhman Shehata)", color: "#10b981", bg: "rgba(16, 185, 129, 0.15)", border: "rgba(16, 185, 129, 0.4)", text: "#34d399", badgeClass: "team-badge-10" },
   "EGSS13": { tl: "EGSS-mohamedha", leaderName: "Mohamedha", fullName: "ME-EGSS13 (Mohamedha)", color: "#f59e0b", bg: "rgba(245, 158, 11, 0.15)", border: "rgba(245, 158, 11, 0.4)", text: "#fbbf24", badgeClass: "team-badge-13" },
   "EGSS30": { tl: "EGSS-AdhmGadAllah", leaderName: "Adhm GadAllah", fullName: "ME-EGSS30 (Adhm GadAllah)", color: "#f43f5e", bg: "rgba(244, 63, 94, 0.15)", border: "rgba(244, 63, 94, 0.4)", text: "#fb7185", badgeClass: "team-badge-30" }
