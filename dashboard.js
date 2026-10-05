@@ -4656,7 +4656,7 @@ function renderComparisonTab() {
 
   const todayCC  = (window.MASTER_OPERATIONS_DATA && window.MASTER_OPERATIONS_DATA.consumption) || [];
   const todayEC  = (window.MASTER_OPERATIONS_DATA && window.MASTER_OPERATIONS_DATA.englishClub) || [];
-  const todayUpg = window.__model ? window.__model.reps : [];
+  const todayUpg = (window.__model && (window.__model.individuals || window.__model.reps)) || (typeof REPS_DATA !== 'undefined' ? REPS_DATA : []);
   const yd       = window.YESTERDAY_DATA || { consumption: [], englishClub: [], upgrade: [] };
 
   const teamFilter = (document.getElementById('cmpTeamFilter') || {}).value || 'ALL';
@@ -4677,13 +4677,13 @@ function renderComparisonTab() {
 
   // Index yesterday's data
   const ydCcMap  = {};
-  yd.consumption.forEach(r => { ydCcMap[normName(r.name)] = r; });
+  (yd.consumption || []).forEach(r => { ydCcMap[normName(r.name)] = r; });
 
   const ydEcMap  = {};
-  yd.englishClub.forEach(r => { ydEcMap[normName(r.name)] = r; });
+  (yd.englishClub || []).forEach(r => { ydEcMap[normName(r.name)] = r; });
 
   const ydUpgMap = {};
-  yd.upgrade.forEach(r => { ydUpgMap[normName(r.name)] = r; });
+  (yd.upgrade || []).forEach(r => { ydUpgMap[normName(r.name)] = r; });
 
   // Build master rep list from today's consumption data (covers all reps)
   let reps = todayCC.map(r => {
@@ -4724,7 +4724,8 @@ function renderComparisonTab() {
 
   // Apply team filter
   if (teamFilter !== 'ALL') {
-    reps = reps.filter(r => r.team === teamFilter);
+    const cleanFilter = teamFilter.replace(/^ME-/, '').toUpperCase();
+    reps = reps.filter(r => (r.team || '').replace(/^ME-/, '').toUpperCase() === cleanFilter);
   }
 
   // Apply sort
@@ -5427,6 +5428,9 @@ function switchTab(tabKey) {
       c.classList.remove('active');
     }
   });
+  if (tabKey === 'comparison' && typeof renderComparisonTab === 'function') {
+    renderComparisonTab();
+  }
 }
 
 function setupEvents(model) {
