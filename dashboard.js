@@ -1,4 +1,4 @@
-/* =========================================================================
+﻿/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -134,33 +134,33 @@ const NEW_CONTRACTS_TARGETS = {
 
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS13": { gross: 6460, refund: 0, cash: 6460, target: 48800, contracts: 4, officialAch: 13.2 },
-  "EGSS30": { gross: 3640, refund: 0, cash: 3640, target: 33100, contracts: 4, officialAch: 11.0 },
-  "EGSS01": { gross: 6780, refund: 0, cash: 6780, target: 88000, contracts: 6, officialAch: 7.7 },
-  "EGSS05": { gross: 5175, refund: 0, cash: 5175, target: 90800, contracts: 5, officialAch: 5.7 },
-  "EGSS10": { gross: 2092, refund: 0, cash: 2092, target: 45250, contracts: 2, officialAch: 4.6 },
+  "EGSS13": { gross: 6460, refund: 0, cash: 6460, target: 36800, contracts: 4, officialAch: 17.6 },
+  "EGSS01": { gross: 6780, refund: 0, cash: 6780, target: 48000, contracts: 6, officialAch: 14.1 },
+  "EGSS30": { gross: 3640, refund: 0, cash: 3640, target: 33100, contracts: 4, officialAch: 11 },
+  "EGSS05": { gross: 5175, refund: 0, cash: 5175, target: 60800, contracts: 5, officialAch: 8.5 },
+  "EGSS10": { gross: 2092, refund: 0, cash: 2092, target: 28800, contracts: 2, officialAch: 7.3 },
 };
 
 const REPS_DATA = [
   { name: "EGSS-nohayoussry", team: "EGSS01", cash: 1600, refund: 0, target: 12000, contracts: 2, officialAch: 13.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 0, refund: 0, target: 20000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-negma", team: "EGSS01", cash: 0, refund: 0, target: 20000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-negma", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-juliamonir01", team: "EGSS01", cash: 1020, refund: 0, target: 18000, contracts: 1, officialAch: 5.7, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-mahmoud04", team: "EGSS01", cash: 4160, refund: 0, target: 18000, contracts: 3, officialAch: 23.1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 0, refund: 0, target: 12000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 0, refund: 0, target: 18000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 365, refund: 0, target: 18000, contracts: 0, officialAch: 2.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 365, refund: 0, target: 18000, contracts: 0, officialAch: 2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-khaledgonam", team: "EGSS05", cash: 2040, refund: 0, target: 18000, contracts: 2, officialAch: 11.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-omarmoneb", team: "EGSS05", cash: 1750, refund: 0, target: 12000, contracts: 2, officialAch: 14.6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 1020, refund: 0, target: 12800, contracts: 1, officialAch: 8.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 1020, refund: 0, target: 12800, contracts: 1, officialAch: 8, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 632, refund: 0, target: 8800, contracts: 1, officialAch: 7.2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 0, refund: 0, target: 16450, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 1460, refund: 0, target: 20000, contracts: 1, officialAch: 7.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-amrsafwat", team: "EGSS13", cash: 1460, refund: 0, target: 12000, contracts: 1, officialAch: 12.2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 0, refund: 0, target: 12000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 1020, refund: 0, target: 12800, contracts: 1, officialAch: 8.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 1020, refund: 0, target: 12800, contracts: 1, officialAch: 8, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-mohamedha", team: "EGSS13", cash: 3980, refund: 0, target: 12000, contracts: 2, officialAch: 33.2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 1020, refund: 0, target: 12800, contracts: 1, officialAch: 8.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 1020, refund: 0, target: 12800, contracts: 1, officialAch: 8, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-alihesham01", team: "EGSS30", cash: 1020, refund: 0, target: 8800, contracts: 1, officialAch: 11.6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
   { name: "EGSS-titooooo", team: "EGSS30", cash: 1600, refund: 0, target: 11500, contracts: 2, officialAch: 13.9, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
 ];
@@ -223,9 +223,14 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 6 target 20%. Gap: 20pp. Need $-966/day to close.', time: '20261006_093733' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: '. Schedule targeted coaching sessions today.', time: '20261006_093733' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: '. Recognize in team channel!', time: '20261006_093733' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 6 target 20%. Gap: 20pp. Need $-966/day to close.', time: '20261006_122711' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ibrahimismaiel (2%), EGSS-juliamonir01 (5.7%), EGSS-abdelrhmanshehata (7.2%), EGSS-mahmoudkhamis (7.3%), EGSS-samira01 (8%). Schedule targeted coaching sessions today.', time: '20261006_122711' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-omarmoneb (14.6%), EGSS-mahmoud04 (23.1%), EGSS-mohamedha (33.2%). Recognize in team channel!', time: '20261006_122711' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1214/day', detail: 'Currently at 17.6% (6460/36800). Gap: $30340.', time: '20261006_122711' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $1649/day', detail: 'Currently at 14.1% (6780/48000). Gap: $41220.', time: '20261006_122711' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1178/day', detail: 'Currently at 11% (3640/33100). Gap: $29460.', time: '20261006_122711' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $2225/day', detail: 'Currently at 8.5% (5175/60800). Gap: $55625.', time: '20261006_122711' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1068/day', detail: 'Currently at 7.3% (2092/28800). Gap: $26708.', time: '20261006_122711' },
 ];
 
 // =========================================================================
@@ -407,10 +412,10 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official October 2026 Cash Targets Plan)
-  const totalCash = 24147; // from Individual Sheet Col G (or 指标看板 Col C)
+  const totalCash = 24147; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
   const totalTarget = 305950; // Official October Cash Target Plan ($305,950 across 21 reps)
   const sectorAchPct = Math.round((totalCash / totalTarget) * 1000) / 10; // 5.3%
-  const totalContracts = 21; // from 指标看板 Col D
+  const totalContracts = 21; // from æŒ‡æ ‡çœ‹æ¿ Col D
   const totalContractsTarget = 252; // Official October Contracts Target Plan (252 contracts)
   const totalUpgradeM2 = 0;
   const totalNormalRenewals = 21; // from Student_Detail32
@@ -2829,66 +2834,6 @@ const MASTER_OPERATIONS_DATA = {
                         "m1Tot":  18,
                         "m1Fix":  16,
                         "m1Pct":  "88.9%",
-                        "m2Tot":  48,
-                        "m2Fix":  40,
-                        "m2Pct":  "83.3%",
-                        "m2Tot":  44,
-                        "m2Fix":  36,
-                        "m2Pct":  "81.8%",
-                        "m2Tot":  7,
-                        "m2Fix":  5,
-                        "m2Pct":  "71.4%",
-                        "m2Tot":  31,
-                        "m2Fix":  26,
-                        "m2Pct":  "83.9%",
-                        "m2Tot":  7,
-                        "m2Fix":  5,
-                        "m2Pct":  "71.4%",
-                        "m2Tot":  24,
-                        "m2Fix":  22,
-                        "m2Pct":  "91.7%",
-                        "m2Tot":  27,
-                        "m2Fix":  19,
-                        "m2Pct":  "70.4%",
-                        "m2Tot":  7,
-                        "m2Fix":  6,
-                        "m2Pct":  "85.7%",
-                        "m2Tot":  79,
-                        "m2Fix":  67,
-                        "m2Pct":  "84.8%",
-                        "m2Tot":  29,
-                        "m2Fix":  27,
-                        "m2Pct":  "93.1%",
-                        "m2Tot":  60,
-                        "m2Fix":  52,
-                        "m2Pct":  "86.7%",
-                        "m2Tot":  50,
-                        "m2Fix":  44,
-                        "m2Pct":  "88%",
-                        "m2Tot":  23,
-                        "m2Fix":  19,
-                        "m2Pct":  "82.6%",
-                        "m2Tot":  23,
-                        "m2Fix":  14,
-                        "m2Pct":  "60.9%",
-                        "m2Tot":  45,
-                        "m2Fix":  32,
-                        "m2Pct":  "71.1%",
-                        "m2Tot":  28,
-                        "m2Fix":  22,
-                        "m2Pct":  "78.6%",
-                        "m2Tot":  23,
-                        "m2Fix":  18,
-                        "m2Pct":  "78.3%",
-                        "m2Tot":  27,
-                        "m2Fix":  24,
-                        "m2Pct":  "88.9%",
-                        "m2Tot":  41,
-                        "m2Fix":  21,
-                        "m2Pct":  "51.2%",
-                        "m2Tot":  41,
-                        "m2Fix":  39,
-                        "m2Pct":  "95.1%",
                         "m2Tot":  32,
                         "m2Fix":  25,
                         "m2Pct":  "78.1%"
@@ -3642,6 +3587,8 @@ const MASTER_OPERATIONS_DATA = {
                         }
                     ]
 };
+
+
 
 
 
@@ -7937,6 +7884,9 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
 
 
 
