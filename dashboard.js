@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -134,35 +134,35 @@ const NEW_CONTRACTS_TARGETS = {
 
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS30": { gross: 3640, refund: 0, cash: 3640, target: 0, contracts: 4, officialAch: 0 },
-  "EGSS01": { gross: 6780, refund: 0, cash: 6780, target: 0, contracts: 6, officialAch: 0 },
-  "EGSS13": { gross: 6460, refund: 0, cash: 6460, target: 0, contracts: 4, officialAch: 0 },
-  "EGSS10": { gross: 2092, refund: 0, cash: 2092, target: 0, contracts: 2, officialAch: 0 },
-  "EGSS05": { gross: 5175, refund: 0, cash: 5175, target: 0, contracts: 5, officialAch: 0 },
+  "EGSS13": { gross: 6460, refund: 0, cash: 6460, target: 48800, contracts: 4, officialAch: 13.2 },
+  "EGSS30": { gross: 3640, refund: 0, cash: 3640, target: 33100, contracts: 4, officialAch: 11.0 },
+  "EGSS01": { gross: 6780, refund: 0, cash: 6780, target: 88000, contracts: 6, officialAch: 7.7 },
+  "EGSS05": { gross: 5175, refund: 0, cash: 5175, target: 90800, contracts: 5, officialAch: 5.7 },
+  "EGSS10": { gross: 2092, refund: 0, cash: 2092, target: 45250, contracts: 2, officialAch: 4.6 },
 };
 
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 1600, refund: 0, target: 0, contracts: 2, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-negma", team: "EGSS01", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 1020, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 4160, refund: 0, target: 0, contracts: 3, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 365, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 2040, refund: 0, target: 0, contracts: 2, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 1750, refund: 0, target: 0, contracts: 2, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 1020, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 632, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 1460, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 1460, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 0, refund: 0, target: 0, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 1020, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-mohamedha", team: "EGSS13", cash: 3980, refund: 0, target: 0, contracts: 2, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 1020, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-alihesham01", team: "EGSS30", cash: 1020, refund: 0, target: 0, contracts: 1, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
-  { name: "EGSS-titooooo", team: "EGSS30", cash: 1600, refund: 0, target: 0, contracts: 2, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 1600, refund: 0, target: 12000, contracts: 2, officialAch: 13.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 0, refund: 0, target: 20000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-negma", team: "EGSS01", cash: 0, refund: 0, target: 20000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 1020, refund: 0, target: 18000, contracts: 1, officialAch: 5.7, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 4160, refund: 0, target: 18000, contracts: 3, officialAch: 23.1, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 0, refund: 0, target: 12000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 0, refund: 0, target: 18000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 365, refund: 0, target: 18000, contracts: 0, officialAch: 2.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-khaledgonam", team: "EGSS05", cash: 2040, refund: 0, target: 18000, contracts: 2, officialAch: 11.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 1750, refund: 0, target: 12000, contracts: 2, officialAch: 14.6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 1020, refund: 0, target: 12800, contracts: 1, officialAch: 8.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 632, refund: 0, target: 8800, contracts: 1, officialAch: 7.2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 0, refund: 0, target: 16450, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 1460, refund: 0, target: 20000, contracts: 1, officialAch: 7.3, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 1460, refund: 0, target: 12000, contracts: 1, officialAch: 12.2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 0, refund: 0, target: 12000, contracts: 0, officialAch: 0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 1020, refund: 0, target: 12800, contracts: 1, officialAch: 8.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-mohamedha", team: "EGSS13", cash: 3980, refund: 0, target: 12000, contracts: 2, officialAch: 33.2, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 1020, refund: 0, target: 12800, contracts: 1, officialAch: 8.0, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-alihesham01", team: "EGSS30", cash: 1020, refund: 0, target: 8800, contracts: 1, officialAch: 11.6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
+  { name: "EGSS-titooooo", team: "EGSS30", cash: 1600, refund: 0, target: 11500, contracts: 2, officialAch: 13.9, upgradeM2: 0, normalRenewals: 0, upgradeBase: 0, poolRenewals: 0 },
 ];
 
 // SOP Process Compliance Data (51Talk Data Center)
@@ -387,7 +387,8 @@ function buildDataModel() {
     t.gross = t.members.reduce((s, m) => s + (m.cash + (m.refund || 0)), 0);
     t.contracts = t.members.reduce((s, m) => s + m.contracts, 0);
     t.contractsTarget = t.members.reduce((s, m) => s + (m.contractsTarget || 0), 0);
-    t.achievement = t.target > 0 ? ((t.cash / t.target) * 100) : 0;
+    const calcTeamAch = t.target > 0 ? (Math.round((t.cash / t.target) * 1000) / 10) : 0;
+    t.achievement = calcTeamAch;
     t.gap = Math.max(0, t.target - t.cash);
     t.projected = Math.round((t.cash / daysPassed) * daysInMonth);
     t.dailyNeeded = Math.round(t.gap / daysLeft);
@@ -395,13 +396,13 @@ function buildDataModel() {
     t.upgrade20Target = Math.ceil(t.upgradeBase * 0.20);
     t.upgrade20Needed = Math.max(0, t.upgrade20Target - t.upgradeM2);
     const off = (typeof OFFICIAL_TEAMS_DATA !== 'undefined' && OFFICIAL_TEAMS_DATA[tk]) ? OFFICIAL_TEAMS_DATA[tk] : null;
-    t.officialAch = (off && off.officialAch !== undefined) ? off.officialAch : (t.target > 0 ? ((t.cash / t.target) * 100) : 0);
+    t.officialAch = (off && off.officialAch !== undefined && off.officialAch !== null && off.officialAch > 0) ? off.officialAch : calcTeamAch;
   });
 
   // Calculate Commission for each individual rep
   individuals.forEach(rep => {
     const t = teams[rep.team];
-    const teamAch = t ? (t.officialAch !== undefined ? t.officialAch : t.achievement) : 0;
+    const teamAch = t ? (t.officialAch > 0 ? t.officialAch : t.achievement) : 0;
     rep.commission = calculateSSCommission(rep.cash, teamAch, t ? t.target : 0, t ? t.cash : 0, rep.achievement);
   });
 
@@ -810,7 +811,7 @@ function renderBigTeamSummary(model) {
 
   // Reconciled Small Teams sorted by Official Achievement % descending
   const sortedTeams = Object.values(model.teams).map(t => {
-    const ach = (t.officialAch !== undefined && t.officialAch !== null) ? t.officialAch : t.achievement;
+    const ach = (t.officialAch !== undefined && t.officialAch !== null && t.officialAch > 0) ? t.officialAch : (t.achievement > 0 ? t.achievement : (t.target > 0 ? (Math.round((t.cash / t.target) * 1000) / 10) : 0));
     return { ...t, displayAch: ach };
   }).sort((a, b) => b.displayAch - a.displayAch);
 
@@ -1447,10 +1448,10 @@ function renderSmallTeamsTab(model) {
           <strong style="color: ${teamSopAvg >= 80 ? '#10b981' : '#f59e0b'}; font-family: var(--font-mono); font-size: 0.95rem;">${teamSopAvg}%</strong>
         </div>
         <div style="grid-column: span 3; margin-top: 6px;">
-          ${((t.officialAch !== undefined ? t.officialAch : t.achievement) >= 100) ? `
+          ${(((t.officialAch > 0 ? t.officialAch : t.achievement)) >= 100) ? `
             <div style="background: linear-gradient(90deg, rgba(16, 185, 129, 0.22), rgba(6, 182, 212, 0.15)); border: 1.5px solid #10b981; border-radius: var(--radius-sm); padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 10px rgba(16, 185, 129, 0.2);">
               <span style="font-size: 0.82rem; font-weight: 800; color: #34d399; display: flex; align-items: center; gap: 6px;">
-                &#128293; TEAM TARGET MET (${fmtPct(t.officialAch !== undefined ? t.officialAch : t.achievement)})  -  +0.5% BONUS UNLOCKED!
+                &#128293; TEAM TARGET MET (${fmtPct(t.officialAch > 0 ? t.officialAch : t.achievement)})  -  +0.5% BONUS UNLOCKED!
               </span>
               <span style="font-size: 0.72rem; color: #a7f3d0; font-weight: 700; background: rgba(16, 185, 129, 0.25); padding: 2px 8px; border-radius: 4px;">Reps with &ge;100% Ach earn +0.5% Booster</span>
             </div>
@@ -1459,7 +1460,7 @@ function renderSmallTeamsTab(model) {
               <span style="font-size: 0.74rem; color: var(--text-muted);">
                 &#127919; Reach 100% to unlock <strong style="color: #6ee7b7;">+0.5% Team Booster</strong> for &ge;100% qualifiers (Gap: <strong style="color: #f59e0b;">${fmt(Math.max(0, t.target - t.cash))}</strong>)
               </span>
-              <span style="font-size: 0.72rem; color: #f59e0b; font-weight: 800; font-family: var(--font-mono);">${fmtPct(t.officialAch !== undefined ? t.officialAch : t.achievement)}</span>
+              <span style="font-size: 0.72rem; color: #f59e0b; font-weight: 800; font-family: var(--font-mono);">${fmtPct(t.officialAch > 0 ? t.officialAch : t.achievement)}</span>
             </div>
           `}
         </div>
