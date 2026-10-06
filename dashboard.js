@@ -223,16 +223,16 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 6 target 20%. Gap: 20pp. Need $-1019/day to close.', time: '20261006_205212' },
-  { type: 'critical', icon: '🚨', title: '5 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-negma, EGSS-ehabzaky01, EGSS-ahmedshoukry, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261006_205212' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ahmedshoukry (0%), EGSS-ehabzaky01 (0%), EGSS-negma (0%), EGSS-hayamhassan (0%), EGSS-ashraqatal (0%). Schedule targeted coaching sessions today.', time: '20261006_205212' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-omarmoneb (14.6%), EGSS-mahmoud04 (23.1%), EGSS-mohamedha (33.2%). Recognize in team channel!', time: '20261006_205212' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1694/day', detail: 'Currently at 13.2% (6460/48800). Gap: $42340.', time: '20261006_205212' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1178/day', detail: 'Currently at 11% (3640/33100). Gap: $29460.', time: '20261006_205212' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $3249/day', detail: 'Currently at 7.7% (6780/88000). Gap: $81220.', time: '20261006_205212' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $3371/day', detail: 'Currently at 7.2% (6515/90800). Gap: $84285.', time: '20261006_205212' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1726/day', detail: 'Currently at 4.6% (2092/45250). Gap: $43158.', time: '20261006_205212' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 97 more renewals', detail: 'Current: 3/497 (0.6%). 20% target = 100. Focus on high-base reps.', time: '20261006_205212' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 6 target 20%. Gap: 20pp. Need $-1019/day to close.', time: '20261006_211016' },
+  { type: 'critical', icon: '🚨', title: '5 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-negma, EGSS-ehabzaky01, EGSS-ahmedshoukry, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261006_211016' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ahmedshoukry (0%), EGSS-ehabzaky01 (0%), EGSS-negma (0%), EGSS-hayamhassan (0%), EGSS-ashraqatal (0%). Schedule targeted coaching sessions today.', time: '20261006_211016' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-omarmoneb (14.6%), EGSS-mahmoud04 (23.1%), EGSS-mohamedha (33.2%). Recognize in team channel!', time: '20261006_211016' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1694/day', detail: 'Currently at 13.2% (6460/48800). Gap: $42340.', time: '20261006_211016' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1178/day', detail: 'Currently at 11% (3640/33100). Gap: $29460.', time: '20261006_211016' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $3249/day', detail: 'Currently at 7.7% (6780/88000). Gap: $81220.', time: '20261006_211016' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $3371/day', detail: 'Currently at 7.2% (6515/90800). Gap: $84285.', time: '20261006_211016' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1726/day', detail: 'Currently at 4.6% (2092/45250). Gap: $43158.', time: '20261006_211016' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 97 more renewals', detail: 'Current: 3/497 (0.6%). 20% target = 100. Focus on high-base reps.', time: '20261006_211016' },
 ];
 
 // =========================================================================
@@ -3589,6 +3589,8 @@ const MASTER_OPERATIONS_DATA = {
                         }
                     ]
 };
+
+
 
 
 
@@ -7902,6 +7904,9 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
 
 
 
