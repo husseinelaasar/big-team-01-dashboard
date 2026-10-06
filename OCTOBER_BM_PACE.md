@@ -95,3 +95,21 @@
   - `🟢 Ahead of Pace`: $\ge \text{Pace \%}$
   - `🟡 Near Pace`: $\ge \text{Pace \%} - 8\%$
   - `🔴 Behind Pace`: $< \text{Pace \%} - 8\%$
+
+---
+
+## 🎯 5. Day 6 Live Snapshot & Cash Remaining to Achieve Today's BM (Oct 6, 2026)
+
+> **Current Benchmark Pace (Day 6 of 31)**: **20.0%**  
+> **Sector Target Quota**: **$305,950** (252 Orders)  
+> **Current Sector Cash**: **$24,147** (7.9% Achieved)  
+> **Sector Cash Remaining to Achieve Today's BM**: **$37,043 needed today**
+
+| Small Team | Team Leader | Monthly Target | Current Cash | Cash Ach % | Day 6 BM (20%) | **Cash Remaining to Achieve Today's BM** | Pacing Status |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ME-EGSS13** | Mohamedha | $48,800 | $6,460 | **13.2%** | $9,760 | **$3,300 needed** | 🟡 Near Pace (-6.8%) |
+| **ME-EGSS30** | Adhm GadAllah | $33,100 | $3,640 | **11.0%** | $6,620 | **$2,980 needed** | 🔴 Behind Pace (-9.0%) |
+| **ME-EGSS01** | Ashraqatal | $88,000 | $6,780 | **7.7%** | $17,600 | **$10,820 needed** | 🔴 Behind Pace (-12.3%) |
+| **ME-EGSS05** | Ibrahim Abd El Shakour | $90,800 | $5,175 | **5.7%** | $18,160 | **$12,985 needed** | 🔴 Behind Pace (-14.3%) |
+| **ME-EGSS10** | Abdelrhman Shehata | $45,250 | $2,092 | **4.6%** | $9,050 | **$6,958 needed** | 🔴 Behind Pace (-15.4%) |
+| **BIG TEAM 01** | **Saber Hussien** | **$305,950** | **$24,147** | **7.9%** | **$61,190** | **$37,043 needed** | 🔴 **Behind Pace (-12.1%)** |

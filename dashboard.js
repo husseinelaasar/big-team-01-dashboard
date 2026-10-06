@@ -871,14 +871,20 @@ function renderBigTeamSummary(model) {
     }
     const diffPct = Math.round((t.displayAch - pacePct) * 10) / 10;
     const diffSign = diffPct >= 0 ? '+' : '';
+    const expCashAtPace = Math.round(t.target * (pacePct / 100));
+    const bmDeficit = Math.max(0, expCashAtPace - t.cash);
+    const bmSurplus = Math.max(0, t.cash - expCashAtPace);
     let revHeader = '';
     let revBody = '';
     if (diffPct >= 0) {
-      revHeader = `<span class="pill-badge pill-badge-emerald" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-emerald"></span> 🟢 Ahead of Pace (+${diffPct}%)</span>`;
-      revBody = `Team has achieved ${fmt(t.cash)} (${fmtPct(t.displayAch)}), pacing ahead of Day ${daysPassed} benchmark (${pacePct}%). Target: ${fmt(t.target)} (${t.contractsTarget || 0} orders).`;
+      revHeader = `<span class="pill-badge pill-badge-emerald" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-emerald"></span> 🟢 Ahead of Pace (+${diffPct}%)</span> <span class="pill-badge" style="font-size:0.7rem; padding: 2px 7px; background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); font-weight: 800;">BM Surplus: +${fmt(bmSurplus)}</span>`;
+      revBody = `Team achieved <strong>${fmt(t.cash)}</strong> (${fmtPct(t.displayAch)}), beating Day ${daysPassed} BM (${pacePct}% = ${fmt(expCashAtPace)}) by <strong style="color: #10b981;">+${fmt(bmSurplus)} surplus</strong>! Target: ${fmt(t.target)} (${t.contractsTarget || 0} orders). Remaining to full target: ${fmt(t.gap)}.`;
+    } else if (diffPct >= -8) {
+      revHeader = `<span class="pill-badge pill-badge-amber" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-amber"></span> 🟡 Near Pace (${diffPct}%)</span> <span class="pill-badge" style="font-size:0.7rem; padding: 2px 7px; background: rgba(245,158,11,0.18); color: #fbbf24; border: 1px solid rgba(245,158,11,0.4); font-weight: 800;">🎯 BM Remaining: ${fmt(bmDeficit)}</span>`;
+      revBody = `Team achieved <strong>${fmt(t.cash)}</strong> (${fmtPct(t.displayAch)}). <strong style="color: #fbbf24; font-weight: 800;">Cash remaining to achieve Day ${daysPassed} BM (${pacePct}% = ${fmt(expCashAtPace)}): ${fmt(bmDeficit)} needed today.</strong> Monthly deficit: ${fmt(t.gap)} (Run-rate: ${fmt(t.dailyNeeded)}/day).`;
     } else {
-      revHeader = `<span class="pill-badge pill-badge-rose" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-rose"></span> 🔴 Behind Pace (${diffPct}%)</span>`;
-      revBody = `Team has achieved ${fmt(t.cash)} (${fmtPct(t.displayAch)}), deficit is ${fmt(t.gap)}. Required run-rate: ${fmt(t.dailyNeeded)}/day to hit ${fmt(t.target)}.`;
+      revHeader = `<span class="pill-badge pill-badge-rose" style="font-size:0.7rem; padding: 2px 7px;"><span class="pulse-dot pulse-dot-rose"></span> 🔴 Behind Pace (${diffPct}%)</span> <span class="pill-badge" style="font-size:0.7rem; padding: 2px 7px; background: rgba(244,63,94,0.18); color: #fda4af; border: 1px solid rgba(244,63,94,0.4); font-weight: 800;">🎯 BM Remaining: ${fmt(bmDeficit)}</span>`;
+      revBody = `Team achieved <strong>${fmt(t.cash)}</strong> (${fmtPct(t.displayAch)}). <strong style="color: #f43f5e; font-weight: 800;">Cash remaining to achieve Day ${daysPassed} BM (${pacePct}% = ${fmt(expCashAtPace)}): ${fmt(bmDeficit)} needed today.</strong> Monthly deficit: ${fmt(t.gap)} (Run-rate: ${fmt(t.dailyNeeded)}/day).`;
     }
 
     let upgHeader = '<span class="pill-badge" style="font-size:0.7rem; padding: 2px 7px; background: rgba(148,163,184,0.15); color: #94a3b8;">⚪ Upgrade Base Pending</span>';
@@ -1246,7 +1252,11 @@ function renderBigTeamSummary(model) {
                 ${fmt(s.totalGap)}
               </td>
               <td style="text-align: left !important; font-size: 0.82rem; line-height: 1.45; color: #e2e8f0; padding: 14px 16px;">
-                <strong>Sector Synthesis:</strong> Official October cash target is ${fmt(s.totalTarget)} (${s.totalContractsTarget || 252} orders). Current MTD net revenue stands at ${fmt(s.totalCash)} (${fmtPct(s.achievement)}) against Day ${daysPassed} pacing benchmark (${pacePct}%). Target gap is ${fmt(s.totalGap)} requiring a run-rate of ${fmt(s.dailyNeeded)}/day over the remaining ${daysLeft} days.
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
+                  <span class="pill-badge pill-badge-cyan" style="font-size: 0.72rem; padding: 3px 8px; font-weight: 800;">⭐ Sector Synthesis</span>
+                  <span class="pill-badge" style="font-size: 0.72rem; padding: 3px 8px; background: rgba(244,63,94,0.18); color: #fda4af; border: 1px solid rgba(244,63,94,0.4); font-weight: 800;">🎯 BM Remaining: ${fmt(Math.max(0, Math.round(s.totalTarget * (pacePct / 100)) - s.totalCash))}</span>
+                </div>
+                <div>Official October cash target is <strong>${fmt(s.totalTarget)}</strong> (${s.totalContractsTarget || 252} orders). Current MTD net revenue stands at <strong>${fmt(s.totalCash)}</strong> (${fmtPct(s.achievement)}). <strong style="color: #f43f5e; font-weight: 800;">Cash remaining to achieve Day ${daysPassed} Sector BM (${pacePct}% = ${fmt(Math.round(s.totalTarget * (pacePct / 100)))}): ${fmt(Math.max(0, Math.round(s.totalTarget * (pacePct / 100)) - s.totalCash))} needed today.</strong> Total monthly deficit is ${fmt(s.totalGap)} requiring a run-rate of ${fmt(s.dailyNeeded)}/day over the remaining ${daysLeft} days.</div>
               </td>
             </tr>
           </tfoot>
@@ -2818,7 +2828,70 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "91.3%",
                         "m1Tot":  18,
                         "m1Fix":  16,
-                        "m1Pct":  "88.9%"
+                        "m1Pct":  "88.9%",
+                        "m2Tot":  48,
+                        "m2Fix":  40,
+                        "m2Pct":  "83.3%",
+                        "m2Tot":  44,
+                        "m2Fix":  36,
+                        "m2Pct":  "81.8%",
+                        "m2Tot":  7,
+                        "m2Fix":  5,
+                        "m2Pct":  "71.4%",
+                        "m2Tot":  31,
+                        "m2Fix":  26,
+                        "m2Pct":  "83.9%",
+                        "m2Tot":  7,
+                        "m2Fix":  5,
+                        "m2Pct":  "71.4%",
+                        "m2Tot":  24,
+                        "m2Fix":  22,
+                        "m2Pct":  "91.7%",
+                        "m2Tot":  27,
+                        "m2Fix":  19,
+                        "m2Pct":  "70.4%",
+                        "m2Tot":  7,
+                        "m2Fix":  6,
+                        "m2Pct":  "85.7%",
+                        "m2Tot":  79,
+                        "m2Fix":  67,
+                        "m2Pct":  "84.8%",
+                        "m2Tot":  29,
+                        "m2Fix":  27,
+                        "m2Pct":  "93.1%",
+                        "m2Tot":  60,
+                        "m2Fix":  52,
+                        "m2Pct":  "86.7%",
+                        "m2Tot":  50,
+                        "m2Fix":  44,
+                        "m2Pct":  "88%",
+                        "m2Tot":  23,
+                        "m2Fix":  19,
+                        "m2Pct":  "82.6%",
+                        "m2Tot":  23,
+                        "m2Fix":  14,
+                        "m2Pct":  "60.9%",
+                        "m2Tot":  45,
+                        "m2Fix":  32,
+                        "m2Pct":  "71.1%",
+                        "m2Tot":  28,
+                        "m2Fix":  22,
+                        "m2Pct":  "78.6%",
+                        "m2Tot":  23,
+                        "m2Fix":  18,
+                        "m2Pct":  "78.3%",
+                        "m2Tot":  27,
+                        "m2Fix":  24,
+                        "m2Pct":  "88.9%",
+                        "m2Tot":  41,
+                        "m2Fix":  21,
+                        "m2Pct":  "51.2%",
+                        "m2Tot":  41,
+                        "m2Fix":  39,
+                        "m2Pct":  "95.1%",
+                        "m2Tot":  32,
+                        "m2Fix":  25,
+                        "m2Pct":  "78.1%"
                     },
                     {
                         "name":  "EGSS-ehabzaky01",
@@ -2828,7 +2901,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "80.6%",
                         "m1Tot":  20,
                         "m1Fix":  16,
-                        "m1Pct":  "80%"
+                        "m1Pct":  "80%",
+                        "m2Tot":  41,
+                        "m2Fix":  39,
+                        "m2Pct":  "95.1%"
                     },
                     {
                         "name":  "EGSS-Ibrahimismaiel",
@@ -2838,7 +2914,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "69.2%",
                         "m1Tot":  25,
                         "m1Fix":  19,
-                        "m1Pct":  "76%"
+                        "m1Pct":  "76%",
+                        "m2Tot":  41,
+                        "m2Fix":  21,
+                        "m2Pct":  "51.2%"
                     },
                     {
                         "name":  "EGSS-KhaledGonam",
@@ -2848,7 +2927,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "56.2%",
                         "m1Tot":  11,
                         "m1Fix":  8,
-                        "m1Pct":  "72.7%"
+                        "m1Pct":  "72.7%",
+                        "m2Tot":  27,
+                        "m2Fix":  24,
+                        "m2Pct":  "88.9%"
                     },
                     {
                         "name":  "EGSS-OmarMoneb",
@@ -2858,7 +2940,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "89.5%",
                         "m1Tot":  15,
                         "m1Fix":  11,
-                        "m1Pct":  "73.3%"
+                        "m1Pct":  "73.3%",
+                        "m2Tot":  23,
+                        "m2Fix":  18,
+                        "m2Pct":  "78.3%"
                     },
                     {
                         "name":  "EGSS-samira01",
@@ -2868,7 +2953,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "62.5%",
                         "m1Tot":  17,
                         "m1Fix":  16,
-                        "m1Pct":  "94.1%"
+                        "m1Pct":  "94.1%",
+                        "m2Tot":  28,
+                        "m2Fix":  22,
+                        "m2Pct":  "78.6%"
                     },
                     {
                         "name":  "EGSS-ashraqatal",
@@ -2878,7 +2966,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "55.6%",
                         "m1Tot":  29,
                         "m1Fix":  22,
-                        "m1Pct":  "75.9%"
+                        "m1Pct":  "75.9%",
+                        "m2Tot":  45,
+                        "m2Fix":  32,
+                        "m2Pct":  "71.1%"
                     },
                     {
                         "name":  "EGSS-juliamonir01",
@@ -2888,7 +2979,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "75%",
                         "m1Tot":  22,
                         "m1Fix":  17,
-                        "m1Pct":  "77.3%"
+                        "m1Pct":  "77.3%",
+                        "m2Tot":  23,
+                        "m2Fix":  14,
+                        "m2Pct":  "60.9%"
                     },
                     {
                         "name":  "EGSS-mahmoud04",
@@ -2898,7 +2992,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "88.9%",
                         "m1Tot":  31,
                         "m1Fix":  29,
-                        "m1Pct":  "93.5%"
+                        "m1Pct":  "93.5%",
+                        "m2Tot":  23,
+                        "m2Fix":  19,
+                        "m2Pct":  "82.6%"
                     },
                     {
                         "name":  "EGSS-negma",
@@ -2908,7 +3005,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "57.7%",
                         "m1Tot":  34,
                         "m1Fix":  32,
-                        "m1Pct":  "94.1%"
+                        "m1Pct":  "94.1%",
+                        "m2Tot":  50,
+                        "m2Fix":  44,
+                        "m2Pct":  "88%"
                     },
                     {
                         "name":  "EGSS-nohayoussry",
@@ -2918,7 +3018,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "84.2%",
                         "m1Tot":  27,
                         "m1Fix":  25,
-                        "m1Pct":  "92.6%"
+                        "m1Pct":  "92.6%",
+                        "m2Tot":  60,
+                        "m2Fix":  52,
+                        "m2Pct":  "86.7%"
                     },
                     {
                         "name":  "EGSS-Amrsafwat",
@@ -2928,7 +3031,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "73.9%",
                         "m1Tot":  26,
                         "m1Fix":  21,
-                        "m1Pct":  "80.8%"
+                        "m1Pct":  "80.8%",
+                        "m2Tot":  29,
+                        "m2Fix":  27,
+                        "m2Pct":  "93.1%"
                     },
                     {
                         "name":  "EGSS-hayamhassan",
@@ -2938,7 +3044,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "91.7%",
                         "m1Tot":  20,
                         "m1Fix":  20,
-                        "m1Pct":  "100%"
+                        "m1Pct":  "100%",
+                        "m2Tot":  79,
+                        "m2Fix":  67,
+                        "m2Pct":  "84.8%"
                     },
                     {
                         "name":  "EGSS-marwaahmed",
@@ -2948,7 +3057,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "84%",
                         "m1Tot":  16,
                         "m1Fix":  14,
-                        "m1Pct":  "87.5%"
+                        "m1Pct":  "87.5%",
+                        "m2Tot":  7,
+                        "m2Fix":  6,
+                        "m2Pct":  "85.7%"
                     },
                     {
                         "name":  "EGSS-mohamedha",
@@ -2958,7 +3070,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "10%",
                         "m1Tot":  20,
                         "m1Fix":  11,
-                        "m1Pct":  "55%"
+                        "m1Pct":  "55%",
+                        "m2Tot":  27,
+                        "m2Fix":  19,
+                        "m2Pct":  "70.4%"
                     },
                     {
                         "name":  "EGSS-AdhmGadAllah",
@@ -2968,7 +3083,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "90%",
                         "m1Tot":  25,
                         "m1Fix":  23,
-                        "m1Pct":  "92%"
+                        "m1Pct":  "92%",
+                        "m2Tot":  24,
+                        "m2Fix":  22,
+                        "m2Pct":  "91.7%"
                     },
                     {
                         "name":  "EGSS-alihesham01",
@@ -2978,7 +3096,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "73.9%",
                         "m1Tot":  18,
                         "m1Fix":  17,
-                        "m1Pct":  "94.4%"
+                        "m1Pct":  "94.4%",
+                        "m2Tot":  7,
+                        "m2Fix":  5,
+                        "m2Pct":  "71.4%"
                     },
                     {
                         "name":  "EGSS-titooooo",
@@ -2988,7 +3109,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "80%",
                         "m1Tot":  19,
                         "m1Fix":  17,
-                        "m1Pct":  "89.5%"
+                        "m1Pct":  "89.5%",
+                        "m2Tot":  31,
+                        "m2Fix":  26,
+                        "m2Pct":  "83.9%"
                     },
                     {
                         "name":  "EGSS-abdelrhmanshehata",
@@ -2998,7 +3122,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "74.2%",
                         "m1Tot":  26,
                         "m1Fix":  22,
-                        "m1Pct":  "84.6%"
+                        "m1Pct":  "84.6%",
+                        "m2Tot":  7,
+                        "m2Fix":  5,
+                        "m2Pct":  "71.4%"
                     },
                     {
                         "name":  "EGSS-AhmedShoukry",
@@ -3008,7 +3135,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "88.5%",
                         "m1Tot":  34,
                         "m1Fix":  29,
-                        "m1Pct":  "85.3%"
+                        "m1Pct":  "85.3%",
+                        "m2Tot":  44,
+                        "m2Fix":  36,
+                        "m2Pct":  "81.8%"
                     },
                     {
                         "name":  "EGSS-Mahmoudkhamis",
@@ -3018,7 +3148,10 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Pct":  "78.6%",
                         "m1Tot":  32,
                         "m1Fix":  29,
-                        "m1Pct":  "90.6%"
+                        "m1Pct":  "90.6%",
+                        "m2Tot":  48,
+                        "m2Fix":  40,
+                        "m2Pct":  "83.3%"
                     }
                 ],
     "sop":  [
@@ -3926,15 +4059,22 @@ function renderOperationsTab() {
       </table>
     `;
   } else if (currentOperationsModule === 2) {
-    // Module 2: Unfixed Teacher Binding
-    const data = filterByTeam(MASTER_OPERATIONS_DATA.unfixed).sort((a, b) => (parseFloat(b.m0Pct) || 0) - (parseFloat(a.m0Pct) || 0) || (parseFloat(b.m1Pct) || 0) - (parseFloat(a.m1Pct) || 0));
+    // Module 2: Unfixed Teacher Binding (M0, M1, and M2)
+    const data = filterByTeam(MASTER_OPERATIONS_DATA.unfixed).sort((a, b) => 
+      (parseFloat(b.m0Pct) || 0) - (parseFloat(a.m0Pct) || 0) || 
+      (parseFloat(b.m1Pct) || 0) - (parseFloat(a.m1Pct) || 0) ||
+      (parseFloat(b.m2Pct) || 0) - (parseFloat(a.m2Pct) || 0)
+    );
     let rowsHtml = data.map((r, idx) => {
       const m0PctNum = parseFloat(r.m0Pct) || 0;
       const m1PctNum = parseFloat(r.m1Pct) || 0;
+      const m2PctNum = parseFloat(r.m2Pct) || 0;
       const m0Badge = m0PctNum >= 80 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
       const m1Badge = m1PctNum >= 80 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
+      const m2Badge = m2PctNum >= 80 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
       const m0Clr = m0PctNum >= 80 ? '#10b981' : m0PctNum >= 50 ? '#f59e0b' : '#f43f5e';
       const m1Clr = m1PctNum >= 80 ? '#10b981' : m1PctNum >= 70 ? '#f59e0b' : '#f43f5e';
+      const m2Clr = m2PctNum >= 80 ? '#10b981' : m2PctNum >= 70 ? '#f59e0b' : '#f43f5e';
 
       return `
         <tr>
@@ -3949,6 +4089,10 @@ function renderOperationsTab() {
           <td style="font-family: var(--font-mono); color: #34d399;">${r.m1Fix}</td>
           <td style="font-family: var(--font-mono); font-weight: 700; color: ${m1Clr};">${r.m1Pct}</td>
           <td style="text-align: center;">${m1Badge}</td>
+          <td style="font-family: var(--font-mono);">${r.m2Tot || 0}</td>
+          <td style="font-family: var(--font-mono); color: #34d399;">${r.m2Fix || 0}</td>
+          <td style="font-family: var(--font-mono); font-weight: 700; color: ${m2Clr};">${r.m2Pct || '0%'}</td>
+          <td style="text-align: center;">${m2Badge}</td>
         </tr>
       `;
     }).join('');
@@ -3960,6 +4104,10 @@ function renderOperationsTab() {
     const sumM1Tot = data.reduce((s, r) => s + r.m1Tot, 0);
     const sumM1Fix = data.reduce((s, r) => s + r.m1Fix, 0);
     const avgM1 = sumM1Tot > 0 ? ((sumM1Fix / sumM1Tot) * 100).toFixed(1) + '%' : '0.0%';
+
+    const sumM2Tot = data.reduce((s, r) => s + (r.m2Tot || 0), 0);
+    const sumM2Fix = data.reduce((s, r) => s + (r.m2Fix || 0), 0);
+    const avgM2 = sumM2Tot > 0 ? ((sumM2Fix / sumM2Tot) * 100).toFixed(1) + '%' : '0.0%';
 
     container.innerHTML = `
       <table class="data-table">
@@ -3976,6 +4124,10 @@ function renderOperationsTab() {
             <th>M1 Fixed</th>
             <th>M1 Fix %</th>
             <th style="text-align: center;">vs 80% Target</th>
+            <th>M2 Leads</th>
+            <th>M2 Fixed</th>
+            <th>M2 Fix %</th>
+            <th style="text-align: center;">vs 80% Target</th>
           </tr>
         </thead>
         <tbody>${rowsHtml}</tbody>
@@ -3990,6 +4142,10 @@ function renderOperationsTab() {
             <td style="font-family: var(--font-mono); color: #34d399;">${sumM1Fix}</td>
             <td style="font-family: var(--font-mono); color: #10b981;">${avgM1}</td>
             <td style="text-align: center;">${parseFloat(avgM1) >= 80 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
+            <td style="font-family: var(--font-mono);">${sumM2Tot}</td>
+            <td style="font-family: var(--font-mono); color: #34d399;">${sumM2Fix}</td>
+            <td style="font-family: var(--font-mono); color: #10b981;">${avgM2}</td>
+            <td style="text-align: center;">${parseFloat(avgM2) >= 80 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
           </tr>
         </tfoot>
       </table>
@@ -4742,7 +4898,70 @@ const YESTERDAY_DATA = {
           "m0Pct": "90.5%",
           "m1Tot": 18,
           "m1Fix": 16,
-          "m1Pct": "88.9%"
+          "m1Pct": "88.9%",
+                        "m2Tot":  48,
+                        "m2Fix":  40,
+                        "m2Pct":  "83.3%",
+                        "m2Tot":  44,
+                        "m2Fix":  36,
+                        "m2Pct":  "81.8%",
+                        "m2Tot":  7,
+                        "m2Fix":  5,
+                        "m2Pct":  "71.4%",
+                        "m2Tot":  31,
+                        "m2Fix":  26,
+                        "m2Pct":  "83.9%",
+                        "m2Tot":  7,
+                        "m2Fix":  5,
+                        "m2Pct":  "71.4%",
+                        "m2Tot":  24,
+                        "m2Fix":  22,
+                        "m2Pct":  "91.7%",
+                        "m2Tot":  27,
+                        "m2Fix":  19,
+                        "m2Pct":  "70.4%",
+                        "m2Tot":  7,
+                        "m2Fix":  6,
+                        "m2Pct":  "85.7%",
+                        "m2Tot":  79,
+                        "m2Fix":  67,
+                        "m2Pct":  "84.8%",
+                        "m2Tot":  29,
+                        "m2Fix":  27,
+                        "m2Pct":  "93.1%",
+                        "m2Tot":  60,
+                        "m2Fix":  52,
+                        "m2Pct":  "86.7%",
+                        "m2Tot":  50,
+                        "m2Fix":  44,
+                        "m2Pct":  "88%",
+                        "m2Tot":  23,
+                        "m2Fix":  19,
+                        "m2Pct":  "82.6%",
+                        "m2Tot":  23,
+                        "m2Fix":  14,
+                        "m2Pct":  "60.9%",
+                        "m2Tot":  45,
+                        "m2Fix":  32,
+                        "m2Pct":  "71.1%",
+                        "m2Tot":  28,
+                        "m2Fix":  22,
+                        "m2Pct":  "78.6%",
+                        "m2Tot":  23,
+                        "m2Fix":  18,
+                        "m2Pct":  "78.3%",
+                        "m2Tot":  27,
+                        "m2Fix":  24,
+                        "m2Pct":  "88.9%",
+                        "m2Tot":  41,
+                        "m2Fix":  21,
+                        "m2Pct":  "51.2%",
+                        "m2Tot":  41,
+                        "m2Fix":  39,
+                        "m2Pct":  "95.1%",
+                        "m2Tot":  32,
+                        "m2Fix":  25,
+                        "m2Pct":  "78.1%"
       },
       {
           "name": "EGSS-ehabzaky01",
@@ -4752,7 +4971,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "82.8%",
           "m1Tot": 21,
           "m1Fix": 16,
-          "m1Pct": "76.2%"
+          "m1Pct": "76.2%",
+                        "m2Tot":  41,
+                        "m2Fix":  39,
+                        "m2Pct":  "95.1%"
       },
       {
           "name": "EGSS-Ibrahimismaiel",
@@ -4762,7 +4984,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "60%",
           "m1Tot": 25,
           "m1Fix": 19,
-          "m1Pct": "76%"
+          "m1Pct": "76%",
+                        "m2Tot":  41,
+                        "m2Fix":  21,
+                        "m2Pct":  "51.2%"
       },
       {
           "name": "EGSS-KhaledGonam",
@@ -4772,7 +4997,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "40%",
           "m1Tot": 13,
           "m1Fix": 8,
-          "m1Pct": "61.5%"
+          "m1Pct": "61.5%",
+                        "m2Tot":  27,
+                        "m2Fix":  24,
+                        "m2Pct":  "88.9%"
       },
       {
           "name": "EGSS-OmarMoneb",
@@ -4782,7 +5010,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "83.3%",
           "m1Tot": 15,
           "m1Fix": 11,
-          "m1Pct": "73.3%"
+          "m1Pct": "73.3%",
+                        "m2Tot":  23,
+                        "m2Fix":  18,
+                        "m2Pct":  "78.3%"
       },
       {
           "name": "EGSS-samira01",
@@ -4792,7 +5023,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "66.7%",
           "m1Tot": 17,
           "m1Fix": 16,
-          "m1Pct": "94.1%"
+          "m1Pct": "94.1%",
+                        "m2Tot":  28,
+                        "m2Fix":  22,
+                        "m2Pct":  "78.6%"
       },
       {
           "name": "EGSS-ashraqatal",
@@ -4802,7 +5036,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "52%",
           "m1Tot": 29,
           "m1Fix": 22,
-          "m1Pct": "75.9%"
+          "m1Pct": "75.9%",
+                        "m2Tot":  45,
+                        "m2Fix":  32,
+                        "m2Pct":  "71.1%"
       },
       {
           "name": "EGSS-juliamonir01",
@@ -4812,7 +5049,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "64.3%",
           "m1Tot": 22,
           "m1Fix": 16,
-          "m1Pct": "72.7%"
+          "m1Pct": "72.7%",
+                        "m2Tot":  23,
+                        "m2Fix":  14,
+                        "m2Pct":  "60.9%"
       },
       {
           "name": "EGSS-mahmoud04",
@@ -4822,7 +5062,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "66.7%",
           "m1Tot": 31,
           "m1Fix": 29,
-          "m1Pct": "93.5%"
+          "m1Pct": "93.5%",
+                        "m2Tot":  23,
+                        "m2Fix":  19,
+                        "m2Pct":  "82.6%"
       },
       {
           "name": "EGSS-negma",
@@ -4832,7 +5075,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "60%",
           "m1Tot": 34,
           "m1Fix": 32,
-          "m1Pct": "94.1%"
+          "m1Pct": "94.1%",
+                        "m2Tot":  50,
+                        "m2Fix":  44,
+                        "m2Pct":  "88%"
       },
       {
           "name": "EGSS-nohayoussry",
@@ -4842,7 +5088,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "88.2%",
           "m1Tot": 27,
           "m1Fix": 25,
-          "m1Pct": "92.6%"
+          "m1Pct": "92.6%",
+                        "m2Tot":  60,
+                        "m2Fix":  52,
+                        "m2Pct":  "86.7%"
       },
       {
           "name": "EGSS-Amrsafwat",
@@ -4852,7 +5101,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "85%",
           "m1Tot": 26,
           "m1Fix": 21,
-          "m1Pct": "80.8%"
+          "m1Pct": "80.8%",
+                        "m2Tot":  29,
+                        "m2Fix":  27,
+                        "m2Pct":  "93.1%"
       },
       {
           "name": "EGSS-hayamhassan",
@@ -4862,7 +5114,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "88.6%",
           "m1Tot": 21,
           "m1Fix": 19,
-          "m1Pct": "90.5%"
+          "m1Pct": "90.5%",
+                        "m2Tot":  79,
+                        "m2Fix":  67,
+                        "m2Pct":  "84.8%"
       },
       {
           "name": "EGSS-marwaahmed",
@@ -4872,7 +5127,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "83.3%",
           "m1Tot": 16,
           "m1Fix": 14,
-          "m1Pct": "87.5%"
+          "m1Pct": "87.5%",
+                        "m2Tot":  7,
+                        "m2Fix":  6,
+                        "m2Pct":  "85.7%"
       },
       {
           "name": "EGSS-mohamedha",
@@ -4882,7 +5140,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "0%",
           "m1Tot": 20,
           "m1Fix": 11,
-          "m1Pct": "55%"
+          "m1Pct": "55%",
+                        "m2Tot":  27,
+                        "m2Fix":  19,
+                        "m2Pct":  "70.4%"
       },
       {
           "name": "EGSS-AdhmGadAllah",
@@ -4892,7 +5153,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "89.5%",
           "m1Tot": 25,
           "m1Fix": 23,
-          "m1Pct": "92%"
+          "m1Pct": "92%",
+                        "m2Tot":  24,
+                        "m2Fix":  22,
+                        "m2Pct":  "91.7%"
       },
       {
           "name": "EGSS-alihesham01",
@@ -4902,7 +5166,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "65%",
           "m1Tot": 18,
           "m1Fix": 17,
-          "m1Pct": "94.4%"
+          "m1Pct": "94.4%",
+                        "m2Tot":  7,
+                        "m2Fix":  5,
+                        "m2Pct":  "71.4%"
       },
       {
           "name": "EGSS-titooooo",
@@ -4912,7 +5179,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "70%",
           "m1Tot": 19,
           "m1Fix": 17,
-          "m1Pct": "89.5%"
+          "m1Pct": "89.5%",
+                        "m2Tot":  31,
+                        "m2Fix":  26,
+                        "m2Pct":  "83.9%"
       },
       {
           "name": "EGSS-abdelrhmanshehata",
@@ -4922,7 +5192,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "79.3%",
           "m1Tot": 26,
           "m1Fix": 22,
-          "m1Pct": "84.6%"
+          "m1Pct": "84.6%",
+                        "m2Tot":  7,
+                        "m2Fix":  5,
+                        "m2Pct":  "71.4%"
       },
       {
           "name": "EGSS-AhmedShoukry",
@@ -4932,7 +5205,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "88.5%",
           "m1Tot": 34,
           "m1Fix": 29,
-          "m1Pct": "85.3%"
+          "m1Pct": "85.3%",
+                        "m2Tot":  44,
+                        "m2Fix":  36,
+                        "m2Pct":  "81.8%"
       },
       {
           "name": "EGSS-Mahmoudkhamis",
@@ -4942,7 +5218,10 @@ const YESTERDAY_DATA = {
           "m0Pct": "84.6%",
           "m1Tot": 32,
           "m1Fix": 29,
-          "m1Pct": "90.6%"
+          "m1Pct": "90.6%",
+                        "m2Tot":  48,
+                        "m2Fix":  40,
+                        "m2Pct":  "83.3%"
       }
   ]
 };
@@ -6439,16 +6718,16 @@ function renderComparisonTab() {
     const ydUpg_rate = ydUpg_base > 0 ? (ydUpg_m2 / ydUpg_base) * 100 : 0;
     const delta_upg  = todayUpg_rate - ydUpg_rate;
 
-    // 4. Unfixed Teacher Progress
+    // 4. Unfixed Teacher Progress (M0 + M1 + M2)
     const todayFT_r   = ftMap[nk] || {};
-    const todayFT_tot = (Number(todayFT_r.m0Tot) || 0) + (Number(todayFT_r.m1Tot) || 0);
-    const todayFT_fix = (Number(todayFT_r.m0Fix) || 0) + (Number(todayFT_r.m1Fix) || 0);
+    const todayFT_tot = (Number(todayFT_r.m0Tot) || 0) + (Number(todayFT_r.m1Tot) || 0) + (Number(todayFT_r.m2Tot) || 0);
+    const todayFT_fix = (Number(todayFT_r.m0Fix) || 0) + (Number(todayFT_r.m1Fix) || 0) + (Number(todayFT_r.m2Fix) || 0);
     const todayFT_unf = Math.max(0, todayFT_tot - todayFT_fix);
     const todayFT_rate= todayFT_tot > 0 ? (todayFT_fix / todayFT_tot) * 100 : 0;
 
     const ydFT_r   = ydFtMap[nk] || {};
-    const ydFT_tot = (Number(ydFT_r.m0Tot) || 0) + (Number(ydFT_r.m1Tot) || 0);
-    const ydFT_fix = (Number(ydFT_r.m0Fix) || 0) + (Number(ydFT_r.m1Fix) || 0);
+    const ydFT_tot = (Number(ydFT_r.m0Tot) || 0) + (Number(ydFT_r.m1Tot) || 0) + (Number(ydFT_r.m2Tot) || 0);
+    const ydFT_fix = (Number(ydFT_r.m0Fix) || 0) + (Number(ydFT_r.m1Fix) || 0) + (Number(ydFT_r.m2Fix) || 0);
     const ydFT_unf = Math.max(0, ydFT_tot - ydFT_fix);
     const ydFT_rate= ydFT_tot > 0 ? (ydFT_fix / ydFT_tot) * 100 : 0;
 
