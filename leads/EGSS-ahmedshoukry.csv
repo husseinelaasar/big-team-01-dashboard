@@ -1,17 +1,10 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-ahmedshoukry | Generated: 2026-10-06 18:10
+# Representative: EGSS-ahmedshoukry | Generated: 2026-10-06 18:23
 
-=== 1. SOP PENDING TASKS (27) ===
+=== 1. SOP PENDING TASKS (21) ===
 Student_ID,Task_Name,Expiration_Time
-58970432,"Round 6 Premium Service(Duration Renewal Insidepool)",20261006 18:55:00
-62099706,"Round 3 Habit Cultivation (1st Unit Assessment)",20261006 18:55:00
-64355638,"Round 3 Habit Cultivation (1st Unit Assessment)",20261006 18:55:00
-58676812,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261007 18:55:00
-59223521,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261007 18:55:00
-63724583,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261007 18:55:00
-59327162,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261008 18:55:00
 61031408,"Round 6 Premium Service(Duration Renewal Insidepool)",20261008 18:55:00
-61848925,"Round 1  Awareness building (First call)",20261008 18:55:00
+64362689,"Round 3 Habit Cultivation (1st Unit Assessment)",20261008 18:55:00
 57785962,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 57940321,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 58872051,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
@@ -30,9 +23,10 @@ Student_ID,Task_Name,Expiration_Time
 64063477,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 58355382,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 63056829,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
+63946511,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (61) ===
-Student_ID,Pool_Cohort,Classes,Priority
+=== 2. UNFIXED TEACHER BINDING LEADS (61) ===
+Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 58115949,"M3+ Pool",0,"UNFIXED BINDING"
 58136099,"M3+ Pool",0,"UNFIXED BINDING"
 58316212,"M3+ Pool",0,"UNFIXED BINDING"
@@ -95,8 +89,8 @@ Student_ID,Pool_Cohort,Classes,Priority
 64175909,"M1 Pool",0,"HIGH BINDING"
 64362689,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. CLASS CONSUMPTION RESCUE (281) ===
-Student_ID,Pool_Cohort,Classes,Action
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (281) ===
+Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 57990182,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58115949,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58316212,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -379,8 +373,8 @@ Student_ID,Pool_Cohort,Classes,Action
 64175909,"M1 Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 64351360,"M0 Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 
-=== 4. ENGLISH CLUB LEADS (133) ===
-Student_ID,Level,Completed,Status
+=== 4. ENGLISH CLUB ACTIONABLE LEADS (133) ===
+Student_ID,Level,Completed_Classes,Booking_Status
 59988907,"3",0,"Booking Required"
 63101102,"1",0,"Booking Required"
 63120286,"0",0,"Booking Required"

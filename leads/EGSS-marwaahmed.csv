@@ -1,22 +1,20 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-marwaahmed | Generated: 2026-10-06 18:10
+# Representative: EGSS-marwaahmed | Generated: 2026-10-06 18:23
 
-=== 1. SOP PENDING TASKS (30) ===
+=== 1. SOP PENDING TASKS (28) ===
 Student_ID,Task_Name,Expiration_Time
-58300682,"Round 6 Premium Service(Outside Renewal Pool)",20261006 18:55:00
-58803557,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261006 18:55:00
-63522890,"English Club Booking",20261006 18:55:00
-64487655,"Round 2  Trust Enhancement (First Class Follow-up)",20261006 18:55:00
 58613227,"Round 6 Premium Service(Duration Renewal Insidepool)",20261007 18:55:00
-63442704,"English Club Booking",20261007 18:55:00
 64202381,"Round 3 Habit Cultivation (1st Unit Assessment)",20261007 18:55:00
 64492484,"Round 2  Trust Enhancement (First Class Follow-up)",20261007 18:55:00
 58664776,"Round 6 Premium Service(Duration Renewal Insidepool)",20261008 18:55:00
 59615056,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261008 18:55:00
-60540612,"English Club Booking",20261008 18:55:00
-63442095,"English Club Booking",20261008 18:55:00
+60434132,"SS:Service warning - absence",20261008 18:55:00
 63673439,"Round 2  Trust Enhancement (First Class Follow-up)",20261008 18:55:00
-64536237,"Round 1  Awareness building (First call)",20261008 18:55:00
+64536237,"Round 2  Trust Enhancement (First Class Follow-up)",20261008 18:55:00
+58253560,"English Club Booking",20261010 18:55:00
+60325109,"Round 6 Premium Service(Duration Renewal Insidepool)",20261010 18:55:00
+60432266,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261010 18:55:00
+60434132,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261010 18:55:00
 58147399,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 58656172,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 59551178,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
@@ -34,8 +32,8 @@ Student_ID,Task_Name,Expiration_Time
 58340925,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 63103706,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (56) ===
-Student_ID,Pool_Cohort,Classes,Priority
+=== 2. UNFIXED TEACHER BINDING LEADS (56) ===
+Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 58300682,"M3+ Pool",0,"UNFIXED BINDING"
 58441649,"M3+ Pool",0,"UNFIXED BINDING"
 58501996,"M3+ Pool",0,"UNFIXED BINDING"
@@ -93,8 +91,8 @@ Student_ID,Pool_Cohort,Classes,Priority
 64483561,"M0 Pool",0,"CRITICAL (0 Classes)"
 64536237,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. CLASS CONSUMPTION RESCUE (251) ===
-Student_ID,Pool_Cohort,Classes,Action
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (251) ===
+Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 58300682,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58334316,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58340925,"M1 Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -347,8 +345,8 @@ Student_ID,Pool_Cohort,Classes,Action
 63510284,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64483561,"M0 Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
 
-=== 4. ENGLISH CLUB LEADS (95) ===
-Student_ID,Level,Completed,Status
+=== 4. ENGLISH CLUB ACTIONABLE LEADS (95) ===
+Student_ID,Level,Completed_Classes,Booking_Status
 58441892,"1",0,"Booking Required"
 60502578,"0",0,"Booking Required"
 63057243,"0",0,"Booking Required"
@@ -401,9 +399,9 @@ Student_ID,Level,Completed,Status
 63561190,"3",0,"Booking Required"
 63571486,"1",0,"Booking Required"
 63580280,"1",0,"Booking Required"
+61559733,"0",0,"Booked"
 63583180,"0",0,"Booked"
 63583008,"1",0,"Booking Required"
-61559733,"0",0,"Booked"
 60988810,"2",0,"Booking Required"
 63583093,"1",0,"Booked"
 63528382,"1",0,"Booking Required"
@@ -429,8 +427,8 @@ Student_ID,Level,Completed,Status
 63103706,"3",0,"Booking Required"
 64170513,"0",0,"Booking Required"
 64183419,"0",0,"Booked"
-64244920,"0",0,"Booked"
 58826348,"2",0,"Booked"
+64244920,"0",0,"Booked"
 64248244,"1",0,"Booking Required"
 64260064,"1",0,"Booked"
 64287215,"0",0,"Booking Required"
