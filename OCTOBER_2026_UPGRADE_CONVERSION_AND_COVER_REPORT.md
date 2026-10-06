@@ -131,4 +131,38 @@
    - Pushed to `origin/master`. Live on GitHub Pages.
 
 ---
+
+## 🔍 6. Diagnostic: Resolution of Performance Comparison Upgrade Rate Drop & Navigation Guide for Lead Coverage
+
+### A. Root Cause Analysis: The Apparent Upgrade Rate Drop (▼ -3.7%)
+On the **Performance Comparison (TO vs YD)** page, Abdelrhman Shehata previously displayed:
+* `Today: 0.0%`
+* `YD: 3.7%`
+* `Delta: ▼ -3.7%`
+
+#### 1. Why Did This Happen?
+* **Snapshot Mismatch**: Prior to integrating the official Upgrade Base leads into `update_dashboard.ps1`, Today's `upgradeM2` count in `REPS_DATA` was defaulting to `0`. Consequently, Today's rate evaluated to $\frac{0}{27} = \mathbf{0.0\%}$.
+* **Yesterday's Baseline (`YESTERDAY_DATA`)**: The Oct 4 snapshot had already captured Abdelrhman Shehata's 1 upgrade against his 27 pool leads ($\frac{1}{27} = \mathbf{3.7\%}$).
+* **Mathematical Artifact**: The delta formula evaluated $\text{Today } (0.0\%) - \text{Yesterday } (3.7\%) = \mathbf{-3.7\%}$. No students, contracts, or upgrade renewals were lost; Today's record had simply not yet been populated with the official numbers.
+
+#### 2. Architectural Fix Implemented:
+* Pre-populated all 21 representatives in `$repsHash` within `update_dashboard.ps1`.
+* Enforced direct extraction of Upgrade M2 contracts from `Student_Detail32`.
+* Both Today and Yesterday now correctly compute $\frac{1}{27} = \mathbf{3.7\%}$, bringing the delta to **`0.0%`** (eliminating the drop entirely).
+
+---
+
+### B. Navigation Sitemap: Where to Find Upgrade Leads Coverage
+
+| Dashboard Location | Tab in Navigation Bar | Table / Component | Metrics Displayed |
+| :--- | :--- | :--- | :--- |
+| **Primary Upgrade Hub** | **`Early Upgrade Hub (20%)`** *(Tab 5, Purple Badge)* | **Top Executive KPI Card** | **`Avg M2 Coverage %`**: Sector-wide contact frequency (`24.4% (0.4x)`). |
+| | | **Small Teams Comparison Cards** | Team-level coverage % (ME-EGSS05: 49.3%, ME-EGSS30: 31.8%, ME-EGSS10: 27.6%, ME-EGSS13: 26.1%, ME-EGSS01: 19.8%). |
+| | | **Master Upgrade Table (`#masterUpgradeTable`)** | **Col 4 (`Base`)**: Total leads.<br>**Col 5 (`Coverage %`)**: Rep touch intensity.<br>*Can be sorted via "Coverage / Touch Intensity % (Highest → Lowest)"*. |
+| **Executive Overview** | **`Executive Overview`** *(Tab 1)* | **Individual Sales Specialists Matrix** | Column **`Coverage % (POOL22)`** (e.g. `37.5% (0.4x)`). |
+| **Individual Roster** | **`Individual Reps (21)`** *(Tab 3)* | **Full Individual Performance Table** | Column **`Coverage % (POOL22)`**. |
+| **Offline Markdown** | [OCTOBER_2026_UPGRADE_CONVERSION_AND_COVER_REPORT.md](file:///d:/Lens/Dashboard/OCTOBER_2026_UPGRADE_CONVERSION_AND_COVER_REPORT.md) | **Section 3: Rep Roster Table** | Complete list of all 21 reps with Base Leads, Upgrades, Conv %, and Cover %. |
+
+---
 *Verified and Synchronized for 51Talk Big Team 01 Operations — October 2026.*
+
