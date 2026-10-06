@@ -223,14 +223,14 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 6 target 20%. Gap: 20pp. Need $-966/day to close.', time: '20261006_122711' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ibrahimismaiel (2%), EGSS-juliamonir01 (5.7%), EGSS-abdelrhmanshehata (7.2%), EGSS-mahmoudkhamis (7.3%), EGSS-samira01 (8%). Schedule targeted coaching sessions today.', time: '20261006_122711' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-omarmoneb (14.6%), EGSS-mahmoud04 (23.1%), EGSS-mohamedha (33.2%). Recognize in team channel!', time: '20261006_122711' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1214/day', detail: 'Currently at 17.6% (6460/36800). Gap: $30340.', time: '20261006_122711' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $1649/day', detail: 'Currently at 14.1% (6780/48000). Gap: $41220.', time: '20261006_122711' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1178/day', detail: 'Currently at 11% (3640/33100). Gap: $29460.', time: '20261006_122711' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $2225/day', detail: 'Currently at 8.5% (5175/60800). Gap: $55625.', time: '20261006_122711' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1068/day', detail: 'Currently at 7.3% (2092/28800). Gap: $26708.', time: '20261006_122711' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 6 target 20%. Gap: 20pp. Need $-966/day to close.', time: '20261006_141026' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ibrahimismaiel (2%), EGSS-juliamonir01 (5.7%), EGSS-abdelrhmanshehata (7.2%), EGSS-mahmoudkhamis (7.3%), EGSS-samira01 (8%). Schedule targeted coaching sessions today.', time: '20261006_141026' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-omarmoneb (14.6%), EGSS-mahmoud04 (23.1%), EGSS-mohamedha (33.2%). Recognize in team channel!', time: '20261006_141026' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1214/day', detail: 'Currently at 17.6% (6460/36800). Gap: $30340.', time: '20261006_141026' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $1649/day', detail: 'Currently at 14.1% (6780/48000). Gap: $41220.', time: '20261006_141026' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1178/day', detail: 'Currently at 11% (3640/33100). Gap: $29460.', time: '20261006_141026' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $2225/day', detail: 'Currently at 8.5% (5175/60800). Gap: $55625.', time: '20261006_141026' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1068/day', detail: 'Currently at 7.3% (2092/28800). Gap: $26708.', time: '20261006_141026' },
 ];
 
 // =========================================================================
@@ -905,14 +905,14 @@ function renderBigTeamSummary(model) {
     }
 
     return `
-      <div class="strategic-memo-box">
-        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 5px; flex-wrap: wrap;">
+      <div class="strategic-memo-box" style="padding: 4px 6px;">
+        <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 3px; flex-wrap: wrap;">
           ${revHeader}
-          <span style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">${revBody}</span>
+          <span style="font-size: 0.74rem; color: #cbd5e1; line-height: 1.35;">${revBody}</span>
         </div>
-        <div style="display: flex; align-items: baseline; gap: 8px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 5px; margin-top: 4px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: baseline; gap: 6px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 4px; margin-top: 3px; flex-wrap: wrap;">
           ${upgHeader}
-          <span style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">${upgBody}</span>
+          <span style="font-size: 0.74rem; color: #cbd5e1; line-height: 1.35;">${upgBody}</span>
         </div>
       </div>
     `;
@@ -971,7 +971,7 @@ function renderBigTeamSummary(model) {
         <td style="font-family: var(--font-mono); text-align: center; font-weight: 800; color: ${t.gap === 0 ? '#10b981' : '#f43f5e'};">
           ${t.gap === 0 ? '✓ MET' : fmt(t.gap)}
         </td>
-        <td style="text-align: left !important; min-width: 440px; max-width: 640px;">
+        <td style="text-align: left !important; min-width: 200px; padding: 6px 6px;">
           ${getTeamFeedbackText(t)}
         </td>
       </tr>
@@ -1207,22 +1207,22 @@ function renderBigTeamSummary(model) {
       </div>
 
       <!-- Small Teams Achievement & Detailed Strategic Feedback Table -->
-      <div class="modern-table-card" style="margin-top: 12px; overflow-x: auto;">
-        <table class="data-table" id="bigTeamSummaryTable" style="width: 100%; min-width: 1580px; table-layout: auto !important;">
+      <div class="modern-table-card" style="margin-top: 12px; overflow-x: auto; width: 100%;">
+        <table class="data-table" id="bigTeamSummaryTable" style="width: 100%; table-layout: auto !important;">
           <thead>
             <tr>
-              <th style="min-width: 44px; text-align: center;">#</th>
-              <th style="min-width: 180px; text-align: left !important;">Small Team &amp; Team Leader</th>
-              <th style="min-width: 120px; text-align: center;">Net Cash MTD</th>
-              <th style="min-width: 110px; text-align: center;">Target</th>
-              <th style="min-width: 115px; text-align: center; color: #10b981; font-weight: 800;">Ach %</th>
-              <th style="min-width: 140px; text-align: center;">Benchmark Variance (D${daysPassed}: ${pacePct}%)</th>
-              <th style="min-width: 90px; text-align: center;">Orders</th>
-              <th style="min-width: 90px; text-align: center;">Upgrade Base</th>
-              <th style="min-width: 125px; text-align: center; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08);">M2 Upgrades (Conv %)</th>
-              <th style="min-width: 120px; text-align: center; color: #e9d5ff; background: rgba(192, 132, 252, 0.08);">20% Goal (Gap)</th>
-              <th style="min-width: 110px; text-align: center; color: #f43f5e; font-weight: 800;">Target Gap</th>
-              <th style="min-width: 460px; text-align: left !important; color: #38bdf8; font-weight: 800;">Detailed Strategic Feedback &amp; Operational Directives</th>
+              <th style="width: 24px; text-align: center; font-size: 0.71rem; padding: 6px 3px;">#</th>
+              <th style="min-width: 125px; text-align: left !important; font-size: 0.73rem; padding: 6px 5px;">Small Team &amp; Team Leader</th>
+              <th style="min-width: 76px; text-align: center; font-size: 0.73rem; padding: 6px 4px;">Net Cash MTD</th>
+              <th style="min-width: 68px; text-align: center; font-size: 0.73rem; padding: 6px 4px;">Target</th>
+              <th style="min-width: 62px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.73rem; padding: 6px 4px;">Ach %</th>
+              <th style="min-width: 95px; text-align: center; font-size: 0.73rem; padding: 6px 4px;">BM Variance (D${daysPassed}: ${pacePct}%)</th>
+              <th style="min-width: 44px; text-align: center; font-size: 0.73rem; padding: 6px 4px;">Orders</th>
+              <th style="min-width: 50px; text-align: center; font-size: 0.73rem; padding: 6px 4px;">Upgrade Base</th>
+              <th style="min-width: 82px; text-align: center; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); font-size: 0.73rem; padding: 6px 4px;">M2 Upgrades (Conv %)</th>
+              <th style="min-width: 72px; text-align: center; color: #e9d5ff; background: rgba(192, 132, 252, 0.08); font-size: 0.73rem; padding: 6px 4px;">20% Goal (Gap)</th>
+              <th style="min-width: 72px; text-align: center; color: #f43f5e; font-weight: 800; font-size: 0.73rem; padding: 6px 4px;">Target Gap</th>
+              <th style="min-width: 220px; text-align: left !important; color: #38bdf8; font-weight: 800; font-size: 0.73rem; padding: 6px 6px;">Detailed Strategic Feedback &amp; Operational Directives</th>
             </tr>
           </thead>
           <tbody>
@@ -1230,38 +1230,38 @@ function renderBigTeamSummary(model) {
           </tbody>
           <tfoot>
             <tr style="background: rgba(99, 102, 241, 0.14); font-weight: 800; border-top: 2px solid var(--accent-indigo);">
-              <td colspan="2" style="color: #fff; text-align: left; font-size: 0.92rem; padding: 14px 16px;">
+              <td colspan="2" style="color: #fff; text-align: left; font-size: 0.8rem; padding: 8px 8px;">
                 ⭐ BIG TEAM 01 — SECTOR TOTAL (Saber Hussien)
               </td>
-              <td style="font-family: var(--font-mono); font-size: 1.05rem; color: #fff; text-align: center;">${fmt(s.totalCash)}</td>
-              <td style="font-family: var(--font-mono); color: var(--text-secondary); text-align: center;">${fmt(s.totalTarget)}</td>
-              <td style="font-family: var(--font-mono); font-size: 1.05rem; color: ${getStatusColor(s.achievement)}; text-align: center;">
-                <span class="pill-badge pill-badge-emerald">${fmtPct(s.achievement)}</span>
+              <td style="font-family: var(--font-mono); font-size: 0.85rem; color: #fff; text-align: center; padding: 8px 4px;">${fmt(s.totalCash)}</td>
+              <td style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); text-align: center; padding: 8px 4px;">${fmt(s.totalTarget)}</td>
+              <td style="font-family: var(--font-mono); font-size: 0.85rem; color: ${getStatusColor(s.achievement)}; text-align: center; padding: 8px 4px;">
+                <span class="pill-badge pill-badge-emerald" style="font-size: 0.72rem; padding: 2px 5px;">${fmtPct(s.achievement)}</span>
               </td>
-              <td style="text-align: center; font-family: var(--font-mono); color: ${sectorPaceClr}; font-weight: 800;">
+              <td style="text-align: center; font-family: var(--font-mono); color: ${sectorPaceClr}; font-weight: 800; font-size: 0.78rem; padding: 8px 4px;">
                 ${sectorDiffSign}${sectorDiffPct}% (${sectorPaceLabel})
               </td>
-              <td style="font-family: var(--font-mono); color: #fff; text-align: center; font-weight: 800;">
+              <td style="font-family: var(--font-mono); color: #fff; text-align: center; font-weight: 800; font-size: 0.8rem; padding: 8px 4px;">
                 ${s.totalContracts}
               </td>
-              <td style="font-family: var(--font-mono); color: #cbd5e1; text-align: center;">
+              <td style="font-family: var(--font-mono); color: #cbd5e1; text-align: center; font-size: 0.78rem; padding: 8px 4px;">
                 ${totalUpgradeBase}
               </td>
-              <td style="font-family: var(--font-mono); color: #c084fc; text-align: center; font-size: 1rem; background: rgba(192, 132, 252, 0.08);">
-                <strong>${totalUpgradeM2}</strong> <span style="font-size: 0.78rem; color: #e9d5ff;">(${totalUpgradeRate.toFixed(1)}%)</span>
+              <td style="font-family: var(--font-mono); color: #c084fc; text-align: center; font-size: 0.8rem; background: rgba(192, 132, 252, 0.08); padding: 8px 4px;">
+                <strong>${totalUpgradeM2}</strong> <span style="font-size: 0.72rem; color: #e9d5ff;">(${totalUpgradeRate.toFixed(1)}%)</span>
               </td>
-              <td style="font-family: var(--font-mono); text-align: center; font-size: 0.85rem; background: rgba(192, 132, 252, 0.08);">
-                <span style="color: #fff;">${totalUpgrade20Target}</span> <span style="color: #f43f5e; font-size: 0.78rem;">(-${totalUpgrade20Needed})</span>
+              <td style="font-family: var(--font-mono); text-align: center; font-size: 0.76rem; background: rgba(192, 132, 252, 0.08); padding: 8px 4px;">
+                <span style="color: #fff;">${totalUpgrade20Target}</span> <span style="color: #f43f5e; font-size: 0.7rem;">(-${totalUpgrade20Needed})</span>
               </td>
-              <td style="font-family: var(--font-mono); color: #f43f5e; text-align: center; font-weight: 800;">
+              <td style="font-family: var(--font-mono); color: #f43f5e; text-align: center; font-weight: 800; font-size: 0.8rem; padding: 8px 4px;">
                 ${fmt(s.totalGap)}
               </td>
-              <td style="text-align: left !important; font-size: 0.82rem; line-height: 1.45; color: #e2e8f0; padding: 14px 16px;">
-                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
-                  <span class="pill-badge pill-badge-cyan" style="font-size: 0.72rem; padding: 3px 8px; font-weight: 800;">⭐ Sector Synthesis</span>
-                  <span class="pill-badge" style="font-size: 0.72rem; padding: 3px 8px; background: rgba(244,63,94,0.18); color: #fda4af; border: 1px solid rgba(244,63,94,0.4); font-weight: 800;">🎯 BM Remaining: ${fmt(Math.max(0, Math.round(s.totalTarget * (pacePct / 100)) - s.totalCash))}</span>
+              <td style="text-align: left !important; font-size: 0.75rem; line-height: 1.35; color: #e2e8f0; padding: 8px 8px;">
+                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px; flex-wrap: wrap;">
+                  <span class="pill-badge pill-badge-cyan" style="font-size: 0.68rem; padding: 2px 6px; font-weight: 800;">⭐ Sector Synthesis</span>
+                  <span class="pill-badge" style="font-size: 0.68rem; padding: 2px 6px; background: rgba(244,63,94,0.18); color: #fda4af; border: 1px solid rgba(244,63,94,0.4); font-weight: 800;">🎯 BM Remaining: ${fmt(Math.max(0, Math.round(s.totalTarget * (pacePct / 100)) - s.totalCash))}</span>
                 </div>
-                <div>Official October cash target is <strong>${fmt(s.totalTarget)}</strong> (${s.totalContractsTarget || 252} orders). Current MTD net revenue stands at <strong>${fmt(s.totalCash)}</strong> (${fmtPct(s.achievement)}). <strong style="color: #f43f5e; font-weight: 800;">Cash remaining to achieve Day ${daysPassed} Sector BM (${pacePct}% = ${fmt(Math.round(s.totalTarget * (pacePct / 100)))}): ${fmt(Math.max(0, Math.round(s.totalTarget * (pacePct / 100)) - s.totalCash))} needed today.</strong> Total monthly deficit is ${fmt(s.totalGap)} requiring a run-rate of ${fmt(s.dailyNeeded)}/day over the remaining ${daysLeft} days.</div>
+                <div>Official October target is <strong>${fmt(s.totalTarget)}</strong> (${s.totalContractsTarget || 252} orders). Current MTD net revenue stands at <strong>${fmt(s.totalCash)}</strong> (${fmtPct(s.achievement)}). <strong style="color: #f43f5e; font-weight: 800;">Cash remaining to achieve Day ${daysPassed} Sector BM (${pacePct}% = ${fmt(Math.round(s.totalTarget * (pacePct / 100)))}): ${fmt(Math.max(0, Math.round(s.totalTarget * (pacePct / 100)) - s.totalCash))} needed today.</strong> Total monthly deficit is ${fmt(s.totalGap)} requiring a run-rate of ${fmt(s.dailyNeeded)}/day over the remaining ${daysLeft} days.</div>
               </td>
             </tr>
           </tfoot>
@@ -3587,6 +3587,8 @@ const MASTER_OPERATIONS_DATA = {
                         }
                     ]
 };
+
+
 
 
 
@@ -7884,6 +7886,9 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
 
 
 
