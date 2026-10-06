@@ -1,5 +1,5 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-mohamedha | Generated: 2026-10-06 09:31
+# Representative: EGSS-mohamedha | Generated: 2026-10-06 09:35
 
 === 1. SOP PENDING TASKS (49) ===
 Student_ID,Task_Name,Expiration_Time
@@ -53,8 +53,8 @@ Student_ID,Task_Name,Expiration_Time
 58522544,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 58525629,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING LEADS (68) ===
-Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
+=== 2. UNFIXED TEACHER BINDING (68) ===
+Student_ID,Pool_Cohort,Classes,Priority
 57842666,"M3+ Pool",0,"UNFIXED BINDING"
 58050575,"M3+ Pool",0,"UNFIXED BINDING"
 58159049,"M3+ Pool",0,"UNFIXED BINDING"
@@ -124,8 +124,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 64503001,"M0 Pool",0,"CRITICAL (0 Classes)"
 64504311,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (213) ===
-Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
+=== 3. CLASS CONSUMPTION RESCUE (213) ===
+Student_ID,Pool_Cohort,Classes,Action
 57842666,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58050575,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58348231,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -340,8 +340,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 63960732,"M1 Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 64072294,"M1 Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 
-=== 4. ENGLISH CLUB ACTIONABLE LEADS (86) ===
-Student_ID,Level,Completed_Classes,Booking_Status
+=== 4. ENGLISH CLUB LEADS (86) ===
+Student_ID,Level,Completed,Status
 63080032,"0",0,"Booking Required"
 63144961,"1",0,"Booking Required"
 63178391,"1",0,"Booking Required"
