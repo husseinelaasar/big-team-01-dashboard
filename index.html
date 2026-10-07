@@ -18,7 +18,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261007_131012">
+  <link rel="stylesheet" href="styles.css?v=20261007_131343">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -663,11 +663,149 @@
               <th style="min-width: 65px; padding: 6px 3px;">Goal Ach %</th>
               <th style="min-width: 70px; padding: 6px 3px;">Status</th>
               <th style="text-align: left !important; min-width: 200px; color: #38bdf8; font-weight: 700; padding: 6px 6px;">Actionable Recommendations</th>
+              <th style="min-width: 80px; padding: 6px 3px; text-align: center;">Data Sheet</th>
             </tr>
           </thead>
           <tbody id="masterUpgradeTableBody"></tbody>
           <tfoot id="masterUpgradeTableFoot"></tfoot>
         </table>
+      </div>
+
+      <!-- 6. Official Upgrade Base Data Sheets & Individual Member Download Hub -->
+      <div class="glass-panel-executive" id="upgradeBaseLeadsHub" style="margin-top: 32px; padding: 24px; border: 1px solid rgba(192, 132, 252, 0.3); background: rgba(15, 23, 42, 0.75);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <span style="font-size: 1.5rem;">📥</span>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin: 0; display: inline-flex; align-items: center; gap: 8px;">
+                October 2026 Upgrade Base Data Sheets &amp; Member Download Hub
+              </h3>
+              <span class="pill-badge pill-badge-purple" style="font-size: 0.75rem; font-weight: 700;">497 STUDENT ACCOUNTS</span>
+              <span class="pill-badge pill-badge-cyan" style="font-size: 0.75rem; font-weight: 700;">M1 &amp; M2 AUTHORITATIVE ALLOCATION</span>
+            </div>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin: 6px 0 0 0; line-height: 1.5;">
+              Authoritative student-level allocation for all 5 Small Teams and 21 Sales Specialists. Every team member can search, inspect, and download their personalized upgrade leads sheet directly.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <a href="leads/upgrade_base/M1_M2_Upgrade_Base_Master.csv" download="M1_M2_Upgrade_Base_Master.csv" class="pill-badge pill-badge-cyan" style="text-decoration: none; padding: 7px 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+              <span>📊</span> Download Sector Master (CSV)
+            </a>
+            <a href="attachments/M1 &amp; M2 Data Base ID.xlsx" download="M1 &amp; M2 Data Base ID.xlsx" class="pill-badge pill-badge-purple" style="text-decoration: none; padding: 7px 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+              <span>📗</span> Download Master Excel (.XLSX)
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Download Cards Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 22px;">
+          <!-- Card A: Select & Download My Personal Sheet -->
+          <div class="metric-tile-modern" style="border-left: 4px solid #c084fc; padding: 18px; background: rgba(30, 41, 59, 0.7);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <div style="font-weight: 800; color: #e9d5ff; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
+                <span>👤</span> Download My Individual Rep Sheet
+              </div>
+              <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">21 Active Reps</span>
+            </div>
+            <p style="font-size: 0.78rem; color: #cbd5e1; margin-bottom: 12px; line-height: 1.4;">
+              Select your name from the dropdown to instantly download your dedicated student base list with Student IDs and current M2 upgrade status.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <select id="memberUpgradeSelect" class="modern-select" style="flex: 1; min-width: 220px; background: #0f172a; border-color: rgba(192, 132, 252, 0.4); color: #fff;">
+                <option value="">-- Choose Your Name --</option>
+              </select>
+              <button type="button" id="btnDownloadMemberUpg" class="btn-primary" style="background: linear-gradient(135deg, #9333ea, #6366f1); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 0.82rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+                <span>⬇️</span> Download (CSV)
+              </button>
+            </div>
+          </div>
+
+          <!-- Card B: Small Teams Quick Downloads -->
+          <div class="metric-tile-modern" style="border-left: 4px solid #06b6d4; padding: 18px; background: rgba(30, 41, 59, 0.7);">
+            <div style="display: center; justify-content: space-between; align-items: center; margin-bottom: 10px; display: flex;">
+              <div style="font-weight: 800; color: #a5f3fc; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
+                <span>👥</span> Download Small Team Sheets
+              </div>
+              <span class="pill-badge pill-badge-cyan" style="font-size: 0.68rem;">5 Small Teams</span>
+            </div>
+            <p style="font-size: 0.78rem; color: #cbd5e1; margin-bottom: 12px; line-height: 1.4;">
+              Team Leaders and Managers can download consolidated student sheets for any small team:
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <a href="leads/upgrade_base/ME-EGSS01_Upgrade_Base.csv" download="ME-EGSS01_Upgrade_Base.csv" class="pill-badge" style="background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 01 (145 Leads)
+              </a>
+              <a href="leads/upgrade_base/ME-EGSS05_Upgrade_Base.csv" download="ME-EGSS05_Upgrade_Base.csv" class="pill-badge" style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 05 (113 Leads)
+              </a>
+              <a href="leads/upgrade_base/ME-EGSS10_Upgrade_Base.csv" download="ME-EGSS10_Upgrade_Base.csv" class="pill-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 10 (93 Leads)
+              </a>
+              <a href="leads/upgrade_base/ME-EGSS13_Upgrade_Base.csv" download="ME-EGSS13_Upgrade_Base.csv" class="pill-badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 13 (83 Leads)
+              </a>
+              <a href="leads/upgrade_base/ME-EGSS30_Upgrade_Base.csv" download="ME-EGSS30_Upgrade_Base.csv" class="pill-badge" style="background: rgba(244, 63, 94, 0.2); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 30 (63 Leads)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Data Sheet Table Viewer -->
+        <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
+          <!-- Controls Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;" id="upgTableFilterTabs">
+              <button type="button" class="pill-badge active" data-filter="ALL" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">All Leads (497)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS01" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 01 (145)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS05" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 05 (113)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS10" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 10 (93)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS13" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 13 (83)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS30" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 30 (63)</button>
+              <button type="button" class="pill-badge pill-badge-emerald" data-filter="UPGRADED" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">⭐ Upgraded (10)</button>
+              <button type="button" class="pill-badge pill-badge-amber" data-filter="PENDING" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">⏳ Pending (487)</button>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <input type="text" id="upgStudentSearchInput" class="modern-input" placeholder="🔍 Search Student ID, Rep, Team..." style="width: 250px; font-size: 0.8rem; padding: 6px 12px;">
+              <button type="button" id="btnExportFilteredUpg" class="pill-badge pill-badge-cyan" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem; border: none;">
+                📥 Export Filtered View (CSV)
+              </button>
+            </div>
+          </div>
+
+          <!-- Table Container -->
+          <div class="table-wrapper modern-table-card" style="max-height: 480px; overflow-y: auto;">
+            <table class="data-table" id="upgradeStudentsLiveTable" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th style="width: 35px; text-align: center;">#</th>
+                  <th style="min-width: 110px; text-align: left !important;">Student ID</th>
+                  <th style="min-width: 160px; text-align: left !important;">Sales Specialist (SS)</th>
+                  <th style="min-width: 120px; text-align: center;">Small Team</th>
+                  <th style="min-width: 130px; text-align: center;">M2 Upgrade Status</th>
+                  <th style="min-width: 110px; text-align: center;">Rep Leads Download</th>
+                </tr>
+              </thead>
+              <tbody id="upgradeStudentsLiveTableBody"></tbody>
+            </table>
+          </div>
+
+          <!-- Pagination Bar -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #94a3b8;">
+            <div id="upgTablePaginationInfo">Showing 1-25 of 497 student accounts</div>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <button type="button" id="btnUpgPrevPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">◀ Prev</button>
+              <span id="upgCurrentPageDisplay" style="color: #fff; font-weight: 700; font-family: var(--font-mono); margin: 0 4px;">1 / 20</span>
+              <button type="button" id="btnUpgNextPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">Next ▶</button>
+              <select id="upgPageSizeSelect" class="modern-select" style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">
+                <option value="25" selected>25 per page</option>
+                <option value="50">50 per page</option>
+                <option value="100">100 per page</option>
+                <option value="9999">Show All (497)</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1147,9 +1285,11 @@
 
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="assets/html2canvas.min.js" defer></script>
-  <script src="dashboard.js?v=20261007_131012" defer></script>
+  <script src="dashboard.js?v=20261007_131343" defer></script>
 </body>
 </html>
+
+
 
 
 

@@ -164,5 +164,45 @@ On the **Performance Comparison (TO vs YD)** page, Abdelrhman Shehata previously
 | **Offline Markdown** | [OCTOBER_2026_UPGRADE_CONVERSION_AND_COVER_REPORT.md](file:///d:/Lens/Dashboard/OCTOBER_2026_UPGRADE_CONVERSION_AND_COVER_REPORT.md) | **Section 3: Rep Roster Table** | Complete list of all 21 reps with Base Leads, Upgrades, Conv %, and Cover %. |
 
 ---
-*Verified and Synchronized for 51Talk Big Team 01 Operations — October 2026.*
+
+## 📥 7. October 7 Refresh & Individual Member Data Sheet Download Hub
+
+### A. Authoritative Upgrade Base Ingestion & Daily Milestone (Day 7 / Oct 7)
+* **Authoritative Data Source**: `C:\Users\husse\Desktop\Upgrade Base OCt\M1 & M2 Data Base ID.xlsx`
+* **Total Assigned Student Accounts**: **497 Accounts** across all 21 Sales Specialists.
+* **Actual M2 Upgrades Achieved**: **10 Upgrades** (MTD Day 7) — **+7 new upgrades closed today!**
+* **Macro Conversion Rate**: **`2.01%`** ($\frac{10}{497}$) — Sector velocity is surging toward the 20% milestone (100 upgrades required; 90 remaining).
+* **Upgrades Leaderboard (Day 7)**:
+  1. `EGSS-abdelrhmanshehata` (ME-EGSS10): **3 Upgrades** (27 Base Leads) $\rightarrow$ **11.1% Conversion Rate** (▲ +7.4% vs YD!)
+  2. `EGSS-mahmoud04` (ME-EGSS01): **2 Upgrades** (31 Base Leads) $\rightarrow$ **6.5% Conversion Rate**
+  3. `EGSS-khaledgonam` (ME-EGSS05): **1 Upgrade** (13 Base Leads) $\rightarrow$ **7.7% Conversion Rate** (▲ +7.7% vs YD!)
+  4. `EGSS-alihesham01` (ME-EGSS30): **1 Upgrade** (18 Base Leads) $\rightarrow$ **5.6% Conversion Rate** (▲ +5.6% vs YD!)
+  5. `EGSS-titooooo` (ME-EGSS30): **1 Upgrade** (19 Base Leads) $\rightarrow$ **5.3% Conversion Rate** (▲ +5.3% vs YD!)
+  6. `EGSS-mohamedha` (ME-EGSS13): **1 Upgrade** (20 Base Leads) $\rightarrow$ **5.0% Conversion Rate** (▲ +5.0% vs YD!)
+  7. `EGSS-adhmgadallah` (ME-EGSS30): **1 Upgrade** (26 Base Leads) $\rightarrow$ **3.8% Conversion Rate** (▲ +3.8% vs YD!)
+
+---
+
+### B. New Dedicated Component on Tab 5 (`Early Upgrade Hub (20%)`)
+Underneath the Master Upgrade Table, a dedicated **Upgrade Base Data Sheets & Member Download Hub** is now live with:
+1. **One-Click Individual Rep Download Box**:
+   - Every Sales Specialist can choose their name from the dropdown:
+     `👤 Select Representative:` $\rightarrow$ Click `⬇️ Download My Data (CSV)` to immediately download their dedicated list with Student IDs and upgrade flags.
+2. **Small Teams & Sector Consolidated Sheets**:
+   - `ME-EGSS01_Upgrade_Base.csv` (145 Leads)
+   - `ME-EGSS05_Upgrade_Base.csv` (113 Leads)
+   - `ME-EGSS10_Upgrade_Base.csv` (93 Leads)
+   - `ME-EGSS13_Upgrade_Base.csv` (83 Leads)
+   - `ME-EGSS30_Upgrade_Base.csv` (63 Leads)
+   - `M1_M2_Upgrade_Base_Master.csv` (497 Leads - Consolidated Master CSV)
+   - `M1 & M2 Data Base ID.xlsx` (Full Master Multi-Sheet Workbook in attachments)
+3. **Interactive Live Data Sheet Table**:
+   - Searchable in real time by Student ID, SS Name, Team, or Status.
+   - Filterable by team tabs or by status (`⭐ Upgraded (10)` vs `⏳ Pending (487)`).
+   - Paginated display with instant `📥 Export Filtered View (CSV)` button.
+4. **Master Table Inline Downloads**:
+   - Column `Data Sheet` added to `#masterUpgradeTable` with direct `📥 Leads` button for every rep.
+
+---
+*Verified and Synchronized for 51Talk Big Team 01 Operations — October 7, 2026.*
 
