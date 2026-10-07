@@ -185,6 +185,15 @@ Located in `leads/upgrade_base/` and accessible directly via the live dashboard 
 - `ME-EGSS30_Upgrade_Base.csv`: Team 30 (63 leads).
 - `EGSS-*_Upgrade_Base.csv`: 21 individual Sales Specialist student sheets.
 
+### 🎯 Uncovered Leads Hub (Student_Detail26 Col H = 0 - 5,196 Accounts)
+Located in `leads/uncovered_leads/` and accessible directly via the live dashboard [Uncovered Leads Hub (#uncovered)](https://husseinelaasar.github.io/big-team-01-dashboard/#uncovered):
+- **Filtering Logic**: Strictly excludes covered accounts (`Col H == 1`) and isolates all `5,196` uncovered students.
+- **Priority Sorting**: Sorted by **past-months attended classes descending** (high-value retention priority) and **last connection time ascending** (longest uncontacted / oldest first).
+- **Cross-Source Validation**: Cross-referenced with `Student_Detail13` (class units ended), `Student_Detail32` (1v1 payment days), and live CRM / SOP contact logs.
+- `Master_Uncovered_Leads.csv`: All 5,196 uncovered accounts across the sector.
+- `ME-EGSS*_Uncovered_Leads.csv`: 5 Small Team consolidated uncovered sheets.
+- `EGSS-*_Uncovered_Leads.csv`: 21 Individual Sales Specialist action lists.
+
 ### Individual Representative Leads (.CSV)
 All 21 active sales specialists have individual action lists formatted with student contact info, consumption buckets, teacher binding flags, and SOP round urgency.
 
@@ -206,10 +215,15 @@ d:/Lens/Dashboard/
 │   ├── BIG_TEAM_01_Team_Leads.csv   # Combined Sector leads (5,050 accounts)
 │   ├── ME-EGSS*_Team_Leads.csv      # 5 Small Team leads files
 │   ├── EGSS-*.csv                   # 21 Individual Sales Rep lead files
-│   └── upgrade_base/                # Official October Upgrade Base CSV Hub
-│       ├── M1_M2_Upgrade_Base_Master.csv
-│       ├── ME-EGSS*_Upgrade_Base.csv
-│       └── EGSS-*_Upgrade_Base.csv
+│   ├── upgrade_base/                # Official October Upgrade Base CSV Hub
+│   │   ├── M1_M2_Upgrade_Base_Master.csv
+│   │   ├── ME-EGSS*_Upgrade_Base.csv
+│   │   └── EGSS-*_Upgrade_Base.csv
+│   └── uncovered_leads/             # Official October Uncovered Leads CSV Hub (5,196 Leads)
+│       ├── Master_Uncovered_Leads.csv
+│       ├── ME-EGSS*_Uncovered_Leads.csv
+│       └── EGSS-*_Uncovered_Leads.csv
+├── UNCOVERED_LEADS_EXECUTIVE_REPORT.md # Executive guide & priority breakdown for uncovered leads
 ├── OCTOBER_BM_PACE.md               # 31-day October BM pacing curve
 ├── OCTOBER_2026_TARGETS_AND_QUOTAS.md # Target breakdown, BM pacing & quota roster
 ├── OCTOBER_2026_UPGRADE_CONVERSION_AND_COVER_REPORT.md # Upgrade Hub & Leads guide
