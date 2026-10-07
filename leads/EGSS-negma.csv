@@ -1,5 +1,5 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-negma | Generated: 2026-10-07 12:22
+# Representative: EGSS-negma | Generated: 2026-10-07 12:24
 
 === 1. SOP PENDING TASKS (65) ===
 Student_ID,Task_Name,Expiration_Time
@@ -69,14 +69,14 @@ Student_ID,Task_Name,Expiration_Time
 63998840,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 64095288,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING LEADS (0) ===
-Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
+=== 2. UNFIXED TEACHER BINDING (0) ===
+Student_ID,Pool_Cohort,Classes,Priority
 
-=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (0) ===
-Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
+=== 3. CLASS CONSUMPTION RESCUE (0) ===
+Student_ID,Pool_Cohort,Classes,Action
 
-=== 4. ENGLISH CLUB ACTIONABLE LEADS (113) ===
-Student_ID,Level,Completed_Classes,Booking_Status
+=== 4. ENGLISH CLUB LEADS (113) ===
+Student_ID,Level,Completed,Status
 63087526,"1",0,"Booking Required"
 62908857,"1",0,"Booking Required"
 58644253,"1",0,"Booking Required"
