@@ -204,5 +204,24 @@ Underneath the Master Upgrade Table, a dedicated **Upgrade Base Data Sheets & Me
    - Column `Data Sheet` added to `#masterUpgradeTable` with direct `📥 Leads` button for every rep.
 
 ---
+
+### C. Live Production Links & Deep-Linking Navigation
+The dashboard includes native URL hash navigation for direct linking to any operational module:
+
+* **Direct Deep-Link to Early Upgrade Hub (Tab 5)**:  
+  👉 [https://husseinelaasar.github.io/big-team-01-dashboard/#upgrade](https://husseinelaasar.github.io/big-team-01-dashboard/#upgrade)
+* **Master Dashboard Production URL**:  
+  👉 [https://husseinelaasar.github.io/big-team-01-dashboard/](https://husseinelaasar.github.io/big-team-01-dashboard/)
+
+#### Production Direct Download Links for Upgrade Base Leads:
+* **Sector Master (All 497 Accounts - CSV)**: [M1_M2_Upgrade_Base_Master.csv](https://husseinelaasar.github.io/big-team-01-dashboard/leads/upgrade_base/M1_M2_Upgrade_Base_Master.csv)
+* **Master Workbook (.XLSX)**: [M1 & M2 Data Base ID.xlsx](https://husseinelaasar.github.io/big-team-01-dashboard/attachments/M1%20&%20M2%20Data%20Base%20ID.xlsx)
+* **Team 01 (Ashraqatal - 145 Leads)**: [ME-EGSS01_Upgrade_Base.csv](https://husseinelaasar.github.io/big-team-01-dashboard/leads/upgrade_base/ME-EGSS01_Upgrade_Base.csv)
+* **Team 05 (Ibrahim - 113 Leads)**: [ME-EGSS05_Upgrade_Base.csv](https://husseinelaasar.github.io/big-team-01-dashboard/leads/upgrade_base/ME-EGSS05_Upgrade_Base.csv)
+* **Team 10 (Abdelrhman Shehata - 93 Leads)**: [ME-EGSS10_Upgrade_Base.csv](https://husseinelaasar.github.io/big-team-01-dashboard/leads/upgrade_base/ME-EGSS10_Upgrade_Base.csv)
+* **Team 13 (Mohamedha - 83 Leads)**: [ME-EGSS13_Upgrade_Base.csv](https://husseinelaasar.github.io/big-team-01-dashboard/leads/upgrade_base/ME-EGSS13_Upgrade_Base.csv)
+* **Team 30 (Adhm GadAllah - 63 Leads)**: [ME-EGSS30_Upgrade_Base.csv](https://husseinelaasar.github.io/big-team-01-dashboard/leads/upgrade_base/ME-EGSS30_Upgrade_Base.csv)
+
+---
 *Verified and Synchronized for 51Talk Big Team 01 Operations — October 7, 2026.*
 

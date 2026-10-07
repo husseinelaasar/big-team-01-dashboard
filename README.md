@@ -175,6 +175,16 @@ Managers and team leaders can download one consolidated spreadsheet containing a
 - `ME-EGSS13_Team_Leads.csv`: Team 13 (Mohamedha - 4 reps).
 - `ME-EGSS30_Team_Leads.csv`: Team 30 (Adhm GadAllah - 3 reps).
 
+### 🚀 Upgrade Base Leads (M1 & M2 Campaign - 497 Accounts)
+Located in `leads/upgrade_base/` and accessible directly via the live dashboard [Early Upgrade Hub (#upgrade)](https://husseinelaasar.github.io/big-team-01-dashboard/#upgrade):
+- `M1_M2_Upgrade_Base_Master.csv`: All 497 allocated student accounts with status.
+- `ME-EGSS01_Upgrade_Base.csv`: Team 01 (145 leads).
+- `ME-EGSS05_Upgrade_Base.csv`: Team 05 (113 leads).
+- `ME-EGSS10_Upgrade_Base.csv`: Team 10 (93 leads).
+- `ME-EGSS13_Upgrade_Base.csv`: Team 13 (83 leads).
+- `ME-EGSS30_Upgrade_Base.csv`: Team 30 (63 leads).
+- `EGSS-*_Upgrade_Base.csv`: 21 individual Sales Specialist student sheets.
+
 ### Individual Representative Leads (.CSV)
 All 21 active sales specialists have individual action lists formatted with student contact info, consumption buckets, teacher binding flags, and SOP round urgency.
 
@@ -184,22 +194,25 @@ All 21 active sales specialists have individual action lists formatted with stud
 
 ```
 d:/Lens/Dashboard/
-├── index.html                       # Master Dashboard single-page application
+├── index.html                       # Master Dashboard single-page application (Hash routing enabled)
 ├── dashboard.js                     # Core application engine, data models & renderers
 ├── styles.css                       # Responsive theme, glassmorphism & unified color system
 ├── attachments/
 │   ├── All in one Master.xlsx       # Official multi-sheet master workbook (418 KB)
+│   ├── M1 & M2 Data Base ID.xlsx    # Authoritative Upgrade Base master Excel
 │   ├── Class_Consumption_Leads_Report.xlsx
 │   └── Unfixed_Teacher_Leads_Report.xlsx
 ├── leads/                           # Operational CSV lead files
-│   ├── BIG_TEAM_01_Team_Leads.csv   # Combined Sector leads
-│   ├── ME-EGSS01_Team_Leads.csv     # Small Team 01 leads
-│   ├── ME-EGSS05_Team_Leads.csv     # Small Team 05 leads
-│   ├── ME-EGSS10_Team_Leads.csv     # Small Team 10 leads
-│   ├── ME-EGSS13_Team_Leads.csv     # Small Team 13 leads (Mohamedha)
-│   ├── ME-EGSS30_Team_Leads.csv     # Small Team 30 leads
-│   └── EGSS-*.csv                   # 21 Individual Sales Rep lead files
+│   ├── BIG_TEAM_01_Team_Leads.csv   # Combined Sector leads (5,050 accounts)
+│   ├── ME-EGSS*_Team_Leads.csv      # 5 Small Team leads files
+│   ├── EGSS-*.csv                   # 21 Individual Sales Rep lead files
+│   └── upgrade_base/                # Official October Upgrade Base CSV Hub
+│       ├── M1_M2_Upgrade_Base_Master.csv
+│       ├── ME-EGSS*_Upgrade_Base.csv
+│       └── EGSS-*_Upgrade_Base.csv
 ├── OCTOBER_BM_PACE.md               # 31-day October BM pacing curve
+├── OCTOBER_2026_TARGETS_AND_QUOTAS.md # Target breakdown, BM pacing & quota roster
+├── OCTOBER_2026_UPGRADE_CONVERSION_AND_COVER_REPORT.md # Upgrade Hub & Leads guide
 └── README.md                        # Master Executive Operations & Architecture Manual
 ```
 
