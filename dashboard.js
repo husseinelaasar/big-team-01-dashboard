@@ -223,16 +223,16 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 0% vs Day 7 target 23%. Gap: 23pp. Need $-1062/day to close.', time: '20261007_120445' },
-  { type: 'critical', icon: '🚨', title: '5 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-negma, EGSS-ehabzaky01, EGSS-ahmedshoukry, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261007_120445' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ahmedshoukry (0%), EGSS-ehabzaky01 (0%), EGSS-negma (0%), EGSS-hayamhassan (0%), EGSS-ashraqatal (0%). Schedule targeted coaching sessions today.', time: '20261007_120445' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-omarmoneb (14.6%), EGSS-mahmoud04 (23.1%), EGSS-mohamedha (33.2%). Recognize in team channel!', time: '20261007_120445' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1764/day', detail: 'Currently at 13.2% (6460/48800). Gap: $42340.', time: '20261007_120445' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1228/day', detail: 'Currently at 11% (3640/33100). Gap: $29460.', time: '20261007_120445' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $3384/day', detail: 'Currently at 7.7% (6780/88000). Gap: $81220.', time: '20261007_120445' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $3512/day', detail: 'Currently at 7.2% (6515/90800). Gap: $84285.', time: '20261007_120445' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1798/day', detail: 'Currently at 4.6% (2092/45250). Gap: $43158.', time: '20261007_120445' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 97 more renewals', detail: 'Current: 3/497 (0.6%). 20% target = 100. Focus on high-base reps.', time: '20261007_120445' },
+  { type: 'success', icon: '🟢', title: 'Sector AHEAD of Pace', detail: 'Ach 37.94% exceeds Day 7 target 23% by 14.9pp. Maintain momentum!', time: '20261007_121024' },
+  { type: 'critical', icon: '🚨', title: '21 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-nohayoussry, EGSS-ashraqatal, EGSS-negma, EGSS-juliamonir01, EGSS-mahmoud04, EGSS-abdelrahmannasef, EGSS-ehabzaky01, EGSS-ibrahimismaiel, EGSS-khaledgonam, EGSS-omarmoneb, EGSS-samira01, EGSS-abdelrhmanshehata, EGSS-ahmedshoukry, EGSS-mahmoudkhamis, EGSS-amrsafwat, EGSS-hayamhassan, EGSS-marwaahmed, EGSS-mohamedha, EGSS-adhmgadallah, EGSS-alihesham01, EGSS-titooooo. Immediate 1:1 coaching required.', time: '20261007_121024' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-amrsafwat (0%), EGSS-hayamhassan (0%), EGSS-mahmoudkhamis (0%), EGSS-abdelrhmanshehata (0%), EGSS-ahmedshoukry (0%). Schedule targeted coaching sessions today.', time: '20261007_121024' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-ibrahimismaiel (0%), EGSS-abdelrahmannasef (0%), EGSS-ehabzaky01 (0%). Recognize in team channel!', time: '20261007_121024' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1379/day', detail: 'Currently at 0% (0/33100). Gap: $33100.', time: '20261007_121024' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $3667/day', detail: 'Currently at 0% (0/88000). Gap: $88000.', time: '20261007_121024' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $2033/day', detail: 'Currently at 0% (0/48800). Gap: $48800.', time: '20261007_121024' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1885/day', detail: 'Currently at 0% (0/45250). Gap: $45250.', time: '20261007_121024' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $3783/day', detail: 'Currently at 0% (0/90800). Gap: $90800.', time: '20261007_121024' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 100 more renewals', detail: 'Current: 0/497 (0%). 20% target = 100. Focus on high-base reps.', time: '20261007_121024' },
 ];
 
 // =========================================================================
@@ -414,10 +414,10 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official October 2026 Cash Targets Plan)
-  const totalCash = 25487; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
-  const totalTarget = 305950; // Official October Cash Target Plan ($305,950 across 21 reps)
+  const totalCash = 85592; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
+  const totalTarget = 225600; // from æŒ‡æ ‡çœ‹æ¿ Col F
   const sectorAchPct = Math.round((totalCash / totalTarget) * 1000) / 10; // 5.3%
-  const totalContracts = 23; // from æŒ‡æ ‡çœ‹æ¿ Col D
+  const totalContracts = 104; // from æŒ‡æ ‡çœ‹æ¿ Col D
   const totalContractsTarget = 252; // Official October Contracts Target Plan (252 contracts)
   const totalUpgradeM2 = individuals.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0) || 3;
   const totalNormalRenewals = Math.max(0, totalContracts - totalUpgradeM2); // 18 from Student_Detail32
@@ -2431,7 +2431,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS05",
                             "total":  219,
                             "end_classes":  382,
-                            "avg_classes":  0,
+                            "avg_classes":  1.7442922374429224,
                             "c0":  46,
                             "c1_3":  158,
                             "c4_7":  15,
@@ -2450,7 +2450,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS05",
                             "total":  238,
                             "end_classes":  371,
-                            "avg_classes":  0,
+                            "avg_classes":  1.5588235294117647,
                             "c0":  57,
                             "c1_3":  169,
                             "c4_7":  10,
@@ -2469,7 +2469,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS05",
                             "total":  275,
                             "end_classes":  345,
-                            "avg_classes":  0,
+                            "avg_classes":  1.2545454545454546,
                             "c0":  90,
                             "c1_3":  182,
                             "c4_7":  3,
@@ -2488,7 +2488,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS05",
                             "total":  265,
                             "end_classes":  351,
-                            "avg_classes":  0,
+                            "avg_classes":  1.3245283018867924,
                             "c0":  81,
                             "c1_3":  174,
                             "c4_7":  10,
@@ -2507,7 +2507,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS05",
                             "total":  219,
                             "end_classes":  300,
-                            "avg_classes":  0,
+                            "avg_classes":  1.36986301369863,
                             "c0":  61,
                             "c1_3":  155,
                             "c4_7":  3,
@@ -2526,7 +2526,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS05",
                             "total":  244,
                             "end_classes":  359,
-                            "avg_classes":  0,
+                            "avg_classes":  1.471311475409836,
                             "c0":  61,
                             "c1_3":  172,
                             "c4_7":  11,
@@ -2545,7 +2545,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS01",
                             "total":  253,
                             "end_classes":  396,
-                            "avg_classes":  0,
+                            "avg_classes":  1.5652173913043479,
                             "c0":  57,
                             "c1_3":  186,
                             "c4_7":  10,
@@ -2564,7 +2564,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS01",
                             "total":  264,
                             "end_classes":  415,
-                            "avg_classes":  0,
+                            "avg_classes":  1.571969696969697,
                             "c0":  54,
                             "c1_3":  199,
                             "c4_7":  11,
@@ -2583,7 +2583,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS01",
                             "total":  294,
                             "end_classes":  425,
-                            "avg_classes":  0,
+                            "avg_classes":  1.4455782312925169,
                             "c0":  79,
                             "c1_3":  204,
                             "c4_7":  11,
@@ -2602,7 +2602,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS01",
                             "total":  252,
                             "end_classes":  431,
-                            "avg_classes":  0,
+                            "avg_classes":  1.7103174603174602,
                             "c0":  60,
                             "c1_3":  179,
                             "c4_7":  12,
@@ -2621,7 +2621,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS01",
                             "total":  253,
                             "end_classes":  390,
-                            "avg_classes":  0,
+                            "avg_classes":  1.541501976284585,
                             "c0":  57,
                             "c1_3":  188,
                             "c4_7":  8,
@@ -2640,7 +2640,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS13",
                             "total":  268,
                             "end_classes":  410,
-                            "avg_classes":  0,
+                            "avg_classes":  1.5298507462686568,
                             "c0":  65,
                             "c1_3":  199,
                             "c4_7":  3,
@@ -2659,7 +2659,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS13",
                             "total":  149,
                             "end_classes":  268,
-                            "avg_classes":  0,
+                            "avg_classes":  1.7986577181208054,
                             "c0":  21,
                             "c1_3":  119,
                             "c4_7":  9,
@@ -2678,7 +2678,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS13",
                             "total":  251,
                             "end_classes":  385,
-                            "avg_classes":  0,
+                            "avg_classes":  1.5338645418326693,
                             "c0":  63,
                             "c1_3":  177,
                             "c4_7":  10,
@@ -2697,7 +2697,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS13",
                             "total":  213,
                             "end_classes":  302,
-                            "avg_classes":  0,
+                            "avg_classes":  1.4178403755868545,
                             "c0":  60,
                             "c1_3":  145,
                             "c4_7":  8,
@@ -2716,7 +2716,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS30",
                             "total":  249,
                             "end_classes":  403,
-                            "avg_classes":  0,
+                            "avg_classes":  1.6184738955823292,
                             "c0":  56,
                             "c1_3":  174,
                             "c4_7":  19,
@@ -2735,7 +2735,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS30",
                             "total":  143,
                             "end_classes":  238,
-                            "avg_classes":  0,
+                            "avg_classes":  1.6643356643356644,
                             "c0":  31,
                             "c1_3":  102,
                             "c4_7":  10,
@@ -2754,7 +2754,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS30",
                             "total":  248,
                             "end_classes":  390,
-                            "avg_classes":  0,
+                            "avg_classes":  1.5725806451612903,
                             "c0":  55,
                             "c1_3":  183,
                             "c4_7":  10,
@@ -2773,7 +2773,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS10",
                             "total":  192,
                             "end_classes":  331,
-                            "avg_classes":  0,
+                            "avg_classes":  1.7239583333333333,
                             "c0":  46,
                             "c1_3":  130,
                             "c4_7":  16,
@@ -2792,7 +2792,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS10",
                             "total":  281,
                             "end_classes":  472,
-                            "avg_classes":  0,
+                            "avg_classes":  1.6797153024911031,
                             "c0":  50,
                             "c1_3":  218,
                             "c4_7":  13,
@@ -2811,7 +2811,7 @@ const MASTER_OPERATIONS_DATA = {
                             "team":  "ME-EGSS10",
                             "total":  280,
                             "end_classes":  444,
-                            "avg_classes":  0,
+                            "avg_classes":  1.5857142857142856,
                             "c0":  59,
                             "c1_3":  215,
                             "c4_7":  6,
@@ -3394,8 +3394,8 @@ const MASTER_OPERATIONS_DATA = {
                             "book":  13,
                             "att":  6,
                             "pct":  "5.5%",
-                            "goal":  50,
-                            "need":  44
+                            "goal":  49,
+                            "need":  43
                         },
                         {
                             "name":  "EGSS-Ibrahimismaiel",
@@ -3404,8 +3404,8 @@ const MASTER_OPERATIONS_DATA = {
                             "book":  19,
                             "att":  7,
                             "pct":  "6.2%",
-                            "goal":  51,
-                            "need":  44
+                            "goal":  50,
+                            "need":  43
                         },
                         {
                             "name":  "EGSS-KhaledGonam",
@@ -3414,8 +3414,8 @@ const MASTER_OPERATIONS_DATA = {
                             "book":  3,
                             "att":  2,
                             "pct":  "2.2%",
-                            "goal":  42,
-                            "need":  40
+                            "goal":  41,
+                            "need":  39
                         },
                         {
                             "name":  "EGSS-OmarMoneb",
@@ -3454,8 +3454,8 @@ const MASTER_OPERATIONS_DATA = {
                             "book":  0,
                             "att":  0,
                             "pct":  "0%",
-                            "goal":  40,
-                            "need":  40
+                            "goal":  39,
+                            "need":  39
                         },
                         {
                             "name":  "EGSS-mahmoud04",
@@ -3544,8 +3544,8 @@ const MASTER_OPERATIONS_DATA = {
                             "book":  12,
                             "att":  7,
                             "pct":  "14.9%",
-                            "goal":  22,
-                            "need":  15
+                            "goal":  21,
+                            "need":  14
                         },
                         {
                             "name":  "EGSS-titooooo",
@@ -3554,8 +3554,8 @@ const MASTER_OPERATIONS_DATA = {
                             "book":  4,
                             "att":  2,
                             "pct":  "1.8%",
-                            "goal":  50,
-                            "need":  48
+                            "goal":  49,
+                            "need":  47
                         },
                         {
                             "name":  "EGSS-abdelrhmanshehata",
@@ -3584,11 +3584,13 @@ const MASTER_OPERATIONS_DATA = {
                             "book":  13,
                             "att":  2,
                             "pct":  "1.6%",
-                            "goal":  56,
-                            "need":  54
+                            "goal":  55,
+                            "need":  53
                         }
                     ]
 };
+
+
 
 
 
@@ -7617,7 +7619,7 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-10-06 18:20:34', name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-09-16 21:10:57', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
@@ -7910,6 +7912,9 @@ function exportIndividualTableToImage() {
 
   setTimeout(doCapture, 120);
 }
+
+
+
 
 
 
