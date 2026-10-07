@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -11511,6 +11511,11 @@ function switchTab(tabKey) {
   if (tabKey === 'comparison' && typeof renderComparisonTab === 'function') {
     renderComparisonTab();
   }
+  try {
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', '#' + tabKey);
+    }
+  } catch (e) {}
 }
 
 function setupEvents(model) {
@@ -11520,6 +11525,17 @@ function setupEvents(model) {
       switchTab(btn.dataset.tab);
     });
   });
+
+  // URL Hash routing on load & hashchange
+  const handleUrlHash = () => {
+    if (window.location.hash) {
+      const rawHash = window.location.hash.replace('#', '').toLowerCase();
+      const cleanTab = rawHash.replace('tab-', '');
+      if (typeof switchTab === 'function') switchTab(cleanTab);
+    }
+  };
+  setTimeout(handleUrlHash, 80);
+  window.addEventListener('hashchange', handleUrlHash);
 
   // Filter & Sort
   const teamFilter = document.getElementById('teamFilter');
