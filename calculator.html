@@ -1924,50 +1924,251 @@
       padding-top: 10px;
     }
 
-    .modal-action-buttons {
+    .modal-action-buttons-grid {
       display: flex;
+      flex-direction: column;
       gap: 10px;
       width: 100%;
-      max-width: 390px;
+      max-width: 400px;
+      margin-top: 14px;
     }
 
-    .btn-download-png {
-      flex: 1;
-      background: #10b981;
+    .btn-action-primary {
+      width: 100%;
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
       color: #fff;
-      border: none;
-      padding: 12px;
-      border-radius: 12px;
-      font-weight: 800;
-      font-size: 13.5px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 14px;
+      padding: 12px 18px;
       cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: 0.2s;
+      gap: 14px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+      transition: all 0.2s ease;
+      text-align: right;
     }
-    .btn-download-png:hover {
-      background: #059669;
+    html[dir="ltr"] .btn-action-primary {
+      text-align: left;
+    }
+    .btn-action-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(37, 211, 102, 0.5);
+      background: linear-gradient(135deg, #2ae06d 0%, #169b8c 100%);
     }
 
-    .btn-send-whatsapp {
+    .btn-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .btn-icon-wrap .sub-icon {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      font-size: 11px;
+      background: #f59e0b;
+      color: #0f172a;
+      border-radius: 50%;
+      padding: 2px;
+    }
+
+    .btn-text-wrap {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .btn-main-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .btn-sub-hint {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 2px;
+    }
+
+    .btn-sub-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      width: 100%;
+    }
+    @media (max-width: 600px) {
+      .btn-sub-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .btn-action-sub {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 11px;
+      padding: 10px 8px;
+      color: #e2e8f0;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      text-align: center;
+      font-size: 11.5px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    .btn-action-sub:hover {
+      transform: translateY(-2px);
+    }
+    .btn-action-sub i {
+      font-size: 16px;
+    }
+
+    .btn-action-sub.wa-img-btn {
+      border-color: rgba(14, 165, 233, 0.45);
+      color: #38bdf8;
+      background: rgba(14, 165, 233, 0.08);
+    }
+    .btn-action-sub.wa-img-btn:hover {
+      background: rgba(14, 165, 233, 0.2);
+      border-color: #38bdf8;
+      box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
+    }
+
+    .btn-action-sub.wa-text-btn {
+      border-color: rgba(37, 211, 102, 0.45);
+      color: #4ade80;
+      background: rgba(37, 211, 102, 0.08);
+    }
+    .btn-action-sub.wa-text-btn:hover {
+      background: rgba(37, 211, 102, 0.2);
+      border-color: #4ade80;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-action-sub.download-btn {
+      border-color: rgba(245, 158, 11, 0.45);
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.08);
+    }
+    .btn-action-sub.download-btn:hover {
+      background: rgba(245, 158, 11, 0.2);
+      border-color: #fbbf24;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+    }
+
+    /* WhatsApp Guidance Overlay Popup */
+    .wa-instr-backdrop {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(6px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .wa-instr-card {
+      background: #0f172a;
+      border: 1.5px solid #25d366;
+      border-radius: 18px;
+      max-width: 440px;
+      width: 100%;
+      padding: 22px;
+      box-shadow: 0 10px 40px rgba(37, 211, 102, 0.35);
+      animation: popIn 0.25s ease-out;
+    }
+    .wa-instr-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .wa-instr-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       background: #25d366;
       color: #fff;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 800;
-      font-size: 13.5px;
-      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      transition: 0.2s;
+      font-size: 22px;
+      flex-shrink: 0;
     }
-    .btn-send-whatsapp:hover {
-      background: #1da851;
+    .wa-instr-header h4 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      flex: 1;
+    }
+    .wa-instr-close {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .wa-instr-close:hover { color: #fff; }
+    .wa-instr-body {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .wa-instr-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      color: #e2e8f0;
+      line-height: 1.5;
+    }
+    .wa-instr-step .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(37, 211, 102, 0.2);
+      border: 1px solid #25d366;
+      color: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .wa-instr-confirm-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 11px;
+      font-weight: 800;
+      font-size: 13.5px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    }
+    .wa-instr-confirm-btn:hover {
+      background: #2ae06d;
     }
 
     /* Floating Toast notification */
@@ -2223,9 +2424,15 @@
           </div>
         </div>
 
-        <div class="input-group">
-          <label data-i18n="modalClientLabel">Parent / Client Name</label>
-          <input type="text" id="modalClientName" value="Dear Parent" oninput="updateLivePreview()">
+        <div class="input-row">
+          <div class="input-group">
+            <label data-i18n="modalClientLabel">Parent / Client Name</label>
+            <input type="text" id="modalClientName" value="Dear Parent" oninput="updateLivePreview()">
+          </div>
+          <div class="input-group">
+            <label><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> <span data-i18n="modalPhoneLabel">Client WhatsApp Phone</span></label>
+            <input type="tel" id="modalClientPhone" placeholder="9665xxxxxxxx / 05xxxxxxxx">
+          </div>
         </div>
 
         <div class="input-row">
@@ -2329,16 +2536,64 @@
           </div>
         </div>
 
-        <div class="modal-action-buttons">
-          <button class="btn-download-png" onclick="downloadCardPNG()">
-            <i class="fa-solid fa-download"></i> <span data-i18n="btnDownloadCard">Download Card (PNG)</span>
+        <div class="modal-action-buttons-grid">
+          <!-- Option 1: Send BOTH Offer Pitch + Card Image Together -->
+          <button class="btn-action-primary" onclick="shareBothTextAndImageWhatsApp()">
+            <div class="btn-icon-wrap">
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-solid fa-image sub-icon"></i>
+            </div>
+            <div class="btn-text-wrap">
+              <span class="btn-main-title" data-i18n="btnSendBoth">إرسال العرض + صورة الكارت معاً</span>
+              <span class="btn-sub-hint" data-i18n="btnSendBothSub">نص العرض المنسق وتحته صورة الكارت ⚡</span>
+            </div>
           </button>
-          <button class="btn-send-whatsapp" onclick="shareWhatsAppPitch()">
-            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btnWhatsAppPitch">WhatsApp Pitch</span>
-          </button>
+
+          <!-- Sub Row: 3 Quick Action Options -->
+          <div class="btn-sub-row">
+            <!-- Option 2: Send Card Image Only to WhatsApp -->
+            <button class="btn-action-sub wa-img-btn" onclick="shareCardImageWhatsApp()">
+              <i class="fa-solid fa-image"></i>
+              <span data-i18n="btnSendImgOnly">صورة الكارت فقط</span>
+            </button>
+
+            <!-- Option 3: Send Written Text Pitch Only -->
+            <button class="btn-action-sub wa-text-btn" onclick="shareWhatsAppPitch()">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span data-i18n="btnSendTextOnly">نص العرض فقط</span>
+            </button>
+
+            <!-- Option 4: Download Card PNG High-Res -->
+            <button class="btn-action-sub download-btn" onclick="downloadCardPNG()">
+              <i class="fa-solid fa-download"></i>
+              <span data-i18n="btnDownloadCard">تحميل PNG (3X)</span>
+            </button>
+          </div>
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- WhatsApp Guidance Overlay Popup -->
+  <div id="waInstructionModal" class="wa-instr-backdrop" style="display: none;">
+    <div class="wa-instr-card">
+      <div class="wa-instr-header">
+        <div class="wa-instr-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <h4 id="waInstrTitle">جاهز للإرسال على الواتساب!</h4>
+        <button class="wa-instr-close" onclick="closeWaInstruction()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="wa-instr-body">
+        <div class="wa-instr-step">
+          <span class="step-num">1</span>
+          <span id="waInstrStep1">تم فتح محادثة الواتساب ومرفق بها نص العرض كاملاً.</span>
+        </div>
+        <div class="wa-instr-step">
+          <span class="step-num">2</span>
+          <span id="waInstrStep2">تم نسخ صورة الكارت إلى الحافظة تلقائياً! اضغط (Ctrl + V) داخل المحادثة للصق الصورة فوراً تحت العرض.</span>
+        </div>
+      </div>
+      <button class="wa-instr-confirm-btn" onclick="closeWaInstruction()">حسناً، فهمت ✓</button>
     </div>
   </div>
 
@@ -2417,8 +2672,12 @@
         modalDiscountedLabel: 'Discounted Tuition [SAR]',
         modalNotesLabel: 'Special Offer Note / Expiry',
         modalRepLabel: 'Educational Consultant / Rep Name',
-        btnDownloadCard: 'Download Card (PNG)',
-        btnWhatsAppPitch: 'WhatsApp Pitch',
+        modalPhoneLabel: 'Client WhatsApp (Optional for Direct Chat)',
+        btnSendBoth: 'Send Text + Card Image Together',
+        btnSendBothSub: 'Pitch text with designed card image ⚡',
+        btnSendImgOnly: 'Card Image Only',
+        btnSendTextOnly: 'Pitch Text Only',
+        btnDownloadCard: 'Download PNG',
         previewVip: '<i class="fa-solid fa-award"></i> VIP Professional Program',
         previewGreetingSub: 'Certified Professional English Program',
         previewPerk1: 'Certified International Native/TESOL Tutors',
@@ -2490,8 +2749,12 @@
         modalDiscountedLabel: 'السعر بعد الخصم (+10%) [ر.س]',
         modalNotesLabel: 'ملاحظة خاصة / مدة سريان العرض',
         modalRepLabel: 'اسم المستشار الأكاديمي / الموظف',
-        btnDownloadCard: 'تحميل كارت العرض (PNG)',
-        btnWhatsAppPitch: 'رسالة واتساب جاهزة',
+        modalPhoneLabel: 'رقم واتساب العميل (اختياري للإرسال المباشر)',
+        btnSendBoth: 'إرسال العرض + صورة الكارت معاً',
+        btnSendBothSub: 'نص العرض المنسق وتحته صورة الكارت ⚡',
+        btnSendImgOnly: 'صورة الكارت فقط',
+        btnSendTextOnly: 'نص العرض فقط',
+        btnDownloadCard: 'تحميل PNG (3X)',
         previewVip: '<i class="fa-solid fa-award"></i> كارت البرنامج الاحترافي VIP',
         previewGreetingSub: 'البرنامج الاحترافي المعتمد لتعليم الإنجليزية',
         previewPerk1: 'معلمين أجانب معتمدين بشهادات TESOL الدولية',
@@ -3314,18 +3577,32 @@
       document.getElementById('previewRepName').textContent = repName;
     }
 
+    // Helper to generate Card Canvas & Blob
+    async function getCardBlob() {
+      const cardEl = document.getElementById('exportVipCard');
+      return new Promise((resolve, reject) => {
+        html2canvas(cardEl, {
+          scale: 3,
+          backgroundColor: null,
+          useCORS: true,
+          logging: false
+        }).then(canvas => {
+          canvas.toBlob(blob => {
+            if (blob) resolve({ blob, canvas });
+            else reject(new Error('Canvas blob generation failed'));
+          }, 'image/png');
+        }).catch(reject);
+      });
+    }
+
     // High-Res PNG Download
     function downloadCardPNG() {
-      const cardEl = document.getElementById('exportVipCard');
-      showToast(currentLanguage === 'ar' ? 'جاري تصدير كارت العرض بجودة عالية...' : 'Generating high-resolution card PNG...');
+      showToast(currentLanguage === 'ar' ? '⏳ جاري تصدير كارت العرض بجودة فائقة...' : 'Generating high-resolution card PNG...');
 
-      html2canvas(cardEl, {
-        scale: 3,
-        backgroundColor: null,
-        useCORS: true
-      }).then(canvas => {
+      getCardBlob().then(({ blob, canvas }) => {
         const link = document.createElement('a');
-        const fileName = document.getElementById('modalPlanName').value.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_');
+        const planName = document.getElementById('modalPlanName').value || '51Talk_Offer';
+        const fileName = planName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_');
         link.download = `51Talk_Offer_${fileName}.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
@@ -3336,89 +3613,172 @@
       });
     }
 
-    // WhatsApp Formatted Text
-    function getFormattedWhatsAppPitch() {
-      const clientName = document.getElementById('modalClientName').value;
-      const planName = document.getElementById('modalPlanName').value;
-      const duration = document.getElementById('modalDuration').value;
-      const baseClasses = parseInt(document.getElementById('modalBaseSessions').value) || 0;
-      const bonusClasses = parseInt(document.getElementById('modalBonusSessions').value) || 0;
-      const totalClasses = baseClasses + bonusClasses;
-      const officialPrice = parseInt(document.getElementById('modalOfficialPrice').value) || 0;
-      const discountedPrice = parseInt(document.getElementById('modalDiscountedPrice').value) || 0;
-      const repName = document.getElementById('modalRepName').value;
-      const t = I18N[currentLanguage];
+    // Option 1: Send BOTH Offer Text + Card Image Together
+    async function shareBothTextAndImageWhatsApp() {
+      showToast(currentLanguage === 'ar' ? '⏳ جاري تجهيز العرض المكتوب وصورة الكارت...' : 'Preparing offer text & card image...');
+      try {
+        const { blob, canvas } = await getCardBlob();
+        const pitch = getFormattedWhatsAppPitch();
+        const planName = document.getElementById('modalPlanName').value || '51Talk_Offer';
+        const fileName = `51Talk_Offer_${planName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_')}.png`;
+        const file = new File([blob], fileName, { type: 'image/png' });
 
-      if (currentLanguage === 'ar') {
-        let familyLine = '';
-        if (selectedPlanObj && selectedPlanObj.kidsCount) {
-          familyLine = `👨‍👩‍👧‍👦 *توزيع العائلة:* مخصصة لـ ${selectedPlanObj.kidsCount} أطفال (${selectedPlanObj.perKid.total} حصة لكل طفل)\n`;
+        // 1. Try Native Web Share API with Files (Mobile & supported browsers)
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              files: [file],
+              text: pitch,
+              title: currentLanguage === 'ar' ? 'عرض 51Talk التعليمي المعتمد' : '51Talk Official Offer'
+            });
+            showToast(currentLanguage === 'ar' ? '✅ تم فتح الواتساب بنجاح!' : 'Shared successfully!');
+            return;
+          } catch (shareErr) {
+            if (shareErr.name === 'AbortError') return;
+            console.warn('Native share was cancelled or failed, falling back:', shareErr);
+          }
         }
 
-        return `🌟 *عرض خاص وحصري من 51Talk Global* 🌟
-
-السلام عليكم ورحمة الله وبركاته،
-أهلاً بحضرتك ${clientName} 🌸
-
-يسعدنا تقديم هذا العرض التعليمي المعتمد ضمن البرنامج الاحترافي لترقية مستوى طفلك باللغة الإنجليزية:
-
-📌 *تفاصيل الباقة:*
-• *نوع الباقة:* ${planName}
-• *المدة الزمنية:* ${duration}
-• *إجمالي الحصص:* ${totalClasses} حصة تعليمية كاملة
-🎁 *هدية البرنامج الاحترافي:* *${bonusClasses} حصة مجانية بالكامل مهداة من الأكاديمية!* (${baseClasses} حصة أساسية)
-${familyLine}
-💰 *السعر الرسمي المعتمد:* ~${officialPrice.toLocaleString()} ريال~
-💎 *السعر بعد الخصم:* *${discountedPrice.toLocaleString()} ريال فقط!*
-
-✨ *مميزات باقات 51Talk:*
-✅ معلمين أجانب معتمدين بشهادات TESOL الدولية
-✅ مرونة تامة في اختيار وتعديل مواعيد الحصص
-✅ تقارير أسبوعية تفاعلية لمتابعة النطق والطلاقة
-
-⚠️ *ملاحظة:* المقاعد محدودة والعرض ساري لمدة 48 ساعة فقط لحجز مقعد البرنامج الاحترافي.
-
-تحياتي لحضرتك،
-*${repName}*`;
-      } else {
-        let familyLine = '';
-        if (selectedPlanObj && selectedPlanObj.kidsCount) {
-          familyLine = `👨‍👩‍👧‍👦 *Family Distribution:* For ${selectedPlanObj.kidsCount} children (${selectedPlanObj.perKid.total} classes per child)\n`;
+        // 2. Desktop Fallback: Copy image to clipboard + open WhatsApp with text
+        let imageCopied = false;
+        try {
+          if (navigator.clipboard && navigator.clipboard.write) {
+            await navigator.clipboard.write([
+              new ClipboardItem({ 'image/png': blob })
+            ]);
+            imageCopied = true;
+          }
+        } catch (clipErr) {
+          console.warn('Clipboard image write failed:', clipErr);
         }
 
-        return `🌟 *Exclusive 51Talk Professional Program Offer* 🌟
+        // 3. Also download image as backup for drag-and-drop
+        const dlLink = document.createElement('a');
+        dlLink.download = fileName;
+        dlLink.href = canvas.toDataURL('image/png');
+        dlLink.click();
 
-Hello ${clientName} 🌸
+        // 4. Open WhatsApp with formatted text
+        const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
+        const waUrl = phoneVal
+          ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
+          : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
 
-We are pleased to present this verified exclusive package for English excellence:
+        window.open(waUrl, '_blank');
 
-📌 *Package Overview:*
-• *Plan:* ${planName}
-• *Duration:* ${duration}
-• *Total Private Classes:* ${totalClasses} Classes
-🎁 *Program Bonus Gift:* *${bonusClasses} Free Bonus Classes Included!* (${baseClasses} Standard)
-${familyLine}
-💰 *Tuition & Pricing:*
-• *Official Tuition Rate:* ~${officialPrice.toLocaleString()} SAR~
-• *Discounted Tuition:* *${discountedPrice.toLocaleString()} SAR Only!*
+        // 5. Show guidance popup
+        showInstructionModal({
+          title: currentLanguage === 'ar' ? '🚀 تم تجهيز العرض المكتوب وصورة الكارت!' : 'Offer Text & Card Ready!',
+          step1: currentLanguage === 'ar' 
+            ? 'تم فتح محادثة الواتساب ومرفق بها نص العرض المكتوب كاملاً.' 
+            : 'WhatsApp opened with the full offer pitch text.',
+          step2: imageCopied 
+            ? (currentLanguage === 'ar' 
+                ? '✨ تم نسخ صورة الكارت إلى الحافظة تلقائياً! اضغط (Ctrl + V) داخل المحادثة للصق الصورة فوراً تحت العرض.' 
+                : '✨ Card image copied to clipboard! Press Ctrl+V in WhatsApp to paste the image.')
+            : (currentLanguage === 'ar' 
+                ? 'تم تنزيل صورة الكارت على جهازك. يمكنك سحبها وإفلاتها مباشرة في المحادثة.' 
+                : 'Card image downloaded to your device. Drag and drop it into WhatsApp.')
+        });
 
-✨ *51Talk Key Benefits:*
-✅ Certified Foreign Native/TESOL Tutors
-✅ 100% Flexible Scheduling & 1-on-1 Personalized Pace
-✅ Weekly AI Pronunciation & Fluency Tracking Reports
-
-⚠️ *Note:* Seats are strictly limited to reserve Professional Program quotas. Valid for 48 hours.
-
-Best regards,
-*${repName}*`;
+      } catch (err) {
+        console.error(err);
+        showToast(currentLanguage === 'ar' ? '❌ حدث خطأ أثناء تجهيز العرض' : 'Error preparing offer');
       }
+    }
+
+    // Option 2: Send Card Image ONLY to WhatsApp
+    async function shareCardImageWhatsApp() {
+      showToast(currentLanguage === 'ar' ? '⏳ جاري تجهيز صورة الكارت للواتساب...' : 'Preparing card image for WhatsApp...');
+      try {
+        const { blob, canvas } = await getCardBlob();
+        const planName = document.getElementById('modalPlanName').value || '51Talk_Offer';
+        const fileName = `51Talk_Offer_${planName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_')}.png`;
+        const file = new File([blob], fileName, { type: 'image/png' });
+
+        // 1. Try Native Web Share API with Files
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: currentLanguage === 'ar' ? 'كارت باقة 51Talk' : '51Talk Offer Card'
+            });
+            showToast(currentLanguage === 'ar' ? '✅ تم فتح المشاركة!' : 'Shared successfully!');
+            return;
+          } catch (shareErr) {
+            if (shareErr.name === 'AbortError') return;
+            console.warn('Native share failed, fallback:', shareErr);
+          }
+        }
+
+        // 2. Desktop Fallback: Copy image to clipboard
+        let imageCopied = false;
+        try {
+          if (navigator.clipboard && navigator.clipboard.write) {
+            await navigator.clipboard.write([
+              new ClipboardItem({ 'image/png': blob })
+            ]);
+            imageCopied = true;
+          }
+        } catch (e) {
+          console.warn(e);
+        }
+
+        // 3. Download image backup
+        const dlLink = document.createElement('a');
+        dlLink.download = fileName;
+        dlLink.href = canvas.toDataURL('image/png');
+        dlLink.click();
+
+        // 4. Open WhatsApp
+        const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
+        const waUrl = phoneVal
+          ? `https://api.whatsapp.com/send?phone=${phoneVal}`
+          : `https://web.whatsapp.com/`;
+
+        window.open(waUrl, '_blank');
+
+        // 5. Guidance popup
+        showInstructionModal({
+          title: currentLanguage === 'ar' ? '🖼️ تم نسخ صورة الكارت وتحميلها!' : 'Card Image Ready!',
+          step1: currentLanguage === 'ar' 
+            ? 'تم فتح الواتساب لبدء إرسال الكارت المصمم.' 
+            : 'WhatsApp opened to send your card.',
+          step2: imageCopied 
+            ? (currentLanguage === 'ar' 
+                ? '✨ تم نسخ صورة الكارت للحافظة! اضغط (Ctrl + V) داخل محادثة الواتساب للصقها فوراً.' 
+                : '✨ Image copied to clipboard! Press Ctrl+V in WhatsApp to paste.')
+            : (currentLanguage === 'ar' 
+                ? 'تم تنزيل صورة الكارت على جهازك. اسحبها وأفلتها في المحادثة.' 
+                : 'Card image downloaded to your device.')
+        });
+
+      } catch (err) {
+        console.error(err);
+        showToast(currentLanguage === 'ar' ? '❌ حدث خطأ أثناء تجهيز الصورة' : 'Error preparing card image');
+      }
+    }
+
+    // Guidance Modal Helpers
+    function showInstructionModal({ title, step1, step2 }) {
+      document.getElementById('waInstrTitle').textContent = title;
+      document.getElementById('waInstrStep1').textContent = step1;
+      document.getElementById('waInstrStep2').textContent = step2;
+      document.getElementById('waInstructionModal').style.display = 'flex';
+    }
+
+    function closeWaInstruction() {
+      document.getElementById('waInstructionModal').style.display = 'none';
     }
 
     function shareWhatsAppPitch() {
       const pitch = getFormattedWhatsAppPitch();
+      const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
       navigator.clipboard.writeText(pitch).then(() => {
         showToast(I18N[currentLanguage].toastPitchCopied);
-        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+        const url = phoneVal 
+          ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
+          : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
         window.open(url, '_blank');
       });
     }
