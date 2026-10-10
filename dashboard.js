@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    Big Team 01 Executive Performance Dashboard — Engine v3.0
    =========================================================================
    DATA SOURCES & AUDIT TRAILS:
@@ -11517,6 +11517,19 @@ function renderEnglishClubTab() {
 
 window.switchTab = switchTab;
 function switchTab(tabKey) {
+  if (tabKey === 'calculator' || tabKey === 'packages' || tabKey === 'pricing') {
+    switchTab('operations');
+    setTimeout(() => {
+      const el = document.getElementById('pkg-calc-section');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        el.style.transition = 'box-shadow 0.4s ease';
+        el.style.boxShadow = '0 0 35px rgba(245, 158, 11, 0.5)';
+        setTimeout(() => { el.style.boxShadow = 'none'; }, 2000);
+      }
+    }, 120);
+    return;
+  }
   const isUpg = (tabKey === 'upgrade' || tabKey === 'breakdown');
   document.querySelectorAll('.tab').forEach(b => {
     if (b.dataset.tab === tabKey || (isUpg && (b.dataset.tab === 'upgrade' || b.dataset.tab === 'breakdown'))) {

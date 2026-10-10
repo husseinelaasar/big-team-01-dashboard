@@ -1,0 +1,3462 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="htmlRoot">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>51Talk - Rate Card & Offer Generator</title>
+  
+  <!-- Fonts: Outfit, Plus Jakarta Sans, Cairo, Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 & html2canvas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #f59e0b;
+      --primary-dark: #d97706;
+      --gold-border: #f59e0b;
+      --gold-glow: rgba(245, 158, 11, 0.35);
+      --upgrade-color: #8b5cf6;
+      --renew-color: #0284c7;
+      --emerald: #10b981;
+      --emerald-light: #34d399;
+      --cosmic-cyan: #00f2fe;
+      --cosmic-green: #00f5a0;
+      --cosmic-purple: #a855f7;
+      --danger: #f43f5e;
+      --dark-bg: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.88);
+      --card-border: rgba(255, 255, 255, 0.09);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+    }
+
+    h1, h2, h3, h4, .outfit-font {
+      font-family: 'Outfit', 'Cairo', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at 10% 10%, #151336 0%, #090d16 45%, #030712 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Ambient Glow orbs */
+    .glow-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(140px);
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.22;
+    }
+    .glow-1 { width: 550px; height: 550px; background: #6366f1; top: -100px; left: -100px; }
+    .glow-2 { width: 600px; height: 600px; background: #0284c7; top: 40%; right: -150px; }
+    .glow-3 { width: 500px; height: 500px; background: #f59e0b; bottom: -50px; left: 30%; }
+
+    .app-container {
+      max-width: 1560px;
+      margin: 0 auto;
+      padding: 16px 24px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Sleek, Compact Minimal Top Bar */
+    .compact-top-bar {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 12px 24px;
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle shimmer sweep on top bar */
+    .compact-top-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+      animation: topBarShimmer 6s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    @keyframes topBarShimmer {
+      0%   { left: -120%; }
+      40%, 100% { left: 130%; }
+    }
+
+    /* Live Status Dot */
+    .live-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #34d399;
+    }
+
+    .live-dot::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+      animation: livePing 2s infinite;
+    }
+
+    @keyframes livePing {
+      0%  { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+      70% { box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
+      100%{ box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    .brand-compact {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo-pill {
+      background: linear-gradient(135deg, #ffc72c, #f59e0b);
+      color: #0f172a;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-family: 'Outfit', sans-serif;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+
+    .brand-title-compact {
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      font-family: 'Outfit', 'Cairo', sans-serif;
+    }
+
+    .rate-badge {
+      font-size: 11px;
+      font-weight: 800;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-left: 8px;
+    }
+    html[dir="rtl"] .rate-badge {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+
+    /* Top Controls: Language Switcher */
+    .top-controls-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .lang-switcher-wrapper {
+      display: flex;
+      align-items: center;
+      background: rgba(8, 13, 24, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #0f172a;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+    }
+
+    /* Navigation Bar for Category Separation */
+    .section-nav-wrapper {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 10px 18px;
+      margin-bottom: 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .nav-tabs-group {
+      display: flex;
+      gap: 6px;
+      background: rgba(8, 13, 24, 0.6);
+      padding: 5px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      flex-wrap: wrap;
+    }
+
+    .nav-tab-btn {
+      padding: 8px 18px;
+      border-radius: 10px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-tab-btn.active {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0f172a;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+    }
+
+    .search-filter-box {
+      position: relative;
+      min-width: 260px;
+    }
+
+    .search-filter-box input {
+      width: 100%;
+      background: rgba(10, 16, 29, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 8px 14px 8px 36px;
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+      transition: 0.25s;
+    }
+
+    html[dir="rtl"] .search-filter-box input {
+      padding: 8px 36px 8px 14px;
+    }
+
+    .search-filter-box input:focus {
+      border-color: #f59e0b;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+    }
+
+    .search-filter-box i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    html[dir="rtl"] .search-filter-box i {
+      left: auto;
+      right: 12px;
+    }
+
+    /* Distinct Package Sections */
+    .category-section {
+      margin-bottom: 40px;
+    }
+
+    .category-banner {
+      background: linear-gradient(90deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.5) 100%);
+      border: 1px solid var(--card-border);
+      border-left: 5px solid #f59e0b;
+      border-radius: 16px;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    html[dir="rtl"] .category-banner {
+      border-left: 1px solid var(--card-border);
+      border-right: 5px solid #f59e0b;
+    }
+
+    .category-banner-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .category-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+    }
+
+    .icon-single {
+      background: rgba(99, 102, 241, 0.2);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.4);
+    }
+
+    .icon-f2 {
+      background: rgba(14, 165, 233, 0.2);
+      color: #38bdf8;
+      border: 1px solid rgba(14, 165, 233, 0.4);
+    }
+
+    .icon-f3 {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fcd34d;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .category-banner h2 {
+      font-size: 19px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .category-banner p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .category-tag-count {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    /* Comparison Dual Columns: Left = Upgrade | Right = Renewal */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .column-panel {
+      background: rgba(13, 19, 33, 0.5);
+      border-radius: 20px;
+      border: 1px solid var(--card-border);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .column-header-banner {
+      padding: 12px 18px;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-upgrade {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.15) 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.45);
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+    }
+    .header-upgrade .col-title-text { color: #fcd34d; }
+
+    .header-renew {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.22) 0%, rgba(37, 99, 235, 0.15) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+    }
+    .header-renew .col-title-text { color: #7dd3fc; }
+
+    .col-title-text {
+      font-size: 17px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .col-pill {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Cards List Container: Generous 60px gap between cards to prevent any overlap */
+    .cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding-top: 18px;
+      padding-bottom: 30px;
+    }
+
+    /* Base Plan Card with entrance animation */
+    .plan-card {
+      background: linear-gradient(180deg, rgba(26, 35, 56, 0.92) 0%, rgba(13, 18, 30, 0.98) 100%);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 22px;
+      padding: 22px;
+      position: relative;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      overflow: visible;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      margin-top: 14px;
+      margin-bottom: 0;
+      opacity: 0;
+      animation: cardSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes cardSlideIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Stagger animation delays for each card in list */
+    .cards-list .card-item-wrapper:nth-child(1) .plan-card { animation-delay: 0.05s; }
+    .cards-list .card-item-wrapper:nth-child(2) .plan-card { animation-delay: 0.12s; }
+    .cards-list .card-item-wrapper:nth-child(3) .plan-card { animation-delay: 0.19s; }
+    .cards-list .card-item-wrapper:nth-child(4) .plan-card { animation-delay: 0.26s; }
+    .cards-list .card-item-wrapper:nth-child(5) .plan-card { animation-delay: 0.33s; }
+    .cards-list .card-item-wrapper:nth-child(6) .plan-card { animation-delay: 0.40s; }
+    .cards-list .card-item-wrapper:nth-child(7) .plan-card { animation-delay: 0.47s; }
+
+    /* =========================================================
+       USER REQUEST: SHINING RADIANT GOLD BORDER FOR UPGRADE CARDS
+       إطار ذهبي لامع ومضيء لكروت الترقية مع بريق ميتالك فخم
+       ========================================================= */
+    .plan-card.card-upgrade-gold {
+      border: 2px solid transparent;
+      background: 
+        linear-gradient(180deg, rgba(30, 42, 68, 0.96) 0%, rgba(14, 20, 36, 0.98) 100%) padding-box,
+        linear-gradient(135deg, #ffd700 0%, #b8860b 20%, #fff275 40%, #d4af37 60%, #fff8b3 80%, #aa771c 100%) border-box;
+      box-shadow: 
+        0 14px 38px rgba(0, 0, 0, 0.65), 
+        0 0 25px rgba(255, 215, 0, 0.45), 
+        0 0 10px rgba(245, 158, 11, 0.3), 
+        inset 0 0 15px rgba(255, 215, 0, 0.1);
+      position: relative;
+    }
+
+    .plan-card.card-upgrade-gold::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3.5px;
+      background: linear-gradient(90deg, #aa771c, #ffd700, #ffffff, #ffd700, #aa771c);
+      background-size: 200% 100%;
+      animation: goldTopShine 3s infinite linear;
+      opacity: 1;
+      box-shadow: 0 0 14px #ffd700, 0 0 6px #fff;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    @keyframes goldTopShine {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .plan-card.card-upgrade-gold:hover {
+      transform: translateY(-6px);
+      box-shadow: 
+        0 24px 50px rgba(0, 0, 0, 0.75), 
+        0 0 45px rgba(255, 215, 0, 0.7), 
+        0 0 20px rgba(245, 158, 11, 0.5), 
+        inset 0 0 22px rgba(255, 215, 0, 0.2);
+    }
+
+    /* Standard hover for Renewal */
+    .plan-card:not(.card-upgrade-gold):hover {
+      transform: translateY(-5px);
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.2);
+    }
+
+    .card-ribbon {
+      position: absolute;
+      top: -10px;
+      right: 18px;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0f172a;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 3px 12px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      letter-spacing: 0.3px;
+    }
+    html[dir="rtl"] .card-ribbon {
+      right: auto;
+      left: 18px;
+    }
+
+    .card-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .duration-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.07);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .savings-badge {
+      font-size: 11.5px;
+      font-weight: 800;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(5, 150, 105, 0.3) 100%);
+      border: 1px solid rgba(52, 211, 153, 0.45);
+      color: #34d399;
+      padding: 5px 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+      transition: all 0.2s ease;
+    }
+
+    .plan-card:hover .savings-badge {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.3) 0%, rgba(5, 150, 105, 0.45) 100%);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    }
+
+    /* Sessions Layout Block */
+    .sessions-card-block {
+      background: rgba(10, 16, 29, 0.85);
+      border-radius: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Top Row: Base on one side, Bonus on the other */
+    .sessions-top-split {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .session-mini-box {
+      border-radius: 14px;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .box-base-style {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+    .box-base-style .mini-title {
+      color: #94a3b8;
+    }
+    .box-base-style .mini-val {
+      color: #f1f5f9;
+    }
+
+    /* Cosmic Luminous Free Gift Box */
+    .box-bonus-style {
+      background: radial-gradient(circle at center, rgba(0, 245, 160, 0.15), rgba(6, 182, 212, 0.22));
+      border: 1.5px solid #00f5a0;
+      box-shadow: 0 0 15px rgba(0, 245, 160, 0.3), inset 0 0 10px rgba(0, 242, 254, 0.2);
+    }
+    .box-bonus-style .mini-title {
+      color: #00f5a0;
+      font-weight: 800;
+      text-shadow: 0 0 8px rgba(0, 245, 160, 0.5);
+    }
+    .box-bonus-style .mini-val {
+      color: #ffffff;
+      text-shadow: 0 0 10px #00f5a0;
+    }
+
+    .mini-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .mini-val {
+      font-size: 19px;
+      font-weight: 900;
+      font-family: 'Outfit', sans-serif;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .split-divider-plus {
+      font-size: 18px;
+      font-weight: 900;
+      color: #f59e0b;
+      opacity: 0.9;
+    }
+
+    /* Cosmic Luminous Space-Glow Indicator */
+    .cosmic-ratio-container {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin: 3px 0;
+    }
+
+    .cosmic-ratio-bar {
+      height: 9px;
+      background: #060b17;
+      border-radius: 999px;
+      overflow: hidden;
+      display: flex;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      position: relative;
+    }
+
+    .cosmic-ratio-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+      animation: cosmic-star-sweep 2.8s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes cosmic-star-sweep {
+      0% { left: -100%; }
+      50%, 100% { left: 150%; }
+    }
+
+    .bar-seg-cosmic-base {
+      height: 100%;
+      background: linear-gradient(90deg, #4338ca 0%, #6366f1 50%, #8b5cf6 100%);
+      border-radius: 999px 0 0 999px;
+      box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+    }
+
+    .bar-seg-cosmic-bonus {
+      height: 100%;
+      background: linear-gradient(90deg, #00f2fe 0%, #00f5a0 50%, #38ef7d 100%);
+      border-radius: 0 999px 999px 0;
+      box-shadow: 0 0 14px #00f5a0, 0 0 25px rgba(0, 242, 254, 0.7);
+      animation: cosmic-pulse-glow 1.8s infinite alternate;
+    }
+
+    @keyframes cosmic-pulse-glow {
+      0% { filter: brightness(1.1) drop-shadow(0 0 4px #00f5a0); }
+      100% { filter: brightness(1.4) drop-shadow(0 0 10px #00f2fe); }
+    }
+
+    .cosmic-meta-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #94a3b8;
+      padding: 0 2px;
+    }
+
+    .meta-cosmic-gift {
+      color: #00f5a0;
+      font-weight: 800;
+      text-shadow: 0 0 8px rgba(0, 245, 160, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    /* Bottom Row: Total Classes Combined */
+    .sessions-total-banner {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 12px;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .total-banner-label {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .total-banner-count {
+      font-size: 21px;
+      font-weight: 900;
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+    }
+    .total-banner-count span {
+      font-size: 12px;
+      color: #f59e0b;
+      font-weight: 800;
+      margin-left: 2px;
+    }
+    html[dir="rtl"] .total-banner-count span {
+      margin-left: 0;
+      margin-right: 2px;
+    }
+
+    /* =========================================================
+       RED HORIZONTAL STRIKE — PERFECTLY CENTERED ON PRICE TEXT
+       Uses text-decoration for native browser rendering + pseudo
+       overlay for the glowing red neon effect ON the number
+       ========================================================= */
+    .official-pricing-container {
+      background: linear-gradient(135deg, rgba(12, 18, 34, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 4px 14px rgba(0, 0, 0, 0.35);
+      margin-bottom: 12px;
+      transition: border-color 0.3s ease;
+    }
+
+    .official-pricing-container:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .pricing-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+      padding-bottom: 8px;
+    }
+
+    .official-row-striked {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .official-label-prominent {
+      font-size: 12px;
+      font-weight: 800;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      letter-spacing: 0.3px;
+    }
+
+    .official-label-prominent i {
+      color: #ef4444;
+      font-size: 11px;
+    }
+
+    /* =========================================================
+       RED NEON STRIKETHROUGH — Definitively ON the price number
+       Uses text-decoration-line: line-through as the primary
+       method (guaranteed to pass through the exact center of text)
+       plus a glowing shadow layer for premium aesthetics.
+       ========================================================= */
+    .diagonal-strike-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    /* The actual strikethrough is applied to the text itself via
+       text-decoration so it ALWAYS sits at the typographic mid-line */
+    .official-value-striked {
+      font-size: 18px;
+      font-weight: 800;
+      color: #9ca3af;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 0.5px;
+      text-decoration: line-through;
+      text-decoration-color: #ef4444;
+      text-decoration-thickness: 2.5px;
+      text-decoration-style: solid;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    /* Glowing red neon halo over the strikethrough */
+    .diagonal-strike-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -4px;
+      right: -4px;
+      height: 3px;
+      background: transparent;
+      box-shadow: 0 0 10px 1px rgba(239, 68, 68, 0.65);
+      transform: translateY(-50%);
+      pointer-events: none;
+      border-radius: 2px;
+    }
+
+    /* .official-value-striked styles moved into .diagonal-strike-wrapper block above */
+
+    .grant-discount-pill {
+      font-size: 11px;
+      color: #fcd34d;
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 2px 9px;
+      border-radius: 999px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Scholarship Main Price Display */
+    .scholarship-main-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .scholarship-label-badge {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #f59e0b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.2px;
+    }
+
+    .scholarship-final-price {
+      font-size: 30px;
+      font-weight: 900;
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      text-shadow: 0 0 20px rgba(245, 158, 11, 0.55), 0 0 40px rgba(245, 158, 11, 0.2);
+      line-height: 1.1;
+      margin: 2px 0;
+      animation: priceGlowPulse 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes priceGlowPulse {
+      0%   { text-shadow: 0 0 14px rgba(245, 158, 11, 0.4), 0 0 30px rgba(245, 158, 11, 0.1); }
+      100% { text-shadow: 0 0 26px rgba(245, 158, 11, 0.75), 0 0 55px rgba(245, 158, 11, 0.3); }
+    }
+
+    .scholarship-final-price .curr-sign {
+      font-size: 16px;
+      color: #f59e0b;
+      font-weight: 800;
+    }
+
+    .per-lesson-rate-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: #cbd5e1;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+
+    .rate-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #94a3b8;
+    }
+
+    .per-lesson-rate-pill .rate-num {
+      color: #38bdf8;
+      font-weight: 800;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .per-lesson-rate-pill .savings-tag {
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Wide Uncrowded Gift Classes Banner */
+    .scholarship-gift-banner {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(6, 182, 212, 0.1) 100%);
+      border: 1.5px solid rgba(16, 185, 129, 0.4);
+      border-radius: 12px;
+      padding: 9px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.12);
+    }
+
+    .gift-banner-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .gift-icon-sparkle {
+      color: #00f5a0;
+      font-size: 14px;
+    }
+
+    .gift-banner-text {
+      font-size: 12px;
+      font-weight: 800;
+      color: #e2e8f0;
+    }
+
+    .gift-classes-count {
+      color: #00f5a0;
+      font-size: 14px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      text-shadow: 0 0 10px rgba(0, 245, 160, 0.5);
+    }
+
+    .grant-status-badge {
+      font-size: 11px;
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       PACKAGE HEADLINE TITLE BANNER (AT THE TOP OF CARD)
+       عنوان الباقة الرئيسي أعلى الكارت يوضح عدد الحصص
+       ========================================================= */
+    .package-header-headline {
+      margin-bottom: 12px;
+    }
+
+    .fam-headline-badge {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.22) 0%, rgba(30, 41, 59, 0.9) 100%);
+      border: 1.5px solid rgba(56, 189, 248, 0.45);
+      border-radius: 12px;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+    }
+
+    .fam-headline-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .fam-headline-left i {
+      color: #38bdf8;
+      font-size: 15px;
+    }
+
+    .fam-headline-title {
+      font-size: 15.5px;
+      font-weight: 900;
+      color: #ffffff;
+      font-family: 'Outfit', 'Cairo', sans-serif;
+      letter-spacing: 0.3px;
+    }
+
+    .fam-headline-split {
+      font-size: 12px;
+      font-weight: 800;
+      color: #fcd34d;
+      background: rgba(245, 158, 11, 0.18);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .single-headline-badge {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(30, 41, 59, 0.9) 100%);
+      border: 1.5px solid rgba(99, 102, 241, 0.4);
+      border-radius: 12px;
+      padding: 7px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .single-headline-badge i {
+      color: #a5b4fc;
+      font-size: 14px;
+    }
+
+    .single-headline-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #ffffff;
+      font-family: 'Outfit', 'Cairo', sans-serif;
+    }
+
+    /* =========================================================
+       CARD ITEM WRAPPER & HIDDEN ACCORDION COST TABLE
+       جدول التكلفة النهائي المخفي تحت كل كارت بسهم منسدل
+       ========================================================= */
+    .card-item-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    /* Coordinated Separator between Offer Card and Internal Ledger */
+    .card-accordion-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      padding: 0 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .card-accordion-divider .divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.35), transparent);
+    }
+
+    .card-accordion-divider .divider-badge {
+      font-size: 11px;
+      font-weight: 800;
+      color: #cbd5e1;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      padding: 4px 14px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-accordion-divider .divider-badge i {
+      color: #f59e0b;
+      font-size: 10px;
+    }
+
+    /* Modern Structured Accordion Container */
+    .cost-accordion-container {
+      background: linear-gradient(180deg, rgba(12, 20, 38, 0.95) 0%, rgba(7, 12, 22, 0.98) 100%);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+      margin-bottom: 0;
+    }
+
+    .cost-accordion-trigger {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.92);
+      border: none;
+      padding: 11px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #cbd5e1;
+      cursor: pointer;
+      font-size: 12.5px;
+      font-weight: 800;
+      font-family: inherit;
+      transition: all 0.25s ease;
+      border-bottom: 1px solid transparent;
+      gap: 12px;
+      box-sizing: border-box;
+    }
+
+    .cost-accordion-trigger:hover {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fcd34d;
+    }
+
+    .cost-accordion-container:has(.cost-accordion-body.open) .cost-accordion-trigger,
+    .cost-accordion-container.open .cost-accordion-trigger {
+      border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .trigger-left {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #f8fafc;
+      font-size: 12.5px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .trigger-lock-icon {
+      background: rgba(245, 158, 11, 0.2);
+      color: #f59e0b;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      flex-shrink: 0;
+    }
+
+    .trigger-title-text {
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      color: #e2e8f0;
+      white-space: nowrap;
+    }
+
+    /* Highly Prominent, Sleek Arrow & Action Pill */
+    .trigger-action-pill {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1.5px solid #f59e0b;
+      border-radius: 999px;
+      padding: 4px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fcd34d;
+      font-weight: 800;
+      font-size: 12px;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
+      transition: all 0.25s ease;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .cost-accordion-trigger:hover .trigger-action-pill {
+      background: rgba(245, 158, 11, 0.25);
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.5);
+    }
+
+    .trigger-arrow-circle {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f59e0b;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 900;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .trigger-arrow-circle i {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .accordion-arrow.rotated {
+      transform: rotate(180deg);
+    }
+
+    .cost-accordion-container:has(.cost-accordion-body.open) .trigger-arrow-circle,
+    .trigger-arrow-circle.active {
+      background: #10b981;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+    }
+
+    .cost-accordion-body {
+      display: none;
+      background: rgba(5, 9, 18, 0.98);
+      padding: 14px 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      animation: fadeInSlide 0.25s ease;
+    }
+
+    .cost-accordion-body.open {
+      display: block;
+    }
+
+    @keyframes fadeInSlide {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Clear, Organized Table Grid with Borders & Centered Numeric Columns */
+    .cost-hidden-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 12.5px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(3, 7, 16, 0.7);
+    }
+
+    .cost-hidden-table th,
+    .cost-hidden-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-inline-end: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: 'Outfit', 'Cairo', sans-serif;
+      vertical-align: middle;
+    }
+    .cost-hidden-table th:last-child,
+    .cost-hidden-table td:last-child {
+      border-inline-end: none;
+    }
+
+    .cost-hidden-table th {
+      background: rgba(15, 23, 42, 0.95);
+      color: #94a3b8;
+      font-weight: 800;
+      font-size: 11.5px;
+      border-bottom: 1.5px solid rgba(245, 158, 11, 0.3);
+      letter-spacing: 0.3px;
+    }
+
+    /* Column Alignments: Text on right (LTR left), Numbers centered */
+    .cost-hidden-table th:first-child,
+    .cost-hidden-table td:first-child {
+      text-align: right;
+      width: 48%;
+    }
+    html[dir="ltr"] .cost-hidden-table th:first-child,
+    html[dir="ltr"] .cost-hidden-table td:first-child {
+      text-align: left;
+    }
+
+    .cost-hidden-table th:nth-child(2),
+    .cost-hidden-table td:nth-child(2) {
+      text-align: center;
+      width: 26%;
+    }
+
+    .cost-hidden-table th:nth-child(3),
+    .cost-hidden-table td:nth-child(3) {
+      text-align: center;
+      width: 26%;
+    }
+
+    .td-item-inner {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      vertical-align: middle;
+    }
+
+    .cost-hidden-table tbody tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .cost-hidden-table tbody tr:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    /* Highlighted After-Grant Cost Row */
+    .highlight-cost-row {
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.14) 0%, rgba(245, 158, 11, 0.06) 100%) !important;
+    }
+    .highlight-cost-row td {
+      color: #ffffff;
+      font-weight: 800;
+      border-top: 1px solid rgba(245, 158, 11, 0.35);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+    }
+
+    .sheet-original-cost {
+      color: #38bdf8 !important;
+      font-weight: 800 !important;
+      font-size: 13.5px;
+      background: rgba(56, 189, 248, 0.12);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .gold-bold {
+      color: #f59e0b !important;
+      font-weight: 900 !important;
+      font-size: 14.5px;
+      background: rgba(245, 158, 11, 0.14);
+      padding: 3px 9px;
+      border-radius: 6px;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      display: inline-block;
+      text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .emerald-bold {
+      color: #10b981 !important;
+      font-weight: 800 !important;
+      font-size: 13.5px;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .hidden-table-safety-note {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.4;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+    .hidden-table-safety-note i {
+      color: #38bdf8;
+      font-size: 13px;
+    }
+
+    .modal-emp-info-badge {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1.5px dashed rgba(245, 158, 11, 0.5);
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+    }
+
+    /* Family Footer */
+    .family-card-footer {
+      background: rgba(14, 165, 233, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 14px;
+      padding: 10px 12px;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr 1.1fr;
+      align-items: center;
+      gap: 6px;
+      text-align: center;
+    }
+
+    .fam-stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .fam-stat-label {
+      font-size: 10px;
+      color: #94a3b8;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .fam-stat-val {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+
+    .fam-stat-val.gold {
+      color: #f59e0b;
+    }
+
+    .fam-stat-val.emerald {
+      color: #34d399;
+    }
+
+    /* Action Buttons */
+    .card-actions-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .btn-create-offer {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0f172a;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-create-offer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 30%, rgba(255,255,255,0.25), transparent 70%);
+      transform: translateX(-100%);
+      transition: transform 0.5s ease;
+    }
+
+    .btn-create-offer:hover::after {
+      transform: translateX(100%);
+    }
+
+    .btn-create-offer:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 8px 28px rgba(245, 158, 11, 0.55);
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .btn-create-offer:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .btn-quick-copy {
+      background: rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 10px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+
+    .btn-quick-copy:hover {
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
+    }
+
+    /* Modal Styling */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(4, 7, 16, 0.88);
+      backdrop-filter: blur(14px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-box {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 26px;
+      width: 100%;
+      max-width: 980px;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-backdrop.active .modal-box {
+      transform: scale(1);
+    }
+
+    .modal-form-side {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    html[dir="rtl"] .modal-form-side {
+      border-right: none;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-top-bar h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .close-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #94a3b8;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+    }
+    .close-btn:hover {
+      background: #f43f5e;
+      color: #fff;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .input-group label {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .input-group input {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 9px 13px;
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+    }
+    .input-group input:focus {
+      border-color: #f59e0b;
+    }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* Modal Preview Side */
+    .modal-preview-side {
+      padding: 26px;
+      background: #060a14;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    /* Exported High-Resolution Card */
+    .vip-card-export {
+      width: 390px;
+      background: radial-gradient(circle at top right, #1e1b4b, #0f172a 65%, #050b18);
+      border: 2px solid #f59e0b;
+      border-radius: 22px;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85);
+      color: #fff;
+    }
+
+    .vip-card-export::before {
+      content: '';
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.22), transparent 70%);
+      top: -60px;
+      left: -60px;
+      pointer-events: none;
+    }
+
+    .card-brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .brand-logo-mini {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-logo-mini .logo-box {
+      background: #f59e0b;
+      color: #0f172a;
+      font-weight: 900;
+      padding: 3px 9px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .brand-logo-mini .logo-title {
+      font-weight: 800;
+      font-size: 14px;
+      color: #f8fafc;
+      letter-spacing: 0.5px;
+    }
+
+    .vip-gold-pill {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #0f172a;
+      font-size: 10px;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .client-greeting-block {
+      margin-bottom: 12px;
+    }
+
+    .client-greeting-name {
+      font-size: 17px;
+      font-weight: 800;
+      color: #fcd34d;
+    }
+
+    .client-greeting-sub {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    .plan-title-display {
+      font-size: 17px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 3px;
+    }
+
+    .plan-duration-display {
+      font-size: 12px;
+      color: #38bdf8;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .classes-display-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px dashed rgba(245, 158, 11, 0.4);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .classes-total-number {
+      font-size: 25px;
+      font-weight: 900;
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .classes-bonus-highlight {
+      background: radial-gradient(circle at center, rgba(0, 245, 160, 0.15), rgba(6, 182, 212, 0.25));
+      border: 1.5px solid #00f5a0;
+      color: #00f5a0;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-top: 5px;
+      box-shadow: 0 0 10px rgba(0, 245, 160, 0.3);
+    }
+
+    .classes-kid-breakdown {
+      font-size: 11px;
+      color: #38bdf8;
+      margin-top: 5px;
+      font-weight: 600;
+    }
+
+    .card-price-deck {
+      background: rgba(15, 23, 42, 0.85);
+      border-radius: 16px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    /* Modal Pricing Section: Horizontal Red Line on Official Tuition & Discounted Price Underneath */
+    .modal-pricing-left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .modal-official-striked-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .modal-price-sublabel {
+      font-size: 11px;
+      color: #94a3b8;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    /* Modal: same native text-decoration approach for guaranteed centering */
+    .modal-horizontal-strike-wrap {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .modal-official-val {
+      color: #9ca3af !important;
+      font-size: 13.5px;
+      font-weight: 800;
+      font-family: 'Outfit', 'Cairo', sans-serif;
+      text-decoration: line-through;
+      text-decoration-color: #ef4444;
+      text-decoration-thickness: 2px;
+      text-decoration-style: solid;
+    }
+
+    /* Neon glow halo over modal strikethrough */
+    .modal-horizontal-strike-wrap::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -3px;
+      right: -3px;
+      height: 2px;
+      background: transparent;
+      box-shadow: 0 0 8px 1px rgba(239, 68, 68, 0.55);
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .modal-official-val {
+      color: #cbd5e1;
+      font-size: 13.5px;
+      font-weight: 800;
+      font-family: 'Outfit', 'Cairo', sans-serif;
+    }
+
+    .modal-discounted-main-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-top: 2px;
+    }
+
+    .modal-discounted-sublabel {
+      font-size: 11.5px;
+      color: #f59e0b;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    .card-new-figure {
+      color: #ffffff;
+      font-size: 26px;
+      font-weight: 900;
+      font-family: 'Outfit', sans-serif;
+      text-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+      line-height: 1.1;
+    }
+
+    .perks-checklist {
+      list-style: none;
+      font-size: 11px;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .perks-checklist li {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .perks-checklist li i {
+      color: #10b981;
+      font-size: 11px;
+    }
+
+    .card-bottom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: #64748b;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 10px;
+    }
+
+    .modal-action-buttons {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      max-width: 390px;
+    }
+
+    .btn-download-png {
+      flex: 1;
+      background: #10b981;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 13.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: 0.2s;
+    }
+    .btn-download-png:hover {
+      background: #059669;
+    }
+
+    .btn-send-whatsapp {
+      background: #25d366;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 13.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: 0.2s;
+    }
+    .btn-send-whatsapp:hover {
+      background: #1da851;
+    }
+
+    /* Floating Toast notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #0f172a;
+      border: 1px solid #10b981;
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      z-index: 2000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast-msg.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 1024px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+      .modal-box {
+        grid-template-columns: 1fr;
+      }
+      .modal-form-side {
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient background glow elements -->
+  <div class="glow-orb glow-1"></div>
+  <div class="glow-orb glow-2"></div>
+  <div class="glow-orb glow-3"></div>
+
+  <div class="app-container">
+
+    <!-- Compact Minimalist Top Bar -->
+    <div class="compact-top-bar">
+      <div class="brand-compact">
+        <span class="brand-logo-pill">51</span>
+        <span class="brand-title-compact">51Talk Global</span>
+        <span class="rate-badge" id="rateBadgeText"><i class="fa-solid fa-check-circle"></i> Rate Card</span>
+        <span class="live-dot">Live Rates</span>
+      </div>
+
+      <!-- Top Controls: Staff Cost Toggle & Language Switcher -->
+      <div class="top-controls-right" style="display: flex; align-items: center; gap: 10px;">
+        <button class="staff-toggle-btn" id="staffToggleBtn" onclick="toggleStaffCostPanels()" title="Show/Hide side internal employee cost panels">
+          <i class="fa-solid fa-eye-slash" id="staffToggleIcon"></i>
+          <span id="staffToggleText" data-i18n="toggleStaffCostBtn">Staff Cost Info (Side)</span>
+        </button>
+
+        <div class="lang-switcher-wrapper">
+          <button class="lang-btn active" id="langBtnEn" onclick="switchLanguage('en')">
+            <i class="fa-solid fa-globe"></i> English
+          </button>
+          <button class="lang-btn" id="langBtnAr" onclick="switchLanguage('ar')">
+            العربية
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar for Category Filtering -->
+    <div class="section-nav-wrapper">
+      <div class="nav-tabs-group">
+        <button class="nav-tab-btn active" onclick="switchCategoryTab('all', this)">
+          <i class="fa-solid fa-layer-group"></i> <span data-i18n="tabAll">All Packages</span>
+        </button>
+        <button class="nav-tab-btn" onclick="switchCategoryTab('single', this)">
+          <i class="fa-solid fa-user"></i> <span data-i18n="tabSingle">Single (1 Student)</span>
+        </button>
+        <button class="nav-tab-btn" onclick="switchCategoryTab('family2', this)">
+          <i class="fa-solid fa-children"></i> <span data-i18n="tabFamily2">Family (2 Kids)</span>
+        </button>
+        <button class="nav-tab-btn" onclick="switchCategoryTab('family3', this)">
+          <i class="fa-solid fa-users"></i> <span data-i18n="tabFamily3">Family (3 Kids)</span>
+        </button>
+      </div>
+
+      <div class="search-filter-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search by duration or sessions..." oninput="handleSearch()">
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT SECTIONS -->
+
+    <!-- SECTION 1: SINGLE (INDIVIDUAL) PACKAGES -->
+    <section class="category-section" id="section-single">
+      <div class="category-banner">
+        <div class="category-banner-title">
+          <div class="category-icon icon-single">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <h2 data-i18n="singleSectionTitle">Single Student Packages (Individual)</h2>
+            <p data-i18n="singleSectionSub">Dedicated 1-on-1 private lessons with certified foreign native/TESOL teachers</p>
+          </div>
+        </div>
+        <span class="category-tag-count" data-i18n="singleSectionTag"><i class="fa-solid fa-star" style="color: #f59e0b;"></i> 7 Durations (6 Months to 2.5 Years)</span>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- LEFT: Upgrade Plans -->
+        <div class="column-panel">
+          <div class="column-header-banner header-upgrade">
+            <div class="col-title-text">
+              <i class="fa-solid fa-crown" style="color: #f59e0b;"></i>
+              <span data-i18n="singleUpgradeTitle">Single Upgrade Plans</span>
+            </div>
+            <span class="col-pill" data-i18n="leftColPill">Left Column</span>
+          </div>
+          <div class="cards-list" id="singleUpgradeCards"></div>
+        </div>
+
+        <!-- RIGHT: Renewal Plans -->
+        <div class="column-panel">
+          <div class="column-header-banner header-renew">
+            <div class="col-title-text">
+              <i class="fa-solid fa-rotate"></i>
+              <span data-i18n="singleRenewTitle">Single Renewal Plans</span>
+            </div>
+            <span class="col-pill" data-i18n="rightColPill">Right Column</span>
+          </div>
+          <div class="cards-list" id="singleRenewCards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FAMILY (2 KIDS) PACKAGES -->
+    <section class="category-section" id="section-family2">
+      <div class="category-banner">
+        <div class="category-banner-title">
+          <div class="category-icon icon-f2">
+            <i class="fa-solid fa-children"></i>
+          </div>
+          <div>
+            <h2 data-i18n="f2SectionTitle">Family Packages (2 Kids)</h2>
+            <p data-i18n="f2SectionSub">Shared family allowance with dedicated sessions and progressive bonus classes for two siblings</p>
+          </div>
+        </div>
+        <span class="category-tag-count" data-i18n="f2SectionTag"><i class="fa-solid fa-gem" style="color: #38bdf8;"></i> Equal Split per Child</span>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- LEFT: Upgrade Plans -->
+        <div class="column-panel">
+          <div class="column-header-banner header-upgrade">
+            <div class="col-title-text">
+              <i class="fa-solid fa-crown" style="color: #f59e0b;"></i>
+              <span data-i18n="f2UpgradeTitle">Family 2 Kids Upgrade</span>
+            </div>
+            <span class="col-pill" data-i18n="leftColPill">Left Column</span>
+          </div>
+          <div class="cards-list" id="family2UpgradeCards"></div>
+        </div>
+
+        <!-- RIGHT: Renewal Plans -->
+        <div class="column-panel">
+          <div class="column-header-banner header-renew">
+            <div class="col-title-text">
+              <i class="fa-solid fa-rotate"></i>
+              <span data-i18n="f2RenewTitle">Family 2 Kids Renewal</span>
+            </div>
+            <span class="col-pill" data-i18n="rightColPill">Right Column</span>
+          </div>
+          <div class="cards-list" id="family2RenewCards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FAMILY (3 KIDS) PACKAGES -->
+    <section class="category-section" id="section-family3">
+      <div class="category-banner">
+        <div class="category-banner-title">
+          <div class="category-icon icon-f3">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div>
+            <h2 data-i18n="f3SectionTitle">Family Packages (3 Kids)</h2>
+            <p data-i18n="f3SectionSub">Maximum family value tier with massive bonus packages (up to 150 free classes) for three siblings</p>
+          </div>
+        </div>
+        <span class="category-tag-count" data-i18n="f3SectionTag"><i class="fa-solid fa-crown" style="color: #f59e0b;"></i> Ultimate Value Tier</span>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- LEFT: Upgrade Plans -->
+        <div class="column-panel">
+          <div class="column-header-banner header-upgrade">
+            <div class="col-title-text">
+              <i class="fa-solid fa-crown" style="color: #f59e0b;"></i>
+              <span data-i18n="f3UpgradeTitle">Family 3 Kids Upgrade</span>
+            </div>
+            <span class="col-pill" data-i18n="leftColPill">Left Column</span>
+          </div>
+          <div class="cards-list" id="family3UpgradeCards"></div>
+        </div>
+
+        <!-- RIGHT: Renewal Plans -->
+        <div class="column-panel">
+          <div class="column-header-banner header-renew">
+            <div class="col-title-text">
+              <i class="fa-solid fa-rotate"></i>
+              <span data-i18n="f3RenewTitle">Family 3 Kids Renewal</span>
+            </div>
+            <span class="col-pill" data-i18n="rightColPill">Right Column</span>
+          </div>
+          <div class="cards-list" id="family3RenewCards"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Rep Customizer & VIP Card Generator Modal -->
+  <div class="modal-backdrop" id="cardModal">
+    <div class="modal-box">
+      
+      <!-- Left: Form Controls -->
+      <div class="modal-form-side">
+        <div class="modal-top-bar">
+          <h3><i class="fa-solid fa-wand-magic-sparkles" style="color: #f59e0b;"></i> <span data-i18n="modalHeading">Custom Offer Builder</span></h3>
+          <button class="close-btn" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Employee Confidential Guidance Badge -->
+        <div class="modal-emp-info-badge">
+          <div class="emp-lock-tag"><i class="fa-solid fa-lock"></i> <span data-i18n="empInternalTitle">معلومة داخلية للموظف فقط</span></div>
+          <div style="font-size: 12px; color: #cbd5e1; margin-top: 4px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+            <span>السعر الداخلي (+10%): <strong style="color: #f59e0b;" id="modalInternalCostDisplay">2,393 ر.س</strong></span>
+            <span>(بالشيت: <span id="modalInternalSheetDisplay">2,175 ر.س</span>)</span>
+          </div>
+          <div style="font-size: 11px; color: #fda4af; margin-top: 4px;">
+            ⚠️ تنبيه: هذا السعر سري خاص بالشركة فقط ولن يظهر إطلاقاً في كارت العرض المصدر للعميل.
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label data-i18n="modalClientLabel">Parent / Client Name</label>
+          <input type="text" id="modalClientName" value="Dear Parent" oninput="updateLivePreview()">
+        </div>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label data-i18n="modalPlanLabel">Plan Title</label>
+            <input type="text" id="modalPlanName" value="Single Upgrade Package" oninput="updateLivePreview()">
+          </div>
+          <div class="input-group">
+            <label data-i18n="modalDurationLabel">Duration</label>
+            <input type="text" id="modalDuration" value="1 Full Year" oninput="updateLivePreview()">
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label data-i18n="modalBaseLabel">Standard Classes</label>
+            <input type="number" id="modalBaseSessions" value="115" oninput="updateLivePreview()">
+          </div>
+          <div class="input-group">
+            <label data-i18n="modalBonusLabel">Free Gift Bonus (Multiple of 5)</label>
+            <input type="number" id="modalBonusSessions" step="5" value="35" oninput="updateLivePreview()">
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label id="lblModalOfficialPrice" data-i18n="modalOfficialLabel">Official Tuition [SAR]</label>
+            <input type="number" id="modalOfficialPrice" value="6380" oninput="updateLivePreview()">
+          </div>
+          <div class="input-group">
+            <label id="lblModalDiscountedPrice" data-i18n="modalDiscountedLabel">Discounted Tuition [SAR]</label>
+            <input type="number" id="modalDiscountedPrice" value="3630" oninput="updateLivePreview()">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label data-i18n="modalNotesLabel">Special Offer Note / Expiry</label>
+          <input type="text" id="modalNotes" value="* Exclusive offer valid for 48 hours to secure Professional Program seat." oninput="updateLivePreview()">
+        </div>
+
+        <div class="input-group">
+          <label data-i18n="modalRepLabel">Educational Consultant / Rep Name</label>
+          <input type="text" id="modalRepName" value="Academic Advisor - 51Talk Global" oninput="updateLivePreview()">
+        </div>
+      </div>
+
+      <!-- Right: Live Canvas Card Preview -->
+      <div class="modal-preview-side">
+        <div class="vip-card-export" id="exportVipCard">
+          <div class="card-brand-row">
+            <div class="brand-logo-mini">
+              <span class="logo-box">51</span>
+              <span class="logo-title">51Talk Global</span>
+            </div>
+            <span class="vip-gold-pill" id="previewVipPill"><i class="fa-solid fa-award"></i> VIP Professional Program</span>
+          </div>
+
+          <div class="client-greeting-block">
+            <div class="client-greeting-name" id="previewClientName">Dear Parent</div>
+            <div class="client-greeting-sub" id="previewGreetingSub">Certified Professional English Program</div>
+          </div>
+
+          <div class="plan-title-display" id="previewPlanName">Single Upgrade Package</div>
+          <div class="plan-duration-display" id="previewDuration"><i class="fa-regular fa-calendar-check"></i> Duration: 1 Full Year</div>
+
+          <div class="classes-display-box">
+            <div style="font-size: 11px; color: #94a3b8; font-weight: 700; text-transform: uppercase;" id="previewAllocationTitle">Total Class Allocation</div>
+            <div class="classes-total-number" id="previewTotalSessions">150 Private Classes</div>
+            <div class="classes-bonus-highlight" id="previewBonusTag">🎁 Includes 35 Free Bonus Lessons</div>
+            <div class="classes-kid-breakdown" id="previewBreakdownNote">115 Standard Classes + 35 Free Bonus Gift!</div>
+          </div>
+
+          <div class="card-price-deck">
+            <div class="modal-pricing-left-col">
+              <div class="modal-official-striked-row">
+                <span class="modal-price-sublabel" id="previewOfficialSublabel">Official Tuition:</span>
+                <div class="modal-horizontal-strike-wrap">
+                  <span class="modal-official-val" id="previewOfficialVal">6,380 SAR</span>
+                </div>
+              </div>
+              <div class="modal-discounted-main-row">
+                <span class="modal-discounted-sublabel" id="previewDiscountedSublabel">Discounted Tuition:</span>
+                <div class="card-new-figure" id="previewClientPrice">3,630 <span style="font-size: 14px; color: #f59e0b;">SAR</span></div>
+              </div>
+            </div>
+            <div style="text-align: right;" id="previewGrantWrap">
+              <div style="font-size: 11px; color: #10b981; font-weight: 800; text-transform: uppercase;" id="previewGrantTitle">Professional Program</div>
+              <div style="font-size: 13.5px; color: #00f5a0; font-weight: 800; margin-top: 4px;" id="previewGrantClassesText">🎁 Free Lessons Included</div>
+            </div>
+          </div>
+
+          <ul class="perks-checklist">
+            <li><i class="fa-solid fa-circle-check"></i> <span id="previewPerk1">Certified International Native/TESOL Tutors</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span id="previewPerk2">100% Flexible Booking & Personalized Pace</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span id="previewPerk3">Weekly AI Pronunciation & Fluency Reports</span></li>
+          </ul>
+
+          <div class="card-bottom-row">
+            <span id="previewNotes">* Valid for 48 hours only</span>
+            <span id="previewRepName">51Talk Academic Advisor</span>
+          </div>
+        </div>
+
+        <div class="modal-action-buttons">
+          <button class="btn-download-png" onclick="downloadCardPNG()">
+            <i class="fa-solid fa-download"></i> <span data-i18n="btnDownloadCard">Download Card (PNG)</span>
+          </button>
+          <button class="btn-send-whatsapp" onclick="shareWhatsAppPitch()">
+            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btnWhatsAppPitch">WhatsApp Pitch</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast notification banner -->
+  <div class="toast-msg" id="toastBox">
+    <i class="fa-solid fa-circle-check" style="color: #34d399; font-size: 18px;"></i>
+    <span id="toastText">Action completed successfully!</span>
+  </div>
+
+  <script>
+    /*
+      ==================================================================
+      51TALK TRANSLATION DICTIONARY
+      ==================================================================
+    */
+    const I18N = {
+      en: {
+        rateBadge: '<i class="fa-solid fa-check-circle"></i> Rate Card',
+        tabAll: 'All Packages',
+        tabSingle: 'Single (1 Student)',
+        tabFamily2: 'Family (2 Kids)',
+        tabFamily3: 'Family (3 Kids)',
+        searchPlaceholder: 'Search by duration or sessions...',
+        singleSectionTitle: 'Single Student Packages (Individual)',
+        singleSectionSub: 'Dedicated 1-on-1 private lessons with certified foreign native/TESOL teachers',
+        singleSectionTag: '<i class="fa-solid fa-star" style="color: #f59e0b;"></i> 7 Durations (6 Months to 2.5 Years)',
+        singleUpgradeTitle: 'Single Upgrade Plans',
+        singleRenewTitle: 'Single Renewal Plans',
+        f2SectionTitle: 'Family Packages (2 Kids)',
+        f2SectionSub: 'Shared family allowance with dedicated sessions and progressive bonus classes for two siblings',
+        f2SectionTag: '<i class="fa-solid fa-gem" style="color: #38bdf8;"></i> Equal Split per Child',
+        f2UpgradeTitle: 'Family 2 Kids Upgrade',
+        f2RenewTitle: 'Family 2 Kids Renewal',
+        f3SectionTitle: 'Family Packages (3 Kids)',
+        f3SectionSub: 'Maximum family value tier with massive bonus packages (up to 150 free classes) for three siblings',
+        f3SectionTag: '<i class="fa-solid fa-crown" style="color: #f59e0b;"></i> Ultimate Value Tier',
+        f3UpgradeTitle: 'Family 3 Kids Upgrade',
+        f3RenewTitle: 'Family 3 Kids Renewal',
+        leftColPill: 'Left Column',
+        rightColPill: 'Right Column',
+        cardStandard: 'Standard',
+        cardFreeGift: 'Free Gift',
+        cardTotalClasses: 'Total Classes',
+        cardOfficialPriceTitle: 'Official Price',
+        cardScholarshipTitle: 'Scholarship Rate',
+        cardSave: 'Save',
+        cardPerClass: 'SAR / class',
+        cardGenerateBtn: 'Generate Offer Card',
+        currency: 'SAR',
+        famKidsLabel: 'Children',
+        famPerKidLabel: 'Per Child',
+        famTotalLabel: 'Family Total',
+        kidsText: 'Kids',
+        classesText: 'Classes',
+        baseText: 'Base',
+        giftText: 'Gift',
+        empInternalTitle: 'Internal Employee Info',
+        empInternalPill: 'Confidential / Unannounced',
+        empSheetCostLabel: 'Sheet Base (After Grant):',
+        empPlus10CostLabel: 'Internal Cost (+10%):',
+        empWarningNote: 'Private internal company pricing. NEVER send to client and never include in offer card.',
+        cardClientOfficialPrice: 'Approved Client Tuition',
+        cardGiftClassesIncluded: 'Professional Program Gift',
+        toggleStaffCostBtn: 'Staff Cost Info (Side)',
+        sidePanelTitle: 'Staff Only',
+        sideSheetLabel: 'Sheet:',
+        sidePlus10Label: '+10% Cost:',
+        sideSafeShieldText: 'Outside card (safe for screenshots)',
+        modalHeading: 'Custom Offer Builder',
+        modalClientLabel: 'Parent / Client Name',
+        modalPlanLabel: 'Plan Title',
+        modalDurationLabel: 'Duration',
+        modalBaseLabel: 'Standard Classes',
+        modalBonusLabel: 'Free Gift Bonus (Multiple of 5)',
+        modalOfficialLabel: 'Official Tuition [SAR]',
+        modalDiscountedLabel: 'Discounted Tuition [SAR]',
+        modalNotesLabel: 'Special Offer Note / Expiry',
+        modalRepLabel: 'Educational Consultant / Rep Name',
+        btnDownloadCard: 'Download Card (PNG)',
+        btnWhatsAppPitch: 'WhatsApp Pitch',
+        previewVip: '<i class="fa-solid fa-award"></i> VIP Professional Program',
+        previewGreetingSub: 'Certified Professional English Program',
+        previewPerk1: 'Certified International Native/TESOL Tutors',
+        previewPerk2: '100% Flexible Booking & Personalized Pace',
+        previewPerk3: 'Weekly AI Pronunciation & Fluency Reports',
+        toastCardDownloaded: '✅ High-Resolution Offer Card Downloaded!',
+        toastPitchCopied: '📋 Pitch copied! Opening WhatsApp...',
+        toastSummaryCopied: '📋 Summary copied to clipboard!'
+      },
+      ar: {
+        rateBadge: '<i class="fa-solid fa-check-circle"></i> أسعار معتمدة',
+        tabAll: 'كل الباقات',
+        tabSingle: 'باقات فردية (طالب واحد)',
+        tabFamily2: 'عائلية (طفلين - 2 Kids)',
+        tabFamily3: 'عائلية (3 أطفال - 3 Kids)',
+        searchPlaceholder: 'ابحث بالمدة أو بعدد الحصص...',
+        singleSectionTitle: 'باقات الطالب الفردي (Single)',
+        singleSectionSub: 'حصص خاصة 1-on-1 مع معلمين أجانب معتمدين دولياً',
+        singleSectionTag: '<i class="fa-solid fa-star" style="color: #f59e0b;"></i> 7 مدد زمنية (من 6 شهور حتى سنتين ونصف)',
+        singleUpgradeTitle: 'باقات ترقية الفردي (Upgrade)',
+        singleRenewTitle: 'باقات تجديد الفردي (Renewal)',
+        f2SectionTitle: 'باقات العائلة (طفلين - 2 Kids)',
+        f2SectionSub: 'رصيد عائلي مشترك مع حصص مجانية وفيرة مقسمة بالتساوي بين الأخوين',
+        f2SectionTag: '<i class="fa-solid fa-gem" style="color: #38bdf8;"></i> تقسيم متساوي لكل طفل',
+        f2UpgradeTitle: 'ترقية باقات طفلين (Upgrade)',
+        f2RenewTitle: 'تجديد باقات طفلين (Renewal)',
+        f3SectionTitle: 'باقات العائلة (3 أطفال - 3 Kids)',
+        f3SectionSub: 'أعلى توفير عائلي مع حصص مجانية تصل إلى 150 حصة هدية للأطفال الثلاثة',
+        f3SectionTag: '<i class="fa-solid fa-crown" style="color: #f59e0b;"></i> أعلى قيمة وتوفير',
+        f3UpgradeTitle: 'ترقية باقات 3 أطفال (Upgrade)',
+        f3RenewTitle: 'تجديد باقات 3 أطفال (Renewal)',
+        leftColPill: 'العمود الأيسر',
+        rightColPill: 'العمود الأيمن',
+        cardStandard: 'الأساسية',
+        cardFreeGift: 'المجانية',
+        cardTotalClasses: 'إجمالي الحصص',
+        cardOfficialPriceTitle: 'السعر الرسمي',
+        cardScholarshipTitle: 'السعر بعد الخصم',
+        cardSave: 'وفر',
+        cardPerClass: 'ر.س / للحصة',
+        cardGenerateBtn: 'توليد كارت العرض للعميل',
+        currency: 'ر.س',
+        famKidsLabel: 'عدد الأطفال',
+        famPerKidLabel: 'لكل طفل',
+        famTotalLabel: 'إجمالي العائلة',
+        kidsText: 'أطفال',
+        classesText: 'حصة',
+        baseText: 'أساسي',
+        giftText: 'هدية',
+        empInternalTitle: 'معلومة داخلية خاصة بالموظف فقط',
+        empInternalPill: 'سري - غير معلن للعميل',
+        empSheetCostLabel: 'سعر التكلفة بالشيت (بعد المنحة):',
+        empPlus10CostLabel: 'السعر الداخلي المعتمد (+10%):',
+        empWarningNote: 'السعر الخاص بنا كمعلومة داخلية سرية - لا يُرسل للعميل ولا يُذكر في كارت العرض إطلاقاً.',
+        cardClientOfficialPrice: 'السعر المعتمد للعميل',
+        cardGiftClassesIncluded: 'هدية البرنامج الاحترافي المعتمدة',
+        toggleStaffCostBtn: 'بيانات التكلفة (جانبية)',
+        sidePanelTitle: 'للموظف فقط',
+        sideSheetLabel: 'بالشيت:',
+        sidePlus10Label: 'مع 10%:',
+        sideSafeShieldText: 'خارج الكارت لحماية لقطات الشاشة',
+        modalHeading: 'تخصيص كارت العرض للعميل',
+        modalClientLabel: 'اسم ولي الأمر / العميل',
+        modalPlanLabel: 'اسم الباقة',
+        modalDurationLabel: 'المدة الزمنية',
+        modalBaseLabel: 'الحصص الأساسية',
+        modalBonusLabel: 'الحصص المجانية الهدية (مضاعفات 5)',
+        modalOfficialLabel: 'السعر الرسمي المعتمد [ر.س]',
+        modalDiscountedLabel: 'السعر بعد الخصم (+10%) [ر.س]',
+        modalNotesLabel: 'ملاحظة خاصة / مدة سريان العرض',
+        modalRepLabel: 'اسم المستشار الأكاديمي / الموظف',
+        btnDownloadCard: 'تحميل كارت العرض (PNG)',
+        btnWhatsAppPitch: 'رسالة واتساب جاهزة',
+        previewVip: '<i class="fa-solid fa-award"></i> كارت البرنامج الاحترافي VIP',
+        previewGreetingSub: 'البرنامج الاحترافي المعتمد لتعليم الإنجليزية',
+        previewPerk1: 'معلمين أجانب معتمدين بشهادات TESOL الدولية',
+        previewPerk2: 'مرونة تامة في اختيار وتعديل مواعيد الحصص',
+        previewPerk3: 'تقارير أسبوعية تفاعلية لمتابعة النطق والطلاقة',
+        toastCardDownloaded: '✅ تم تحميل كارت العرض عالي الدقة بنجاح!',
+        toastPitchCopied: '📋 تم نسخ الرسالة وجاري فتح الواتساب...',
+        toastSummaryCopied: '📋 تم نسخ ملخص الباقة بنجاح!'
+      }
+    };
+
+    let currentLanguage = 'en';
+
+    /*
+      ==================================================================
+      51TALK PRICING DATA MODEL
+      ==================================================================
+    */
+    const ALL_PACKAGES = {
+      single: {
+        upgrade: [
+          {
+            id: 'up-s-75',
+            durationEn: '6 Months', durationAr: 'نصف سنة',
+            total: 75, base: 60, bonus: 15,
+            sheetCost: 2885, sheetDiscCost: 2175,
+            isPopular: false
+          },
+          {
+            id: 'up-s-90',
+            durationEn: '7 Months', durationAr: '7 شهور',
+            total: 90, base: 70, bonus: 20,
+            sheetCost: 3000, sheetDiscCost: 2370,
+            isPopular: false
+          },
+          {
+            id: 'up-s-105',
+            durationEn: '9 Months', durationAr: '9 شهور',
+            total: 105, base: 80, bonus: 25,
+            sheetCost: 3281, sheetDiscCost: 2625,
+            isPopular: false
+          },
+          {
+            id: 'up-s-150',
+            durationEn: '1 Full Year', durationAr: 'سنة كاملة',
+            total: 150, base: 115, bonus: 35,
+            sheetCost: 5800, sheetDiscCost: 3300,
+            isPopular: true,
+            ribbonEn: '🔥 Most Popular & Best Value',
+            ribbonAr: '🔥 الأكثر طلباً وأعلى توفير'
+          },
+          {
+            id: 'up-s-225',
+            durationEn: '1.5 Years', durationAr: 'سنة و نصف',
+            total: 225, base: 175, bonus: 50,
+            sheetCost: 8775, sheetDiscCost: 4800,
+            isPopular: false
+          },
+          {
+            id: 'up-s-300',
+            durationEn: '2 Years', durationAr: 'سنتين',
+            total: 300, base: 225, bonus: 75,
+            sheetCost: 11325, sheetDiscCost: 6225,
+            isPopular: false
+          },
+          {
+            id: 'up-s-375',
+            durationEn: '2.5 Years', durationAr: 'سنتين و نصف',
+            total: 375, base: 275, bonus: 100,
+            sheetCost: 14250, sheetDiscCost: 7800,
+            isPopular: true,
+            ribbonEn: '💎 Diamond Tier (100 Free Classes!)',
+            ribbonAr: '💎 الباقة الماسية (100 حصة مجانية!)'
+          }
+        ],
+        renew: [
+          {
+            id: 'rn-s-75',
+            durationEn: '6 Months', durationAr: 'نصف سنة',
+            total: 75, base: 60, bonus: 15,
+            sheetCost: 2700, sheetDiscCost: 2475,
+            isPopular: false
+          },
+          {
+            id: 'rn-s-90',
+            durationEn: '7 Months', durationAr: '7 شهور',
+            total: 90, base: 70, bonus: 20,
+            sheetCost: 3176, sheetDiscCost: 2700,
+            isPopular: false
+          },
+          {
+            id: 'rn-s-105',
+            durationEn: '9 Months', durationAr: '9 شهور',
+            total: 105, base: 80, bonus: 25,
+            sheetCost: 3750, sheetDiscCost: 3000,
+            isPopular: false
+          },
+          {
+            id: 'rn-s-150',
+            durationEn: '1 Full Year', durationAr: 'سنة كاملة',
+            total: 150, base: 115, bonus: 35,
+            sheetCost: 6275, sheetDiscCost: 3825,
+            isPopular: true,
+            ribbonEn: '🔥 Top Renewal Choice',
+            ribbonAr: '🔥 الأكثر طلباً بالتجديد'
+          },
+          {
+            id: 'rn-s-225',
+            durationEn: '1.5 Years', durationAr: 'سنة و نصف',
+            total: 225, base: 175, bonus: 50,
+            sheetCost: 9975, sheetDiscCost: 5475,
+            isPopular: false
+          },
+          {
+            id: 'rn-s-300',
+            durationEn: '2 Years', durationAr: 'سنتين',
+            total: 300, base: 225, bonus: 75,
+            sheetCost: 12450, sheetDiscCost: 6825,
+            isPopular: false
+          },
+          {
+            id: 'rn-s-375',
+            durationEn: '2.5 Years', durationAr: 'سنتين و نصف',
+            total: 375, base: 275, bonus: 100,
+            sheetCost: 14775, sheetDiscCost: 8100,
+            isPopular: true,
+            ribbonEn: '💎 2.5 Years Extended Renewal',
+            ribbonAr: '💎 تجديد سنتين ونصف ممتد'
+          }
+        ]
+      },
+
+      family2: {
+        upgrade: [
+          {
+            id: 'up-f2-150',
+            durationEn: '6 Months', durationAr: 'نصف سنة',
+            kidsCount: 2,
+            total: 150, base: 120, bonus: 30,
+            perKid: { total: 75, base: 60, bonus: 15 },
+            sheetCost: 7950, sheetDiscCost: 4050,
+            isPopular: false
+          },
+          {
+            id: 'up-f2-180',
+            durationEn: '7 Months', durationAr: '7 شهور',
+            kidsCount: 2,
+            total: 180, base: 140, bonus: 40,
+            perKid: { total: 90, base: 70, bonus: 20 },
+            sheetCost: 10300, sheetDiscCost: 4440,
+            isPopular: false
+          },
+          {
+            id: 'up-f2-210',
+            durationEn: '9 Months', durationAr: '9 شهور',
+            kidsCount: 2,
+            total: 210, base: 160, bonus: 50,
+            perKid: { total: 105, base: 80, bonus: 25 },
+            sheetCost: 11450, sheetDiscCost: 4905,
+            isPopular: false
+          },
+          {
+            id: 'up-f2-300',
+            durationEn: '1 Full Year', durationAr: 'سنة كاملة',
+            kidsCount: 2,
+            total: 300, base: 230, bonus: 70,
+            perKid: { total: 150, base: 115, bonus: 35 },
+            sheetCost: 12000, sheetDiscCost: 6225,
+            isPopular: true,
+            ribbonEn: '🌟 Top Pick for 2 Siblings',
+            ribbonAr: '🌟 الخيار الأفضل لطفلين'
+          },
+          {
+            id: 'up-f2-450',
+            durationEn: '1.5 Years', durationAr: 'سنة و نصف',
+            kidsCount: 2,
+            total: 450, base: 350, bonus: 100,
+            perKid: { total: 225, base: 175, bonus: 50 },
+            sheetCost: 17550, sheetDiscCost: 8775,
+            isPopular: false
+          }
+        ],
+        renew: [
+          {
+            id: 'rn-f2-150',
+            durationEn: '6 Months', durationAr: 'نصف سنة',
+            kidsCount: 2,
+            total: 150, base: 120, bonus: 30,
+            perKid: { total: 75, base: 60, bonus: 15 },
+            sheetCost: 7150, sheetDiscCost: 4350,
+            isPopular: false
+          },
+          {
+            id: 'rn-f2-180',
+            durationEn: '7 Months', durationAr: '7 شهور',
+            kidsCount: 2,
+            total: 180, base: 140, bonus: 40,
+            perKid: { total: 90, base: 70, bonus: 20 },
+            sheetCost: 8500, sheetDiscCost: 4575,
+            isPopular: false
+          },
+          {
+            id: 'rn-f2-210',
+            durationEn: '9 Months', durationAr: '9 شهور',
+            kidsCount: 2,
+            total: 210, base: 160, bonus: 50,
+            perKid: { total: 105, base: 80, bonus: 25 },
+            sheetCost: 9650, sheetDiscCost: 5025,
+            isPopular: false
+          },
+          {
+            id: 'rn-f2-300',
+            durationEn: '1 Full Year', durationAr: 'سنة كاملة',
+            kidsCount: 2,
+            total: 300, base: 230, bonus: 70,
+            perKid: { total: 150, base: 115, bonus: 35 },
+            sheetCost: 13950, sheetDiscCost: 6563,
+            isPopular: true,
+            ribbonEn: '🌟 Best 2-Child Renewal Value',
+            ribbonAr: '🌟 أفضل قيمة لتجديد طفلين'
+          },
+          {
+            id: 'rn-f2-450',
+            durationEn: '1.5 Years', durationAr: 'سنة و نصف',
+            kidsCount: 2,
+            total: 450, base: 350, bonus: 100,
+            perKid: { total: 225, base: 175, bonus: 50 },
+            sheetCost: 19950, sheetDiscCost: 9225,
+            isPopular: false
+          }
+        ]
+      },
+
+      family3: {
+        upgrade: [
+          {
+            id: 'up-f3-225',
+            durationEn: '6 Months', durationAr: 'نصف سنة',
+            kidsCount: 3,
+            total: 225, base: 180, bonus: 45,
+            perKid: { total: 75, base: 60, bonus: 15 },
+            sheetCost: 11925, sheetDiscCost: 5445,
+            isPopular: false
+          },
+          {
+            id: 'up-f3-270',
+            durationEn: '7 Months', durationAr: '7 شهور',
+            kidsCount: 3,
+            total: 270, base: 210, bonus: 60,
+            perKid: { total: 90, base: 70, bonus: 20 },
+            sheetCost: 6700, sheetDiscCost: 6030,
+            isPopular: false
+          },
+          {
+            id: 'up-f3-315',
+            durationEn: '9 Months', durationAr: '9 شهور',
+            kidsCount: 3,
+            total: 315, base: 240, bonus: 75,
+            perKid: { total: 105, base: 80, bonus: 25 },
+            sheetCost: 8382, sheetDiscCost: 6705,
+            isPopular: false
+          },
+          {
+            id: 'up-f3-450',
+            durationEn: '1 Full Year', durationAr: 'سنة كاملة',
+            kidsCount: 3,
+            total: 450, base: 345, bonus: 105,
+            perKid: { total: 150, base: 115, bonus: 35 },
+            sheetCost: 18000, sheetDiscCost: 8820,
+            isPopular: true,
+            ribbonEn: '🏆 3 Siblings Champion',
+            ribbonAr: '🏆 بطل التوفير لـ 3 أطفال'
+          },
+          {
+            id: 'up-f3-675',
+            durationEn: '1.5 Years', durationAr: 'سنة و نصف',
+            kidsCount: 3,
+            total: 675, base: 525, bonus: 150,
+            perKid: { total: 225, base: 175, bonus: 50 },
+            sheetCost: 26325, sheetDiscCost: 12420,
+            isPopular: true,
+            ribbonEn: '👑 Massive 150 Free Classes',
+            ribbonAr: '👑 150 حصة مجانية بالكامل للأطفال الثلاثة'
+          }
+        ],
+        renew: [
+          {
+            id: 'rn-f3-225',
+            durationEn: '6 Months', durationAr: 'نصف سنة',
+            kidsCount: 3,
+            total: 225, base: 180, bonus: 45,
+            perKid: { total: 75, base: 60, bonus: 15 },
+            sheetCost: 6600, sheetDiscCost: 5895,
+            isPopular: false
+          },
+          {
+            id: 'rn-f3-270',
+            durationEn: '7 Months', durationAr: '7 شهور',
+            kidsCount: 3,
+            total: 270, base: 210, bonus: 60,
+            perKid: { total: 90, base: 70, bonus: 20 },
+            sheetCost: 7300, sheetDiscCost: 6165,
+            isPopular: false
+          },
+          {
+            id: 'rn-f3-315',
+            durationEn: '9 Months', durationAr: '9 شهور',
+            kidsCount: 3,
+            total: 315, base: 240, bonus: 75,
+            perKid: { total: 105, base: 80, bonus: 25 },
+            sheetCost: 8100, sheetDiscCost: 6885,
+            isPopular: false
+          },
+          {
+            id: 'rn-f3-450',
+            durationEn: '1 Full Year', durationAr: 'سنة كاملة',
+            kidsCount: 3,
+            total: 450, base: 345, bonus: 105,
+            perKid: { total: 150, base: 115, bonus: 35 },
+            sheetCost: 20925, sheetDiscCost: 9113,
+            isPopular: true,
+            ribbonEn: '🏆 Maximum 3-Kid Savings',
+            ribbonAr: '🏆 توفير التجديد لـ 3 أطفال'
+          },
+          {
+            id: 'rn-f3-675',
+            durationEn: '1.5 Years', durationAr: 'سنة و نصف',
+            kidsCount: 3,
+            total: 675, base: 525, bonus: 150,
+            perKid: { total: 225, base: 175, bonus: 50 },
+            sheetCost: 29925, sheetDiscCost: 12825,
+            isPopular: true,
+            ribbonEn: '👑 150 Free Renewal Classes',
+            ribbonAr: '👑 150 حصة تجديد مجانية'
+          }
+        ]
+      }
+    };
+
+    function pricePlus10(val) {
+      return Math.round(val * 1.10);
+    }
+
+    let activeCategoryTab = 'all';
+    let currentSearchTerm = '';
+
+    function switchLanguage(lang) {
+      currentLanguage = lang;
+      const htmlEl = document.getElementById('htmlRoot');
+      const btnEn = document.getElementById('langBtnEn');
+      const btnAr = document.getElementById('langBtnAr');
+
+      if (lang === 'ar') {
+        htmlEl.setAttribute('lang', 'ar');
+        htmlEl.setAttribute('dir', 'rtl');
+        btnAr.classList.add('active');
+        btnEn.classList.remove('active');
+      } else {
+        htmlEl.setAttribute('lang', 'en');
+        htmlEl.setAttribute('dir', 'ltr');
+        btnEn.classList.add('active');
+        btnAr.classList.remove('active');
+      }
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (I18N[lang][key]) {
+          el.innerHTML = I18N[lang][key];
+        }
+      });
+
+      document.getElementById('rateBadgeText').innerHTML = I18N[lang].rateBadge;
+      document.getElementById('searchInput').placeholder = I18N[lang].searchPlaceholder;
+
+      if (lang === 'ar') {
+        document.getElementById('modalClientName').value = "ولي أمر الطالب العزيز";
+        document.getElementById('modalNotes').value = "* العرض ساري لمدة 48 ساعة فقط لحجز مقعد المنحة.";
+        document.getElementById('modalRepName').value = "المستشار الأكاديمي - 51Talk Global";
+      } else {
+        document.getElementById('modalClientName').value = "Dear Parent";
+        document.getElementById('modalNotes').value = "* Exclusive offer valid for 48 hours to secure grant allocation.";
+        document.getElementById('modalRepName').value = "Academic Advisor - 51Talk Global";
+      }
+
+      renderAllSections();
+      updateLivePreview();
+    }
+
+    function renderAllSections() {
+      renderCategory('single', 'singleUpgradeCards', 'singleRenewCards', currentLanguage === 'ar' ? 'باقة فردية' : 'Single Package');
+      renderCategory('family2', 'family2UpgradeCards', 'family2RenewCards', currentLanguage === 'ar' ? 'عائلية (طفلين)' : 'Family (2 Kids)');
+      renderCategory('family3', 'family3UpgradeCards', 'family3RenewCards', currentLanguage === 'ar' ? 'عائلية (3 أطفال)' : 'Family (3 Kids)');
+    }
+
+    function renderCategory(catKey, upgradeContainerId, renewContainerId, categoryDisplayName) {
+      const upContainer = document.getElementById(upgradeContainerId);
+      const rnContainer = document.getElementById(renewContainerId);
+
+      upContainer.innerHTML = '';
+      rnContainer.innerHTML = '';
+
+      const upPlans = ALL_PACKAGES[catKey].upgrade.filter(filterPredicate);
+      const rnPlans = ALL_PACKAGES[catKey].renew.filter(filterPredicate);
+
+      const noPlansText = currentLanguage === 'ar' ? 'لا توجد باقات مطابقة' : 'No matching plans found';
+
+      if (upPlans.length === 0) {
+        upContainer.innerHTML = `<div style="text-align:center; padding: 25px; color:#64748b; font-size:13px;">${noPlansText}</div>`;
+      } else {
+        upPlans.forEach(plan => {
+          upContainer.appendChild(createPlanCard(plan, currentLanguage === 'ar' ? 'ترقية' : 'Upgrade', categoryDisplayName, true));
+        });
+      }
+
+      if (rnPlans.length === 0) {
+        rnContainer.innerHTML = `<div style="text-align:center; padding: 25px; color:#64748b; font-size:13px;">${noPlansText}</div>`;
+      } else {
+        rnPlans.forEach(plan => {
+          rnContainer.appendChild(createPlanCard(plan, currentLanguage === 'ar' ? 'تجديد' : 'Renewal', categoryDisplayName, false));
+        });
+      }
+    }
+
+    function filterPredicate(plan) {
+      if (!currentSearchTerm) return true;
+      const term = currentSearchTerm.toLowerCase();
+      const dur = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
+      return dur.toLowerCase().includes(term) ||
+             plan.total.toString().includes(term) ||
+             plan.bonus.toString().includes(term);
+    }
+
+    function createPlanCard(plan, typeName, categoryDisplayName, isUpgrade) {
+      const card = document.createElement('div');
+      // Radiant Glowing Gold Border for Upgrade Cards as requested
+      card.className = `plan-card ${isUpgrade ? 'card-upgrade-gold' : ''} ${plan.isPopular && !isUpgrade ? 'highlight' : ''}`;
+
+      const t = I18N[currentLanguage];
+      const duration = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
+      const ribbonText = currentLanguage === 'ar' ? plan.ribbonAr : plan.ribbonEn;
+
+      // Price computations
+      const officialPrice = pricePlus10(plan.sheetCost);
+      const scholarshipPrice = pricePlus10(plan.sheetDiscCost);
+
+      const savings = officialPrice - scholarshipPrice;
+      const discPct = Math.round((savings / officialPrice) * 100);
+      const ratePerClass = (scholarshipPrice / plan.total).toFixed(1);
+
+      // Percentage of free classes for cosmic glowing indicator
+      const basePct = Math.round((plan.base / plan.total) * 100);
+      const bonusPct = 100 - basePct;
+
+      let ribbonHtml = '';
+      if (ribbonText) {
+        ribbonHtml = `<div class="card-ribbon">${ribbonText}</div>`;
+      }
+
+      // Dedicated Family Footer for Family Packages
+      let familyFooterHtml = '';
+      if (plan.kidsCount) {
+        familyFooterHtml = `
+          <div class="family-card-footer">
+            <div class="fam-stat-item">
+              <span class="fam-stat-label">${t.famKidsLabel}</span>
+              <span class="fam-stat-val">👨‍👧‍👦 ${plan.kidsCount} ${t.kidsText}</span>
+            </div>
+            <div class="fam-stat-item">
+              <span class="fam-stat-label">${t.famPerKidLabel}</span>
+              <span class="fam-stat-val gold">${plan.perKid.total} ${t.classesText} (${plan.perKid.base}+🎁${plan.perKid.bonus})</span>
+            </div>
+            <div class="fam-stat-item">
+              <span class="fam-stat-label">${t.famTotalLabel}</span>
+              <span class="fam-stat-val emerald">${plan.total} ${t.classesText}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      card.innerHTML = `
+        ${ribbonHtml}
+
+        <!-- PACKAGE HEADLINE BANNER (PROMINENT TOTAL CLASSES AT TOP) -->
+        ${plan.kidsCount ? `
+          <div class="package-header-headline">
+            <div class="fam-headline-badge">
+              <div class="fam-headline-left">
+                <i class="fa-solid fa-users"></i>
+                <span class="fam-headline-title">${currentLanguage === 'ar' ? `باقة ${plan.total} حصة عائلية` : `Family Plan: ${plan.total} Classes`}</span>
+              </div>
+              <span class="fam-headline-split">${currentLanguage === 'ar' ? `${plan.perKid.total} حصة لكل طفل` : `${plan.perKid.total} Classes/Child`}</span>
+            </div>
+          </div>
+        ` : `
+          <div class="package-header-headline">
+            <div class="single-headline-badge">
+              <i class="fa-solid fa-user"></i>
+              <span class="single-headline-title">${currentLanguage === 'ar' ? `باقة ${plan.total} حصة فردية` : `Single Plan: ${plan.total} Classes`}</span>
+            </div>
+          </div>
+        `}
+
+        <div class="card-top-row">
+          <div>
+            <div class="duration-tag"><i class="fa-regular fa-clock"></i> ${duration}</div>
+            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px; font-weight: 600;">
+              ${categoryDisplayName} • ${typeName}
+            </div>
+          </div>
+          <span class="savings-badge">🎁 +${plan.bonus} ${t.classesText} ${t.cardFreeGift}</span>
+        </div>
+
+        <!-- Sessions Block: Base & Bonus on Top, Total Underneath -->
+        <div class="sessions-card-block">
+          <div class="sessions-top-split">
+            <div class="session-mini-box box-base-style">
+              <span class="mini-title">${t.cardStandard}</span>
+              <span class="mini-val">${plan.base}</span>
+            </div>
+            <div class="split-divider-plus">+</div>
+            <div class="session-mini-box box-bonus-style">
+              <span class="mini-title">${t.cardFreeGift}</span>
+              <span class="mini-val"><i class="fa-solid fa-gift"></i> ${plan.bonus}</span>
+            </div>
+          </div>
+
+          <!-- COSMIC LUMINOUS SPACE-GLOW INDICATOR BAR -->
+          <div class="cosmic-ratio-container">
+            <div class="cosmic-ratio-bar" title="${basePct}% Base + ${bonusPct}% Free Gift">
+              <div class="bar-seg-cosmic-base" style="width: ${basePct}%;"></div>
+              <div class="bar-seg-cosmic-bonus" style="width: ${bonusPct}%;"></div>
+            </div>
+            <div class="cosmic-meta-labels">
+              <span>🌌 ${plan.base} ${t.baseText} (${basePct}%)</span>
+              <span class="meta-cosmic-gift">✨ +${plan.bonus} ${t.giftText} (${bonusPct}%)</span>
+            </div>
+          </div>
+
+          <div class="sessions-total-banner">
+            <span class="total-banner-label"><i class="fa-solid fa-layer-group"></i> ${t.cardTotalClasses}</span>
+            <div class="total-banner-count">${plan.total} <span>${currentLanguage === 'ar' ? 'حصة' : 'Classes'}</span></div>
+          </div>
+        </div>
+
+        <!-- CLIENT PRICING CONTAINER: FULL VISIBILITY & SPACIOUS HIERARCHY -->
+        <div class="official-pricing-container">
+          
+          <!-- Top Row: Official Striked Price (Horizontal Red Line) & Grant Discount Pill -->
+          <div class="pricing-header-row">
+            <div class="official-row-striked">
+              <span class="official-label-prominent"><i class="fa-solid fa-tag"></i> ${currentLanguage === 'ar' ? 'السعر الرسمي:' : 'Official Tuition:'}</span>
+              <div class="diagonal-strike-wrapper">
+                <span class="official-value-striked">${officialPrice.toLocaleString()} ${t.currency}</span>
+              </div>
+            </div>
+            <div class="grant-discount-pill">
+              <i class="fa-solid fa-bolt"></i> ${currentLanguage === 'ar' ? `خصم المنحة -${discPct}%` : `-${discPct}% Grant`}
+            </div>
+          </div>
+
+          <!-- Main Row: Prominent Discounted Price & Per-Lesson Rate -->
+          <div class="scholarship-main-row">
+            <div class="scholarship-label-badge">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> ${currentLanguage === 'ar' ? 'السعر بعد الخصم (البرنامج الاحترافي)' : 'Professional Program Price'}
+            </div>
+            <div class="scholarship-final-price">
+              ${scholarshipPrice.toLocaleString()} <span class="curr-sign">${t.currency}</span>
+            </div>
+            <div class="per-lesson-rate-pill">
+              <span class="rate-badge-item"><i class="fa-solid fa-calculator"></i> <strong class="rate-num">${ratePerClass}</strong> ${t.cardPerClass}</span>
+              <span class="savings-tag"><i class="fa-solid fa-piggy-bank"></i> ${currentLanguage === 'ar' ? `وفر ${savings.toLocaleString()} ${t.currency}` : `Save ${savings.toLocaleString()} ${t.currency}`}</span>
+            </div>
+          </div>
+
+          <!-- Bottom Banner: Gift Classes Included (Wide, readable & uncrowded) -->
+          <div class="scholarship-gift-banner">
+            <div class="gift-banner-left">
+              <span class="gift-icon-sparkle"><i class="fa-solid fa-gift"></i></span>
+              <span class="gift-banner-text">${t.cardGiftClassesIncluded}: <strong class="gift-classes-count">+${plan.bonus} ${t.classesText}</strong></span>
+            </div>
+            <span class="grant-status-badge">${currentLanguage === 'ar' ? 'مهداة بالكامل مع الاشتراك' : 'Full Free Gift Included'}</span>
+          </div>
+
+        </div>
+
+        <!-- Family Footer -->
+        ${familyFooterHtml}
+
+        <div class="card-actions-grid">
+          <button class="btn-create-offer" onclick='openModalWithPlan(${JSON.stringify(plan)}, "${typeName}", "${categoryDisplayName}")'>
+            <i class="fa-solid fa-file-invoice"></i> ${t.cardGenerateBtn}
+          </button>
+          <button class="btn-quick-copy" title="Copy quick pitch" onclick='copyQuickPitch(${JSON.stringify(plan)}, "${typeName}", "${categoryDisplayName}")'>
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+      `;
+
+      // Coordinated Separator between Card and Hidden Cost Table
+      const separatorEl = document.createElement('div');
+      separatorEl.className = 'card-accordion-divider';
+      separatorEl.innerHTML = `
+        <span class="divider-line"></span>
+        <span class="divider-badge"><i class="fa-solid fa-lock"></i> ${currentLanguage === 'ar' ? 'التكلفة الداخلية للمنصة' : 'Internal Platform Ledger'}</span>
+        <span class="divider-line"></span>
+      `;
+
+      // Hidden Cost Accordion Table: ONLY Contains Final Platform Cost (The Cheapest Price) with Prominent Arrow
+      const costAccordion = document.createElement('div');
+      costAccordion.className = 'cost-accordion-container';
+      costAccordion.innerHTML = `
+        <button class="cost-accordion-trigger" onclick="toggleCostAccordion('${plan.id}')" title="${currentLanguage === 'ar' ? 'اضغط لعرض سعر التكلفة الداخلي' : 'Click to view confidential platform cost'}">
+          <div class="trigger-left">
+            <span class="trigger-lock-icon"><i class="fa-solid fa-lock"></i></span>
+            <span class="trigger-title-text">${currentLanguage === 'ar' ? 'سعر التكلفة الداخلي للمنصة' : 'Internal Platform Cost'}</span>
+          </div>
+          <div class="trigger-action-pill">
+            <span>${currentLanguage === 'ar' ? 'عرض التكلفة' : 'View Cost'}</span>
+            <span class="trigger-arrow-circle" id="arrow-circle-${plan.id}">
+              <i class="fa-solid fa-chevron-down accordion-arrow" id="arrow-${plan.id}"></i>
+            </span>
+          </div>
+        </button>
+        <div class="cost-accordion-body" id="body-${plan.id}">
+          <table class="cost-hidden-table">
+            <thead>
+              <tr>
+                <th>${currentLanguage === 'ar' ? 'البيان' : 'Item'}</th>
+                <th>${currentLanguage === 'ar' ? 'سعر التكلفة بالشيت (الداخلي)' : 'Original Sheet Cost'}</th>
+                <th>${currentLanguage === 'ar' ? 'سعر التكلفة النهائي (+10%)' : 'Final Platform Cost (+10%)'}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-cost-row">
+                <td class="td-item">
+                  <div class="td-item-inner">
+                    <i class="fa-solid fa-star" style="color: #f59e0b;"></i>
+                    <strong>${currentLanguage === 'ar' ? 'سعر التكلفة النهائي للمنصة (السعر الأرخص)' : 'Cheapest Platform Cost Rate'}</strong>
+                  </div>
+                </td>
+                <td class="td-sheet">
+                  <span class="sheet-original-cost">${plan.sheetDiscCost.toLocaleString()} ${t.currency}</span>
+                </td>
+                <td class="td-final">
+                  <span class="gold-bold">${scholarshipPrice.toLocaleString()} ${t.currency}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="hidden-table-safety-note">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>${currentLanguage === 'ar' ? '🔒 هذا هو سعر التكلفة الأرخص الفعلي الخاص بالمنصة والشركة فقط (سري تماماً وغير معلن للعميل).' : '🔒 Confidential cheapest platform cost only. Staff reference only.'}</span>
+          </div>
+        </div>
+      `;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'card-item-wrapper';
+      wrapper.appendChild(card);
+      wrapper.appendChild(separatorEl);
+      wrapper.appendChild(costAccordion);
+
+      return wrapper;
+    }
+
+    function toggleCostAccordion(planId) {
+      const body = document.getElementById(`body-${planId}`);
+      const arrow = document.getElementById(`arrow-${planId}`);
+      const arrowCircle = document.getElementById(`arrow-circle-${planId}`);
+      if (!body) return;
+      if (body.classList.contains('open')) {
+        body.classList.remove('open');
+        if (arrow) arrow.classList.remove('rotated');
+        if (arrowCircle) arrowCircle.classList.remove('active');
+      } else {
+        body.classList.add('open');
+        if (arrow) arrow.classList.add('rotated');
+        if (arrowCircle) arrowCircle.classList.add('active');
+      }
+    }
+
+    let staffPanelsVisible = true;
+
+    function toggleStaffCostPanels() {
+      staffPanelsVisible = !staffPanelsVisible;
+      const panels = document.querySelectorAll('.side-internal-panel');
+      const btn = document.getElementById('staffToggleBtn');
+      const icon = document.getElementById('staffToggleIcon');
+      
+      panels.forEach(p => {
+        if (staffPanelsVisible) {
+          p.classList.remove('staff-hidden');
+        } else {
+          p.classList.add('staff-hidden');
+        }
+      });
+
+      if (staffPanelsVisible) {
+        btn.classList.remove('off');
+        icon.className = 'fa-solid fa-eye-slash';
+      } else {
+        btn.classList.add('off');
+        icon.className = 'fa-solid fa-eye';
+      }
+    }
+
+    function switchCategoryTab(tab, btnElement) {
+      activeCategoryTab = tab;
+      document.querySelectorAll('.nav-tab-btn').forEach(btn => btn.classList.remove('active'));
+      btnElement.classList.add('active');
+
+      const sSingle = document.getElementById('section-single');
+      const sFamily2 = document.getElementById('section-family2');
+      const sFamily3 = document.getElementById('section-family3');
+
+      if (tab === 'all') {
+        sSingle.style.display = 'block';
+        sFamily2.style.display = 'block';
+        sFamily3.style.display = 'block';
+      } else if (tab === 'single') {
+        sSingle.style.display = 'block';
+        sFamily2.style.display = 'none';
+        sFamily3.style.display = 'none';
+      } else if (tab === 'family2') {
+        sSingle.style.display = 'none';
+        sFamily2.style.display = 'block';
+        sFamily3.style.display = 'none';
+      } else if (tab === 'family3') {
+        sSingle.style.display = 'none';
+        sFamily2.style.display = 'none';
+        sFamily3.style.display = 'block';
+      }
+    }
+
+    function handleSearch() {
+      currentSearchTerm = document.getElementById('searchInput').value.trim();
+      renderAllSections();
+    }
+
+    // Modal & VIP Card Generator
+    let selectedPlanObj = null;
+
+    function openModalWithPlan(plan, typeName, categoryName) {
+      selectedPlanObj = plan;
+      const officialPrice = pricePlus10(plan.sheetCost);
+      const discountedPrice = pricePlus10(plan.sheetDiscCost);
+      const internalCost = pricePlus10(plan.sheetDiscCost);
+      const duration = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
+      const t = I18N[currentLanguage];
+
+      document.getElementById('modalPlanName').value = `${categoryName} (${typeName})`;
+      document.getElementById('modalDuration').value = duration;
+      document.getElementById('modalBaseSessions').value = plan.base;
+      document.getElementById('modalBonusSessions').value = plan.bonus;
+      document.getElementById('modalOfficialPrice').value = officialPrice;
+      document.getElementById('modalDiscountedPrice').value = discountedPrice;
+
+      // Internal confidential reference for employee only
+      document.getElementById('modalInternalCostDisplay').textContent = `${internalCost.toLocaleString()} ${t.currency}`;
+      document.getElementById('modalInternalSheetDisplay').textContent = `${plan.sheetDiscCost.toLocaleString()} ${t.currency}`;
+
+      updateLivePreview();
+      document.getElementById('cardModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('cardModal').classList.remove('active');
+    }
+
+    function updateLivePreview() {
+      const t = I18N[currentLanguage];
+      const clientName = document.getElementById('modalClientName').value || (currentLanguage === 'ar' ? 'ولي أمر الطالب العزيز' : 'Dear Parent');
+      const planName = document.getElementById('modalPlanName').value || '51Talk Package';
+      const duration = document.getElementById('modalDuration').value || '1 Year';
+      const baseClasses = parseInt(document.getElementById('modalBaseSessions').value) || 0;
+      const bonusClasses = parseInt(document.getElementById('modalBonusSessions').value) || 0;
+      const totalClasses = baseClasses + bonusClasses;
+
+      const officialPrice = parseInt(document.getElementById('modalOfficialPrice').value) || 0;
+      const discountedPrice = parseInt(document.getElementById('modalDiscountedPrice').value) || 0;
+      const notes = document.getElementById('modalNotes').value || (currentLanguage === 'ar' ? '* العرض ساري لمدة 48 ساعة فقط لحجز مقعد البرنامج الاحترافي.' : '* Valid for 48 hours only.');
+      const repName = document.getElementById('modalRepName').value || (currentLanguage === 'ar' ? 'المستشار الأكاديمي' : '51Talk Advisor');
+
+      document.getElementById('previewVipPill').innerHTML = t.previewVip;
+      document.getElementById('previewClientName').textContent = clientName;
+      document.getElementById('previewGreetingSub').textContent = t.previewGreetingSub;
+      document.getElementById('previewPlanName').textContent = planName;
+      document.getElementById('previewDuration').innerHTML = `<i class="fa-regular fa-calendar-check"></i> ${currentLanguage === 'ar' ? 'المدة:' : 'Duration:'} ${duration}`;
+      document.getElementById('previewAllocationTitle').textContent = currentLanguage === 'ar' ? 'إجمالي الحصص المعتمدة' : 'Total Class Allocation';
+      document.getElementById('previewTotalSessions').textContent = `${totalClasses} ${currentLanguage === 'ar' ? 'حصة خاصة' : 'Private Classes'}`;
+      document.getElementById('previewBonusTag').textContent = currentLanguage === 'ar' ? `🎁 تتضمن ${bonusClasses} حصة مجانية بالكامل` : `🎁 Includes ${bonusClasses} Free Bonus Lessons`;
+
+      if (selectedPlanObj && selectedPlanObj.kidsCount) {
+        document.getElementById('previewBreakdownNote').textContent = currentLanguage === 'ar' ? 
+          `* مخصصة لـ ${selectedPlanObj.kidsCount} أطفال: ${selectedPlanObj.perKid.total} حصة لكل طفل (${selectedPlanObj.perKid.base} أساسية + ${selectedPlanObj.perKid.bonus} هدية)` : 
+          `* Allocated for ${selectedPlanObj.kidsCount} siblings: ${selectedPlanObj.perKid.total} classes/child (${selectedPlanObj.perKid.base} Std + ${selectedPlanObj.perKid.bonus} Free)`;
+      } else {
+        document.getElementById('previewBreakdownNote').textContent = currentLanguage === 'ar' ? 
+          `${baseClasses} أساسية + ${bonusClasses} هدية مجانية بالكامل` : 
+          `${baseClasses} Standard Classes + ${bonusClasses} Free Bonus Gift!`;
+      }
+
+      // Approved official tuition with small horizontal red line
+      document.getElementById('previewOfficialSublabel').textContent = currentLanguage === 'ar' ? 'السعر المعتمد:' : 'Approved Tuition:';
+      document.getElementById('previewOfficialVal').textContent = `${officialPrice.toLocaleString()} ${t.currency}`;
+
+      // Discounted tuition directly underneath without percentage
+      document.getElementById('previewDiscountedSublabel').textContent = currentLanguage === 'ar' ? 'السعر بعد الخصم:' : 'Discounted Tuition:';
+      document.getElementById('previewClientPrice').innerHTML = `${discountedPrice.toLocaleString()} <span style="font-size: 14px; color: #f59e0b;">${t.currency}</span>`;
+
+      // Professional Program at the bottom
+      document.getElementById('previewGrantTitle').textContent = currentLanguage === 'ar' ? 'البرنامج الاحترافي' : 'Professional Program';
+      document.getElementById('previewGrantClassesText').textContent = currentLanguage === 'ar' ? `🎁 +${bonusClasses} حصة إضافية` : `🎁 +${bonusClasses} Gift Classes`;
+      
+      document.getElementById('previewPerk1').textContent = t.previewPerk1;
+      document.getElementById('previewPerk2').textContent = t.previewPerk2;
+      document.getElementById('previewPerk3').textContent = t.previewPerk3;
+
+      document.getElementById('previewNotes').textContent = notes;
+      document.getElementById('previewRepName').textContent = repName;
+    }
+
+    // High-Res PNG Download
+    function downloadCardPNG() {
+      const cardEl = document.getElementById('exportVipCard');
+      showToast(currentLanguage === 'ar' ? 'جاري تصدير كارت العرض بجودة عالية...' : 'Generating high-resolution card PNG...');
+
+      html2canvas(cardEl, {
+        scale: 3,
+        backgroundColor: null,
+        useCORS: true
+      }).then(canvas => {
+        const link = document.createElement('a');
+        const fileName = document.getElementById('modalPlanName').value.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_');
+        link.download = `51Talk_Offer_${fileName}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        showToast(I18N[currentLanguage].toastCardDownloaded);
+      }).catch(err => {
+        console.error(err);
+        showToast('❌ Error generating image.');
+      });
+    }
+
+    // WhatsApp Formatted Text
+    function getFormattedWhatsAppPitch() {
+      const clientName = document.getElementById('modalClientName').value;
+      const planName = document.getElementById('modalPlanName').value;
+      const duration = document.getElementById('modalDuration').value;
+      const baseClasses = parseInt(document.getElementById('modalBaseSessions').value) || 0;
+      const bonusClasses = parseInt(document.getElementById('modalBonusSessions').value) || 0;
+      const totalClasses = baseClasses + bonusClasses;
+      const officialPrice = parseInt(document.getElementById('modalOfficialPrice').value) || 0;
+      const discountedPrice = parseInt(document.getElementById('modalDiscountedPrice').value) || 0;
+      const repName = document.getElementById('modalRepName').value;
+      const t = I18N[currentLanguage];
+
+      if (currentLanguage === 'ar') {
+        let familyLine = '';
+        if (selectedPlanObj && selectedPlanObj.kidsCount) {
+          familyLine = `👨‍👩‍👧‍👦 *توزيع العائلة:* مخصصة لـ ${selectedPlanObj.kidsCount} أطفال (${selectedPlanObj.perKid.total} حصة لكل طفل)\n`;
+        }
+
+        return `🌟 *عرض خاص وحصري من 51Talk Global* 🌟
+
+السلام عليكم ورحمة الله وبركاته،
+أهلاً بحضرتك ${clientName} 🌸
+
+يسعدنا تقديم هذا العرض التعليمي المعتمد ضمن البرنامج الاحترافي لترقية مستوى طفلك باللغة الإنجليزية:
+
+📌 *تفاصيل الباقة:*
+• *نوع الباقة:* ${planName}
+• *المدة الزمنية:* ${duration}
+• *إجمالي الحصص:* ${totalClasses} حصة تعليمية كاملة
+🎁 *هدية البرنامج الاحترافي:* *${bonusClasses} حصة مجانية بالكامل مهداة من الأكاديمية!* (${baseClasses} حصة أساسية)
+${familyLine}
+💰 *السعر الرسمي المعتمد:* ~${officialPrice.toLocaleString()} ريال~
+💎 *السعر بعد الخصم:* *${discountedPrice.toLocaleString()} ريال فقط!*
+
+✨ *مميزات باقات 51Talk:*
+✅ معلمين أجانب معتمدين بشهادات TESOL الدولية
+✅ مرونة تامة في اختيار وتعديل مواعيد الحصص
+✅ تقارير أسبوعية تفاعلية لمتابعة النطق والطلاقة
+
+⚠️ *ملاحظة:* المقاعد محدودة والعرض ساري لمدة 48 ساعة فقط لحجز مقعد البرنامج الاحترافي.
+
+تحياتي لحضرتك،
+*${repName}*`;
+      } else {
+        let familyLine = '';
+        if (selectedPlanObj && selectedPlanObj.kidsCount) {
+          familyLine = `👨‍👩‍👧‍👦 *Family Distribution:* For ${selectedPlanObj.kidsCount} children (${selectedPlanObj.perKid.total} classes per child)\n`;
+        }
+
+        return `🌟 *Exclusive 51Talk Professional Program Offer* 🌟
+
+Hello ${clientName} 🌸
+
+We are pleased to present this verified exclusive package for English excellence:
+
+📌 *Package Overview:*
+• *Plan:* ${planName}
+• *Duration:* ${duration}
+• *Total Private Classes:* ${totalClasses} Classes
+🎁 *Program Bonus Gift:* *${bonusClasses} Free Bonus Classes Included!* (${baseClasses} Standard)
+${familyLine}
+💰 *Tuition & Pricing:*
+• *Official Tuition Rate:* ~${officialPrice.toLocaleString()} SAR~
+• *Discounted Tuition:* *${discountedPrice.toLocaleString()} SAR Only!*
+
+✨ *51Talk Key Benefits:*
+✅ Certified Foreign Native/TESOL Tutors
+✅ 100% Flexible Scheduling & 1-on-1 Personalized Pace
+✅ Weekly AI Pronunciation & Fluency Tracking Reports
+
+⚠️ *Note:* Seats are strictly limited to reserve Professional Program quotas. Valid for 48 hours.
+
+Best regards,
+*${repName}*`;
+      }
+    }
+
+    function shareWhatsAppPitch() {
+      const pitch = getFormattedWhatsAppPitch();
+      navigator.clipboard.writeText(pitch).then(() => {
+        showToast(I18N[currentLanguage].toastPitchCopied);
+        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+        window.open(url, '_blank');
+      });
+    }
+
+    function copyQuickPitch(plan, typeName, categoryDisplayName) {
+      const officialPrice = pricePlus10(plan.sheetCost);
+      const duration = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
+      const t = I18N[currentLanguage];
+
+      let summary = '';
+      if (currentLanguage === 'ar') {
+        summary = `🌟 *عرض 51Talk - ${categoryDisplayName} (${typeName})*
+• المدة: ${duration}
+• إجمالي الحصص: ${plan.total} حصة (${plan.base} أساسية + 🎁 ${plan.bonus} مجانية بالكامل)
+• قيمة الاشتراك المعتمد: *${officialPrice.toLocaleString()} ر.س* (بمعدل ${(officialPrice / plan.total).toFixed(1)} ر.س / للحصة)`;
+      } else {
+        summary = `🌟 *51Talk ${categoryDisplayName} (${typeName})*
+• Duration: ${duration}
+• Total Classes: ${plan.total} (${plan.base} Standard + 🎁 ${plan.bonus} Free Bonus Gifts)
+• Approved Tuition: *${officialPrice.toLocaleString()} SAR* (Average ${(officialPrice / plan.total).toFixed(1)} SAR / class)`;
+      }
+
+      navigator.clipboard.writeText(summary).then(() => {
+        showToast(I18N[currentLanguage].toastSummaryCopied);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastBox');
+      document.getElementById('toastText').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    // Init on load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderAllSections();
+    });
+  </script>
+</body>
+</html>
