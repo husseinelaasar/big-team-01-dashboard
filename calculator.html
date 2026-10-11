@@ -1671,7 +1671,7 @@
 
     /* Exported High-Resolution Card */
     .vip-card-export {
-      width: 390px;
+      width: 410px;
       background: radial-gradient(circle at top right, #1e1b4b, #0f172a 65%, #050b18);
       border: 2px solid #f59e0b;
       border-radius: 22px;
@@ -1823,6 +1823,8 @@
       display: flex;
       align-items: center;
       gap: 6px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
     }
 
     .modal-price-sublabel {
@@ -1830,28 +1832,33 @@
       color: #94a3b8;
       font-weight: 700;
       letter-spacing: 0.3px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
-    /* Modal: crisp horizontal red strike line across official tuition */
+    /* Modal: crisp horizontal red strike line placed DIRECTLY ON the official tuition text */
     .modal-horizontal-strike-wrap {
       display: inline-flex;
       align-items: center;
       position: relative;
+      white-space: nowrap;
+      line-height: 1;
+      flex-shrink: 0;
     }
 
     .modal-horizontal-strike-wrap::after {
       content: '';
       position: absolute;
-      top: 50%;
+      top: 48%;
       left: -4px;
       right: -4px;
       height: 2.5px;
       background: #ef4444;
       border-radius: 2px;
-      box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+      box-shadow: 0 0 8px rgba(239, 68, 68, 0.95);
       transform: translateY(-50%);
       pointer-events: none;
-      z-index: 2;
+      z-index: 3;
     }
 
     .modal-official-val {
@@ -1860,6 +1867,12 @@
       font-weight: 800;
       font-family: 'Outfit', 'Cairo', sans-serif;
       position: relative;
+      white-space: nowrap;
+      line-height: 1;
+      display: inline-block;
+      text-decoration: line-through;
+      text-decoration-color: #ef4444;
+      text-decoration-thickness: 2.5px;
     }
 
     .modal-discounted-main-row {
@@ -2243,6 +2256,68 @@
     }
     .wa-instr-confirm-btn:hover {
       background: #2ae06d;
+    }
+    .wa-launch-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .wa-open-choice-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+    .wa-choice-web {
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(14, 165, 233, 0.45);
+      color: #38bdf8;
+    }
+    .wa-choice-web:hover {
+      background: #0284c7;
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+    }
+    .wa-choice-app {
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.45);
+      color: #25d366;
+    }
+    .wa-choice-app:hover {
+      background: #25d366;
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+    }
+    .wa-copy-again-btn {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      border-radius: 8px;
+      padding: 7px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .wa-copy-again-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
     }
 
     /* Floating Toast notification */
@@ -2667,6 +2742,20 @@
           <span id="waInstrStep2" data-i18n="waInstrStep2">✨ Card image copied to clipboard! Press (Ctrl + V) inside WhatsApp to paste the image directly under the text.</span>
         </div>
       </div>
+      <div class="wa-launch-options-grid">
+        <a id="btnOpenWaWeb" href="#" target="_blank" class="wa-open-choice-btn wa-choice-web">
+          <i class="fa-solid fa-globe"></i>
+          <span data-i18n="btnOpenWaWeb">WhatsApp Web (Browser)</span>
+        </a>
+        <a id="btnOpenWaApp" href="#" target="_blank" class="wa-open-choice-btn wa-choice-app">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="btnOpenWaApp">WhatsApp App (Desktop)</span>
+        </a>
+      </div>
+      <button class="wa-copy-again-btn" onclick="copyPitchOnlyFromModal()">
+        <i class="fa-regular fa-copy"></i>
+        <span data-i18n="btnCopyPitchAgain">Copy Pitch Text Again</span>
+      </button>
       <button class="wa-instr-confirm-btn" onclick="closeWaInstruction()" data-i18n="waInstrGotIt">Got it ✓</button>
     </div>
   </div>
@@ -2758,6 +2847,9 @@
         waInstrTitle: 'Ready to Send via WhatsApp!',
         waInstrStep1: 'WhatsApp opened with the full offer pitch text.',
         waInstrStep2: '✨ Card image copied to clipboard! Press (Ctrl + V) inside WhatsApp to paste the image directly under the text.',
+        btnOpenWaWeb: 'WhatsApp Web (Browser)',
+        btnOpenWaApp: 'WhatsApp App (Desktop)',
+        btnCopyPitchAgain: 'Copy Pitch Text Again',
         waInstrGotIt: 'Got it ✓',
         previewVip: '<i class="fa-solid fa-award"></i> VIP Professional Program',
         previewGreetingSub: 'Certified Professional English Program',
@@ -2842,6 +2934,9 @@
         waInstrTitle: 'جاهز للإرسال على الواتساب!',
         waInstrStep1: 'تم فتح محادثة الواتساب ومرفق بها نص العرض كاملاً.',
         waInstrStep2: '✨ تم نسخ صورة الكارت إلى الحافظة تلقائياً! اضغط (Ctrl + V) داخل المحادثة لصق الصورة فوراً تحت العرض.',
+        btnOpenWaWeb: 'واتساب ويب (المتصفح)',
+        btnOpenWaApp: 'تطبيق واتساب (الجهاز)',
+        btnCopyPitchAgain: 'نسخ نص العرض مجدداً إلى الحافظة',
         waInstrGotIt: 'حسناً، فهمت ✓',
         previewVip: '<i class="fa-solid fa-award"></i> كارت البرنامج الاحترافي VIP',
         previewGreetingSub: 'البرنامج الاحترافي المعتمد لتعليم الإنجليزية',
@@ -3773,8 +3868,10 @@
         const fileName = `51Talk_Offer_${planName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_')}.png`;
         const file = new File([blob], fileName, { type: 'image/png' });
 
-        // 1. Try Native Web Share API with Files (Mobile & supported browsers)
-        if (typeof navigator.share === 'function') {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+        // 1. Mobile Native Web Share API if available
+        if (isMobile && typeof navigator.share === 'function') {
           try {
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
               await navigator.share({
@@ -3782,7 +3879,7 @@
                 text: pitch,
                 title: currentLanguage === 'ar' ? 'عرض 51Talk التعليمي المعتمد' : '51Talk Official Offer'
               });
-              showToast(currentLanguage === 'ar' ? '✅ تم فتح الواتساب بنجاح!' : 'Shared successfully!');
+              showToast(currentLanguage === 'ar' ? '✅ تم فتح المشاركة بنجاح!' : 'Shared successfully!');
               return;
             }
           } catch (shareErr) {
@@ -3791,7 +3888,7 @@
           }
         }
 
-        // 2. Desktop Fallback: Copy image to clipboard + open WhatsApp with text
+        // 2. Desktop: Copy image to clipboard for direct Ctrl+V pasting
         let imageCopied = false;
         try {
           if (navigator.clipboard && window.ClipboardItem) {
@@ -3804,7 +3901,7 @@
           console.warn('Clipboard image write failed:', clipErr);
         }
 
-        // 3. Also download image as backup for drag-and-drop
+        // 3. Download image backup for drag-and-drop
         try {
           const dlLink = document.createElement('a');
           dlLink.download = fileName;
@@ -3816,27 +3913,39 @@
           console.warn('Download error:', dlErr);
         }
 
-        // 4. Open WhatsApp with formatted text
+        // 4. Construct direct URLs for BOTH WhatsApp Web and WhatsApp Desktop App
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
-        const waUrl = phoneVal
+        
+        // Direct WhatsApp Web (works in browser tabs)
+        const waWebUrl = phoneVal
+          ? `https://web.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
+          : `https://web.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+
+        // WhatsApp App / API (works with installed desktop/mobile apps)
+        const waAppUrl = phoneVal
           ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
           : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
 
-        window.open(waUrl, '_blank');
+        // Open WhatsApp Web directly by default on PC, and App on Mobile
+        const autoOpenUrl = isMobile ? waAppUrl : waWebUrl;
+        window.open(autoOpenUrl, '_blank');
 
-        // 5. Show guidance popup
+        // 5. Show guidance popup with dual choice buttons (Web & App)
         showInstructionModal({
           title: currentLanguage === 'ar' ? '🚀 تم تجهيز العرض المكتوب وصورة الكارت!' : 'Offer Text & Card Ready!',
           step1: currentLanguage === 'ar' 
-            ? 'تم فتح محادثة الواتساب ومرفق بها نص العرض المكتوب كاملاً.' 
-            : 'WhatsApp opened with the full offer pitch text.',
+            ? 'تم فتح الواتساب بنص العرض. يمكنك التبديل بين واتساب ويب وتطبيق واتساب عبر الأزرار أدناه.' 
+            : 'WhatsApp opened with offer pitch. Switch between WhatsApp Web or App using the buttons below.',
           step2: imageCopied 
             ? (currentLanguage === 'ar' 
                 ? '✨ تم نسخ صورة الكارت إلى الحافظة تلقائياً! اضغط (Ctrl + V) داخل المحادثة للصق الصورة فوراً تحت العرض.' 
                 : '✨ Card image copied to clipboard! Press Ctrl+V in WhatsApp to paste the image.')
             : (currentLanguage === 'ar' 
                 ? 'تم تنزيل صورة الكارت على جهازك. يمكنك سحبها وإفلاتها مباشرة في المحادثة.' 
-                : 'Card image downloaded to your device. Drag and drop it into WhatsApp.')
+                : 'Card image downloaded to your device. Drag and drop it into WhatsApp.'),
+          webUrl: waWebUrl,
+          appUrl: waAppUrl,
+          pitchText: pitch
         });
 
       } catch (err) {
@@ -3854,8 +3963,10 @@
         const fileName = `51Talk_Offer_${planName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_')}.png`;
         const file = new File([blob], fileName, { type: 'image/png' });
 
-        // 1. Try Native Web Share API with Files
-        if (typeof navigator.share === 'function') {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+        // 1. Mobile Native Web Share API
+        if (isMobile && typeof navigator.share === 'function') {
           try {
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
               await navigator.share({
@@ -3894,27 +4005,28 @@
           document.body.removeChild(dlLink);
         } catch (e) {}
 
-        // 4. Open WhatsApp
+        // 4. Construct direct URLs for both WhatsApp Web & App
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
-        const waUrl = phoneVal
-          ? `https://api.whatsapp.com/send?phone=${phoneVal}`
-          : `https://web.whatsapp.com/`;
+        const waWebUrl = phoneVal ? `https://web.whatsapp.com/send?phone=${phoneVal}` : `https://web.whatsapp.com/`;
+        const waAppUrl = phoneVal ? `https://api.whatsapp.com/send?phone=${phoneVal}` : `https://api.whatsapp.com/`;
 
-        window.open(waUrl, '_blank');
+        window.open(isMobile ? waAppUrl : waWebUrl, '_blank');
 
-        // 5. Guidance popup
+        // 5. Guidance popup with dual buttons
         showInstructionModal({
           title: currentLanguage === 'ar' ? '🖼️ تم نسخ صورة الكارت وتحميلها!' : 'Card Image Ready!',
           step1: currentLanguage === 'ar' 
-            ? 'تم فتح الواتساب لبدء إرسال الكارت المصمم.' 
-            : 'WhatsApp opened to send your card.',
+            ? 'تم فتح الواتساب لبدء إرسال الكارت. يمكنك أيضاً التبديل بين واتساب ويب وتطبيق واتساب أدناه.' 
+            : 'WhatsApp opened to send card. You can also switch between WhatsApp Web and App below.',
           step2: imageCopied 
             ? (currentLanguage === 'ar' 
                 ? '✨ تم نسخ صورة الكارت للحافظة! اضغط (Ctrl + V) داخل محادثة الواتساب للصقها فوراً.' 
-                : '✨ Image copied to clipboard! Press Ctrl+V in WhatsApp to paste.')
+                : '✨ Image copied to clipboard! Press (Ctrl + V) in WhatsApp to paste.')
             : (currentLanguage === 'ar' 
                 ? 'تم تنزيل صورة الكارت على جهازك. اسحبها وأفلتها في المحادثة.' 
-                : 'Card image downloaded to your device.')
+                : 'Card image downloaded to your device.'),
+          webUrl: waWebUrl,
+          appUrl: waAppUrl
         });
 
       } catch (err) {
@@ -3924,10 +4036,19 @@
     }
 
     // Guidance Modal Helpers
-    function showInstructionModal({ title, step1, step2 }) {
+    let currentModalPitch = '';
+
+    function showInstructionModal({ title, step1, step2, webUrl, appUrl, pitchText }) {
       if (title) document.getElementById('waInstrTitle').textContent = title;
       if (step1) document.getElementById('waInstrStep1').textContent = step1;
       if (step2) document.getElementById('waInstrStep2').textContent = step2;
+
+      const btnWeb = document.getElementById('btnOpenWaWeb');
+      const btnApp = document.getElementById('btnOpenWaApp');
+      if (btnWeb && webUrl) btnWeb.href = webUrl;
+      if (btnApp && appUrl) btnApp.href = appUrl;
+      if (pitchText) currentModalPitch = pitchText;
+
       document.getElementById('waInstructionModal').style.display = 'flex';
     }
 
@@ -3935,22 +4056,40 @@
       document.getElementById('waInstructionModal').style.display = 'none';
     }
 
+    function copyPitchOnlyFromModal() {
+      const pitch = currentModalPitch || getFormattedWhatsAppPitch();
+      navigator.clipboard.writeText(pitch).then(() => {
+        showToast(I18N[currentLanguage].toastPitchCopied);
+      }).catch(() => {
+        showToast(I18N[currentLanguage].toastPitchCopied);
+      });
+    }
+
     function shareWhatsAppPitch() {
       try {
         const pitch = getFormattedWhatsAppPitch();
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        const waWebUrl = phoneVal 
+          ? `https://web.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
+          : `https://web.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+        const waAppUrl = phoneVal
+          ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
+          : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+
         navigator.clipboard.writeText(pitch).then(() => {
           showToast(I18N[currentLanguage].toastPitchCopied);
-          const url = phoneVal 
-            ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
-            : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
-          window.open(url, '_blank');
+          window.open(isMobile ? waAppUrl : waWebUrl, '_blank');
         }).catch(() => {
-          const url = phoneVal 
-            ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
-            : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
-          window.open(url, '_blank');
+          window.open(isMobile ? waAppUrl : waWebUrl, '_blank');
         });
+
+        // Set guidance modal options
+        const btnWeb = document.getElementById('btnOpenWaWeb');
+        const btnApp = document.getElementById('btnOpenWaApp');
+        if (btnWeb) btnWeb.href = waWebUrl;
+        if (btnApp) btnApp.href = waAppUrl;
+        currentModalPitch = pitch;
       } catch (err) {
         console.error(err);
         showToast(currentLanguage === 'ar' ? '❌ حدث خطأ في تجهيز النص' : 'Error preparing pitch');
