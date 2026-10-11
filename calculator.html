@@ -1566,11 +1566,11 @@
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 26px;
       width: 100%;
-      max-width: 980px;
+      max-width: 1080px;
       max-height: 90vh;
       overflow-y: auto;
       display: grid;
-      grid-template-columns: 1fr 1.1fr;
+      grid-template-columns: 1fr 1.18fr;
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
       transform: scale(0.95);
       transition: transform 0.3s ease;
@@ -1660,22 +1660,25 @@
 
     /* Modal Preview Side */
     .modal-preview-side {
-      padding: 26px;
+      padding: 24px;
       background: #060a14;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 18px;
+      justify-content: flex-start;
+      gap: 16px;
+      overflow-y: auto;
     }
 
     /* Exported High-Resolution Card */
     .vip-card-export {
-      width: 410px;
+      width: 475px;
+      max-width: 100%;
+      box-sizing: border-box;
       background: radial-gradient(circle at top right, #1e1b4b, #0f172a 65%, #050b18);
       border: 2px solid #f59e0b;
-      border-radius: 22px;
-      padding: 22px;
+      border-radius: 24px;
+      padding: 24px 22px;
       position: relative;
       overflow: hidden;
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85);
@@ -1827,29 +1830,36 @@
     }
 
     .card-price-deck {
-      background: rgba(15, 23, 42, 0.85);
-      border-radius: 16px;
-      padding: 14px 16px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 18px;
+      padding: 14px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 14px;
       margin-bottom: 14px;
+      box-sizing: border-box;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
     }
 
-    /* Modal Pricing Section: Horizontal Red Line on Official Tuition & Discounted Price Underneath */
+    /* Modal Pricing Section: Clean strikethrough & Discounted Price Underneath */
     .modal-pricing-left-col {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 4px;
+      flex: 1;
+      min-width: 0;
     }
 
     .modal-official-striked-row {
       display: flex;
       align-items: center;
       gap: 6px;
-      flex-wrap: nowrap;
-      white-space: nowrap;
+      flex-wrap: wrap;
+      line-height: 1.25;
     }
 
     .modal-price-sublabel {
@@ -1861,29 +1871,13 @@
       flex-shrink: 0;
     }
 
-    /* Modal: crisp horizontal red strike line placed DIRECTLY ON the official tuition text */
+    /* Modal: Clean strikethrough container */
     .modal-horizontal-strike-wrap {
       display: inline-flex;
       align-items: center;
       position: relative;
       white-space: nowrap;
       line-height: 1;
-      flex-shrink: 0;
-    }
-
-    .modal-horizontal-strike-wrap::after {
-      content: '';
-      position: absolute;
-      top: 48%;
-      left: -4px;
-      right: -4px;
-      height: 2.5px;
-      background: #ef4444;
-      border-radius: 2px;
-      box-shadow: 0 0 8px rgba(239, 68, 68, 0.95);
-      transform: translateY(-50%);
-      pointer-events: none;
-      z-index: 3;
     }
 
     .modal-official-val {
@@ -1897,7 +1891,20 @@
       display: inline-block;
       text-decoration: line-through;
       text-decoration-color: #ef4444;
-      text-decoration-thickness: 2.5px;
+      text-decoration-thickness: 2px;
+    }
+
+    .modal-class-rate-strike {
+      font-size: 11px;
+      color: #94a3b8;
+      font-weight: 700;
+      white-space: nowrap;
+      text-decoration: line-through;
+      text-decoration-color: rgba(239, 68, 68, 0.75);
+      text-decoration-thickness: 1.5px;
+      margin-left: 4px;
+      margin-right: 4px;
+      opacity: 0.9;
     }
 
     .modal-discounted-main-row {
@@ -1919,7 +1926,7 @@
       align-items: baseline;
       gap: 5px;
       color: #ffd700;
-      font-size: 35px;
+      font-size: 34px;
       font-weight: 950;
       font-family: 'Outfit', 'Cairo', sans-serif;
       line-height: 1.05;
@@ -1938,6 +1945,117 @@
       color: #fbbf24;
       text-shadow: 0 0 10px rgba(245, 158, 11, 0.85);
       margin-left: 2px;
+    }
+
+    .modal-class-rate-badge-row {
+      margin-top: 5px;
+    }
+
+    .modal-class-rate-after-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(245, 158, 11, 0.16);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      color: #fef08a;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      white-space: nowrap;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+    }
+
+    .modal-class-rate-after-badge strong {
+      color: #fbbf24;
+      font-weight: 950;
+      font-size: 12.5px;
+    }
+
+    .modal-pricing-right-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 145px;
+      max-width: 145px;
+      box-sizing: border-box;
+    }
+
+    /* Attractive Catchy Total Savings Badge - Contained inside the deck */
+    .card-total-savings-badge {
+      background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.32), rgba(245, 158, 11, 0.22) 70%, rgba(15, 23, 42, 0.85));
+      border: 1.5px solid #10b981;
+      border-radius: 14px;
+      padding: 9px 8px;
+      text-align: center;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.35), inset 0 0 12px rgba(245, 158, 11, 0.15);
+      animation: savingsPulseGlow 2.5s ease-in-out infinite alternate;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @keyframes savingsPulseGlow {
+      0% {
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+        border-color: #10b981;
+      }
+      100% {
+        box-shadow: 0 0 22px rgba(16, 185, 129, 0.65), 0 0 35px rgba(245, 158, 11, 0.3);
+        border-color: #34d399;
+      }
+    }
+
+    .savings-badge-label {
+      font-size: 9.5px;
+      font-weight: 900;
+      color: #a7f3d0;
+      text-transform: uppercase;
+      letter-spacing: normal !important;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .savings-badge-value {
+      font-size: 15px;
+      font-weight: 950;
+      color: #00f5a0;
+      font-family: 'Outfit', 'Cairo', sans-serif;
+      text-shadow: 0 0 10px rgba(0, 245, 160, 0.8);
+      white-space: nowrap;
+      line-height: 1.1;
+    }
+
+    .savings-badge-pill {
+      font-size: 10px;
+      font-weight: 900;
+      background: #ef4444;
+      color: #fff;
+      padding: 1px 7px;
+      border-radius: 999px;
+      margin-top: 2px;
+      display: inline-block;
+      box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+    }
+
+    .savings-program-gift {
+      font-size: 11px;
+      color: #00f5a0;
+      font-weight: 800;
+      margin-top: 5px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      box-sizing: border-box;
+      text-shadow: 0 0 6px rgba(0, 245, 160, 0.4);
     }
 
     @keyframes vividPriceNeonFlash {
@@ -2041,129 +2159,182 @@
       flex-direction: column;
       gap: 10px;
       width: 100%;
-      max-width: 400px;
+      max-width: 475px;
       margin-top: 14px;
+      box-sizing: border-box;
     }
 
-    .btn-action-primary {
-      width: 100%;
-      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 14px;
-      padding: 12px 18px;
-      cursor: pointer;
+    .action-buttons-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #94a3b8;
+      letter-spacing: 0.3px;
       display: flex;
       align-items: center;
-      gap: 14px;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
-      transition: all 0.2s ease;
-      text-align: right;
-    }
-    html[dir="ltr"] .btn-action-primary {
-      text-align: left;
-    }
-    .btn-action-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 26px rgba(37, 211, 102, 0.5);
-      background: linear-gradient(135deg, #2ae06d 0%, #169b8c 100%);
+      gap: 7px;
+      margin-bottom: 2px;
     }
 
-    .btn-icon-wrap {
+    .wa-three-choices-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      width: 100%;
+    }
+
+    .btn-wa-choice {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      text-decoration: none;
+      font-family: inherit;
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: right;
+    }
+    html[dir="ltr"] .btn-wa-choice {
+      text-align: left;
+    }
+    .btn-wa-choice:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Option 1: Text Only (Teal / Emerald) */
+    .choice-text-only {
+      background: rgba(16, 185, 129, 0.09);
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+    .choice-text-only:hover {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: #10b981;
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+    }
+
+    /* Option 2: Card Image Only (Sky Blue) */
+    .choice-card-only {
+      background: rgba(14, 165, 233, 0.09);
+      border-color: rgba(14, 165, 233, 0.4);
+      color: #38bdf8;
+    }
+    .choice-card-only:hover {
+      background: rgba(14, 165, 233, 0.2);
+      border-color: #38bdf8;
+      box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+    }
+
+    /* Option 3: Both Together (Green-Gold Gradient Highlight) */
+    .choice-both-highlight {
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.18), rgba(245, 158, 11, 0.15));
+      border-color: #25d366;
+      color: #ffffff;
+      box-shadow: 0 0 14px rgba(37, 211, 102, 0.2);
+    }
+    .choice-both-highlight:hover {
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.3), rgba(245, 158, 11, 0.24));
+      border-color: #34d399;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    .choice-icon-bubble {
       width: 40px;
       height: 40px;
-      border-radius: 10px;
-      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
+      font-size: 18px;
       flex-shrink: 0;
       position: relative;
     }
-    .btn-icon-wrap .sub-icon {
+    .choice-text-only .choice-icon-bubble {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+    }
+    .choice-card-only .choice-icon-bubble {
+      background: rgba(14, 165, 233, 0.2);
+      color: #38bdf8;
+    }
+    .choice-both-highlight .choice-icon-bubble {
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 0 12px rgba(37, 211, 102, 0.5);
+    }
+    .choice-both-highlight .choice-icon-bubble .sub-ico {
       position: absolute;
-      bottom: -2px;
-      right: -2px;
-      font-size: 11px;
+      bottom: -3px;
+      right: -3px;
+      font-size: 10px;
       background: #f59e0b;
       color: #0f172a;
+      padding: 3px;
       border-radius: 50%;
-      padding: 2px;
     }
 
-    .btn-text-wrap {
+    .choice-text-col {
       display: flex;
       flex-direction: column;
       flex: 1;
+      gap: 2px;
     }
-    .btn-main-title {
+    .choice-title {
       font-size: 13.5px;
       font-weight: 800;
-      letter-spacing: 0.2px;
+      color: #f8fafc;
     }
-    .btn-sub-hint {
+    .choice-desc {
       font-size: 11px;
-      color: rgba(255, 255, 255, 0.85);
-      margin-top: 2px;
+      color: #94a3b8;
+    }
+    .choice-both-highlight .choice-desc {
+      color: #fef08a;
     }
 
-    .btn-sub-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      width: 100%;
+    .choice-action-arrow {
+      font-size: 13px;
+      color: #64748b;
+      transition: transform 0.2s ease;
     }
-    @media (max-width: 600px) {
-      .btn-sub-row {
-        grid-template-columns: 1fr;
-      }
+    .btn-wa-choice:hover .choice-action-arrow {
+      color: #fff;
+      transform: translateX(-3px);
+    }
+    html[dir="ltr"] .choice-action-arrow i {
+      transform: scaleX(-1);
+    }
+    html[dir="ltr"] .btn-wa-choice:hover .choice-action-arrow {
+      transform: translateX(3px);
     }
 
-    .btn-action-sub {
+    .btn-action-download-bar {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 11px;
-      padding: 10px 8px;
-      color: #e2e8f0;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-      text-align: center;
+      border-radius: 12px;
+      padding: 9px 14px;
+      color: #cbd5e1;
       font-size: 11.5px;
       font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       transition: all 0.2s ease;
+      font-family: inherit;
+      margin-top: 2px;
+      width: 100%;
+      box-sizing: border-box;
     }
-    .btn-action-sub:hover {
-      transform: translateY(-2px);
-    }
-    .btn-action-sub i {
-      font-size: 16px;
-    }
-
-    .btn-action-sub.wa-img-btn {
-      border-color: rgba(14, 165, 233, 0.45);
-      color: #38bdf8;
-      background: rgba(14, 165, 233, 0.08);
-    }
-    .btn-action-sub.wa-img-btn:hover {
-      background: rgba(14, 165, 233, 0.2);
-      border-color: #38bdf8;
-      box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
-    }
-
-    .btn-action-sub.wa-text-btn {
-      border-color: rgba(37, 211, 102, 0.45);
-      color: #4ade80;
-      background: rgba(37, 211, 102, 0.08);
-    }
-    .btn-action-sub.wa-text-btn:hover {
-      background: rgba(37, 211, 102, 0.2);
-      border-color: #4ade80;
-      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    .btn-action-download-bar:hover {
+      background: rgba(245, 158, 11, 0.14);
+      border-color: rgba(245, 158, 11, 0.45);
+      color: #fbbf24;
     }
 
     .btn-action-sub.download-btn {
@@ -2425,6 +2596,67 @@
     .wa-copy-again-btn:hover {
       background: rgba(255, 255, 255, 0.15);
       color: #fff;
+    }
+
+    .wa-action-banner-highlight {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(245, 158, 11, 0.14));
+      border: 1.5px solid #10b981;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.25);
+    }
+    .banner-badge-step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #34d399;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .badge-pulsing-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      display: inline-block;
+      animation: livePing 1.5s infinite;
+      flex-shrink: 0;
+    }
+    .banner-explain-text {
+      font-size: 12px;
+      color: #e2e8f0;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .banner-explain-text strong {
+      color: #fbbf24;
+    }
+    .btn-giant-launch-wa {
+      width: 100%;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 900;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .btn-giant-launch-wa:hover {
+      background: linear-gradient(135deg, #2ae06d, #15a392);
+      transform: translateY(-1.5px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
     }
 
     /* Floating Toast notification */
@@ -2777,15 +3009,25 @@
                 <div class="modal-horizontal-strike-wrap">
                   <span class="modal-official-val" id="previewOfficialVal">6,380 SAR</span>
                 </div>
+                <span class="modal-class-rate-strike" id="previewClassRateBefore">(42.5 SAR / class)</span>
               </div>
               <div class="modal-discounted-main-row">
                 <span class="modal-discounted-sublabel" id="previewDiscountedSublabel">Discounted Tuition:</span>
                 <div class="card-new-figure" id="previewClientPrice">3,630 <span class="card-curr-sign">SAR</span></div>
+                <div class="modal-class-rate-badge-row">
+                  <span class="modal-class-rate-after-badge" id="previewClassRateAfter">⚡ Only <strong>24.2 SAR</strong> / class</span>
+                </div>
               </div>
             </div>
-            <div style="text-align: right;" id="previewGrantWrap">
-              <div style="font-size: 11px; color: #10b981; font-weight: 800; text-transform: uppercase;" id="previewGrantTitle">Professional Program</div>
-              <div style="font-size: 13.5px; color: #00f5a0; font-weight: 800; margin-top: 4px;" id="previewGrantClassesText">🎁 Free Lessons Included</div>
+            <div class="modal-pricing-right-col" id="previewSavingsWrap">
+              <div class="card-total-savings-badge" id="previewSavingsBadge">
+                <div class="savings-badge-label">
+                  <i class="fa-solid fa-piggy-bank"></i> <span id="previewSavingsLabel">TOTAL SAVINGS</span>
+                </div>
+                <div class="savings-badge-value" id="previewSavingsVal">2,750 SAR</div>
+                <span class="savings-badge-pill" id="previewSavingsPctTag">43% OFF</span>
+              </div>
+              <div class="savings-program-gift" id="previewGrantClassesText">🎁 Free Lessons Included</div>
             </div>
           </div>
 
@@ -2802,38 +3044,55 @@
         </div>
 
         <div class="modal-action-buttons-grid">
-          <!-- Option 1: Send BOTH Offer Pitch + Card Image Together -->
-          <button class="btn-action-primary" onclick="shareBothTextAndImageWhatsApp()">
-            <div class="btn-icon-wrap">
-              <i class="fa-brands fa-whatsapp"></i>
-              <i class="fa-solid fa-image sub-icon"></i>
-            </div>
-            <div class="btn-text-wrap">
-              <span class="btn-main-title" data-i18n="btnSendBoth">Send Offer Pitch + Card Image Together</span>
-              <span class="btn-sub-hint" data-i18n="btnSendBothSub">Formatted pitch text with card image ⚡</span>
-            </div>
-          </button>
+          <div class="action-buttons-title">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+            <span data-i18n="waChoicesHeaderTitle">خيارات الإرسال عبر الواتساب (اختر واحدة):</span>
+          </div>
 
-          <!-- Sub Row: 3 Quick Action Options -->
-          <div class="btn-sub-row">
+          <div class="wa-three-choices-grid">
+            <!-- Option 1: Send Written Text Pitch Only -->
+            <button type="button" class="btn-wa-choice choice-text-only" onclick="shareWhatsAppPitch()">
+              <div class="choice-icon-bubble">
+                <i class="fa-solid fa-file-lines"></i>
+              </div>
+              <div class="choice-text-col">
+                <span class="choice-title" data-i18n="btnSendTextOnlyTitle">1. إرسال النص فقط (Offer Pitch Only)</span>
+                <span class="choice-desc" data-i18n="btnSendTextOnlyDesc">نص عرض السعر التفصيلي جاهز بالمحادثة</span>
+              </div>
+              <div class="choice-action-arrow"><i class="fa-solid fa-arrow-left"></i></div>
+            </button>
+
             <!-- Option 2: Send Card Image Only to WhatsApp -->
-            <button class="btn-action-sub wa-img-btn" onclick="shareCardImageWhatsApp()">
-              <i class="fa-solid fa-image"></i>
-              <span data-i18n="btnSendImgOnly">Card Image Only</span>
+            <button type="button" class="btn-wa-choice choice-card-only" onclick="shareCardImageWhatsApp()">
+              <div class="choice-icon-bubble">
+                <i class="fa-solid fa-image"></i>
+              </div>
+              <div class="choice-text-col">
+                <span class="choice-title" data-i18n="btnSendImgOnlyTitle">2. إرسال الكارت فقط (Card Image Only)</span>
+                <span class="choice-desc" data-i18n="btnSendImgOnlyDesc">صورة كارت العرض الاحترافي VIP فائقة الوضوح</span>
+              </div>
+              <div class="choice-action-arrow"><i class="fa-solid fa-arrow-left"></i></div>
             </button>
 
-            <!-- Option 3: Send Written Text Pitch Only -->
-            <button class="btn-action-sub wa-text-btn" onclick="shareWhatsAppPitch()">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span data-i18n="btnSendTextOnly">Offer Pitch Only</span>
-            </button>
-
-            <!-- Option 4: Download Card PNG High-Res -->
-            <button class="btn-action-sub download-btn" onclick="downloadCardPNG()">
-              <i class="fa-solid fa-download"></i>
-              <span data-i18n="btnDownloadCard">Download PNG (3X)</span>
+            <!-- Option 3: Send BOTH Text Pitch + Card Image Together -->
+            <button type="button" class="btn-wa-choice choice-both-highlight" onclick="shareBothTextAndImageWhatsApp()">
+              <div class="choice-icon-bubble">
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-solid fa-image sub-ico"></i>
+              </div>
+              <div class="choice-text-col">
+                <span class="choice-title" data-i18n="btnSendBothTitle">3. إرسال النص والكارت سوياً (شامل)</span>
+                <span class="choice-desc" data-i18n="btnSendBothDesc">عرض السعر المكتوب + صورة الكارت الذهبي معاً ⚡</span>
+              </div>
+              <div class="choice-action-arrow"><i class="fa-solid fa-arrow-left"></i></div>
             </button>
           </div>
+
+          <!-- Auxiliary: Download High-Res PNG Card -->
+          <button type="button" class="btn-action-download-bar" onclick="downloadCardPNG()">
+            <i class="fa-solid fa-download"></i>
+            <span data-i18n="btnDownloadCardBar">تحميل الكارت كصورة PNG عالية الدقة (3X)</span>
+          </button>
         </div>
       </div>
 
@@ -2858,6 +3117,24 @@
           <span id="waInstrStep2" data-i18n="waInstrStep2">✨ Card image copied to clipboard! Press (Ctrl + V) inside WhatsApp to paste the image directly under the text.</span>
         </div>
       </div>
+
+      <!-- Prominent Action Banner for Ctrl+V -->
+      <div class="wa-action-banner-highlight">
+        <div class="banner-badge-step">
+          <span class="badge-pulsing-dot"></span>
+          <span id="waBannerStepTitle" data-i18n="waBannerStepTitle">Crucial Step: Attach Card Image in WhatsApp</span>
+        </div>
+        <p class="banner-explain-text" id="waBannerExplainText" data-i18n="waBannerExplainText">
+          WhatsApp has loaded the offer pitch text. <strong>To send the offer card image with it:</strong>
+          <br>
+          👉 Simply press <strong>(Ctrl + V)</strong> inside the WhatsApp chat to paste the card image!
+        </p>
+      </div>
+
+      <button type="button" class="btn-giant-launch-wa" onclick="relaunchActiveWa()" id="btnGiantLaunchWa">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span id="btnGiantLaunchText" data-i18n="btnGiantLaunchText">Open WhatsApp & Press (Ctrl + V) to Send</span>
+      </button>
 
       <!-- Quick Tools for Image & Text -->
       <div class="wa-quick-tools-grid">
@@ -2983,6 +3260,14 @@
         modalRepLabel: 'Educational Consultant / Rep Name',
         modalPhoneLabel: 'Client WhatsApp Phone',
         modalBrowserPrefLabel: 'Preferred WhatsApp Platform',
+        waChoicesHeaderTitle: 'WhatsApp Dispatch Options (Select One):',
+        btnSendTextOnlyTitle: '1. Send Offer Pitch Only',
+        btnSendTextOnlyDesc: 'Detailed formatted offer text directly in chat',
+        btnSendImgOnlyTitle: '2. Send Card Image Only',
+        btnSendImgOnlyDesc: 'Ultra high-resolution VIP offer card image',
+        btnSendBothTitle: '3. Send Text & Card Together (Full Offer)',
+        btnSendBothDesc: 'Formatted pitch text plus golden card image ⚡',
+        btnDownloadCardBar: 'Download Card PNG Image (3X)',
         btnSendBoth: 'Send Offer Pitch + Card Image Together',
         btnSendBothSub: 'Formatted pitch text with card image ⚡',
         btnSendImgOnly: 'Card Image Only',
@@ -3009,7 +3294,11 @@
         toastPitchCopied: '📋 Pitch copied! Opening WhatsApp...',
         toastSummaryCopied: '📋 Summary copied to clipboard!',
         toastWaLinkCopied: '🔗 Direct WhatsApp chat link copied!',
-        toastCardCopiedToClipboard: '📋 Card image copied to clipboard! Press Ctrl+V in WhatsApp chat.'
+        toastCardCopiedToClipboard: '📋 Card image copied to clipboard! Press Ctrl+V in WhatsApp chat.',
+        waBannerStepTitle: 'Crucial Step: Attach Card Image in WhatsApp',
+        waBannerExplainText: 'WhatsApp has loaded the offer pitch text. <strong>To send the offer card image with it:</strong><br>👉 Simply press <strong>(Ctrl + V)</strong> inside the WhatsApp chat to paste the card image!',
+        btnGiantLaunchText: '🚀 Open WhatsApp & Press (Ctrl + V) to Send',
+        previewSavingsLabel: 'TOTAL SAVINGS'
       },
       ar: {
         rateBadge: '<i class="fa-solid fa-check-circle"></i> أسعار معتمدة',
@@ -3078,6 +3367,14 @@
         modalRepLabel: 'اسم المستشار الأكاديمي / الموظف',
         modalPhoneLabel: 'رقم واتساب العميل (اختياري للإرسال المباشر)',
         modalBrowserPrefLabel: 'متصفح أو منصة فتح الواتساب المفضلة',
+        waChoicesHeaderTitle: 'خيارات الإرسال عبر الواتساب (اختر واحدة):',
+        btnSendTextOnlyTitle: '1. إرسال النص فقط (Offer Pitch Only)',
+        btnSendTextOnlyDesc: 'نص عرض السعر التفصيلي جاهز بالمحادثة مباشرة',
+        btnSendImgOnlyTitle: '2. إرسال الكارت فقط (Card Image Only)',
+        btnSendImgOnlyDesc: 'صورة كارت العرض الاحترافي VIP فائقة الوضوح',
+        btnSendBothTitle: '3. إرسال النص والكارت سوياً (شامل)',
+        btnSendBothDesc: 'عرض السعر المكتوب + صورة كارت العرض الذهبي معاً ⚡',
+        btnDownloadCardBar: 'تحميل الكارت كصورة PNG عالية الدقة (3X)',
         btnSendBoth: 'إرسال العرض + صورة الكارت معاً',
         btnSendBothSub: 'نص العرض المنسق وتحته صورة الكارت ⚡',
         btnSendImgOnly: 'صورة الكارت فقط',
@@ -3104,7 +3401,11 @@
         toastPitchCopied: '📋 تم نسخ الرسالة وجاري فتح الواتساب...',
         toastSummaryCopied: '📋 تم نسخ ملخص الباقة بنجاح!',
         toastWaLinkCopied: '🔗 تم نسخ رابط محادثة الواتساب المباشر بنجاح!',
-        toastCardCopiedToClipboard: '📋 تم نسخ صورة الكارت إلى الحافظة! اضغط Ctrl + V في الشات لإرسالها.'
+        toastCardCopiedToClipboard: '📋 تم نسخ صورة الكارت إلى الحافظة! اضغط Ctrl + V في الشات لإرسالها.',
+        waBannerStepTitle: 'الخطوة الأخيرة المهمة: إرفاق صورة الكارت في الواتساب',
+        waBannerExplainText: 'تم وضع نص العرض كاملاً في محادثة الواتساب. <strong>لإرسال صورة الكارت مع العرض:</strong><br>👉 اضغط داخل المحادثة على <strong>(Ctrl + V)</strong> أو كليك يمين ثم <strong>لصق (Paste)</strong> وسيتم إرفاق الكارت فوراً مع النص!',
+        btnGiantLaunchText: '🚀 افتح الواتساب الآن واضغط (Ctrl + V) لإرفاق الكارت',
+        previewSavingsLabel: 'إجمالي التوفير'
       }
     };
 
@@ -3906,17 +4207,74 @@
           `${baseClasses} Standard Classes + ${bonusClasses} Free Bonus Gift!`;
       }
 
-      // Approved official tuition with small horizontal red line
+      const divisor = totalClasses > 0 ? totalClasses : 1;
+      const rateBefore = (officialPrice / divisor).toFixed(1);
+      const rateAfter = (discountedPrice / divisor).toFixed(1);
+      const savingsVal = Math.max(0, officialPrice - discountedPrice);
+      const savingsPct = officialPrice > 0 ? Math.round((savingsVal / officialPrice) * 100) : 0;
+
+      // Approved official tuition with horizontal red line
       document.getElementById('previewOfficialSublabel').textContent = currentLanguage === 'ar' ? 'السعر المعتمد:' : 'Approved Tuition:';
       document.getElementById('previewOfficialVal').textContent = `${officialPrice.toLocaleString()} ${t.currency}`;
 
-      // Discounted tuition directly underneath without percentage
+      // Class rate before discount
+      const classRateBeforeEl = document.getElementById('previewClassRateBefore');
+      if (classRateBeforeEl) {
+        if (officialPrice > 0 && totalClasses > 0) {
+          classRateBeforeEl.style.display = 'inline';
+          classRateBeforeEl.textContent = currentLanguage === 'ar'
+            ? `(${rateBefore} ${t.currency} / للحصة)`
+            : `(${rateBefore} ${t.currency} / class)`;
+        } else {
+          classRateBeforeEl.style.display = 'none';
+        }
+      }
+
+      // Discounted tuition figure
       document.getElementById('previewDiscountedSublabel').textContent = currentLanguage === 'ar' ? 'السعر بعد الخصم:' : 'Discounted Tuition:';
       document.getElementById('previewClientPrice').innerHTML = `${discountedPrice.toLocaleString()} <span class="card-curr-sign">${t.currency}</span>`;
 
-      // Professional Program at the bottom
-      document.getElementById('previewGrantTitle').textContent = currentLanguage === 'ar' ? 'البرنامج الاحترافي' : 'Professional Program';
-      document.getElementById('previewGrantClassesText').textContent = currentLanguage === 'ar' ? `🎁 +${bonusClasses} حصة إضافية` : `🎁 +${bonusClasses} Gift Classes`;
+      // Class rate after discount
+      const classRateAfterEl = document.getElementById('previewClassRateAfter');
+      if (classRateAfterEl) {
+        if (discountedPrice > 0 && totalClasses > 0) {
+          classRateAfterEl.style.display = 'inline-flex';
+          classRateAfterEl.innerHTML = currentLanguage === 'ar'
+            ? `⚡ فقط <strong>${rateAfter} ${t.currency}</strong> / للحصة`
+            : `⚡ Only <strong>${rateAfter} ${t.currency}</strong> / class`;
+        } else {
+          classRateAfterEl.style.display = 'none';
+        }
+      }
+
+      // Catchy Total Savings Badge (Right Column)
+      const savingsWrap = document.getElementById('previewSavingsWrap');
+      const savingsValEl = document.getElementById('previewSavingsVal');
+      const savingsPctTag = document.getElementById('previewSavingsPctTag');
+      const savingsLabelEl = document.getElementById('previewSavingsLabel');
+      if (savingsWrap && savingsValEl && savingsPctTag) {
+        if (savingsVal > 0) {
+          savingsWrap.style.display = 'flex';
+          savingsValEl.textContent = `${savingsVal.toLocaleString()} ${t.currency}`;
+          savingsPctTag.textContent = currentLanguage === 'ar' ? `وفر ${savingsPct}%` : `${savingsPct}% OFF`;
+          if (savingsLabelEl) {
+            savingsLabelEl.textContent = currentLanguage === 'ar' ? 'إجمالي التوفير' : 'TOTAL SAVINGS';
+          }
+        } else {
+          savingsWrap.style.display = 'none';
+        }
+      }
+
+      // Program free lessons note
+      const grantClassesTextEl = document.getElementById('previewGrantClassesText');
+      if (grantClassesTextEl) {
+        if (bonusClasses > 0) {
+          grantClassesTextEl.style.display = 'block';
+          grantClassesTextEl.textContent = currentLanguage === 'ar' ? `🎁 +${bonusClasses} حصة هدية` : `🎁 +${bonusClasses} Gift Lessons`;
+        } else {
+          grantClassesTextEl.style.display = 'none';
+        }
+      }
       
       document.getElementById('previewPerk1').textContent = t.previewPerk1;
       document.getElementById('previewPerk2').textContent = t.previewPerk2;
@@ -4002,16 +4360,26 @@
       const repName = (document.getElementById('modalRepName') ? document.getElementById('modalRepName').value : '').trim();
       const t = I18N[currentLanguage];
 
+      const divisor = totalSessions > 0 ? totalSessions : 1;
+      const rateBefore = (officialPrice / divisor).toFixed(1);
+      const rateAfter = (discountedPrice / divisor).toFixed(1);
+      const savingsVal = Math.max(0, officialPrice - discountedPrice);
+      const savingsPct = officialPrice > 0 ? Math.round((savingsVal / officialPrice) * 100) : 0;
+
       if (currentLanguage === 'ar') {
         let msg = `✨ *تحية طيبة ${clientName || 'ولي أمر الطالب العزيز'}* ✨\n\n`;
         msg += `يسعدنا تقديم العرض الأكاديمي المعتمد من *51Talk Global* 🌍\n\n`;
         msg += `📋 *تفاصيل الباقة التعليمية:* ${planName}\n`;
         msg += `⏳ *المدة الزمنية:* ${duration}\n`;
-        msg += `🎯 *إجمالي الحصص:* ${totalSessions} حصة خاصة (${baseSessions} أساسية + 🎁 *${bonusSessions} حصة مجانية بالكامل*)\n\n`;
+        msg += `🎯 *إجمالي الحصص المعتمدة:* ${totalSessions} حصة خاصة (${baseSessions} أساسية + 🎁 *${bonusSessions} حصة مجانية بالكامل*)\n\n`;
         if (officialPrice > 0 && officialPrice !== discountedPrice) {
-          msg += `💵 *السعر المعتمد:* ~${officialPrice.toLocaleString()} ${t.currency}~\n`;
+          msg += `💵 *السعر المعتمد:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} للحصة~)\n`;
         }
-        msg += `🔥 *السعر بعد الخصم (البرنامج الاحترافي):* *${discountedPrice.toLocaleString()} ${t.currency}*\n\n`;
+        msg += `🔥 *السعر بعد الخصم (البرنامج الاحترافي):* *${discountedPrice.toLocaleString()} ${t.currency}* (⚡ فقط *${rateAfter} ${t.currency}* للحصة)\n`;
+        if (savingsVal > 0) {
+          msg += `💰 *إجمالي التوفير للعميل:* *${savingsVal.toLocaleString()} ${t.currency}* (وفر ${savingsPct}%)\n`;
+        }
+        msg += `\n`;
         msg += `⭐ *مزايا البرنامج الاحترافي:*\n`;
         msg += `• معلمين أجانب معتمدين دولياً بشهادات TESOL\n`;
         msg += `• مرونة كاملة في حجز وتعديل المواعيد\n`;
@@ -4028,9 +4396,13 @@
         msg += `⏳ *Duration:* ${duration}\n`;
         msg += `🎯 *Total Class Allocation:* ${totalSessions} Private Classes (${baseSessions} Standard + 🎁 *${bonusSessions} Free Gift Classes*)\n\n`;
         if (officialPrice > 0 && officialPrice !== discountedPrice) {
-          msg += `💵 *Approved Tuition:* ~${officialPrice.toLocaleString()} ${t.currency}~\n`;
+          msg += `💵 *Approved Tuition:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / class~)\n`;
         }
-        msg += `🔥 *Discounted Tuition (Professional Program):* *${discountedPrice.toLocaleString()} ${t.currency}*\n\n`;
+        msg += `🔥 *Discounted Tuition (Professional Program):* *${discountedPrice.toLocaleString()} ${t.currency}* (⚡ Only *${rateAfter} ${t.currency}* / class)\n`;
+        if (savingsVal > 0) {
+          msg += `💰 *Total Savings:* *${savingsVal.toLocaleString()} ${t.currency}* (${savingsPct}% OFF)\n`;
+        }
+        msg += `\n`;
         msg += `⭐ *Key Program Highlights:*\n`;
         msg += `• Certified International Native/TESOL Tutors\n`;
         msg += `• 100% Flexible Booking & Personalized Pace\n`;
@@ -4123,16 +4495,23 @@
           window.open(currentWaWebUrl, '_blank');
         }
 
+        if (imageCopied) {
+          showToast(currentLanguage === 'ar' 
+            ? '📋 صورة الكارت بالحافظة! داخل الواتساب اضغط (Ctrl + V) للصق الصورة' 
+            : '📋 Card image copied! Inside WhatsApp press (Ctrl + V) to paste');
+        }
+
         // 6. Show guidance popup with 4 choice buttons & tools
         showInstructionModal({
-          title: currentLanguage === 'ar' ? '🚀 تم تجهيز العرض وصورة الكارت!' : 'Offer Text & Card Ready!',
+          mode: 'both',
+          title: currentLanguage === 'ar' ? '🚀 تم فتح الواتساب وتجهيز الكارت!' : 'WhatsApp Opened & Card Ready!',
           step1: currentLanguage === 'ar' 
-            ? 'تم فتح شات الواتساب بنص العرض. يمكنك التبديل بين كروم، إيدج، وتطبيق الواتساب أدناه.' 
-            : 'WhatsApp opened with offer pitch. Switch between Chrome, Edge, or App using the buttons below.',
+            ? 'تم إدراج نص العرض كاملاً في خانة الكتابة داخل الواتساب.' 
+            : 'WhatsApp opened with the full offer pitch text in chat input.',
           step2: imageCopied 
             ? (currentLanguage === 'ar' 
-                ? '✨ تم نسخ صورة الكارت إلى الحافظة تلقائياً! اضغط (Ctrl + V) داخل الشات لإرسال الصورة فوراً مع العرض.' 
-                : '✨ Card image copied to clipboard! Press (Ctrl + V) in WhatsApp chat to paste and send the image.')
+                ? '✨ صورة الكارت تم نسخها إلى الحافظة! اضغط (Ctrl + V) داخل الشات لإرفاق الصورة فوراً.' 
+                : '✨ Card image copied to clipboard! Press (Ctrl + V) in WhatsApp chat to attach the card image.')
             : (currentLanguage === 'ar' 
                 ? 'تم تنزيل صورة الكارت على جهازك. يمكنك سحبها وإفلاتها مباشرة في المحادثة.' 
                 : 'Card image downloaded to your device. Drag and drop it into WhatsApp.')
@@ -4195,7 +4574,7 @@
           document.body.removeChild(dlLink);
         } catch (e) {}
 
-        // 4. Construct direct URLs for both WhatsApp Web & App
+        // 4. Construct direct URLs for both WhatsApp Web & App (without pre-filled pitch)
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
         currentWaWebUrl = phoneVal ? `https://web.whatsapp.com/send?phone=${phoneVal}` : `https://web.whatsapp.com/`;
         currentWaAppUrl = phoneVal ? `https://api.whatsapp.com/send?phone=${phoneVal}` : `https://api.whatsapp.com/`;
@@ -4212,11 +4591,12 @@
           window.open(currentWaWebUrl, '_blank');
         }
 
-        // 6. Guidance popup
+        // 6. Guidance popup tailored for Image Only
         showInstructionModal({
+          mode: 'image_only',
           title: currentLanguage === 'ar' ? '🖼️ تم نسخ صورة الكارت وتحميلها!' : 'Card Image Ready!',
           step1: currentLanguage === 'ar' 
-            ? 'تم فتح شات الواتساب لبدء المحادثة. يمكنك التبديل بين المتصفحات أدناه.' 
+            ? 'تم فتح شات الواتساب لبدء المحادثة مع العميل. يمكنك التبديل بين المتصفحات أدناه.' 
             : 'WhatsApp opened to send card. Switch between browsers or app below.',
           step2: imageCopied 
             ? (currentLanguage === 'ar' 
@@ -4237,6 +4617,7 @@
     let currentWaWebUrl = '';
     let currentWaAppUrl = '';
     let currentModalPitch = '';
+    let activeWaMode = 'both'; // 'text_only' | 'image_only' | 'both'
 
     function getPreferredBrowser() {
       const selectEl = document.getElementById('modalPreferredBrowser');
@@ -4246,6 +4627,28 @@
 
     function saveBrowserPref(val) {
       if (val) localStorage.setItem('preferredWaPlatform', val);
+    }
+
+    async function relaunchActiveWa() {
+      const pref = getPreferredBrowser();
+      if (activeWaMode !== 'text_only') {
+        try {
+          const { blob } = await getCardBlob();
+          if (navigator.clipboard && window.ClipboardItem) {
+            await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+          }
+        } catch (err) {
+          console.warn(err);
+        }
+      }
+      if (activeWaMode === 'text_only') {
+        showToast(currentLanguage === 'ar' ? '🚀 تم فتح الواتساب بنص العرض!' : 'WhatsApp opened with pitch text!');
+      } else {
+        showToast(currentLanguage === 'ar' 
+          ? '🚀 تم فتح الواتساب! اضغط (Ctrl + V) داخل الشات للصق صورة الكارت' 
+          : 'Opening WhatsApp! Press (Ctrl + V) in chat to paste card');
+      }
+      launchWaBrowser(pref);
     }
 
     function launchWaBrowser(target) {
@@ -4295,10 +4698,55 @@
       downloadCardPNG();
     }
 
-    function showInstructionModal({ title, step1, step2 }) {
+    function showInstructionModal({ mode = 'both', title, step1, step2 }) {
+      activeWaMode = mode;
       if (title) document.getElementById('waInstrTitle').textContent = title;
       if (step1) document.getElementById('waInstrStep1').textContent = step1;
       if (step2) document.getElementById('waInstrStep2').textContent = step2;
+
+      const t = I18N[currentLanguage];
+      const bannerTitleEl = document.getElementById('waBannerStepTitle');
+      const bannerExplainEl = document.getElementById('waBannerExplainText');
+      const btnGiantLaunchTextEl = document.getElementById('btnGiantLaunchText');
+
+      if (mode === 'text_only') {
+        if (bannerTitleEl) {
+          bannerTitleEl.textContent = currentLanguage === 'ar' ? 'العرض المكتوب جاهز في المحادثة' : 'Offer Pitch Loaded in Chat';
+        }
+        if (bannerExplainEl) {
+          bannerExplainEl.innerHTML = currentLanguage === 'ar'
+            ? 'تم إدراج نص العرض التفصيلي كاملاً في محادثة الواتساب. <strong>كل ما عليك هو الضغط على زر الإرسال (Send)</strong> داخل الشات وسيصل العرض للعميل فوراً!'
+            : 'The complete offer pitch is pre-loaded in your WhatsApp chat. Simply press <strong>Send</strong> in WhatsApp to deliver it to the client!';
+        }
+        if (btnGiantLaunchTextEl) {
+          btnGiantLaunchTextEl.textContent = currentLanguage === 'ar' ? '🚀 فتح الواتساب وإرسال النص الآن' : '🚀 Open WhatsApp & Send Pitch';
+        }
+      } else if (mode === 'image_only') {
+        if (bannerTitleEl) {
+          bannerTitleEl.textContent = currentLanguage === 'ar' ? 'الخطوة المهمة: إرفاق صورة الكارت' : 'Attach Card Image in WhatsApp';
+        }
+        if (bannerExplainEl) {
+          bannerExplainEl.innerHTML = currentLanguage === 'ar'
+            ? 'تم نسخ صورة الكارت إلى الحافظة وتنزيل نسخة منها. <strong>لإرسال الكارت للعميل:</strong><br>👉 اضغط داخل المحادثة على <strong>(Ctrl + V)</strong> للصق صورة الكارت فوراً ثم أرسل!'
+            : 'The card image is in your clipboard and downloaded. <strong>To send the card:</strong><br>👉 Simply press <strong>(Ctrl + V)</strong> inside WhatsApp to paste the card, then send!';
+        }
+        if (btnGiantLaunchTextEl) {
+          btnGiantLaunchTextEl.textContent = currentLanguage === 'ar' ? '🚀 فتح الواتساب ولصق الكارت (Ctrl + V)' : '🚀 Open WhatsApp & Paste Card (Ctrl + V)';
+        }
+      } else {
+        // mode === 'both'
+        if (bannerTitleEl) {
+          bannerTitleEl.textContent = t.waBannerStepTitle || (currentLanguage === 'ar' ? 'الخطوة الأخيرة: إرفاق صورة الكارت مع النص' : 'Attach Card Image with Pitch');
+        }
+        if (bannerExplainEl) {
+          bannerExplainEl.innerHTML = t.waBannerExplainText || (currentLanguage === 'ar'
+            ? 'تم وضع نص العرض كاملاً في محادثة الواتساب. <strong>لإرسال صورة الكارت مع العرض:</strong><br>👉 اضغط داخل المحادثة على <strong>(Ctrl + V)</strong> للصق صورة الكارت تحت النص ثم أرسل!'
+            : 'Pitch text is loaded in WhatsApp. <strong>To attach the card image:</strong><br>👉 Simply press <strong>(Ctrl + V)</strong> inside WhatsApp to paste the card below the text!');
+        }
+        if (btnGiantLaunchTextEl) {
+          btnGiantLaunchTextEl.textContent = t.btnGiantLaunchText || (currentLanguage === 'ar' ? '🚀 افتح الواتساب الآن واضغط (Ctrl + V) لإرفاق الكارت' : '🚀 Open WhatsApp & Press (Ctrl + V) to Send');
+        }
+      }
 
       document.getElementById('waInstructionModal').style.display = 'flex';
     }
@@ -4316,6 +4764,7 @@
       });
     }
 
+    // Option 1: Send Written Text Pitch ONLY
     function shareWhatsAppPitch() {
       try {
         const pitch = getFormattedWhatsAppPitch();
@@ -4348,12 +4797,13 @@
         }
 
         showInstructionModal({
+          mode: 'text_only',
           title: currentLanguage === 'ar' ? '📋 تم نسخ نص العرض وفتح المحادثة!' : 'Pitch Copied & Opening Chat!',
           step1: currentLanguage === 'ar' 
-            ? 'تم فتح شات الواتساب بنص العرض. يمكنك التبديل بين المتصفحات أدناه في أي وقت.' 
+            ? 'تم فتح شات الواتساب بنص العرض كاملاً. يمكنك التبديل بين المتصفحات أدناه.' 
             : 'WhatsApp opened with offer pitch. Switch between browsers or app below.',
           step2: currentLanguage === 'ar'
-            ? 'تم نسخ نص العرض إلى الحافظة لسهولة استخدامه في أي محادثة.'
+            ? 'تم نسخ نص العرض إلى الحافظة أيضاً لسهولة استخدامه في أي محادثة أخرى.'
             : 'Pitch text copied to clipboard for easy pasting.'
         });
       } catch (err) {
