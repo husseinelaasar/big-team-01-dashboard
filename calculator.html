@@ -2836,6 +2836,91 @@
       color: #fff;
     }
 
+    .wa-drag-preview-box {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1.5px dashed #38bdf8;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .wa-drag-badge {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    #waCardThumbPreview {
+      max-height: 140px;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      cursor: grab;
+      transition: transform 0.2s ease;
+      display: block;
+      margin: 0 auto;
+    }
+    #waCardThumbPreview:hover {
+      transform: scale(1.02);
+    }
+    .wa-two-step-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .btn-step-action {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-step-card {
+      background: rgba(37, 211, 102, 0.16);
+      border: 1px solid rgba(37, 211, 102, 0.5);
+      color: #25d366;
+    }
+    .btn-step-card:hover {
+      background: rgba(37, 211, 102, 0.28);
+      color: #fff;
+    }
+    .btn-step-pitch-gold {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #0b0f19;
+      font-weight: 900;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+      animation: goldPulseBtn 2s infinite alternate;
+    }
+    .btn-step-pitch-gold:hover {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+    }
+    @keyframes goldPulseBtn {
+      0% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
+      100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.7); }
+    }
+    .btn-step-pitch-copied {
+      background: linear-gradient(135deg, #10b981, #059669) !important;
+      color: #fff !important;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5) !important;
+      animation: none !important;
+    }
+
     .wa-action-banner-highlight {
       background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(245, 158, 11, 0.14));
       border: 1.5px solid #10b981;
@@ -3361,39 +3446,50 @@
         <button class="wa-instr-close" onclick="closeWaInstruction()"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="wa-instr-body">
-        <div class="wa-instr-step">
-          <span class="step-num">1</span>
-          <span id="waInstrStep1" data-i18n="waInstrStep1">Card image downloaded & offer details copied to clipboard.</span>
+        <!-- Interactive Card Thumbnail for Drag & Drop -->
+        <div class="wa-drag-preview-box" id="waDragPreviewBox">
+          <div class="wa-drag-badge">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <span>اسحب صورة الكارت إلى الواتساب أو الصقها بـ (Ctrl + V)</span>
+          </div>
+          <img id="waCardThumbPreview" src="" alt="51Talk VIP Card" draggable="true" title="اسحب صورة الكارت وأفلتها في شات الواتساب مباشرة!">
         </div>
-        <div class="wa-instr-step">
-          <span class="step-num">2</span>
-          <span id="waInstrStep2" data-i18n="waInstrStep2">Drag the card image into WhatsApp, paste text into caption box below it, then send.</span>
+
+        <!-- 2-Step Action Buttons: Step 1 Card Pasted, Step 2 Copy Caption -->
+        <div class="wa-two-step-container">
+          <button type="button" class="btn-step-action btn-step-card" onclick="copyCardImageFromModal()" id="btnStepCardImg">
+            <i class="fa-solid fa-image"></i>
+            <span>1. تم نسخ صورة الكارت (الصقها في الشات Ctrl+V)</span>
+          </button>
+          <button type="button" class="btn-step-action btn-step-pitch-gold" onclick="copyPitchOnlyFromModal()" id="btnCopyPitchStep2">
+            <i class="fa-solid fa-copy"></i>
+            <span>2. اضغط هنا لنسخ نص الشرح (الكابشن)</span>
+          </button>
         </div>
-      </div>
 
-      <!-- Action Banner for Image on Top + Details on Bottom -->
-      <div class="wa-action-banner-highlight">
-        <div class="banner-badge-step">
-          <span class="badge-pulsing-dot"></span>
-          <span id="waBannerStepTitle" data-i18n="waBannerStepTitle">Send Card with Caption (Image on Top + Text Below)</span>
+        <!-- Action Banner for Image on Top + Details on Bottom -->
+        <div class="wa-action-banner-highlight">
+          <div class="banner-badge-step">
+            <span class="badge-pulsing-dot"></span>
+            <span id="waBannerStepTitle" data-i18n="waBannerStepTitle">إرسال الكارت مع الشرح (الصورة بالأعلى والتفاصيل بالأسفل)</span>
+          </div>
+          <p class="banner-explain-text" id="waBannerExplainText">
+            1️⃣ الصق صورة الكارت داخل الشات <strong>(Ctrl + V)</strong> أو اسحبها للأعلى لتفتح شاشة الصورة.
+            <br>
+            2️⃣ اضغط على الزر الذهبي لنسخ الشرح، ثم الصقه في خانة <strong>(أضف شرحاً / Caption)</strong> واضغط إرسال!
+          </p>
         </div>
-        <p class="banner-explain-text" id="waBannerExplainText" data-i18n="waBannerExplainText">
-          Card image downloaded & offer details copied to clipboard.
-          <br>
-          👉 <strong>Drag the card into WhatsApp</strong>, paste text into caption box below the image, and send to get <strong>Card on Top and Details on Bottom!</strong>
-        </p>
-      </div>
 
-      <button type="button" class="btn-giant-launch-wa" onclick="relaunchActiveWa()" id="btnGiantLaunchWa">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span id="btnGiantLaunchText" data-i18n="btnGiantLaunchText">Open WhatsApp to Send Card & Caption</span>
-      </button>
+        <button type="button" class="btn-giant-launch-wa" onclick="relaunchActiveWa()" id="btnGiantLaunchWa">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span id="btnGiantLaunchText" data-i18n="btnGiantLaunchText">فتح الواتساب لإرسال الكارت والشرح</span>
+        </button>
 
-      <!-- Dedicated WhatsApp Web Client Selector Button -->
-      <button type="button" class="btn-giant-pick-client" onclick="launchWaClientPicker()" id="btnGiantPickClient">
-        <i class="fa-solid fa-address-book"></i>
-        <span data-i18n="btnPickFromClientList">فتح قائمة عملاء الواتساب لاختيار العميل</span>
-      </button>
+        <!-- Dedicated WhatsApp Web Client Selector Button -->
+        <button type="button" class="btn-giant-pick-client" onclick="launchWaClientPicker()" id="btnGiantPickClient">
+          <i class="fa-solid fa-address-book"></i>
+          <span data-i18n="btnPickFromClientList">فتح قائمة عملاء الواتساب لاختيار العميل</span>
+        </button>
 
       <!-- Quick Tools for Image & Text -->
       <div class="wa-quick-tools-grid">
@@ -4807,16 +4903,16 @@
           console.warn('Image auto-download failed:', dlErr);
         }
 
-        // 4. Construct direct URLs for WhatsApp Web and WhatsApp Desktop App
+        // 4. Construct direct URLs for WhatsApp Web and WhatsApp Desktop App (Clean URL without auto-dumping naked text)
         const rawPhone = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '');
         const cleanPhone = rawPhone.replace(/[^0-9]/g, '');
         currentWaWebUrl = cleanPhone
-          ? `https://web.whatsapp.com/send/?phone=${cleanPhone}&text=${encodeURIComponent(pitch)}`
-          : `https://web.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+          ? `https://web.whatsapp.com/send/?phone=${cleanPhone}`
+          : `https://web.whatsapp.com/`;
 
         currentWaAppUrl = cleanPhone
-          ? `https://api.whatsapp.com/send/?phone=${cleanPhone}&text=${encodeURIComponent(pitch)}`
-          : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+          ? `https://api.whatsapp.com/send/?phone=${cleanPhone}`
+          : `https://api.whatsapp.com/`;
 
         currentModalPitch = pitch;
 
@@ -4835,6 +4931,24 @@
           ? `🌐 جاري فتح محادثة العميل في واتساب ويب (${browserLabel})...` 
           : `Opening WhatsApp Web in ${browserLabel}...`);
 
+        const thumbImg = document.getElementById('waCardThumbPreview');
+        if (thumbImg) {
+          thumbImg.src = canvas.toDataURL('image/png');
+        }
+        const btnStep2 = document.getElementById('btnCopyPitchStep2');
+        if (btnStep2) {
+          btnStep2.className = 'btn-step-action btn-step-pitch-gold';
+          btnStep2.innerHTML = currentLanguage === 'ar'
+            ? '<i class="fa-solid fa-copy"></i> 2. اضغط هنا لنسخ نص الشرح (الكابشن)'
+            : '<i class="fa-solid fa-copy"></i> 2. Click to Copy Caption Text';
+        }
+        const btnStep1 = document.getElementById('btnStepCardImg');
+        if (btnStep1) {
+          btnStep1.innerHTML = currentLanguage === 'ar'
+            ? '<i class="fa-solid fa-image"></i> 1. تم نسخ صورة الكارت (الصقها في الشات Ctrl+V)'
+            : '<i class="fa-solid fa-image"></i> 1. Card Image Copied (Paste in Chat Ctrl+V)';
+        }
+
         // 6. Show clear, step-by-step guidance modal to get Image on top & Details on bottom
         showInstructionModal({
           mode: 'both',
@@ -4843,8 +4957,8 @@
             ? 'تم فتح محادثة العميل مباشرة في واتساب ويب وتنزيل صورة الكارت مع نسخها بالحافظة.' 
             : 'WhatsApp Web opened. Card image downloaded & copied to clipboard.',
           step2: currentLanguage === 'ar' 
-            ? 'اضغط في خانة المحادثة (Ctrl + V) أو اسحب صورة الكارت، ثم الصق نص الشرح في خانة Caption واضغط إرسال.' 
-            : 'Paste or drag the card into WhatsApp, paste caption text below it, and send.'
+            ? 'الصق الكارت في الشات (Ctrl+V) أو اسحبه، ثم اضغط زر نسخ الشرح والصقه في خانة الشرح.' 
+            : 'Paste or drag the card into WhatsApp, click copy caption and paste into caption box.'
         });
 
       } catch (err) {
@@ -5038,12 +5152,18 @@
     async function copyCardImageFromModal() {
       try {
         showToast(currentLanguage === 'ar' ? '⏳ جاري نسخ صورة الكارت...' : 'Copying card image...');
-        const { blob } = await getCardBlob();
+        const { blob, canvas } = await getCardBlob();
         if (navigator.clipboard && window.ClipboardItem) {
           await navigator.clipboard.write([
             new ClipboardItem({ 'image/png': blob })
           ]);
           showToast(I18N[currentLanguage].toastCardCopiedToClipboard);
+          const btn = document.getElementById('btnStepCardImg');
+          if (btn) {
+            btn.innerHTML = currentLanguage === 'ar'
+              ? '<i class="fa-solid fa-circle-check"></i> ✅ تم نسخ الكارت! الصقه في الشات (Ctrl+V)'
+              : '<i class="fa-solid fa-circle-check"></i> ✅ Card Copied! Paste in Chat (Ctrl+V)';
+          }
         } else {
           downloadCardPNG();
         }
@@ -5117,9 +5237,18 @@
     }
 
     function copyPitchOnlyFromModal() {
-      const pitch = currentModalPitch || getFormattedWhatsAppPitch();
+      const pitch = currentModalPitch || getFormattedWhatsAppPitch(false);
       navigator.clipboard.writeText(pitch).then(() => {
-        showToast(I18N[currentLanguage].toastPitchCopied);
+        showToast(currentLanguage === 'ar' 
+          ? '📋 تم نسخ نص الشرح! الصقه الآن (Ctrl+V) في خانة (أضف شرحاً) أسفل صورة الكارت واضغط إرسال' 
+          : 'Pitch copied! Paste into caption box below image and send.');
+        const btn = document.getElementById('btnCopyPitchStep2');
+        if (btn) {
+          btn.className = 'btn-step-action btn-step-pitch-copied';
+          btn.innerHTML = currentLanguage === 'ar'
+            ? '<i class="fa-solid fa-circle-check"></i> ✅ تم نسخ الشرح! الصقه في خانة (أضف شرحاً) أسفل الصورة'
+            : '<i class="fa-solid fa-circle-check"></i> ✅ Pitch Copied! Paste into caption box below image';
+        }
       }).catch(() => {
         showToast(I18N[currentLanguage].toastPitchCopied);
       });
