@@ -1,5 +1,5 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-abdelrahmannasef | Generated: 2026-10-11 14:00
+# Representative: EGSS-abdelrahmannasef | Generated: 2026-10-11 14:10
 
 === 1. SOP PENDING TASKS (81) ===
 Student_ID,Task_Name,Expiration_Time
@@ -85,11 +85,11 @@ Student_ID,Task_Name,Expiration_Time
 64026066,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 64042581,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING LEADS (0) ===
-Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
+=== 2. UNFIXED TEACHER BINDING (0) ===
+Student_ID,Pool_Cohort,Classes,Priority
 
-=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (230) ===
-Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
+=== 3. CLASS CONSUMPTION RESCUE (230) ===
+Student_ID,Pool_Cohort,Classes,Action
 57858820,"M2+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58097002,"M2+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58114465,"M2+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -321,8 +321,8 @@ Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 64532999,"M2+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 64540208,"M2+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 
-=== 4. ENGLISH CLUB ACTIONABLE LEADS (93) ===
-Student_ID,Level,Completed_Classes,Booking_Status
+=== 4. ENGLISH CLUB LEADS (93) ===
+Student_ID,Level,Completed,Status
 62917016,"2",0,"Booking Required"
 61395351,"1",0,"Booking Required"
 59216856,"2",0,"Booking Required"
