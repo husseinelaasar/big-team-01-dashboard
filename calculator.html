@@ -413,11 +413,22 @@
     }
 
     .header-upgrade {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.15) 100%);
-      border: 1.5px solid rgba(245, 158, 11, 0.45);
-      box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.3) 0%, rgba(217, 119, 6, 0.25) 50%, rgba(180, 83, 9, 0.3) 100%);
+      border: 2px solid #ffd700;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.45), inset 0 0 15px rgba(255, 215, 0, 0.2);
     }
-    .header-upgrade .col-title-text { color: #fcd34d; }
+    .header-upgrade .col-title-text { 
+      color: #ffd700; 
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+      font-weight: 900;
+    }
+    .header-upgrade .col-pill {
+      background: linear-gradient(135deg, #ffd700, #f59e0b);
+      color: #0b0f19;
+      font-weight: 900;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+      border: 1px solid #fff275;
+    }
 
     .header-renew {
       background: linear-gradient(135deg, rgba(2, 132, 199, 0.22) 0%, rgba(37, 99, 235, 0.15) 100%);
@@ -532,6 +543,57 @@
         0 0 45px rgba(255, 215, 0, 0.7), 
         0 0 20px rgba(245, 158, 11, 0.5), 
         inset 0 0 22px rgba(255, 215, 0, 0.2);
+    }
+
+    /* =========================================================
+       LUXURY GOLD STYLING FOR UPGRADE CARDS & TABLES
+       تصميم ذهبي ملكي متألق 24K لجداول وكروت باقات الترقية
+       ========================================================= */
+    .card-upgrade-gold .popular-banner {
+      background: linear-gradient(135deg, #ffd700 0%, #d97706 60%, #b45309 100%) !important;
+      color: #0b0f19 !important;
+      font-weight: 900 !important;
+      box-shadow: 0 4px 18px rgba(255, 215, 0, 0.5) !important;
+      border: 1px solid #fff275 !important;
+    }
+
+    .card-upgrade-gold .duration-tag {
+      color: #ffd700 !important;
+      border-color: rgba(255, 215, 0, 0.5) !important;
+      background: rgba(245, 158, 11, 0.18) !important;
+    }
+
+    .card-upgrade-gold .sessions-total-banner {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(180, 83, 9, 0.1) 100%) !important;
+      border-color: rgba(255, 215, 0, 0.4) !important;
+    }
+    .card-upgrade-gold .total-banner-count {
+      color: #ffd700 !important;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    }
+
+    .card-upgrade-gold .scholarship-label-badge {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(180, 83, 9, 0.18)) !important;
+      border-color: rgba(255, 215, 0, 0.45) !important;
+      color: #fef08a !important;
+    }
+
+    .card-upgrade-gold .scholarship-final-price {
+      background: linear-gradient(135deg, #ffffff 0%, #ffd700 45%, #f59e0b 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      text-shadow: 0 0 25px rgba(255, 215, 0, 0.45);
+    }
+
+    .card-upgrade-gold .btn-generate-vip {
+      background: linear-gradient(135deg, #ffd700 0%, #f59e0b 50%, #d97706 100%) !important;
+      color: #0b0f19 !important;
+      font-weight: 900 !important;
+      border: 1px solid #fff275 !important;
+      box-shadow: 0 6px 22px rgba(255, 215, 0, 0.45) !important;
+    }
+    .card-upgrade-gold .btn-generate-vip:hover {
+      box-shadow: 0 8px 30px rgba(255, 215, 0, 0.7) !important;
     }
 
     /* Standard hover for Renewal */
@@ -826,12 +888,37 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1.5px dashed rgba(239, 68, 68, 0.45);
+      border-radius: 9px;
+      padding: 6px 12px;
+      box-shadow: inset 0 0 10px rgba(239, 68, 68, 0.06);
+    }
+
+    .badge-forbidden-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #ef4444;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 2px 7px;
+      border-radius: 5px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
+      flex-shrink: 0;
+    }
+
+    .badge-forbidden-pill i {
+      font-size: 11.5px;
     }
 
     .official-label-prominent {
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 800;
-      color: #94a3b8;
+      color: #fca5a5;
       display: flex;
       align-items: center;
       gap: 5px;
@@ -858,17 +945,18 @@
     /* The actual strikethrough is applied to the text itself via
        text-decoration so it ALWAYS sits at the typographic mid-line */
     .official-value-striked {
-      font-size: 18px;
-      font-weight: 800;
-      color: #9ca3af;
+      font-size: 20px;
+      font-weight: 900;
+      color: #fca5a5;
       font-family: 'Outfit', sans-serif;
       letter-spacing: 0.5px;
       text-decoration: line-through;
       text-decoration-color: #ef4444;
-      text-decoration-thickness: 2.5px;
+      text-decoration-thickness: 3px;
       text-decoration-style: solid;
       position: relative;
       transition: color 0.2s ease;
+      text-shadow: 0 0 12px rgba(239, 68, 68, 0.45);
     }
 
     /* Glowing red neon halo over the strikethrough */
@@ -878,9 +966,9 @@
       top: 50%;
       left: -4px;
       right: -4px;
-      height: 3px;
+      height: 3.5px;
       background: transparent;
-      box-shadow: 0 0 10px 1px rgba(239, 68, 68, 0.65);
+      box-shadow: 0 0 12px 1.5px rgba(239, 68, 68, 0.75);
       transform: translateY(-50%);
       pointer-events: none;
       border-radius: 2px;
@@ -1428,6 +1516,74 @@
       font-size: 13px;
     }
 
+    /* =========================================================
+       LUXURY 24K GOLD STYLING FOR UPGRADE INTERNAL COST TABLES
+       جداول تكلفة باقات الترقية باللون الذهبي الملكي الفاخر
+       ========================================================= */
+    .cost-accordion-gold .cost-accordion-trigger {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(180, 83, 9, 0.15) 100%);
+      border: 1.5px solid rgba(255, 215, 0, 0.45);
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.15);
+    }
+    .cost-accordion-gold .cost-accordion-trigger:hover {
+      border-color: #ffd700;
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+    }
+    .cost-accordion-gold .trigger-lock-icon {
+      background: linear-gradient(135deg, #ffd700, #b45309);
+      color: #0b0f19;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.45);
+    }
+    .cost-accordion-gold .trigger-title-text {
+      color: #fef08a;
+      font-weight: 800;
+    }
+    .cost-accordion-gold .trigger-action-pill {
+      background: rgba(245, 158, 11, 0.28);
+      border-color: rgba(255, 215, 0, 0.5);
+      color: #ffd700;
+    }
+    .cost-accordion-gold .cost-accordion-body {
+      border-color: rgba(255, 215, 0, 0.4);
+      background: linear-gradient(180deg, rgba(24, 18, 8, 0.96) 0%, rgba(12, 9, 4, 0.98) 100%);
+    }
+    .cost-accordion-gold .cost-hidden-table {
+      border: 1.5px solid rgba(255, 215, 0, 0.45);
+      background: rgba(16, 12, 6, 0.88);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+    }
+    .cost-accordion-gold .cost-hidden-table th {
+      background: linear-gradient(180deg, rgba(48, 36, 14, 0.98), rgba(30, 22, 8, 0.98));
+      color: #ffd700;
+      border-bottom: 2px solid #ffd700;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      font-weight: 900;
+    }
+    .cost-accordion-gold .cost-hidden-table th,
+    .cost-accordion-gold .cost-hidden-table td {
+      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+      border-inline-end: 1px solid rgba(255, 215, 0, 0.15);
+    }
+    .cost-accordion-gold .highlight-cost-row {
+      background: linear-gradient(90deg, rgba(255, 215, 0, 0.24) 0%, rgba(217, 119, 6, 0.15) 100%) !important;
+    }
+    .cost-accordion-gold .highlight-cost-row td {
+      border-top: 1.5px solid rgba(255, 215, 0, 0.45);
+      border-bottom: 1.5px solid rgba(255, 215, 0, 0.45);
+    }
+    .cost-accordion-gold .gold-bold {
+      color: #0b0f19 !important;
+      background: linear-gradient(135deg, #ffd700, #f59e0b);
+      border: 1px solid #fff275;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+    }
+    .cost-accordion-gold .hidden-table-safety-note {
+      color: #fde68a;
+    }
+    .cost-accordion-gold .hidden-table-safety-note i {
+      color: #ffd700;
+    }
+
     .modal-emp-info-badge {
       background: rgba(15, 23, 42, 0.9);
       border: 1.5px dashed rgba(245, 158, 11, 0.5);
@@ -1862,15 +2018,40 @@
     .modal-official-striked-row {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       flex-wrap: wrap;
       line-height: 1.25;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1.5px dashed rgba(239, 68, 68, 0.55);
+      border-radius: 9px;
+      padding: 6px 12px;
+      margin-bottom: 6px;
+      box-shadow: inset 0 0 10px rgba(239, 68, 68, 0.08);
+    }
+
+    .modal-forbidden-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #ef4444;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 2px 7px;
+      border-radius: 5px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
+      flex-shrink: 0;
+    }
+
+    .modal-forbidden-badge i {
+      font-size: 11.5px;
     }
 
     .modal-price-sublabel {
-      font-size: 11px;
-      color: #94a3b8;
-      font-weight: 700;
+      font-size: 12px;
+      color: #fca5a5;
+      font-weight: 800;
       letter-spacing: normal !important;
       white-space: nowrap;
       flex-shrink: 0;
@@ -1886,9 +2067,9 @@
     }
 
     .modal-official-val {
-      color: #94a3b8;
-      font-size: 13.5px;
-      font-weight: 800;
+      color: #fca5a5;
+      font-size: 18px;
+      font-weight: 900;
       font-family: 'Outfit', 'Cairo', sans-serif;
       position: relative;
       white-space: nowrap;
@@ -1896,20 +2077,21 @@
       display: inline-block;
       text-decoration: line-through;
       text-decoration-color: #ef4444;
-      text-decoration-thickness: 2px;
+      text-decoration-thickness: 3px;
+      text-shadow: 0 0 12px rgba(239, 68, 68, 0.45);
     }
 
     .modal-class-rate-strike {
-      font-size: 11px;
-      color: #94a3b8;
+      font-size: 12px;
+      color: #f87171;
       font-weight: 700;
       white-space: nowrap;
       text-decoration: line-through;
-      text-decoration-color: rgba(239, 68, 68, 0.75);
-      text-decoration-thickness: 1.5px;
+      text-decoration-color: rgba(239, 68, 68, 0.8);
+      text-decoration-thickness: 2px;
       margin-left: 4px;
       margin-right: 4px;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     .modal-discounted-main-row {
@@ -3010,7 +3192,10 @@
           <div class="card-price-deck">
             <div class="modal-pricing-left-col">
               <div class="modal-official-striked-row">
-                <span class="modal-price-sublabel" id="previewOfficialSublabel">Official Tuition:</span>
+                <span class="modal-forbidden-badge" id="previewForbiddenBadge">
+                  <i class="fa-solid fa-ban"></i> <span class="forbidden-txt">ملغي</span>
+                </span>
+                <span class="modal-price-sublabel" id="previewOfficialSublabel">السعر قبل الخصم:</span>
                 <div class="modal-horizontal-strike-wrap">
                   <span class="modal-official-val" id="previewOfficialVal">6,380 SAR</span>
                 </div>
@@ -3959,7 +4144,10 @@
           <!-- Top Row: Official Striked Price (Horizontal Red Line) & Grant Discount Pill -->
           <div class="pricing-header-row">
             <div class="official-row-striked">
-              <span class="official-label-prominent"><i class="fa-solid fa-tag"></i> ${currentLanguage === 'ar' ? 'السعر الرسمي:' : 'Official Tuition:'}</span>
+              <span class="badge-forbidden-pill">
+                <i class="fa-solid fa-ban"></i> ${currentLanguage === 'ar' ? 'ملغي' : 'VOID'}
+              </span>
+              <span class="official-label-prominent"><i class="fa-solid fa-tag"></i> ${currentLanguage === 'ar' ? 'السعر قبل الخصم:' : 'Official Tuition:'}</span>
               <div class="diagonal-strike-wrapper">
                 <span class="official-value-striked">${officialPrice.toLocaleString()} ${t.currency}</span>
               </div>
@@ -4018,7 +4206,7 @@
 
       // Hidden Cost Accordion Table: ONLY Contains Final Platform Cost (The Cheapest Price) with Prominent Arrow
       const costAccordion = document.createElement('div');
-      costAccordion.className = 'cost-accordion-container';
+      costAccordion.className = `cost-accordion-container ${isUpgrade ? 'cost-accordion-gold' : ''}`;
       costAccordion.innerHTML = `
         <button class="cost-accordion-trigger" onclick="toggleCostAccordion('${plan.id}')" title="${currentLanguage === 'ar' ? 'اضغط لعرض سعر التكلفة الداخلي' : 'Click to view confidential platform cost'}">
           <div class="trigger-left">
@@ -4066,7 +4254,7 @@
       `;
 
       const wrapper = document.createElement('div');
-      wrapper.className = 'card-item-wrapper';
+      wrapper.className = `card-item-wrapper ${isUpgrade ? 'wrapper-upgrade-gold' : ''}`;
       wrapper.appendChild(card);
       wrapper.appendChild(separatorEl);
       wrapper.appendChild(costAccordion);
@@ -4217,9 +4405,13 @@
       const savingsVal = Math.max(0, officialPrice - discountedPrice);
       const savingsPct = officialPrice > 0 ? Math.round((savingsVal / officialPrice) * 100) : 0;
 
-      // Approved official tuition with horizontal red line
-      document.getElementById('previewOfficialSublabel').textContent = currentLanguage === 'ar' ? 'السعر المعتمد:' : 'Approved Tuition:';
+      // Approved official tuition before discount with horizontal red line & forbidden sign
+      document.getElementById('previewOfficialSublabel').textContent = currentLanguage === 'ar' ? 'السعر قبل الخصم:' : 'Official Tuition:';
       document.getElementById('previewOfficialVal').textContent = `${officialPrice.toLocaleString()} ${t.currency}`;
+      const forbiddenEl = document.getElementById('previewForbiddenBadge');
+      if (forbiddenEl) {
+        forbiddenEl.innerHTML = `<i class="fa-solid fa-ban"></i> <span class="forbidden-txt">${currentLanguage === 'ar' ? 'ملغي' : 'VOID'}</span>`;
+      }
 
       // Class rate before discount
       const classRateBeforeEl = document.getElementById('previewClassRateBefore');
@@ -4497,32 +4689,40 @@
         const file = new File([blob], fileName, { type: 'image/png' });
 
         const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        const pref = getPreferredBrowser();
 
-        // 1. Native Web Share API (Mobile & compatible OS) - Sends image on top and caption on bottom natively!
-        if (typeof navigator.share === 'function') {
-          try {
-            if (navigator.canShare && navigator.canShare({ files: [file] })) {
-              await navigator.share({
-                files: [file],
-                text: pitch,
-                title: currentLanguage === 'ar' ? 'عرض 51Talk الأكاديمي VIP' : '51Talk Official VIP Offer'
-              });
-              showToast(currentLanguage === 'ar' ? '✅ تم إرسال الكارت مع التفاصيل بنجاح!' : 'Shared card & details successfully!');
-              return;
+        // 1. Mobile Native Web Share API OR Desktop App only when user explicitly chose 'app'
+        if (pref === 'app' || (isMobile && pref !== 'chrome' && pref !== 'edge')) {
+          if (typeof navigator.share === 'function') {
+            try {
+              if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                await navigator.share({
+                  files: [file],
+                  text: pitch,
+                  title: currentLanguage === 'ar' ? 'عرض 51Talk الأكاديمي VIP' : '51Talk Official VIP Offer'
+                });
+                showToast(currentLanguage === 'ar' ? '✅ تم إرسال الكارت مع التفاصيل بنجاح!' : 'Shared card & details successfully!');
+                return;
+              }
+            } catch (shareErr) {
+              if (shareErr.name === 'AbortError') return;
+              console.warn('Native share error or cancelled:', shareErr);
             }
-          } catch (shareErr) {
-            if (shareErr.name === 'AbortError') return;
-            console.warn('Native share not used or cancelled:', shareErr);
           }
         }
 
-        // 2. Desktop: Copy pitch text (caption) to clipboard for 1-click pasting into caption box
+        // 2. Desktop Web Browser (Chrome / Edge / Browser):
+        // Copy image to clipboard for instant 1-click paste (Ctrl+V) into chat
+        let imageCopied = false;
         try {
-          if (navigator.clipboard) {
-            await navigator.clipboard.writeText(pitch);
+          if (navigator.clipboard && window.ClipboardItem) {
+            await navigator.clipboard.write([
+              new ClipboardItem({ 'image/png': blob })
+            ]);
+            imageCopied = true;
           }
         } catch (clipErr) {
-          console.warn('Clipboard text write failed:', clipErr);
+          console.warn('Clipboard image write failed:', clipErr);
         }
 
         // 3. Desktop: Automatically download the high-resolution Card Image for instant drag into chat
@@ -4538,44 +4738,43 @@
         }
 
         // 4. Construct direct URLs for WhatsApp Web and WhatsApp Desktop App
-        const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
-        currentWaWebUrl = phoneVal
-          ? `https://web.whatsapp.com/send?phone=${phoneVal}`
+        const rawPhone = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '');
+        const cleanPhone = rawPhone.replace(/[^0-9]/g, '');
+        currentWaWebUrl = cleanPhone
+          ? `https://web.whatsapp.com/send/?phone=${cleanPhone}`
           : `https://web.whatsapp.com/`;
 
-        currentWaAppUrl = phoneVal
-          ? `https://api.whatsapp.com/send?phone=${phoneVal}`
+        currentWaAppUrl = cleanPhone
+          ? `https://api.whatsapp.com/send/?phone=${cleanPhone}`
           : `https://api.whatsapp.com/`;
 
         currentModalPitch = pitch;
 
         // 5. Open based on user's preferred platform
-        const pref = getPreferredBrowser();
-        if (isMobile) {
+        if (isMobile && pref !== 'chrome' && pref !== 'edge') {
           window.open(currentWaAppUrl, '_blank');
-        } else if (pref === 'edge') {
-          window.location.href = 'microsoft-edge:' + currentWaWebUrl;
         } else if (pref === 'app') {
           window.open(currentWaAppUrl, '_blank');
         } else {
-          // Default: Google Chrome / Browser
+          // Both Chrome & Edge open directly in browser tab to WhatsApp Web without desktop app prompts!
           window.open(currentWaWebUrl, '_blank');
         }
 
+        const browserLabel = pref === 'edge' ? 'Microsoft Edge' : 'Google Chrome';
         showToast(currentLanguage === 'ar' 
-          ? '🖼️ تم تنزيل صورة الكارت ونسخ الشرح! جاري فتح الواتساب...' 
-          : 'Card downloaded & caption copied! Opening WhatsApp...');
+          ? `🌐 جاري فتح محادثة العميل في واتساب ويب (${browserLabel})...` 
+          : `Opening WhatsApp Web in ${browserLabel}...`);
 
         // 6. Show clear, step-by-step guidance modal to get Image on top & Details on bottom
         showInstructionModal({
           mode: 'both',
           title: currentLanguage === 'ar' ? '🖼️ جاهز للإرسال: صورة الكارت بالأعلى والتفاصيل بالأسفل!' : 'Card Image on Top + Details on Bottom!',
           step1: currentLanguage === 'ar' 
-            ? 'تم تنزيل صورة الكارت وتجهيز نص الشرح تلقائياً في الحافظة.' 
-            : 'Card image downloaded & offer details copied to clipboard.',
+            ? 'تم فتح محادثة العميل مباشرة في واتساب ويب وتنزيل صورة الكارت مع نسخها بالحافظة.' 
+            : 'WhatsApp Web opened. Card image downloaded & copied to clipboard.',
           step2: currentLanguage === 'ar' 
-            ? 'اسحب صورة الكارت إلى المحادثة، ثم الصق النص في خانة (Caption) أسفل الصورة واضغط إرسال.' 
-            : 'Drag the card image into WhatsApp, paste text into caption box below it, then send.'
+            ? 'اضغط في خانة المحادثة (Ctrl + V) أو اسحب صورة الكارت، ثم الصق نص الشرح في خانة Caption واضغط إرسال.' 
+            : 'Paste or drag the card into WhatsApp, paste caption text below it, and send.'
         });
 
       } catch (err) {
@@ -4637,15 +4836,13 @@
 
         // 4. Construct direct URLs for both WhatsApp Web & App (without pre-filled pitch)
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
-        currentWaWebUrl = phoneVal ? `https://web.whatsapp.com/send?phone=${phoneVal}` : `https://web.whatsapp.com/`;
-        currentWaAppUrl = phoneVal ? `https://api.whatsapp.com/send?phone=${phoneVal}` : `https://api.whatsapp.com/`;
+        currentWaWebUrl = phoneVal ? `https://web.whatsapp.com/send/?phone=${phoneVal}` : `https://web.whatsapp.com/`;
+        currentWaAppUrl = phoneVal ? `https://api.whatsapp.com/send/?phone=${phoneVal}` : `https://api.whatsapp.com/`;
 
         // 5. Open based on user preference
         const pref = getPreferredBrowser();
-        if (isMobile) {
+        if (isMobile && pref !== 'chrome' && pref !== 'edge') {
           window.open(currentWaAppUrl, '_blank');
-        } else if (pref === 'edge') {
-          window.location.href = 'microsoft-edge:' + currentWaWebUrl;
         } else if (pref === 'app') {
           window.open(currentWaAppUrl, '_blank');
         } else {
@@ -4720,15 +4917,13 @@
       const webUrl = currentWaWebUrl || 'https://web.whatsapp.com/';
       const appUrl = currentWaAppUrl || 'https://api.whatsapp.com/';
 
-      if (target === 'edge') {
-        window.location.href = 'microsoft-edge:' + webUrl;
-        showToast(currentLanguage === 'ar' ? '🌐 جاري الفتح عبر Microsoft Edge...' : 'Opening in Microsoft Edge...');
-      } else if (target === 'app') {
+      if (target === 'app') {
         window.open(appUrl, '_blank');
         showToast(currentLanguage === 'ar' ? '📱 جاري فتح تطبيق الواتساب...' : 'Opening WhatsApp App...');
       } else {
         window.open(webUrl, '_blank');
-        showToast(currentLanguage === 'ar' ? '🌐 جاري الفتح عبر Google Chrome...' : 'Opening in Google Chrome...');
+        const browserLabel = target === 'edge' ? 'Microsoft Edge' : 'Google Chrome';
+        showToast(currentLanguage === 'ar' ? `🌐 جاري الفتح عبر ${browserLabel} (واتساب ويب)...` : `Opening in ${browserLabel} (WhatsApp Web)...`);
       }
     }
 
@@ -4839,12 +5034,12 @@
         const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
         
         currentWaWebUrl = phoneVal 
-          ? `https://web.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
-          : `https://web.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+          ? `https://web.whatsapp.com/send/?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
+          : `https://web.whatsapp.com/send/?text=${encodeURIComponent(pitch)}`;
 
         currentWaAppUrl = phoneVal
-          ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
-          : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+          ? `https://api.whatsapp.com/send/?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
+          : `https://api.whatsapp.com/send/?text=${encodeURIComponent(pitch)}`;
 
         currentModalPitch = pitch;
 
@@ -4853,10 +5048,8 @@
         });
 
         const pref = getPreferredBrowser();
-        if (isMobile) {
+        if (isMobile && pref !== 'chrome' && pref !== 'edge') {
           window.open(currentWaAppUrl, '_blank');
-        } else if (pref === 'edge') {
-          window.location.href = 'microsoft-edge:' + currentWaWebUrl;
         } else if (pref === 'app') {
           window.open(currentWaAppUrl, '_blank');
         } else {
