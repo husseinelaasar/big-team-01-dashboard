@@ -11,7 +11,8 @@ const MIME_TYPES = {
   '.csv': 'text/csv; charset=utf-8',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
-  '.svg': 'image/svg+xml'
+  '.svg': 'image/svg+xml',
+  '.xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 };
 
 const server = http.createServer((req, res) => {
