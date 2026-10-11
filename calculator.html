@@ -3086,8 +3086,8 @@
                 <i class="fa-solid fa-sparkles sub-ico"></i>
               </div>
               <div class="choice-text-col">
-                <span class="choice-title" data-i18n="btnSendBothTitle">3. إرسال النص والكارت سوياً (عرض مدمج)</span>
-                <span class="choice-desc" data-i18n="btnSendBothDesc">دمج كارت العرض الذهبي مع نص السعر والتوفير في رسالة واحدة مباشرة ⚡</span>
+                <span class="choice-title" data-i18n="btnSendBothTitle">3. إرسال الكارت مع التفاصيل (صورة بالأعلى + شرح بالأسفل)</span>
+                <span class="choice-desc" data-i18n="btnSendBothDesc">إرسال كارت VIP كصورة في الأعلى وشرح تفاصيل العرض بالأسفل سوياً ⚡</span>
               </div>
               <div class="choice-action-arrow"><i class="fa-solid fa-arrow-left"></i></div>
             </button>
@@ -3115,30 +3115,30 @@
       <div class="wa-instr-body">
         <div class="wa-instr-step">
           <span class="step-num">1</span>
-          <span id="waInstrStep1" data-i18n="waInstrStep1">WhatsApp opened with the full offer pitch text.</span>
+          <span id="waInstrStep1" data-i18n="waInstrStep1">Card image downloaded & offer details copied to clipboard.</span>
         </div>
         <div class="wa-instr-step">
           <span class="step-num">2</span>
-          <span id="waInstrStep2" data-i18n="waInstrStep2">✨ The VIP offer card and pricing details are 100% merged and ready to send directly.</span>
+          <span id="waInstrStep2" data-i18n="waInstrStep2">Drag the card image into WhatsApp, paste text into caption box below it, then send.</span>
         </div>
       </div>
 
-      <!-- Action Banner for Merged Offer / Direct Send -->
+      <!-- Action Banner for Image on Top + Details on Bottom -->
       <div class="wa-action-banner-highlight">
         <div class="banner-badge-step">
           <span class="badge-pulsing-dot"></span>
-          <span id="waBannerStepTitle" data-i18n="waBannerStepTitle">Offer Card & Pitch Merged — Ready to Send</span>
+          <span id="waBannerStepTitle" data-i18n="waBannerStepTitle">Send Card with Caption (Image on Top + Text Below)</span>
         </div>
         <p class="banner-explain-text" id="waBannerExplainText" data-i18n="waBannerExplainText">
-          The VIP offer card structure, pricing breakdown, and verification link are merged directly into your WhatsApp chat.
+          Card image downloaded & offer details copied to clipboard.
           <br>
-          👉 <strong>Ready to send in 1 click!</strong> Simply press <strong>Send</strong> in WhatsApp!
+          👉 <strong>Drag the card into WhatsApp</strong>, paste text into caption box below the image, and send to get <strong>Card on Top and Details on Bottom!</strong>
         </p>
       </div>
 
       <button type="button" class="btn-giant-launch-wa" onclick="relaunchActiveWa()" id="btnGiantLaunchWa">
         <i class="fa-brands fa-whatsapp"></i>
-        <span id="btnGiantLaunchText" data-i18n="btnGiantLaunchText">Open WhatsApp & Send Merged Offer Now</span>
+        <span id="btnGiantLaunchText" data-i18n="btnGiantLaunchText">Open WhatsApp to Send Card & Caption</span>
       </button>
 
       <!-- Quick Tools for Image & Text -->
@@ -3269,18 +3269,17 @@
         btnSendTextOnlyTitle: '1. Send Offer Pitch Only',
         btnSendTextOnlyDesc: 'Detailed formatted offer text directly in chat',
         btnSendImgOnlyTitle: '2. Send Card Image Only',
-        btnSendImgOnlyDesc: 'Ultra high-resolution VIP offer card image',
-        btnSendBothTitle: '3. Send Text & Card Together (Merged Direct Offer)',
-        btnSendBothDesc: 'Full golden card structure merged with pitch text in one direct message ⚡',
+        btnSendBothTitle: '3. Send Card with Details (Image on Top + Caption Below)',
+        btnSendBothDesc: 'VIP Card image on top with complete offer breakdown caption below ⚡',
         btnDownloadCardBar: 'Download Card PNG Image (3X)',
-        btnSendBoth: 'Send Text & Card Together (Merged Offer)',
-        btnSendBothSub: 'Full golden card structure merged with pitch text ⚡',
+        btnSendBoth: 'Send Card with Details (Image on Top + Caption Below)',
+        btnSendBothSub: 'VIP Card image on top with complete offer breakdown caption below ⚡',
         btnSendImgOnly: 'Card Image Only',
         btnSendTextOnly: 'Offer Pitch Only',
         btnDownloadCard: 'Download PNG (3X)',
         waInstrTitle: 'Ready to Send via WhatsApp!',
-        waInstrStep1: 'VIP Card and complete offer details pre-filled in your WhatsApp chat.',
-        waInstrStep2: 'Offer is 100% merged! Simply press Send in WhatsApp chat to deliver it.',
+        waInstrStep1: 'Card image downloaded & offer details copied to clipboard.',
+        waInstrStep2: 'Drag the card image into WhatsApp, paste text into caption box below it, then send.',
         waLaunchSectionTitle: 'Choose Browser or Platform to Launch:',
         btnLaunchChrome: 'Google Chrome',
         btnLaunchEdge: 'Microsoft Edge',
@@ -3300,9 +3299,9 @@
         toastSummaryCopied: '📋 Summary copied to clipboard!',
         toastWaLinkCopied: '🔗 Direct WhatsApp chat link copied!',
         toastCardCopiedToClipboard: '📋 Offer card image copied to clipboard successfully!',
-        waBannerStepTitle: 'Offer Card & Pitch Merged — Ready to Send',
-        waBannerExplainText: 'The VIP offer card structure, pricing breakdown, and card verification link are merged directly into your WhatsApp chat. <strong>Ready to send in 1 click!</strong>',
-        btnGiantLaunchText: '🚀 Open WhatsApp & Send Merged Offer Now',
+        waBannerStepTitle: 'Send Card with Caption (Image on Top + Text Below)',
+        waBannerExplainText: 'Card image downloaded & offer details copied to clipboard.<br>👉 <strong>Drag the card into WhatsApp</strong>, paste into caption box below the image, and send to get <strong>Card on Top and Details on Bottom!</strong>',
+        btnGiantLaunchText: '🚀 Open WhatsApp to Send Card & Caption',
         previewSavingsLabel: 'TOTAL SAVINGS'
       },
       ar: {
@@ -3377,17 +3376,17 @@
         btnSendTextOnlyDesc: 'نص عرض السعر التفصيلي جاهز بالمحادثة مباشرة',
         btnSendImgOnlyTitle: '2. إرسال الكارت فقط (Card Image Only)',
         btnSendImgOnlyDesc: 'صورة كارت العرض الاحترافي VIP فائقة الوضوح',
-        btnSendBothTitle: '3. إرسال النص والكارت سوياً (عرض مدمج)',
-        btnSendBothDesc: 'دمج كارت العرض الذهبي مع نص السعر والتوفير في رسالة واحدة مباشرة ⚡',
+        btnSendBothTitle: '3. إرسال الكارت مع التفاصيل (صورة بالأعلى + شرح بالأسفل)',
+        btnSendBothDesc: 'إرسال كارت VIP كصورة في الأعلى وشرح تفاصيل العرض بالأسفل سوياً ⚡',
         btnDownloadCardBar: 'تحميل الكارت كصورة PNG عالية الدقة (3X)',
-        btnSendBoth: 'إرسال العرض المدمج + رابط الكارت',
-        btnSendBothSub: 'كارت العرض الذهبي مدمج مع نص السعر والتوفير ⚡',
+        btnSendBoth: 'إرسال الكارت مع التفاصيل (صورة بالأعلى + شرح بالأسفل)',
+        btnSendBothSub: 'إرسال كارت VIP كصورة في الأعلى وشرح تفاصيل العرض بالأسفل سوياً ⚡',
         btnSendImgOnly: 'صورة الكارت فقط',
         btnSendTextOnly: 'نص العرض فقط',
         btnDownloadCard: 'تحميل PNG (3X)',
         waInstrTitle: 'جاهز للإرسال على الواتساب!',
-        waInstrStep1: 'تم إدراج كارت العرض الأكاديمي VIP وتفاصيل الباقة كاملاً في خانة المحادثة.',
-        waInstrStep2: 'العرض مدمج ومكتمل 100%، اضغط زر الإرسال (Send) داخل الشات لإرساله فوراً للعميل.',
+        waInstrStep1: 'تم تنزيل صورة الكارت ونسخ تفاصيل العرض إلى الحافظة تلقائياً.',
+        waInstrStep2: 'اسحب صورة الكارت إلى المحادثة، والصق النص في خانة (الشرح) أسفل الصورة واضغط إرسال.',
         waLaunchSectionTitle: 'اختر المتصفح أو التطبيق لفتح المحادثة:',
         btnLaunchChrome: 'Google Chrome (كروم)',
         btnLaunchEdge: 'Microsoft Edge (إيدج)',
@@ -3407,9 +3406,9 @@
         toastSummaryCopied: '📋 تم نسخ ملخص الباقة بنجاح!',
         toastWaLinkCopied: '🔗 تم نسخ رابط محادثة الواتساب المباشر بنجاح!',
         toastCardCopiedToClipboard: '📋 تم نسخ صورة كارت العرض إلى الحافظة بنجاح!',
-        waBannerStepTitle: 'العرض والكارت مدمجان معاً ومجهزان للإرسال',
-        waBannerExplainText: 'تم دمج كارت العرض الأكاديمي VIP المنسق مع تفاصيل الباقة والأسعار ورابط الكارت داخل المحادثة مباشرة. <strong>العرض متكامل وجاهز للإرسال بضغطة زر واحدة!</strong>',
-        btnGiantLaunchText: '🚀 فتح الواتساب وإرسال العرض المدمج الآن',
+        waBannerStepTitle: 'إرسال الكارت مع الشرح (الصورة بالأعلى والتفاصيل بالأسفل)',
+        waBannerExplainText: 'تم تنزيل صورة كارت العرض ونسخ الشرح التفصيلي إلى الحافظة تلقائياً.<br>👉 <strong>اسحب صورة الكارت إلى المحادثة</strong>، ثم الصق النص في خانة (أضف شرحاً / Caption) أسفل الصورة واضغط إرسال لتظهر <strong>الصورة في الأعلى والتفاصيل في الأسفل!</strong>',
+        btnGiantLaunchText: '🚀 فتح الواتساب لإرسال الكارت مع الشرح',
         previewSavingsLabel: 'إجمالي التوفير'
       }
     };
@@ -4401,8 +4400,6 @@
             msg += `📌 ${notes}\n\n`;
           }
           msg += `✍️ *المستشار الأكاديمي:* ${repName || 'المستشار الأكاديمي - 51Talk Global'}\n`;
-          msg += `🌐 *معاينة الكارت الذهبي التفاعلي والاعتماد الأكاديمي:*\n`;
-          msg += `https://husseinelaasar.github.io/big-team-01-dashboard/calculator.html\n`;
           msg += `✨━━━━━━━━━━━━━━━━━━━━━━━━━━━━✨`;
           return msg;
         } else {
@@ -4434,8 +4431,6 @@
             msg += `📌 ${notes}\n\n`;
           }
           msg += `✍️ *Academic Advisor:* ${repName || 'Academic Advisor - 51Talk Global'}\n`;
-          msg += `🌐 *Interactive VIP Offer Card & Verification Link:*\n`;
-          msg += `https://husseinelaasar.github.io/big-team-01-dashboard/calculator.html\n`;
           msg += `✨━━━━━━━━━━━━━━━━━━━━━━━━━━━━✨`;
           return msg;
         }
@@ -4491,28 +4486,28 @@
       }
     }
 
-    // Option 3: Send BOTH Offer Text + Card Merged Directly (No Ctrl+V requirement)
+    // Option 3: Send Card Image + Offer Details Together (Image on Top + Caption on Bottom)
     async function shareBothTextAndImageWhatsApp() {
-      showToast(currentLanguage === 'ar' ? '⏳ جاري تجهيز العرض المدمج مع كارت VIP...' : 'Preparing merged offer & VIP card...');
+      showToast(currentLanguage === 'ar' ? '⏳ جاري تجهيز كارت العرض وصورة VIP...' : 'Preparing VIP card image & details...');
       try {
         const { blob, canvas } = await getCardBlob();
-        const pitch = getFormattedWhatsAppPitch(true); // Generates complete visual VIP card layout
+        const pitch = getFormattedWhatsAppPitch(false); // Clean offer caption without dashboard links
         const planName = document.getElementById('modalPlanName').value || '51Talk_Offer';
-        const fileName = `51Talk_Offer_${planName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_')}.png`;
+        const fileName = `51Talk_VIP_Offer_${planName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_')}.png`;
         const file = new File([blob], fileName, { type: 'image/png' });
 
         const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-        // 1. Mobile Native Web Share API if available
-        if (isMobile && typeof navigator.share === 'function') {
+        // 1. Native Web Share API (Mobile & compatible OS) - Sends image on top and caption on bottom natively!
+        if (typeof navigator.share === 'function') {
           try {
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
               await navigator.share({
                 files: [file],
                 text: pitch,
-                title: currentLanguage === 'ar' ? 'عرض 51Talk التعليمي المعتمد' : '51Talk Official Offer'
+                title: currentLanguage === 'ar' ? 'عرض 51Talk الأكاديمي VIP' : '51Talk Official VIP Offer'
               });
-              showToast(currentLanguage === 'ar' ? '✅ تم فتح المشاركة بنجاح!' : 'Shared successfully!');
+              showToast(currentLanguage === 'ar' ? '✅ تم إرسال الكارت مع التفاصيل بنجاح!' : 'Shared card & details successfully!');
               return;
             }
           } catch (shareErr) {
@@ -4521,32 +4516,40 @@
           }
         }
 
-        // 2. Desktop: Copy image silently to clipboard as a background bonus
-        let imageCopied = false;
+        // 2. Desktop: Copy pitch text (caption) to clipboard for 1-click pasting into caption box
         try {
-          if (navigator.clipboard && window.ClipboardItem) {
-            await navigator.clipboard.write([
-              new ClipboardItem({ 'image/png': blob })
-            ]);
-            imageCopied = true;
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(pitch);
           }
         } catch (clipErr) {
-          console.warn('Clipboard image write failed:', clipErr);
+          console.warn('Clipboard text write failed:', clipErr);
         }
 
-        // 3. Construct direct URLs for WhatsApp Web and WhatsApp Desktop App with Merged Card
+        // 3. Desktop: Automatically download the high-resolution Card Image for instant drag into chat
+        try {
+          const dlLink = document.createElement('a');
+          dlLink.download = fileName;
+          dlLink.href = canvas.toDataURL('image/png');
+          document.body.appendChild(dlLink);
+          dlLink.click();
+          document.body.removeChild(dlLink);
+        } catch (dlErr) {
+          console.warn('Image auto-download failed:', dlErr);
+        }
+
+        // 4. Construct direct URLs for WhatsApp Web and WhatsApp Desktop App
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
         currentWaWebUrl = phoneVal
-          ? `https://web.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
-          : `https://web.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+          ? `https://web.whatsapp.com/send?phone=${phoneVal}`
+          : `https://web.whatsapp.com/`;
 
         currentWaAppUrl = phoneVal
-          ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
-          : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+          ? `https://api.whatsapp.com/send?phone=${phoneVal}`
+          : `https://api.whatsapp.com/`;
 
         currentModalPitch = pitch;
 
-        // 4. Open based on user's preferred platform
+        // 5. Open based on user's preferred platform
         const pref = getPreferredBrowser();
         if (isMobile) {
           window.open(currentWaAppUrl, '_blank');
@@ -4560,19 +4563,19 @@
         }
 
         showToast(currentLanguage === 'ar' 
-          ? '✅ تم دمج كارت العرض مع النص وجاري فتح الواتساب للإرسال المباشر!' 
-          : 'Card merged with pitch! Opening WhatsApp for instant sending...');
+          ? '🖼️ تم تنزيل صورة الكارت ونسخ الشرح! جاري فتح الواتساب...' 
+          : 'Card downloaded & caption copied! Opening WhatsApp...');
 
-        // 5. Show guidance popup with ZERO Ctrl+V conditions!
+        // 6. Show clear, step-by-step guidance modal to get Image on top & Details on bottom
         showInstructionModal({
           mode: 'both',
-          title: currentLanguage === 'ar' ? '🚀 تم دمج كارت العرض وتجهيز المحادثة بنجاح!' : 'Offer Card & Pitch Merged!',
+          title: currentLanguage === 'ar' ? '🖼️ جاهز للإرسال: صورة الكارت بالأعلى والتفاصيل بالأسفل!' : 'Card Image on Top + Details on Bottom!',
           step1: currentLanguage === 'ar' 
-            ? 'تم إدراج كارت العرض وتفاصيل الخصم كاملة في خانة المحادثة.' 
-            : 'VIP Card and complete offer details pre-filled in your WhatsApp chat.',
+            ? 'تم تنزيل صورة الكارت وتجهيز نص الشرح تلقائياً في الحافظة.' 
+            : 'Card image downloaded & offer details copied to clipboard.',
           step2: currentLanguage === 'ar' 
-            ? 'العرض مدمج ومكتمل 100%، اضغط إرسال (Send) داخل الشات لإرساله فوراً للعميل.' 
-            : 'Offer is 100% merged! Simply press Send in WhatsApp chat to deliver it.'
+            ? 'اسحب صورة الكارت إلى المحادثة، ثم الصق النص في خانة (Caption) أسفل الصورة واضغط إرسال.' 
+            : 'Drag the card image into WhatsApp, paste text into caption box below it, then send.'
         });
 
       } catch (err) {
@@ -4798,15 +4801,17 @@
       } else {
         // mode === 'both'
         if (bannerTitleEl) {
-          bannerTitleEl.textContent = t.waBannerStepTitle || (currentLanguage === 'ar' ? 'العرض والكارت مدمجان معاً ومجهزان للإرسال' : 'Offer Card & Pitch Merged — Ready to Send');
+          bannerTitleEl.textContent = currentLanguage === 'ar' 
+            ? '🖼️ إرسال الكارت مع الشرح (الصورة بالأعلى والتفاصيل بالأسفل)' 
+            : 'Send Card with Caption (Image on Top + Text Below)';
         }
         if (bannerExplainEl) {
-          bannerExplainEl.innerHTML = t.waBannerExplainText || (currentLanguage === 'ar'
-            ? 'تم دمج كارت العرض الأكاديمي VIP المنسق مع تفاصيل الباقة والأسعار ورابط الكارت داخل المحادثة مباشرة. <strong>العرض متكامل وجاهز للإرسال بضغطة زر واحدة!</strong>'
-            : 'The VIP offer card structure, pricing breakdown, and card verification link are merged directly into your WhatsApp chat. <strong>Ready to send in 1 click!</strong>');
+          bannerExplainEl.innerHTML = currentLanguage === 'ar'
+            ? 'تم تنزيل صورة الكارت ونسخ تفاصيل العرض إلى الحافظة تلقائياً.<br>👉 <strong>اسحب صورة الكارت إلى المحادثة</strong>، ثم الصق النص في خانة (أضف شرحاً / Caption) أسفل الصورة واضغط إرسال لتظهر <strong>الصورة في الأعلى والتفاصيل في الأسفل!</strong>'
+            : 'Card image downloaded & offer details copied to clipboard.<br>👉 <strong>Drag the card into WhatsApp</strong>, paste text into caption box below the image, and send to get <strong>Card on Top and Details on Bottom!</strong>';
         }
         if (btnGiantLaunchTextEl) {
-          btnGiantLaunchTextEl.textContent = t.btnGiantLaunchText || (currentLanguage === 'ar' ? '🚀 فتح الواتساب وإرسال العرض المدمج الآن' : '🚀 Open WhatsApp & Send Merged Offer Now');
+          btnGiantLaunchTextEl.textContent = currentLanguage === 'ar' ? '🚀 فتح الواتساب لإرسال الكارت مع الشرح' : '🚀 Open WhatsApp to Send Card & Caption';
         }
       }
 
