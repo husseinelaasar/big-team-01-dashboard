@@ -1832,43 +1832,34 @@
       letter-spacing: 0.3px;
     }
 
-    /* Modal: same native text-decoration approach for guaranteed centering */
+    /* Modal: crisp horizontal red strike line across official tuition */
     .modal-horizontal-strike-wrap {
       display: inline-flex;
       align-items: center;
       position: relative;
     }
 
-    .modal-official-val {
-      color: #9ca3af !important;
-      font-size: 13.5px;
-      font-weight: 800;
-      font-family: 'Outfit', 'Cairo', sans-serif;
-      text-decoration: line-through;
-      text-decoration-color: #ef4444;
-      text-decoration-thickness: 2px;
-      text-decoration-style: solid;
-    }
-
-    /* Neon glow halo over modal strikethrough */
     .modal-horizontal-strike-wrap::after {
       content: '';
       position: absolute;
       top: 50%;
-      left: -3px;
-      right: -3px;
-      height: 2px;
-      background: transparent;
-      box-shadow: 0 0 8px 1px rgba(239, 68, 68, 0.55);
+      left: -4px;
+      right: -4px;
+      height: 2.5px;
+      background: #ef4444;
+      border-radius: 2px;
+      box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
       transform: translateY(-50%);
       pointer-events: none;
+      z-index: 2;
     }
 
     .modal-official-val {
-      color: #cbd5e1;
+      color: #94a3b8;
       font-size: 13.5px;
       font-weight: 800;
       font-family: 'Outfit', 'Cairo', sans-serif;
+      position: relative;
     }
 
     .modal-discounted-main-row {
@@ -2414,13 +2405,13 @@
 
         <!-- Employee Confidential Guidance Badge -->
         <div class="modal-emp-info-badge">
-          <div class="emp-lock-tag"><i class="fa-solid fa-lock"></i> <span data-i18n="empInternalTitle">معلومة داخلية للموظف فقط</span></div>
+          <div class="emp-lock-tag"><i class="fa-solid fa-lock"></i> <span data-i18n="empInternalTitle">Confidential Staff Information</span></div>
           <div style="font-size: 12px; color: #cbd5e1; margin-top: 4px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
-            <span>السعر الداخلي (+10%): <strong style="color: #f59e0b;" id="modalInternalCostDisplay">2,393 ر.س</strong></span>
-            <span>(بالشيت: <span id="modalInternalSheetDisplay">2,175 ر.س</span>)</span>
+            <span><span data-i18n="empInternalCostLbl">Internal Cost (+10%):</span> <strong style="color: #f59e0b;" id="modalInternalCostDisplay">2,393 SAR</strong></span>
+            <span>(<span data-i18n="empInSheetLbl">In Sheet:</span> <span id="modalInternalSheetDisplay">2,175 SAR</span>)</span>
           </div>
-          <div style="font-size: 11px; color: #fda4af; margin-top: 4px;">
-            ⚠️ تنبيه: هذا السعر سري خاص بالشركة فقط ولن يظهر إطلاقاً في كارت العرض المصدر للعميل.
+          <div style="font-size: 11px; color: #fda4af; margin-top: 4px;" data-i18n="empInternalWarn">
+            ⚠️ Note: This confidential company price will never appear on the client's exported card.
           </div>
         </div>
 
@@ -2544,8 +2535,8 @@
               <i class="fa-solid fa-image sub-icon"></i>
             </div>
             <div class="btn-text-wrap">
-              <span class="btn-main-title" data-i18n="btnSendBoth">إرسال العرض + صورة الكارت معاً</span>
-              <span class="btn-sub-hint" data-i18n="btnSendBothSub">نص العرض المنسق وتحته صورة الكارت ⚡</span>
+              <span class="btn-main-title" data-i18n="btnSendBoth">Send Offer Pitch + Card Image Together</span>
+              <span class="btn-sub-hint" data-i18n="btnSendBothSub">Formatted pitch text with card image ⚡</span>
             </div>
           </button>
 
@@ -2554,19 +2545,19 @@
             <!-- Option 2: Send Card Image Only to WhatsApp -->
             <button class="btn-action-sub wa-img-btn" onclick="shareCardImageWhatsApp()">
               <i class="fa-solid fa-image"></i>
-              <span data-i18n="btnSendImgOnly">صورة الكارت فقط</span>
+              <span data-i18n="btnSendImgOnly">Card Image Only</span>
             </button>
 
             <!-- Option 3: Send Written Text Pitch Only -->
             <button class="btn-action-sub wa-text-btn" onclick="shareWhatsAppPitch()">
               <i class="fa-brands fa-whatsapp"></i>
-              <span data-i18n="btnSendTextOnly">نص العرض فقط</span>
+              <span data-i18n="btnSendTextOnly">Offer Pitch Only</span>
             </button>
 
             <!-- Option 4: Download Card PNG High-Res -->
             <button class="btn-action-sub download-btn" onclick="downloadCardPNG()">
               <i class="fa-solid fa-download"></i>
-              <span data-i18n="btnDownloadCard">تحميل PNG (3X)</span>
+              <span data-i18n="btnDownloadCard">Download PNG (3X)</span>
             </button>
           </div>
         </div>
@@ -2580,20 +2571,20 @@
     <div class="wa-instr-card">
       <div class="wa-instr-header">
         <div class="wa-instr-icon"><i class="fa-brands fa-whatsapp"></i></div>
-        <h4 id="waInstrTitle">جاهز للإرسال على الواتساب!</h4>
+        <h4 id="waInstrTitle" data-i18n="waInstrTitle">Ready to Send via WhatsApp!</h4>
         <button class="wa-instr-close" onclick="closeWaInstruction()"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="wa-instr-body">
         <div class="wa-instr-step">
           <span class="step-num">1</span>
-          <span id="waInstrStep1">تم فتح محادثة الواتساب ومرفق بها نص العرض كاملاً.</span>
+          <span id="waInstrStep1" data-i18n="waInstrStep1">WhatsApp opened with the full offer pitch text.</span>
         </div>
         <div class="wa-instr-step">
           <span class="step-num">2</span>
-          <span id="waInstrStep2">تم نسخ صورة الكارت إلى الحافظة تلقائياً! اضغط (Ctrl + V) داخل المحادثة للصق الصورة فوراً تحت العرض.</span>
+          <span id="waInstrStep2" data-i18n="waInstrStep2">✨ Card image copied to clipboard! Press (Ctrl + V) inside WhatsApp to paste the image directly under the text.</span>
         </div>
       </div>
-      <button class="wa-instr-confirm-btn" onclick="closeWaInstruction()">حسناً، فهمت ✓</button>
+      <button class="wa-instr-confirm-btn" onclick="closeWaInstruction()" data-i18n="waInstrGotIt">Got it ✓</button>
     </div>
   </div>
 
@@ -2650,7 +2641,10 @@
         classesText: 'Classes',
         baseText: 'Base',
         giftText: 'Gift',
-        empInternalTitle: 'Internal Employee Info',
+        empInternalTitle: 'Confidential Staff Information',
+        empInternalCostLbl: 'Internal Cost (+10%):',
+        empInSheetLbl: 'In Sheet:',
+        empInternalWarn: '⚠️ Note: This confidential company price will never appear on the client\'s exported card.',
         empInternalPill: 'Confidential / Unannounced',
         empSheetCostLabel: 'Sheet Base (After Grant):',
         empPlus10CostLabel: 'Internal Cost (+10%):',
@@ -2672,12 +2666,16 @@
         modalDiscountedLabel: 'Discounted Tuition [SAR]',
         modalNotesLabel: 'Special Offer Note / Expiry',
         modalRepLabel: 'Educational Consultant / Rep Name',
-        modalPhoneLabel: 'Client WhatsApp (Optional for Direct Chat)',
-        btnSendBoth: 'Send Text + Card Image Together',
-        btnSendBothSub: 'Pitch text with designed card image ⚡',
+        modalPhoneLabel: 'Client WhatsApp Phone',
+        btnSendBoth: 'Send Offer Pitch + Card Image Together',
+        btnSendBothSub: 'Formatted pitch text with card image ⚡',
         btnSendImgOnly: 'Card Image Only',
-        btnSendTextOnly: 'Pitch Text Only',
-        btnDownloadCard: 'Download PNG',
+        btnSendTextOnly: 'Offer Pitch Only',
+        btnDownloadCard: 'Download PNG (3X)',
+        waInstrTitle: 'Ready to Send via WhatsApp!',
+        waInstrStep1: 'WhatsApp opened with the full offer pitch text.',
+        waInstrStep2: '✨ Card image copied to clipboard! Press (Ctrl + V) inside WhatsApp to paste the image directly under the text.',
+        waInstrGotIt: 'Got it ✓',
         previewVip: '<i class="fa-solid fa-award"></i> VIP Professional Program',
         previewGreetingSub: 'Certified Professional English Program',
         previewPerk1: 'Certified International Native/TESOL Tutors',
@@ -2727,7 +2725,10 @@
         classesText: 'حصة',
         baseText: 'أساسي',
         giftText: 'هدية',
-        empInternalTitle: 'معلومة داخلية خاصة بالموظف فقط',
+        empInternalTitle: 'معلومة داخلية للموظف فقط 🔒',
+        empInternalCostLbl: 'السعر الداخلي (+10%):',
+        empInSheetLbl: 'بالشيت:',
+        empInternalWarn: '⚠️ تنبيه: هذا السعر سري خاص بالشركة فقط ولن يظهر إطلاقاً في كارت العرض المصدر للعميل.',
         empInternalPill: 'سري - غير معلن للعميل',
         empSheetCostLabel: 'سعر التكلفة بالشيت (بعد المنحة):',
         empPlus10CostLabel: 'السعر الداخلي المعتمد (+10%):',
@@ -2746,7 +2747,7 @@
         modalBaseLabel: 'الحصص الأساسية',
         modalBonusLabel: 'الحصص المجانية الهدية (مضاعفات 5)',
         modalOfficialLabel: 'السعر الرسمي المعتمد [ر.س]',
-        modalDiscountedLabel: 'السعر بعد الخصم (+10%) [ر.س]',
+        modalDiscountedLabel: 'السعر بعد الخصم [ر.س]',
         modalNotesLabel: 'ملاحظة خاصة / مدة سريان العرض',
         modalRepLabel: 'اسم المستشار الأكاديمي / الموظف',
         modalPhoneLabel: 'رقم واتساب العميل (اختياري للإرسال المباشر)',
@@ -2755,6 +2756,10 @@
         btnSendImgOnly: 'صورة الكارت فقط',
         btnSendTextOnly: 'نص العرض فقط',
         btnDownloadCard: 'تحميل PNG (3X)',
+        waInstrTitle: 'جاهز للإرسال على الواتساب!',
+        waInstrStep1: 'تم فتح محادثة الواتساب ومرفق بها نص العرض كاملاً.',
+        waInstrStep2: '✨ تم نسخ صورة الكارت إلى الحافظة تلقائياً! اضغط (Ctrl + V) داخل المحادثة لصق الصورة فوراً تحت العرض.',
+        waInstrGotIt: 'حسناً، فهمت ✓',
         previewVip: '<i class="fa-solid fa-award"></i> كارت البرنامج الاحترافي VIP',
         previewGreetingSub: 'البرنامج الاحترافي المعتمد لتعليم الإنجليزية',
         previewPerk1: 'معلمين أجانب معتمدين بشهادات TESOL الدولية',
@@ -3131,12 +3136,19 @@
 
       if (lang === 'ar') {
         document.getElementById('modalClientName').value = "ولي أمر الطالب العزيز";
-        document.getElementById('modalNotes').value = "* العرض ساري لمدة 48 ساعة فقط لحجز مقعد المنحة.";
+        document.getElementById('modalNotes').value = "* العرض ساري لمدة 48 ساعة فقط لحجز مقعد البرنامج الاحترافي.";
         document.getElementById('modalRepName').value = "المستشار الأكاديمي - 51Talk Global";
       } else {
         document.getElementById('modalClientName').value = "Dear Parent";
-        document.getElementById('modalNotes').value = "* Exclusive offer valid for 48 hours to secure grant allocation.";
+        document.getElementById('modalNotes').value = "* Exclusive offer valid for 48 hours to secure Professional Program seat.";
         document.getElementById('modalRepName').value = "Academic Advisor - 51Talk Global";
+      }
+
+      if (selectedPlanObj) {
+        const t = I18N[lang];
+        const internalCost = pricePlus10(selectedPlanObj.sheetDiscCost);
+        document.getElementById('modalInternalCostDisplay').textContent = `${internalCost.toLocaleString()} ${t.currency}`;
+        document.getElementById('modalInternalSheetDisplay').textContent = `${selectedPlanObj.sheetDiscCost.toLocaleString()} ${t.currency}`;
       }
 
       renderAllSections();
@@ -3613,6 +3625,61 @@
       });
     }
 
+    // Formatted WhatsApp Pitch Generator for Modal Offers
+    function getFormattedWhatsAppPitch() {
+      const clientName = (document.getElementById('modalClientName') ? document.getElementById('modalClientName').value : '').trim();
+      const planName = (document.getElementById('modalPlanName') ? document.getElementById('modalPlanName').value : '').trim();
+      const duration = (document.getElementById('modalDuration') ? document.getElementById('modalDuration').value : '').trim();
+      const baseSessions = parseInt(document.getElementById('modalBaseSessions') ? document.getElementById('modalBaseSessions').value : 0) || 0;
+      const bonusSessions = parseInt(document.getElementById('modalBonusSessions') ? document.getElementById('modalBonusSessions').value : 0) || 0;
+      const totalSessions = baseSessions + bonusSessions;
+      const officialPrice = parseInt(document.getElementById('modalOfficialPrice') ? document.getElementById('modalOfficialPrice').value : 0) || 0;
+      const discountedPrice = parseInt(document.getElementById('modalDiscountedPrice') ? document.getElementById('modalDiscountedPrice').value : 0) || 0;
+      const notes = (document.getElementById('modalNotes') ? document.getElementById('modalNotes').value : '').trim();
+      const repName = (document.getElementById('modalRepName') ? document.getElementById('modalRepName').value : '').trim();
+      const t = I18N[currentLanguage];
+
+      if (currentLanguage === 'ar') {
+        let msg = `✨ *تحية طيبة ${clientName || 'ولي أمر الطالب العزيز'}* ✨\n\n`;
+        msg += `يسعدنا تقديم العرض الأكاديمي المعتمد من *51Talk Global* 🌍\n\n`;
+        msg += `📋 *تفاصيل الباقة التعليمية:* ${planName}\n`;
+        msg += `⏳ *المدة الزمنية:* ${duration}\n`;
+        msg += `🎯 *إجمالي الحصص:* ${totalSessions} حصة خاصة (${baseSessions} أساسية + 🎁 *${bonusSessions} حصة مجانية بالكامل*)\n\n`;
+        if (officialPrice > 0 && officialPrice !== discountedPrice) {
+          msg += `💵 *السعر المعتمد:* ~${officialPrice.toLocaleString()} ${t.currency}~\n`;
+        }
+        msg += `🔥 *السعر بعد الخصم (البرنامج الاحترافي):* *${discountedPrice.toLocaleString()} ${t.currency}*\n\n`;
+        msg += `⭐ *مزايا البرنامج الاحترافي:*\n`;
+        msg += `• معلمين أجانب معتمدين دولياً بشهادات TESOL\n`;
+        msg += `• مرونة كاملة في حجز وتعديل المواعيد\n`;
+        msg += `• تقارير ذكاء اصطناعي دورية لمتابعة النطق والطلاقة\n\n`;
+        if (notes) {
+          msg += `📌 ${notes}\n\n`;
+        }
+        msg += `مع أطيب التحيات،\n*${repName || 'المستشار الأكاديمي - 51Talk Global'}*`;
+        return msg;
+      } else {
+        let msg = `✨ *Greetings ${clientName || 'Dear Parent'}* ✨\n\n`;
+        msg += `We are pleased to present your approved academic offer from *51Talk Global* 🌍\n\n`;
+        msg += `📋 *Educational Package:* ${planName}\n`;
+        msg += `⏳ *Duration:* ${duration}\n`;
+        msg += `🎯 *Total Class Allocation:* ${totalSessions} Private Classes (${baseSessions} Standard + 🎁 *${bonusSessions} Free Gift Classes*)\n\n`;
+        if (officialPrice > 0 && officialPrice !== discountedPrice) {
+          msg += `💵 *Approved Tuition:* ~${officialPrice.toLocaleString()} ${t.currency}~\n`;
+        }
+        msg += `🔥 *Discounted Tuition (Professional Program):* *${discountedPrice.toLocaleString()} ${t.currency}*\n\n`;
+        msg += `⭐ *Key Program Highlights:*\n`;
+        msg += `• Certified International Native/TESOL Tutors\n`;
+        msg += `• 100% Flexible Booking & Personalized Pace\n`;
+        msg += `• Weekly AI Pronunciation & Fluency Reports\n\n`;
+        if (notes) {
+          msg += `📌 ${notes}\n\n`;
+        }
+        msg += `Best regards,\n*${repName || 'Academic Advisor - 51Talk Global'}*`;
+        return msg;
+      }
+    }
+
     // Option 1: Send BOTH Offer Text + Card Image Together
     async function shareBothTextAndImageWhatsApp() {
       showToast(currentLanguage === 'ar' ? '⏳ جاري تجهيز العرض المكتوب وصورة الكارت...' : 'Preparing offer text & card image...');
@@ -3624,25 +3691,27 @@
         const file = new File([blob], fileName, { type: 'image/png' });
 
         // 1. Try Native Web Share API with Files (Mobile & supported browsers)
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        if (typeof navigator.share === 'function') {
           try {
-            await navigator.share({
-              files: [file],
-              text: pitch,
-              title: currentLanguage === 'ar' ? 'عرض 51Talk التعليمي المعتمد' : '51Talk Official Offer'
-            });
-            showToast(currentLanguage === 'ar' ? '✅ تم فتح الواتساب بنجاح!' : 'Shared successfully!');
-            return;
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+              await navigator.share({
+                files: [file],
+                text: pitch,
+                title: currentLanguage === 'ar' ? 'عرض 51Talk التعليمي المعتمد' : '51Talk Official Offer'
+              });
+              showToast(currentLanguage === 'ar' ? '✅ تم فتح الواتساب بنجاح!' : 'Shared successfully!');
+              return;
+            }
           } catch (shareErr) {
             if (shareErr.name === 'AbortError') return;
-            console.warn('Native share was cancelled or failed, falling back:', shareErr);
+            console.warn('Native share not used or cancelled:', shareErr);
           }
         }
 
         // 2. Desktop Fallback: Copy image to clipboard + open WhatsApp with text
         let imageCopied = false;
         try {
-          if (navigator.clipboard && navigator.clipboard.write) {
+          if (navigator.clipboard && window.ClipboardItem) {
             await navigator.clipboard.write([
               new ClipboardItem({ 'image/png': blob })
             ]);
@@ -3653,10 +3722,16 @@
         }
 
         // 3. Also download image as backup for drag-and-drop
-        const dlLink = document.createElement('a');
-        dlLink.download = fileName;
-        dlLink.href = canvas.toDataURL('image/png');
-        dlLink.click();
+        try {
+          const dlLink = document.createElement('a');
+          dlLink.download = fileName;
+          dlLink.href = canvas.toDataURL('image/png');
+          document.body.appendChild(dlLink);
+          dlLink.click();
+          document.body.removeChild(dlLink);
+        } catch (dlErr) {
+          console.warn('Download error:', dlErr);
+        }
 
         // 4. Open WhatsApp with formatted text
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
@@ -3697,14 +3772,16 @@
         const file = new File([blob], fileName, { type: 'image/png' });
 
         // 1. Try Native Web Share API with Files
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        if (typeof navigator.share === 'function') {
           try {
-            await navigator.share({
-              files: [file],
-              title: currentLanguage === 'ar' ? 'كارت باقة 51Talk' : '51Talk Offer Card'
-            });
-            showToast(currentLanguage === 'ar' ? '✅ تم فتح المشاركة!' : 'Shared successfully!');
-            return;
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+              await navigator.share({
+                files: [file],
+                title: currentLanguage === 'ar' ? 'كارت باقة 51Talk' : '51Talk Offer Card'
+              });
+              showToast(currentLanguage === 'ar' ? '✅ تم فتح المشاركة!' : 'Shared successfully!');
+              return;
+            }
           } catch (shareErr) {
             if (shareErr.name === 'AbortError') return;
             console.warn('Native share failed, fallback:', shareErr);
@@ -3714,7 +3791,7 @@
         // 2. Desktop Fallback: Copy image to clipboard
         let imageCopied = false;
         try {
-          if (navigator.clipboard && navigator.clipboard.write) {
+          if (navigator.clipboard && window.ClipboardItem) {
             await navigator.clipboard.write([
               new ClipboardItem({ 'image/png': blob })
             ]);
@@ -3725,10 +3802,14 @@
         }
 
         // 3. Download image backup
-        const dlLink = document.createElement('a');
-        dlLink.download = fileName;
-        dlLink.href = canvas.toDataURL('image/png');
-        dlLink.click();
+        try {
+          const dlLink = document.createElement('a');
+          dlLink.download = fileName;
+          dlLink.href = canvas.toDataURL('image/png');
+          document.body.appendChild(dlLink);
+          dlLink.click();
+          document.body.removeChild(dlLink);
+        } catch (e) {}
 
         // 4. Open WhatsApp
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
@@ -3761,9 +3842,9 @@
 
     // Guidance Modal Helpers
     function showInstructionModal({ title, step1, step2 }) {
-      document.getElementById('waInstrTitle').textContent = title;
-      document.getElementById('waInstrStep1').textContent = step1;
-      document.getElementById('waInstrStep2').textContent = step2;
+      if (title) document.getElementById('waInstrTitle').textContent = title;
+      if (step1) document.getElementById('waInstrStep1').textContent = step1;
+      if (step2) document.getElementById('waInstrStep2').textContent = step2;
       document.getElementById('waInstructionModal').style.display = 'flex';
     }
 
@@ -3772,15 +3853,25 @@
     }
 
     function shareWhatsAppPitch() {
-      const pitch = getFormattedWhatsAppPitch();
-      const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
-      navigator.clipboard.writeText(pitch).then(() => {
-        showToast(I18N[currentLanguage].toastPitchCopied);
-        const url = phoneVal 
-          ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
-          : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
-        window.open(url, '_blank');
-      });
+      try {
+        const pitch = getFormattedWhatsAppPitch();
+        const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
+        navigator.clipboard.writeText(pitch).then(() => {
+          showToast(I18N[currentLanguage].toastPitchCopied);
+          const url = phoneVal 
+            ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
+            : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+          window.open(url, '_blank');
+        }).catch(() => {
+          const url = phoneVal 
+            ? `https://api.whatsapp.com/send?phone=${phoneVal}&text=${encodeURIComponent(pitch)}`
+            : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+          window.open(url, '_blank');
+        });
+      } catch (err) {
+        console.error(err);
+        showToast(currentLanguage === 'ar' ? '❌ حدث خطأ في تجهيز النص' : 'Error preparing pitch');
+      }
     }
 
     function copyQuickPitch(plan, typeName, categoryDisplayName) {
@@ -3815,7 +3906,7 @@
 
     // Init on load
     document.addEventListener('DOMContentLoaded', () => {
-      renderAllSections();
+      switchLanguage('en');
     });
   </script>
 </body>
