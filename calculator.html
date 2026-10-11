@@ -2007,54 +2007,51 @@
     }
 
     /* Modal Pricing Section: Clean strikethrough & Discounted Price Underneath */
-    .modal-pricing-left-col {
+    /* Right column in RTL: Hero Discounted Tuition */
+    .modal-pricing-right-col {
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      flex: 1;
+      justify-content: center;
+      flex: 1.15;
       min-width: 0;
     }
 
+    /* Left column in RTL: Price Before Discount on top + Total Savings Underneath */
+    .modal-pricing-left-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1.05;
+      min-width: 0;
+      border-inline-start: 1px dashed rgba(255, 255, 255, 0.15);
+      padding-inline-start: 12px;
+      gap: 8px;
+    }
+
+    /* Price before discount on the left: clean, prominent, NO "ملغي" badge */
     .modal-official-striked-row {
       display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
       line-height: 1.25;
-      background: rgba(239, 68, 68, 0.12);
-      border: 1.5px dashed rgba(239, 68, 68, 0.55);
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px dashed rgba(239, 68, 68, 0.4);
       border-radius: 9px;
-      padding: 6px 12px;
-      margin-bottom: 6px;
-      box-shadow: inset 0 0 10px rgba(239, 68, 68, 0.08);
+      padding: 6px 10px;
+      box-sizing: border-box;
+      width: 100%;
     }
-
-    .modal-forbidden-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: #ef4444;
-      color: #ffffff;
-      font-size: 11px;
-      font-weight: 900;
-      padding: 2px 7px;
-      border-radius: 5px;
-      letter-spacing: 0.5px;
-      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
-      flex-shrink: 0;
-    }
-
-    .modal-forbidden-badge i {
-      font-size: 11.5px;
+    html[dir="rtl"] .modal-official-striked-row {
+      align-items: flex-start;
     }
 
     .modal-price-sublabel {
-      font-size: 12px;
+      font-size: 11px;
       color: #fca5a5;
       font-weight: 800;
       letter-spacing: normal !important;
       white-space: nowrap;
-      flex-shrink: 0;
     }
 
     /* Modal: Clean strikethrough container */
@@ -2068,7 +2065,7 @@
 
     .modal-official-val {
       color: #fca5a5;
-      font-size: 18px;
+      font-size: 17.5px;
       font-weight: 900;
       font-family: 'Outfit', 'Cairo', sans-serif;
       position: relative;
@@ -2077,21 +2074,19 @@
       display: inline-block;
       text-decoration: line-through;
       text-decoration-color: #ef4444;
-      text-decoration-thickness: 3px;
-      text-shadow: 0 0 12px rgba(239, 68, 68, 0.45);
+      text-decoration-thickness: 2.5px;
+      text-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
     }
 
     .modal-class-rate-strike {
-      font-size: 12px;
+      font-size: 11px;
       color: #f87171;
       font-weight: 700;
       white-space: nowrap;
       text-decoration: line-through;
-      text-decoration-color: rgba(239, 68, 68, 0.8);
-      text-decoration-thickness: 2px;
-      margin-left: 4px;
-      margin-right: 4px;
-      opacity: 0.95;
+      text-decoration-color: rgba(239, 68, 68, 0.7);
+      text-decoration-thickness: 1.5px;
+      opacity: 0.9;
     }
 
     .modal-discounted-main-row {
@@ -2113,7 +2108,7 @@
       align-items: baseline;
       gap: 5px;
       color: #ffd700;
-      font-size: 34px;
+      font-size: 33px;
       font-weight: 950;
       font-family: 'Outfit', 'Cairo', sans-serif;
       line-height: 1.05;
@@ -2127,7 +2122,7 @@
     }
 
     .card-new-figure .card-curr-sign {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 800;
       color: #fbbf24;
       text-shadow: 0 0 10px rgba(245, 158, 11, 0.85);
@@ -2159,76 +2154,132 @@
       font-size: 12.5px;
     }
 
-    .modal-pricing-right-col {
+    /* Total savings box underneath on the left: "وفر 2,750 SAR" */
+    .card-total-savings-box {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      width: 145px;
-      max-width: 145px;
-      box-sizing: border-box;
+      width: 100%;
     }
 
-    /* Attractive Catchy Total Savings Badge - Contained inside the deck */
-    .card-total-savings-badge {
-      background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.32), rgba(245, 158, 11, 0.22) 70%, rgba(15, 23, 42, 0.85));
+    .card-savings-inner-pill {
+      background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.35), rgba(245, 158, 11, 0.18) 70%, rgba(15, 23, 42, 0.9));
       border: 1.5px solid #10b981;
-      border-radius: 14px;
-      padding: 9px 8px;
-      text-align: center;
-      box-shadow: 0 0 16px rgba(16, 185, 129, 0.35), inset 0 0 12px rgba(245, 158, 11, 0.15);
-      animation: savingsPulseGlow 2.5s ease-in-out infinite alternate;
+      border-radius: 10px;
+      padding: 6px 10px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 2px;
+      justify-content: space-between;
+      gap: 6px;
       width: 100%;
       box-sizing: border-box;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.3), inset 0 0 10px rgba(245, 158, 11, 0.1);
+      animation: savingsPulseGlow 2.5s ease-in-out infinite alternate;
+    }
+
+    .savings-label-combo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1px;
+    }
+
+    .savings-title-sub {
+      font-size: 10.5px;
+      color: #a7f3d0;
+      font-weight: 800;
+      letter-spacing: normal !important;
+      line-height: 1.2;
+    }
+
+    .savings-highlight-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
 
     @keyframes savingsPulseGlow {
       0% {
-        box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+        box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
         border-color: #10b981;
       }
       100% {
-        box-shadow: 0 0 22px rgba(16, 185, 129, 0.65), 0 0 35px rgba(245, 158, 11, 0.3);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.65), 0 0 30px rgba(245, 158, 11, 0.25);
         border-color: #34d399;
       }
     }
 
-    .savings-badge-label {
-      font-size: 9.5px;
-      font-weight: 900;
-      color: #a7f3d0;
-      text-transform: uppercase;
-      letter-spacing: normal !important;
-      display: flex;
-      align-items: center;
-      gap: 4px;
+    .savings-highlight-row i {
+      color: #00f5a0;
+      font-size: 13px;
     }
 
-    .savings-badge-value {
+    .savings-word-label {
+      font-size: 13.5px;
+      font-weight: 950;
+      color: #34d399;
+      margin-inline-end: 1px;
+    }
+
+    .savings-value-display {
       font-size: 15px;
       font-weight: 950;
       color: #00f5a0;
       font-family: 'Outfit', 'Cairo', sans-serif;
-      text-shadow: 0 0 10px rgba(0, 245, 160, 0.8);
+      text-shadow: 0 0 10px rgba(0, 245, 160, 0.75);
       white-space: nowrap;
-      line-height: 1.1;
     }
 
     .savings-badge-pill {
       font-size: 10px;
       font-weight: 900;
-      background: #ef4444;
-      color: #fff;
-      padding: 1px 7px;
+      background: #10b981;
+      color: #042f2e;
+      padding: 2px 6px;
       border-radius: 999px;
-      margin-top: 2px;
-      display: inline-block;
-      box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+      white-space: nowrap;
+    }
+
+    .btn-clear-phone-choice {
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #25d366;
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+    .btn-clear-phone-choice:hover {
+      background: rgba(37, 211, 102, 0.25);
+      border-color: #25d366;
+      color: #fff;
+    }
+
+    .btn-giant-pick-client {
+      width: 100%;
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.2), rgba(16, 185, 129, 0.3));
+      border: 1.5px solid #25d366;
+      color: #25d366;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+    }
+    .btn-giant-pick-client:hover {
+      background: #25d366;
+      color: #0b0f19;
+      box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
     }
 
     .savings-program-gift {
@@ -3105,7 +3156,12 @@
             <input type="text" id="modalClientName" value="Dear Parent" oninput="updateLivePreview()">
           </div>
           <div class="input-group">
-            <label><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> <span data-i18n="modalPhoneLabel">Client WhatsApp Phone</span></label>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label style="margin: 0;"><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> <span data-i18n="modalPhoneLabel">Client WhatsApp Phone</span></label>
+              <button type="button" class="btn-clear-phone-choice" onclick="selectFromWaList()" title="إرسال عبر اختيار العميل مباشرة من قائمة الواتساب">
+                <i class="fa-solid fa-list-check"></i> <span id="lblPickFromWaList" data-i18n="lblPickFromWaList">اختيار من قائمة العملاء</span>
+              </button>
+            </div>
             <input type="tel" id="modalClientPhone" placeholder="9665xxxxxxxx / 05xxxxxxxx">
           </div>
         </div>
@@ -3190,34 +3246,41 @@
           </div>
 
           <div class="card-price-deck">
+            <!-- Right Column in RTL (اليمين): Hero Discounted Tuition -->
+            <div class="modal-pricing-right-col">
+              <span class="modal-discounted-sublabel" id="previewDiscountedSublabel">السعر بعد الخصم:</span>
+              <div class="card-new-figure" id="previewClientPrice">3,630 <span class="card-curr-sign">SAR</span></div>
+              <div class="modal-class-rate-badge-row">
+                <span class="modal-class-rate-after-badge" id="previewClassRateAfter">⚡ فقط <strong>24.2 SAR</strong> / حصة</span>
+              </div>
+              <div class="savings-program-gift" id="previewGrantClassesText" style="display: none; margin-top: 6px;">🎁 +35 حصة هدية معتمدة</div>
+            </div>
+
+            <!-- Left Column in RTL (اليسار): Price Before Discount on top + Total Savings Underneath -->
             <div class="modal-pricing-left-col">
+              <!-- Top: Price Before Discount (No "ملغي" badge) -->
               <div class="modal-official-striked-row">
-                <span class="modal-forbidden-badge" id="previewForbiddenBadge">
-                  <i class="fa-solid fa-ban"></i> <span class="forbidden-txt">ملغي</span>
-                </span>
                 <span class="modal-price-sublabel" id="previewOfficialSublabel">السعر قبل الخصم:</span>
                 <div class="modal-horizontal-strike-wrap">
                   <span class="modal-official-val" id="previewOfficialVal">6,380 SAR</span>
                 </div>
                 <span class="modal-class-rate-strike" id="previewClassRateBefore">(42.5 SAR / class)</span>
               </div>
-              <div class="modal-discounted-main-row">
-                <span class="modal-discounted-sublabel" id="previewDiscountedSublabel">Discounted Tuition:</span>
-                <div class="card-new-figure" id="previewClientPrice">3,630 <span class="card-curr-sign">SAR</span></div>
-                <div class="modal-class-rate-badge-row">
-                  <span class="modal-class-rate-after-badge" id="previewClassRateAfter">⚡ Only <strong>24.2 SAR</strong> / class</span>
+
+              <!-- Bottom (تحتيه): Total Savings with "وفر" and value -->
+              <div class="card-total-savings-box" id="previewSavingsWrap">
+                <div class="card-savings-inner-pill">
+                  <div class="savings-label-combo">
+                    <span class="savings-title-sub" id="previewSavingsSublabel">إجمالي التوفير:</span>
+                    <div class="savings-highlight-row">
+                      <i class="fa-solid fa-piggy-bank"></i>
+                      <span class="savings-word-label" id="previewSavingsWordLabel">وفر</span>
+                      <span class="savings-value-display" id="previewSavingsVal">2,750 SAR</span>
+                    </div>
+                  </div>
+                  <span class="savings-badge-pill" id="previewSavingsPctTag">43% OFF</span>
                 </div>
               </div>
-            </div>
-            <div class="modal-pricing-right-col" id="previewSavingsWrap">
-              <div class="card-total-savings-badge" id="previewSavingsBadge">
-                <div class="savings-badge-label">
-                  <i class="fa-solid fa-piggy-bank"></i> <span id="previewSavingsLabel">TOTAL SAVINGS</span>
-                </div>
-                <div class="savings-badge-value" id="previewSavingsVal">2,750 SAR</div>
-                <span class="savings-badge-pill" id="previewSavingsPctTag">43% OFF</span>
-              </div>
-              <div class="savings-program-gift" id="previewGrantClassesText">🎁 Free Lessons Included</div>
             </div>
           </div>
 
@@ -3324,6 +3387,12 @@
       <button type="button" class="btn-giant-launch-wa" onclick="relaunchActiveWa()" id="btnGiantLaunchWa">
         <i class="fa-brands fa-whatsapp"></i>
         <span id="btnGiantLaunchText" data-i18n="btnGiantLaunchText">Open WhatsApp to Send Card & Caption</span>
+      </button>
+
+      <!-- Dedicated WhatsApp Web Client Selector Button -->
+      <button type="button" class="btn-giant-pick-client" onclick="launchWaClientPicker()" id="btnGiantPickClient">
+        <i class="fa-solid fa-address-book"></i>
+        <span data-i18n="btnPickFromClientList">فتح قائمة عملاء الواتساب لاختيار العميل</span>
       </button>
 
       <!-- Quick Tools for Image & Text -->
@@ -3487,6 +3556,8 @@
         waBannerStepTitle: 'Send Card with Caption (Image on Top + Text Below)',
         waBannerExplainText: 'Card image downloaded & offer details copied to clipboard.<br>👉 <strong>Drag the card into WhatsApp</strong>, paste into caption box below the image, and send to get <strong>Card on Top and Details on Bottom!</strong>',
         btnGiantLaunchText: '🚀 Open WhatsApp to Send Card & Caption',
+        btnPickFromClientList: 'Open WhatsApp Client Selector List',
+        lblPickFromWaList: 'Pick from Client List',
         previewSavingsLabel: 'TOTAL SAVINGS'
       },
       ar: {
@@ -3594,6 +3665,8 @@
         waBannerStepTitle: 'إرسال الكارت مع الشرح (الصورة بالأعلى والتفاصيل بالأسفل)',
         waBannerExplainText: 'تم تنزيل صورة كارت العرض ونسخ الشرح التفصيلي إلى الحافظة تلقائياً.<br>👉 <strong>اسحب صورة الكارت إلى المحادثة</strong>، ثم الصق النص في خانة (أضف شرحاً / Caption) أسفل الصورة واضغط إرسال لتظهر <strong>الصورة في الأعلى والتفاصيل في الأسفل!</strong>',
         btnGiantLaunchText: '🚀 فتح الواتساب لإرسال الكارت مع الشرح',
+        btnPickFromClientList: 'فتح قائمة عملاء الواتساب لاختيار العميل',
+        lblPickFromWaList: 'اختيار من قائمة العملاء',
         previewSavingsLabel: 'إجمالي التوفير'
       }
     };
@@ -4144,9 +4217,6 @@
           <!-- Top Row: Official Striked Price (Horizontal Red Line) & Grant Discount Pill -->
           <div class="pricing-header-row">
             <div class="official-row-striked">
-              <span class="badge-forbidden-pill">
-                <i class="fa-solid fa-ban"></i> ${currentLanguage === 'ar' ? 'ملغي' : 'VOID'}
-              </span>
               <span class="official-label-prominent"><i class="fa-solid fa-tag"></i> ${currentLanguage === 'ar' ? 'السعر قبل الخصم:' : 'Official Tuition:'}</span>
               <div class="diagonal-strike-wrapper">
                 <span class="official-value-striked">${officialPrice.toLocaleString()} ${t.currency}</span>
@@ -4405,13 +4475,9 @@
       const savingsVal = Math.max(0, officialPrice - discountedPrice);
       const savingsPct = officialPrice > 0 ? Math.round((savingsVal / officialPrice) * 100) : 0;
 
-      // Approved official tuition before discount with horizontal red line & forbidden sign
+      // Approved official tuition before discount (on the left)
       document.getElementById('previewOfficialSublabel').textContent = currentLanguage === 'ar' ? 'السعر قبل الخصم:' : 'Official Tuition:';
       document.getElementById('previewOfficialVal').textContent = `${officialPrice.toLocaleString()} ${t.currency}`;
-      const forbiddenEl = document.getElementById('previewForbiddenBadge');
-      if (forbiddenEl) {
-        forbiddenEl.innerHTML = `<i class="fa-solid fa-ban"></i> <span class="forbidden-txt">${currentLanguage === 'ar' ? 'ملغي' : 'VOID'}</span>`;
-      }
 
       // Class rate before discount
       const classRateBeforeEl = document.getElementById('previewClassRateBefore');
@@ -4443,18 +4509,22 @@
         }
       }
 
-      // Catchy Total Savings Badge (Right Column)
+      // Catchy Total Savings Badge (Left Column underneath original price)
       const savingsWrap = document.getElementById('previewSavingsWrap');
       const savingsValEl = document.getElementById('previewSavingsVal');
       const savingsPctTag = document.getElementById('previewSavingsPctTag');
-      const savingsLabelEl = document.getElementById('previewSavingsLabel');
+      const savingsSublabel = document.getElementById('previewSavingsSublabel');
+      const savingsWordLabel = document.getElementById('previewSavingsWordLabel');
       if (savingsWrap && savingsValEl && savingsPctTag) {
         if (savingsVal > 0) {
           savingsWrap.style.display = 'flex';
           savingsValEl.textContent = `${savingsVal.toLocaleString()} ${t.currency}`;
-          savingsPctTag.textContent = currentLanguage === 'ar' ? `وفر ${savingsPct}%` : `${savingsPct}% OFF`;
-          if (savingsLabelEl) {
-            savingsLabelEl.textContent = currentLanguage === 'ar' ? 'إجمالي التوفير' : 'TOTAL SAVINGS';
+          savingsPctTag.textContent = `${savingsPct}% OFF`;
+          if (savingsSublabel) {
+            savingsSublabel.textContent = currentLanguage === 'ar' ? 'إجمالي التوفير:' : 'Total Savings:';
+          }
+          if (savingsWordLabel) {
+            savingsWordLabel.textContent = currentLanguage === 'ar' ? 'وفر' : 'Save';
           }
         } else {
           savingsWrap.style.display = 'none';
@@ -4741,12 +4811,12 @@
         const rawPhone = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '');
         const cleanPhone = rawPhone.replace(/[^0-9]/g, '');
         currentWaWebUrl = cleanPhone
-          ? `https://web.whatsapp.com/send/?phone=${cleanPhone}`
-          : `https://web.whatsapp.com/`;
+          ? `https://web.whatsapp.com/send/?phone=${cleanPhone}&text=${encodeURIComponent(pitch)}`
+          : `https://web.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
 
         currentWaAppUrl = cleanPhone
-          ? `https://api.whatsapp.com/send/?phone=${cleanPhone}`
-          : `https://api.whatsapp.com/`;
+          ? `https://api.whatsapp.com/send/?phone=${cleanPhone}&text=${encodeURIComponent(pitch)}`
+          : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
 
         currentModalPitch = pitch;
 
@@ -4836,8 +4906,8 @@
 
         // 4. Construct direct URLs for both WhatsApp Web & App (without pre-filled pitch)
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');
-        currentWaWebUrl = phoneVal ? `https://web.whatsapp.com/send/?phone=${phoneVal}` : `https://web.whatsapp.com/`;
-        currentWaAppUrl = phoneVal ? `https://api.whatsapp.com/send/?phone=${phoneVal}` : `https://api.whatsapp.com/`;
+        currentWaWebUrl = phoneVal ? `https://web.whatsapp.com/send/?phone=${phoneVal}` : `https://web.whatsapp.com/send?text=`;
+        currentWaAppUrl = phoneVal ? `https://api.whatsapp.com/send/?phone=${phoneVal}` : `https://api.whatsapp.com/send?text=`;
 
         // 5. Open based on user preference
         const pref = getPreferredBrowser();
@@ -4913,9 +4983,38 @@
       launchWaBrowser(pref);
     }
 
+    function selectFromWaList() {
+      const phoneInput = document.getElementById('modalClientPhone');
+      if (phoneInput) phoneInput.value = '';
+      showToast(currentLanguage === 'ar' 
+        ? '📋 تم التبديل: سيتم فتح قائمة عملاء الواتساب مباشرة لاختيار العميل عند الضغط على إرسال!' 
+        : 'Switched: WhatsApp client picker list will open to choose your contact!');
+    }
+
+    function launchWaClientPicker() {
+      const pitch = currentModalPitch || getFormattedWhatsAppPitch(false);
+      const clientPickerUrl = `https://web.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+      window.open(clientPickerUrl, '_blank');
+      showToast(currentLanguage === 'ar' 
+        ? '📋 جاري فتح قائمة عملاء الواتساب في المتصفح لاختيار العميل المطلوب...' 
+        : 'Opening WhatsApp client selector list...');
+    }
+
     function launchWaBrowser(target) {
-      const webUrl = currentWaWebUrl || 'https://web.whatsapp.com/';
-      const appUrl = currentWaAppUrl || 'https://api.whatsapp.com/';
+      const pitch = currentModalPitch || getFormattedWhatsAppPitch(false);
+      const rawPhone = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '');
+      const cleanPhone = rawPhone.replace(/[^0-9]/g, '');
+
+      let webUrl = cleanPhone 
+        ? `https://web.whatsapp.com/send/?phone=${cleanPhone}&text=${encodeURIComponent(pitch)}`
+        : `https://web.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+
+      let appUrl = cleanPhone
+        ? `https://api.whatsapp.com/send/?phone=${cleanPhone}&text=${encodeURIComponent(pitch)}`
+        : `https://api.whatsapp.com/send?text=${encodeURIComponent(pitch)}`;
+
+      if (currentWaWebUrl) webUrl = currentWaWebUrl;
+      if (currentWaAppUrl) appUrl = currentWaAppUrl;
 
       if (target === 'app') {
         window.open(appUrl, '_blank');
