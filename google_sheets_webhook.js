@@ -104,7 +104,9 @@ function doPost(e) {
         payload.totalSessions || 0,
         payload.bonusSessions || 0,
         payload.action || "Card Export",
-        payload.device || "Browser"
+        payload.device || "Browser",
+        payload.crmOwner || "--",
+        payload.ownershipStatus || "UNASSIGNED"
       ];
     } else {
       // شيت قديم لا يحتوي على Customer ID: نقوم بإدراجه تلقائياً كعمود 4
