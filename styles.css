@@ -142,6 +142,7 @@ body::after {
   margin-top: 24px;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .loader-content p {
