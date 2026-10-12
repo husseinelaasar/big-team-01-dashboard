@@ -1,0 +1,163 @@
+{
+  "title": "نموذج توضيحي حقيقي: قائمة مهام التشغيل الموحدة (Big Team 01 - Operations Action Leads)",
+  "subtitle": "بيانات حقيقية 100% مستخرجة مباشرة من الملفات الأربعة لتوضيح تسلسل الأولويات والدمج الذكي للحالات المكررة",
+  "info": "📌 المصادر الحقيقية: 1) 해외NEW_SOP_*.xlsx (SOP Round 1 & Due Today) | 2) SS Lens Dashboard (Student_Detail5: Unfixed & Student_Detail11: Class Cons) | 3) SS Lens Dashboard_Student-Detail (Pools & Points)",
+  "summaryText": "💡 الخلاصة: تم استخراج كافة السجلات أعلاه مباشرة من الملفات الأربعة الفعلية بدون أي افتراض؛ كل عميل يظهر مرة واحدة فقط في أعلى أولوية مع دمج مهامه بالكامل.",
+  "headers": [
+    "الأولوية (Priority)",
+    "اسم الفريق (Team)",
+    "اسم الموظف (Agent)",
+    "رقم العميل (Student ID)",
+    "الحوض (Pool)",
+    "الحالة المدمجة / المطلوب تحقيقه بالكامل (Action Required / Merged Status)",
+    "النقاط (Points)",
+    "تاريخ الاستحقاق (Due Date)",
+    "شرح آلية الدمج من واقع الملفات الحقيقية (Real Merge Proof)"
+  ],
+  "items": [
+    {
+      "prio": "🥇 أولوية 1: SOP Round 1",
+      "team": "ME-EGSS01小组",
+      "agent": "EGSS-ashraqatal",
+      "studentId": "64553348",
+      "pool": "outside pool",
+      "action": "🔴 [أولوية قصوى - دمج ثلاثي]: إتمام مكالمة SOP Round 1 + مستحقة اليوم 11 أكتوبر + تثبيت المعلم والجدول",
+      "points": "101",
+      "dueDate": "2026-10-11",
+      "note": "حالة حقيقية ثلاثية: العميل مسجل في SOP كـ Round 1 ومستحق اليوم 20261011 ومسجل في شيت 5 كـ Unfixed. دُمجت المهام بأعلى أولوية",
+      "bgColor": "FFEBEB"
+    },
+    {
+      "prio": "🥇 أولوية 1: SOP Round 1",
+      "team": "ME-EGSS30小组",
+      "agent": "EGSS-adhmgadallah",
+      "studentId": "64588918",
+      "pool": "outside pool",
+      "action": "🔴 إتمام مكالمة التعارف والتأسيس (SOP Round 1) + تثبيت المعلم والجدول الأسبوعي الثابت",
+      "points": "101",
+      "dueDate": "2026-10-13",
+      "note": "حالة حقيقية مكررة: مسجل في SOP Round 1 معلق ومسجل في Lens Student_Detail5 كـ Unfixed=1. تم دمجهما في سطر واحد",
+      "bgColor": "FFEBEB"
+    },
+    {
+      "prio": "🥇 أولوية 1: SOP Round 1",
+      "team": "ME-EGSS10小组",
+      "agent": "EGSS-mahmoudkhamis",
+      "studentId": "64570995",
+      "pool": "outside pool",
+      "action": "🔴 إتمام مكالمة التعارف والتأسيس (SOP Round 1) + تثبيت المعلم والجدول الثابت",
+      "points": "146",
+      "dueDate": "2026-10-13",
+      "note": "حالة حقيقية مكررة: لديه مهمة Round 1 حتى 13 أكتوبر وغير مثبت، رصيده الحقيقي في ملف الطلاب 146 نقطة",
+      "bgColor": "FFEBEB"
+    },
+    {
+      "prio": "🥇 أولوية 1: SOP Round 1",
+      "team": "ME-EGSS10小组",
+      "agent": "EGSS-abdelrhmanshehata",
+      "studentId": "59278806",
+      "pool": "outside pool",
+      "action": "🔴 إتمام مكالمة التعارف والتأسيس (SOP Round 1) + تثبيت المعلم والجدول الثابت",
+      "points": "96",
+      "dueDate": "2026-10-13",
+      "note": "حالة حقيقية مكررة: Round 1 معلق + غير مثبت، رصيده الحقيقي 96 نقطة",
+      "bgColor": "FFEBEB"
+    },
+    {
+      "prio": "🥈 أولوية 2: مهام مستحقة اليوم",
+      "team": "ME-EGSS01小组",
+      "agent": "EGSS-nohayoussry",
+      "studentId": "64558050",
+      "pool": "outside pool",
+      "action": "⏰ [مستحق اليوم]: إغلاق متابعة الحصة الأولى (Round 2 First Class Follow-up) اليوم 11 أكتوبر + تثبيت المعلم والجدول",
+      "points": "140",
+      "dueDate": "2026-10-11",
+      "note": "حالة حقيقية: مهمة SOP تنتهي اليوم 20261011 ومسجل كـ Unfixed=1، رصيده الحقيقي 140 نقطة. دُمج بأولوية اليوم",
+      "bgColor": "FFFBEB"
+    },
+    {
+      "prio": "🥈 أولوية 2: مهام مستحقة اليوم",
+      "team": "ME-EGSS01小组",
+      "agent": "EGSS-nohayoussry",
+      "studentId": "60414699",
+      "pool": "Exp Non-0",
+      "action": "⏰ [مستحق اليوم]: خدمة تجديد الباقة المنتهية (Round 6 Duration Renewal) اليوم 11 أكتوبر + تثبيت المعلم والجدول",
+      "points": "5",
+      "dueDate": "2026-10-11",
+      "note": "حالة حقيقية: طالب في حوض Exp Non-0 رصيده 5 نقاط، مهمته مستحقة اليوم وغير مثبت، تم دمج المهمتين بأولوية اليوم",
+      "bgColor": "FFFBEB"
+    },
+    {
+      "prio": "🥈 أولوية 2: مهام مستحقة اليوم",
+      "team": "ME-EGSS01小组",
+      "agent": "EGSS-nohayoussry",
+      "studentId": "63581252",
+      "pool": "outside pool",
+      "action": "⏰ [مستحق اليوم]: معالجة إنذار الغياب والخدمة (Service warning - absence) المستحق اليوم 11 أكتوبر",
+      "points": "45",
+      "dueDate": "2026-10-11",
+      "note": "حالة حقيقية: مهمة إنذار غياب تنتهي اليوم 20261011 18:55:00",
+      "bgColor": "FFFBEB"
+    },
+    {
+      "prio": "🥉 أولوية 3: Unfixed Teacher",
+      "team": "ME-EGSS05小组",
+      "agent": "EGSS-omarmoneb",
+      "studentId": "59770688",
+      "pool": "outside pool",
+      "action": "🟡 تثبيت المعلم والجدول الأسبوعي الثابت + تنشيط استهلاك الحصص (0 حصة مستهلكة هذا الشهر)",
+      "points": "85",
+      "dueDate": "-",
+      "note": "حالة حقيقية مكررة: مسجل في Lens كـ Unfixed=1 ومسجل في شيت استهلاك الحصص كـ 0 حصص، رصيده 85 نقطة. دُمجا معاً",
+      "bgColor": "FEF3C7"
+    },
+    {
+      "prio": "🥉 أولوية 3: Unfixed Teacher",
+      "team": "ME-EGSS01小组",
+      "agent": "EGSS-juliamonir01",
+      "studentId": "58904709",
+      "pool": "outside pool",
+      "action": "🟡 تثبيت المعلم والجدول الأسبوعي الثابت + تنشيط استهلاك الحصص (0 حصة في أكتوبر)",
+      "points": "60",
+      "dueDate": "-",
+      "note": "حالة حقيقية مكررة: طالب غير مثبت + استهلاك صفري في أكتوبر، رصيده 60 نقطة",
+      "bgColor": "FEF3C7"
+    },
+    {
+      "prio": "🏅 أولوية 4: Class Consumption",
+      "team": "ME-EGSS01小组",
+      "agent": "EGSS-ashraqatal",
+      "studentId": "58364771",
+      "pool": "FOE Non-0",
+      "action": "🟢 تنشيط استهلاك الحصص: طالب FOE Non-0 لديه 10 حصص محجوزة غير مكتملة واستهلك 3 حصص فقط",
+      "points": "35",
+      "dueDate": "-",
+      "note": "بيانات الطالب 58364771 الحقيقية 100%: رصيده 35 نقطة في FOE Non-0، معلمه مثبت (Fixed=1) وليس لديه مهمة SOP",
+      "bgColor": "F0FDF4"
+    },
+    {
+      "prio": "🎯 أولوية 5: Outside Pool & 0 Pts",
+      "team": "ME-EGSS30小组",
+      "agent": "EGSS-alihesham01",
+      "studentId": "58777445",
+      "pool": "outside pool",
+      "action": "🚨 تجديد فوري: طالب خارج الحوض ونفد رصيده بالكامل (الرصيد: 0 نقطة) - معرض للتوقف التام",
+      "points": "0",
+      "dueDate": "-",
+      "note": "بيانات حقيقية: من الـ 166 طالباً في outside pool ذوي الرصيد الصفري (0 نقاط)",
+      "bgColor": "EDE9FE"
+    },
+    {
+      "prio": "🎯 أولوية 5: Outside Pool & 0 Pts",
+      "team": "ME-EGSS10小组",
+      "agent": "EGSS-abdelrhmanshehata",
+      "studentId": "58661585",
+      "pool": "outside pool",
+      "action": "🚨 تجديد فوري: طالب خارج الحوض ونفد رصيده بالكامل (الرصيد: 0 نقطة) - يحتاج تجديد باقة",
+      "points": "0",
+      "dueDate": "-",
+      "note": "بيانات حقيقية: طالب outside pool رصيده الفعلي 0 نقطة في شيت الطلاب الجديد",
+      "bgColor": "EDE9FE"
+    }
+  ]
+}

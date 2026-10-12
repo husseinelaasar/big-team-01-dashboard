@@ -1,0 +1,163 @@
+{
+  "title": "51Talk Big Team 01 — Unified Operations Action Leads Master",
+  "subtitle": "Authoritative 5-Tier Priority Framework with Intelligent Duplicate Merging & Zero Redundancy",
+  "info": "Data Sources: 1) Standalone SOP File (Round 1 & Due Today) | 2) SS Lens Dashboard (Sheet 5: Unfixed & Sheet 11: Class Cons) | 3) Student Detail File (Pools & Points)",
+  "summaryText": "Key Rule: Zero student duplication. Every student appears once at their highest priority tier, with all actions combined into a single unified row.",
+  "headers": [
+    "Priority Tier",
+    "Team",
+    "Agent",
+    "Student ID",
+    "Pool / Lifecycle",
+    "Unified Required Action / Merged Status",
+    "Points",
+    "Due Date",
+    "Verification & Merge Proof (100% Real Records)"
+  ],
+  "items": [
+    {
+      "prio": "Tier 1: SOP Round 1",
+      "team": "ME-EGSS01",
+      "agent": "EGSS-ashraqatal",
+      "studentId": "64553348",
+      "pool": "outside pool",
+      "action": "[CRITICAL - TRIPLE ACTION]: Complete SOP Round 1 Call + Task Expiring Today (Oct 11) + Bind Fixed Teacher & Schedule",
+      "points": "101",
+      "dueDate": "2026-10-11",
+      "note": "Verified Triple Match: In SOP as Round 1 pending, expires 2026-10-11, and in Sheet 5 as UNFIXED=1. Merged to Tier 1.",
+      "bgColor": "FFEBEB"
+    },
+    {
+      "prio": "Tier 1: SOP Round 1",
+      "team": "ME-EGSS30",
+      "agent": "EGSS-adhmgadallah",
+      "studentId": "64588918",
+      "pool": "outside pool",
+      "action": "Complete SOP Round 1 Welcome Call + Bind Fixed Teacher & Weekly Schedule",
+      "points": "101",
+      "dueDate": "2026-10-13",
+      "note": "Verified Dual Match: SOP Round 1 pending (due Oct 13) + Sheet 5 UNFIXED=1. True balance from Student Detail = 101 pts.",
+      "bgColor": "FFEBEB"
+    },
+    {
+      "prio": "Tier 1: SOP Round 1",
+      "team": "ME-EGSS10",
+      "agent": "EGSS-mahmoudkhamis",
+      "studentId": "64570995",
+      "pool": "outside pool",
+      "action": "Complete SOP Round 1 Welcome Call + Bind Fixed Teacher & Weekly Schedule",
+      "points": "146",
+      "dueDate": "2026-10-13",
+      "note": "Verified Dual Match: SOP Round 1 pending (due Oct 13) + Sheet 5 UNFIXED=1. True balance from Student Detail = 146 pts.",
+      "bgColor": "FFEBEB"
+    },
+    {
+      "prio": "Tier 1: SOP Round 1",
+      "team": "ME-EGSS10",
+      "agent": "EGSS-abdelrhmanshehata",
+      "studentId": "59278806",
+      "pool": "outside pool",
+      "action": "Complete SOP Round 1 Welcome Call + Bind Fixed Teacher & Weekly Schedule",
+      "points": "96",
+      "dueDate": "2026-10-13",
+      "note": "Verified Dual Match: SOP Round 1 pending + Sheet 5 UNFIXED=1. True balance = 96 pts.",
+      "bgColor": "FFEBEB"
+    },
+    {
+      "prio": "Tier 2: Due Today Tasks",
+      "team": "ME-EGSS01",
+      "agent": "EGSS-nohayoussry",
+      "studentId": "64558050",
+      "pool": "outside pool",
+      "action": "[DUE TODAY]: Complete Round 2 First Class Follow-up Today (Oct 11) + Bind Fixed Teacher & Schedule",
+      "points": "140",
+      "dueDate": "2026-10-11",
+      "note": "Verified Dual Match: SOP Task expires today (2026-10-11 18:55) + Sheet 5 UNFIXED=1. True balance = 140 pts.",
+      "bgColor": "FFFBEB"
+    },
+    {
+      "prio": "Tier 2: Due Today Tasks",
+      "team": "ME-EGSS01",
+      "agent": "EGSS-nohayoussry",
+      "studentId": "60414699",
+      "pool": "Exp Non-0",
+      "action": "[DUE TODAY]: Complete Round 6 Duration Renewal Call Today (Oct 11) + Bind Fixed Teacher & Schedule",
+      "points": "5",
+      "dueDate": "2026-10-11",
+      "note": "Verified Real Record: Pool is Exp Non-0 with 5 pts remaining, task expires today, UNFIXED=1. Urgent renewal outreach.",
+      "bgColor": "FFFBEB"
+    },
+    {
+      "prio": "Tier 2: Due Today Tasks",
+      "team": "ME-EGSS01",
+      "agent": "EGSS-nohayoussry",
+      "studentId": "63581252",
+      "pool": "outside pool",
+      "action": "[DUE TODAY]: Resolve Service Warning - Absence Task Before End of Day",
+      "points": "45",
+      "dueDate": "2026-10-11",
+      "note": "Verified Real Record: SOP Service Warning task expiring today 2026-10-11 18:55:00.",
+      "bgColor": "FFFBEB"
+    },
+    {
+      "prio": "Tier 3: Unfixed Teacher",
+      "team": "ME-EGSS05",
+      "agent": "EGSS-omarmoneb",
+      "studentId": "59770688",
+      "pool": "outside pool",
+      "action": "Bind Fixed Teacher & Schedule + Activate Inactive Student (0 Classes Consumed in Oct)",
+      "points": "85",
+      "dueDate": "-",
+      "note": "Verified Dual Match: Sheet 5 UNFIXED=1 + Sheet 11 (0 Classes consumed in Oct). True balance = 85 pts.",
+      "bgColor": "FEF3C7"
+    },
+    {
+      "prio": "Tier 3: Unfixed Teacher",
+      "team": "ME-EGSS01",
+      "agent": "EGSS-juliamonir01",
+      "studentId": "58904709",
+      "pool": "outside pool",
+      "action": "Bind Fixed Teacher & Schedule + Activate Inactive Student (0 Classes Consumed in Oct)",
+      "points": "60",
+      "dueDate": "-",
+      "note": "Verified Dual Match: Sheet 5 UNFIXED=1 + Sheet 11 (0 Classes in Oct). True balance = 60 pts.",
+      "bgColor": "FEF3C7"
+    },
+    {
+      "prio": "Tier 4: Class Consumption",
+      "team": "ME-EGSS01",
+      "agent": "EGSS-ashraqatal",
+      "studentId": "58364771",
+      "pool": "FOE Non-0",
+      "action": "Follow-up Class Attendance: FOE Student has 10 Booked/Unattended Classes vs 3 Completed",
+      "points": "35",
+      "dueDate": "-",
+      "note": "100% Real Record: Exactly 35 points in Student Detail, Fixed Teacher=1, 3 completed / 10 booked classes in Sheet 11.",
+      "bgColor": "F0FDF4"
+    },
+    {
+      "prio": "Tier 5: Outside Pool & 0 Pts",
+      "team": "ME-EGSS30",
+      "agent": "EGSS-alihesham01",
+      "studentId": "58777445",
+      "pool": "outside pool",
+      "action": "[RENEWAL URGENT]: Outside Pool Student with 0 Points Remaining - Immediate Package Renewal Required",
+      "points": "0",
+      "dueDate": "-",
+      "note": "Verified Real Record: One of 166 outside pool students with exactly 0 points remaining in Student Detail.",
+      "bgColor": "EDE9FE"
+    },
+    {
+      "prio": "Tier 5: Outside Pool & 0 Pts",
+      "team": "ME-EGSS10",
+      "agent": "EGSS-abdelrhmanshehata",
+      "studentId": "58661585",
+      "pool": "outside pool",
+      "action": "[RENEWAL URGENT]: Outside Pool Student with 0 Points Remaining - Churn Prevention Outreach",
+      "points": "0",
+      "dueDate": "-",
+      "note": "Verified Real Record: Outside pool student with 0 points remaining in Student Detail file.",
+      "bgColor": "EDE9FE"
+    }
+  ]
+}
