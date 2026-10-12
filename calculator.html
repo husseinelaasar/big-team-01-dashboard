@@ -5471,6 +5471,7 @@
     // Option 2: Send Card Image ONLY to WhatsApp
     async function shareCardImageWhatsApp() {
       if (!validateCustomerId()) return;
+      logStudyPlanExportEvent('WhatsApp Card Only', selectedPlanObj);
       showToast(currentLanguage === 'ar' ? '⏳ جاري تجهيز صورة الكارت للواتساب...' : 'Preparing card image for WhatsApp...');
       try {
         const { blob, canvas } = await getCardBlob();
@@ -5773,6 +5774,7 @@
     // Option 1: Send Written Text Pitch ONLY
     function shareWhatsAppPitch() {
       if (!validateCustomerId()) return;
+      logStudyPlanExportEvent('WhatsApp Pitch Only', selectedPlanObj);
       try {
         const pitch = getFormattedWhatsAppPitch();
         const phoneVal = (document.getElementById('modalClientPhone') ? document.getElementById('modalClientPhone').value : '').replace(/[^0-9]/g, '');

@@ -3,14 +3,14 @@
  * 51TALK STUDY PLAN & RATE CARD - GOOGLE APPS SCRIPT CLOUD BACKEND (WEBHOOK)
  * ====================================================================================
  * 
- * تعليمات التفعيل في 30 ثانية:
- * 1. افتح https://script.google.com وأنشئ "مشروع جديد" (New Project).
+ * تعليمات التفعيل والنشر في Google Apps Script:
+ * 1. افتح https://script.google.com وأنشئ مشروع جديد (New Project).
  * 2. الصق هذا الكود بالكامل واستبدل أي كود موجود.
- * 3. اضغط على زر "Deploy" (نشر) في الأعلى يمين -> اختر "New deployment" (نشر جديد).
- * 4. اختر نوع النشر: "Web app" (تطبيق ويب).
- * 5. في خانة "Execute as": اختر "Me" (حسابك).
- * 6. في خانة "Who has access": اختر "Anyone" (أي شخص - لتتمكن صفحة الحاسبة من إرسال البيانات).
- * 7. اضغط Deploy وانسخ رابط الـ Web App URL والصقه في إعدادات الداشبورد أو الكود!
+ * 3. اضغط على زر "Deploy" (نشر) -> "New deployment" (نشر جديد) أو "Manage deployments".
+ * 4. نوع النشر: "Web app" (تطبيق ويب).
+ * 5. ⚠️ هام جداً: في خانة "Execute as": اختر "Me" (حسابك).
+ * 6. ⚠️ هام جداً: في خانة "Who has access": اختر "Anyone" (أي شخص) ليعمل الربط السحابي بدون طلب تسجيل دخول!
+ * 7. انسخ رابط الـ Web App URL والصقه في إعدادات الداشبورد أو الكود.
  * ====================================================================================
  */
 
@@ -25,7 +25,7 @@ function getOrCreateSheet() {
   let sheet = ss.getSheetByName(SHEET_NAME);
   if (!sheet) {
     sheet = ss.insertSheet(SHEET_NAME);
-    // إضافة صف العناوين الرئيسي بتنسيق فخم وشامل
+    // إضافة صف العناوين الرئيسي بتنسيق فخم وشامل (13 عموداً متطابقاً 100% مع الكارت)
     const headers = [
       "Timestamp (التاريخ والوقت)",
       "Rep Name (اسم الموظف)",
@@ -60,7 +60,7 @@ function getOrCreateSheet() {
     sheet.setColumnWidth(9, 140);
     sheet.setColumnWidth(10, 120);
     sheet.setColumnWidth(11, 120);
-    sheet.setColumnWidth(12, 150);
+    sheet.setColumnWidth(12, 160);
     sheet.setColumnWidth(13, 180);
   }
   return sheet;
@@ -82,15 +82,18 @@ function doPost(e) {
     const now = new Date();
     const formattedDate = Utilities.formatDate(now, "GMT+3", "yyyy-MM-dd HH:mm:ss");
 
-    // التحقق من عدد الأعمدة الموجودة في الشيت للتوافق مع الشيتات القديمة والجديدة
+    // التحقق من وجود عمود Customer ID للتوافق التام
     const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0] || [];
-    let hasCustomerIdCol = headers.some(function(h) { return String(h).toLowerCase().indexOf("customer") !== -1 || String(h).indexOf("معرف") !== -1; });
+    let hasCustomerIdCol = headers.some(function(h) {
+      const s = String(h).toLowerCase();
+      return s.indexOf("customer") !== -1 || s.indexOf("معرف") !== -1;
+    });
 
     let rowData = [];
     if (hasCustomerIdCol) {
       rowData = [
         payload.timestamp || formattedDate,
-        payload.repName || "Unknown Rep",
+        payload.repName || "غير مسجل",
         payload.teamCode || "Unassigned",
         payload.customerId || "--",
         payload.studentName || "Dear Parent",
@@ -104,10 +107,16 @@ function doPost(e) {
         payload.device || "Browser"
       ];
     } else {
+      // شيت قديم لا يحتوي على Customer ID: نقوم بإدراجه تلقائياً كعمود 4
+      if (headers.length === 12) {
+        sheet.insertColumnAfter(3);
+        sheet.getRange(1, 4).setValue("Customer ID (معرف العميل)").setBackground("#1e293b").setFontColor("#f8fafc").setFontWeight("bold");
+      }
       rowData = [
         payload.timestamp || formattedDate,
-        payload.repName || "Unknown Rep",
+        payload.repName || "غير مسجل",
         payload.teamCode || "Unassigned",
+        payload.customerId || "--",
         payload.studentName || "Dear Parent",
         payload.planName || "General Package",
         payload.planType || "Upgrade",
@@ -118,19 +127,13 @@ function doPost(e) {
         payload.action || "Card Export",
         payload.device || "Browser"
       ];
-      // إذا كان الشيت لا يحتوي على عمود Customer ID، نضيفه
-      if (headers.length === 12) {
-        sheet.insertColumnAfter(3);
-        sheet.getRange(1, 4).setValue("Customer ID (معرف العميل)").setBackground("#1e293b").setFontColor("#f8fafc").setFontWeight("bold");
-        rowData.splice(3, 0, payload.customerId || "--");
-      }
     }
 
     sheet.appendRow(rowData);
 
     return ContentService.createTextOutput(JSON.stringify({
       status: "success",
-      message: "Event logged successfully with Customer ID: " + (payload.customerId || "N/A"),
+      message: "Event logged with 100% card fidelity (Customer ID: " + (payload.customerId || "N/A") + ")",
       timestamp: formattedDate
     })).setMimeType(ContentService.MimeType.JSON);
 
@@ -150,7 +153,7 @@ function doGet(e) {
     const params = e ? e.parameter : {};
     const token = params.token;
 
-    // التحقق الصارم من الصلاحية: لا يمكن لأي موظف الاطلاع على البيانات إلا برمز حسين السري
+    // التحقق الصارم من الصلاحية: لا يمكن لأحد الاطلاع على البيانات إلا برمز حسين السري
     if (token !== ADMIN_MASTER_TOKEN && token !== "5151") {
       return ContentService.createTextOutput(JSON.stringify({
         status: "error",
@@ -172,37 +175,50 @@ function doGet(e) {
     const headers = data[0];
     const records = [];
 
-    // تعيين الأعمدة ديناميكياً لضمان التوافق التام
+    // تعيين الأعمدة بدقة 100% ديناميكياً لتفادي أي إزاحة في الأعمدة
     let colMap = {
       timestamp: 0,
       repName: 1,
       teamCode: 2,
-      customerId: -1,
-      studentName: 3,
-      planName: 4,
-      planType: 5,
-      officialPrice: 6,
-      discountedPrice: 7,
-      totalSessions: 8,
-      bonusSessions: 9,
-      action: 10,
-      device: 11
+      customerId: 3,
+      studentName: 4,
+      planName: 5,
+      planType: 6,
+      officialPrice: 7,
+      discountedPrice: 8,
+      totalSessions: 9,
+      bonusSessions: 10,
+      action: 11,
+      device: 12
     };
 
     headers.forEach(function(h, idx) {
       const hStr = String(h).toLowerCase();
-      if (hStr.indexOf("customer") !== -1 || hStr.indexOf("معرف") !== -1) colMap.customerId = idx;
-      else if (hStr.indexOf("student") !== -1 || hStr.indexOf("عميل") !== -1 || hStr.indexOf("طالب") !== -1) colMap.studentName = idx;
-      else if (hStr.indexOf("plan") !== -1 || hStr.indexOf("باقة") !== -1) colMap.planName = idx;
+      if (hStr.indexOf("time") !== -1 || hStr.indexOf("تاريخ") !== -1) colMap.timestamp = idx;
+      else if (hStr.indexOf("rep") !== -1 || hStr.indexOf("موظف") !== -1) colMap.repName = idx;
+      else if (hStr.indexOf("team") !== -1 || hStr.indexOf("فريق") !== -1) colMap.teamCode = idx;
+      else if (hStr.indexOf("customer") !== -1 || hStr.indexOf("معرف") !== -1) colMap.customerId = idx;
+      else if (hStr.indexOf("student") !== -1 || hStr.indexOf("طالب") !== -1 || hStr.indexOf("عميل") !== -1) colMap.studentName = idx;
+      else if (hStr.indexOf("plan title") !== -1 || hStr.indexOf("اسم الباقة") !== -1 || hStr.indexOf("plan") !== -1) colMap.planName = idx;
+      else if (hStr.indexOf("type") !== -1 || hStr.indexOf("نوع") !== -1) colMap.planType = idx;
+      else if (hStr.indexOf("official") !== -1 || hStr.indexOf("رسمي") !== -1) colMap.officialPrice = idx;
+      else if (hStr.indexOf("discount") !== -1 || hStr.indexOf("خصم") !== -1) colMap.discountedPrice = idx;
+      else if (hStr.indexOf("total") !== -1 || hStr.indexOf("إجمالي") !== -1) colMap.totalSessions = idx;
+      else if (hStr.indexOf("bonus") !== -1 || hStr.indexOf("هدية") !== -1) colMap.bonusSessions = idx;
+      else if (hStr.indexOf("action") !== -1 || hStr.indexOf("إجراء") !== -1) colMap.action = idx;
+      else if (hStr.indexOf("device") !== -1 || hStr.indexOf("جهاز") !== -1) colMap.device = idx;
     });
 
     for (let i = 1; i < data.length; i++) {
       const row = data[i];
+      // تجاهل الصفوف الفارغة تماماً
+      if (!row[colMap.timestamp] && !row[colMap.repName]) continue;
+
       records.push({
         timestamp: row[colMap.timestamp],
         repName: row[colMap.repName],
         teamCode: row[colMap.teamCode],
-        customerId: colMap.customerId !== -1 ? row[colMap.customerId] : "--",
+        customerId: row[colMap.customerId] || "--",
         studentName: row[colMap.studentName],
         planName: row[colMap.planName],
         planType: row[colMap.planType],
