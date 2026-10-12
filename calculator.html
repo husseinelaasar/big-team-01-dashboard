@@ -4099,6 +4099,17 @@
       return Math.round(val * 1.10);
     }
 
+    // Helper: Calculate price before discount (for Renewal, increase by 40% without mentioning percentage)
+    function getOfficialPrice(plan, isUpgrade) {
+      const basePlus10 = pricePlus10(plan.sheetCost);
+      if (!isUpgrade) {
+        // Renewal packages: increase price before discount by 40% without mentioning the percentage
+        // so that the final discount amount is significantly larger for the customer.
+        return Math.round(basePlus10 * 1.40);
+      }
+      return basePlus10;
+    }
+
     let activeCategoryTab = 'all';
     let currentSearchTerm = '';
 
@@ -4205,7 +4216,7 @@
       const ribbonText = currentLanguage === 'ar' ? plan.ribbonAr : plan.ribbonEn;
 
       // Price computations
-      const officialPrice = pricePlus10(plan.sheetCost);
+      const officialPrice = getOfficialPrice(plan, isUpgrade);
       const scholarshipPrice = pricePlus10(plan.sheetDiscCost);
 
       const savings = officialPrice - scholarshipPrice;
@@ -4313,7 +4324,7 @@
           <!-- Top Row: Official Striked Price (Horizontal Red Line) & Grant Discount Pill -->
           <div class="pricing-header-row">
             <div class="official-row-striked">
-              <span class="official-label-prominent"><i class="fa-solid fa-tag"></i> ${currentLanguage === 'ar' ? 'السعر قبل الخصم:' : 'Official Tuition:'}</span>
+              <span class="official-label-prominent"><i class="fa-solid fa-tag"></i> ${currentLanguage === 'ar' ? (isUpgrade ? 'السعر قبل الخصم:' : 'سعر القبول والتسجيل:') : (isUpgrade ? 'Official Tuition:' : 'Admission & Registration Tuition:')}</span>
               <div class="diagonal-strike-wrapper">
                 <span class="official-value-striked">${officialPrice.toLocaleString()} ${t.currency}</span>
               </div>
@@ -4507,7 +4518,8 @@
 
     function openModalWithPlan(plan, typeName, categoryName) {
       selectedPlanObj = plan;
-      const officialPrice = pricePlus10(plan.sheetCost);
+      const isUpgrade = !plan.id.startsWith('rn-');
+      const officialPrice = getOfficialPrice(plan, isUpgrade);
       const discountedPrice = pricePlus10(plan.sheetDiscCost);
       const internalCost = pricePlus10(plan.sheetDiscCost);
       const duration = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
@@ -4519,6 +4531,14 @@
       document.getElementById('modalBonusSessions').value = plan.bonus;
       document.getElementById('modalOfficialPrice').value = officialPrice;
       document.getElementById('modalDiscountedPrice').value = discountedPrice;
+
+      // Update modal official price label for renewal vs upgrade
+      const lblOfficial = document.getElementById('lblModalOfficialPrice');
+      if (lblOfficial) {
+        lblOfficial.textContent = currentLanguage === 'ar'
+          ? (isUpgrade ? 'السعر قبل الخصم [ر.س]' : 'سعر القبول والتسجيل [ر.س]')
+          : (isUpgrade ? 'Official Tuition [SAR]' : 'Admission & Registration Tuition [SAR]');
+      }
 
       // Internal confidential reference for employee only
       document.getElementById('modalInternalCostDisplay').textContent = `${internalCost.toLocaleString()} ${t.currency}`;
@@ -4572,7 +4592,14 @@
       const savingsPct = officialPrice > 0 ? Math.round((savingsVal / officialPrice) * 100) : 0;
 
       // Approved official tuition before discount (on the left)
-      document.getElementById('previewOfficialSublabel').textContent = currentLanguage === 'ar' ? 'السعر قبل الخصم:' : 'Official Tuition:';
+      const isRenew = (selectedPlanObj && selectedPlanObj.id && selectedPlanObj.id.startsWith('rn-')) ||
+                      (planName && (planName.includes('تجديد') || planName.toLowerCase().includes('renew')));
+      const officialSublabel = document.getElementById('previewOfficialSublabel');
+      if (officialSublabel) {
+        officialSublabel.textContent = currentLanguage === 'ar'
+          ? (isRenew ? 'سعر القبول والتسجيل:' : 'السعر قبل الخصم:')
+          : (isRenew ? 'Admission & Registration Tuition:' : 'Official Tuition:');
+      }
       document.getElementById('previewOfficialVal').textContent = `${officialPrice.toLocaleString()} ${t.currency}`;
 
       // Class rate before discount
@@ -4728,6 +4755,11 @@
       const savingsVal = Math.max(0, officialPrice - discountedPrice);
       const savingsPct = officialPrice > 0 ? Math.round((savingsVal / officialPrice) * 100) : 0;
 
+      const isRenew = (selectedPlanObj && selectedPlanObj.id && selectedPlanObj.id.startsWith('rn-')) ||
+                      (planName && (planName.includes('تجديد') || planName.toLowerCase().includes('renew')));
+      const officialLabelAr = isRenew ? 'سعر القبول والتسجيل' : 'السعر المعتمد';
+      const officialLabelEn = isRenew ? 'Admission & Registration Tuition' : 'Approved Tuition';
+
       if (isMergedCard) {
         if (currentLanguage === 'ar') {
           let msg = `✨━━━━━━━━━━━━━━━━━━━━━━━━━━━━✨\n`;
@@ -4742,7 +4774,7 @@
           }
           msg += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
           if (officialPrice > 0 && officialPrice !== discountedPrice) {
-            msg += `💵 *السعر المعتمد:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / للحصة~)\n`;
+            msg += `💵 *${officialLabelAr}:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / للحصة~)\n`;
           }
           msg += `🔥 *السعر بعد الخصم:* *${discountedPrice.toLocaleString()} ${t.currency}*\n`;
           msg += `⚡ *معدل الحصة:* فقط *${rateAfter} ${t.currency}* / للحصة\n`;
@@ -4773,7 +4805,7 @@
           }
           msg += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
           if (officialPrice > 0 && officialPrice !== discountedPrice) {
-            msg += `💵 *Official Tuition:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / class~)\n`;
+            msg += `💵 *${officialLabelEn}:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / class~)\n`;
           }
           msg += `🔥 *Discounted Tuition:* *${discountedPrice.toLocaleString()} ${t.currency}*\n`;
           msg += `⚡ *Class Rate:* Only *${rateAfter} ${t.currency}* / class\n`;
@@ -4802,7 +4834,7 @@
         msg += `⏳ *المدة الزمنية:* ${duration}\n`;
         msg += `🎯 *إجمالي الحصص المعتمدة:* ${totalSessions} حصة خاصة (${baseSessions} أساسية + 🎁 *${bonusSessions} حصة مجانية بالكامل*)\n\n`;
         if (officialPrice > 0 && officialPrice !== discountedPrice) {
-          msg += `💵 *السعر المعتمد:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} للحصة~)\n`;
+          msg += `💵 *${officialLabelAr}:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} للحصة~)\n`;
         }
         msg += `🔥 *السعر بعد الخصم (البرنامج الاحترافي):* *${discountedPrice.toLocaleString()} ${t.currency}* (⚡ فقط *${rateAfter} ${t.currency}* للحصة)\n`;
         if (savingsVal > 0) {
@@ -4825,7 +4857,7 @@
         msg += `⏳ *Duration:* ${duration}\n`;
         msg += `🎯 *Total Class Allocation:* ${totalSessions} Private Classes (${baseSessions} Standard + 🎁 *${bonusSessions} Free Gift Classes*)\n\n`;
         if (officialPrice > 0 && officialPrice !== discountedPrice) {
-          msg += `💵 *Approved Tuition:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / class~)\n`;
+          msg += `💵 *${officialLabelEn}:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / class~)\n`;
         }
         msg += `🔥 *Discounted Tuition (Professional Program):* *${discountedPrice.toLocaleString()} ${t.currency}* (⚡ Only *${rateAfter} ${t.currency}* / class)\n`;
         if (savingsVal > 0) {
@@ -5310,21 +5342,30 @@
     }
 
     function copyQuickPitch(plan, typeName, categoryDisplayName) {
-      const officialPrice = pricePlus10(plan.sheetCost);
+      const isUpgrade = !plan.id.startsWith('rn-');
+      const officialPrice = getOfficialPrice(plan, isUpgrade);
+      const discountedPrice = pricePlus10(plan.sheetDiscCost);
       const duration = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
       const t = I18N[currentLanguage];
+      const savings = officialPrice - discountedPrice;
 
       let summary = '';
       if (currentLanguage === 'ar') {
+        const officialLbl = isUpgrade ? 'السعر قبل الخصم' : 'سعر القبول والتسجيل';
         summary = `🌟 *عرض 51Talk - ${categoryDisplayName} (${typeName})*
 • المدة: ${duration}
 • إجمالي الحصص: ${plan.total} حصة (${plan.base} أساسية + 🎁 ${plan.bonus} مجانية بالكامل)
-• قيمة الاشتراك المعتمد: *${officialPrice.toLocaleString()} ر.س* (بمعدل ${(officialPrice / plan.total).toFixed(1)} ر.س / للحصة)`;
+• ${officialLbl}: ~${officialPrice.toLocaleString()} ر.س~
+• السعر بعد الخصم: *${discountedPrice.toLocaleString()} ر.س* (بمعدل ${(discountedPrice / plan.total).toFixed(1)} ر.س / للحصة)
+• إجمالي التوفير: *وفر ${savings.toLocaleString()} ر.س*`;
       } else {
+        const officialLbl = isUpgrade ? 'Official Tuition' : 'Admission & Registration Tuition';
         summary = `🌟 *51Talk ${categoryDisplayName} (${typeName})*
 • Duration: ${duration}
 • Total Classes: ${plan.total} (${plan.base} Standard + 🎁 ${plan.bonus} Free Bonus Gifts)
-• Approved Tuition: *${officialPrice.toLocaleString()} SAR* (Average ${(officialPrice / plan.total).toFixed(1)} SAR / class)`;
+• ${officialLbl}: ~${officialPrice.toLocaleString()} SAR~
+• Discounted Price: *${discountedPrice.toLocaleString()} SAR* (Average ${(discountedPrice / plan.total).toFixed(1)} SAR / class)
+• Total Savings: *Save ${savings.toLocaleString()} SAR*`;
       }
 
       navigator.clipboard.writeText(summary).then(() => {
