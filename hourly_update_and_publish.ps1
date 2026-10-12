@@ -7,34 +7,33 @@
 $ErrorActionPreference = "Continue"
 $workDir = "D:\Lens\Dashboard"
 $logFile = "$workDir\hourly_update.log"
-$timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-
-Function Log-Message([string]$msg) {
-    $entry = "[$timestamp] $msg"
+Function Write-Log([string]$msg) {
+    $now = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    $entry = "[$now] $msg"
     Write-Host $entry
     Add-Content -Path $logFile -Value $entry
 }
 
-Log-Message "=========================================================="
-Log-Message "Starting Hourly Scheduled Dashboard Update v2.0 (:10 past hour)"
+Write-Log "=========================================================="
+Write-Log "Starting Hourly Scheduled Dashboard Update v2.0 (:10 past hour)"
 
 # Step 1: Run fresh download from 51Talk Data Center
 try {
-    Log-Message "Step 1: Running automated download..."
+    Write-Log "Step 1: Running automated download..."
     & powershell -ExecutionPolicy Bypass -File "$workDir\auto_download_and_process.ps1" | Out-Null
-    Log-Message "Download routine triggered successfully."
+    Write-Log "Download routine triggered successfully."
 } catch {
-    Log-Message "Error in auto-download: $_"
+    Write-Log "Error in auto-download: $_"
 }
 
 # Step 2: Run unified update (sales + operations + leads + git deploy)
 try {
-    Log-Message "Step 2: Running unified dashboard update..."
+    Write-Log "Step 2: Running unified dashboard update..."
     & powershell -ExecutionPolicy Bypass -File "$workDir\update_dashboard.ps1" | Out-Null
-    Log-Message "Unified update completed successfully."
+    Write-Log "Unified update completed successfully."
 } catch {
-    Log-Message "Error in unified update: $_"
+    Write-Log "Error in unified update: $_"
 }
 
-Log-Message "Hourly update routine finished."
-Log-Message "=========================================================="
+Write-Log "Hourly update routine finished."
+Write-Log "=========================================================="
