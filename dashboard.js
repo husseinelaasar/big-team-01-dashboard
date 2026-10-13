@@ -223,16 +223,16 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 22.78% vs Day 13 target 35%. Gap: 12.2pp. Need $9155/day to close.', time: '20261013_131014' },
-  { type: 'critical', icon: '🚨', title: '3 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-negma, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261013_131014' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-27.1%), EGSS-negma (0%), EGSS-ashraqatal (0%), EGSS-ahmedshoukry (8.7%), EGSS-marwaahmed (9%). Schedule targeted coaching sessions today.', time: '20261013_131014' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-titooooo (44.7%), EGSS-khaledgonam (45.3%), EGSS-mohamedha (49.5%). Recognize in team channel!', time: '20261013_131014' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1169/day', detail: 'Currently at 26.3% (7530/28580). Gap: $21050.', time: '20261013_131014' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $2477/day', detail: 'Currently at 26.3% (15914/60500). Gap: $44586.', time: '20261013_131014' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1532/day', detail: 'Currently at 23.6% (8497/36080). Gap: $27583.', time: '20261013_131014' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $2329/day', detail: 'Currently at 21.9% (11780/53700). Gap: $41920.', time: '20261013_131014' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1510/day', detail: 'Currently at 21.3% (7356/34530). Gap: $27174.', time: '20261013_131014' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 88 more renewals', detail: 'Current: 12/497 (2.4%). 20% target = 100. Focus on high-base reps.', time: '20261013_131014' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 22.78% vs Day 13 target 35%. Gap: 12.2pp. Need $9155/day to close.', time: '20261013_141014' },
+  { type: 'critical', icon: '🚨', title: '3 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-negma, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261013_141014' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-27.1%), EGSS-negma (0%), EGSS-ashraqatal (0%), EGSS-ahmedshoukry (8.7%), EGSS-marwaahmed (9%). Schedule targeted coaching sessions today.', time: '20261013_141014' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-titooooo (44.7%), EGSS-khaledgonam (45.3%), EGSS-mohamedha (49.5%). Recognize in team channel!', time: '20261013_141014' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1169/day', detail: 'Currently at 26.3% (7530/28580). Gap: $21050.', time: '20261013_141014' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $2477/day', detail: 'Currently at 26.3% (15914/60500). Gap: $44586.', time: '20261013_141014' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1532/day', detail: 'Currently at 23.6% (8497/36080). Gap: $27583.', time: '20261013_141014' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $2329/day', detail: 'Currently at 21.9% (11780/53700). Gap: $41920.', time: '20261013_141014' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1510/day', detail: 'Currently at 21.3% (7356/34530). Gap: $27174.', time: '20261013_141014' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 88 more renewals', detail: 'Current: 12/497 (2.4%). 20% target = 100. Focus on high-base reps.', time: '20261013_141014' },
 ];
 
 // =========================================================================
@@ -8065,6 +8065,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -13176,6 +13178,9 @@ function exportCurrentFilteredUncoveredCsv() {
   const fullCsv = csvHeader + csvRows;
   triggerCsvDownload(fullCsv, `Uncovered_Leads_Filtered_${uncovState.team}_${filtered.length}_accounts.csv`);
 }
+
+
+
 
 
 
