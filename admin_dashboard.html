@@ -1284,7 +1284,7 @@
             </td>
             <td>${r.studentName || 'Dear Parent'}</td>
             <td style="max-width: 220px; overflow: hidden; text-overflow: ellipsis;" title="${r.planName}">${r.planName || '--'}</td>
-            <td style="font-family: 'Outfit'; font-weight: 800; color: var(--gold);">${Number(r.discountedPrice || 0).toLocaleString()} ر.س</td>
+            <td style="font-family: 'Outfit'; font-weight: 800; color: var(--gold);">${Number(r.discountedPrice || 0).toLocaleString()} ${r.currency || "ر.س"}</td>
             <td style="font-family: 'Outfit'; font-weight: 700;">${r.totalSessions || 0} <span style="font-size: 11px; color: #34d399;">(+${r.bonusSessions || 0})</span></td>
             <td>${actionBadge}</td>
             <td style="font-size: 11.5px; color: var(--text-muted);">${r.device || 'Browser'}</td>
@@ -1304,9 +1304,11 @@
         return;
       }
 
-      const headers = ['التاريخ والوقت', 'اسم الموظف', 'الفريق', 'Customer ID', 'اسم العميل', 'الباقة', 'السعر الرسمي', 'السعر بعد الخصم', 'إجمالي الحصص', 'الحصص الهدية', 'نوع الإجراء', 'الجهاز'];
+      const headers = ['التاريخ والوقت', 'الدولة', 'العملة', 'اسم الموظف', 'الفريق', 'Customer ID', 'اسم العميل', 'الباقة', 'السعر الرسمي', 'السعر بعد الخصم', 'إجمالي الحصص', 'الحصص الهدية', 'نوع الإجراء', 'الجهاز'];
       const rows = auditRecords.map(r => [
         `"${r.timestamp || ''}"`,
+        `"${r.country || 'KSA'}"`,
+        `"${r.currency || 'SAR'}"`,
         `"${r.repName || ''}"`,
         `"${r.teamCode || ''}"`,
         `"${r.customerId || ''}"`,
