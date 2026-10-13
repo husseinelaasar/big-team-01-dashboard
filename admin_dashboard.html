@@ -892,7 +892,8 @@
       }
 
       // Load saved webhook URL
-      const savedWebhook = localStorage.getItem(STORAGE_KEY_WEBHOOK) || PRODUCTION_WEBHOOK_URL;
+      localStorage.setItem(STORAGE_KEY_WEBHOOK, PRODUCTION_WEBHOOK_URL);
+        const savedWebhook = PRODUCTION_WEBHOOK_URL;
       if (savedWebhook) {
         document.getElementById('webhookUrlInput').value = savedWebhook;
       }
@@ -954,7 +955,8 @@
       document.getElementById('cloudStatusText').textContent = 'جاري المزامنة...';
 
       let cloudData = [];
-      const webhookUrl = localStorage.getItem(STORAGE_KEY_WEBHOOK) || PRODUCTION_WEBHOOK_URL;
+      localStorage.setItem(STORAGE_KEY_WEBHOOK, PRODUCTION_WEBHOOK_URL);
+        const webhookUrl = PRODUCTION_WEBHOOK_URL;
 
       // 1. Fetch from Google Apps Script Webhook if configured
       if (webhookUrl && webhookUrl.startsWith('http')) {

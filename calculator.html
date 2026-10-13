@@ -4472,15 +4472,24 @@
       return Math.round(val * 1.10);
     }
 
-    // Helper: Calculate price before discount (for Renewal, increase by 40% without mentioning percentage)
+        // Helper: Calculate admission & registration tuition before discount
+    // Upgrade packages are 100% harmonized with the exact corresponding Renewal official prices
     function getOfficialPrice(plan, isUpgrade) {
-      const basePlus10 = pricePlus10(plan.sheetCost);
-      if (!isUpgrade) {
-        // Renewal packages: increase price before discount by 40% without mentioning the percentage
-        // so that the final discount amount is significantly larger for the customer.
-        return Math.round(basePlus10 * 1.40);
+      if (isUpgrade) {
+        for (const catKey of ['single', 'family2', 'family3']) {
+          if (ALL_PACKAGES[catKey] && ALL_PACKAGES[catKey].renew) {
+            const match = ALL_PACKAGES[catKey].renew.find(rn => 
+              rn.total === plan.total && (rn.kidsCount || 0) === (plan.kidsCount || 0)
+            );
+            if (match) {
+              const matchBasePlus10 = pricePlus10(match.sheetCost);
+              return Math.round(matchBasePlus10 * 1.40);
+            }
+          }
+        }
       }
-      return basePlus10;
+      const basePlus10 = pricePlus10(plan.sheetCost);
+      return Math.round(basePlus10 * 1.40);
     }
 
     let activeCategoryTab = 'all';
@@ -4697,7 +4706,7 @@
           <!-- Top Row: Official Striked Price (Horizontal Red Line) & Grant Discount Pill -->
           <div class="pricing-header-row">
             <div class="official-row-striked">
-              <span class="official-label-prominent"><i class="fa-solid fa-tag"></i> ${currentLanguage === 'ar' ? (isUpgrade ? 'السعر قبل الخصم:' : 'سعر القبول والتسجيل:') : (isUpgrade ? 'Official Tuition:' : 'Admission & Registration Tuition:')}</span>
+              <span class="official-label-prominent"><i class="fa-solid fa-tag"></i> ${currentLanguage === 'ar' ? 'سعر القبول والتسجيل:' : 'Admission & Registration Tuition:'}</span>
               <div class="diagonal-strike-wrapper">
                 <span class="official-value-striked">${officialPrice.toLocaleString()} ${t.currency}</span>
               </div>
@@ -6050,7 +6059,7 @@
 
       let summary = '';
       if (currentLanguage === 'ar') {
-        const officialLbl = isUpgrade ? 'السعر قبل الخصم' : 'سعر القبول والتسجيل';
+        const officialLbl = 'سعر القبول والتسجيل';
         summary = `🌟 *عرض 51Talk - ${categoryDisplayName} (${typeName})*
 • المدة: ${duration}
 • إجمالي الحصص: ${plan.total} حصة (${plan.base} أساسية + 🎁 ${plan.bonus} مجانية بالكامل)
@@ -6058,7 +6067,7 @@
 • السعر بعد الخصم: *${discountedPrice.toLocaleString()} ر.س* (بمعدل ${(discountedPrice / plan.total).toFixed(1)} ر.س / للحصة)
 • إجمالي التوفير: *وفر ${savings.toLocaleString()} ر.س*`;
       } else {
-        const officialLbl = isUpgrade ? 'Official Tuition' : 'Admission & Registration Tuition';
+        const officialLbl = 'Admission & Registration Tuition';
         summary = `🌟 *51Talk ${categoryDisplayName} (${typeName})*
 • Duration: ${duration}
 • Total Classes: ${plan.total} (${plan.base} Standard + 🎁 ${plan.bonus} Free Bonus Gifts)
