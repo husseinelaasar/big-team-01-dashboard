@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" id="htmlRoot">
 <head>
   <meta charset="UTF-8">
@@ -188,6 +188,73 @@
       align-items: center;
       gap: 14px;
       flex-wrap: wrap;
+    }
+
+    /* Country Switcher (Directly below Language Switcher) */
+    .country-switcher-wrapper {
+      margin-top: 7px;
+      display: flex;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 12px;
+      padding: 3px 5px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+    }
+    .country-pills-scroll {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .country-pills-scroll::-webkit-scrollbar { display: none; }
+    .country-btn {
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-muted);
+      padding: 4px 8px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .country-btn .country-flag { font-size: 13px; line-height: 1; }
+    .country-btn .country-tag {
+      font-size: 9px;
+      font-family: 'Outfit', sans-serif;
+      padding: 1px 4px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+    }
+    .country-btn:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+    .country-btn.active {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.4));
+      border-color: rgba(245, 158, 11, 0.6);
+      color: #ffd700;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
+    }
+    .country-btn.active .country-tag {
+      background: rgba(245, 158, 11, 0.3);
+      color: #ffd700;
+      font-weight: 800;
+    }
+
+    .top-controls-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+    }
+    html[dir="rtl"] .top-controls-right {
+      align-items: flex-start;
     }
 
     .lang-switcher-wrapper {
@@ -3324,32 +3391,70 @@
       </div>
 
       <!-- Top Controls: Staff Cost Toggle & Language Switcher -->
-      <div class="top-controls-right" style="display: flex; align-items: center; gap: 10px;">
-        <button class="staff-toggle-btn" id="staffToggleBtn" onclick="toggleStaffCostPanels()" title="Show/Hide side internal employee cost panels">
-          <i class="fa-solid fa-eye-slash" id="staffToggleIcon"></i>
-          <span id="staffToggleText" data-i18n="toggleStaffCostBtn">Staff Cost Info (Side)</span>
-        </button>
+      <div class="top-controls-right">
+        <div class="top-controls-row" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <button class="staff-toggle-btn" id="staffToggleBtn" onclick="toggleStaffCostPanels()" title="Show/Hide side internal employee cost panels">
+            <i class="fa-solid fa-eye-slash" id="staffToggleIcon"></i>
+            <span id="staffToggleText" data-i18n="toggleStaffCostBtn">Staff Cost Info (Side)</span>
+          </button>
 
-        <!-- Rep Identity Badge -->
-        <div id="repUserBadge" class="rep-user-badge" onclick="openRepAuthModal(true)" title="&#1575;&#1590;&#1594;&#1591; &#1604;&#1578;&#1594;&#1610;&#1610;&#1585; &#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1608;&#1598;&#1601;">
-          <i class="fa-solid fa-user-circle" style="color: #f59e0b;"></i>
-          <span id="repUserNameDisplay">&#1578;&#1587;&#1580;&#1610;&#1604; &#1575;&#1604;&#1583;&#1582;&#1608;&#1604;</span>
-          <i class="fa-solid fa-pen" style="font-size: 10px; opacity: 0.7;"></i>
+          <!-- Rep Identity Badge -->
+          <div id="repUserBadge" class="rep-user-badge" onclick="openRepAuthModal(true)" title="اضغط لتغيير اسم الموظف">
+            <i class="fa-solid fa-user-circle" style="color: #f59e0b;"></i>
+            <span id="repUserNameDisplay">تسجيل الدخول</span>
+            <i class="fa-solid fa-pen" style="font-size: 10px; opacity: 0.7;"></i>
+          </div>
+
+          <!-- Executive Admin Portal Button (Master PIN Protected) -->
+          <button type="button" class="admin-link-btn" onclick="promptAdminAccess()" title="لوحة المتابعة السحابية (خاصة بالإدارة)">
+            <i class="fa-solid fa-shield-halved" style="color: #818cf8;"></i>
+            <span>المتابعة السحابية</span>
+          </button>
+
+          <div class="lang-switcher-wrapper">
+            <button class="lang-btn active" id="langBtnEn" onclick="switchLanguage('en')">
+              <i class="fa-solid fa-globe"></i> English
+            </button>
+            <button class="lang-btn" id="langBtnAr" onclick="switchLanguage('ar')">
+              العربية
+            </button>
+          </div>
         </div>
 
-        <!-- Executive Admin Portal Button (Master PIN Protected) -->
-        <button type="button" class="admin-link-btn" onclick="promptAdminAccess()" title="&#1604;&#1608;&#1581;&#1577; &#1575;&#1604;&#1605;&#1578;&#1575;&#1576;&#1593;&#1577; &#1575;&#1604;&#1587;&#1581;&#1575;&#1576;&#1610;&#1577; (&#1582;&#1575;&#1589;&#1577; &#1576;&#1575;&#1604;&#1573;&#1583;&#1575;&#1585;&#1577;)">
-          <i class="fa-solid fa-shield-halved" style="color: #818cf8;"></i>
-          <span>&#1575;&#1604;&#1605;&#1578;&#1575;&#1576;&#1593;&#1577; &#1575;&#1604;&#1587;&#1581;&#1575;&#1576;&#1610;&#1577;</span>
-        </button>
-
-        <div class="lang-switcher-wrapper">
-          <button class="lang-btn active" id="langBtnEn" onclick="switchLanguage('en')">
-            <i class="fa-solid fa-globe"></i> English
-          </button>
-          <button class="lang-btn" id="langBtnAr" onclick="switchLanguage('ar')">
-            العربية
-          </button>
+        <!-- GCC Multi-Country Pricing Switcher (Placed directly below Language Switcher) -->
+        <div class="country-switcher-wrapper" id="countrySwitcherWrapper">
+          <div class="country-pills-scroll">
+            <button type="button" class="country-btn active" data-country="KSA" onclick="switchCountry('KSA')" title="Saudi Arabia / السعودية">
+              <span class="country-flag">🇸🇦</span>
+              <span class="country-name">KSA</span>
+              <span class="country-tag">SAR</span>
+            </button>
+            <button type="button" class="country-btn" data-country="UAE" onclick="switchCountry('UAE')" title="UAE / الإمارات">
+              <span class="country-flag">🇦🇪</span>
+              <span class="country-name">UAE</span>
+              <span class="country-tag">AED</span>
+            </button>
+            <button type="button" class="country-btn" data-country="Qatar" onclick="switchCountry('Qatar')" title="Qatar / قطر">
+              <span class="country-flag">🇶🇦</span>
+              <span class="country-name">Qatar</span>
+              <span class="country-tag">QAR</span>
+            </button>
+            <button type="button" class="country-btn" data-country="Kuwait" onclick="switchCountry('Kuwait')" title="Kuwait / الكويت">
+              <span class="country-flag">🇰🇼</span>
+              <span class="country-name">Kuwait</span>
+              <span class="country-tag">KWD</span>
+            </button>
+            <button type="button" class="country-btn" data-country="Bahrain" onclick="switchCountry('Bahrain')" title="Bahrain / البحرين">
+              <span class="country-flag">🇧🇭</span>
+              <span class="country-name">Bahrain</span>
+              <span class="country-tag">BHD</span>
+            </button>
+            <button type="button" class="country-btn" data-country="Oman" onclick="switchCountry('Oman')" title="Oman / عمان">
+              <span class="country-flag">🇴🇲</span>
+              <span class="country-name">Oman</span>
+              <span class="country-tag">OMR</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -3952,6 +4057,7 @@
         cardPerClass: 'SAR / class',
         cardGenerateBtn: 'Generate Offer Card',
         currency: 'SAR',
+      countryKSA: 'KSA', countryUAE: 'UAE', countryQatar: 'Qatar', countryKuwait: 'Kuwait', countryBahrain: 'Bahrain', countryOman: 'Oman',
         famKidsLabel: 'Children',
         famPerKidLabel: 'Per Child',
         famTotalLabel: 'Family Total',
@@ -4061,6 +4167,7 @@
         cardPerClass: 'ر.س / للحصة',
         cardGenerateBtn: 'توليد كارت العرض للعميل',
         currency: 'ر.س',
+      countryKSA: 'السعودية', countryUAE: 'الإمارات', countryQatar: 'قطر', countryKuwait: 'الكويت', countryBahrain: 'البحرين', countryOman: 'عُمان',
         famKidsLabel: 'عدد الأطفال',
         famPerKidLabel: 'لكل طفل',
         famTotalLabel: 'إجمالي العائلة',
@@ -4147,6 +4254,639 @@
       51TALK PRICING DATA MODEL
       ==================================================================
     */
+    const ALL_PACKAGES_COSTS = {
+  "single": {
+    "upgrade": {
+      "75": {
+        "sheetDiscCosts": {
+          "KSA": 2175,
+          "UAE": 2134.4,
+          "Qatar": 2128.6,
+          "Kuwait": 185.6,
+          "Bahrain": 220.4,
+          "Oman": 232
+        },
+        "sheetCosts": {
+          "KSA": 2885,
+          "UAE": 2831,
+          "Qatar": 2823,
+          "Kuwait": 246,
+          "Bahrain": 292,
+          "Oman": 308
+        }
+      },
+      "90": {
+        "sheetDiscCosts": {
+          "KSA": 2370,
+          "UAE": 2325.76,
+          "Qatar": 2319.44,
+          "Kuwait": 202.24,
+          "Bahrain": 240.16,
+          "Oman": 252.8
+        },
+        "sheetCosts": {
+          "KSA": 3000,
+          "UAE": 2944,
+          "Qatar": 2936,
+          "Kuwait": 256,
+          "Bahrain": 304,
+          "Oman": 320
+        }
+      },
+      "105": {
+        "sheetDiscCosts": {
+          "KSA": 2625,
+          "UAE": 2576,
+          "Qatar": 2569,
+          "Kuwait": 224,
+          "Bahrain": 266,
+          "Oman": 280
+        },
+        "sheetCosts": {
+          "KSA": 3281,
+          "UAE": 3220,
+          "Qatar": 3211,
+          "Kuwait": 280,
+          "Bahrain": 332,
+          "Oman": 350
+        }
+      },
+      "150": {
+        "sheetDiscCosts": {
+          "KSA": 3300,
+          "UAE": 3228.4,
+          "Qatar": 3229.6,
+          "Kuwait": 281.6,
+          "Bahrain": 334.4,
+          "Oman": 352
+        },
+        "sheetCosts": {
+          "KSA": 5800,
+          "UAE": 5674,
+          "Qatar": 5676,
+          "Kuwait": 495,
+          "Bahrain": 588,
+          "Oman": 619
+        }
+      },
+      "225": {
+        "sheetDiscCosts": {
+          "KSA": 4800,
+          "UAE": 4720.4,
+          "Qatar": 4697.6,
+          "Kuwait": 409.6,
+          "Bahrain": 486.4,
+          "Oman": 512
+        },
+        "sheetCosts": {
+          "KSA": 8775,
+          "UAE": 8629,
+          "Qatar": 8588,
+          "Kuwait": 749,
+          "Bahrain": 889,
+          "Oman": 936
+        }
+      },
+      "300": {
+        "sheetDiscCosts": {
+          "KSA": 6125,
+          "UAE": 6180.4,
+          "Qatar": 6092.2,
+          "Kuwait": 546.4,
+          "Bahrain": 630.8,
+          "Oman": 682
+        },
+        "sheetCosts": {
+          "KSA": 11325,
+          "UAE": 11427,
+          "Qatar": 11264,
+          "Kuwait": 1010,
+          "Bahrain": 1166,
+          "Oman": 1261
+        }
+      },
+      "375": {
+        "sheetDiscCosts": {
+          "KSA": 7800,
+          "UAE": 7654.4,
+          "Qatar": 7633.6,
+          "Kuwait": 665.6,
+          "Bahrain": 790.4,
+          "Oman": 832
+        },
+        "sheetCosts": {
+          "KSA": 14250,
+          "UAE": 13984,
+          "Qatar": 13946,
+          "Kuwait": 1216,
+          "Bahrain": 1444,
+          "Oman": 1520
+        }
+      }
+    },
+    "renew": {
+      "75": {
+        "sheetDiscCosts": {
+          "KSA": 2475,
+          "UAE": 2428.6,
+          "Qatar": 2422.2,
+          "Kuwait": 211.2,
+          "Bahrain": 250.8,
+          "Oman": 264
+        },
+        "sheetCosts": {
+          "KSA": 2700,
+          "UAE": 2649,
+          "Qatar": 2642,
+          "Kuwait": 230,
+          "Bahrain": 274,
+          "Oman": 288
+        }
+      },
+      "90": {
+        "sheetDiscCosts": {
+          "KSA": 2700,
+          "UAE": 2649.6,
+          "Qatar": 2642.4,
+          "Kuwait": 230.4,
+          "Bahrain": 273.6,
+          "Oman": 288
+        },
+        "sheetCosts": {
+          "KSA": 3176,
+          "UAE": 3117,
+          "Qatar": 3108,
+          "Kuwait": 271,
+          "Bahrain": 322,
+          "Oman": 339
+        }
+      },
+      "105": {
+        "sheetDiscCosts": {
+          "KSA": 3000,
+          "UAE": 2944,
+          "Qatar": 2936,
+          "Kuwait": 256,
+          "Bahrain": 304,
+          "Oman": 320
+        },
+        "sheetCosts": {
+          "KSA": 3750,
+          "UAE": 3680,
+          "Qatar": 3670,
+          "Kuwait": 320,
+          "Bahrain": 380,
+          "Oman": 400
+        }
+      },
+      "150": {
+        "sheetDiscCosts": {
+          "KSA": 3825,
+          "UAE": 3735.6,
+          "Qatar": 3743.4,
+          "Kuwait": 326.4,
+          "Bahrain": 387.5,
+          "Oman": 406
+        },
+        "sheetCosts": {
+          "KSA": 6275,
+          "UAE": 6128,
+          "Qatar": 6141,
+          "Kuwait": 535,
+          "Bahrain": 636,
+          "Oman": 666
+        }
+      },
+      "225": {
+        "sheetDiscCosts": {
+          "KSA": 5475,
+          "UAE": 5548,
+          "Qatar": 5369.6,
+          "Kuwait": 472.4,
+          "Bahrain": 554.8,
+          "Oman": 590
+        },
+        "sheetCosts": {
+          "KSA": 9975,
+          "UAE": 10108,
+          "Qatar": 9783,
+          "Kuwait": 861,
+          "Bahrain": 1011,
+          "Oman": 1075
+        }
+      },
+      "300": {
+        "sheetDiscCosts": {
+          "KSA": 6825,
+          "UAE": 6697.6,
+          "Qatar": 6679.4,
+          "Kuwait": 582.4,
+          "Bahrain": 691.6,
+          "Oman": 728
+        },
+        "sheetCosts": {
+          "KSA": 12450,
+          "UAE": 12218,
+          "Qatar": 12184,
+          "Kuwait": 1062,
+          "Bahrain": 1262,
+          "Oman": 1328
+        }
+      },
+      "375": {
+        "sheetDiscCosts": {
+          "KSA": 8100,
+          "UAE": 7948.8,
+          "Qatar": 7927.2,
+          "Kuwait": 691.2,
+          "Bahrain": 820.8,
+          "Oman": 864
+        },
+        "sheetCosts": {
+          "KSA": 14775,
+          "UAE": 14499,
+          "Qatar": 14460,
+          "Kuwait": 1261,
+          "Bahrain": 1497,
+          "Oman": 1576
+        }
+      }
+    }
+  },
+  "family2": {
+    "upgrade": {
+      "150": {
+        "sheetDiscCosts": {
+          "KSA": 4050,
+          "UAE": 3974.4,
+          "Qatar": 3963.6,
+          "Kuwait": 345.6,
+          "Bahrain": 410.4,
+          "Oman": 432
+        },
+        "sheetCosts": {
+          "KSA": 7950,
+          "UAE": 7802,
+          "Qatar": 7780,
+          "Kuwait": 678,
+          "Bahrain": 806,
+          "Oman": 848
+        }
+      },
+      "180": {
+        "sheetDiscCosts": {
+          "KSA": 4440,
+          "UAE": 4357.12,
+          "Qatar": 4345.28,
+          "Kuwait": 378.88,
+          "Bahrain": 449.92,
+          "Oman": 473.6
+        },
+        "sheetCosts": {
+          "KSA": 10300,
+          "UAE": 10108,
+          "Qatar": 10080,
+          "Kuwait": 879,
+          "Bahrain": 1044,
+          "Oman": 1099
+        }
+      },
+      "210": {
+        "sheetDiscCosts": {
+          "KSA": 4905,
+          "UAE": 4813.44,
+          "Qatar": 4800.36,
+          "Kuwait": 418.56,
+          "Bahrain": 497.04,
+          "Oman": 523.2
+        },
+        "sheetCosts": {
+          "KSA": 11450,
+          "UAE": 11236,
+          "Qatar": 11206,
+          "Kuwait": 977,
+          "Bahrain": 1160,
+          "Oman": 1221
+        }
+      },
+      "300": {
+        "sheetDiscCosts": {
+          "KSA": 6225,
+          "UAE": 6108.8,
+          "Qatar": 6092.2,
+          "Kuwait": 531.2,
+          "Bahrain": 630.8,
+          "Oman": 664
+        },
+        "sheetCosts": {
+          "KSA": 12000,
+          "UAE": 11776,
+          "Qatar": 11744,
+          "Kuwait": 1024,
+          "Bahrain": 1216,
+          "Oman": 1280
+        }
+      },
+      "450": {
+        "sheetDiscCosts": {
+          "KSA": 8775,
+          "UAE": 8611.2,
+          "Qatar": 8587.8,
+          "Kuwait": 748.8,
+          "Bahrain": 889.2,
+          "Oman": 936
+        },
+        "sheetCosts": {
+          "KSA": 17550,
+          "UAE": 17222,
+          "Qatar": 17176,
+          "Kuwait": 1498,
+          "Bahrain": 1778,
+          "Oman": 1872
+        }
+      }
+    },
+    "renew": {
+      "150": {
+        "sheetDiscCosts": {
+          "KSA": 4350,
+          "UAE": 4268.8,
+          "Qatar": 4257.2,
+          "Kuwait": 371.2,
+          "Bahrain": 440.8,
+          "Oman": 464
+        },
+        "sheetCosts": {
+          "KSA": 7150,
+          "UAE": 7017,
+          "Qatar": 6997,
+          "Kuwait": 610,
+          "Bahrain": 725,
+          "Oman": 763
+        }
+      },
+      "180": {
+        "sheetDiscCosts": {
+          "KSA": 4575,
+          "UAE": 4489.6,
+          "Qatar": 4477.4,
+          "Kuwait": 390.4,
+          "Bahrain": 463.6,
+          "Oman": 488
+        },
+        "sheetCosts": {
+          "KSA": 8500,
+          "UAE": 8341,
+          "Qatar": 8319,
+          "Kuwait": 725,
+          "Bahrain": 861,
+          "Oman": 907
+        }
+      },
+      "210": {
+        "sheetDiscCosts": {
+          "KSA": 5025,
+          "UAE": 4931.2,
+          "Qatar": 4917.8,
+          "Kuwait": 428.8,
+          "Bahrain": 509.2,
+          "Oman": 536
+        },
+        "sheetCosts": {
+          "KSA": 9650,
+          "UAE": 9470,
+          "Qatar": 9444,
+          "Kuwait": 823,
+          "Bahrain": 978,
+          "Oman": 1029
+        }
+      },
+      "300": {
+        "sheetDiscCosts": {
+          "KSA": 6562.5,
+          "UAE": 6440,
+          "Qatar": 6422.5,
+          "Kuwait": 560,
+          "Bahrain": 665,
+          "Oman": 700
+        },
+        "sheetCosts": {
+          "KSA": 13950,
+          "UAE": 13690,
+          "Qatar": 13652,
+          "Kuwait": 1190,
+          "Bahrain": 1414,
+          "Oman": 1488
+        }
+      },
+      "450": {
+        "sheetDiscCosts": {
+          "KSA": 9225,
+          "UAE": 9052.8,
+          "Qatar": 9028.2,
+          "Kuwait": 787.2,
+          "Bahrain": 934.8,
+          "Oman": 984
+        },
+        "sheetCosts": {
+          "KSA": 19950,
+          "UAE": 19578,
+          "Qatar": 19524,
+          "Kuwait": 1702,
+          "Bahrain": 2022,
+          "Oman": 2128
+        }
+      }
+    }
+  },
+  "family3": {
+    "upgrade": {
+      "225": {
+        "sheetDiscCosts": {
+          "KSA": 5445,
+          "UAE": 5343.36,
+          "Qatar": 5328.84,
+          "Kuwait": 464.64,
+          "Bahrain": 551.76,
+          "Oman": 580.8
+        },
+        "sheetCosts": {
+          "KSA": 11925,
+          "UAE": 11702,
+          "Qatar": 11671,
+          "Kuwait": 1018,
+          "Bahrain": 1208,
+          "Oman": 1272
+        }
+      },
+      "270": {
+        "sheetDiscCosts": {
+          "KSA": 6030,
+          "UAE": 5917.44,
+          "Qatar": 5901.36,
+          "Kuwait": 514.56,
+          "Bahrain": 611.04,
+          "Oman": 643.2
+        },
+        "sheetCosts": {
+          "KSA": 6700,
+          "UAE": 6575,
+          "Qatar": 6557,
+          "Kuwait": 572,
+          "Bahrain": 679,
+          "Oman": 715
+        }
+      },
+      "315": {
+        "sheetDiscCosts": {
+          "KSA": 6705,
+          "UAE": 6579.84,
+          "Qatar": 6561.96,
+          "Kuwait": 572.16,
+          "Bahrain": 679.44,
+          "Oman": 715.2
+        },
+        "sheetCosts": {
+          "KSA": 8382,
+          "UAE": 8226,
+          "Qatar": 8203,
+          "Kuwait": 715,
+          "Bahrain": 849,
+          "Oman": 894
+        }
+      },
+      "450": {
+        "sheetDiscCosts": {
+          "KSA": 8820,
+          "UAE": 8655.36,
+          "Qatar": 8631.84,
+          "Kuwait": 752.64,
+          "Bahrain": 893.76,
+          "Oman": 940.8
+        },
+        "sheetCosts": {
+          "KSA": 18000,
+          "UAE": 17664,
+          "Qatar": 17616,
+          "Kuwait": 1536,
+          "Bahrain": 1824,
+          "Oman": 1920
+        }
+      },
+      "675": {
+        "sheetDiscCosts": {
+          "KSA": 12420,
+          "UAE": 12188.16,
+          "Qatar": 12155.04,
+          "Kuwait": 1059.84,
+          "Bahrain": 1258.56,
+          "Oman": 1324.8
+        },
+        "sheetCosts": {
+          "KSA": 26325,
+          "UAE": 25834,
+          "Qatar": 25763,
+          "Kuwait": 2246,
+          "Bahrain": 2668,
+          "Oman": 2808
+        }
+      }
+    },
+    "renew": {
+      "225": {
+        "sheetDiscCosts": {
+          "KSA": 5895,
+          "UAE": 5784.96,
+          "Qatar": 5769.24,
+          "Kuwait": 503.04,
+          "Bahrain": 597.36,
+          "Oman": 628.8
+        },
+        "sheetCosts": {
+          "KSA": 6600,
+          "UAE": 6477,
+          "Qatar": 6459,
+          "Kuwait": 563,
+          "Bahrain": 669,
+          "Oman": 704
+        }
+      },
+      "270": {
+        "sheetDiscCosts": {
+          "KSA": 6165,
+          "UAE": 6049.92,
+          "Qatar": 6033.48,
+          "Kuwait": 526.08,
+          "Bahrain": 624.72,
+          "Oman": 657.6
+        },
+        "sheetCosts": {
+          "KSA": 7300,
+          "UAE": 7164,
+          "Qatar": 7144,
+          "Kuwait": 623,
+          "Bahrain": 740,
+          "Oman": 779
+        }
+      },
+      "315": {
+        "sheetDiscCosts": {
+          "KSA": 6885,
+          "UAE": 6756.48,
+          "Qatar": 6738.12,
+          "Kuwait": 587.52,
+          "Bahrain": 697.68,
+          "Oman": 734.4
+        },
+        "sheetCosts": {
+          "KSA": 8100,
+          "UAE": 7949,
+          "Qatar": 7927,
+          "Kuwait": 691,
+          "Bahrain": 821,
+          "Oman": 864
+        }
+      },
+      "450": {
+        "sheetDiscCosts": {
+          "KSA": 9112.5,
+          "UAE": 8942.4,
+          "Qatar": 8918.1,
+          "Kuwait": 777.6,
+          "Bahrain": 923.4,
+          "Oman": 972
+        },
+        "sheetCosts": {
+          "KSA": 20925,
+          "UAE": 20534,
+          "Qatar": 20479,
+          "Kuwait": 1786,
+          "Bahrain": 2120,
+          "Oman": 2232
+        }
+      },
+      "675": {
+        "sheetDiscCosts": {
+          "KSA": 12825,
+          "UAE": 12585.6,
+          "Qatar": 12551.4,
+          "Kuwait": 1094.4,
+          "Bahrain": 1299.6,
+          "Oman": 1368
+        },
+        "sheetCosts": {
+          "KSA": 29925,
+          "UAE": 29366,
+          "Qatar": 29287,
+          "Kuwait": 2554,
+          "Bahrain": 3032,
+          "Oman": 3192
+        }
+      }
+    }
+  }
+};
+
     const ALL_PACKAGES = {
       single: {
         upgrade: [
@@ -4472,7 +5212,55 @@
       return Math.round(val * 1.10);
     }
 
-        // Helper: Calculate admission & registration tuition before discount
+            // =========================================================================
+    // MULTI-COUNTRY CONFIGURATION & PRICING ENGINE
+    // =========================================================================
+    const COUNTRIES_CONFIG = {
+      KSA: { code: 'KSA', flag: '🇸🇦', nameAr: 'المملكة العربية السعودية', nameEn: 'Saudi Arabia', shortAr: 'السعودية', shortEn: 'KSA', currencyAr: 'ر.س', currencyEn: 'SAR' },
+      UAE: { code: 'UAE', flag: '🇦🇪', nameAr: 'الإمارات العربية المتحدة', nameEn: 'United Arab Emirates', shortAr: 'الإمارات', shortEn: 'UAE', currencyAr: 'د.إ', currencyEn: 'AED' },
+      Qatar: { code: 'Qatar', flag: '🇶🇦', nameAr: 'دولة قطر', nameEn: 'Qatar', shortAr: 'قطر', shortEn: 'Qatar', currencyAr: 'ر.ق', currencyEn: 'QAR' },
+      Kuwait: { code: 'Kuwait', flag: '🇰🇼', nameAr: 'دولة الكويت', nameEn: 'Kuwait', shortAr: 'الكويت', shortEn: 'Kuwait', currencyAr: 'د.ك', currencyEn: 'KWD' },
+      Bahrain: { code: 'Bahrain', flag: '🇧🇭', nameAr: 'مملكة البحرين', nameEn: 'Bahrain', shortAr: 'البحرين', shortEn: 'Bahrain', currencyAr: 'د.ب', currencyEn: 'BHD' },
+      Oman: { code: 'Oman', flag: '🇴🇲', nameAr: 'سلطنة عُمان', nameEn: 'Oman', shortAr: 'عُمان', shortEn: 'Oman', currencyAr: 'ر.ع', currencyEn: 'OMR' }
+    };
+
+    let currentCountry = localStorage.getItem('51talk_selected_country') || 'KSA';
+    if (!COUNTRIES_CONFIG[currentCountry]) currentCountry = 'KSA';
+
+    function getPlanSheetDiscCost(plan) {
+      if (!plan) return 0;
+      const catKey = plan.kidsCount === 2 ? 'family2' : (plan.kidsCount === 3 ? 'family3' : 'single');
+      const type = (plan.id && plan.id.startsWith('rn-')) ? 'renew' : 'upgrade';
+      const totStr = String(plan.total);
+      if (ALL_PACKAGES_COSTS && ALL_PACKAGES_COSTS[catKey] && ALL_PACKAGES_COSTS[catKey][type] && ALL_PACKAGES_COSTS[catKey][type][totStr]) {
+        const costs = ALL_PACKAGES_COSTS[catKey][type][totStr].sheetDiscCosts;
+        if (costs && costs[currentCountry] !== undefined) return costs[currentCountry];
+      }
+      return plan.sheetDiscCost;
+    }
+
+    function getPlanSheetOriginalCost(plan) {
+      if (!plan) return 0;
+      const catKey = plan.kidsCount === 2 ? 'family2' : (plan.kidsCount === 3 ? 'family3' : 'single');
+      const type = (plan.id && plan.id.startsWith('rn-')) ? 'renew' : 'upgrade';
+      const totStr = String(plan.total);
+      if (ALL_PACKAGES_COSTS && ALL_PACKAGES_COSTS[catKey] && ALL_PACKAGES_COSTS[catKey][type] && ALL_PACKAGES_COSTS[catKey][type][totStr]) {
+        const costs = ALL_PACKAGES_COSTS[catKey][type][totStr].sheetCosts;
+        if (costs && costs[currentCountry] !== undefined) return costs[currentCountry];
+      }
+      return plan.sheetCost;
+    }
+
+    function pricePlus10(val) {
+      return Math.round(val * 1.10);
+    }
+
+    function getPlanFinalPrice(plan) {
+      const discCost = getPlanSheetDiscCost(plan);
+      return pricePlus10(discCost);
+    }
+
+    // Helper: Calculate admission & registration tuition before discount
     // Upgrade packages are 100% harmonized with the exact corresponding Renewal official prices
     function getOfficialPrice(plan, isUpgrade) {
       if (isUpgrade) {
@@ -4482,20 +5270,74 @@
               rn.total === plan.total && (rn.kidsCount || 0) === (plan.kidsCount || 0)
             );
             if (match) {
-              const matchBasePlus10 = pricePlus10(match.sheetCost);
+              const matchSheetCost = getPlanSheetOriginalCost(match);
+              const matchBasePlus10 = pricePlus10(matchSheetCost);
               return Math.round(matchBasePlus10 * 1.40);
             }
           }
         }
       }
-      const basePlus10 = pricePlus10(plan.sheetCost);
+      const sheetCost = getPlanSheetOriginalCost(plan);
+      const basePlus10 = pricePlus10(sheetCost);
       return Math.round(basePlus10 * 1.40);
+    }
+
+    function switchCountry(countryCode) {
+      if (!COUNTRIES_CONFIG[countryCode]) return;
+      currentCountry = countryCode;
+      localStorage.setItem('51talk_selected_country', countryCode);
+
+      // Update active pills
+      document.querySelectorAll('.country-btn').forEach(btn => {
+        if (btn.getAttribute('data-country') === countryCode) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Update active currency in I18N
+      const cfg = COUNTRIES_CONFIG[countryCode];
+      I18N.ar.currency = cfg.currencyAr;
+      I18N.en.currency = cfg.currencyEn;
+
+      // Update rate badge in top header
+      const rateBadge = document.getElementById('rateBadgeText');
+      if (rateBadge) {
+        rateBadge.innerHTML = currentLanguage === 'ar'
+          ? `باقات معتمدة ${cfg.flag} (${cfg.currencyAr})`
+          : `Official Packages ${cfg.flag} (${cfg.currencyEn})`;
+      }
+
+      // Re-render package cards
+      renderAllSections();
+
+
+      // If offer modal is currently open, refresh inputs
+      if (selectedPlanObj && document.getElementById('cardModal') && document.getElementById('cardModal').classList.contains('active')) {
+        const isUpgrade = !selectedPlanObj.id.startsWith('rn-');
+        const officialPrice = getOfficialPrice(selectedPlanObj, isUpgrade);
+        const discountedPrice = getPlanFinalPrice(selectedPlanObj);
+        document.getElementById('modalOfficialPrice').value = officialPrice;
+        document.getElementById('modalDiscountedPrice').value = discountedPrice;
+        document.getElementById('modalInternalCostDisplay').textContent = `${discountedPrice.toLocaleString()} ${currentLanguage === 'ar' ? cfg.currencyAr : cfg.currencyEn}`;
+        document.getElementById('modalInternalSheetDisplay').textContent = `${getPlanSheetDiscCost(selectedPlanObj).toLocaleString()} ${currentLanguage === 'ar' ? cfg.currencyAr : cfg.currencyEn}`;
+        updateLivePreview();
+      }
+
+      showToast(currentLanguage === 'ar'
+        ? `${cfg.flag} تم التبديل إلى أسعار ${cfg.nameAr} (${cfg.currencyAr})`
+        : `${cfg.flag} Switched to ${cfg.nameEn} pricing (${cfg.currencyEn})`);
     }
 
     let activeCategoryTab = 'all';
     let currentSearchTerm = '';
 
     function switchLanguage(lang) {
+      const cfg = (typeof COUNTRIES_CONFIG !== 'undefined' && COUNTRIES_CONFIG[currentCountry]) ? COUNTRIES_CONFIG[currentCountry] : { currencyAr: 'ر.س', currencyEn: 'SAR' };
+      I18N.ar.currency = cfg.currencyAr;
+      I18N.en.currency = cfg.currencyEn;
+
       currentLanguage = lang;
       const htmlEl = document.getElementById('htmlRoot');
       const btnEn = document.getElementById('langBtnEn');
@@ -4599,7 +5441,7 @@
 
       // Price computations
       const officialPrice = getOfficialPrice(plan, isUpgrade);
-      const scholarshipPrice = pricePlus10(plan.sheetDiscCost);
+      const scholarshipPrice = getPlanFinalPrice(plan);
 
       const savings = officialPrice - scholarshipPrice;
       const discPct = Math.round((savings / officialPrice) * 100);
@@ -4797,7 +5639,7 @@
                   </div>
                 </td>
                 <td class="td-sheet">
-                  <span class="sheet-original-cost">${plan.sheetDiscCost.toLocaleString()} ${t.currency}</span>
+                  <span class="sheet-original-cost">${getPlanSheetDiscCost(plan).toLocaleString()} ${t.currency}</span>
                 </td>
                 <td class="td-final">
                   <span class="gold-bold">${scholarshipPrice.toLocaleString()} ${t.currency}</span>
@@ -5207,8 +6049,8 @@
       const isUpgrade = !plan.id.startsWith('rn-');
       const isFamily = !!(plan.kidsCount && plan.kidsCount > 1);
       const officialPrice = getOfficialPrice(plan, isUpgrade);
-      const discountedPrice = pricePlus10(plan.sheetDiscCost);
-      const internalCost = pricePlus10(plan.sheetDiscCost);
+      const discountedPrice = getPlanFinalPrice(plan);
+      const internalCost = getPlanFinalPrice(plan);
       const duration = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
       const t = I18N[currentLanguage];
 
@@ -5223,13 +6065,19 @@
       const lblOfficial = document.getElementById('lblModalOfficialPrice');
       if (lblOfficial) {
         lblOfficial.textContent = currentLanguage === 'ar'
-          ? (isUpgrade ? 'السعر قبل الخصم [ر.س]' : 'سعر القبول والتسجيل [ر.س]')
-          : (isUpgrade ? 'Official Tuition [SAR]' : 'Admission & Registration Tuition [SAR]');
+          ? `سعر القبول والتسجيل [${t.currency}]`
+          : `Admission & Registration Tuition [${t.currency}]`;
+      }
+      const lblDisc = document.getElementById('lblModalDiscountedPrice');
+      if (lblDisc) {
+        lblDisc.textContent = currentLanguage === 'ar'
+          ? `السعر بعد الخصم [${t.currency}]`
+          : `Discounted Tuition [${t.currency}]`;
       }
 
       // Internal confidential reference for employee only
       document.getElementById('modalInternalCostDisplay').textContent = `${internalCost.toLocaleString()} ${t.currency}`;
-      document.getElementById('modalInternalSheetDisplay').textContent = `${plan.sheetDiscCost.toLocaleString()} ${t.currency}`;
+      document.getElementById('modalInternalSheetDisplay').textContent = `${getPlanSheetDiscCost(plan).toLocaleString()} ${t.currency}`;
 
       // 🛡️ CRITICAL FIX: ALWAYS RESET CUSTOMER-SPECIFIC DATA ON NEW PLAN OPEN TO PREVENT CROSS-CUSTOMER DATA LEAKS
       resetCustomerFormData(isFamily);
@@ -5291,8 +6139,8 @@
       const officialSublabel = document.getElementById('previewOfficialSublabel');
       if (officialSublabel) {
         officialSublabel.textContent = currentLanguage === 'ar'
-          ? (isRenew ? 'سعر القبول والتسجيل:' : 'السعر قبل الخصم:')
-          : (isRenew ? 'Admission & Registration Tuition:' : 'Official Tuition:');
+          ? 'سعر القبول والتسجيل:'
+          : 'Admission & Registration Tuition:';
       }
       document.getElementById('previewOfficialVal').textContent = `${officialPrice.toLocaleString()} ${t.currency}`;
 
@@ -6052,7 +6900,7 @@
     function copyQuickPitch(plan, typeName, categoryDisplayName) {
       const isUpgrade = !plan.id.startsWith('rn-');
       const officialPrice = getOfficialPrice(plan, isUpgrade);
-      const discountedPrice = pricePlus10(plan.sheetDiscCost);
+      const discountedPrice = getPlanFinalPrice(plan);
       const duration = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
       const t = I18N[currentLanguage];
       const savings = officialPrice - discountedPrice;
@@ -6063,17 +6911,17 @@
         summary = `🌟 *عرض 51Talk - ${categoryDisplayName} (${typeName})*
 • المدة: ${duration}
 • إجمالي الحصص: ${plan.total} حصة (${plan.base} أساسية + 🎁 ${plan.bonus} مجانية بالكامل)
-• ${officialLbl}: ~${officialPrice.toLocaleString()} ر.س~
-• السعر بعد الخصم: *${discountedPrice.toLocaleString()} ر.س* (بمعدل ${(discountedPrice / plan.total).toFixed(1)} ر.س / للحصة)
-• إجمالي التوفير: *وفر ${savings.toLocaleString()} ر.س*`;
+• ${officialLbl}: ~${officialPrice.toLocaleString()} ${t.currency}~
+• السعر بعد الخصم: *${discountedPrice.toLocaleString()} ${t.currency}* (بمعدل ${(discountedPrice / plan.total).toFixed(1)} ${t.currency} / للحصة)
+• إجمالي التوفير: *وفر ${savings.toLocaleString()} ${t.currency}*`;
       } else {
         const officialLbl = 'Admission & Registration Tuition';
         summary = `🌟 *51Talk ${categoryDisplayName} (${typeName})*
 • Duration: ${duration}
 • Total Classes: ${plan.total} (${plan.base} Standard + 🎁 ${plan.bonus} Free Bonus Gifts)
-• ${officialLbl}: ~${officialPrice.toLocaleString()} SAR~
-• Discounted Price: *${discountedPrice.toLocaleString()} SAR* (Average ${(discountedPrice / plan.total).toFixed(1)} SAR / class)
-• Total Savings: *Save ${savings.toLocaleString()} SAR*`;
+• ${officialLbl}: ~${officialPrice.toLocaleString()} ${t.currency}~
+• Discounted Price: *${discountedPrice.toLocaleString()} ${t.currency}* (Average ${(discountedPrice / plan.total).toFixed(1)} ${t.currency} / class)
+• Total Savings: *Save ${savings.toLocaleString()} ${t.currency}*`;
       }
 
       navigator.clipboard.writeText(summary).then(() => {
@@ -6234,6 +7082,8 @@
 
       const eventPayload = {
         timestamp: timestamp,
+        country: currentCountry,
+        currency: (COUNTRIES_CONFIG[currentCountry] ? COUNTRIES_CONFIG[currentCountry].currencyEn : 'SAR'),
         repName: rep.name,
         teamCode: rep.team,
         customerId: custIdVal,
@@ -6277,6 +7127,10 @@
     }
     document.addEventListener('DOMContentLoaded', () => {
       initRepIdentity();
+      const savedCountry = localStorage.getItem('51talk_selected_country') || 'KSA';
+      if (typeof switchCountry === 'function' && COUNTRIES_CONFIG[savedCountry]) {
+        switchCountry(savedCountry);
+      }
       switchLanguage('en');
     });
   </script>
