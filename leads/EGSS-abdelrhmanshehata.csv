@@ -1,11 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-abdelrhmanshehata | Generated: 2026-10-13 17:10
+# Representative: EGSS-abdelrhmanshehata | Generated: 2026-10-13 18:10
 
-=== 1. SOP PENDING TASKS (43) ===
+=== 1. SOP PENDING TASKS (41) ===
 Student_ID,Task_Name,Expiration_Time
-60412988,"Round 6 Premium Service(Outside Renewal Pool)",20261013 18:55:00
-60669304,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
-61338670,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261013 18:55:00
 59278806,"Round 2  Trust Enhancement (First Class Follow-up)",20261014 18:55:00
 59541167,"SS:Service warning - absence",20261014 18:55:00
 61874175,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261014 18:55:00
@@ -18,6 +15,7 @@ Student_ID,Task_Name,Expiration_Time
 61953046,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261015 18:55:00
 64150751,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261015 18:55:00
 64150953,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261015 18:55:00
+64487890,"SS:Service warning - absence",20261015 18:55:00
 59474391,"English Club Booking",20261017 18:55:00
 61940430,"Round 6 Premium Service(Duration Renewal Insidepool)",20261017 18:55:00
 62255656,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261017 18:55:00
@@ -338,9 +336,9 @@ Student_ID,Level,Completed,Status
 64092259,"0",1,"Attended"
 64148527,"0",0,"Booking Required"
 58499893,"1",0,"Booked"
+64035460,"2",1,"Attended"
 64150751,"0",0,"Booking Required"
 64150953,"0",0,"Booking Required"
-64035460,"2",1,"Attended"
 61124299,"3",1,"Attended"
 64176184,"1",0,"Booked"
 64180345,"2",0,"Booking Required"
@@ -350,8 +348,8 @@ Student_ID,Level,Completed,Status
 64202115,"1",0,"Booking Required"
 61232248,"1",0,"Booked"
 64245055,"3",0,"Booking Required"
-64258456,"1",0,"Booked"
 63632047,"0",0,"Booked"
+64258456,"1",0,"Booked"
 64165238,"1",0,"Booking Required"
 64177872,"2",0,"Booking Required"
 64280596,"0",0,"Booked"

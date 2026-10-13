@@ -1,7 +1,7 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-nohayoussry | Generated: 2026-10-13 17:10
+# Representative: EGSS-nohayoussry | Generated: 2026-10-13 18:10
 
-=== 1. SOP PENDING TASKS (119) ===
+=== 1. SOP PENDING TASKS (120) ===
 Student_ID,Task_Name,Expiration_Time
 58366722,"English Club Booking",20261013 18:55:00
 59143569,"English Club Booking",20261013 18:55:00
@@ -38,6 +38,7 @@ Student_ID,Task_Name,Expiration_Time
 63536556,"English Club Booking",20261015 18:55:00
 63782728,"English Club Booking",20261015 18:55:00
 63838029,"English Club Booking",20261015 18:55:00
+64597907,"Round 2  Trust Enhancement (First Class Follow-up)",20261015 18:55:00
 58636063,"English Club Booking",20261017 18:55:00
 62057831,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261017 18:55:00
 62221309,"Round 6 Premium Service(Outside Renewal Pool)",20261017 18:55:00
@@ -447,8 +448,8 @@ Student_ID,Level,Completed,Status
 63339174,"2",0,"Booking Required"
 58662152,"2",0,"Booking Required"
 63344044,"1",0,"Booked"
-62137031,"3",0,"Booking Required"
 63447145,"0",0,"Booking Required"
+62137031,"3",0,"Booking Required"
 63462195,"0",0,"Booking Required"
 63480205,"1",0,"Booking Required"
 63498717,"2",1,"Attended"
@@ -462,15 +463,15 @@ Student_ID,Level,Completed,Status
 58508723,"2",0,"Booking Required"
 63536556,"0",0,"Booking Required"
 63560293,"0",0,"Booking Required"
-62819763,"0",0,"Booking Required"
 63265846,"1",0,"Booking Required"
 63572592,"2",0,"Booking Required"
+62819763,"0",0,"Booking Required"
 58366722,"2",0,"Booking Required"
 63557963,"1",0,"Booking Required"
 63572387,"0",0,"Booked"
 61322654,"2",0,"Booking Required"
-60901866,"0",0,"Booking Required"
 63344810,"0",0,"Booking Required"
+60901866,"0",0,"Booking Required"
 63539174,"1",0,"Booking Required"
 63606324,"3",0,"Booking Required"
 63581252,"1",0,"Booking Required"
@@ -554,11 +555,11 @@ Student_ID,Level,Completed,Status
 60191098,"3",0,"Booking Required"
 64232174,"0",0,"Booking Required"
 59215311,"2",0,"Booking Required"
-64340626,"3",0,"Booking Required"
 64328449,"0",1,"Attended"
+64340626,"3",0,"Booking Required"
 64367825,"2",1,"Attended"
-64395204,"0",0,"Booking Required"
 64399270,"1",0,"Booking Required"
+64395204,"0",0,"Booking Required"
 58636063,"0",0,"Booking Required"
 64428686,"2",0,"Booking Required"
 64234109,"0",1,"Attended"

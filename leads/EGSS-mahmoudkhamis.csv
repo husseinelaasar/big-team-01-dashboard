@@ -1,14 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-mahmoudkhamis | Generated: 2026-10-13 17:10
+# Representative: EGSS-mahmoudkhamis | Generated: 2026-10-13 18:10
 
-=== 1. SOP PENDING TASKS (50) ===
+=== 1. SOP PENDING TASKS (46) ===
 Student_ID,Task_Name,Expiration_Time
-59390183,"Round 3 Habit Cultivation (1st Unit Assessment)",20261013 18:55:00
-60390184,"Round 6 Premium Service(Outside Renewal Pool)",20261013 18:55:00
-60480714,"Round 6 Premium Service(Outside Renewal Pool)",20261013 18:55:00
-61127600,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261013 18:55:00
-61850384,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
-61940854,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
 58186111,"English Club Booking",20261014 18:55:00
 58726628,"English Club Booking",20261014 18:55:00
 60515788,"Round 6 Premium Service(Outside Renewal Pool)",20261014 18:55:00
@@ -22,7 +16,8 @@ Student_ID,Task_Name,Expiration_Time
 61883506,"SS:Service warning - absence",20261015 18:55:00
 63273811,"English Club Booking",20261015 18:55:00
 64198847,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261015 18:55:00
-64610728,"Round 1  Awareness building (First call)",20261015 18:55:00
+64430780,"SS:Service warning - absence",20261015 18:55:00
+64610728,"Round 2  Trust Enhancement (First Class Follow-up)",20261015 18:55:00
 59604996,"English Club Booking",20261017 18:55:00
 60901719,"English Club Booking",20261017 18:55:00
 62457899,"Round 6 Premium Service(Duration Renewal Insidepool)",20261017 18:55:00
@@ -53,6 +48,7 @@ Student_ID,Task_Name,Expiration_Time
 64034449,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 64115306,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 64151114,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
+64157881,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
 === 2. UNFIXED TEACHER BINDING (53) ===
 Student_ID,Pool_Cohort,Classes,Priority
@@ -499,8 +495,8 @@ Student_ID,Level,Completed,Status
 64157881,"1",0,"Booking Required"
 64160586,"1",0,"Booking Required"
 62521442,"3",0,"Booking Required"
-64198847,"1",1,"Attended"
 64190504,"0",1,"Attended"
+64198847,"1",1,"Attended"
 64199106,"1",0,"Booked"
 64202795,"3",0,"Booking Required"
 64190795,"1",1,"Attended"
@@ -519,8 +515,8 @@ Student_ID,Level,Completed,Status
 59387628,"1",0,"Booking Required"
 64314782,"1",0,"Booking Required"
 61348293,"2",0,"Booking Required"
-64472715,"2",0,"Booking Required"
 64472730,"1",0,"Booking Required"
+64472715,"2",0,"Booking Required"
 64540903,"1",0,"Booking Required"
 64527807,"0",0,"Booking Required"
 64570995,"1",0,"Booking Required"

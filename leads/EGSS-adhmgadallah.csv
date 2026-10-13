@@ -1,43 +1,22 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-adhmgadallah | Generated: 2026-10-13 17:10
+# Representative: EGSS-adhmgadallah | Generated: 2026-10-13 18:10
 
-=== 1. SOP PENDING TASKS (100) ===
+=== 1. SOP PENDING TASKS (77) ===
 Student_ID,Task_Name,Expiration_Time
-58930765,"SS:Service warning - absence",20261013 18:55:00
-59007169,"English Club Booking",20261013 18:55:00
-59167394,"English Club Booking",20261013 18:55:00
-59435953,"English Club Booking",20261013 18:55:00
-60099171,"Round 6 Premium Service(Outside Renewal Pool)",20261013 18:55:00
-60791845,"English Club Booking",20261013 18:55:00
-61091881,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
-61097242,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
-62712377,"SS:Service warning - absence",20261013 18:55:00
-63235636,"English Club Booking",20261013 18:55:00
-63786214,"English Club Booking",20261013 18:55:00
-64092174,"English Club Booking",20261013 18:55:00
-64553435,"Round 2  Trust Enhancement (First Class Follow-up)",20261013 18:55:00
-64588918,"Round 1  Awareness building (First call)",20261013 18:55:00
 61114962,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261014 18:55:00
 61666081,"Round 6 Premium Service(Duration Renewal Insidepool)",20261014 18:55:00
 64354458,"Round 3 Habit Cultivation (1st Unit Assessment)",20261014 18:55:00
-64395467,"English Club Booking",20261014 18:55:00
 60852834,"Round 6 Premium Service(Outside Renewal Pool)",20261015 18:55:00
-61091881,"SS:Service warning - absence",20261015 18:55:00
-61211668,"SS:Service warning - absence",20261015 18:55:00
 61691285,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261015 18:55:00
-61718474,"SS:Service warning - absence",20261015 18:55:00
 61755092,"Round 6 Premium Service(Duration Renewal Insidepool)",20261015 18:55:00
 61773594,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261015 18:55:00
 61972388,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261015 18:55:00
 63786914,"Round 1  Awareness building (First call)",20261015 18:55:00
-64017369,"English Club Booking",20261015 18:55:00
 61098714,"Round 6 Premium Service(Outside Renewal Pool)",20261017 18:55:00
 61922192,"Round 6 Premium Service(Duration Renewal Insidepool)",20261017 18:55:00
 61982716,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261017 18:55:00
 61984053,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261017 18:55:00
 62018413,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261017 18:55:00
-63541513,"English Club Booking",20261017 18:55:00
-63885326,"English Club Booking",20261017 18:55:00
 63940227,"English Club Booking",20261017 18:55:00
 64087406,"English Club Booking",20261017 18:55:00
 64214188,"English Club Booking",20261017 18:55:00
@@ -48,7 +27,6 @@ Student_ID,Task_Name,Expiration_Time
 62712377,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 62717154,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63702362,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
-63885326,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63911739,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63937652,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63940227,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
@@ -82,7 +60,6 @@ Student_ID,Task_Name,Expiration_Time
 60994563,"SS：Service warning - class interruption",20261031 23:59:59
 61088182,"SS：Service warning - class interruption",20261031 23:59:59
 61389827,"SS：Service warning - class interruption",20261031 23:59:59
-61718474,"SS：Service warning - class interruption",20261031 23:59:59
 61731632,"SS：Service warning - class interruption",20261031 23:59:59
 62072513,"SS：Service warning - class interruption",20261031 23:59:59
 62216286,"SS：Service warning - class interruption",20261031 23:59:59
@@ -446,8 +423,8 @@ Student_ID,Level,Completed,Status
 61938818,"1",0,"Booking Required"
 63541106,"1",0,"Booking Required"
 63504381,"1",0,"Booking Required"
-62072513,"0",0,"Booking Required"
 60967250,"0",0,"Booking Required"
+62072513,"0",0,"Booking Required"
 58229150,"3",0,"Booking Required"
 63476373,"0",0,"Booking Required"
 63486510,"3",0,"Booking Required"

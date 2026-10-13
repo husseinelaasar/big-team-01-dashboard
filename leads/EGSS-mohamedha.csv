@@ -1,20 +1,16 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-mohamedha | Generated: 2026-10-13 17:10
+# Representative: EGSS-mohamedha | Generated: 2026-10-13 18:10
 
-=== 1. SOP PENDING TASKS (92) ===
+=== 1. SOP PENDING TASKS (87) ===
 Student_ID,Task_Name,Expiration_Time
 58525629,"English Club Booking",20261013 18:55:00
 58948874,"SS:Service warning - absence",20261013 18:55:00
-60150090,"SS:Service warning - absence",20261013 18:55:00
 60619387,"Round 6 Premium Service(Outside Renewal Pool)",20261013 18:55:00
 60719419,"Round 6 Premium Service(Outside Renewal Pool)",20261013 18:55:00
 61018792,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
 61059857,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
 61074099,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261013 18:55:00
-61739749,"English Club Booking",20261013 18:55:00
 62425364,"English Club Booking",20261013 18:55:00
-63735152,"English Club Booking",20261013 18:55:00
-59822126,"Round 1  Awareness building (First call)",20261014 18:55:00
 60820761,"SS:Service warning - absence",20261014 18:55:00
 60820761,"Round 6 Premium Service(Outside Renewal Pool)",20261014 18:55:00
 61059859,"Round 6 Premium Service(Duration Renewal Insidepool)",20261014 18:55:00
@@ -34,7 +30,6 @@ Student_ID,Task_Name,Expiration_Time
 63590561,"SS:Service warning - absence",20261015 18:55:00
 63647512,"English Club Booking",20261015 18:55:00
 64465247,"English Club Booking",20261015 18:55:00
-64588218,"Round 1  Awareness building (First call)",20261015 18:55:00
 61926182,"Round 6 Premium Service(Outside Renewal Pool)",20261017 18:55:00
 62629798,"English Club Booking",20261017 18:55:00
 63150155,"English Club Booking",20261017 18:55:00
@@ -384,8 +379,8 @@ Student_ID,Level,Completed,Status
 63178391,"1",0,"Booking Required"
 61595960,"0",0,"Booking Required"
 63235819,"2",0,"Booking Required"
-60626117,"1",0,"Booking Required"
 63313846,"3",0,"Booking Required"
+60626117,"1",0,"Booking Required"
 63313849,"1",0,"Booking Required"
 62425364,"1",0,"Booking Required"
 63331462,"1",0,"Booking Required"

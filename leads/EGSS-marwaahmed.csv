@@ -1,14 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-marwaahmed | Generated: 2026-10-13 17:10
+# Representative: EGSS-marwaahmed | Generated: 2026-10-13 18:10
 
-=== 1. SOP PENDING TASKS (79) ===
+=== 1. SOP PENDING TASKS (73) ===
 Student_ID,Task_Name,Expiration_Time
-61436600,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261013 18:55:00
-61501802,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261013 18:55:00
-61512509,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261013 18:55:00
-63086574,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
-63267129,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
-60788989,"Round 2  Trust Enhancement (First Class Follow-up)",20261014 18:55:00
 61746989,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261014 18:55:00
 62897769,"SS:Service warning - absence",20261014 18:55:00
 62970395,"SS:Service warning - absence",20261014 18:55:00
@@ -446,9 +440,9 @@ Student_ID,Level,Completed,Status
 63561190,"3",0,"Booking Required"
 63571486,"1",0,"Booked"
 63580280,"1",0,"Booking Required"
-61559733,"0",0,"Booked"
 63583180,"0",1,"Attended"
 63583008,"1",0,"Booked"
+61559733,"0",0,"Booked"
 60988810,"2",1,"Attended"
 63583093,"1",1,"Attended"
 63528382,"1",0,"Booking Required"
@@ -474,8 +468,8 @@ Student_ID,Level,Completed,Status
 64170513,"0",0,"Booking Required"
 63103706,"3",0,"Booking Required"
 64183419,"0",1,"Attended"
-58826348,"2",1,"Attended"
 64244920,"0",1,"Attended"
+58826348,"2",1,"Attended"
 64248244,"1",1,"Attended"
 64260064,"1",1,"Attended"
 64287215,"0",1,"Attended"

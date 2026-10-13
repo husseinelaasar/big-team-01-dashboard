@@ -1,27 +1,12 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-juliamonir01 | Generated: 2026-10-13 17:10
+# Representative: EGSS-juliamonir01 | Generated: 2026-10-13 18:10
 
-=== 1. SOP PENDING TASKS (91) ===
+=== 1. SOP PENDING TASKS (68) ===
 Student_ID,Task_Name,Expiration_Time
-60413417,"SS:Service warning - absence",20261013 18:55:00
-61144114,"Round 6 Premium Service(Outside Renewal Pool)",20261013 18:55:00
-61613217,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261013 18:55:00
-61791658,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261013 18:55:00
-62242232,"SS:Service warning - absence",20261013 18:55:00
-62597360,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
-63071903,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
-63228039,"SS:Service warning - absence",20261013 18:55:00
-63876873,"English Club Booking",20261013 18:55:00
-64159280,"SS:Service warning - absence",20261013 18:55:00
-60907447,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261014 18:55:00
 61875215,"Round 6 Premium Service(Outside Renewal Pool)",20261014 18:55:00
 61912079,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261014 18:55:00
 63121344,"Round 6 Premium Service(Duration Renewal Insidepool)",20261014 18:55:00
-63465315,"English Club Booking",20261014 18:55:00
 64007331,"SS:Service warning - absence",20261014 18:55:00
-64532447,"Round 2  Trust Enhancement (First Class Follow-up)",20261014 18:55:00
-64532462,"Round 2  Trust Enhancement (First Class Follow-up)",20261014 18:55:00
-59519888,"English Club Booking",20261015 18:55:00
 61785967,"SS:Service warning - absence",20261015 18:55:00
 61934203,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261015 18:55:00
 62028148,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261015 18:55:00
@@ -30,20 +15,14 @@ Student_ID,Task_Name,Expiration_Time
 62336667,"Round 6 Premium Service(Outside Renewal Pool)",20261015 18:55:00
 63138030,"Round 6 Premium Service(Duration Renewal Insidepool)",20261015 18:55:00
 63619222,"SS:Service warning - absence",20261015 18:55:00
-64113300,"Round 1  Awareness building (First call)",20261015 18:55:00
 64135636,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261015 18:55:00
 64520320,"Round 3 Habit Cultivation (1st Unit Assessment)",20261015 18:55:00
-58206230,"English Club Booking",20261017 18:55:00
-58499515,"English Club Booking",20261017 18:55:00
-62151771,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261017 18:55:00
 62172966,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261017 18:55:00
 62917125,"Round 6 Premium Service(Outside Renewal Pool)",20261017 18:55:00
-63121344,"English Club Booking",20261017 18:55:00
 63228039,"Round 6 Premium Service(Duration Renewal Insidepool)",20261017 18:55:00
 58824521,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 60413417,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 60708375,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
-60907447,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63859196,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63910713,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63937989,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
@@ -71,7 +50,6 @@ Student_ID,Task_Name,Expiration_Time
 61337662,"SS：Service warning - class interruption",20261031 23:59:59
 61420090,"SS：Service warning - class interruption",20261031 23:59:59
 61420166,"SS：Service warning - class interruption",20261031 23:59:59
-61613217,"SS：Service warning - class interruption",20261031 23:59:59
 62274010,"SS：Service warning - class interruption",20261031 23:59:59
 62384965,"SS：Service warning - class interruption",20261031 23:59:59
 62392157,"SS：Service warning - class interruption",20261031 23:59:59
@@ -91,7 +69,6 @@ Student_ID,Task_Name,Expiration_Time
 63613489,"SS：Service warning - class interruption",20261031 23:59:59
 63670248,"SS：Service warning - class interruption",20261031 23:59:59
 63876873,"SS：Service warning - class interruption",20261031 23:59:59
-63945934,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 64061011,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 64135636,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
@@ -481,8 +458,8 @@ Student_ID,Level,Completed,Status
 63613489,"0",0,"Booking Required"
 60262488,"0",0,"Booking Required"
 63567528,"2",0,"Booking Required"
-63018166,"1",0,"Booking Required"
 63436031,"1",0,"Booking Required"
+63018166,"1",0,"Booking Required"
 63619222,"2",0,"Booking Required"
 61785967,"3",0,"Booking Required"
 63341140,"0",0,"Booking Required"
@@ -525,6 +502,6 @@ Student_ID,Level,Completed,Status
 64484089,"1",0,"Booking Required"
 64496210,"0",0,"Booking Required"
 64520320,"0",0,"Booking Required"
-64532447,"2",0,"Booking Required"
 64532462,"1",0,"Booking Required"
+64532447,"2",0,"Booking Required"
 64113300,"0",0,"Booking Required"
