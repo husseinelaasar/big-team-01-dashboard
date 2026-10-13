@@ -1,7 +1,7 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-abdelrhmanshehata | Generated: 2026-10-13 11:30
+# Representative: EGSS-abdelrhmanshehata | Generated: 2026-10-13 11:41
 
-=== 1. SOP PENDING TASKS (31) ===
+=== 1. SOP PENDING TASKS (43) ===
 Student_ID,Task_Name,Expiration_Time
 60412988,"Round 6 Premium Service(Outside Renewal Pool)",20261013 18:55:00
 60669304,"Round 6 Premium Service(Duration Renewal Insidepool)",20261013 18:55:00
@@ -13,8 +13,18 @@ Student_ID,Task_Name,Expiration_Time
 62812042,"SS:Service warning - absence",20261014 18:55:00
 63955491,"SS:Service warning - absence",20261014 18:55:00
 61798574,"Round 6 Premium Service(Outside Renewal Pool)",20261015 18:55:00
+61848808,"SS:Service warning - absence",20261015 18:55:00
 61894119,"Round 6 Premium Service(Duration Renewal Insidepool)",20261015 18:55:00
 61953046,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261015 18:55:00
+64150751,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261015 18:55:00
+64150953,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261015 18:55:00
+59474391,"English Club Booking",20261017 18:55:00
+61940430,"Round 6 Premium Service(Duration Renewal Insidepool)",20261017 18:55:00
+62255656,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261017 18:55:00
+62347744,"English Club Booking",20261017 18:55:00
+63058549,"English Club Booking",20261017 18:55:00
+64165238,"English Club Booking",20261017 18:55:00
+64177872,"English Club Booking",20261017 18:55:00
 63887629,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 63997697,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
 64150751,"Round 5 Learning Path Planning-Upgrade insidepool",20261026 18:55:00
@@ -32,15 +42,18 @@ Student_ID,Task_Name,Expiration_Time
 62491741,"SS：Service warning - class interruption",20261031 23:59:59
 62513206,"SS：Service warning - class interruption",20261031 23:59:59
 62843602,"SS：Service warning - class interruption",20261031 23:59:59
+62848843,"SS：Service warning - class interruption",20261031 23:59:59
+63203514,"SS：Service warning - class interruption",20261031 23:59:59
 64176184,"SS：Service warning - class interruption",20261031 23:59:59
 64180345,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (48) ===
-Student_ID,Pool_Cohort,Classes,Priority
+=== 2. UNFIXED TEACHER BINDING LEADS (47) ===
+Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
 58267408,"M3+ Pool",0,"UNFIXED BINDING"
 58311400,"M3+ Pool",0,"UNFIXED BINDING"
 58311756,"M3+ Pool",0,"UNFIXED BINDING"
 58344735,"M0 Pool",0,"CRITICAL (0 Classes)"
+58361012,"M3+ Pool",0,"UNFIXED BINDING"
 58445891,"M3+ Pool",0,"UNFIXED BINDING"
 58794138,"M3+ Pool",0,"UNFIXED BINDING"
 59038874,"M3+ Pool",0,"UNFIXED BINDING"
@@ -55,7 +68,6 @@ Student_ID,Pool_Cohort,Classes,Priority
 60654725,"M2 Pool",0,"MEDIUM BINDING"
 60707245,"M3+ Pool",0,"UNFIXED BINDING"
 60760718,"M3+ Pool",0,"UNFIXED BINDING"
-61124299,"M2 Pool",0,"MEDIUM BINDING"
 61410343,"M3+ Pool",0,"UNFIXED BINDING"
 61809926,"M3+ Pool",0,"UNFIXED BINDING"
 61833003,"M3+ Pool",0,"UNFIXED BINDING"
@@ -79,24 +91,23 @@ Student_ID,Pool_Cohort,Classes,Priority
 63868841,"M3+ Pool",0,"UNFIXED BINDING"
 63875552,"M3+ Pool",0,"UNFIXED BINDING"
 64148527,"M2 Pool",0,"MEDIUM BINDING"
-64176184,"M2 Pool",0,"MEDIUM BINDING"
 64202115,"M1 Pool",0,"HIGH BINDING"
 64297277,"M0 Pool",0,"CRITICAL (0 Classes)"
 64306096,"M1 Pool",0,"HIGH BINDING"
 64477987,"M1 Pool",0,"HIGH BINDING"
 64501637,"M1 Pool",0,"HIGH BINDING"
 
-=== 3. CLASS CONSUMPTION RESCUE (0) ===
-Student_ID,Pool_Cohort,Classes,Action
+=== 3. ZERO-CLASS & CLASS CONSUMPTION RESCUE (0) ===
+Student_ID,Pool_Cohort,Classes_Attended,Consumption_Action
 
-=== 4. ENGLISH CLUB LEADS (77) ===
-Student_ID,Level,Completed,Status
+=== 4. ENGLISH CLUB ACTIONABLE LEADS (82) ===
+Student_ID,Level,Completed_Classes,Booking_Status
 63058549,"1",0,"Booking Required"
 63086322,"0",0,"Booked"
 63151548,"1",0,"Booking Required"
 63137876,"0",0,"Booking Required"
 63196156,"2",0,"Booked"
-60122480,"1",0,"Booking Required"
+60122480,"1",0,"Booked"
 63204215,"1",0,"Booked"
 63198804,"0",0,"Booking Required"
 63203514,"2",1,"Attended"
@@ -128,7 +139,7 @@ Student_ID,Level,Completed,Status
 63961952,"0",0,"Booked"
 59016592,"1",1,"Attended"
 63955491,"2",1,"Attended"
-64003195,"1",0,"Booking Required"
+64003195,"1",0,"Booked"
 64032455,"3",1,"Attended"
 63997697,"0",0,"Booking Required"
 64067930,"3",1,"Attended"
@@ -142,6 +153,7 @@ Student_ID,Level,Completed,Status
 61124299,"3",1,"Attended"
 64176184,"1",0,"Booked"
 64180345,"2",0,"Booking Required"
+61736402,"3",0,"Booking Required"
 59768567,"2",0,"Booking Required"
 64212022,"3",0,"Booked"
 64202115,"1",0,"Booking Required"
@@ -167,4 +179,8 @@ Student_ID,Level,Completed,Status
 58041429,"1",0,"Booking Required"
 64497183,"0",0,"Booking Required"
 64501637,"1",0,"Booking Required"
-61736402,"3",0,"Booking Required"
+63343742,"1",0,"Booking Required"
+62551662,"0",0,"Booking Required"
+64535091,"0",0,"Booking Required"
+58344735,"2",0,"Booking Required"
+59523203,"1",0,"Booking Required"
