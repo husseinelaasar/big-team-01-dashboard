@@ -3130,6 +3130,59 @@
       align-items: center;
       gap: 4px;
     }
+    
+    .custid-warning-pill {
+      background: rgba(245, 158, 11, 0.18);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .badge-crm-mismatch {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 3px;
+    }
+    .badge-crm-match {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 3px;
+    }
+    .badge-crm-unassigned {
+      background: rgba(100, 116, 139, 0.15);
+      color: #94a3b8;
+      border: 1px solid rgba(100, 116, 139, 0.35);
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 3px;
+    }
+
     .custid-valid-pill {
       background: rgba(16, 185, 129, 0.15);
       border: 1px solid rgba(16, 185, 129, 0.4);
@@ -3250,6 +3303,7 @@
       animation: shakeCustId 0.45s ease-in-out;
     }
   </style>
+  <script src="crm_students_directory.js"></script>
 </head>
 <body>
 
@@ -4923,6 +4977,21 @@
       return getCustomerIdValidation(val).valid;
     }
 
+    
+    // =========================================================================
+    // CRM LIVE OWNERSHIP DIRECTORY LOOKUP ENGINE
+    // =========================================================================
+    function lookupCrmStudent(customerId) {
+      if (!window.CRM_STUDENT_DIRECTORY || !customerId) return null;
+      const cleanId = String(customerId).trim();
+      const entry = window.CRM_STUDENT_DIRECTORY[cleanId];
+      if (!entry) return null;
+      return {
+        repName: entry[0],
+        teamCode: entry[1]
+      };
+    }
+
     function handleCustomerIdInput() {
       const input = document.getElementById('modalCustomerId');
       const val = input ? input.value.trim() : '';
@@ -4936,16 +5005,66 @@
       const res = getCustomerIdValidation(val);
 
       if (res.valid) {
+        // CRM Live Ownership Lookup & Verification
+        const crmInfo = lookupCrmStudent(val);
+        const currentRep = getCurrentRep();
+        const currentRepName = currentRep ? currentRep.name : '';
+        
+        let crmStatus = 'UNASSIGNED';
+        let crmOwnerRep = '--';
+        let crmOwnerTeam = '--';
+
+        if (crmInfo) {
+          crmOwnerRep = crmInfo.repName;
+          crmOwnerTeam = crmInfo.teamCode;
+          
+          const repClean = (currentRepName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+          const ownerClean = (crmOwnerRep || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+          const isMatch = repClean && (repClean === ownerClean || repClean.includes(ownerClean) || ownerClean.includes(repClean));
+
+          crmStatus = isMatch ? 'MATCH' : 'MISMATCH';
+        }
+
+        // Cache for audit export
+        window.activeCustomerCrmInfo = {
+          customerId: val,
+          crmOwner: crmOwnerRep,
+          crmTeam: crmOwnerTeam,
+          status: crmStatus
+        };
+
+        // Render UI feedback in the form controls (for staff reference only)
         if (badge) {
-          badge.className = 'custid-valid-pill';
-          badge.innerHTML = res.msgAr;
+          if (crmStatus === 'MATCH') {
+            badge.className = 'custid-valid-pill';
+            badge.innerHTML = '&#9989; &#1605;&#1591;&#1575;&#1576;&#1602; CRM (' + crmOwnerRep + ')';
+          } else if (crmStatus === 'MISMATCH') {
+            badge.className = 'custid-warning-pill';
+            badge.innerHTML = '&#9888;&#65039; &#1605;&#1587;&#1580;&#1604; &#1604;&#1600; (' + crmOwnerRep + ')';
+          } else {
+            badge.className = 'custid-valid-pill';
+            badge.innerHTML = '&#9989; &#1578;&#1605; &#1578;&#1571;&#1603;&#1610;&#1583; &#1575;&#1604;&#1605;&#1593;&#1585;&#1601; (' + val + ')';
+          }
         }
+
         if (hint) {
-          hint.style.display = 'none';
+          hint.style.display = 'block';
+          if (crmStatus === 'MISMATCH') {
+            hint.style.color = '#fbbf24';
+            hint.innerHTML = '<i class="fa-solid fa-triangle-exclamation" style="color: #f59e0b;"></i> <strong>&#1578;&#1606;&#1576;&#1610;&#1607; &#1578;&#1590;&#1575;&#1585;&#1576; &#1605;&#1604;&#1603;&#1610;&#1577; (Cross-Lead):</strong> &#1607;&#1584;&#1575; &#1575;&#1604;&#1593;&#1605;&#1610;&#1604; &#1605;&#1587;&#1580;&#1604; &#1601;&#1610; CRM &#1576;&#1575;&#1587;&#1605; <strong>[' + crmOwnerRep + ' - ' + crmOwnerTeam + ']</strong> &#1608;&#1604;&#1610;&#1587; &#1576;&#1575;&#1587;&#1605;&#1603; (' + (currentRepName || '&#1594;&#1610;&#1585; &#1605;&#1587;&#1580;&#1604;') + '). &#1587;&#1610;&#1578;&#1605; &#1578;&#1608;&#1579;&#1610;&#1602; &#1575;&#1604;&#1593;&#1605;&#1604;&#1610;&#1577; &#1603;&#1605;&#1585;&#1580;&#1593; &#1573;&#1583;&#1575;&#1585;&#1610;.';
+          } else if (crmStatus === 'MATCH') {
+            hint.style.color = '#34d399';
+            hint.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #10b981;"></i> <strong>&#1593;&#1605;&#1610;&#1604; &#1605;&#1591;&#1575;&#1576;&#1602;:</strong> &#1605;&#1587;&#1580;&#1604; &#1585;&#1587;&#1605;&#1610;&#1575;&#160b; &#1576;&#1575;&#1587;&#1605;&#1603; &#1601;&#1610; CRM (' + crmOwnerRep + ' - ' + crmOwnerTeam + ').';
+          } else {
+            hint.style.color = '#94a3b8';
+            hint.innerHTML = '<i class="fa-solid fa-circle-info" style="color: #38bdf8;"></i> <strong>&#1593;&#1605;&#1610;&#1604; &#1594;&#1610;&#1585; &#1605;&#1602;&#1610;&#1583;:</strong> &#1594;&#1610;&#1585; &#1605;&#1587;&#1580;&#1604; &#1590;&#1605;&#1606; &#1602;&#1575;&#1593;&#1583;&#1577; Big Team 01 &#1575;&#1604;&#1581;&#1575;&#1604;&#1610;&#1577; (&#1593;&#1605;&#1610;&#1604; &#158login;&#1583;&#1610;&#1583; &#1571;&#1608; &#1605;&#1606; &#1602;&#1591;&#1575;&#1593; &#1572;&#1582;&#1585;).';
+          }
         }
+
+        // Option 1: Unlock card preview regardless (allows generation)
         if (input) {
-          input.style.borderColor = '#10b981';
-          input.style.boxShadow = '0 0 14px rgba(16, 185, 129, 0.4)';
+          input.style.borderColor = (crmStatus === 'MISMATCH') ? '#f59e0b' : '#10b981';
+          input.style.boxShadow = (crmStatus === 'MISMATCH') ? '0 0 14px rgba(245, 158, 11, 0.4)' : '0 0 14px rgba(16, 185, 129, 0.4)';
         }
         if (overlay) {
           overlay.classList.add('unlocked');
@@ -4956,6 +5075,10 @@
           card.style.pointerEvents = 'auto';
           card.style.userSelect = 'auto';
         }
+
+        // ⚠️ CRITICAL USER REQUIREMENT:
+        // "keep the records as refrence whithout including it inside the card"
+        // The card preview and exported image strictly show only Customer ID (Clean & Prestigious)
         if (previewVal) previewVal.textContent = val;
         if (greetingVal) greetingVal.textContent = val;
       } else {
@@ -6084,11 +6207,29 @@
         String(now.getMinutes()).padStart(2,'0') + ':' +
         String(now.getSeconds()).padStart(2,'0');
 
+            const activeCrm = window.activeCustomerCrmInfo || {};
+      const custIdVal = (document.getElementById('modalCustomerId') ? document.getElementById('modalCustomerId').value : '').trim();
+      let crmOwner = activeCrm.crmOwner || '--';
+      let ownershipStatus = activeCrm.status || 'UNASSIGNED';
+
+      if (ownershipStatus === 'UNASSIGNED' && custIdVal) {
+        const crmInfo = lookupCrmStudent(custIdVal);
+        if (crmInfo) {
+          crmOwner = crmInfo.repName;
+          const repClean = (rep.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+          const ownerClean = (crmOwner || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+          const isMatch = repClean && (repClean === ownerClean || repClean.includes(ownerClean) || ownerClean.includes(repClean));
+          ownershipStatus = isMatch ? 'MATCH' : 'MISMATCH';
+        }
+      }
+
       const eventPayload = {
         timestamp: timestamp,
         repName: rep.name,
         teamCode: rep.team,
-        customerId: (document.getElementById('modalCustomerId') ? document.getElementById('modalCustomerId').value : '').trim(),
+        customerId: custIdVal,
+        crmOwner: crmOwner,
+        ownershipStatus: ownershipStatus,
         studentName: clientName,
         planName: planName,
         planType: (planObj && planObj.id && planObj.id.startsWith('rn-')) ? 'Renewal' : 'Upgrade',
