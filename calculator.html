@@ -3369,6 +3369,171 @@
     .shake-input {
       animation: shakeCustId 0.45s ease-in-out;
     }
+  
+    /* =========================================================
+       COUNTRY WATERMARK & STACKED FLAG UNDER COUNTRY NAME STYLES
+       خلفية علم الدولة الشفافة في الكروت وأيقونة العلم تحت اسم الدولة
+       ========================================================= */
+    .card-country-watermark {
+      position: absolute;
+      bottom: 12px;
+      right: 14px;
+      width: 145px;
+      height: 95px;
+      opacity: 0.085;
+      pointer-events: none;
+      z-index: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      filter: blur(0.4px) saturate(0.85);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
+    }
+    html[dir="rtl"] .card-country-watermark {
+      right: auto;
+      left: 14px;
+    }
+    .plan-card:hover .card-country-watermark {
+      opacity: 0.17;
+      transform: scale(1.08) rotate(-1deg);
+    }
+    .card-country-watermark svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Watermark for Exported VIP Card */
+    .vip-card-country-watermark {
+      position: absolute;
+      bottom: 22px;
+      right: 22px;
+      width: 185px;
+      height: 122px;
+      opacity: 0.085;
+      pointer-events: none;
+      z-index: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      filter: blur(0.4px);
+      mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    }
+    html[dir="rtl"] .vip-card-country-watermark {
+      right: auto;
+      left: 22px;
+    }
+    .vip-card-country-watermark svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Brand Header Active Country Display */
+    .brand-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .brand-country-indicator {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 10px;
+      padding: 3px 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      line-height: 1.15;
+    }
+    .brand-country-indicator .indicator-name {
+      font-size: 11px;
+      font-weight: 800;
+      color: #ffd700;
+      font-family: 'Cairo', 'Outfit', sans-serif;
+    }
+    .brand-country-indicator .indicator-flag {
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 2px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    }
+
+    /* Stacked Flag Icon Under Country Name in Switcher */
+    .country-pills-scroll {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .country-pills-scroll::-webkit-scrollbar { display: none; }
+    .country-btn {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(10, 15, 30, 0.65);
+      color: var(--text-muted);
+      padding: 5px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      white-space: nowrap;
+      transition: all 0.22s ease;
+      min-width: 68px;
+    }
+    .country-btn .country-name {
+      font-size: 11px;
+      font-weight: 800;
+      color: #cbd5e1;
+      line-height: 1.2;
+    }
+    .country-btn .country-flag-under {
+      font-size: 16px;
+      line-height: 1;
+      display: block;
+      margin: 1px 0;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+      transition: transform 0.2s ease;
+    }
+    .country-btn:hover .country-flag-under {
+      transform: scale(1.15);
+    }
+    .country-btn .country-tag {
+      font-size: 9px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      padding: 1px 5px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+    }
+    .country-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .country-btn.active {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.42));
+      border-color: rgba(245, 158, 11, 0.7);
+      color: #ffd700;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.35);
+    }
+    .country-btn.active .country-name {
+      color: #ffd700;
+      font-weight: 900;
+    }
+    .country-btn.active .country-tag {
+      background: rgba(245, 158, 11, 0.35);
+      color: #ffd700;
+      font-weight: 900;
+    }
+
   </style>
   <script src="crm_students_directory.js"></script>
 </head>
@@ -3738,8 +3903,10 @@
             </button>
           </div>
 
-          <div class="vip-card-export" id="exportVipCard" style="filter: blur(10px) grayscale(0.5); pointer-events: none; user-select: none; opacity: 0.6;">
-          <div class="card-brand-row">
+          <div class="vip-card-export" id="exportVipCard" style="filter: blur(10px) grayscale(0.5); pointer-events: none; user-select: none; opacity: 0.6; position: relative; overflow: hidden;">
+          <!-- Transparent Country Flag Watermark in Export Card Background -->
+          <div class="vip-card-country-watermark" id="vipExportCountryWatermark" aria-hidden="true"></div>
+          <div class="card-brand-row" style="position: relative; z-index: 1;">
             <div class="brand-logo-mini">
               <span class="logo-box">51</span>
               <span class="logo-title">51Talk Global</span>
@@ -5222,13 +5389,23 @@
             // =========================================================================
     // MULTI-COUNTRY CONFIGURATION & PRICING ENGINE
     // =========================================================================
+    
+    const GCC_VECTOR_FLAGS = {
+      KSA: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#006C35"/><g fill="#ffffff"><path d="M160 270 h280 v10 h-280 z M180 262 l-25 13 25 13 v-8 h20 v-10 h-20 z"/><text x="300" y="210" font-family=\"\'Cairo\', Arial, sans-serif\" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle" letter-spacing="3">لا إله إلا الله محمد رسول الله</text></g></svg>',
+      UAE: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#ffffff"/><rect width="600" height="133.3" fill="#00732f"/><rect y="266.6" width="600" height="133.4" fill="#000000"/><rect width="160" height="400" fill="#ff0000"/></svg>',
+      Qatar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#8D1B3D"/><path d="M0 0 h180 l50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 H0 z" fill="#ffffff"/></svg>',
+      Kuwait: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#ffffff"/><rect width="600" height="133.3" fill="#007A3D"/><rect y="266.6" width="600" height="133.4" fill="#CE1126"/><polygon points="0,0 170,133.3 170,266.6 0,400" fill="#000000"/></svg>',
+      Bahrain: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#CE1126"/><path d="M0 0 h160 l60 40 -60 40 60 40 -60 40 60 40 -60 40 60 40 -60 40 60 40 -60 40 H0 z" fill="#ffffff"/></svg>',
+      Oman: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#CE1126"/><rect width="600" height="133.3" fill="#ffffff"/><rect y="266.6" width="600" height="133.4" fill="#008000"/><rect width="160" height="400" fill="#CE1126"/><g transform="translate(80, 65) scale(0.65)" stroke="#ffffff" stroke-width="6" fill="none"><path d="M-30,-25 L30,25 M30,-25 L-30,25"/><path d="M0,-40 L0,30" stroke-width="8"/></g></svg>'
+    };
+
     const COUNTRIES_CONFIG = {
-      KSA: { code: 'KSA', flag: '🇸🇦', nameAr: 'المملكة العربية السعودية', nameEn: 'Saudi Arabia', shortAr: 'السعودية', shortEn: 'KSA', currencyAr: 'ر.س', currencyEn: 'SAR' },
-      UAE: { code: 'UAE', flag: '🇦🇪', nameAr: 'الإمارات العربية المتحدة', nameEn: 'United Arab Emirates', shortAr: 'الإمارات', shortEn: 'UAE', currencyAr: 'د.إ', currencyEn: 'AED' },
-      Qatar: { code: 'Qatar', flag: '🇶🇦', nameAr: 'دولة قطر', nameEn: 'Qatar', shortAr: 'قطر', shortEn: 'Qatar', currencyAr: 'ر.ق', currencyEn: 'QAR' },
-      Kuwait: { code: 'Kuwait', flag: '🇰🇼', nameAr: 'دولة الكويت', nameEn: 'Kuwait', shortAr: 'الكويت', shortEn: 'Kuwait', currencyAr: 'د.ك', currencyEn: 'KWD' },
-      Bahrain: { code: 'Bahrain', flag: '🇧🇭', nameAr: 'مملكة البحرين', nameEn: 'Bahrain', shortAr: 'البحرين', shortEn: 'Bahrain', currencyAr: 'د.ب', currencyEn: 'BHD' },
-      Oman: { code: 'Oman', flag: '🇴🇲', nameAr: 'سلطنة عُمان', nameEn: 'Oman', shortAr: 'عُمان', shortEn: 'Oman', currencyAr: 'ر.ع', currencyEn: 'OMR' }
+      KSA: { code: 'KSA', flag: '🇸🇦', nameAr: 'المملكة العربية السعودية', nameEn: 'Saudi Arabia', shortAr: 'السعودية', shortEn: 'KSA', currencyAr: 'ر.س', currencyEn: 'SAR', flagSvg: GCC_VECTOR_FLAGS.KSA },
+      UAE: { code: 'UAE', flag: '🇦🇪', nameAr: 'الإمارات العربية المتحدة', nameEn: 'United Arab Emirates', shortAr: 'الإمارات', shortEn: 'UAE', currencyAr: 'د.إ', currencyEn: 'AED', flagSvg: GCC_VECTOR_FLAGS.UAE },
+      Qatar: { code: 'Qatar', flag: '🇶🇦', nameAr: 'دولة قطر', nameEn: 'Qatar', shortAr: 'قطر', shortEn: 'Qatar', currencyAr: 'ر.ق', currencyEn: 'QAR', flagSvg: GCC_VECTOR_FLAGS.Qatar },
+      Kuwait: { code: 'Kuwait', flag: '🇰🇼', nameAr: 'دولة الكويت', nameEn: 'Kuwait', shortAr: 'الكويت', shortEn: 'Kuwait', currencyAr: 'د.ك', currencyEn: 'KWD', flagSvg: GCC_VECTOR_FLAGS.Kuwait },
+      Bahrain: { code: 'Bahrain', flag: '🇧🇭', nameAr: 'مملكة البحرين', nameEn: 'Bahrain', shortAr: 'البحرين', shortEn: 'Bahrain', currencyAr: 'د.ب', currencyEn: 'BHD', flagSvg: GCC_VECTOR_FLAGS.Bahrain },
+      Oman: { code: 'Oman', flag: '🇴🇲', nameAr: 'سلطنة عُمان', nameEn: 'Oman', shortAr: 'عُمان', shortEn: 'Oman', currencyAr: 'ر.ع', currencyEn: 'OMR', flagSvg: GCC_VECTOR_FLAGS.Oman }
     };
 
     let currentCountry = localStorage.getItem('51talk_selected_country') || 'KSA';
@@ -5484,7 +5661,13 @@
         `;
       }
 
+      const curCountryCfg = COUNTRIES_CONFIG[currentCountry] || COUNTRIES_CONFIG.KSA;
+      card.style.position = 'relative';
+      card.style.overflow = 'hidden';
       card.innerHTML = `
+        <!-- Transparent Country Flag Watermark in Card Background -->
+        <div class="card-country-watermark" aria-hidden="true">${curCountryCfg.flagSvg}</div>
+
         ${ribbonHtml}
 
         <!-- PACKAGE HEADLINE BANNER (PROMINENT TOTAL CLASSES AT TOP) -->
@@ -6102,6 +6285,11 @@
     }
 
     function updateLivePreview() {
+      const cfgCur = (typeof COUNTRIES_CONFIG !== 'undefined' && COUNTRIES_CONFIG[currentCountry]) ? COUNTRIES_CONFIG[currentCountry] : null;
+      if (cfgCur) {
+        const mw = document.getElementById('vipExportCountryWatermark');
+        if (mw) mw.innerHTML = cfgCur.flagSvg;
+      }
       const t = I18N[currentLanguage];
       const clientName = document.getElementById('modalClientName').value || (currentLanguage === 'ar' ? 'ولي أمر الطالب العزيز' : 'Dear Parent');
       const planName = document.getElementById('modalPlanName').value || '51Talk Package';
