@@ -3371,63 +3371,62 @@
     }
   
     /* =========================================================
-       COUNTRY WATERMARK & STACKED FLAG UNDER COUNTRY NAME STYLES
-       خلفية علم الدولة الشفافة في الكروت وأيقونة العلم تحت اسم الدولة
+       COUNTRY FULL-COVER BACKGROUND (60% TRANSPARENCY)
+       خلفية علم الدولة تغطي كامل الكارت بشفافية 60% مع حماية الوضوح
        ========================================================= */
-    .card-country-watermark {
-      position: absolute;
-      bottom: 12px;
-      right: 14px;
-      width: 145px;
-      height: 95px;
-      opacity: 0.085;
-      pointer-events: none;
-      z-index: 0;
-      border-radius: 12px;
-      overflow: hidden;
-      filter: blur(0.4px) saturate(0.85);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
-      -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 100%);
-    }
-    html[dir="rtl"] .card-country-watermark {
-      right: auto;
-      left: 14px;
-    }
-    .plan-card:hover .card-country-watermark {
-      opacity: 0.17;
-      transform: scale(1.08) rotate(-1deg);
-    }
-    .card-country-watermark svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    /* Watermark for Exported VIP Card */
+    .card-country-watermark,
     .vip-card-country-watermark {
       position: absolute;
-      bottom: 22px;
-      right: 22px;
-      width: 185px;
-      height: 122px;
-      opacity: 0.085;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.40; /* 60% transparent */
       pointer-events: none;
       z-index: 0;
-      border-radius: 16px;
+      border-radius: inherit;
       overflow: hidden;
-      filter: blur(0.4px);
-      mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-      -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+      transition: opacity 0.3s ease;
     }
-    html[dir="rtl"] .vip-card-country-watermark {
-      right: auto;
-      left: 22px;
+    .plan-card:hover .card-country-watermark {
+      opacity: 0.45;
     }
+    .card-country-watermark svg,
     .vip-card-country-watermark svg {
       width: 100%;
       height: 100%;
       display: block;
+      object-fit: cover;
+    }
+    /* Contrast protective shade overlay between flag and text */
+    .card-overlay-shade,
+    .vip-card-overlay-shade {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.48) 0%, rgba(8, 12, 24, 0.68) 100%);
+      pointer-events: none;
+      z-index: 0;
+      border-radius: inherit;
+    }
+    /* VIP Card Country Badge */
+    .vip-country-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 11px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+    }
+    .vip-country-pill .country-pill-flag {
+      font-size: 15px;
+      line-height: 1;
     }
 
     /* Brand Header Active Country Display */
@@ -3551,6 +3550,10 @@
       <div class="brand-compact">
         <span class="brand-logo-pill">51</span>
         <span class="brand-title-compact">51Talk Global</span>
+        <div class="brand-country-indicator" id="brandCountryIndicator" title="الدولة المحددة حالياً">
+          <span class="indicator-name" id="indicatorCountryName">المملكة العربية السعودية</span>
+          <span class="indicator-flag" id="indicatorCountryFlag">🇸🇦</span>
+        </div>
         <span class="rate-badge" id="rateBadgeText"><i class="fa-solid fa-check-circle"></i> Rate Card</span>
         <span class="live-dot">Live Rates</span>
       </div>
@@ -3590,33 +3593,33 @@
         <div class="country-switcher-wrapper" id="countrySwitcherWrapper">
           <div class="country-pills-scroll">
             <button type="button" class="country-btn active" data-country="KSA" onclick="switchCountry('KSA')" title="Saudi Arabia / السعودية">
-              <span class="country-flag">🇸🇦</span>
-              <span class="country-name">KSA</span>
+              <span class="country-name" id="btnCountryName_KSA">السعودية</span>
+              <span class="country-flag-under">🇸🇦</span>
               <span class="country-tag">SAR</span>
             </button>
             <button type="button" class="country-btn" data-country="UAE" onclick="switchCountry('UAE')" title="UAE / الإمارات">
-              <span class="country-flag">🇦🇪</span>
-              <span class="country-name">UAE</span>
+              <span class="country-name" id="btnCountryName_UAE">الإمارات</span>
+              <span class="country-flag-under">🇦🇪</span>
               <span class="country-tag">AED</span>
             </button>
             <button type="button" class="country-btn" data-country="Qatar" onclick="switchCountry('Qatar')" title="Qatar / قطر">
-              <span class="country-flag">🇶🇦</span>
-              <span class="country-name">Qatar</span>
+              <span class="country-name" id="btnCountryName_Qatar">قطر</span>
+              <span class="country-flag-under">🇶🇦</span>
               <span class="country-tag">QAR</span>
             </button>
             <button type="button" class="country-btn" data-country="Kuwait" onclick="switchCountry('Kuwait')" title="Kuwait / الكويت">
-              <span class="country-flag">🇰🇼</span>
-              <span class="country-name">Kuwait</span>
+              <span class="country-name" id="btnCountryName_Kuwait">الكويت</span>
+              <span class="country-flag-under">🇰🇼</span>
               <span class="country-tag">KWD</span>
             </button>
             <button type="button" class="country-btn" data-country="Bahrain" onclick="switchCountry('Bahrain')" title="Bahrain / البحرين">
-              <span class="country-flag">🇧🇭</span>
-              <span class="country-name">Bahrain</span>
+              <span class="country-name" id="btnCountryName_Bahrain">البحرين</span>
+              <span class="country-flag-under">🇧🇭</span>
               <span class="country-tag">BHD</span>
             </button>
             <button type="button" class="country-btn" data-country="Oman" onclick="switchCountry('Oman')" title="Oman / عمان">
-              <span class="country-flag">🇴🇲</span>
-              <span class="country-name">Oman</span>
+              <span class="country-name" id="btnCountryName_Oman">عُمان</span>
+              <span class="country-flag-under">🇴🇲</span>
               <span class="country-tag">OMR</span>
             </button>
           </div>
@@ -3792,8 +3795,8 @@
         <div class="modal-emp-info-badge">
           <div class="emp-lock-tag"><i class="fa-solid fa-lock"></i> <span data-i18n="empInternalTitle">Confidential Staff Information</span></div>
           <div style="font-size: 12px; color: #cbd5e1; margin-top: 5px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
-            <span><span data-i18n="empInternalCostLbl">Internal Cost (+10%):</span> <strong class="emp-internal-cost-tag" id="modalInternalCostDisplay">2,393 SAR</strong></span>
-            <span>(<span data-i18n="empInSheetLbl">In Sheet:</span> <span class="emp-sheet-cost-tag" id="modalInternalSheetDisplay">2,175 SAR</span>)</span>
+            <span><span data-i18n="empInternalCostLbl">Internal Cost (+10%):</span> <strong class="emp-internal-cost-tag" id="modalInternalCostDisplay">--</strong></span>
+            <span>(<span data-i18n="empInSheetLbl">In Sheet:</span> <span class="emp-sheet-cost-tag" id="modalInternalSheetDisplay">--</span>)</span>
           </div>
           <div style="font-size: 11px; color: #fda4af; margin-top: 5px;" data-i18n="empInternalWarn">
             ⚠️ Note: This confidential company price will never appear on the client's exported card.
@@ -3904,13 +3907,18 @@
           </div>
 
           <div class="vip-card-export" id="exportVipCard" style="filter: blur(10px) grayscale(0.5); pointer-events: none; user-select: none; opacity: 0.6; position: relative; overflow: hidden;">
-          <!-- Transparent Country Flag Watermark in Export Card Background -->
+          <!-- Full-Cover Transparent Country Flag Watermark in Export Card Background (60% Transparency) -->
           <div class="vip-card-country-watermark" id="vipExportCountryWatermark" aria-hidden="true"></div>
+          <div class="vip-card-overlay-shade" aria-hidden="true"></div>
           <div class="card-brand-row" style="position: relative; z-index: 1;">
             <div class="brand-logo-mini">
               <span class="logo-box">51</span>
               <span class="logo-title">51Talk Global</span>
             </div>
+            <span class="vip-custid-badge" id="previewCustomerIdBadge"><i class="fa-solid fa-id-badge"></i> ID: <span id="previewCustomerIdVal">------</span></span>
+            <span class="vip-country-pill" id="previewCountryPill"><span class="country-pill-flag" id="previewCountryFlag">🇸🇦</span> <span id="previewCountryName">المملكة العربية السعودية</span></span>
+            <span class="vip-gold-pill" id="previewVipPill"><i class="fa-solid fa-award"></i> VIP Professional Program</span>
+          </div>
             <span class="vip-custid-badge" id="previewCustomerIdBadge"><i class="fa-solid fa-id-badge"></i> ID: <span id="previewCustomerIdVal">------</span></span> <span class="vip-gold-pill" id="previewVipPill"><i class="fa-solid fa-award"></i> VIP Professional Program</span>
           </div>
 
@@ -3934,9 +3942,9 @@
             <!-- Right Column in RTL (اليمين): Hero Discounted Tuition -->
             <div class="modal-pricing-right-col">
               <span class="modal-discounted-sublabel" id="previewDiscountedSublabel">السعر بعد الخصم:</span>
-              <div class="card-new-figure" id="previewClientPrice">3,630 <span class="card-curr-sign">SAR</span></div>
+              <div class="card-new-figure" id="previewClientPrice">-- <span class="card-curr-sign"></span></div>
               <div class="modal-class-rate-badge-row">
-                <span class="modal-class-rate-after-badge" id="previewClassRateAfter">⚡ فقط <strong>24.2 SAR</strong> / حصة</span>
+                <span class="modal-class-rate-after-badge" id="previewClassRateAfter">⚡ فقط <strong>--</strong> / حصة</span>
               </div>
               <div class="savings-program-gift" id="previewGrantClassesText" style="display: none; margin-top: 6px;">🎁 +35 حصة هدية معتمدة</div>
             </div>
@@ -3947,9 +3955,9 @@
               <div class="modal-official-striked-row">
                 <span class="modal-price-sublabel" id="previewOfficialSublabel">السعر قبل الخصم:</span>
                 <div class="modal-horizontal-strike-wrap">
-                  <span class="modal-official-val" id="previewOfficialVal">6,380 SAR</span>
+                  <span class="modal-official-val" id="previewOfficialVal">--</span>
                 </div>
-                <span class="modal-class-rate-strike" id="previewClassRateBefore">(42.5 SAR / class)</span>
+                <span class="modal-class-rate-strike" id="previewClassRateBefore"></span>
               </div>
 
               <!-- Bottom (تحتيه): Total Savings with "وفر" and value -->
@@ -3960,7 +3968,7 @@
                     <div class="savings-highlight-row">
                       <i class="fa-solid fa-piggy-bank"></i>
                       <span class="savings-word-label" id="previewSavingsWordLabel">وفر</span>
-                      <span class="savings-value-display" id="previewSavingsVal">2,750 SAR</span>
+                      <span class="savings-value-display" id="previewSavingsVal">--</span>
                     </div>
                   </div>
                   <span class="savings-badge-pill" id="previewSavingsPctTag">43% OFF</span>
@@ -5391,12 +5399,12 @@
     // =========================================================================
     
     const GCC_VECTOR_FLAGS = {
-      KSA: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#006C35"/><g fill="#ffffff"><path d="M160 270 h280 v10 h-280 z M180 262 l-25 13 25 13 v-8 h20 v-10 h-20 z"/><text x="300" y="210" font-family=\"\'Cairo\', Arial, sans-serif\" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle" letter-spacing="3">لا إله إلا الله محمد رسول الله</text></g></svg>',
-      UAE: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#ffffff"/><rect width="600" height="133.3" fill="#00732f"/><rect y="266.6" width="600" height="133.4" fill="#000000"/><rect width="160" height="400" fill="#ff0000"/></svg>',
-      Qatar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#8D1B3D"/><path d="M0 0 h180 l50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 H0 z" fill="#ffffff"/></svg>',
-      Kuwait: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#ffffff"/><rect width="600" height="133.3" fill="#007A3D"/><rect y="266.6" width="600" height="133.4" fill="#CE1126"/><polygon points="0,0 170,133.3 170,266.6 0,400" fill="#000000"/></svg>',
-      Bahrain: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#CE1126"/><path d="M0 0 h160 l60 40 -60 40 60 40 -60 40 60 40 -60 40 60 40 -60 40 60 40 -60 40 H0 z" fill="#ffffff"/></svg>',
-      Oman: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" rx="20" fill="#CE1126"/><rect width="600" height="133.3" fill="#ffffff"/><rect y="266.6" width="600" height="133.4" fill="#008000"/><rect width="160" height="400" fill="#CE1126"/><g transform="translate(80, 65) scale(0.65)" stroke="#ffffff" stroke-width="6" fill="none"><path d="M-30,-25 L30,25 M30,-25 L-30,25"/><path d="M0,-40 L0,30" stroke-width="8"/></g></svg>'
+      KSA: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="none"><rect width="600" height="400" fill="#006C35"/><g fill="#ffffff"><path d="M160 270 h280 v10 h-280 z M180 262 l-25 13 25 13 v-8 h20 v-10 h-20 z"/><text x="300" y="210" font-family="\'Cairo\', Arial, sans-serif" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle" letter-spacing="3">لا إله إلا الله محمد رسول الله</text></g></svg>',
+      UAE: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="none"><rect width="600" height="400" fill="#ffffff"/><rect width="600" height="133.3" fill="#00732f"/><rect y="266.6" width="600" height="133.4" fill="#000000"/><rect width="160" height="400" fill="#ff0000"/></svg>',
+      Qatar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="none"><rect width="600" height="400" fill="#8D1B3D"/><path d="M0 0 h180 l50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 50 22.2 -50 22.2 H0 z" fill="#ffffff"/></svg>',
+      Kuwait: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="none"><rect width="600" height="400" fill="#ffffff"/><rect width="600" height="133.3" fill="#007A3D"/><rect y="266.6" width="600" height="133.4" fill="#CE1126"/><polygon points="0,0 170,133.3 170,266.6 0,400" fill="#000000"/></svg>',
+      Bahrain: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="none"><rect width="600" height="400" fill="#CE1126"/><path d="M0 0 h160 l60 40 -60 40 60 40 -60 40 60 40 -60 40 60 40 -60 40 60 40 -60 40 H0 z" fill="#ffffff"/></svg>',
+      Oman: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="none"><rect width="600" height="400" fill="#CE1126"/><rect width="600" height="133.3" fill="#ffffff"/><rect y="266.6" width="600" height="133.4" fill="#008000"/><rect width="160" height="400" fill="#CE1126"/><g transform="translate(80, 65) scale(0.65)" stroke="#ffffff" stroke-width="6" fill="none"><path d="M-30,-25 L30,25 M30,-25 L-30,25"/><path d="M0,-40 L0,30" stroke-width="8"/></g></svg>'
     };
 
     const COUNTRIES_CONFIG = {
@@ -5471,7 +5479,9 @@
       currentCountry = countryCode;
       localStorage.setItem('51talk_selected_country', countryCode);
 
-      // Update active pills
+      const cfg = COUNTRIES_CONFIG[countryCode];
+
+      // 1. Update active pills
       document.querySelectorAll('.country-btn').forEach(btn => {
         if (btn.getAttribute('data-country') === countryCode) {
           btn.classList.add('active');
@@ -5480,12 +5490,17 @@
         }
       });
 
-      // Update active currency in I18N
-      const cfg = COUNTRIES_CONFIG[countryCode];
+      // 2. Update active currency and labels in I18N
       I18N.ar.currency = cfg.currencyAr;
       I18N.en.currency = cfg.currencyEn;
+      I18N.ar.cardPerClass = `${cfg.currencyAr} / للحصة`;
+      I18N.en.cardPerClass = `${cfg.currencyEn} / class`;
+      I18N.ar.modalOfficialLabel = `سعر القبول والتسجيل [${cfg.currencyAr}]`;
+      I18N.ar.modalDiscountedLabel = `السعر بعد الخصم [${cfg.currencyAr}]`;
+      I18N.en.modalOfficialLabel = `Admission & Registration Tuition [${cfg.currencyEn}]`;
+      I18N.en.modalDiscountedLabel = `Discounted Tuition [${cfg.currencyEn}]`;
 
-      // Update rate badge in top header
+      // 3. Update rate badge in top header
       const rateBadge = document.getElementById('rateBadgeText');
       if (rateBadge) {
         rateBadge.innerHTML = currentLanguage === 'ar'
@@ -5493,21 +5508,58 @@
           : `Official Packages ${cfg.flag} (${cfg.currencyEn})`;
       }
 
-      // Re-render package cards
+      // 4. Update brand country indicator in top header (Flag under country name)
+      const indName = document.getElementById('indicatorCountryName');
+      const indFlag = document.getElementById('indicatorCountryFlag');
+      if (indName) indName.textContent = currentLanguage === 'ar' ? cfg.nameAr : cfg.nameEn;
+      if (indFlag) indFlag.textContent = cfg.flag;
+
+      // 5. Update VIP preview card country watermark & country pill
+      const mw = document.getElementById('vipExportCountryWatermark');
+      if (mw) mw.innerHTML = cfg.flagSvg;
+      const prevPillFlag = document.getElementById('previewCountryFlag');
+      const prevPillName = document.getElementById('previewCountryName');
+      if (prevPillFlag) prevPillFlag.textContent = cfg.flag;
+      if (prevPillName) prevPillName.textContent = currentLanguage === 'ar' ? cfg.nameAr : cfg.nameEn;
+
+      // 6. Update modal input labels
+      const lblOfficial = document.getElementById('lblModalOfficialPrice');
+      if (lblOfficial) {
+        lblOfficial.textContent = currentLanguage === 'ar'
+          ? `سعر القبول والتسجيل [${cfg.currencyAr}]`
+          : `Admission & Registration Tuition [${cfg.currencyEn}]`;
+      }
+      const lblDisc = document.getElementById('lblModalDiscountedPrice');
+      if (lblDisc) {
+        lblDisc.textContent = currentLanguage === 'ar'
+          ? `السعر بعد الخصم [${cfg.currencyAr}]`
+          : `Discounted Tuition [${cfg.currencyEn}]`;
+      }
+
+      // 7. Re-render package cards on page
       renderAllSections();
 
-
-      // If offer modal is currently open, refresh inputs
-      if (selectedPlanObj && document.getElementById('cardModal') && document.getElementById('cardModal').classList.contains('active')) {
+      // 8. If offer modal is currently open or selectedPlanObj exists, refresh inputs
+      if (selectedPlanObj) {
         const isUpgrade = !selectedPlanObj.id.startsWith('rn-');
         const officialPrice = getOfficialPrice(selectedPlanObj, isUpgrade);
         const discountedPrice = getPlanFinalPrice(selectedPlanObj);
-        document.getElementById('modalOfficialPrice').value = officialPrice;
-        document.getElementById('modalDiscountedPrice').value = discountedPrice;
-        document.getElementById('modalInternalCostDisplay').textContent = `${discountedPrice.toLocaleString()} ${currentLanguage === 'ar' ? cfg.currencyAr : cfg.currencyEn}`;
-        document.getElementById('modalInternalSheetDisplay').textContent = `${getPlanSheetDiscCost(selectedPlanObj).toLocaleString()} ${currentLanguage === 'ar' ? cfg.currencyAr : cfg.currencyEn}`;
-        updateLivePreview();
+        const modalOff = document.getElementById('modalOfficialPrice');
+        const modalDisc = document.getElementById('modalDiscountedPrice');
+        if (modalOff) modalOff.value = officialPrice;
+        if (modalDisc) modalDisc.value = discountedPrice;
+        const internalCostDisplay = document.getElementById('modalInternalCostDisplay');
+        if (internalCostDisplay) {
+          internalCostDisplay.textContent = `${discountedPrice.toLocaleString()} ${currentLanguage === 'ar' ? cfg.currencyAr : cfg.currencyEn}`;
+        }
+        const internalSheetDisplay = document.getElementById('modalInternalSheetDisplay');
+        if (internalSheetDisplay) {
+          internalSheetDisplay.textContent = `${getPlanSheetDiscCost(selectedPlanObj).toLocaleString()} ${currentLanguage === 'ar' ? cfg.currencyAr : cfg.currencyEn}`;
+        }
       }
+
+      // 9. Refresh live preview
+      updateLivePreview();
 
       showToast(currentLanguage === 'ar'
         ? `${cfg.flag} تم التبديل إلى أسعار ${cfg.nameAr} (${cfg.currencyAr})`
@@ -5518,9 +5570,15 @@
     let currentSearchTerm = '';
 
     function switchLanguage(lang) {
-      const cfg = (typeof COUNTRIES_CONFIG !== 'undefined' && COUNTRIES_CONFIG[currentCountry]) ? COUNTRIES_CONFIG[currentCountry] : { currencyAr: 'ر.س', currencyEn: 'SAR' };
+      const cfg = (typeof COUNTRIES_CONFIG !== 'undefined' && COUNTRIES_CONFIG[currentCountry]) ? COUNTRIES_CONFIG[currentCountry] : { flag: '🇸🇦', nameAr: 'السعودية', nameEn: 'Saudi Arabia', currencyAr: 'ر.س', currencyEn: 'SAR' };
       I18N.ar.currency = cfg.currencyAr;
       I18N.en.currency = cfg.currencyEn;
+      I18N.ar.cardPerClass = `${cfg.currencyAr} / للحصة`;
+      I18N.en.cardPerClass = `${cfg.currencyEn} / class`;
+      I18N.ar.modalOfficialLabel = `سعر القبول والتسجيل [${cfg.currencyAr}]`;
+      I18N.ar.modalDiscountedLabel = `السعر بعد الخصم [${cfg.currencyAr}]`;
+      I18N.en.modalOfficialLabel = `Admission & Registration Tuition [${cfg.currencyEn}]`;
+      I18N.en.modalDiscountedLabel = `Discounted Tuition [${cfg.currencyEn}]`;
 
       currentLanguage = lang;
       const htmlEl = document.getElementById('htmlRoot');
@@ -5541,12 +5599,41 @@
 
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (I18N[lang][key]) {
+        if (I18N[lang] && I18N[lang][key]) {
           el.innerHTML = I18N[lang][key];
         }
       });
 
-      document.getElementById('rateBadgeText').innerHTML = I18N[lang].rateBadge;
+      // Update rate badge
+      const rateBadge = document.getElementById('rateBadgeText');
+      if (rateBadge) {
+        rateBadge.innerHTML = lang === 'ar'
+          ? `باقات معتمدة ${cfg.flag} (${cfg.currencyAr})`
+          : `Official Packages ${cfg.flag} (${cfg.currencyEn})`;
+      }
+
+      // Update brand indicator in header
+      const indName = document.getElementById('indicatorCountryName');
+      const indFlag = document.getElementById('indicatorCountryFlag');
+      if (indName) indName.textContent = lang === 'ar' ? cfg.nameAr : cfg.nameEn;
+      if (indFlag) indFlag.textContent = cfg.flag;
+
+      // Update country names on switcher buttons
+      if (typeof COUNTRIES_CONFIG !== 'undefined') {
+        Object.keys(COUNTRIES_CONFIG).forEach(cCode => {
+          const el = document.getElementById(`btnCountryName_${cCode}`);
+          if (el) {
+            el.textContent = lang === 'ar' ? COUNTRIES_CONFIG[cCode].shortAr : COUNTRIES_CONFIG[cCode].shortEn;
+          }
+        });
+      }
+
+      // Update VIP preview card country pill
+      const prevPillFlag = document.getElementById('previewCountryFlag');
+      const prevPillName = document.getElementById('previewCountryName');
+      if (prevPillFlag) prevPillFlag.textContent = cfg.flag;
+      if (prevPillName) prevPillName.textContent = lang === 'ar' ? cfg.nameAr : cfg.nameEn;
+
       document.getElementById('searchInput').placeholder = I18N[lang].searchPlaceholder;
 
       if (lang === 'ar') {
@@ -5560,10 +5647,18 @@
       }
 
       if (selectedPlanObj) {
-        const t = I18N[lang];
-        const internalCost = pricePlus10(selectedPlanObj.sheetDiscCost);
-        document.getElementById('modalInternalCostDisplay').textContent = `${internalCost.toLocaleString()} ${t.currency}`;
-        document.getElementById('modalInternalSheetDisplay').textContent = `${selectedPlanObj.sheetDiscCost.toLocaleString()} ${t.currency}`;
+        const isUpgrade = !selectedPlanObj.id.startsWith('rn-');
+        const officialPrice = getOfficialPrice(selectedPlanObj, isUpgrade);
+        const discountedPrice = getPlanFinalPrice(selectedPlanObj);
+        const activeCurr = lang === 'ar' ? cfg.currencyAr : cfg.currencyEn;
+        const modalOff = document.getElementById('modalOfficialPrice');
+        const modalDisc = document.getElementById('modalDiscountedPrice');
+        if (modalOff) modalOff.value = officialPrice;
+        if (modalDisc) modalDisc.value = discountedPrice;
+        const internalCostDisplay = document.getElementById('modalInternalCostDisplay');
+        if (internalCostDisplay) internalCostDisplay.textContent = `${discountedPrice.toLocaleString()} ${activeCurr}`;
+        const internalSheetDisplay = document.getElementById('modalInternalSheetDisplay');
+        if (internalSheetDisplay) internalSheetDisplay.textContent = `${getPlanSheetDiscCost(selectedPlanObj).toLocaleString()} ${activeCurr}`;
       }
 
       renderAllSections();
@@ -5666,7 +5761,9 @@
       card.style.overflow = 'hidden';
       card.innerHTML = `
         <!-- Transparent Country Flag Watermark in Card Background -->
+        <!-- Full-Cover Transparent Country Flag Background (60% Transparency) -->
         <div class="card-country-watermark" aria-hidden="true">${curCountryCfg.flagSvg}</div>
+        <div class="card-overlay-shade" aria-hidden="true"></div>
 
         ${ribbonHtml}
 
@@ -6242,7 +6339,8 @@
       const discountedPrice = getPlanFinalPrice(plan);
       const internalCost = getPlanFinalPrice(plan);
       const duration = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
-      const t = I18N[currentLanguage];
+      const cfg = COUNTRIES_CONFIG[currentCountry] || COUNTRIES_CONFIG.KSA;
+      const activeCurr = currentLanguage === 'ar' ? cfg.currencyAr : cfg.currencyEn;
 
       document.getElementById('modalPlanName').value = `${categoryName} (${typeName})`;
       document.getElementById('modalDuration').value = duration;
@@ -6251,23 +6349,31 @@
       document.getElementById('modalOfficialPrice').value = officialPrice;
       document.getElementById('modalDiscountedPrice').value = discountedPrice;
 
-      // Update modal official price label for renewal vs upgrade
+      // Update modal official price labels strictly using active country currency
       const lblOfficial = document.getElementById('lblModalOfficialPrice');
       if (lblOfficial) {
         lblOfficial.textContent = currentLanguage === 'ar'
-          ? `سعر القبول والتسجيل [${t.currency}]`
-          : `Admission & Registration Tuition [${t.currency}]`;
+          ? `سعر القبول والتسجيل [${activeCurr}]`
+          : `Admission & Registration Tuition [${activeCurr}]`;
       }
       const lblDisc = document.getElementById('lblModalDiscountedPrice');
       if (lblDisc) {
         lblDisc.textContent = currentLanguage === 'ar'
-          ? `السعر بعد الخصم [${t.currency}]`
-          : `Discounted Tuition [${t.currency}]`;
+          ? `السعر بعد الخصم [${activeCurr}]`
+          : `Discounted Tuition [${activeCurr}]`;
       }
 
       // Internal confidential reference for employee only
-      document.getElementById('modalInternalCostDisplay').textContent = `${internalCost.toLocaleString()} ${t.currency}`;
-      document.getElementById('modalInternalSheetDisplay').textContent = `${getPlanSheetDiscCost(plan).toLocaleString()} ${t.currency}`;
+      document.getElementById('modalInternalCostDisplay').textContent = `${internalCost.toLocaleString()} ${activeCurr}`;
+      document.getElementById('modalInternalSheetDisplay').textContent = `${getPlanSheetDiscCost(plan).toLocaleString()} ${activeCurr}`;
+
+      // Update VIP card watermark and country pill
+      const mw = document.getElementById('vipExportCountryWatermark');
+      if (mw) mw.innerHTML = cfg.flagSvg;
+      const prevPillFlag = document.getElementById('previewCountryFlag');
+      const prevPillName = document.getElementById('previewCountryName');
+      if (prevPillFlag) prevPillFlag.textContent = cfg.flag;
+      if (prevPillName) prevPillName.textContent = currentLanguage === 'ar' ? cfg.nameAr : cfg.nameEn;
 
       // 🛡️ CRITICAL FIX: ALWAYS RESET CUSTOMER-SPECIFIC DATA ON NEW PLAN OPEN TO PREVENT CROSS-CUSTOMER DATA LEAKS
       resetCustomerFormData(isFamily);
@@ -6278,6 +6384,7 @@
         if (repInput) repInput.value = currentRep.name;
       }
       document.getElementById('cardModal').classList.add('active');
+      updateLivePreview();
     }
 
     function closeModal() {
@@ -6285,11 +6392,17 @@
     }
 
     function updateLivePreview() {
-      const cfgCur = (typeof COUNTRIES_CONFIG !== 'undefined' && COUNTRIES_CONFIG[currentCountry]) ? COUNTRIES_CONFIG[currentCountry] : null;
-      if (cfgCur) {
-        const mw = document.getElementById('vipExportCountryWatermark');
-        if (mw) mw.innerHTML = cfgCur.flagSvg;
-      }
+      const cfgCur = (typeof COUNTRIES_CONFIG !== 'undefined' && COUNTRIES_CONFIG[currentCountry]) ? COUNTRIES_CONFIG[currentCountry] : { flag: '🇸🇦', nameAr: 'السعودية', nameEn: 'Saudi Arabia', currencyAr: 'ر.س', currencyEn: 'SAR', flagSvg: '' };
+      const activeCurr = currentLanguage === 'ar' ? cfgCur.currencyAr : cfgCur.currencyEn;
+
+      const mw = document.getElementById('vipExportCountryWatermark');
+      if (mw && cfgCur.flagSvg) mw.innerHTML = cfgCur.flagSvg;
+
+      const prevPillFlag = document.getElementById('previewCountryFlag');
+      const prevPillName = document.getElementById('previewCountryName');
+      if (prevPillFlag) prevPillFlag.textContent = cfgCur.flag;
+      if (prevPillName) prevPillName.textContent = currentLanguage === 'ar' ? cfgCur.nameAr : cfgCur.nameEn;
+
       const t = I18N[currentLanguage];
       const clientName = document.getElementById('modalClientName').value || (currentLanguage === 'ar' ? 'ولي أمر الطالب العزيز' : 'Dear Parent');
       const planName = document.getElementById('modalPlanName').value || '51Talk Package';
@@ -6329,15 +6442,13 @@
       const savingsPct = officialPrice > 0 ? Math.round((savingsVal / officialPrice) * 100) : 0;
 
       // Approved official tuition before discount (on the left)
-      const isRenew = (selectedPlanObj && selectedPlanObj.id && selectedPlanObj.id.startsWith('rn-')) ||
-                      (planName && (planName.includes('تجديد') || planName.toLowerCase().includes('renew')));
       const officialSublabel = document.getElementById('previewOfficialSublabel');
       if (officialSublabel) {
         officialSublabel.textContent = currentLanguage === 'ar'
           ? 'سعر القبول والتسجيل:'
           : 'Admission & Registration Tuition:';
       }
-      document.getElementById('previewOfficialVal').textContent = `${officialPrice.toLocaleString()} ${t.currency}`;
+      document.getElementById('previewOfficialVal').textContent = `${officialPrice.toLocaleString()} ${activeCurr}`;
 
       // Class rate before discount
       const classRateBeforeEl = document.getElementById('previewClassRateBefore');
@@ -6345,8 +6456,8 @@
         if (officialPrice > 0 && totalClasses > 0) {
           classRateBeforeEl.style.display = 'inline';
           classRateBeforeEl.textContent = currentLanguage === 'ar'
-            ? `(${rateBefore} ${t.currency} / للحصة)`
-            : `(${rateBefore} ${t.currency} / class)`;
+            ? `(${rateBefore} ${activeCurr} / للحصة)`
+            : `(${rateBefore} ${activeCurr} / class)`;
         } else {
           classRateBeforeEl.style.display = 'none';
         }
@@ -6354,7 +6465,7 @@
 
       // Discounted tuition figure
       document.getElementById('previewDiscountedSublabel').textContent = currentLanguage === 'ar' ? 'السعر بعد الخصم:' : 'Discounted Tuition:';
-      document.getElementById('previewClientPrice').innerHTML = `${discountedPrice.toLocaleString()} <span class="card-curr-sign">${t.currency}</span>`;
+      document.getElementById('previewClientPrice').innerHTML = `${discountedPrice.toLocaleString()} <span class="card-curr-sign">${activeCurr}</span>`;
 
       // Class rate after discount
       const classRateAfterEl = document.getElementById('previewClassRateAfter');
@@ -6362,14 +6473,14 @@
         if (discountedPrice > 0 && totalClasses > 0) {
           classRateAfterEl.style.display = 'inline-flex';
           classRateAfterEl.innerHTML = currentLanguage === 'ar'
-            ? `⚡ فقط <strong>${rateAfter} ${t.currency}</strong> / للحصة`
-            : `⚡ Only <strong>${rateAfter} ${t.currency}</strong> / class`;
+            ? `⚡ فقط <strong>${rateAfter} ${activeCurr}</strong> / للحصة`
+            : `⚡ Only <strong>${rateAfter} ${activeCurr}</strong> / class`;
         } else {
           classRateAfterEl.style.display = 'none';
         }
       }
 
-      // Catchy Total Savings Badge (Left Column underneath original price)
+      // Catchy Total Savings Badge
       const savingsWrap = document.getElementById('previewSavingsWrap');
       const savingsValEl = document.getElementById('previewSavingsVal');
       const savingsPctTag = document.getElementById('previewSavingsPctTag');
@@ -6378,7 +6489,7 @@
       if (savingsWrap && savingsValEl && savingsPctTag) {
         if (savingsVal > 0) {
           savingsWrap.style.display = 'flex';
-          savingsValEl.textContent = `${savingsVal.toLocaleString()} ${t.currency}`;
+          savingsValEl.textContent = `${savingsVal.toLocaleString()} ${activeCurr}`;
           savingsPctTag.textContent = `${savingsPct}% OFF`;
           if (savingsSublabel) {
             savingsSublabel.textContent = currentLanguage === 'ar' ? 'إجمالي التوفير:' : 'Total Savings:';
@@ -6496,6 +6607,8 @@
       const notes = (document.getElementById('modalNotes') ? document.getElementById('modalNotes').value : '').trim();
       const repName = (document.getElementById('modalRepName') ? document.getElementById('modalRepName').value : '').trim();
       const t = I18N[currentLanguage];
+      const cfgCur = (typeof COUNTRIES_CONFIG !== 'undefined' && COUNTRIES_CONFIG[currentCountry]) ? COUNTRIES_CONFIG[currentCountry] : { currencyAr: 'ر.س', currencyEn: 'SAR' };
+      const activeCurr = currentLanguage === 'ar' ? cfgCur.currencyAr : cfgCur.currencyEn;
 
       const divisor = totalSessions > 0 ? totalSessions : 1;
       const rateBefore = (officialPrice / divisor).toFixed(1);
@@ -6522,12 +6635,12 @@
           }
           msg += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
           if (officialPrice > 0 && officialPrice !== discountedPrice) {
-            msg += `💵 *${officialLabelAr}:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / للحصة~)\n`;
+            msg += `💵 *${officialLabelAr}:* ~${officialPrice.toLocaleString()} ${activeCurr}~ (~${rateBefore} ${activeCurr} / للحصة~)\n`;
           }
-          msg += `🔥 *السعر بعد الخصم:* *${discountedPrice.toLocaleString()} ${t.currency}*\n`;
-          msg += `⚡ *معدل الحصة:* فقط *${rateAfter} ${t.currency}* / للحصة\n`;
+          msg += `🔥 *السعر بعد الخصم:* *${discountedPrice.toLocaleString()} ${activeCurr}*\n`;
+          msg += `⚡ *معدل الحصة:* فقط *${rateAfter} ${activeCurr}* / للحصة\n`;
           if (savingsVal > 0) {
-            msg += `💰 *إجمالي التوفير للعميل:* *${savingsVal.toLocaleString()} ${t.currency}* (وفر ${savingsPct}%)\n`;
+            msg += `💰 *إجمالي التوفير للعميل:* *${savingsVal.toLocaleString()} ${activeCurr}* (وفر ${savingsPct}%)\n`;
           }
           msg += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
           msg += `⭐ *مزايا البرنامج الاحترافي:*\n`;
@@ -6553,12 +6666,12 @@
           }
           msg += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
           if (officialPrice > 0 && officialPrice !== discountedPrice) {
-            msg += `💵 *${officialLabelEn}:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / class~)\n`;
+            msg += `💵 *${officialLabelEn}:* ~${officialPrice.toLocaleString()} ${activeCurr}~ (~${rateBefore} ${activeCurr} / class~)\n`;
           }
-          msg += `🔥 *Discounted Tuition:* *${discountedPrice.toLocaleString()} ${t.currency}*\n`;
-          msg += `⚡ *Class Rate:* Only *${rateAfter} ${t.currency}* / class\n`;
+          msg += `🔥 *Discounted Tuition:* *${discountedPrice.toLocaleString()} ${activeCurr}*\n`;
+          msg += `⚡ *Class Rate:* Only *${rateAfter} ${activeCurr}* / class\n`;
           if (savingsVal > 0) {
-            msg += `💰 *Total Savings:* *${savingsVal.toLocaleString()} ${t.currency}* (${savingsPct}% OFF)\n`;
+            msg += `💰 *Total Savings:* *${savingsVal.toLocaleString()} ${activeCurr}* (${savingsPct}% OFF)\n`;
           }
           msg += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
           msg += `⭐ *Key Program Highlights:*\n`;
@@ -6582,11 +6695,11 @@
         msg += `⏳ *المدة الزمنية:* ${duration}\n`;
         msg += `🎯 *إجمالي الحصص المعتمدة:* ${totalSessions} حصة خاصة (${baseSessions} أساسية + 🎁 *${bonusSessions} حصة مجانية بالكامل*)\n\n`;
         if (officialPrice > 0 && officialPrice !== discountedPrice) {
-          msg += `💵 *${officialLabelAr}:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} للحصة~)\n`;
+          msg += `💵 *${officialLabelAr}:* ~${officialPrice.toLocaleString()} ${activeCurr}~ (~${rateBefore} ${activeCurr} للحصة~)\n`;
         }
-        msg += `🔥 *السعر بعد الخصم (البرنامج الاحترافي):* *${discountedPrice.toLocaleString()} ${t.currency}* (⚡ فقط *${rateAfter} ${t.currency}* للحصة)\n`;
+        msg += `🔥 *السعر بعد الخصم (البرنامج الاحترافي):* *${discountedPrice.toLocaleString()} ${activeCurr}* (⚡ فقط *${rateAfter} ${activeCurr}* للحصة)\n`;
         if (savingsVal > 0) {
-          msg += `💰 *إجمالي التوفير للعميل:* *${savingsVal.toLocaleString()} ${t.currency}* (وفر ${savingsPct}%)\n`;
+          msg += `💰 *إجمالي التوفير للعميل:* *${savingsVal.toLocaleString()} ${activeCurr}* (وفر ${savingsPct}%)\n`;
         }
         msg += `\n`;
         msg += `⭐ *مزايا البرنامج الاحترافي:*\n`;
@@ -6605,11 +6718,11 @@
         msg += `⏳ *Duration:* ${duration}\n`;
         msg += `🎯 *Total Class Allocation:* ${totalSessions} Private Classes (${baseSessions} Standard + 🎁 *${bonusSessions} Free Gift Classes*)\n\n`;
         if (officialPrice > 0 && officialPrice !== discountedPrice) {
-          msg += `💵 *${officialLabelEn}:* ~${officialPrice.toLocaleString()} ${t.currency}~ (~${rateBefore} ${t.currency} / class~)\n`;
+          msg += `💵 *${officialLabelEn}:* ~${officialPrice.toLocaleString()} ${activeCurr}~ (~${rateBefore} ${activeCurr} / class~)\n`;
         }
-        msg += `🔥 *Discounted Tuition (Professional Program):* *${discountedPrice.toLocaleString()} ${t.currency}* (⚡ Only *${rateAfter} ${t.currency}* / class)\n`;
+        msg += `🔥 *Discounted Tuition (Professional Program):* *${discountedPrice.toLocaleString()} ${activeCurr}* (⚡ Only *${rateAfter} ${activeCurr}* / class)\n`;
         if (savingsVal > 0) {
-          msg += `💰 *Total Savings:* *${savingsVal.toLocaleString()} ${t.currency}* (${savingsPct}% OFF)\n`;
+          msg += `💰 *Total Savings:* *${savingsVal.toLocaleString()} ${activeCurr}* (${savingsPct}% OFF)\n`;
         }
         msg += `\n`;
         msg += `⭐ *Key Program Highlights:*\n`;
@@ -7106,6 +7219,8 @@
       const discountedPrice = getPlanFinalPrice(plan);
       const duration = currentLanguage === 'ar' ? plan.durationAr : plan.durationEn;
       const t = I18N[currentLanguage];
+      const cfgCur = (typeof COUNTRIES_CONFIG !== 'undefined' && COUNTRIES_CONFIG[currentCountry]) ? COUNTRIES_CONFIG[currentCountry] : { currencyAr: 'ر.س', currencyEn: 'SAR' };
+      const activeCurr = currentLanguage === 'ar' ? cfgCur.currencyAr : cfgCur.currencyEn;
       const savings = officialPrice - discountedPrice;
 
       let summary = '';
@@ -7114,17 +7229,17 @@
         summary = `🌟 *عرض 51Talk - ${categoryDisplayName} (${typeName})*
 • المدة: ${duration}
 • إجمالي الحصص: ${plan.total} حصة (${plan.base} أساسية + 🎁 ${plan.bonus} مجانية بالكامل)
-• ${officialLbl}: ~${officialPrice.toLocaleString()} ${t.currency}~
-• السعر بعد الخصم: *${discountedPrice.toLocaleString()} ${t.currency}* (بمعدل ${(discountedPrice / plan.total).toFixed(1)} ${t.currency} / للحصة)
-• إجمالي التوفير: *وفر ${savings.toLocaleString()} ${t.currency}*`;
+• ${officialLbl}: ~${officialPrice.toLocaleString()} ${activeCurr}~
+• السعر بعد الخصم: *${discountedPrice.toLocaleString()} ${activeCurr}* (بمعدل ${(discountedPrice / plan.total).toFixed(1)} ${activeCurr} / للحصة)
+• إجمالي التوفير: *وفر ${savings.toLocaleString()} ${activeCurr}*`;
       } else {
         const officialLbl = 'Admission & Registration Tuition';
         summary = `🌟 *51Talk ${categoryDisplayName} (${typeName})*
 • Duration: ${duration}
 • Total Classes: ${plan.total} (${plan.base} Standard + 🎁 ${plan.bonus} Free Bonus Gifts)
-• ${officialLbl}: ~${officialPrice.toLocaleString()} ${t.currency}~
-• Discounted Price: *${discountedPrice.toLocaleString()} ${t.currency}* (Average ${(discountedPrice / plan.total).toFixed(1)} ${t.currency} / class)
-• Total Savings: *Save ${savings.toLocaleString()} ${t.currency}*`;
+• ${officialLbl}: ~${officialPrice.toLocaleString()} ${activeCurr}~
+• Discounted Price: *${discountedPrice.toLocaleString()} ${activeCurr}* (Average ${(discountedPrice / plan.total).toFixed(1)} ${activeCurr} / class)
+• Total Savings: *Save ${savings.toLocaleString()} ${activeCurr}*`;
       }
 
       navigator.clipboard.writeText(summary).then(() => {
