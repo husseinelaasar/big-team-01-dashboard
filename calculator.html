@@ -3861,6 +3861,13 @@
           </div>
 
           <!-- Auxiliary: Download High-Res PNG Card -->
+          
+          <!-- Primary Action: Confirm & Sync Card with Admin Dashboard -->
+          <button type="button" class="btn-action-download-bar" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border: 1.5px solid #34d399; margin-bottom: 8px; box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);" onclick="confirmAndLogOfferCard()">
+            <i class="fa-solid fa-cloud-arrow-up" style="color: #fff;"></i>
+            <span style="color: #fff; font-weight: 800;" data-i18n="btnConfirmLog">توثيق واستخراج الكارت للداشبورد (Confirm & Sync Offer)</span>
+          </button>
+          
           <button type="button" class="btn-action-download-bar" onclick="downloadCardPNG()">
             <i class="fa-solid fa-download"></i>
             <span data-i18n="btnDownloadCardBar">تحميل الكارت كصورة PNG عالية الدقة (3X)</span>
@@ -6261,6 +6268,14 @@
     }
 
     // High-Res PNG Download
+    
+    // Manual Confirm & Log Card to Cloud Dashboard
+    function confirmAndLogOfferCard() {
+      if (!validateCustomerId()) return;
+      logStudyPlanExportEvent('Card Confirmed & Logged', selectedPlanObj);
+      showToast(currentLanguage === 'ar' ? '✅ تم توثيق كارت العرض وربطه بلوحة المتابعة الإدارية بنجاح!' : '✅ Offer card successfully documented & synced with Admin Dashboard!');
+    }
+
     function downloadCardPNG() {
       if (!validateCustomerId()) return;
       showToast(currentLanguage === 'ar' ? '⏳ جاري تصدير كارت العرض بجودة فائقة...' : 'Generating high-resolution card PNG...');
