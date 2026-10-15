@@ -3281,6 +3281,8 @@
       width: 100%;
       max-width: 475px;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
     }
     .card-lock-watermark-overlay {
@@ -3802,8 +3804,7 @@
             
             <span class="vip-gold-pill" id="previewVipPill"><i class="fa-solid fa-award"></i> VIP Professional Program</span>
           </div>
-            <span class="vip-custid-badge" id="previewCustomerIdBadge"><i class="fa-solid fa-id-badge"></i> ID: <span id="previewCustomerIdVal">------</span></span> <span class="vip-gold-pill" id="previewVipPill"><i class="fa-solid fa-award"></i> VIP Professional Program</span>
-          </div>
+
 
           <div class="client-greeting-block">
             <div class="client-greeting-name" id="previewClientName">Dear Parent</div>
@@ -6377,6 +6378,9 @@
             const clonedCard = clonedDoc.getElementById('exportVipCard');
             if (clonedCard) {
               clonedCard.style.letterSpacing = '0px';
+              clonedCard.style.filter = 'none';
+              clonedCard.style.opacity = '1';
+              clonedCard.style.transform = 'none';
               if (currentLanguage === 'ar') {
                 clonedCard.setAttribute('dir', 'rtl');
                 clonedCard.style.fontFamily = "'Cairo', 'Tajawal', sans-serif";
