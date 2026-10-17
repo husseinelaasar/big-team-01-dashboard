@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Team 01 — Executive Performance Dashboard</title>
+  <meta name="description" content="Official Executive Performance Dashboard for 51Talk Big Team 01. Live sales analytics, renewal & upgrade breakdown, team pacing, and SOP compliance.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Big Team 1 Dashboard — Executive Sales Performance">
+  <meta property="og:description" content="Official Live Performance Dashboard for 51Talk Big Team 01 (Senior Manager: Saber Hussien). Live revenue tracking, pacing benchmarks, M2 upgrade analysis, and SOP compliance.">
+  <meta property="og:image" content="https://husseinelaasar.github.io/big-team-01-dashboard/assets/big_team_1_banner.jpg">
+  <meta property="og:url" content="https://husseinelaasar.github.io/big-team-01-dashboard/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Big Team 1 Dashboard — Executive Sales Performance">
+  <meta name="twitter:description" content="Official Live Performance Dashboard for 51Talk Big Team 01. Accelerate Growth. Achieve Targets.">
+  <meta name="twitter:image" content="https://husseinelaasar.github.io/big-team-01-dashboard/assets/big_team_1_banner.jpg">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261017_144000">
+  <script src="assets/chart.umd.min.js"></script>
+  <script>
+    if (typeof Chart === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"><\/script>');
+    }
+  </script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <h2>Big Team 01</h2>
+      <p>Synchronizing Performance Intelligence...</p>
+    </div>
+  </div>
+  <script>
+    // Bulletproof Failsafe: Dismiss loader after 1.2s under all circumstances
+    setTimeout(function() {
+      var l = document.getElementById('loader');
+      if (l) {
+        l.classList.add('fade-out');
+        setTimeout(function() { if (l && l.parentNode) l.parentNode.removeChild(l); }, 500);
+      }
+    }, 1200);
+  </script>
+
+  <!-- Main Application Container -->
+  <div id="app" class="app">
+    
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+      <div class="nav-left">
+        <div class="logo-mark">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="2.5"/>
+            <path d="M10 16L14 20L22 12" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <h1 class="nav-title">Big Team 01 — <span class="gradient-text">Executive Dashboard</span></h1>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
+            Senior Manager: <strong>Saber Hussien</strong> | Month: <strong>October 2026 (MTD Day 3/31)</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <!-- Live Data Badges -->
+        <div class="data-freshness">
+          <span class="pulse-dot"></span>
+          <span id="dataDate">Sep 1-15, 2026 (Day 15)</span>
+        </div>
+        <div class="nav-source-badge" title="Verified against CRM Renewal Performance & POOL_Detail16">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          CRM & Lens Verified
+        </div>
+      </div>
+    </nav>
+
+    <!-- Data Synchronization Verification Widget -->
+    <div class="sheet-sync-container">
+      <div class="sheet-sync-header">
+        <div class="sheet-sync-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Data Sources Sync Verification
+        </div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Auto-verifies hourly latest downloads from lp.51talkjr.com & CRM</div>
+      </div>
+
+      <div class="sheet-sync-grid">
+        <!-- 1. Lens Sheet -->
+        <div class="sheet-sync-item" id="syncItemLens">
+          <label class="sheet-checkbox-label">
+            <input type="checkbox" id="chkLensSheet" checked disabled>
+            <span class="checkbox-custom"></span>
+            <span class="sheet-name">1. Lens Sheet (POOL_Detail16)</span>
+          </label>
+          <div class="sheet-time" id="timeLensSheet">Updated: 2026-09-16 12:07:34</div>
+        </div>
+
+        <!-- 2. English Club -->
+        <div class="sheet-sync-item" id="syncItemEC">
+          <label class="sheet-checkbox-label">
+            <input type="checkbox" id="chkECSheet" checked disabled>
+            <span class="checkbox-custom"></span>
+            <span class="sheet-name">2. English Club Sheet</span>
+          </label>
+          <div class="sheet-time" id="timeECSheet">Updated: 2026-09-16 14:38:00</div>
+        </div>
+
+        <!-- 3. SOP Sheet -->
+        <div class="sheet-sync-item" id="syncItemSOP">
+          <label class="sheet-checkbox-label">
+            <input type="checkbox" id="chkSOPSheet" checked disabled>
+            <span class="checkbox-custom"></span>
+            <span class="sheet-name">3. SOP Compliance Sheet</span>
+          </label>
+          <div class="sheet-time" id="timeSOPSheet">Updated: 2026-09-16 14:22:00</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar Navigation -->
+    <div class="tab-bar">
+      <button class="tab active" data-tab="overview" onclick="switchTab('overview')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Executive Overview
+      </button>
+      <button class="tab" data-tab="teams" onclick="switchTab('teams')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Small Teams (5)
+      </button>
+      <button class="tab" data-tab="individuals" onclick="switchTab('individuals')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Individual Reps (21)
+      </button>
+      <button class="tab" data-tab="consumption" onclick="switchTab('consumption')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Class Consumption (65%)
+        <span style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">65% GOAL</span>
+      </button>
+      <button class="tab" data-tab="upgrade" onclick="switchTab('upgrade')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Early Upgrade Hub (20%)
+        <span style="background: rgba(192, 132, 252, 0.2); color: #c084fc; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">20% GOAL</span>
+      </button>
+      <button class="tab" data-tab="uncovered" onclick="switchTab('uncovered')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg>
+        Uncovered Leads (5,196)
+        <span style="background: linear-gradient(135deg, #ef4444, #f97316); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">PRIORITY HUB</span>
+      </button>
+      <button class="tab" data-tab="englishclub" onclick="switchTab('englishclub')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        English Club (45%)
+        <span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">45% GOAL</span>
+      </button>
+      <button class="tab" data-tab="sop" onclick="switchTab('sop')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        SOP Compliance
+      </button>
+      <button class="tab" data-tab="operations" onclick="switchTab('operations')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        Operations Master
+        <span style="background: linear-gradient(135deg, #10b981, #06b6d4); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">LIVE</span>
+      </button>
+      <button class="tab" data-tab="calculator" onclick="switchTab('calculator')" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(217, 119, 6, 0.2)); border: 1px solid rgba(245, 158, 11, 0.45); color: #fcd34d;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+        51 Talk Packages Calculator
+        <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 800;">RATE CARD</span>
+      </button>
+      <button class="tab" data-tab="recommendations" onclick="switchTab('recommendations')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        Actionable Recommendations
+      </button>
+      <button class="tab" data-tab="comparison" onclick="switchTab('comparison')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Performance Comparison
+        <span style="background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">YD vs TD</span>
+      </button>
+      <button class="tab" data-tab="mtd" onclick="switchTab('mtd')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        MTD Trajectory
+        <span style="background: linear-gradient(135deg, #10b981, #6366f1); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">Day 3-31</span>
+      </button>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- TAB 1: EXECUTIVE OVERVIEW -->
+    <!-- ============================================== -->
+    <section id="tab-overview" class="tab-content active">
+      <!-- 4 Core Executive KPI Cards -->
+      <div class="kpi-grid">
+        <!-- 1. Total Cash MTD -->
+        <div class="kpi-card kpi-cash">
+          <div class="kpi-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="kpi-label">Total Cash Revenue (MTD)</div>
+          <div class="kpi-value" id="totalCash">$51,611</div>
+          <div class="kpi-sub" id="cashTarget">Target: $305,950 | Projected: $99,987</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 0%;"></div></div>
+          <div class="kpi-pct" id="cashPct">24.19% Achieved</div>
+        </div>
+
+        <!-- 2. Total Contracts & Breakdown -->
+        <div class="kpi-card kpi-contracts">
+          <div class="kpi-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="kpi-label">Total Contracts (Orders)</div>
+          <div class="kpi-value" id="totalContracts">53</div>
+          <div class="kpi-sub" id="contractsSub">Normal: 41 | Upgrade M2: 12</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="contractsBar" style="width: 0%;"></div></div>
+          <div class="kpi-pct" id="contractsPct">Avg: $1,093 / contract</div>
+        </div>
+
+        <!-- 3. Target Achievement & Daily Benchmark Pacing -->
+        <div class="kpi-card kpi-ach" style="border-top: 4px solid #38bdf8;">
+          <div class="kpi-icon" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="kpi-label">Day 15 Target Benchmark</div>
+          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">24.19%</div>
+          <div class="kpi-sub" id="achSub">Day 6 Benchmark: 20% | Target: $305,950</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 0%; background: linear-gradient(90deg, #6366f1, #38bdf8);"></div></div>
+          <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 6 of 31 | Expected Target Pace: 20% (25 Days Left)</div>
+        </div>
+
+        <!-- 4. Active Reps & Upgrade Conversion -->
+        <div class="kpi-card kpi-base">
+          <div class="kpi-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="kpi-label">Active Reps & M2 Conversion</div>
+          <div class="kpi-value" id="totalReps">21 Reps</div>
+          <div class="kpi-sub" id="baseLeads">12 M2 Upgrades / 497 Pool Base | 20% Goal: 100 (97 needed)</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="repsBar" style="width: 0%;"></div></div>
+          <div class="kpi-pct" id="repsPct">2.4% M2 Upgrade Conversion (3/497)</div>
+        </div>
+      </div>
+
+      <!-- Small Teams Pacing & Target Comparison -->
+      <div class="section-header">
+        <div>
+          <h2>Small Teams & Big Team 01 — Cash Achievement vs Target</h2>
+          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 4px;">
+            Comparison of revenue velocity across all teams and Big Team 01 against the official pacing curve (5% to 103%)
+          </p>
+        </div>
+        <span class="source-tag">Source: CRM live data (Oct 1–3, 2026)</span>
+      </div>
+      <div class="chart-container" id="teamBarsContainer"></div>
+
+      <!-- ========================================================================= -->
+      <!-- BIG TEAM 01 ACHIEVEMENT SUMMARY & SMALL TEAMS STRATEGIC FEEDBACK (TOTALS ONLY) -->
+      <!-- ========================================================================= -->
+      <div id="bigTeamAchievementSummaryContainer" style="margin-top: 32px;"></div>
+
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 2: SMALL TEAMS DEEP DIVE -->
+    <!-- ============================================== -->
+    <section id="tab-teams" class="tab-content">
+      <div class="section-header">
+        <h2>Small Team Performance Breakdown</h2>
+        <span class="source-tag">Teams 01, 05, 10, 13, 30 | Oct 1–3, 2026 (Day 3)</span>
+      </div>
+      <div id="smallTeamCards" class="team-cards-grid"></div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 3: Individual Reps (21) -->
+    <!-- ============================================== -->
+    <section id="tab-individuals" class="tab-content">
+      <div class="section-header">
+        <h2>Individual Performance Deep Dive</h2>
+        <span class="source-tag" id="individualRepsCountTag">21 Active Sales Specialists | Oct 1–3, 2026 (Day 3)</span>
+      </div>
+      
+      <!-- Filter and Sort Controls -->
+      <div class="filter-bar">
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+          <label style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">Filter Team:</label>
+          <select id="teamFilter" class="filter-select">
+            <option value="all">All Small Teams (5)</option>
+            <option value="EGSS01">ME-EGSS01 (Ashraqatal)</option>
+            <option value="EGSS05">ME-EGSS05 (Ibrahimismaiel)</option>
+            <option value="EGSS10">ME-EGSS10 (AbdelrhmanShehata)</option>
+            <option value="EGSS13">ME-EGSS13 (Mohamedha)</option>
+            <option value="EGSS30">ME-EGSS30 (AdhmGadAllah)</option>
+          </select>
+          
+          <label style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-left: 8px;">Sort By:</label>
+          <select id="sortFilter" class="filter-select">
+            <option value="ach-desc" selected>Cash Achievement % (High to Low)</option>
+            <option value="comm-desc">💰 Expected Commission (Highest Payout)</option>
+            <option value="upg-rate-desc">Upgrade M2 Conversion % (High to Low)</option>
+            <option value="cover-rate-desc">M2 Cover Rate % (High to Low)</option>
+            <option value="cash-desc">Cash Revenue (High to Low)</option>
+            <option value="gap-desc">Target Gap (Highest Gap)</option>
+            <option value="upgrade-desc">Upgrade M2 Count</option>
+            <option value="contracts-desc">Contracts Count</option>
+          </select>
+        </div>
+
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <button id="viewToggleCards" class="view-btn">Cards View</button>
+          <button id="viewToggleTable" class="view-btn active">Table View</button>
+        </div>
+      </div>
+
+      <div id="individualCards" class="individual-cards-grid"></div>
+      
+      <div id="individualTableView" class="table-wrapper" style="margin-top: 14px; overflow-x: auto; width: 100%;">
+        <table class="data-table" id="individualFullTable" style="width: 100%;">
+          <thead>
+            <tr>
+              <th style="width: 24px; padding: 6px 3px;">#</th>
+              <th style="text-align: left !important; min-width: 110px; padding: 6px 4px;">Rep Name</th>
+              <th style="min-width: 65px; padding: 6px 3px;">Team</th>
+              <th style="min-width: 65px; padding: 6px 3px;">Cash ($)</th>
+              <th style="min-width: 65px; padding: 6px 3px;">Target ($)</th>
+              <th style="min-width: 55px; padding: 6px 3px;">Ach %</th>
+              <th style="min-width: 75px; color: #38bdf8; font-weight: 800; padding: 6px 3px;">Pace</th>
+              <th style="min-width: 35px; padding: 6px 2px;">M2</th>
+              <th style="min-width: 35px; padding: 6px 2px;">Base</th>
+              <th style="min-width: 95px; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); border-left: 1px solid rgba(192, 132, 252, 0.25); border-right: 1px solid rgba(192, 132, 252, 0.25); padding: 6px 4px;">&#127919; 20% Goal (Needed)</th>
+              <th style="min-width: 55px; padding: 6px 3px;">Conv %</th>
+              <th style="min-width: 80px; color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.25); padding: 6px 4px;">&#128176; Exp. Comm ($)</th>
+              <th style="min-width: 80px; color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.05); padding: 6px 4px;">&#128640; Next Band ($)</th>
+              <th style="min-width: 70px; color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.05); border-right: 1px solid rgba(250, 204, 21, 0.25); padding: 6px 4px;">&#127919; Gap ($)</th>
+              <th style="min-width: 50px; color: #facc15; font-weight: 800; padding: 6px 3px;">Touch</th>
+              <th style="min-width: 45px; padding: 6px 3px;">Contr.</th>
+              <th style="min-width: 70px; padding: 6px 3px;">Status</th>
+            </tr>
+          </thead>
+          <tbody id="individualFullTableBody"></tbody>
+          <tfoot id="individualFullTableFoot"></tfoot>
+        </table>
+      </div>
+    </section>
+
+    
+    <!-- ============================================== -->
+    <!-- TAB: DEDICATED CLASS CONSUMPTION HUB (65% GOAL)-->
+    <!-- ============================================== -->
+    <section id="tab-consumption" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2 style="display: flex; align-items: center; gap: 10px;">
+            <span>🎓</span> Big Team 01 — Class Consumption Intelligence Hub
+            <span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; padding: 2px 8px;">BENCHMARK TARGET: 65.0% OVERALL</span>
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Active student consumption and Zero-Class rescue intelligence: Big Team 01 (Sector Total) vs 5 Small Teams against the official 65.0% operational target.
+          </p>
+        </div>
+        <span class="source-tag">Source: All in one Master.xlsx (Class_Consumption_Leads_Detail)</span>
+      </div>
+
+      <!-- 4 Top Executive Consumption KPI Deck -->
+      <div class="consumption-kpi-deck" id="consumptionKpis" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-bottom: 28px;"></div>
+
+      <!-- Small Teams Comparison Matrix vs 65% Benchmark -->
+      <div class="table-wrapper" style="margin-bottom: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Small Teams Class Consumption Matrix vs 65% Target
+          </h3>
+          <span style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 3px 10px; border-radius: 4px; font-weight: 700;">65.0% Operational Benchmark</span>
+        </div>
+        <div id="consumptionTeamsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 20px;"></div>
+      </div>
+
+      <!-- Individual SS Rep Consumption Table -->
+      <div class="table-wrapper">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+            <span>📋</span> Individual Sales Rep Class Consumption Performance (21 Reps)
+          </h3>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
+            <select id="consumptionTeamFilter" onchange="renderConsumptionTab()" class="filter-select" style="padding: 7px 12px; font-size: 0.82rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;">
+              <option value="ALL">All Teams (Big Team 01)</option>
+              <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal)</option>
+              <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour)</option>
+              <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata)</option>
+              <option value="ME-EGSS13">ME-EGSS13 (Mohamedha)</option>
+              <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah)</option>
+            </select>
+          </div>
+        </div>
+        <div id="consumptionTableContainer"></div>
+      </div>
+    </section>
+
+<!-- ============================================== -->
+    <!-- TAB 4: RENEWAL VS UPGRADE DETAIL -->
+    <!-- ============================================== -->
+    <section id="tab-breakdown" class="tab-content">
+      <!-- Section Header -->
+      <div class="section-header">
+        <div>
+          <h2 style="display: flex; align-items: center; gap: 10px;">
+            <span>🚀</span> Early Upgrade (M2) Strategic Intelligence Hub
+            <span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; padding: 2px 8px;">OFFICIAL SCRM RECONCILED</span>
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Dedicated conversion cockpit: M-2 student pool base, outreach contact intensity, 20% milestone pacing, remaining gaps, and rep-level actionable directives.
+          </p>
+        </div>
+        <span class="source-tag">Source: 海外SS-SCRM看板 (Subsheet: 升舱率达成 Col F &amp; POOL22)</span>
+      </div>
+
+      <!-- 1. Top Executive Upgrade KPI Deck (6 Metric Cards) -->
+      <div class="upgrade-kpi-deck" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 24px;">
+        <!-- Card 1: Actual Upgrades -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #10b981;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #34d399; text-transform: uppercase; letter-spacing: 0.05em;">Actual M-2 Upgrades</span>
+            <span class="pill-badge" id="upgCardRate" style="background: rgba(148, 163, 184, 0.15); color: #94a3b8;">0.0% Conv.</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #fff; margin-top: 6px;" id="upgCardActual">0</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Awaiting October SCRM Allocation</div>
+        </div>
+        <!-- Card 2: M-2 Pool Base -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #6366f1;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #818cf8; text-transform: uppercase; letter-spacing: 0.05em;">M-2 Students Pool Base</span>
+            <span class="pill-badge pill-badge-cyan" style="font-size: 0.68rem;">5 Small Teams</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #fff; margin-top: 6px;" id="upgCardBase">0</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Awaiting October Leads Allocation</div>
+        </div>
+        <!-- Card 3: 20% Benchmark Target -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #c084fc;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #c084fc; text-transform: uppercase; letter-spacing: 0.05em;">20% Benchmark Goal</span>
+            <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">Official Target</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #c084fc; margin-top: 6px;" id="upgCardTarget">0</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Target Pending (Base × 20%)</div>
+        </div>
+        <!-- Card 4: Remaining to Target -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #f43f5e;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #f43f5e; text-transform: uppercase; letter-spacing: 0.05em;">Remaining to 20% Goal</span>
+            <span class="pill-badge pill-badge-rose" style="font-size: 0.68rem;">Deficit Gap</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #94a3b8; margin-top: 6px;" id="upgCardNeeded">0</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Pacing: Target Pending</div>
+        </div>
+        <!-- Card 5: Target Progress -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #38bdf8;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.05em;">Milestone Progress</span>
+            <span class="pill-badge" id="upgCardProg" style="background: rgba(148, 163, 184, 0.15); color: #94a3b8;">0.0%</span>
+          </div>
+          <div style="margin-top: 14px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-bottom: 5px;">
+              <span>0 / 0 Contracts</span>
+              <strong style="color: #38bdf8;">0.0%</strong>
+            </div>
+            <div style="height: 7px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden;">
+              <div id="upgCardProgBar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #6366f1, #38bdf8); border-radius: 999px;"></div>
+            </div>
+          </div>
+          <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 8px;">October 2026 Kickoff</div>
+        </div>
+        <!-- Card 6: Outreach Intensity -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #facc15;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #facc15; text-transform: uppercase; letter-spacing: 0.05em;">Outreach Touch Rate</span>
+            <span class="pill-badge pill-badge-amber" style="font-size: 0.68rem;">POOL22</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #facc15; margin-top: 6px;" id="upgCardTouch">0.0%</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">October Baseline</div>
+        </div>
+      </div>
+
+      <!-- 2. Small Teams Upgrade Comparison Grid -->
+      <div style="margin-bottom: 24px;">
+        <h3 style="font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>📊</span> Small Teams Upgrade Conversion &amp; 20% Target Velocity
+        </h3>
+        <div id="upgradeSmallTeamsCards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;"></div>
+      </div>
+
+      <!-- 3. Strategic Actionable Playbook (4 Key Tactical Directives) -->
+      <div class="glass-panel-executive" style="margin-bottom: 28px; padding: 22px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <span style="font-size: 0.72rem; font-weight: 800; color: #818cf8; text-transform: uppercase; letter-spacing: 0.06em;">Operational Intervention Hub</span>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 2px 0 0 0; display: flex; align-items: center; gap: 8px;">
+              <span>🎯</span> Executive Upgrade Playbook &amp; Tactical Directives
+            </h3>
+          </div>
+          <span class="pill-badge pill-badge-cyan"><span class="pulse-dot pulse-dot-emerald"></span> Live Directives Active</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;" id="upgradePlaybookCards">
+          <div class="metric-tile-modern" style="border-left: 3px solid #38bdf8; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #38bdf8; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
+              <span>🎯</span> DIRECTIVE 1: October Leads Baseline
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
+              <strong>21 Active Reps Across 5 Teams:</strong> Ready for new October student assignments.<br>
+              <span style="color: #38bdf8; font-weight: 600;">Status:</span> Awaiting official SCRM M-2 student allocation.
+            </div>
+          </div>
+          <div class="metric-tile-modern" style="border-left: 3px solid #10b981; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
+              <span>⚡</span> DIRECTIVE 2: 20% Upgrade Milestone
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
+              <strong>Standard Benchmark:</strong> 20% conversion across assigned student base.<br>
+              <span style="color: #34d399; font-weight: 600;">Formula:</span> Goal = Ceil(Base × 0.20) will auto-activate upon allocation.
+            </div>
+          </div>
+          <div class="metric-tile-modern" style="border-left: 3px solid #818cf8; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #818cf8; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
+              <span>📚</span> DIRECTIVE 3: Class Consumption Target (65%)
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
+              <strong>Macro Benchmark:</strong> 65% Overall student lesson attendance.<br>
+              <span style="color: #a5b4fc; font-weight: 600;">Priority:</span> Immediate rescue of 0-class students across all teams.
+            </div>
+          </div>
+          <div class="metric-tile-modern" style="border-left: 3px solid #f59e0b; padding: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #f59e0b; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
+              <span>🗣️</span> DIRECTIVE 4: English Club Target (45%)
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
+              <strong>Student Base Goal:</strong> 45% English Club attendance.<br>
+              <span style="color: #fde047; font-weight: 600;">Cadence:</span> Drive early session bookings during week 1.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Interactive Table Controls (Filters, Search & Sort) -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <!-- Team Filter -->
+          <select id="upgradeTeamFilter" class="modern-select">
+            <option value="ALL">All Small Teams (5)</option>
+            <option value="EGSS01">ME-EGSS01 (Ashraqatal)</option>
+            <option value="EGSS05">ME-EGSS05 (Ibrahimismaiel)</option>
+            <option value="EGSS10">ME-EGSS10 (AbdelrhmanShehata)</option>
+            <option value="EGSS13">ME-EGSS13 (Mohamedha)</option>
+            <option value="EGSS30">ME-EGSS30 (AdhmGadAllah)</option>
+          </select>
+          <!-- Sort Filter -->
+          <select id="upgradeSortFilter" class="modern-select">
+            <option value="rate-desc" selected>Conversion Rate % (Highest → Lowest)</option>
+            <option value="upgrades-desc">Actual Upgrades (High → Low)</option>
+            <option value="cov-desc">Coverage / Touch Intensity % (Highest → Lowest)</option>
+            <option value="needed-asc">Remaining Needed (Closest to 20% Goal)</option>
+            <option value="needed-desc">Remaining Needed (Largest Gap First)</option>
+            <option value="base-desc">Leads Base (Largest Pool First)</option>
+            <option value="cov-asc">Coverage / Touch Intensity % (Lowest → Highest)</option>
+          </select>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <input type="text" id="upgradeSearchInput" class="modern-input" placeholder="🔍 Search rep name..." style="width: 230px;">
+        </div>
+      </div>
+
+      <!-- 5. Master Full Upgrade Performance Table -->
+      <div class="table-wrapper modern-table-card" style="overflow-x: auto;">
+        <table class="data-table" id="masterUpgradeTable" style="width: 100%;">
+          <thead>
+            <tr>
+              <th style="width: 24px; padding: 6px 3px;">#</th>
+              <th style="text-align: left !important; min-width: 110px; padding: 6px 4px;">Rep Name</th>
+              <th style="min-width: 65px; padding: 6px 3px;">Team</th>
+              <th style="min-width: 45px; padding: 6px 3px;">Base</th>
+              <th style="min-width: 85px; color: #facc15; font-weight: 800; padding: 6px 3px;">Coverage %</th>
+              <th style="min-width: 75px; color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.08); border-left: 1px solid rgba(16, 185, 129, 0.25); padding: 6px 3px;">Upgrades</th>
+              <th style="min-width: 65px; color: #a78bfa; font-weight: 800; padding: 6px 3px;">Conv %</th>
+              <th style="min-width: 65px; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); padding: 6px 3px;">20% Goal</th>
+              <th style="min-width: 85px; color: #f43f5e; font-weight: 800; background: rgba(244, 63, 94, 0.08); border-right: 1px solid rgba(244, 63, 94, 0.25); padding: 6px 3px;">Remaining</th>
+              <th style="min-width: 65px; padding: 6px 3px;">Goal Ach %</th>
+              <th style="min-width: 70px; padding: 6px 3px;">Status</th>
+              <th style="text-align: left !important; min-width: 200px; color: #38bdf8; font-weight: 700; padding: 6px 6px;">Actionable Recommendations</th>
+              <th style="min-width: 80px; padding: 6px 3px; text-align: center;">Data Sheet</th>
+            </tr>
+          </thead>
+          <tbody id="masterUpgradeTableBody"></tbody>
+          <tfoot id="masterUpgradeTableFoot"></tfoot>
+        </table>
+      </div>
+
+      <!-- 6. Official Upgrade Base Data Sheets & Individual Member Download Hub -->
+      <div class="glass-panel-executive" id="upgradeBaseLeadsHub" style="margin-top: 32px; padding: 24px; border: 1px solid rgba(192, 132, 252, 0.3); background: rgba(15, 23, 42, 0.75);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <span style="font-size: 1.5rem;">📥</span>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin: 0; display: inline-flex; align-items: center; gap: 8px;">
+                October 2026 Upgrade Base Data Sheets &amp; Member Download Hub
+              </h3>
+              <span class="pill-badge pill-badge-purple" style="font-size: 0.75rem; font-weight: 700;">497 STUDENT ACCOUNTS</span>
+              <span class="pill-badge pill-badge-cyan" style="font-size: 0.75rem; font-weight: 700;">M1 &amp; M2 AUTHORITATIVE ALLOCATION</span>
+            </div>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin: 6px 0 0 0; line-height: 1.5;">
+              Authoritative student-level allocation for all 5 Small Teams and 21 Sales Specialists. Every team member can search, inspect, and download their personalized upgrade leads sheet directly.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <a href="leads/upgrade_base/M1_M2_Upgrade_Base_Master.csv" download="M1_M2_Upgrade_Base_Master.csv" class="pill-badge pill-badge-cyan" style="text-decoration: none; padding: 7px 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+              <span>📊</span> Download Sector Master (CSV)
+            </a>
+            <a href="attachments/M1 &amp; M2 Data Base ID.xlsx" download="M1 &amp; M2 Data Base ID.xlsx" class="pill-badge pill-badge-purple" style="text-decoration: none; padding: 7px 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+              <span>📗</span> Download Master Excel (.XLSX)
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Download Cards Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 22px;">
+          <!-- Card A: Select & Download My Personal Sheet -->
+          <div class="metric-tile-modern" style="border-left: 4px solid #c084fc; padding: 18px; background: rgba(30, 41, 59, 0.7);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <div style="font-weight: 800; color: #e9d5ff; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
+                <span>👤</span> Download My Individual Rep Sheet
+              </div>
+              <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">21 Active Reps</span>
+            </div>
+            <p style="font-size: 0.78rem; color: #cbd5e1; margin-bottom: 12px; line-height: 1.4;">
+              Select your name from the dropdown to instantly download your dedicated student base list with Student IDs and current M2 upgrade status.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <select id="memberUpgradeSelect" class="modern-select" style="flex: 1; min-width: 220px; background: #0f172a; border-color: rgba(192, 132, 252, 0.4); color: #fff;">
+                <option value="">-- Choose Your Name --</option>
+              </select>
+              <button type="button" id="btnDownloadMemberUpg" class="btn-primary" style="background: linear-gradient(135deg, #9333ea, #6366f1); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 0.82rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+                <span>⬇️</span> Download (CSV)
+              </button>
+            </div>
+          </div>
+
+          <!-- Card B: Small Teams Quick Downloads -->
+          <div class="metric-tile-modern" style="border-left: 4px solid #06b6d4; padding: 18px; background: rgba(30, 41, 59, 0.7);">
+            <div style="display: center; justify-content: space-between; align-items: center; margin-bottom: 10px; display: flex;">
+              <div style="font-weight: 800; color: #a5f3fc; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
+                <span>👥</span> Download Small Team Sheets
+              </div>
+              <span class="pill-badge pill-badge-cyan" style="font-size: 0.68rem;">5 Small Teams</span>
+            </div>
+            <p style="font-size: 0.78rem; color: #cbd5e1; margin-bottom: 12px; line-height: 1.4;">
+              Team Leaders and Managers can download consolidated student sheets for any small team:
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <a href="leads/upgrade_base/ME-EGSS01_Upgrade_Base.csv" download="ME-EGSS01_Upgrade_Base.csv" class="pill-badge" style="background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 01 (145 Leads)
+              </a>
+              <a href="leads/upgrade_base/ME-EGSS05_Upgrade_Base.csv" download="ME-EGSS05_Upgrade_Base.csv" class="pill-badge" style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 05 (113 Leads)
+              </a>
+              <a href="leads/upgrade_base/ME-EGSS10_Upgrade_Base.csv" download="ME-EGSS10_Upgrade_Base.csv" class="pill-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 10 (93 Leads)
+              </a>
+              <a href="leads/upgrade_base/ME-EGSS13_Upgrade_Base.csv" download="ME-EGSS13_Upgrade_Base.csv" class="pill-badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 13 (83 Leads)
+              </a>
+              <a href="leads/upgrade_base/ME-EGSS30_Upgrade_Base.csv" download="ME-EGSS30_Upgrade_Base.csv" class="pill-badge" style="background: rgba(244, 63, 94, 0.2); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.4); text-decoration: none; padding: 5px 10px; font-size: 0.75rem; font-weight: 700;">
+                Team 30 (63 Leads)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Data Sheet Table Viewer -->
+        <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
+          <!-- Controls Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;" id="upgTableFilterTabs">
+              <button type="button" class="pill-badge active" data-filter="ALL" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">All Leads (497)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS01" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 01 (145)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS05" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 05 (113)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS10" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 10 (93)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS13" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 13 (83)</button>
+              <button type="button" class="pill-badge" data-filter="ME-EGSS30" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 30 (63)</button>
+              <button type="button" class="pill-badge pill-badge-emerald" data-filter="UPGRADED" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">⭐ Upgraded (10)</button>
+              <button type="button" class="pill-badge pill-badge-amber" data-filter="PENDING" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">⏳ Pending (487)</button>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <input type="text" id="upgStudentSearchInput" class="modern-input" placeholder="🔍 Search Student ID, Rep, Team..." style="width: 250px; font-size: 0.8rem; padding: 6px 12px;">
+              <button type="button" id="btnExportFilteredUpg" class="pill-badge pill-badge-cyan" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem; border: none;">
+                📥 Export Filtered View (CSV)
+              </button>
+            </div>
+          </div>
+
+          <!-- Table Container -->
+          <div class="table-wrapper modern-table-card" style="max-height: 480px; overflow-y: auto;">
+            <table class="data-table" id="upgradeStudentsLiveTable" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th style="width: 35px; text-align: center;">#</th>
+                  <th style="min-width: 110px; text-align: left !important;">Student ID</th>
+                  <th style="min-width: 160px; text-align: left !important;">Sales Specialist (SS)</th>
+                  <th style="min-width: 120px; text-align: center;">Small Team</th>
+                  <th style="min-width: 130px; text-align: center;">M2 Upgrade Status</th>
+                  <th style="min-width: 110px; text-align: center;">Rep Leads Download</th>
+                </tr>
+              </thead>
+              <tbody id="upgradeStudentsLiveTableBody"></tbody>
+            </table>
+          </div>
+
+          <!-- Pagination Bar -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #94a3b8;">
+            <div id="upgTablePaginationInfo">Showing 1-25 of 497 student accounts</div>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <button type="button" id="btnUpgPrevPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">◀ Prev</button>
+              <span id="upgCurrentPageDisplay" style="color: #fff; font-weight: 700; font-family: var(--font-mono); margin: 0 4px;">1 / 20</span>
+              <button type="button" id="btnUpgNextPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">Next ▶</button>
+              <select id="upgPageSizeSelect" class="modern-select" style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">
+                <option value="25" selected>25 per page</option>
+                <option value="50">50 per page</option>
+                <option value="100">100 per page</option>
+                <option value="9999">Show All (497)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- ============================================== -->
+    <!-- TAB: DEDICATED ENGLISH CLUB HUB (45% GOAL)     -->
+    <!-- ============================================== -->
+    <!-- ============================================== -->
+    <!-- TAB: UNCOVERED LEADS & OUTREACH HUB            -->
+    <!-- ============================================== -->
+    <section id="tab-uncovered" class="tab-content">
+      <!-- Section Header -->
+      <div class="section-header">
+        <div>
+          <h2 style="display: flex; align-items: center; gap: 10px;">
+            <span>🎯</span> Uncovered Leads &amp; Outreach Prioritization Hub
+            <span class="status-badge" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4); font-size: 0.75rem; padding: 2px 8px;">
+              STUDENT_DETAIL26 COL H = 0
+            </span>
+            <span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; padding: 2px 8px;">
+              CRM &amp; SOP RECONCILED
+            </span>
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Targeted outreach cockpit: strictly excludes covered accounts (Col H == 1) and isolates all 5,196 uncovered students. Sorted by priority: high past-month class attendees ranked first, with longest uncontacted accounts escalated for immediate outreach.
+          </p>
+        </div>
+        <span class="source-tag">Source: SS Lens Dashboard (Student_Detail26) + CRM Live + SOP Touches</span>
+      </div>
+
+      <!-- Top Executive KPI Deck (4 Cards) -->
+      <div class="uncovered-kpi-deck" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 24px;">
+        <!-- Card 1: Total Uncovered Accounts -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #ef4444;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #f87171; text-transform: uppercase; letter-spacing: 0.05em;">Total Uncovered Leads</span>
+            <span class="pill-badge pill-badge-rose" style="font-size: 0.68rem;">Col H = 0</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #fff; margin-top: 6px;" id="uncovCardTotal">5,196</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">84.3% of Sector Total (968 Covered Excluded)</div>
+        </div>
+
+        <!-- Card 2: High & VIP Class Attendees -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #f59e0b;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.05em;">High &amp; VIP Attendees</span>
+            <span class="pill-badge pill-badge-amber" style="font-size: 0.68rem;">&ge; 8 Classes</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #fbbf24; margin-top: 6px;" id="uncovCardHigh">5</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Highest Churn Risk if Uncontacted</div>
+        </div>
+
+        <!-- Card 3: Active Regular Attendees -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #10b981;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #34d399; text-transform: uppercase; letter-spacing: 0.05em;">Active Regular Learners</span>
+            <span class="pill-badge pill-badge-emerald" style="font-size: 0.68rem;">&ge; 4 Classes</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #34d399; margin-top: 6px;" id="uncovCardMed">499</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Prime Renewal &amp; Upgrade Prospects</div>
+        </div>
+
+        <!-- Card 4: Longest Uncontacted Accounts -->
+        <div class="metric-tile-modern" style="border-top: 3px solid #6366f1;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #818cf8; text-transform: uppercase; letter-spacing: 0.05em;">Longest Uncontacted</span>
+            <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">No Contact</span>
+          </div>
+          <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #818cf8; margin-top: 6px;" id="uncovCardUncontacted">1,834</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">No Outreach Record in Current Cycle</div>
+        </div>
+      </div>
+
+      <!-- Actionable Rep Downloads & Team Quick Access Toolbar -->
+      <div class="glass-panel-executive" style="margin-bottom: 24px; padding: 20px; background: rgba(17, 24, 39, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span style="font-size: 0.72rem; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.06em;">Self-Service Export Center</span>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 2px 0 0 0; display: flex; align-items: center; gap: 8px;">
+              <span>📥</span> Download Uncovered Leads Data (Individual SS, Small Teams &amp; Master)
+            </h3>
+          </div>
+          <a href="leads/uncovered_leads/Master_Uncovered_Leads.csv" download="Master_Uncovered_Leads.csv" class="pill-badge pill-badge-cyan" style="text-decoration: none; padding: 8px 16px; font-size: 0.82rem; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Sector Master (5,196 Leads CSV)
+          </a>
+        </div>
+
+        <!-- Download Selectors Row -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; align-items: center;">
+          <!-- Individual SS Download Selector -->
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.05);">
+            <label style="display: block; font-size: 0.78rem; font-weight: 700; color: #a5b4fc; margin-bottom: 8px;">
+              👤 Download for Specific Sales Specialist (21 Reps Available):
+            </label>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <select id="uncovRepDownloadSelect" class="modern-select" style="flex: 1; padding: 8px 12px; font-size: 0.82rem; background: var(--bg-card); color: #fff; border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 6px;">
+                <!-- Populated dynamically with all 21 reps -->
+              </select>
+              <button type="button" id="btnDownloadSelectedRep" class="pill-badge pill-badge-purple" style="cursor: pointer; padding: 8px 14px; font-size: 0.82rem; font-weight: 700; border: none; white-space: nowrap;">
+                📥 Download SS CSV
+              </button>
+            </div>
+          </div>
+
+          <!-- Small Teams Fast Download Buttons -->
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.05);">
+            <label style="display: block; font-size: 0.78rem; font-weight: 700; color: #34d399; margin-bottom: 8px;">
+              🏢 Small Teams Quick Download:
+            </label>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="leads/uncovered_leads/ME-EGSS01_Uncovered_Leads.csv" download="ME-EGSS01_Uncovered_Leads.csv" class="pill-badge" style="background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); text-decoration: none; padding: 6px 10px; font-size: 0.76rem; font-weight: 700;">
+                Team 01 (1,277)
+              </a>
+              <a href="leads/uncovered_leads/ME-EGSS05_Uncovered_Leads.csv" download="ME-EGSS05_Uncovered_Leads.csv" class="pill-badge" style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.4); text-decoration: none; padding: 6px 10px; font-size: 0.76rem; font-weight: 700;">
+                Team 05 (1,508)
+              </a>
+              <a href="leads/uncovered_leads/ME-EGSS10_Uncovered_Leads.csv" download="ME-EGSS10_Uncovered_Leads.csv" class="pill-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); text-decoration: none; padding: 6px 10px; font-size: 0.76rem; font-weight: 700;">
+                Team 10 (836)
+              </a>
+              <a href="leads/uncovered_leads/ME-EGSS13_Uncovered_Leads.csv" download="ME-EGSS13_Uncovered_Leads.csv" class="pill-badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); text-decoration: none; padding: 6px 10px; font-size: 0.76rem; font-weight: 700;">
+                Team 13 (919)
+              </a>
+              <a href="leads/uncovered_leads/ME-EGSS30_Uncovered_Leads.csv" download="ME-EGSS30_Uncovered_Leads.csv" class="pill-badge" style="background: rgba(244, 63, 94, 0.2); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.4); text-decoration: none; padding: 6px 10px; font-size: 0.76rem; font-weight: 700;">
+                Team 30 (656)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Data Sheet Table Viewer -->
+      <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
+        <!-- Controls Header: Sorting Modes & Filter Tabs -->
+        <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px;">
+          <!-- Row 1: Sorting Mode Selector -->
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: rgba(30, 41, 59, 0.5); padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05);">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 0.78rem; font-weight: 800; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
+                ⚡ Sorting Priority:
+              </span>
+              <button type="button" class="pill-badge active" id="btnSortPriority" data-sort="priority" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
+                🌟 Composite Priority (High Classes First + Oldest Connection First)
+              </button>
+              <button type="button" class="pill-badge" id="btnSortClasses" data-sort="classes" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
+                🎓 Highest Classes Attended First
+              </button>
+              <button type="button" class="pill-badge" id="btnSortOldestConn" data-sort="oldest" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
+                ⏳ Longest Uncontacted First (Oldest &rarr; Newest)
+              </button>
+              <button type="button" class="pill-badge" id="btnSortNewestConn" data-sort="newest" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
+                🆕 Recently Contacted First (Newest &rarr; Oldest)
+              </button>
+              <button type="button" class="pill-badge" id="btnSortStuId" data-sort="id" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
+                🆔 Student ID
+              </button>
+            </div>
+            <div style="font-size: 0.72rem; color: #94a3b8; font-family: var(--font-mono);">
+              Default: Classes &darr; &bull; Connection Time &uarr;
+            </div>
+          </div>
+
+          <!-- Row 2: Filter Tabs & Search Bar -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <!-- Team & Tier Filter Pills -->
+            <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;" id="uncovTableFilterTabs">
+              <button type="button" class="pill-badge active" data-team="ALL" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">All Teams (5,196)</button>
+              <button type="button" class="pill-badge" data-team="ME-EGSS01" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 01 (1,277)</button>
+              <button type="button" class="pill-badge" data-team="ME-EGSS05" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 05 (1,508)</button>
+              <button type="button" class="pill-badge" data-team="ME-EGSS10" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 10 (836)</button>
+              <button type="button" class="pill-badge" data-team="ME-EGSS13" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 13 (919)</button>
+              <button type="button" class="pill-badge" data-team="ME-EGSS30" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 30 (656)</button>
+              <span style="color: rgba(255,255,255,0.2); margin: 0 4px;">|</span>
+              <button type="button" class="pill-badge pill-badge-amber" data-tier="HIGH" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">🔥 High (&ge;8 cls)</button>
+              <button type="button" class="pill-badge pill-badge-emerald" data-tier="MED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">⭐ Regular (&ge;4 cls)</button>
+              <button type="button" class="pill-badge pill-badge-purple" data-tier="UNCONTACTED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">⏳ Uncontacted (1,834)</button>
+            </div>
+
+            <!-- Rep Dropdown, Search & Export View -->
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <select id="uncovFilterRepSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; background: var(--bg-card); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 150px;">
+                <option value="ALL">All 21 Reps</option>
+              </select>
+              <select id="uncovFilterPoolSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; background: var(--bg-card); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 130px;">
+                <option value="ALL">All Pools</option>
+                <option value="outside pool">outside pool</option>
+                <option value="Upgrade M2">Upgrade M2</option>
+                <option value="Exp Non-0">Exp Non-0</option>
+                <option value="FOE Non-0">FOE Non-0</option>
+                <option value="period">period</option>
+              </select>
+              <input type="text" id="uncovStudentSearchInput" class="modern-input" placeholder="🔍 Search Student ID, Rep, Source..." style="width: 220px; font-size: 0.8rem; padding: 6px 12px;">
+              <button type="button" id="btnExportFilteredUncov" class="pill-badge pill-badge-cyan" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem; border: none; white-space: nowrap;">
+                📥 Export Filtered View (CSV)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Container -->
+        <div class="table-wrapper modern-table-card" style="max-height: 520px; overflow-y: auto;">
+          <table class="data-table" id="uncoveredStudentsLiveTable" style="width: 100%;">
+            <thead>
+              <tr>
+                <th style="width: 45px; text-align: center;">Rank #</th>
+                <th style="min-width: 105px; text-align: left !important;">Student ID</th>
+                <th style="min-width: 155px; text-align: left !important;">Sales Specialist</th>
+                <th style="min-width: 110px; text-align: center;">Team</th>
+                <th style="min-width: 105px; text-align: center;">Pool</th>
+                <th style="min-width: 115px; text-align: center;">Attended Classes</th>
+                <th style="min-width: 145px; text-align: center;">Last Connection Time</th>
+                <th style="min-width: 140px; text-align: center;">Connection Source</th>
+                <th style="min-width: 100px; text-align: center;">Last Paid Date</th>
+                <th style="min-width: 180px; text-align: left !important;">Outreach Priority &amp; Directive</th>
+                <th style="min-width: 90px; text-align: center;">Rep CSV</th>
+              </tr>
+            </thead>
+            <tbody id="uncoveredStudentsLiveTableBody">
+              <tr><td colspan="11" style="text-align: center; padding: 30px; color: var(--text-muted);">Loading uncovered leads data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #94a3b8;">
+          <div id="uncovTablePaginationInfo">Showing 1-25 of 5,196 student accounts</div>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <button type="button" id="btnUncovFirstPage" class="pill-badge" style="cursor: pointer; padding: 4px 8px;">⏮ First</button>
+            <button type="button" id="btnUncovPrevPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">◀ Prev</button>
+            <span id="uncovCurrentPageDisplay" style="color: #fff; font-weight: 700; font-family: var(--font-mono); margin: 0 4px;">1 / 208</span>
+            <button type="button" id="btnUncovNextPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">Next ▶</button>
+            <button type="button" id="btnUncovLastPage" class="pill-badge" style="cursor: pointer; padding: 4px 8px;">Last ⏭</button>
+            <select id="uncovPageSizeSelect" class="modern-select" style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">
+              <option value="25" selected>25 per page</option>
+              <option value="50">50 per page</option>
+              <option value="100">100 per page</option>
+              <option value="250">250 per page</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-englishclub" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2 style="display: flex; align-items: center; gap: 10px;">
+            <span>🗣️</span> Big Team 01 — English Club Strategic Adoption Hub
+            <span class="status-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); font-size: 0.75rem; padding: 2px 8px;">BENCHMARK TARGET: 45.0% OF BASE</span>
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Student adoption, lesson reservations, and completed attendances: Big Team 01 (Sector Total) vs 5 Small Teams against the 45.0% adoption benchmark.
+          </p>
+        </div>
+        <span class="source-tag">Source: All in one Master.xlsx (English_Club_Leads_Detail)</span>
+      </div>
+
+      <!-- 4 Top Executive English Club KPI Deck -->
+      <div class="ec-kpi-deck" id="englishClubKpis" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-bottom: 28px;"></div>
+
+      <!-- Small Teams Comparison Matrix vs 45% Benchmark -->
+      <div class="table-wrapper" style="margin-bottom: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Small Teams English Club Benchmark Matrix vs 45% Target
+          </h3>
+          <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 3px 10px; border-radius: 4px; font-weight: 700;">45.0% Adoption Standard</span>
+        </div>
+        <div id="englishClubTeamsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 20px;"></div>
+      </div>
+
+      <!-- Individual SS Rep English Club Table -->
+      <div class="table-wrapper">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+            <span>📋</span> Individual Sales Rep English Club Adoption Roster (21 Reps)
+          </h3>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
+            <select id="englishClubTeamFilter" onchange="renderEnglishClubTab()" class="filter-select" style="padding: 7px 12px; font-size: 0.82rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;">
+              <option value="ALL">All Teams (Big Team 01)</option>
+              <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal)</option>
+              <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour)</option>
+              <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata)</option>
+              <option value="ME-EGSS13">ME-EGSS13 (Mohamedha)</option>
+              <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah)</option>
+            </select>
+          </div>
+        </div>
+        <div id="englishClubTableContainer"></div>
+      </div>
+    </section>
+
+<!-- ============================================== -->
+    <!-- TAB 5: SOP COMPLIANCE (EXECUTIVE REDESIGN) -->
+    <!-- ============================================== -->
+    <section id="tab-sop" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2>SOP Process Compliance & Operational Lifecycle Execution</h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Executive visibility across all 9 operational lifecycle stages for Big Team 01 (Sector Total) & Small Teams.
+          </p>
+        </div>
+        <span class="source-tag">Source: 51Talk Data Center (lp.51talkjr.com/#/data-center/business/SA-SSdata)</span>
+      </div>
+
+      <!-- 1. Top Executive Big Team 01 SOP Summary Cockpit (4 KPI Cards) -->
+      <div class="sop-executive-kpis" id="sopExecutiveKpis" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 28px;"></div>
+
+      <!-- 2. Master Comparison Matrix Table (Heatmap) -->
+      <div class="table-wrapper" style="margin-bottom: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
+          <h3 style="font-size: 1.1rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            SOP Lifecycle Compliance Heatmap (Unified Sector vs Small Teams Matrix)
+          </h3>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 0.75rem;">
+            <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 2px 8px; border-radius: 4px; font-weight: 600;">🟢 Target Met (≥ Target)</span>
+            <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 2px 8px; border-radius: 4px; font-weight: 600;">🟡 Near Target (-10%)</span>
+            <span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; padding: 2px 8px; border-radius: 4px; font-weight: 600;">🔴 Action Needed (&lt; -10%)</span>
+          </div>
+        </div>
+        <table class="data-table" id="sopMatrixTable" style="width: 100%;">
+          <thead>
+            <tr>
+              <th style="text-align: left !important; min-width: 240px;">SOP Lifecycle Stage</th>
+              <th style="min-width: 90px;">Benchmark</th>
+              <th style="min-width: 120px; background: rgba(99, 102, 241, 0.2); color: #fff; font-weight: 800;">Big Team 01</th>
+              <th style="min-width: 100px;">ME-EGSS01</th>
+              <th style="min-width: 100px;">ME-EGSS05</th>
+              <th style="min-width: 100px;">ME-EGSS10</th>
+              <th style="min-width: 100px;">ME-EGSS13</th>
+              <th style="min-width: 100px;">ME-EGSS30</th>
+              <th style="min-width: 110px;">Compliance</th>
+            </tr>
+          </thead>
+          <tbody id="sopMatrixTableBody"></tbody>
+          <tfoot id="sopMatrixTableFoot"></tfoot>
+        </table>
+      </div>
+
+      <!-- 3. Stage-by-Stage Detailed Visual Progression Cards -->
+      <div style="margin-bottom: 36px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px;">
+          <h3 style="font-size: 1.1rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            SOP Operational Lifecycle Breakdown: Sector Total vs Small Teams
+          </h3>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">9 Operational Lifecycle Rounds</span>
+        </div>
+        <div id="sopContent" class="sop-grid"></div>
+      </div>
+
+      <!-- 4. Dedicated Small Teams SOP Cards Section at the Bottom -->
+      <div style="margin-top: 40px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 10px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Small Teams SOP Scorecards | Team Performance
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+              Comprehensive evaluation of each small team across all 9 SOP lifecycle rounds, with rankings, completion rates, and Team Leader guidance.
+            </p>
+          </div>
+          <span style="font-size: 0.8rem; background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 4px 14px; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3);">
+            5 Small Teams Active
+          </span>
+        </div>
+        <div id="sopSmallTeamCards" class="sop-teams-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;"></div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 6: RECOMMENDATIONS -->
+    <!-- ============================================== -->
+    <section id="tab-recommendations" class="tab-content">
+      <div class="section-header">
+        <h2>Actionable Strategic Recommendations</h2>
+        <span class="source-tag">Targeted Interventions & Opportunities</span>
+      </div>
+      <div id="recommendationsList" class="recommendations-container"></div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TAB 7: OPERATIONS MASTER (ALL IN ONE INTEGRATION) -->
+    <!-- ============================================== -->
+    <section id="tab-operations" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2>Operations Master — Daily Task Execution & Student Rescue</h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Cross-functional operational tasks from All in One Master (SS Pending SOP, Unfixed Teachers, Zero-Class Rescue, and English Club).
+          </p>
+        </div>
+        <span class="source-tag">Source: All in one Master.xlsx (Operational Live Feed)</span>
+      </div>
+
+      <!-- Sales Rep & Small Teams Self-Service Operational Portal -->
+      <div class="rep-self-portal" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.95)); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-lg); padding: 22px 26px; margin-bottom: 28px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35); position: relative; overflow: hidden; backdrop-filter: blur(10px);">
+        <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gradient-primary);"></div>
+        
+        <!-- Header row -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span style="font-size: 1.25rem;">📊</span>
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 0;">Operational Leads &amp; Tasks Cockpit</h3>
+              <span class="pulse-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.7rem; padding: 2px 8px; border-radius: 6px; font-weight: 700;">LIVE METRICS</span>
+            </div>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 4px 0 0 0;">
+              Review assigned student leads and actionable operational task counts by Individual Sales Representative or Consolidated Small Team.
+            </p>
+          </div>
+        </div>
+
+        <!-- Two-Column Interactive Selection Hub (Rep Leads & Small Teams Leads) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 16px; margin-top: 14px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+          
+          <!-- Column 1: Individual Sales Rep Selection -->
+          <div style="background: rgba(30, 41, 59, 0.55); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 1.1rem;">👤</span>
+                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">1. Individual Sales Rep Breakdown</h4>
+                </div>
+                <span style="font-size: 0.68rem; background: rgba(99, 102, 241, 0.15); color: #818cf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">21 REPS</span>
+              </div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0 0 12px 0;">Select your name to review individual task counts and student breakdown directly on-screen.</p>
+            </div>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <select id="personalRepSelect" onchange="onPersonalRepSelected()" style="width: 100%; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff; cursor: pointer;">
+                <option value="">-- Select Your Name (Sales Rep) --</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Column 2: Small Team Selection -->
+          <div style="background: rgba(30, 41, 59, 0.55); border: 1px solid rgba(6, 182, 212, 0.35); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 1.1rem;">👥</span>
+                  <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">2. Small Team Breakdown</h4>
+                </div>
+                <span style="font-size: 0.68rem; background: rgba(6, 182, 212, 0.15); color: #38bdf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">5 SMALL TEAMS</span>
+              </div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0 0 12px 0;">Select Small Team to review consolidated operational leads for all team members.</p>
+            </div>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <select id="personalTeamSelect" onchange="onPersonalTeamSelected()" style="width: 100%; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(6, 182, 212, 0.4); color: #fff; cursor: pointer;">
+                <option value="">-- Select Small Team --</option>
+                <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal - Team 01)</option>
+                <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour - Team 05)</option>
+                <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata - Team 10)</option>
+                <option value="ME-EGSS13">ME-EGSS13 (Mohamedha - Team 13)</option>
+                <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah - Team 30)</option>
+                <option value="BIG_TEAM_01">⭐ Big Team 01 (All Teams Combined / Sector Total)</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Rep Personal Mini-Cockpit -->
+        <div id="repPersonalSummary" style="display: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <span style="font-size: 0.84rem; font-weight: 800; color: #10b981;">👤 Representative Individual Summary:</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;" id="repSummaryCards">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Dynamic Small Team Mini-Cockpit -->
+        <div id="teamPersonalSummary" style="display: none; margin-top: 20px; padding-top: 18px; border-top: 1px dashed rgba(6, 182, 212, 0.35);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+            <span id="teamSummaryTitle" style="font-size: 0.88rem; font-weight: 800; color: #38bdf8;"></span>
+            <span id="teamRepsCountBadge" style="font-size: 0.74rem; color: #94a3b8; background: rgba(255,255,255,0.06); padding: 3px 10px; border-radius: 12px;"></span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;" id="teamSummaryCards">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 51 Talk Packages Calculator Quick-Access Banner -->
+      <div style="
+        display: flex; justify-content: space-between; align-items: center;
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.16) 0%, rgba(30, 41, 59, 0.85) 100%);
+        border: 1px solid rgba(245, 158, 11, 0.4); border-left: 5px solid #f59e0b;
+        border-radius: 14px; padding: 14px 20px; margin-bottom: 22px;
+        flex-wrap: wrap; gap: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      ">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="
+            width: 44px; height: 44px; border-radius: 10px;
+            background: linear-gradient(135deg, #ffc72c, #f59e0b);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; font-weight: 900; color: #0f172a; flex-shrink: 0;
+            box-shadow: 0 0 16px rgba(245, 158, 11, 0.4);
+          ">51</div>
+          <div>
+            <div style="font-size: 1rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+              51 Talk Packages Calculator
+              <span style="background: #f59e0b; color: #0f172a; font-size: 0.65rem; padding: 2px 8px; border-radius: 6px; font-weight: 900;">OFFICIAL RATE CARD</span>
+            </div>
+            <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 3px;">
+              Single &amp; Family (2 &amp; 3 Kids) • Upgrade &amp; Renewal • Approved prices with +10% markup &amp; Professional Program bonuses
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <button onclick="document.getElementById('pkg-calc-section').scrollIntoView({behavior: 'smooth'})" style="
+            padding: 9px 18px; background: linear-gradient(135deg, #f59e0b, #d97706);
+            border: none; border-radius: 8px; color: #0f172a; font-size: 0.82rem;
+            font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 6px;
+            box-shadow: 0 0 14px rgba(245, 158, 11, 0.35); transition: transform 0.15s;
+          " onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='none'">
+            <span>🏷️</span> View Rates Below ↓
+          </button>
+          <a href="calculator.html" target="_blank" style="
+            padding: 9px 16px; background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 8px; color: #fcd34d; font-size: 0.82rem;
+            font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;
+          ">
+            <span>🚀</span> Open Full Generator ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Module Summary Hero Cards -->
+      <div class="op-kpi-grid">
+        <!-- Module 1 Card -->
+        <div class="op-card m1 active" onclick="switchOperationsModule(1)" id="opCard1">
+          <div class="op-title">Module 1: SOP Pending Tasks</div>
+          <div class="op-value" id="opSopTotal">0</div>
+          <div class="op-sub">
+            <strong style="color: #94a3b8;">0</strong> Round 1 Awareness Leads<br>
+            21 Active SS Reps
+          </div>
+        </div>
+
+        <!-- Module 2 Card -->
+        <div class="op-card m2" onclick="switchOperationsModule(2)" id="opCard2">
+          <div class="op-title">Module 2: Unfixed Teachers</div>
+          <div class="op-value" id="opFtTotal">0</div>
+          <div class="op-sub">
+            M0 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 80%)<br>
+            M1 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 80%)
+          </div>
+        </div>
+
+        <!-- Module 3 Card -->
+        <div class="op-card m3" onclick="switchOperationsModule(3)" id="opCard3">
+          <div class="op-title">Module 3: Class Consumption & Zero-Class (65% Goal)</div>
+          <div class="op-value" id="opCcTotal">0</div>
+          <div class="op-sub">
+            <strong style="color: #94a3b8;">0</strong> Zero-Class Leads (Rescue)<br>
+            Target: 65% Overall Consumption
+          </div>
+        </div>
+
+        <!-- Module 4 Card -->
+        <div class="op-card m4" onclick="switchOperationsModule(4)" id="opCard4">
+          <div class="op-title">Module 4: English Club (45% Goal)</div>
+          <div class="op-value" id="opEcGoal">0</div>
+          <div class="op-sub">
+            Base: 0 | Attended: <strong style="color: #94a3b8;">0</strong><br>
+            Target: <strong style="color: #60a5fa;">45% of Base</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module Selector Pills & Team Filter -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+        <div class="op-module-pills" style="margin-bottom: 0;">
+          <button class="op-pill p1 active" onclick="switchOperationsModule(1)" id="opPill1">
+            <span>📋</span> Module 1: SOP Pending (557 Tasks) (SOP Tasks)
+          </button>
+          <button class="op-pill p2" onclick="switchOperationsModule(2)" id="opPill2">
+            <span>👩‍🏫</span> Module 2: Unfixed Teachers (1,680 Leads - M0/M1/M2)
+          </button>
+          <button class="op-pill p3" onclick="switchOperationsModule(3)" id="opPill3">
+            <span>🎓</span> Module 3: Class Consumption & Zero-Class (65% Goal)
+          </button>
+          <button class="op-pill p4" onclick="switchOperationsModule(4)" id="opPill4">
+            <span>🗣️</span> Module 4: English Club (45% Goal)
+          </button>
+          <button class="op-pill p5" onclick="document.getElementById('pkg-calc-section').scrollIntoView({behavior: 'smooth'})" id="opPill5" style="border: 1.5px solid rgba(245, 158, 11, 0.7); background: rgba(245, 158, 11, 0.16); color: #fcd34d; font-weight: 700;">
+            <span>🏷️</span> 51 Talk Packages Calculator
+          </button>
+        </div>
+
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
+          <select id="opTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;">
+            <option value="ALL">All Teams (Big Team 01)</option>
+            <option value="ME-EGSS01">ME-EGSS01</option>
+            <option value="ME-EGSS05">ME-EGSS05</option>
+            <option value="ME-EGSS10">ME-EGSS10</option>
+            <option value="ME-EGSS13">ME-EGSS13</option>
+            <option value="ME-EGSS30">ME-EGSS30</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Table Display for Active Module -->
+      <div class="table-container" id="operationsTableWrapper">
+        <div id="operationsTableContent"></div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- 51 TALK PACKAGES CALCULATOR — Embedded Rate Card Tool        -->
+      <!-- ============================================================ -->
+      <div id="pkg-calc-section" style="margin-top: 36px;">
+
+        <!-- Section Header -->
+        <div style="
+          display: flex; justify-content: space-between; align-items: center;
+          flex-wrap: wrap; gap: 14px;
+          padding: 18px 22px;
+          background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(30, 41, 59, 0.9) 100%);
+          border: 1px solid rgba(245, 158, 11, 0.35);
+          border-left: 5px solid #f59e0b;
+          border-radius: 16px 16px 0 0;
+          backdrop-filter: blur(12px);
+        ">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="
+              width: 42px; height: 42px; border-radius: 10px;
+              background: linear-gradient(135deg, #ffc72c, #f59e0b);
+              display: flex; align-items: center; justify-content: center;
+              font-size: 20px; font-weight: 900; color: #0f172a;
+              font-family: 'Inter', sans-serif;
+              box-shadow: 0 0 20px rgba(245, 158, 11, 0.45);
+            ">51</div>
+            <div>
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 0; display: flex; align-items: center; gap: 8px;">
+                51 Talk Packages Calculator
+                <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; font-size: 0.65rem; padding: 2px 8px; border-radius: 6px; font-weight: 900; letter-spacing: 0.3px;">RATE CARD</span>
+              </h3>
+              <p style="font-size: 0.8rem; color: #94a3b8; margin: 3px 0 0 0;">
+                Official Upgrade &amp; Renewal pricing tool — Includes all package tiers, Professional Program discounts &amp; offer card generator
+              </p>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <span style="
+              display: inline-flex; align-items: center; gap: 5px;
+              font-size: 0.72rem; font-weight: 700; color: #34d399;
+            ">
+              <span style="
+                width: 7px; height: 7px; border-radius: 50%; background: #10b981;
+                animation: pkg-live-ping 2s infinite;
+                box-shadow: 0 0 0 0 rgba(16,185,129,0.5);
+                display: inline-block;
+              "></span>
+              Live Rates Active
+            </span>
+            <a href="calculator.html" target="_blank"
+              style="
+                display: inline-flex; align-items: center; gap: 6px;
+                padding: 7px 14px;
+                background: rgba(245, 158, 11, 0.18); border: 1.5px solid #f59e0b;
+                border-radius: 8px; color: #fcd34d; font-size: 0.8rem; font-weight: 700;
+                text-decoration: none; transition: all 0.2s;
+              "
+              onmouseover="this.style.background='rgba(245,158,11,0.3)'; this.style.boxShadow='0 0 16px rgba(245,158,11,0.4)';"
+              onmouseout="this.style.background='rgba(245,158,11,0.18)'; this.style.boxShadow='none';"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Open Full Tool
+            </a>
+          </div>
+        </div>
+
+        <!-- Embedded iframe of the pricing tool -->
+        <div style="
+          border: 1px solid rgba(245, 158, 11, 0.25);
+          border-top: none;
+          border-radius: 0 0 16px 16px;
+          overflow: hidden;
+          background: #090d16;
+          position: relative;
+        ">
+          <!-- Pkg Type Tabs -->
+          <div style="
+            display: flex; gap: 0; background: rgba(8, 13, 24, 0.95);
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+            padding: 12px 18px; flex-wrap: wrap; gap: 8px;
+            align-items: center;
+          ">
+            <button onclick="pkgShowTab('single')" id="pkg-btn-single" style="
+              padding: 7px 16px; border-radius: 8px; border: none;
+              background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a;
+              font-size: 0.78rem; font-weight: 800; cursor: pointer; font-family: inherit;
+            ">
+              👤 Single (1 Student)
+            </button>
+            <button onclick="pkgShowTab('family2')" id="pkg-btn-family2" style="
+              padding: 7px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12);
+              background: transparent; color: #94a3b8;
+              font-size: 0.78rem; font-weight: 700; cursor: pointer; font-family: inherit;
+            ">
+              👨‍👧 Family (2 Kids)
+            </button>
+            <button onclick="pkgShowTab('family3')" id="pkg-btn-family3" style="
+              padding: 7px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12);
+              background: transparent; color: #94a3b8;
+              font-size: 0.78rem; font-weight: 700; cursor: pointer; font-family: inherit;
+            ">
+              👨‍👩‍👧‍👦 Family (3 Kids)
+            </button>
+            <div style="margin-left: auto; font-size: 0.72rem; color: #64748b;">
+              💡 All prices include +10% approved markup • Professional Program rates shown
+            </div>
+          </div>
+
+          <!-- Package Calculator Tables -->
+          <div style="padding: 18px 20px; overflow-x: auto;">
+
+            <!-- SINGLE Packages -->
+            <div id="pkg-pane-single">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+
+                <!-- Upgrade Single -->
+                <div>
+                  <div style="
+                    font-size: 0.78rem; font-weight: 800; color: #fcd34d;
+                    display: flex; align-items: center; gap: 6px; margin-bottom: 10px;
+                    padding: 6px 12px; background: rgba(245,158,11,0.12); border-radius: 6px;
+                    border: 1px solid rgba(245,158,11,0.3);
+                  ">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Upgrade — Single Student
+                  </div>
+                  <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+                    <thead>
+                      <tr style="background: rgba(15,23,42,0.98);">
+                        <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(245,158,11,0.25);">Duration</th>
+                        <th style="padding: 9px 11px; text-align: center; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(245,158,11,0.25);">Classes</th>
+                        <th style="padding: 9px 11px; text-align: center; color: #ef4444; font-weight: 700; border-bottom: 1px solid rgba(245,158,11,0.25); text-decoration: line-through; text-decoration-color: #ef4444;">Official</th>
+                        <th style="padding: 9px 11px; text-align: center; color: #10b981; font-weight: 800; border-bottom: 1px solid rgba(245,158,11,0.25);">Pro Price</th>
+                        <th style="padding: 9px 11px; text-align: center; color: #38bdf8; font-weight: 700; border-bottom: 1px solid rgba(245,158,11,0.25);">Save</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="background: rgba(255,255,255,0.02);">
+                        <td style="padding: 8px 11px; color: #e2e8f0;">6 Months</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">75 <span style="color: #00f5a0; font-size: 0.7rem;">+15🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">3,174</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,393</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">781</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 11px; color: #e2e8f0;">7 Months</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">90 <span style="color: #00f5a0; font-size: 0.7rem;">+20🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">3,300</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,607</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">693</td>
+                      </tr>
+                      <tr style="background: rgba(255,255,255,0.02);">
+                        <td style="padding: 8px 11px; color: #e2e8f0;">9 Months</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">105 <span style="color: #00f5a0; font-size: 0.7rem;">+25🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">3,609</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,888</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">721</td>
+                      </tr>
+                      <tr style="background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent);">
+                        <td style="padding: 8px 11px; color: #fcd34d; font-weight: 800;">1 Year 🔥</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">150 <span style="color: #00f5a0; font-size: 0.7rem;">+35🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">6,380</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #f59e0b; font-weight: 900; font-size: 0.9rem;">3,630</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #34d399; font-weight: 800;">2,750</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 11px; color: #e2e8f0;">1.5 Years</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">225 <span style="color: #00f5a0; font-size: 0.7rem;">+50🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">9,653</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">5,280</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">4,373</td>
+                      </tr>
+                      <tr style="background: rgba(255,255,255,0.02);">
+                        <td style="padding: 8px 11px; color: #e2e8f0;">2 Years</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">300 <span style="color: #00f5a0; font-size: 0.7rem;">+75🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">12,458</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">6,848</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">5,610</td>
+                      </tr>
+                      <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);">
+                        <td style="padding: 8px 11px; color: #a5b4fc; font-weight: 800;">2.5 Years 💎</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">375 <span style="color: #00f5a0; font-size: 0.7rem;">+100🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">15,675</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #818cf8; font-weight: 900; font-size: 0.9rem;">8,580</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #34d399; font-weight: 800;">7,095</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Renewal Single -->
+                <div>
+                  <div style="
+                    font-size: 0.78rem; font-weight: 800; color: #7dd3fc;
+                    display: flex; align-items: center; gap: 6px; margin-bottom: 10px;
+                    padding: 6px 12px; background: rgba(14,165,233,0.12); border-radius: 6px;
+                    border: 1px solid rgba(56,189,248,0.3);
+                  ">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                    Renewal — Single Student
+                  </div>
+                  <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+                    <thead>
+                      <tr style="background: rgba(15,23,42,0.98);">
+                        <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(56,189,248,0.2);">Duration</th>
+                        <th style="padding: 9px 11px; text-align: center; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(56,189,248,0.2);">Classes</th>
+                        <th style="padding: 9px 11px; text-align: center; color: #ef4444; font-weight: 700; border-bottom: 1px solid rgba(56,189,248,0.2); text-decoration: line-through; text-decoration-color: #ef4444;">Official</th>
+                        <th style="padding: 9px 11px; text-align: center; color: #10b981; font-weight: 800; border-bottom: 1px solid rgba(56,189,248,0.2);">Pro Price</th>
+                        <th style="padding: 9px 11px; text-align: center; color: #38bdf8; font-weight: 700; border-bottom: 1px solid rgba(56,189,248,0.2);">Save</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="background: rgba(255,255,255,0.02);">
+                        <td style="padding: 8px 11px; color: #e2e8f0;">6 Months</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">75 <span style="color: #00f5a0; font-size: 0.7rem;">+15🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">2,970</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,723</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">247</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 11px; color: #e2e8f0;">7 Months</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">90 <span style="color: #00f5a0; font-size: 0.7rem;">+20🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">3,494</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,970</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">524</td>
+                      </tr>
+                      <tr style="background: rgba(255,255,255,0.02);">
+                        <td style="padding: 8px 11px; color: #e2e8f0;">9 Months</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">105 <span style="color: #00f5a0; font-size: 0.7rem;">+25🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">4,125</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">3,300</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">825</td>
+                      </tr>
+                      <tr style="background: linear-gradient(90deg, rgba(14,165,233,0.1), transparent);">
+                        <td style="padding: 8px 11px; color: #7dd3fc; font-weight: 800;">1 Year 🔥</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">150 <span style="color: #00f5a0; font-size: 0.7rem;">+35🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">6,903</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8; font-weight: 900; font-size: 0.9rem;">4,208</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #34d399; font-weight: 800;">2,695</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 11px; color: #e2e8f0;">1.5 Years</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">225 <span style="color: #00f5a0; font-size: 0.7rem;">+50🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">10,973</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">6,023</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">4,950</td>
+                      </tr>
+                      <tr style="background: rgba(255,255,255,0.02);">
+                        <td style="padding: 8px 11px; color: #e2e8f0;">2 Years</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">300 <span style="color: #00f5a0; font-size: 0.7rem;">+75🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">13,695</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">7,508</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">6,187</td>
+                      </tr>
+                      <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);">
+                        <td style="padding: 8px 11px; color: #a5b4fc; font-weight: 800;">2.5 Years 💎</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">375 <span style="color: #00f5a0; font-size: 0.7rem;">+100🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">16,253</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #818cf8; font-weight: 900; font-size: 0.9rem;">8,910</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #34d399; font-weight: 800;">7,343</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAMILY 2 Packages -->
+            <div id="pkg-pane-family2" style="display:none;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 800; color: #fcd34d; padding: 6px 12px; background: rgba(245,158,11,0.12); border-radius: 6px; border: 1px solid rgba(245,158,11,0.3); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                    ⭐ Upgrade — Family 2 Kids
+                  </div>
+                  <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+                    <thead><tr style="background: rgba(15,23,42,0.98);">
+                      <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(245,158,11,0.25);">Duration</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #64748b; border-bottom: 1px solid rgba(245,158,11,0.25);">Total / Per Child</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #ef4444; border-bottom: 1px solid rgba(245,158,11,0.25); text-decoration: line-through; text-decoration-color: #ef4444;">Official</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #10b981; font-weight: 800; border-bottom: 1px solid rgba(245,158,11,0.25);">Pro Price</th>
+                    </tr></thead>
+                    <tbody>
+                      <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">6 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">150 / 75</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">8,745</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">4,455</td></tr>
+                      <tr><td style="padding:8px 11px; color:#e2e8f0;">7 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">180 / 90</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">11,330</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">4,884</td></tr>
+                      <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">9 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">210 / 105</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">12,595</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">5,396</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent);"><td style="padding:8px 11px; color:#fcd34d; font-weight:800;">1 Year 🌟</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">300 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">13,200</td><td style="padding:8px 11px; text-align:center; color:#f59e0b; font-weight:900; font-size:0.9rem;">6,848</td></tr>
+                      <tr><td style="padding:8px 11px; color:#e2e8f0;">1.5 Years</td><td style="padding:8px 11px; text-align:center; color:#fff;">450 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">19,305</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">9,653</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 800; color: #7dd3fc; padding: 6px 12px; background: rgba(14,165,233,0.12); border-radius: 6px; border: 1px solid rgba(56,189,248,0.3); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                    🔄 Renewal — Family 2 Kids
+                  </div>
+                  <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+                    <thead><tr style="background: rgba(15,23,42,0.98);">
+                      <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(56,189,248,0.2);">Duration</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #64748b; border-bottom: 1px solid rgba(56,189,248,0.2);">Total / Per Child</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #ef4444; border-bottom: 1px solid rgba(56,189,248,0.2); text-decoration: line-through; text-decoration-color: #ef4444;">Official</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #10b981; font-weight: 800; border-bottom: 1px solid rgba(56,189,248,0.2);">Pro Price</th>
+                    </tr></thead>
+                    <tbody>
+                      <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">6 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">150 / 75</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">7,865</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">4,785</td></tr>
+                      <tr><td style="padding:8px 11px; color:#e2e8f0;">7 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">180 / 90</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">9,350</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">5,033</td></tr>
+                      <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">9 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">210 / 105</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">10,615</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">5,528</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(14,165,233,0.1), transparent);"><td style="padding:8px 11px; color:#7dd3fc; font-weight:800;">1 Year 🌟</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">300 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">15,345</td><td style="padding:8px 11px; text-align:center; color:#38bdf8; font-weight:900; font-size:0.9rem;">7,219</td></tr>
+                      <tr><td style="padding:8px 11px; color:#e2e8f0;">1.5 Years</td><td style="padding:8px 11px; text-align:center; color:#fff;">450 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">21,945</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">10,148</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAMILY 3 Packages -->
+            <div id="pkg-pane-family3" style="display:none;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 800; color: #fcd34d; padding: 6px 12px; background: rgba(245,158,11,0.12); border-radius: 6px; border: 1px solid rgba(245,158,11,0.3); margin-bottom: 10px;">⭐ Upgrade — Family 3 Kids</div>
+                  <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+                    <thead><tr style="background: rgba(15,23,42,0.98);">
+                      <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(245,158,11,0.25);">Duration</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #64748b; border-bottom: 1px solid rgba(245,158,11,0.25);">Total / Per Child</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #ef4444; border-bottom: 1px solid rgba(245,158,11,0.25); text-decoration:line-through; text-decoration-color:#ef4444;">Official</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #10b981; font-weight: 800; border-bottom: 1px solid rgba(245,158,11,0.25);">Pro Price</th>
+                    </tr></thead>
+                    <tbody>
+                      <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">6 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">225 / 75</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">13,118</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">5,990</td></tr>
+                      <tr><td style="padding:8px 11px; color:#e2e8f0;">7 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">270 / 90</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">7,370</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">6,633</td></tr>
+                      <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">9 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">315 / 105</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">9,220</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">7,376</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent);"><td style="padding:8px 11px; color:#fcd34d; font-weight:800;">1 Year 🏆</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">450 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">19,800</td><td style="padding:8px 11px; text-align:center; color:#f59e0b; font-weight:900; font-size:0.9rem;">9,702</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);"><td style="padding:8px 11px; color:#a5b4fc; font-weight:800;">1.5 Years 👑</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">675 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">28,958</td><td style="padding:8px 11px; text-align:center; color:#818cf8; font-weight:900; font-size:0.9rem;">13,662</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 800; color: #7dd3fc; padding: 6px 12px; background: rgba(14,165,233,0.12); border-radius: 6px; border: 1px solid rgba(56,189,248,0.3); margin-bottom: 10px;">🔄 Renewal — Family 3 Kids</div>
+                  <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+                    <thead><tr style="background: rgba(15,23,42,0.98);">
+                      <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(56,189,248,0.2);">Duration</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #64748b; border-bottom: 1px solid rgba(56,189,248,0.2);">Total / Per Child</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #ef4444; border-bottom: 1px solid rgba(56,189,248,0.2); text-decoration:line-through; text-decoration-color:#ef4444;">Official</th>
+                      <th style="padding: 9px 11px; text-align: center; color: #10b981; font-weight: 800; border-bottom: 1px solid rgba(56,189,248,0.2);">Pro Price</th>
+                    </tr></thead>
+                    <tbody>
+                      <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">6 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">225 / 75</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">7,260</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">6,485</td></tr>
+                      <tr><td style="padding:8px 11px; color:#e2e8f0;">7 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">270 / 90</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">8,030</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">6,782</td></tr>
+                      <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">9 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">315 / 105</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">8,910</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">7,574</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(14,165,233,0.1), transparent);"><td style="padding:8px 11px; color:#7dd3fc; font-weight:800;">1 Year 🏆</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">450 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">23,018</td><td style="padding:8px 11px; text-align:center; color:#38bdf8; font-weight:900; font-size:0.9rem;">10,024</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);"><td style="padding:8px 11px; color:#a5b4fc; font-weight:800;">1.5 Years 👑</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">675 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">32,918</td><td style="padding:8px 11px; text-align:center; color:#818cf8; font-weight:900; font-size:0.9rem;">14,108</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Legend -->
+            <div style="
+              display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+              margin-top: 14px; padding: 10px 14px;
+              background: rgba(255,255,255,0.03); border-radius: 8px;
+              border: 1px dashed rgba(255,255,255,0.08); font-size: 0.72rem; color: #64748b;
+            ">
+              <span><span style="color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">Official</span> = Official tuition (with red strike)</span>
+              <span><span style="color: #10b981; font-weight: 800;">Pro Price</span> = Professional Program discounted price</span>
+              <span><span style="color: #00f5a0;">🎁 N</span> = Free bonus classes</span>
+              <span>All prices in <strong style="color: #fcd34d;">SAR (ر.س)</strong></span>
+              <a href="http://localhost:5173" target="_blank" style="color: #6366f1; font-weight: 700; text-decoration: none; margin-left: auto;">🔗 Full Rate Card Tool →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab switching JS for pkg calculator -->
+        <style>
+          @keyframes pkg-live-ping {
+            0%  { box-shadow: 0 0 0 0 rgba(16,185,129,0.6); }
+            70% { box-shadow: 0 0 0 7px rgba(16,185,129,0); }
+            100%{ box-shadow: 0 0 0 0 rgba(16,185,129,0); }
+          }
+        </style>
+        <script>
+          function pkgShowTab(tab) {
+            ['single','family2','family3'].forEach(function(t) {
+              document.getElementById('pkg-pane-' + t).style.display = (t === tab) ? 'block' : 'none';
+              var btn = document.getElementById('pkg-btn-' + t);
+              if (t === tab) {
+                btn.style.background = 'linear-gradient(135deg, #f59e0b, #d97706)';
+                btn.style.color = '#0f172a';
+                btn.style.border = 'none';
+              } else {
+                btn.style.background = 'transparent';
+                btn.style.color = '#94a3b8';
+                btn.style.border = '1px solid rgba(255,255,255,0.12)';
+              }
+            });
+          }
+        </script>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- TAB: PERFORMANCE COMPARISON (Yesterday vs Today) -->
+    <!-- ============================================== -->
+    <section id="tab-comparison" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2>Performance Comparison — Yesterday vs Today</h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Side-by-side comparison of every rep's Class Consumption, Upgrade Rate, and English Club across two snapshots.
+          </p>
+        </div>
+        <span class="source-tag">4oct (Yesterday) vs 5oct (Today)</span>
+      </div>
+
+      <!-- Filter Bar -->
+      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 24px; flex-wrap: wrap;">
+        <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
+        <select id="cmpTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderComparisonTab()">
+          <option value="ALL">All Teams (Big Team 01)</option>
+          <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal)</option>
+          <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour)</option>
+          <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata)</option>
+          <option value="ME-EGSS13">ME-EGSS13 (Mohamedha)</option>
+          <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah)</option>
+        </select>
+        <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Sort By:</label>
+        <select id="cmpSortFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderComparisonTab()">
+          <option value="consumption-desc">Class Consumption % (High to Low)</option>
+          <option value="upgrade-desc">Upgrade Rate % (High to Low)</option>
+          <option value="ec-desc">English Club % (High to Low)</option>
+          <option value="unfixed-desc">Teacher Binding % (High to Low)</option>
+          <option value="unfixed-delta-desc">Biggest Fixation Improvement (Delta)</option>
+          <option value="unfixed-leads-desc">Most Unfixed Leads (High to Low)</option>
+          <option value="delta-desc">Biggest Overall Improvement (Delta)</option>
+        </select>
+      </div>
+
+      <!-- KPI Summary Banners -->
+      <div id="cmpKpiBanners" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 28px;"></div>
+
+      <!-- Comparison Table -->
+      <div class="table-container" id="cmpTableContainer">
+        <div id="cmpTableContent"><p style="color: var(--text-muted); padding: 20px;">Loading comparison data...</p></div>
+      </div>
+    </section>
+    
+    <!-- ============================================== -->
+    <!-- TAB: MTD PERFORMANCE TRAJECTORY (DAY 3 - 31) -->
+    <!-- ============================================== -->
+    <section id="tab-mtd" class="tab-content">
+      <div class="section-header">
+        <div>
+          <h2>MTD Performance Trajectory &amp; Daily Evolution (Day 3 — 31)</h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+            Cumulative month-to-date tracking across all October operational days with interactive multi-metric charts and rep velocity.
+          </p>
+        </div>
+        <span class="source-tag">Timeline: 3 Oct → 5 Oct (MTD Day 5/31)</span>
+      </div>
+
+      <!-- Controls & Filters -->
+      <div style="display: flex; gap: 14px; align-items: center; margin-bottom: 24px; flex-wrap: wrap; background: rgba(15, 23, 42, 0.4); padding: 14px 18px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Operational Metric:</label>
+          <select id="mtdMetricFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff;" onchange="renderMtdTab()">
+            <option value="consumption">🟢 Class Consumption (65% Goal)</option>
+            <option value="englishClub">🔵 English Club (45% Goal)</option>
+            <option value="unfixed">🟡 Unfixed Teacher Binding (80% Goal)</option>
+            <option value="upgrade">🟣 Early Upgrade M2 (20% Goal)</option>
+          </select>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Filter Team:</label>
+          <select id="mtdTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderMtdTab()">
+            <option value="ALL">⭐ All Teams (Big Team 01 - Sector Overview)</option>
+            <option value="ME-EGSS01" style="color: #818cf8;">ME-EGSS01 (Ashraqatal - Team 01)</option>
+            <option value="ME-EGSS05" style="color: #22d3ee;">ME-EGSS05 (Ibrahim Abd El Shakour - Team 05)</option>
+            <option value="ME-EGSS10" style="color: #34d399;">ME-EGSS10 (Abdelrhman Shehata - Team 10)</option>
+            <option value="ME-EGSS13" style="color: #fbbf24;">ME-EGSS13 (Mohamedha - Team 13)</option>
+            <option value="ME-EGSS30" style="color: #fb7185;">ME-EGSS30 (Adhm GadAllah - Team 30)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- KPI Summary Banners -->
+      <div id="mtdKpiBanners" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-bottom: 24px;"></div>
+
+      <!-- Interactive Chart Section -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 28px; box-shadow: var(--shadow-glass);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: #fff; margin: 0;">Multi-Day Trajectory Curve</h3>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 3px;">Dynamic day-by-day progression against official benchmark targets.</p>
+          </div>
+          <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px;">Day 3 → Day 31 Progression</span>
+        </div>
+        <div style="position: relative; height: 340px; width: 100%;">
+          <canvas id="mtdChartCanvas"></canvas>
+        </div>
+      </div>
+
+      <!-- Detailed Progression Table -->
+      <div class="table-container" id="mtdTableContainer">
+        <div id="mtdTableContent"><p style="color: var(--text-muted); padding: 20px;">Loading MTD trajectory data...</p></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <div class="footer-left">
+        <span>Big Team 01 — ME-EGSS01 | Senior Manager: <strong>Saber Hussien</strong></span>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dim);">
+        <span id="dataTimestamp">Last Update: Oct 3, 2026</span>
+      </div>
+      <div class="footer-right">
+        <span>Data Sources: 
+          <a href="https://crm.51talk.com/admin/main.php" target="_blank">CRM Main Portal</a> | 
+          <a href="https://lp.51talkjr.com/#/data-center/business/SA-SSdata" target="_blank">51Talk Data Center</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
+  <script src="assets/html2canvas.min.js" defer></script>
+  <script src="leads/uncovered_leads_data.js" defer></script>
+  <script src="dashboard.js?v=20261017_144000" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
