@@ -190,7 +190,7 @@ const SOP_ROUNDS = [
 const POOL22_M2_COVERAGE = {
   "EGSS-nohayoussry": 19,
   "EGSS-ashraqatal": 41.2,
-  "EGSS-negma": 58.6,
+  "EGSS-negma": 62.1,
   "EGSS-juliamonir01": 61.1,
   "EGSS-mahmoud04": 56,
   "EGSS-abdelrahmannasef": 75,
@@ -223,16 +223,16 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 32.09% vs Day 18 target 46%. Gap: 13.9pp. Need $11147/day to close.', time: '20261018_091017' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261018_091017' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (0%), EGSS-negma (7.8%), EGSS-marwaahmed (9%), EGSS-juliamonir01 (19%). Schedule targeted coaching sessions today.', time: '20261018_091017' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mahmoud04 (53.8%), EGSS-mahmoudkhamis (54.1%), EGSS-mohamedha (78.9%). Recognize in team channel!', time: '20261018_091017' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $2938/day', detail: 'Currently at 36.9% (22304/60500). Gap: $38196.', time: '20261018_091017' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1751/day', detail: 'Currently at 36.9% (13317/36080). Gap: $22763.', time: '20261018_091017' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1762/day', detail: 'Currently at 33.7% (11626/34530). Gap: $22904.', time: '20261018_091017' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1484/day', detail: 'Currently at 32.5% (9290/28580). Gap: $19290.', time: '20261018_091017' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $3022/day', detail: 'Currently at 26.9% (14420/53700). Gap: $39280.', time: '20261018_091017' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 88 more renewals', detail: 'Current: 12/497 (2.4%). 20% target = 100. Focus on high-base reps.', time: '20261018_091017' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 32.09% vs Day 18 target 46%. Gap: 13.9pp. Need $11147/day to close.', time: '20261018_101020' },
+  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261018_101020' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (0%), EGSS-negma (7.8%), EGSS-marwaahmed (9%), EGSS-juliamonir01 (19%). Schedule targeted coaching sessions today.', time: '20261018_101020' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mahmoud04 (53.8%), EGSS-mahmoudkhamis (54.1%), EGSS-mohamedha (78.9%). Recognize in team channel!', time: '20261018_101020' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $2938/day', detail: 'Currently at 36.9% (22304/60500). Gap: $38196.', time: '20261018_101020' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1751/day', detail: 'Currently at 36.9% (13317/36080). Gap: $22763.', time: '20261018_101020' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1762/day', detail: 'Currently at 33.7% (11626/34530). Gap: $22904.', time: '20261018_101020' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1484/day', detail: 'Currently at 32.5% (9290/28580). Gap: $19290.', time: '20261018_101020' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $3022/day', detail: 'Currently at 26.9% (14420/53700). Gap: $39280.', time: '20261018_101020' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 88 more renewals', detail: 'Current: 12/497 (2.4%). 20% target = 100. Focus on high-base reps.', time: '20261018_101020' },
 ];
 
 // =========================================================================
@@ -8163,6 +8163,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -11889,7 +11891,7 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-10-17 12:47:21', name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-10-18 09:51:09', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
@@ -13274,6 +13276,9 @@ function exportCurrentFilteredUncoveredCsv() {
   const fullCsv = csvHeader + csvRows;
   triggerCsvDownload(fullCsv, `Uncovered_Leads_Filtered_${uncovState.team}_${filtered.length}_accounts.csv`);
 }
+
+
+
 
 
 
