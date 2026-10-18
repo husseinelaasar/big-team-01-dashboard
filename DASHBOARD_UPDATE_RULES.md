@@ -1165,26 +1165,91 @@ The dashboard update pipelines are currently running with the verified 21-rep Oc
 
 ---
 
+---
+
 ## 11. بروتوكول ومصادر تحديث الداشبورد التنفيذي عبر الخيار رقم [4] (Executive Web Dashboard Live Update Protocol)
 
 ### أ. الهدف والقاعدة التشغيلية (Executive Rule):
-* **السلوك السابق:** كان الخيار رقم [4] يقتصر على فتح ملف index.html في Google Chrome مباشرة دون معالجة أو تحديث للبيانات، مما قد يؤدي لعرض أرقام قديمة غير محدثة إذا تم تنزيل ملفات جديدة.
-* **السلوك المعتمد الجديد:** عند الضغط على الخيار **[4]**، يقوم النظام فوراً وبشكل تلقائي بتشغيل محرك التحديث السريع (update_dashboard.ps1 -SkipGit)، حيث يقرأ أحدث الملفات المحملة، ويعيد حساب كافة المؤشرات (KPIs) والأرقام والكاش وتحديث ملفات الجافاسكربت وقوائم الليدز والـ CSVs بالكامل في غضون **~20 ثانية**، ثم يفتح الداشبورد المحدثة فوراً في Google Chrome مع كود منع الكاش (Cache Buster).
+* **السلوك السابق:** كان الخيار رقم [4] يقتصر على فتح ملف `index.html` في Google Chrome مباشرة دون معالجة أو تحديث للبيانات، مما قد يؤدي لعرض أرقام قديمة غير محدثة إذا تم تنزيل ملفات جديدة.
+* **السلوك المعتمد الجديد:** عند الضغط على الخيار **[4]**، يقوم النظام فوراً وبشكل تلقائي بتشغيل محرك التحديث السريع (`update_dashboard.ps1 -SkipGit`)، حيث يقرأ أحدث الملفات المحملة، ويعيد حساب كافة المؤشرات (KPIs) والأرقام والكاش وتحديث ملفات الجافاسكربت وقوائم الليدز والـ CSVs بالكامل في غضون **~20 ثانية**، ثم يفتح الداشبورد المحدثة فوراً في Google Chrome مع كود منع الكاش (`Cache Buster`).
 
 ### ب. جدول مصادر ملفات الداشبورد وتوقيتاتها الحالية على الجهاز:
 
 | # | اسم الملف (File Name) | دور الملف في تحديث الداشبورد (Dashboard Function) | الحجم (Size) | توقيت الإنشاء/التحميل على الجهاز (Created) | توقيت التعديل من المصدر (Modified) | المسار الفعلي على جهازك (Local Path) |
 |---|---|---|---|---|---|---|
-| **1** | **SS Lens Dashboard_20261018_1652.xlsx** | استخراج الكاش الإجمالي (**,323**)، نسبة التارجت (**35.3%**)، عدد العقود (**81**)، أداء الـ 21 ممثل، مسار الـ MTD، وطلاب الـ Uncovered Leads. | **1.35 MB** | **18-10-2026 06:22:34 PM** | **18-10-2026 04:55:10 PM** | D:\Lens\Dashboard\Data Center\18Oct\ |
-| **2** | **SS Lens Dashboard_Student-Detail_20261018_1618.xlsx** | السجل العام للـ **6,218 طالب** في القطاع، وربط الممثلين بحالات المعلمين الثابتين والرصيد. | **396.9 KB** | **18-10-2026 06:22:34 PM** | **18-10-2026 04:18:20 PM** | D:\Lens\Dashboard\Data Center\18Oct\ |
-| **3** | **海外NEW_SOP_20261018_1643.xlsx** | مؤشرات الالتزام بالـ SOP (حالات Round 1، و Due Today، و Due Tomorrow) ومتابعة أولياء الأمور. | **311.5 KB** | **18-10-2026 06:22:34 PM** | **18-10-2026 04:43:24 PM** | D:\Lens\Dashboard\Data Center\18Oct\ |
-| **4** | **中东English Club数据看板_20261018_1645.xlsx** | رصد نسب حجز واستهلاك نادي الإنجليزية ومقارنة أداء كل ممثل بمستهدف الـ **40%**. | **149.7 KB** | **18-10-2026 06:22:34 PM** | **18-10-2026 04:45:43 PM** | D:\Lens\Dashboard\Data Center\18Oct\ |
-| **5** | **SS Lens Dashboard_Area_Big Team_Small Team_SS_20261018_1638.xlsx** | الهيكل الرسمي المعتمد لتوزيع الـ 21 ممثل على الفرق الخمسة ومديري الفرق (TLs). | **9.7 KB** | **18-10-2026 06:22:34 PM** | **18-10-2026 01:03:38 PM** | D:\Lens\Dashboard\Data Center\18Oct\ |
-| **6** | **All in one Master.xlsx** | استخراج الجداول التشغيلية الأربعة الموحدة (Pending SOP, Unfixed Teacher, Class Consumption, English Club) وتحديث قوائم ومودالز الداشبورد وملفات الممثلين. | **444.6 KB** | **06-09-2026 12:09:23 PM** | **18-10-2026 06:22:51 PM** *(أعيد بناؤه اليوم)* | D:\Lens\ |
-| **7** | **October Daily Tasks.xlsx** | عكس التقدم الميداني اللحظي ونسب إنجاز المهام اليومية لكل ممثل في واجهة الداشبورد. | **108.5 KB** | **18-10-2026 06:38:25 PM** | **18-10-2026 06:38:26 PM** *(أحدث نسخة)* | D:\Lens\Dashboard\ |
-| **8** | **M1 & M2 Data Base ID.xlsx** | قاعدة بيانات ترقية الطلاب M1 & M2 لحساب نسب الترقية الرسمية (**Upgrade Conversion Rate**) بدقة. | **214.2 KB** | **12-10-2026 12:59:20 PM** | **12-10-2026 12:59:20 PM** | D:\Lens\Dashboard\Dashboard_Input_Files\October Daily Tracker\ |
+| **1** | **`SS Lens Dashboard_20261018_1652.xlsx`** | استخراج الكاش الإجمالي (**$75,323**)، نسبة التارجت (**35.3%**)، عدد العقود (**81**)، أداء الـ 21 ممثل، مسار الـ MTD، وطلاب الـ Uncovered Leads. | **1.35 MB** | **18-10-2026 06:22:34 PM** | **18-10-2026 04:55:10 PM** | `D:\Lens\Dashboard\Data Center\18Oct\` |
+| **2** | **`SS Lens Dashboard_Student-Detail_20261018_1618.xlsx`** | السجل العام للـ **6,218 طالب** في القطاع، وربط الممثلين بحالات المعلمين الثابتين والرصيد. | **396.9 KB** | **18-10-2026 06:22:34 PM** | **18-10-2026 04:18:20 PM** | `D:\Lens\Dashboard\Data Center\18Oct\` |
+| **3** | **`海外NEW_SOP_20261018_1643.xlsx`** | مؤشرات الالتزام بالـ SOP (حالات Round 1، و Due Today، و Due Tomorrow) ومتابعة أولياء الأمور. | **311.5 KB** | **18-10-2026 06:22:34 PM** | **18-10-2026 04:43:24 PM** | `D:\Lens\Dashboard\Data Center\18Oct\` |
+| **4** | **`中东English Club数据看板_20261018_1645.xlsx`** | رصد نسب حجز واستهلاك نادي الإنجليزية ومقارنة أداء كل ممثل بمستهدف الـ **40%**. | **149.7 KB** | **18-10-2026 06:22:34 PM** | **18-10-2026 04:45:43 PM** | `D:\Lens\Dashboard\Data Center\18Oct\` |
+| **5** | **`SS Lens Dashboard_Area_Big Team_Small Team_SS_20261018_1638.xlsx`** | الهيكل الرسمي المعتمد لتوزيع الـ 21 ممثل على الفرق الخمسة ومديري الفرق (TLs). | **9.7 KB** | **18-10-2026 06:22:34 PM** | **18-10-2026 01:03:38 PM** | `D:\Lens\Dashboard\Data Center\18Oct\` |
+| **6** | **`All in one Master.xlsx`** | استخراج الجداول التشغيلية الأربعة الموحدة (`Pending SOP`, `Unfixed Teacher`, `Class Consumption`, `English Club`) وتحديث قوائم ومودالز الداشبورد وملفات الممثلين. | **444.6 KB** | **06-09-2026 12:09:23 PM** | **18-10-2026 06:22:51 PM** *(أعيد بناؤه اليوم)* | `D:\Lens\` |
+| **7** | **`October Daily Tasks.xlsx`** | عكس التقدم الميداني اللحظي ونسب إنجاز المهام اليومية لكل ممثل في واجهة الداشبورد. | **108.5 KB** | **18-10-2026 06:38:25 PM** | **18-10-2026 06:38:26 PM** *(أحدث نسخة)* | `D:\Lens\Dashboard\` |
+| **8** | **`M1 & M2 Data Base ID.xlsx`** | قاعدة بيانات ترقية الطلاب M1 & M2 لحساب نسب الترقية الرسمية (**Upgrade Conversion Rate**) بدقة. | **214.2 KB** | **12-10-2026 12:59:20 PM** | **12-10-2026 12:59:20 PM** | `D:\Lens\Dashboard\Dashboard_Input_Files\October Daily Tracker\` |
 
 ### ج. آليات التحقق ومنع الأخطاء في التحديث:
-1. **الفرز التنازلي الزمني (Sort-Object LastWriteTime -Descending):** يتم البحث التلقائي في مجلد اليوم عن أحدث نسخة زمنية لكل تقرير وتجاوز أي ملفات قديمة.
-2. **منع التخزين المؤقت (Cache Buster):** توليد مفتاح توقيت لحظي وإرفاقه بروابط السكربتات والملفات لمنع المتصفح من قراءة البيانات المخزنة القديمة.
-3. **توليد مجموعات الليدز وتحديث JSON:** يقوم المحرك بإنتاج master_extracted_data.json و leads_summary.json و 21 ملف CSV للممثلين و 5 ملفات للفرق وملف الماستر للترقيات والـ Uncovered Leads بصورة متزامنة.
+1. **الفرز التنازلي الزمني (`Sort-Object LastWriteTime -Descending`):** يتم البحث التلقائي في مجلد اليوم عن أحدث نسخة زمنية لكل تقرير وتجاوز أي ملفات قديمة.
+2. **منع التخزين المؤقت (`Cache Buster`):** توليد مفتاح توقيت لحظي وإرفاقه بروابط السكربتات والملفات لمنع المتصفح من قراءة البيانات المخزنة القديمة.
+3. **توليد مجموعات الليدز وتحديث JSON:** يقوم المحرك بإنتاج `master_extracted_data.json` و `leads_summary.json` و 21 ملف CSV للممثلين و 5 ملفات للفرق وملف الماستر للترقيات والـ Uncovered Leads بصورة متزامنة.
+
+### د. التعديل البرمجي المعتمد في مركز التحكم (`master_runner.py`):
+تم تعديل دالة `open_dashboard()` داخل `C:\Users\husse\Desktop\AI\03_workflows\master_runner.py` لتشمل استدعاء محرك التحديث قبل فتح جوجل كروم:
+
+```python
+def open_dashboard():
+    update_ps1 = Path(r"D:\Lens\Dashboard\update_dashboard.ps1")
+    if update_ps1.exists():
+        print("\n" + "=" * 65)
+        print("  [REFRESH] Updating Executive Dashboard with Latest Live Data...")
+        print("=" * 65)
+        try:
+            subprocess.run(
+                ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(update_ps1), "-SkipGit"],
+                check=False
+            )
+        except Exception as e:
+            print(f"  [WARN] Dashboard pre-update warning: {e}")
+
+    lens_index = Path(r"D:\Lens\Dashboard\index.html")
+    ws_index = PROJECTS_DIR / "big_team_dashboard" / "index.html"
+    if lens_index.exists() and ws_index.exists():
+        try:
+            import shutil
+            shutil.copy2(lens_index, ws_index)
+            shutil.copy2(lens_index.parent / "dashboard.js", ws_index.parent / "dashboard.js")
+        except Exception:
+            pass
+    target = lens_index if lens_index.exists() else ws_index
+    if target.exists():
+        print(f"\n[OPENING] Launching Big Team 01 Dashboard in Google Chrome: {target}")
+        open_url_in_chrome(f"file:///{target.resolve()}")
+    else:
+        print("\n[ERROR] Dashboard file not found!")
+    input("\nPress Enter to return to menu...")
+```
+
+### هـ. سير العمل بعد التعديل (Workflow):
+1. يفتح المستخدم مركز التحكم عبر `RUN_MASTER.bat`.
+2. يختار الخيار رقم **[4] Open Big Team 01 Executive Web Dashboard**.
+3. يبدأ السكربت بإظهار شريط التحديث ومسح الكاش وحساب الكاش والعقود والـ KPIs بالكامل في ~20 ثانية.
+4. يفتح متصفح Google Chrome تلقائياً على واجهة الداشبورد ببيانات اليوم الفريش بدون أي تدخل يدوي إضافي.
+
+---
+
+## 12. تشخيص وحل مشكلة تنزيل 1 من 5 ملفات واعتماد محرك v15 الجذري (Definitive Resolution for 5/5 Downloads)
+
+### أ. التحليل الجذري للأخطاء التي ظهرت في الصورة المرفقة (Incident RCA):
+أظهرت لقطة الشاشة تنزيل ملف واحد فقط فريش (`Student-Detail` بنجاح عند 19:09)، بينما فشلت الملفات الأربعة الأخرى وتدخلت شبكة الأمان لاسترجاعها. الأسباب التقنية الدقيقة كانت:
+1. **ملف جدول الهيكل (Area Hierarchy):** ذهب المتصفح إلى رابط `SA-SSdata` لكن السكربت **لم يقم بالتبديل إلى تبويب `CASH & ACHIEVEMENT`**، فظل في التبويب الافتراضي، ولم يجد زر التوسيع `[+]` ولا نقاط كارت 17 فتجاوز التنزيل.
+2. **ملف الـ SOP الدولي (Overseas NEW SOP):** بعد التبديل إلى `SOP_Details`، كان شرط العثور على الزر مقيداً بـ `y > 100` مع غياب التمرير الدقيق للمحدد النصي `.preview-mini-menu-list-item-text` فتجاوز التنزيل.
+3. **ملف نادي الإنجليزية (English Club):** ظهر خطأ صريح في الكونسول:
+   `Clicking EC download icon at (2166, -97)... EC Modal confirmed: false`
+   حيث كانت إحداثيات Y سالبة (`-97`) خارج الشاشة نتيجة تمرير عشوائي `scrollTo(1500)` أزاح القائمة العائمة لأعلى، بالإضافة لمحاولة النقر على أيقونة عائمة بدلاً من **النقاط الثلاث الخاصة بجدول التفاصيل (Details 3-dots)**.
+4. **ملف الماستر الكامل (Full SS Lens 33 Sheets):** نقر على أيقونة التنزيل العامة، لكن نافذة التأكيد انبثقت في الصفحة الرئيسية (`page`) بينما السكربت كان يبحث عنها فقط داخل الـ `iFrame`.
+
+### ب. العلاج التقني الجذري المنفذ (Implemented Fix):
+تم تعميم ونشر محرك التصدير المعتمد والمعاير بالإحداثيات المادية (`crm_auto_exporter_v15.js`) على جميع مسارات `crm_auto_exporter.js`:
+1. **التبديل الإجباري للتبويب:** تنفيذ `await switchTab(biFrame, 'CASH & ACHIEVEMENT')` وانتظار اكتمال رندر الجدول.
+2. **التوسيع المعتمد للـ 33 صفاً:** نقر زر `[+]` بالإحداثيات المادية، واختيار `Expand all` من القائمة المنسدلة، وانتظار 18 ثانية لاكتمال الشجرة.
+3. **دعم المودال في كلا السياقين:** ترقية دالة التأكيد `clickModalConfirm(frame, page)` لتفحص كلاً من `iFrame` والصفحة الرئيسية بالتوازي.
+4. **معايرة English Club:** توجيه النقر المباشر إلى النقاط الثلاث لجدول التفاصيل (Details Table More Icon) وإلغاء البحث عن الأيقونات العائمة ذات الإحداثيات السالبة.
+5. **التمرير الديناميكي للمسار:** تعديل `auto_crm_downloader.py` ليمرر مجلد اليوم المستهدف صراحة عبر `process.argv[2]`.
