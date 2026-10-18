@@ -223,16 +223,16 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 35.3% vs Day 18 target 46%. Gap: 10.7pp. Need $10621/day to close.', time: '20261018_211011' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261018_211011' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (0%), EGSS-negma (7.8%), EGSS-marwaahmed (9%), EGSS-ehabzaky01 (20.3%). Schedule targeted coaching sessions today.', time: '20261018_211011' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-khaledgonam (62.7%), EGSS-ibrahimismaiel (67.2%), EGSS-mohamedha (78.9%). Recognize in team channel!', time: '20261018_211011' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $2512/day', detail: 'Currently at 46% (27844/60500). Gap: $32656.', time: '20261018_211011' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1751/day', detail: 'Currently at 36.9% (13317/36080). Gap: $22763.', time: '20261018_211011' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1409/day', detail: 'Currently at 35.9% (10257/28580). Gap: $18323.', time: '20261018_211011' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1762/day', detail: 'Currently at 33.7% (11626/34530). Gap: $22904.', time: '20261018_211011' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $2996/day', detail: 'Currently at 27.5% (14755/53700). Gap: $38945.', time: '20261018_211011' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 88 more renewals', detail: 'Current: 12/497 (2.4%). 20% target = 100. Focus on high-base reps.', time: '20261018_211011' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 32.09% vs Day 19 target 49%. Gap: 16.9pp. Need $12076/day to close.', time: '20261019_005625' },
+  { type: 'critical', icon: '🚨', title: '21 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-nohayoussry, EGSS-ashraqatal, EGSS-negma, EGSS-juliamonir01, EGSS-mahmoud04, EGSS-abdelrahmannasef, EGSS-ehabzaky01, EGSS-ibrahimismaiel, EGSS-khaledgonam, EGSS-omarmoneb, EGSS-samira01, EGSS-abdelrhmanshehata, EGSS-ahmedshoukry, EGSS-mahmoudkhamis, EGSS-amrsafwat, EGSS-hayamhassan, EGSS-marwaahmed, EGSS-mohamedha, EGSS-adhmgadallah, EGSS-alihesham01, EGSS-titooooo. Immediate 1:1 coaching required.', time: '20261019_005625' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-amrsafwat (0%), EGSS-hayamhassan (0%), EGSS-mahmoudkhamis (0%), EGSS-abdelrhmanshehata (0%), EGSS-ahmedshoukry (0%). Schedule targeted coaching sessions today.', time: '20261019_005625' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-ibrahimismaiel (0%), EGSS-abdelrahmannasef (0%), EGSS-ehabzaky01 (0%). Recognize in team channel!', time: '20261019_005625' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $2758/day', detail: 'Currently at 0% (0/33100). Gap: $33100.', time: '20261019_005625' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $7333/day', detail: 'Currently at 0% (0/88000). Gap: $88000.', time: '20261019_005625' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $4067/day', detail: 'Currently at 0% (0/48800). Gap: $48800.', time: '20261019_005625' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $3771/day', detail: 'Currently at 0% (0/45250). Gap: $45250.', time: '20261019_005625' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $7567/day', detail: 'Currently at 0% (0/90800). Gap: $90800.', time: '20261019_005625' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 88 more renewals', detail: 'Current: 12/497 (2.4%). 20% target = 100. Focus on high-base reps.', time: '20261019_005625' },
 ];
 
 // =========================================================================
@@ -315,7 +315,7 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 18; // Current MTD Day (Oct 3, 2026)
+  const daysPassed = 19; // Current MTD Day (Oct 3, 2026)
   const daysInMonth = 31;
   const daysLeft = daysInMonth - daysPassed;
   const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 11;
@@ -414,10 +414,10 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official October 2026 Cash Targets Plan)
-  const totalCash = 75323; // from Individual Sheet Col G (or 指标看板 Col C)
+  const totalCash = 68481; // from Individual Sheet Col G (or 指标看板 Col C)
   const totalTarget = 213390; // from 指标看板 Col F
   const sectorAchPct = Math.round((totalCash / totalTarget) * 1000) / 10; // 5.3%
-  const totalContracts = 81; // from 指标看板 Col D
+  const totalContracts = 72; // from 指标看板 Col D
   const totalContractsTarget = 252; // Official October Contracts Target Plan (252 contracts)
   const totalUpgradeM2 = individuals.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0) || 3;
   const totalNormalRenewals = Math.max(0, totalContracts - totalUpgradeM2); // 18 from Student_Detail32
@@ -8193,6 +8193,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -13304,6 +13306,9 @@ function exportCurrentFilteredUncoveredCsv() {
   const fullCsv = csvHeader + csvRows;
   triggerCsvDownload(fullCsv, `Uncovered_Leads_Filtered_${uncovState.team}_${filtered.length}_accounts.csv`);
 }
+
+
+
 
 
 
