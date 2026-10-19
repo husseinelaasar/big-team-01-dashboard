@@ -175,6 +175,81 @@ sequenceDiagram
   * Status Initialization: All Day 2 active rows initialized to `Pending` with interactive dropdowns and colors.
   * Cloud Overwrite: Overwritten in-place on DingTalk Drive node `7dx2rn0JbYKPbR97sNa40jbqVMGjLRb3` (`October Daily Tasks.xlsx`).
 
+### D. Dynamic Aggregation Scoping Bug & In-Place Silent Overwrite Protocol (2026-10-18)
+* **Incident / Symptom:**
+  * The executive monitoring file (`Completed_Archive` / `October Daily Tasks(2).xlsx`) erroneously displayed `Total Assigned: 1`, `Completed: 0`, `Pending: 1`, and `Completion Rate: 0.0%` for every single representative.
+  * The Grand Total Row (Row 138) and the Executive Top Ribbon (Row 2) displayed `TOTAL ASSIGNED: 21 | PENDING: 21` instead of aggregating the true target leads (`258` tasks across `21` active SS reps).
+* **Root Cause Analysis (PowerShell Scoped Variable Collision):**
+  * In the workbook builder (`build_unified_master_excel_pro.ps1`), cross-sheet formulas were generated using string interpolation:
+    `"=COUNTIF('$tabKey'!A$subStart:A$subEnd, ""$tierKey"")"`
+  * In PowerShell double-quoted strings, the syntax `$subStart:A` is parsed as a scoped variable identifier (e.g. similar to `$global:var` or `$env:PATH`). Because no variable named `A` in scope `$subStart` existed, PowerShell evaluated `$subStart:A` as `$null` (empty string).
+  * Consequently, `"A$subStart:A$subEnd"` collapsed into `"A" + "" + "$subEnd"` = `"A20"`, meaning the formula evaluated ONLY the very last single row of each representative's sheet instead of the entire task range (`A6:A20`).
+  * Since the last row contained only one tier, each representative's total summed to `1`, pending collapsed to `1`, and completion rate stagnated at `0.0%`.
+* **Engineering Resolution & Fix:**
+  1. **Sub-Expression Variable Isolation:** Wrapped PowerShell variable interpolations in explicit `$($subStart)` and `$($subEnd)` tokens (`A$($subStart):A$($subEnd)` and `J$($subStart):J$($subEnd)`), ensuring Excel formulas generate exact bounded ranges:
+     `=COUNTIF('Team 01 - ashraqatal'!A6:A20, "P1: SOP R1")`
+     `=(COUNTIFS('Team 01 - ashraqatal'!A6:A20, "P1: SOP R1", 'Team 01 - ashraqatal'!J6:J20, "Done*") + ...)`
+  2. **Reactive Pending & Rate Calculation:**
+     * Pending Tasks: `=E - F` (`Total Assigned - Completed Tasks`)
+     * Completion Rate %: `=IF(E>0, F/E, 0)`
+     * Dynamic Grand Total (Row 138): `=SUM(Parent_Rows)`
+     * Top Dynamic KPI Banner (Row 2): Evaluates in real time to `TOTAL ASSIGNED: 258 | COMPLETED: 0 | PENDING: 258 | BIG TEAM COMPLETION RATE: 0.0% | [Real-Time Dynamic Tracking]`.
+* **Field of Vision & Content Formatting Optimization (مجال الرؤية):**
+  1. **Zero Horizontal Scrolling (148 units total):** Compressed Column widths for Columns A–I (`Completed_Archive`) so that the entire executive tracker fits horizontally without horizontal scrolling on 100% and 85% zoom.
+  2. **Banner & Header Realignment:** Merged Row 1 (`A1:I1`) and Row 2 (`A2:I2`) across exactly the 9 columns of the Tracker table, creating a unified, elegant visual boundary.
+  3. **No Clipped Text:** Expanded Column D width to 32 units, preventing `Go to Team ... ->` quick links and action descriptions from truncating.
+  4. **Multi-Line Text Wrapping:** Enabled `WrapText = $true` on Column F (`Operational Action`) across all rep sheets to display full operational directives cleanly.
+* **Silent In-Place DingTalk Drive Overwrite (Zero Group Broadcasts):**
+  * Per operational requirement, no duplicate or correction messages were broadcasted to the `Big Team Champs - Mega` group chat.
+  * Overwrote the existing cloud attachment `October Daily Tasks(2).xlsx` in place via `dws drive +upload --file "October Daily Tasks(2).xlsx" --node nYMoO1rWxaYZQElMiRDvN3voV47Z3je9 -y` (Version 5 in `spaceId: 28499372430`).
+  * Synchronized the Alidocs cloud sheet (`dxXB52LJqnjXBmGdiZ7rdGZD8qjMp697`) via direct CSV formula injection.
+  * Whenever any representative or leader clicks the existing attachment or link in DingTalk, they instantly view the fully recalculated, properly formatted version.
 
+  ### F. 18 October 2026 Unified 4-Tier Refactoring & In-Place Drive Synchronization
+  * **Operational Requirement:** Extract and compile all active daily tasks exclusively for Big Team 01 (21 active reps) according to 4 strict operational priorities, eliminate formula calculation bugs in `Completed_Archive`, optimize visual field of vision (مجال الرؤية) without horizontal scrolling, and perform an in-place update on the shared DingTalk Drive workbook without sending any new broadcast message or duplicate file to the Mega group.
+  * **Root Cause Discovered & Fixed:**
+    * In `build_unified_master_excel_pro.ps1`, PowerShell string interpolation `"A$subStart:A$subEnd"` parsed `$subStart:A` as a scoped variable (`$null`), causing the range to collapse to `"A20"` (evaluating only a single row per rep). Fixed using isolated variable tokens `"A$($subStart):A$($subEnd)"` and `"J$($subStart):J$($subEnd)"`.
+  * **Verified 4-Tier Distribution (405 Verified Leads across 21 SS Reps):**
+    1. **Priority 1 (SOP Round 1 - Status 0 待处理):** 14 leads formatted with **Solid Yellow Fill (`#FDE047`)** and **Jet Black Text (`#000000`)**.
+    2. **Priority 2 (SOP Due Today - 到期时间 = 20261018):** 81 leads formatted with **Solid Red Fill (`#DC2626`)** and **Pure White Text (`#FFFFFF`)**.
+    3. **Priority 3 (Unfixed Teachers - M0, M1, M2):** 139 leads extracted from `SS Lens Dashboard` -> `Student_Detail34`.
+    4. **Priority 4 (Outside Pool & 0 Class Points):** 171 leads extracted from `SS Lens Dashboard_Student-Detail_`.
+  * **Visual Optimization (مجال الرؤية):**
+    * Column widths across all 21 rep subsheets and `Completed_Archive` calibrated to 148 units total. Header text wrapping enabled, rows vertically centered, eliminating horizontal scrolling.
+  * **Silent In-Place Remote Drive Overwrite:**
+    * Uploaded to DingTalk Drive Node `nYMoO1rWxaYZQElMiRDvN3voV47Z3je9` (`October Daily Tasks(2).xlsx`, Version 8) in `spaceId: 28499372430`. Zero messages or notifications were sent to the Mega group chat.
+    * Synchronized Alidocs online sheet node `dxXB52LJqnjXBmGdiZ7rdGZD8qjMp697` with dynamic 4-tier formulas (Rows 6 to 111).
 
+  ### G. Cell Centering, Expressive Palette & Individual Rep Progress Broadcaster (1-on-1 DMs)
+  * **Cell Centering & Text Wrap (منصف الخلية):**
+    * All data cells across all 21 representative subsheets (Cols A-M) and `Completed_Archive` (Cols A-I) are strictly centered (`HorizontalAlignment = xlCenter`, `VerticalAlignment = xlCenter`).
+    * Column widths are optimized (148 units total) with `WrapText = True`, eliminating horizontal scrolling on standard screens.
+  * **Expressive Color Palette (ألوان تعبيرية):**
+    * **P1 (SOP Round 1):** Solid Radiant Yellow (`#FDE047`) + Jet Black Bold font (`#000000`).
+    * **P2 (SOP Due Today):** Solid Crimson Red (`#DC2626`) + Pure White Bold font (`#FFFFFF`).
+    * **P3 (Unfixed Teachers):** Soft Warm Amber (`#FEF3C7`) + Deep Mahogany Bold font (`#92400E`).
+    * **P4 (Outside Pool 0-Pts):** Soft Ice Cyan (`#E0F2FE`) + Deep Slate Navy Bold font (`#075985`).
+    * **Status Dropdown (Col J):** Conditional formatting with Mint Green (`#DCFCE7` / Done), Warm Amber (`#FEF9C3` / Pending), and Sky Blue (`#E0F2FE` / No Answer).
+  * **Individual Representative Progress Broadcaster Engine (`send_individual_rep_progress.py`):**
+    * Extracted and confirmed `openDingtalkId` for **all 21 Big Team 01 representatives** in `D:\Lens\Dashboard\scratch\rep_dingtalk_ids.json`.
+    * Built `send_individual_rep_progress.py` to deliver personalized 1-on-1 private DingTalk messages directly to each employee's personal chat with real-time KPIs, remaining urgent tasks, and direct sheet links.
+    * CLI commands supported:
+      - `python send_individual_rep_progress.py --rep <rep_name> --dry-run` (Preview)
+      - `python send_individual_rep_progress.py --rep <rep_name>` (Send to individual)
+      - `python send_individual_rep_progress.py --team "Team 01"` (Send to team)
+      - `python send_individual_rep_progress.py --all` (Send to all 21 reps)
 
+  ### H. Sub-Sheet Protection Policy, Cross-Sheet Synchronization & Achievement Audit (18 Oct 2026)
+  * **Strict Sub-Sheet Locking Standard:**
+    * In accordance with operational security directives, All_Team_Master and Completed_Archive are permanently locked and password-protected (51talk). Representatives are restricted from modifying data, typing in cells, or deleting rows in these master tabs.
+    * Protection is permanently enforced in uild_unified_master_excel_pro.ps1 for all future rebuilds via Excel COM ($wsMaster.Protect('51talk') and $wsArchive.Protect('51talk')).
+    * All 21 representative subsheets remain unlocked (ws.protection.sheet = False), preserving full interactivity for Column J checkboxes and Column K feedback notes.
+  * **Lead Updates Synchronization from Master to Rep Subsheets:**
+    * Extracted 63 lead updates entered directly into All_Team_Master by representatives (dhmgadallah: 22 leads, 	itooooo: 14 leads, shraqatal: 11 leads, 
+egma: 11 leads, omarmoneb: 5 leads) and mapped them by Student ID into their designated subsheets.
+    * Consolidated all 243 rep updates across all 21 subsheets back into All_Team_Master as an immutable master record.
+  * **Silent In-Place Remote Drive Overwrite:**
+    * The remote DingTalk Drive file on node 
+YMoO1rWxaYZQElMiRDvN3voV47Z3je9 (October Daily Tasks(2).xlsx, Version 10) was overwritten in place without sending any broadcast message or posting a duplicate file to the Mega group.
+  * **True Achievement Rate Recalculation:**
+    * Full recalculation via Excel COM corrected the suppressed achievement rate from **1.0% (4 completed)** to **55.6% (225 completed / 405 assigned)**, with 7 representatives achieving 100% completion.

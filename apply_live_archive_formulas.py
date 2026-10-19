@@ -28,9 +28,8 @@ sorted_tabs = sorted(agent_groups.keys(), key=lambda x: (x.split('-')[0].strip()
 case_tiers = [
     ("P1: SOP R1", "  [P1] SOP Round 1", "Awareness building (First call)"),
     ("P2: Due Today", "  [P2] Due Today", "Urgent tasks expiring today"),
-    ("P3: Unfixed", "  [P3] Unfixed Teacher", "Fix teacher binding"),
-    ("P4: 0-Classes", "  [P4] 0-Classes Urge", "Urge class booking"),
-    ("P5: Outside 0pts", "  [P5] Outside Pool 0pts", "High-priority renewal urge")
+    ("P3: Unfixed", "  [P3] Unfixed Teacher", "Fix teacher binding (M0-M2)"),
+    ("P4: Outside 0pts", "  [P4] Outside Pool 0pts", "High-priority renewal urge")
 ]
 
 rows_data = []
@@ -46,7 +45,7 @@ for rep_idx, tab_key in enumerate(sorted_tabs, start=1):
     agent_part = tab_key.split('-')[1].strip()
     
     child_start = p_row + 1
-    child_end   = p_row + 5
+    child_end   = p_row + len(case_tiers)
     
     tab_rec_count = len(agent_groups[tab_key])
     sub_start = 6
@@ -106,7 +105,7 @@ gt_stat_form = f'=IF(H{gt_row}>=1, "ALL COMPLETED", "ACTIVE CYCLE")'
 rows_data.append([
     "ALL",
     "BIG TEAM 01",
-    "22 Representatives",
+    "21 Representatives Active",
     "-",
     gt_tot_form,
     gt_comp_form,
