@@ -1,15 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-khaledgonam | Generated: 2026-10-19 19:10
+# Representative: EGSS-khaledgonam | Generated: 2026-10-19 20:10
 
-=== 1. SOP PENDING TASKS (87) ===
+=== 1. SOP PENDING TASKS (80) ===
 Student_ID,Task_Name,Expiration_Time
-59783285,"SS:Service warning - absence",20261019 18:55:00
-60433632,"SS:Service warning - absence",20261019 18:55:00
-62005793,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261019 18:55:00
-62423258,"Round 6 Premium Service(Outside Renewal Pool)",20261019 18:55:00
-62788773,"SS:Service warning - absence",20261019 18:55:00
-63195069,"Round 6 Premium Service(Duration Renewal Insidepool)",20261019 18:55:00
-63538213,"SS:Service warning - absence",20261019 18:55:00
 62217854,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261020 18:55:00
 62430317,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261020 18:55:00
 62432942,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261020 18:55:00
@@ -430,15 +423,15 @@ Student_ID,Level,Completed,Status
 63121807,"1",0,"Booking Required"
 63113452,"3",0,"Booking Required"
 63145355,"1",0,"Booking Required"
-58682342,"0",1,"Attended"
 63161681,"1",0,"Booking Required"
+58682342,"0",1,"Attended"
 63178929,"2",0,"Booking Required"
 59292788,"0",0,"Booking Required"
 58355751,"1",0,"Booking Required"
 63195069,"3",0,"Booking Required"
 63141504,"1",0,"Booking Required"
-59783285,"1",0,"Booking Required"
 63265311,"2",0,"Booking Required"
+59783285,"1",0,"Booking Required"
 63257138,"2",0,"Booking Required"
 63257314,"1",0,"Booking Required"
 63305723,"3",0,"Booking Required"
@@ -521,5 +514,5 @@ Student_ID,Level,Completed,Status
 64491737,"0",0,"Booking Required"
 64578595,"2",0,"Booking Required"
 61715515,"0",0,"Booking Required"
-64632321,"1",0,"Booking Required"
 64636087,"1",0,"Booking Required"
+64632321,"1",0,"Booking Required"

@@ -1,15 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-samira01 | Generated: 2026-10-19 19:10
+# Representative: EGSS-samira01 | Generated: 2026-10-19 20:10
 
-=== 1. SOP PENDING TASKS (16) ===
+=== 1. SOP PENDING TASKS (9) ===
 Student_ID,Task_Name,Expiration_Time
-63059476,"English Club Booking",20261019 18:55:00
-63157748,"English Club Booking",20261019 18:55:00
-63415415,"English Club Booking",20261019 18:55:00
-63640909,"Round 6 Premium Service(Outside Renewal Pool)",20261019 18:55:00
-63709880,"Round 6 Premium Service(Outside Renewal Pool)",20261019 18:55:00
-64180740,"English Club Booking",20261019 18:55:00
-64479331,"English Club Booking",20261019 18:55:00
 58285255,"English Club Booking",20261020 18:55:00
 62878887,"English Club Booking",20261020 18:55:00
 63708788,"English Club Booking",20261020 18:55:00
@@ -326,9 +319,9 @@ Student_ID,Level,Completed,Status
 63113870,"1",0,"Booking Required"
 62132899,"2",0,"Booking Required"
 63135227,"0",0,"Booking Required"
-59509199,"1",1,"Attended"
 63155746,"1",0,"Booked"
 63156753,"3",0,"Booking Required"
+59509199,"1",1,"Attended"
 57927902,"1",0,"Booking Required"
 63060603,"3",0,"Booking Required"
 63157748,"3",0,"Booking Required"
@@ -361,8 +354,8 @@ Student_ID,Level,Completed,Status
 63719977,"0",0,"Booking Required"
 63708788,"1",0,"Booking Required"
 59588738,"0",0,"Booking Required"
-63719540,"1",0,"Booking Required"
 63730843,"1",1,"Attended"
+63719540,"1",0,"Booking Required"
 63691939,"1",1,"Attended"
 63766927,"1",0,"Booked"
 63812725,"0",0,"Booking Required"

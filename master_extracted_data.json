@@ -705,15 +705,15 @@
                 {
                     "name":  "EGSS-Ibrahimismaiel",
                     "team":  "ME-EGSS05",
-                    "ec":  16,
+                    "ec":  10,
                     "r1":  0,
-                    "r2":  2,
+                    "r2":  1,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  0,
-                    "r6e":  5,
-                    "absence":  5,
-                    "total":  28
+                    "r6e":  3,
+                    "absence":  0,
+                    "total":  14
                 },
                 {
                     "name":  "EGSS-KhaledGonam",
@@ -723,10 +723,10 @@
                     "r2":  0,
                     "r3":  0,
                     "r4":  0,
-                    "r6d":  5,
-                    "r6e":  8,
-                    "absence":  8,
-                    "total":  22
+                    "r6d":  4,
+                    "r6e":  6,
+                    "absence":  4,
+                    "total":  15
                 },
                 {
                     "name":  "EGSS-OmarMoneb",
@@ -737,22 +737,22 @@
                     "r3":  0,
                     "r4":  0,
                     "r6d":  1,
-                    "r6e":  5,
+                    "r6e":  4,
                     "absence":  3,
-                    "total":  11
+                    "total":  10
                 },
                 {
                     "name":  "EGSS-samira01",
                     "team":  "ME-EGSS05",
-                    "ec":  11,
+                    "ec":  6,
                     "r1":  0,
                     "r2":  1,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  1,
-                    "r6e":  3,
+                    "r6e":  1,
                     "absence":  0,
-                    "total":  16
+                    "total":  9
                 },
                 {
                     "name":  "EGSS-ashraqatal",
@@ -861,15 +861,15 @@
                 {
                     "name":  "EGSS-mohamedha",
                     "team":  "ME-EGSS13",
-                    "ec":  8,
+                    "ec":  4,
                     "r1":  3,
                     "r2":  3,
                     "r3":  2,
                     "r4":  0,
                     "r6d":  16,
-                    "r6e":  1,
-                    "absence":  5,
-                    "total":  38
+                    "r6e":  0,
+                    "absence":  1,
+                    "total":  29
                 },
                 {
                     "name":  "EGSS-AdhmGadAllah",
@@ -881,8 +881,8 @@
                     "r4":  1,
                     "r6d":  12,
                     "r6e":  4,
-                    "absence":  4,
-                    "total":  21
+                    "absence":  3,
+                    "total":  20
                 },
                 {
                     "name":  "EGSS-alihesham01",
@@ -928,18 +928,18 @@
                     "team":  "ME-EGSS10",
                     "ec":  0,
                     "r1":  0,
-                    "r2":  0,
+                    "r2":  1,
                     "r3":  1,
                     "r4":  1,
                     "r6d":  13,
                     "r6e":  6,
                     "absence":  2,
-                    "total":  23
+                    "total":  24
                 },
                 {
                     "name":  "EGSS-Mahmoudkhamis",
                     "team":  "ME-EGSS10",
-                    "ec":  2,
+                    "ec":  1,
                     "r1":  0,
                     "r2":  0,
                     "r3":  1,
@@ -947,7 +947,7 @@
                     "r6d":  17,
                     "r6e":  3,
                     "absence":  1,
-                    "total":  25
+                    "total":  24
                 }
             ],
     "englishClub":  [

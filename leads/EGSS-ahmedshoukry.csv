@@ -1,7 +1,7 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-ahmedshoukry | Generated: 2026-10-19 19:10
+# Representative: EGSS-ahmedshoukry | Generated: 2026-10-19 20:10
 
-=== 1. SOP PENDING TASKS (45) ===
+=== 1. SOP PENDING TASKS (43) ===
 Student_ID,Task_Name,Expiration_Time
 60735433,"SS:Service warning - absence",20261020 18:55:00
 62028525,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261020 18:55:00
@@ -10,6 +10,7 @@ Student_ID,Task_Name,Expiration_Time
 62682579,"Round 6 Premium Service(Outside Renewal Pool)",20261021 18:55:00
 63416230,"SS:Service warning - absence",20261021 18:55:00
 63627368,"Round 3 Habit Cultivation (1st Unit Assessment)",20261021 18:55:00
+64411533,"Round 2  Trust Enhancement (First Class Follow-up)",20261021 18:55:00
 62263004,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261022 18:55:00
 62376739,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261022 18:55:00
 63416230,"Round 6 Premium Service(Outside Renewal Pool)",20261022 18:55:00
@@ -37,9 +38,6 @@ Student_ID,Task_Name,Expiration_Time
 62335591,"SS：Service warning - class interruption",20261031 23:59:59
 62378475,"SS：Service warning - class interruption",20261031 23:59:59
 62378896,"SS：Service warning - class interruption",20261031 23:59:59
-62400637,"SS：Service warning - class interruption",20261031 23:59:59
-63137174,"SS：Service warning - class interruption",20261031 23:59:59
-63138002,"SS：Service warning - class interruption",20261031 23:59:59
 63348204,"SS：Service warning - class interruption",20261031 23:59:59
 63358100,"SS：Service warning - class interruption",20261031 23:59:59
 63397811,"SS：Service warning - class interruption",20261031 23:59:59
@@ -427,8 +425,8 @@ Student_ID,Level,Completed,Status
 63368136,"1",0,"Booking Required"
 63368572,"1",0,"Booking Required"
 58385099,"1",1,"Attended"
-58424026,"3",0,"Booking Required"
 63397811,"0",0,"Booking Required"
+58424026,"3",0,"Booking Required"
 63416230,"0",0,"Booking Required"
 58968975,"1",0,"Booking Required"
 63453483,"2",0,"Booking Required"
@@ -450,8 +448,8 @@ Student_ID,Level,Completed,Status
 61953557,"1",0,"Booking Required"
 63574954,"0",0,"Booking Required"
 63540846,"1",0,"Booking Required"
-63582317,"0",0,"Booking Required"
 63561139,"3",0,"Booking Required"
+63582317,"0",0,"Booking Required"
 63583069,"0",0,"Booking Required"
 58614264,"2",0,"Booking Required"
 63551032,"0",0,"Booking Required"
@@ -470,9 +468,9 @@ Student_ID,Level,Completed,Status
 58112904,"0",1,"Attended"
 63742225,"0",0,"Booked"
 63724583,"3",0,"Booking Required"
-63711248,"0",1,"Attended"
 63782464,"1",0,"Booking Required"
 63793087,"2",1,"Attended"
+63711248,"0",1,"Attended"
 63784851,"1",0,"Booking Required"
 59018881,"0",0,"Booking Required"
 63670094,"1",0,"Booking Required"
@@ -491,9 +489,9 @@ Student_ID,Level,Completed,Status
 63849851,"0",0,"Booking Required"
 63895984,"0",1,"Attended"
 61911772,"1",0,"Booking Required"
-57785962,"0",0,"Booking Required"
 63056829,"2",0,"Booking Required"
 63946512,"2",0,"Booking Required"
+57785962,"0",0,"Booking Required"
 63946511,"1",0,"Booking Required"
 63977600,"1",0,"Booking Required"
 63971790,"1",0,"Booked"
@@ -507,8 +505,8 @@ Student_ID,Level,Completed,Status
 64077352,"1",1,"Attended"
 64031289,"1",0,"Booking Required"
 58355382,"1",0,"Booking Required"
-64102669,"1",1,"Attended"
 64062200,"1",0,"Booking Required"
+64102669,"1",1,"Attended"
 64102114,"1",1,"Attended"
 63975618,"2",1,"Attended"
 61664150,"2",0,"Booking Required"
@@ -528,11 +526,11 @@ Student_ID,Level,Completed,Status
 64343397,"1",0,"Booking Required"
 64351360,"2",1,"Attended"
 64362689,"2",0,"Booking Required"
-62099706,"3",0,"Booking Required"
 64355638,"1",0,"Booking Required"
+62099706,"3",0,"Booking Required"
 64370563,"0",0,"Booking Required"
-64406971,"2",1,"Attended"
 64385114,"0",0,"Booked"
+64406971,"2",1,"Attended"
 60603425,"0",1,"Attended"
 64418889,"2",0,"Booking Required"
 64427516,"2",0,"Booking Required"
