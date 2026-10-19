@@ -223,15 +223,16 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 41.24% vs 49% benchmark. Push $10449/day to stay on track.', time: '20261019_151022' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261019_151022' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (0%), EGSS-negma (7.8%), EGSS-marwaahmed (9%), EGSS-ehabzaky01 (20.3%). Schedule targeted coaching sessions today.', time: '20261019_151022' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (78.9%), EGSS-ibrahimismaiel (85%), EGSS-khaledgonam (95.3%). Recognize in team channel!', time: '20261019_151022' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1750/day', detail: 'Currently at 41.8% (15077/36080). Gap: $21003.', time: '20261019_151022' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1394/day', detail: 'Currently at 41.5% (11857/28580). Gap: $16723.', time: '20261019_151022' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1909/day', detail: 'Currently at 33.7% (11626/34530). Gap: $22904.', time: '20261019_151022' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $3065/day', detail: 'Currently at 31.5% (16915/53700). Gap: $36785.', time: '20261019_151022' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 88 more renewals', detail: 'Current: 12/497 (2.4%). 20% target = 100. Focus on high-base reps.', time: '20261019_151022' },
+  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 41.24% vs 49% benchmark. Push $10449/day to stay on track.', time: '20261019_171837' },
+  { type: 'critical', icon: '🚨', title: '21 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-nohayoussry, EGSS-ashraqatal, EGSS-negma, EGSS-juliamonir01, EGSS-mahmoud04, EGSS-abdelrahmannasef, EGSS-ehabzaky01, EGSS-ibrahimismaiel, EGSS-khaledgonam, EGSS-omarmoneb, EGSS-samira01, EGSS-abdelrhmanshehata, EGSS-ahmedshoukry, EGSS-mahmoudkhamis, EGSS-amrsafwat, EGSS-hayamhassan, EGSS-marwaahmed, EGSS-mohamedha, EGSS-adhmgadallah, EGSS-alihesham01, EGSS-titooooo. Immediate 1:1 coaching required.', time: '20261019_171837' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-amrsafwat (0%), EGSS-hayamhassan (0%), EGSS-mahmoudkhamis (0%), EGSS-abdelrhmanshehata (0%), EGSS-ahmedshoukry (0%). Schedule targeted coaching sessions today.', time: '20261019_171837' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-ibrahimismaiel (0%), EGSS-abdelrahmannasef (0%), EGSS-ehabzaky01 (0%). Recognize in team channel!', time: '20261019_171837' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $2758/day', detail: 'Currently at 0% (0/33100). Gap: $33100.', time: '20261019_171837' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $7333/day', detail: 'Currently at 0% (0/88000). Gap: $88000.', time: '20261019_171837' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $4067/day', detail: 'Currently at 0% (0/48800). Gap: $48800.', time: '20261019_171837' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $3771/day', detail: 'Currently at 0% (0/45250). Gap: $45250.', time: '20261019_171837' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $7567/day', detail: 'Currently at 0% (0/90800). Gap: $90800.', time: '20261019_171837' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 88 more renewals', detail: 'Current: 12/497 (2.4%). 20% target = 100. Focus on high-base reps.', time: '20261019_171837' },
 ];
 
 // =========================================================================
@@ -8210,6 +8211,12 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
+
+
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -11943,14 +11950,14 @@ function checkSheetSyncStatus() {
       chkId: 'chkECSheet',
       timeId: 'timeECSheet',
       itemId: 'syncItemEC',
-      latestTime: '2026-10-19 13:23:20', name: 'English Club Sheet'
+      latestTime: '2026-10-18 21:01:15', name: 'English Club Sheet'
     },
     {
       idPrefix: 'SOP',
       chkId: 'chkSOPSheet',
       timeId: 'timeSOPSheet',
       itemId: 'syncItemSOP',
-      latestTime: '2026-10-19 12:12:20', name: 'SOP Compliance Sheet'
+      latestTime: '2026-10-18 21:09:26', name: 'SOP Compliance Sheet'
     }
   ];
 
@@ -13321,6 +13328,15 @@ function exportCurrentFilteredUncoveredCsv() {
   const fullCsv = csvHeader + csvRows;
   triggerCsvDownload(fullCsv, `Uncovered_Leads_Filtered_${uncovState.team}_${filtered.length}_accounts.csv`);
 }
+
+
+
+
+
+
+
+
+
 
 
 
