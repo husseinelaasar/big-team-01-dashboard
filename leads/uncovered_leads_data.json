@@ -183,7 +183,7 @@
                                                          "high":  179
                                                      }
                                    },
-                 "generatedAt":  "2026-10-20 12:10:37",
+                 "generatedAt":  "2026-10-20 12:50:21",
                  "dormantCount":  1275,
                  "uncontactedCount":  1065,
                  "lowTierCount":  493,
