@@ -223,15 +223,15 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'warning', icon: '🟡', title: 'Sector Within Pace (Tight)', detail: 'Ach 44.55% vs 51% benchmark. Push $10757/day to stay on track.', time: '20261020_205626' },
-  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261020_205626' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (0%), EGSS-negma (7.8%), EGSS-marwaahmed (9%), EGSS-juliamonir01 (22.2%). Schedule targeted coaching sessions today.', time: '20261020_205626' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (78.9%), EGSS-ibrahimismaiel (95.4%), EGSS-khaledgonam (101.9%). Recognize in team channel!', time: '20261020_205626' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1669/day', detail: 'Currently at 49.1% (17721/36080). Gap: $18359.', time: '20261020_205626' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1520/day', detail: 'Currently at 41.5% (11857/28580). Gap: $16723.', time: '20261020_205626' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $1989/day', detail: 'Currently at 36.6% (12646/34530). Gap: $21884.', time: '20261020_205626' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $3344/day', detail: 'Currently at 31.5% (16915/53700). Gap: $36785.', time: '20261020_205626' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 100 more renewals', detail: 'Current: 0/497 (0%). 20% target = 100. Focus on high-base reps.', time: '20261020_205626' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 44.55% vs Day 21 target 54%. Gap: 9.5pp. Need $11833/day to close.', time: '20261021_015320' },
+  { type: 'critical', icon: '🚨', title: '2 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-ashraqatal, EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261021_015320' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (0%), EGSS-negma (7.8%), EGSS-marwaahmed (9%), EGSS-juliamonir01 (22.2%). Schedule targeted coaching sessions today.', time: '20261021_015320' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (78.9%), EGSS-ibrahimismaiel (95.4%), EGSS-khaledgonam (101.9%). Recognize in team channel!', time: '20261021_015320' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $1836/day', detail: 'Currently at 49.1% (17721/36080). Gap: $18359.', time: '20261021_015320' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $1672/day', detail: 'Currently at 41.5% (11857/28580). Gap: $16723.', time: '20261021_015320' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $2188/day', detail: 'Currently at 36.6% (12646/34530). Gap: $21884.', time: '20261021_015320' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $3678/day', detail: 'Currently at 31.5% (16915/53700). Gap: $36785.', time: '20261021_015320' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 100 more renewals', detail: 'Current: 0/497 (0%). 20% target = 100. Focus on high-base reps.', time: '20261021_015320' },
 ];
 
 // =========================================================================
@@ -314,7 +314,7 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 20; // Current MTD Day (Oct 3, 2026)
+  const daysPassed = 21; // Current MTD Day (Oct 3, 2026)
   const daysInMonth = 31;
   const daysLeft = daysInMonth - daysPassed;
   const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 11;
@@ -61734,6 +61734,10 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -66845,6 +66849,14 @@ function exportCurrentFilteredUncoveredCsv() {
   const fullCsv = csvHeader + csvRows;
   triggerCsvDownload(fullCsv, `Uncovered_Leads_Filtered_${uncovState.team}_${filtered.length}_accounts.csv`);
 }
+
+
+
+
+
+
+
+
 
 
 
