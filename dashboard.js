@@ -223,16 +223,16 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 41.24% vs Day 20 target 51%. Gap: 9.8pp. Need $11399/day to close.', time: '20261020_111006' },
-  { type: 'critical', icon: '🚨', title: '21 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-nohayoussry, EGSS-ashraqatal, EGSS-negma, EGSS-juliamonir01, EGSS-mahmoud04, EGSS-abdelrahmannasef, EGSS-ehabzaky01, EGSS-ibrahimismaiel, EGSS-khaledgonam, EGSS-omarmoneb, EGSS-samira01, EGSS-abdelrhmanshehata, EGSS-ahmedshoukry, EGSS-mahmoudkhamis, EGSS-amrsafwat, EGSS-hayamhassan, EGSS-marwaahmed, EGSS-mohamedha, EGSS-adhmgadallah, EGSS-alihesham01, EGSS-titooooo. Immediate 1:1 coaching required.', time: '20261020_111006' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-amrsafwat (0%), EGSS-hayamhassan (0%), EGSS-mahmoudkhamis (0%), EGSS-abdelrhmanshehata (0%), EGSS-ahmedshoukry (0%). Schedule targeted coaching sessions today.', time: '20261020_111006' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-ibrahimismaiel (0%), EGSS-abdelrahmannasef (0%), EGSS-ehabzaky01 (0%). Recognize in team channel!', time: '20261020_111006' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $3009/day', detail: 'Currently at 0% (0/33100). Gap: $33100.', time: '20261020_111006' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $8000/day', detail: 'Currently at 0% (0/88000). Gap: $88000.', time: '20261020_111006' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $4436/day', detail: 'Currently at 0% (0/48800). Gap: $48800.', time: '20261020_111006' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $4114/day', detail: 'Currently at 0% (0/45250). Gap: $45250.', time: '20261020_111006' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $8255/day', detail: 'Currently at 0% (0/90800). Gap: $90800.', time: '20261020_111006' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 84 more renewals', detail: 'Current: 16/497 (3.2%). 20% target = 100. Focus on high-base reps.', time: '20261020_111006' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 41.24% vs Day 20 target 51%. Gap: 9.8pp. Need $11399/day to close.', time: '20261020_112322' },
+  { type: 'critical', icon: '🚨', title: '21 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-nohayoussry, EGSS-ashraqatal, EGSS-negma, EGSS-juliamonir01, EGSS-mahmoud04, EGSS-abdelrahmannasef, EGSS-ehabzaky01, EGSS-ibrahimismaiel, EGSS-khaledgonam, EGSS-omarmoneb, EGSS-samira01, EGSS-abdelrhmanshehata, EGSS-ahmedshoukry, EGSS-mahmoudkhamis, EGSS-amrsafwat, EGSS-hayamhassan, EGSS-marwaahmed, EGSS-mohamedha, EGSS-adhmgadallah, EGSS-alihesham01, EGSS-titooooo. Immediate 1:1 coaching required.', time: '20261020_112322' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-amrsafwat (0%), EGSS-hayamhassan (0%), EGSS-mahmoudkhamis (0%), EGSS-abdelrhmanshehata (0%), EGSS-ahmedshoukry (0%). Schedule targeted coaching sessions today.', time: '20261020_112322' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-ibrahimismaiel (0%), EGSS-abdelrahmannasef (0%), EGSS-ehabzaky01 (0%). Recognize in team channel!', time: '20261020_112322' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $3009/day', detail: 'Currently at 0% (0/33100). Gap: $33100.', time: '20261020_112322' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $8000/day', detail: 'Currently at 0% (0/88000). Gap: $88000.', time: '20261020_112322' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $4436/day', detail: 'Currently at 0% (0/48800). Gap: $48800.', time: '20261020_112322' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $4114/day', detail: 'Currently at 0% (0/45250). Gap: $45250.', time: '20261020_112322' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $8255/day', detail: 'Currently at 0% (0/90800). Gap: $90800.', time: '20261020_112322' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 84 more renewals', detail: 'Current: 16/497 (3.2%). 20% target = 100. Focus on high-base reps.', time: '20261020_112322' },
 ];
 
 // =========================================================================
@@ -60406,6 +60406,134 @@ const MASTER_OPERATIONS_DATA = {
                         "m2Pct":  "90.6%"
                     }
                 ],
+    "upgrade":  [
+                    {
+                        "name":  "EGSS-nohayoussry",
+                        "team":  "ME-EGSS01",
+                        "upgradeM2":  0,
+                        "upgradeBase":  28
+                    },
+                    {
+                        "name":  "EGSS-ashraqatal",
+                        "team":  "ME-EGSS01",
+                        "upgradeM2":  0,
+                        "upgradeBase":  29
+                    },
+                    {
+                        "name":  "EGSS-negma",
+                        "team":  "ME-EGSS01",
+                        "upgradeM2":  0,
+                        "upgradeBase":  35
+                    },
+                    {
+                        "name":  "EGSS-juliamonir01",
+                        "team":  "ME-EGSS01",
+                        "upgradeM2":  0,
+                        "upgradeBase":  22
+                    },
+                    {
+                        "name":  "EGSS-mahmoud04",
+                        "team":  "ME-EGSS01",
+                        "upgradeM2":  3,
+                        "upgradeBase":  31
+                    },
+                    {
+                        "name":  "EGSS-abdelrahmannasef",
+                        "team":  "ME-EGSS05",
+                        "upgradeM2":  0,
+                        "upgradeBase":  19
+                    },
+                    {
+                        "name":  "EGSS-ehabzaky01",
+                        "team":  "ME-EGSS05",
+                        "upgradeM2":  1,
+                        "upgradeBase":  21
+                    },
+                    {
+                        "name":  "EGSS-ibrahimismaiel",
+                        "team":  "ME-EGSS05",
+                        "upgradeM2":  0,
+                        "upgradeBase":  27
+                    },
+                    {
+                        "name":  "EGSS-khaledgonam",
+                        "team":  "ME-EGSS05",
+                        "upgradeM2":  0,
+                        "upgradeBase":  13
+                    },
+                    {
+                        "name":  "EGSS-omarmoneb",
+                        "team":  "ME-EGSS05",
+                        "upgradeM2":  1,
+                        "upgradeBase":  16
+                    },
+                    {
+                        "name":  "EGSS-samira01",
+                        "team":  "ME-EGSS05",
+                        "upgradeM2":  0,
+                        "upgradeBase":  17
+                    },
+                    {
+                        "name":  "EGSS-abdelrhmanshehata",
+                        "team":  "ME-EGSS10",
+                        "upgradeM2":  1,
+                        "upgradeBase":  27
+                    },
+                    {
+                        "name":  "EGSS-ahmedshoukry",
+                        "team":  "ME-EGSS10",
+                        "upgradeM2":  0,
+                        "upgradeBase":  34
+                    },
+                    {
+                        "name":  "EGSS-mahmoudkhamis",
+                        "team":  "ME-EGSS10",
+                        "upgradeM2":  2,
+                        "upgradeBase":  32
+                    },
+                    {
+                        "name":  "EGSS-amrsafwat",
+                        "team":  "ME-EGSS13",
+                        "upgradeM2":  3,
+                        "upgradeBase":  26
+                    },
+                    {
+                        "name":  "EGSS-hayamhassan",
+                        "team":  "ME-EGSS13",
+                        "upgradeM2":  2,
+                        "upgradeBase":  21
+                    },
+                    {
+                        "name":  "EGSS-marwaahmed",
+                        "team":  "ME-EGSS13",
+                        "upgradeM2":  0,
+                        "upgradeBase":  16
+                    },
+                    {
+                        "name":  "EGSS-mohamedha",
+                        "team":  "ME-EGSS13",
+                        "upgradeM2":  0,
+                        "upgradeBase":  20
+                    },
+                    {
+                        "name":  "EGSS-adhmgadallah",
+                        "team":  "ME-EGSS30",
+                        "upgradeM2":  1,
+                        "upgradeBase":  26
+                    },
+                    {
+                        "name":  "EGSS-alihesham01",
+                        "team":  "ME-EGSS30",
+                        "upgradeM2":  1,
+                        "upgradeBase":  18
+                    },
+                    {
+                        "name":  "EGSS-titooooo",
+                        "team":  "ME-EGSS30",
+                        "upgradeM2":  1,
+                        "upgradeBase":  19
+                    }
+                ],
     "sop":  [
                 {
                     "name":  "EGSS-AbdelrahmanNASEF",
@@ -60894,6 +61022,8 @@ const MASTER_OPERATIONS_DATA = {
                         }
                     ]
 };
+
+
 
 
 
@@ -65317,7 +65447,7 @@ function checkSheetSyncStatus() {
       chkId: 'chkSOPSheet',
       timeId: 'timeSOPSheet',
       itemId: 'syncItemSOP',
-      latestTime: '2026-10-19 21:28:41', name: 'SOP Compliance Sheet'
+      latestTime: '2026-10-20 11:20:02', name: 'SOP Compliance Sheet'
     }
   ];
 
@@ -66688,6 +66818,10 @@ function exportCurrentFilteredUncoveredCsv() {
   const fullCsv = csvHeader + csvRows;
   triggerCsvDownload(fullCsv, `Uncovered_Leads_Filtered_${uncovState.team}_${filtered.length}_accounts.csv`);
 }
+
+
+
+
 
 
 
