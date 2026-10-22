@@ -685,7 +685,7 @@
                     {
                         "name":  "EGSS-ashraqatal",
                         "team":  "ME-EGSS01",
-                        "upgradeM2":  0,
+                        "upgradeM2":  1,
                         "upgradeBase":  29
                     },
                     {
@@ -715,7 +715,7 @@
                     {
                         "name":  "EGSS-ehabzaky01",
                         "team":  "ME-EGSS05",
-                        "upgradeM2":  2,
+                        "upgradeM2":  3,
                         "upgradeBase":  21
                     },
                     {
@@ -787,7 +787,7 @@
                     {
                         "name":  "EGSS-adhmgadallah",
                         "team":  "ME-EGSS30",
-                        "upgradeM2":  1,
+                        "upgradeM2":  2,
                         "upgradeBase":  26
                     },
                     {

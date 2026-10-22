@@ -190,9 +190,9 @@ const SOP_ROUNDS = [
 const POOL22_M2_COVERAGE = {
   "EGSS-nohayoussry": 38.1,
   "EGSS-ashraqatal": 47.1,
-  "EGSS-negma": 62.1,
-  "EGSS-juliamonir01": 61.1,
-  "EGSS-mahmoud04": 56,
+  "EGSS-negma": 65.5,
+  "EGSS-juliamonir01": 66.7,
+  "EGSS-mahmoud04": 60,
   "EGSS-abdelrahmannasef": 81.2,
   "EGSS-ehabzaky01": 92.3,
   "EGSS-ibrahimismaiel": 73.7,
@@ -200,15 +200,15 @@ const POOL22_M2_COVERAGE = {
   "EGSS-omarmoneb": 72.7,
   "EGSS-samira01": 91.7,
   "EGSS-abdelrhmanshehata": 66.7,
-  "EGSS-ahmedshoukry": 35.7,
-  "EGSS-mahmoudkhamis": 59.1,
-  "EGSS-amrsafwat": 78.6,
+  "EGSS-ahmedshoukry": 46.4,
+  "EGSS-mahmoudkhamis": 63.6,
+  "EGSS-amrsafwat": 85.7,
   "EGSS-hayamhassan": 68.8,
   "EGSS-marwaahmed": 64.3,
   "EGSS-mohamedha": 25,
-  "EGSS-adhmgadallah": 75,
-  "EGSS-alihesham01": 76.9,
-  "EGSS-titooooo": 69.2,
+  "EGSS-adhmgadallah": 83.3,
+  "EGSS-alihesham01": 84.6,
+  "EGSS-titooooo": 76.9,
 };
 
 // Official Cumulative Expected Pacing Benchmark Curve (October Day 1 to 31)
@@ -223,16 +223,16 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 45.87% vs Day 21 target 54%. Gap: 8.1pp. Need $11552/day to close.', time: '20261021_205929' },
-  { type: 'critical', icon: '🚨', title: '21 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-nohayoussry, EGSS-ashraqatal, EGSS-negma, EGSS-juliamonir01, EGSS-mahmoud04, EGSS-abdelrahmannasef, EGSS-ehabzaky01, EGSS-ibrahimismaiel, EGSS-khaledgonam, EGSS-omarmoneb, EGSS-samira01, EGSS-abdelrhmanshehata, EGSS-ahmedshoukry, EGSS-mahmoudkhamis, EGSS-amrsafwat, EGSS-hayamhassan, EGSS-marwaahmed, EGSS-mohamedha, EGSS-adhmgadallah, EGSS-alihesham01, EGSS-titooooo. Immediate 1:1 coaching required.', time: '20261021_205929' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-amrsafwat (0%), EGSS-hayamhassan (0%), EGSS-mahmoudkhamis (0%), EGSS-abdelrhmanshehata (0%), EGSS-ahmedshoukry (0%). Schedule targeted coaching sessions today.', time: '20261021_205929' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-ibrahimismaiel (0%), EGSS-abdelrahmannasef (0%), EGSS-ehabzaky01 (0%). Recognize in team channel!', time: '20261021_205929' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $3310/day', detail: 'Currently at 0% (0/33100). Gap: $33100.', time: '20261021_205929' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $8800/day', detail: 'Currently at 0% (0/88000). Gap: $88000.', time: '20261021_205929' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $4880/day', detail: 'Currently at 0% (0/48800). Gap: $48800.', time: '20261021_205929' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $4525/day', detail: 'Currently at 0% (0/45250). Gap: $45250.', time: '20261021_205929' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $9080/day', detail: 'Currently at 0% (0/90800). Gap: $90800.', time: '20261021_205929' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 80 more renewals', detail: 'Current: 20/497 (4%). 20% target = 100. Focus on high-base reps.', time: '20261021_205929' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 45.87% vs Day 22 target 56%. Gap: 10.1pp. Need $12835/day to close.', time: '20261022_113329' },
+  { type: 'critical', icon: '🚨', title: '21 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-nohayoussry, EGSS-ashraqatal, EGSS-negma, EGSS-juliamonir01, EGSS-mahmoud04, EGSS-abdelrahmannasef, EGSS-ehabzaky01, EGSS-ibrahimismaiel, EGSS-khaledgonam, EGSS-omarmoneb, EGSS-samira01, EGSS-abdelrhmanshehata, EGSS-ahmedshoukry, EGSS-mahmoudkhamis, EGSS-amrsafwat, EGSS-hayamhassan, EGSS-marwaahmed, EGSS-mohamedha, EGSS-adhmgadallah, EGSS-alihesham01, EGSS-titooooo. Immediate 1:1 coaching required.', time: '20261022_113329' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-amrsafwat (0%), EGSS-hayamhassan (0%), EGSS-mahmoudkhamis (0%), EGSS-abdelrhmanshehata (0%), EGSS-ahmedshoukry (0%). Schedule targeted coaching sessions today.', time: '20261022_113329' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-ibrahimismaiel (0%), EGSS-abdelrahmannasef (0%), EGSS-ehabzaky01 (0%). Recognize in team channel!', time: '20261022_113329' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $3678/day', detail: 'Currently at 0% (0/33100). Gap: $33100.', time: '20261022_113329' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $9778/day', detail: 'Currently at 0% (0/88000). Gap: $88000.', time: '20261022_113329' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $5422/day', detail: 'Currently at 0% (0/48800). Gap: $48800.', time: '20261022_113329' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $5028/day', detail: 'Currently at 0% (0/45250). Gap: $45250.', time: '20261022_113329' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $10089/day', detail: 'Currently at 0% (0/90800). Gap: $90800.', time: '20261022_113329' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 77 more renewals', detail: 'Current: 23/497 (4.6%). 20% target = 100. Focus on high-base reps.', time: '20261022_113329' },
 ];
 
 // =========================================================================
@@ -315,7 +315,7 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 21; // Current MTD Day (Oct 3, 2026)
+  const daysPassed = 22; // Current MTD Day (Oct 3, 2026)
   const daysInMonth = 31;
   const daysLeft = daysInMonth - daysPassed;
   const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 11;
@@ -60416,7 +60416,7 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-ashraqatal",
                         "team":  "ME-EGSS01",
-                        "upgradeM2":  0,
+                        "upgradeM2":  1,
                         "upgradeBase":  29
                     },
                     {
@@ -60446,7 +60446,7 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-ehabzaky01",
                         "team":  "ME-EGSS05",
-                        "upgradeM2":  2,
+                        "upgradeM2":  3,
                         "upgradeBase":  21
                     },
                     {
@@ -60518,7 +60518,7 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-adhmgadallah",
                         "team":  "ME-EGSS30",
-                        "upgradeM2":  1,
+                        "upgradeM2":  2,
                         "upgradeBase":  26
                     },
                     {
@@ -61022,6 +61022,8 @@ const MASTER_OPERATIONS_DATA = {
                         }
                     ]
 };
+
+
 
 
 
@@ -66868,6 +66870,10 @@ function exportCurrentFilteredUncoveredCsv() {
   const fullCsv = csvHeader + csvRows;
   triggerCsvDownload(fullCsv, `Uncovered_Leads_Filtered_${uncovState.team}_${filtered.length}_accounts.csv`);
 }
+
+
+
+
 
 
 
