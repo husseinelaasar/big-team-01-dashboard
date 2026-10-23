@@ -223,16 +223,16 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 48.7% vs Day 23 target 57%. Gap: 8.3pp. Need $13683/day to close.', time: '20261023_061731' },
-  { type: 'critical', icon: '🚨', title: '21 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-nohayoussry, EGSS-ashraqatal, EGSS-negma, EGSS-juliamonir01, EGSS-mahmoud04, EGSS-abdelrahmannasef, EGSS-ehabzaky01, EGSS-ibrahimismaiel, EGSS-khaledgonam, EGSS-omarmoneb, EGSS-samira01, EGSS-abdelrhmanshehata, EGSS-ahmedshoukry, EGSS-mahmoudkhamis, EGSS-amrsafwat, EGSS-hayamhassan, EGSS-marwaahmed, EGSS-mohamedha, EGSS-adhmgadallah, EGSS-alihesham01, EGSS-titooooo. Immediate 1:1 coaching required.', time: '20261023_061731' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-amrsafwat (0%), EGSS-hayamhassan (0%), EGSS-mahmoudkhamis (0%), EGSS-abdelrhmanshehata (0%), EGSS-ahmedshoukry (0%). Schedule targeted coaching sessions today.', time: '20261023_061731' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-ibrahimismaiel (0%), EGSS-abdelrahmannasef (0%), EGSS-ehabzaky01 (0%). Recognize in team channel!', time: '20261023_061731' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $4138/day', detail: 'Currently at 0% (0/33100). Gap: $33100.', time: '20261023_061731' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $11000/day', detail: 'Currently at 0% (0/88000). Gap: $88000.', time: '20261023_061731' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $6100/day', detail: 'Currently at 0% (0/48800). Gap: $48800.', time: '20261023_061731' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $5656/day', detail: 'Currently at 0% (0/45250). Gap: $45250.', time: '20261023_061731' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $11350/day', detail: 'Currently at 0% (0/90800). Gap: $90800.', time: '20261023_061731' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 77 more renewals', detail: 'Current: 23/497 (4.6%). 20% target = 100. Focus on high-base reps.', time: '20261023_061731' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 48.7% vs Day 23 target 57%. Gap: 8.3pp. Need $13683/day to close.', time: '20261023_121544' },
+  { type: 'critical', icon: '🚨', title: '21 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-nohayoussry, EGSS-ashraqatal, EGSS-negma, EGSS-juliamonir01, EGSS-mahmoud04, EGSS-abdelrahmannasef, EGSS-ehabzaky01, EGSS-ibrahimismaiel, EGSS-khaledgonam, EGSS-omarmoneb, EGSS-samira01, EGSS-abdelrhmanshehata, EGSS-ahmedshoukry, EGSS-mahmoudkhamis, EGSS-amrsafwat, EGSS-hayamhassan, EGSS-marwaahmed, EGSS-mohamedha, EGSS-adhmgadallah, EGSS-alihesham01, EGSS-titooooo. Immediate 1:1 coaching required.', time: '20261023_121544' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-amrsafwat (0%), EGSS-hayamhassan (0%), EGSS-mahmoudkhamis (0%), EGSS-abdelrhmanshehata (0%), EGSS-ahmedshoukry (0%). Schedule targeted coaching sessions today.', time: '20261023_121544' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-ibrahimismaiel (0%), EGSS-abdelrahmannasef (0%), EGSS-ehabzaky01 (0%). Recognize in team channel!', time: '20261023_121544' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS30 needs $4138/day', detail: 'Currently at 0% (0/33100). Gap: $33100.', time: '20261023_121544' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $11000/day', detail: 'Currently at 0% (0/88000). Gap: $88000.', time: '20261023_121544' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $6100/day', detail: 'Currently at 0% (0/48800). Gap: $48800.', time: '20261023_121544' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $5656/day', detail: 'Currently at 0% (0/45250). Gap: $45250.', time: '20261023_121544' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS05 needs $11350/day', detail: 'Currently at 0% (0/90800). Gap: $90800.', time: '20261023_121544' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 77 more renewals', detail: 'Current: 23/497 (4.6%). 20% target = 100. Focus on high-base reps.', time: '20261023_121544' },
 ];
 
 // =========================================================================
@@ -61783,6 +61783,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -66894,6 +66896,10 @@ function exportCurrentFilteredUncoveredCsv() {
   const fullCsv = csvHeader + csvRows;
   triggerCsvDownload(fullCsv, `Uncovered_Leads_Filtered_${uncovState.team}_${filtered.length}_accounts.csv`);
 }
+
+
+
+
 
 
 
