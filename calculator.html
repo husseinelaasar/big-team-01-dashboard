@@ -3734,7 +3734,114 @@
       }
     }
 
-  </style>
+  
+/* =========================================================================
+   LUMINOUS FLUORESCENT GOLD FRAME FOR RED TEXT & NUMBERS
+   (إطار ذهبي فسفوري لامع رفيع حول الكلمات والأحرف الحمراء)
+   1. The red text/numbers remain 100% crisp, solid, and sharp (#f43f5e) with NO blur.
+   2. A delicate, ultra-thin (1px) fluorescent gold border wraps around the element.
+   3. A gentle luminous golden aura/sheen pulses on the gold frame, creating high luxury
+      and clear hazard contrast against a dark obsidian shield backdrop.
+   ========================================================================= */
+
+@keyframes goldLuminousBorder {
+  0%, 100% {
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 5px rgba(250, 204, 21, 0.4), inset 0 0 3px rgba(250, 204, 21, 0.15) !important;
+  }
+  50% {
+    border-color: #fef08a !important; /* Fluorescent Bright Gold Shine */
+    box-shadow: 0 0 9px rgba(254, 240, 138, 0.7), 0 0 16px rgba(245, 158, 11, 0.35), inset 0 0 5px rgba(254, 240, 138, 0.25) !important;
+  }
+}
+
+/* Explicit Hazard / Red Alert Class with Thin Luminous Gold Frame */
+.hazard-alert,
+.hazard-badge,
+.hazard-blink,
+.op-badge-below,
+.pill-badge-rose,
+.pill-badge-danger {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px;
+  padding: 1.5px 7px !important;
+  border-radius: 5px !important;
+  border: 1px solid #ffd700 !important; /* Thin Fluorescent Gold Border */
+  color: #f43f5e !important;           /* Solid, Razor-Sharp Red */
+  -webkit-text-fill-color: #f43f5e !important;
+  text-shadow: none !important;        /* Pure Clarity, Zero Blur */
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.3px;
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.4), inset 0 0 3px rgba(250, 204, 21, 0.15) !important;
+  animation: goldLuminousBorder 2s infinite ease-in-out !important;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.hazard-alert *,
+.hazard-badge *,
+.op-badge-below *,
+.pill-badge-rose * {
+  color: #f43f5e !important;
+  -webkit-text-fill-color: #f43f5e !important;
+  text-shadow: none !important;
+}
+
+/* Big Value Numbers in KPI Cards (e.g. Zero-Class total) */
+.kpi-value.hazard-alert,
+div.hazard-alert {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1.5px solid #ffd700 !important;
+  border-radius: 8px !important;
+  padding: 4px 14px !important;
+  color: #f43f5e !important;
+  -webkit-text-fill-color: #f43f5e !important;
+  text-shadow: none !important;
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.45), inset 0 0 4px rgba(250, 204, 21, 0.2) !important;
+  animation: goldLuminousBorder 2s infinite ease-in-out !important;
+}
+
+/* Table cells designated as hazard alerts */
+td.hazard-alert {
+  display: table-cell !important;
+  border: 1px solid #ffd700 !important;
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  animation: goldLuminousBorder 2s infinite ease-in-out !important;
+}
+
+/* Auto-target red inline styles on spans and strongs */
+span[style*="#f43f5e"],
+span[style*="#ef4444"],
+span[style*="244, 63, 94"],
+span[style*="239, 68, 68"],
+strong[style*="#f43f5e"],
+strong[style*="#ef4444"],
+strong[style*="244, 63, 94"],
+strong[style*="239, 68, 68"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffd700 !important; /* Thin Fluorescent Gold Border */
+  border-radius: 5px;
+  padding: 1px 6px;
+  color: #f43f5e !important;
+  -webkit-text-fill-color: #f43f5e !important;
+  text-shadow: none !important;
+  font-weight: 800;
+  background-color: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.4), inset 0 0 3px rgba(250, 204, 21, 0.15) !important;
+  animation: goldLuminousBorder 2s infinite ease-in-out !important;
+  vertical-align: middle;
+}
+
+</style>
   <script src="crm_students_directory.js"></script>
 </head>
 <body>

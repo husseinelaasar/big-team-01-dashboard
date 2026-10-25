@@ -2567,35 +2567,26 @@ body::after {
 
 
 /* =========================================================================
-   PRACTICAL SMART HAZARD ALERT SYSTEM (High-Contrast, Zero-Blur, Smooth Breathing)
-   Problem Solved: Eliminates blurry text-shadow and transparent background noise.
-   Features:
-   1. Ultra-sharp text with pure solid contrast against a sleek dark shield background (#0f172a).
-   2. Smooth breathing animation (1.8s) between Vivid Danger Red (#f43f5e) and Fluorescent Neon Yellow (#facc15).
-   3. The BORDER and OUTER AURA pulse dynamically, keeping text 100% crisp and readable.
-   4. Clear distinct hazard border and glowing alert boundary.
+   LUMINOUS FLUORESCENT GOLD FRAME FOR RED TEXT & NUMBERS
+   (إطار ذهبي فسفوري لامع رفيع حول الكلمات والأحرف الحمراء)
+   1. The red text/numbers remain 100% crisp, solid, and sharp (#f43f5e) with NO blur.
+   2. A delicate, ultra-thin (1px) fluorescent gold border wraps around the element.
+   3. A gentle luminous golden aura/sheen pulses on the gold frame, creating high luxury
+      and clear hazard contrast against a dark obsidian shield backdrop.
    ========================================================================= */
 
-@keyframes hazardBlinkPulse {
+@keyframes goldLuminousBorder {
   0%, 100% {
-    color: #f43f5e !important;
-    -webkit-text-fill-color: #f43f5e !important;
-    text-shadow: none !important;
-    border-color: #f43f5e !important;
-    background-color: rgba(15, 23, 42, 0.95) !important;
-    box-shadow: 0 0 0 1px rgba(244, 63, 94, 0.7), 0 0 10px rgba(244, 63, 94, 0.4) !important;
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 5px rgba(250, 204, 21, 0.4), inset 0 0 3px rgba(250, 204, 21, 0.15) !important;
   }
   50% {
-    color: #facc15 !important; /* High-contrast Electric Fluorescent Phosphor Yellow */
-    -webkit-text-fill-color: #facc15 !important;
-    text-shadow: none !important;
-    border-color: #facc15 !important;
-    background-color: rgba(15, 23, 42, 0.95) !important;
-    box-shadow: 0 0 0 1.5px rgba(250, 204, 21, 0.9), 0 0 14px rgba(250, 204, 21, 0.5) !important;
+    border-color: #fef08a !important; /* Fluorescent Bright Gold Shine */
+    box-shadow: 0 0 9px rgba(254, 240, 138, 0.7), 0 0 16px rgba(245, 158, 11, 0.35), inset 0 0 5px rgba(254, 240, 138, 0.25) !important;
   }
 }
 
-/* Explicit Hazard Badge & Alert Class */
+/* Explicit Hazard / Red Alert Class with Thin Luminous Gold Frame */
 .hazard-alert,
 .hazard-badge,
 .hazard-blink,
@@ -2606,14 +2597,18 @@ body::after {
   align-items: center !important;
   justify-content: center !important;
   gap: 5px;
-  padding: 2px 8px !important;
-  border-radius: 6px !important;
-  border: 1.5px solid #f43f5e !important;
+  padding: 1.5px 7px !important;
+  border-radius: 5px !important;
+  border: 1px solid #ffd700 !important; /* Thin Fluorescent Gold Border */
+  color: #f43f5e !important;           /* Solid, Razor-Sharp Red */
+  -webkit-text-fill-color: #f43f5e !important;
+  text-shadow: none !important;        /* Pure Clarity, Zero Blur */
   font-weight: 800 !important;
   line-height: 1.25 !important;
   letter-spacing: 0.3px;
   background-color: rgba(15, 23, 42, 0.95) !important;
-  animation: hazardBlinkPulse 1.8s infinite ease-in-out !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.4), inset 0 0 3px rgba(250, 204, 21, 0.15) !important;
+  animation: goldLuminousBorder 2s infinite ease-in-out !important;
   vertical-align: middle;
   box-sizing: border-box;
 }
@@ -2622,8 +2617,8 @@ body::after {
 .hazard-badge *,
 .op-badge-below *,
 .pill-badge-rose * {
-  color: inherit !important;
-  -webkit-text-fill-color: inherit !important;
+  color: #f43f5e !important;
+  -webkit-text-fill-color: #f43f5e !important;
   text-shadow: none !important;
 }
 
@@ -2633,19 +2628,23 @@ div.hazard-alert {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  border: 2px solid #f43f5e !important;
+  border: 1.5px solid #ffd700 !important;
   border-radius: 8px !important;
   padding: 4px 14px !important;
+  color: #f43f5e !important;
+  -webkit-text-fill-color: #f43f5e !important;
+  text-shadow: none !important;
   background-color: rgba(15, 23, 42, 0.95) !important;
-  animation: hazardBlinkPulse 1.8s infinite ease-in-out !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.45), inset 0 0 4px rgba(250, 204, 21, 0.2) !important;
+  animation: goldLuminousBorder 2s infinite ease-in-out !important;
 }
 
 /* Table cells designated as hazard alerts */
 td.hazard-alert {
   display: table-cell !important;
-  border: 1.5px solid #f43f5e !important;
+  border: 1px solid #ffd700 !important;
   background-color: rgba(15, 23, 42, 0.85) !important;
-  animation: hazardBlinkPulse 1.8s infinite ease-in-out !important;
+  animation: goldLuminousBorder 2s infinite ease-in-out !important;
 }
 
 /* Auto-target red inline styles on spans and strongs */
@@ -2660,11 +2659,15 @@ strong[style*="239, 68, 68"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid #f43f5e;
+  border: 1px solid #ffd700 !important; /* Thin Fluorescent Gold Border */
   border-radius: 5px;
-  padding: 1px 7px;
+  padding: 1px 6px;
+  color: #f43f5e !important;
+  -webkit-text-fill-color: #f43f5e !important;
+  text-shadow: none !important;
   font-weight: 800;
   background-color: rgba(15, 23, 42, 0.95);
-  animation: hazardBlinkPulse 1.8s infinite ease-in-out !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.4), inset 0 0 3px rgba(250, 204, 21, 0.15) !important;
+  animation: goldLuminousBorder 2s infinite ease-in-out !important;
   vertical-align: middle;
 }
