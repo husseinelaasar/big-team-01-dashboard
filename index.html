@@ -211,6 +211,48 @@
     <!-- TAB 1: EXECUTIVE OVERVIEW -->
     <!-- ============================================== -->
     <section id="tab-overview" class="tab-content active">
+      <!-- Futuristic Sprint Mission Control Countdown HUD -->
+      <div class="sprint-countdown-hud">
+        <div class="sprint-hud-left">
+          <div class="sprint-status-orb">
+            <span class="orb-pulse-ring"></span>
+            <span class="orb-core">⚡</span>
+          </div>
+          <div>
+            <div class="sprint-hud-title">OCTOBER SPRINT MISSION CONTROL • FINAL PUSH</div>
+            <div class="sprint-hud-sub">Big Team 01 Target: <strong>$305,950 Cash</strong> | <strong>252 Orders</strong></div>
+          </div>
+        </div>
+
+        <div class="sprint-countdown-timer">
+          <div class="time-unit-box">
+            <span class="time-digit" id="hudDaysLeft">06</span>
+            <span class="time-label">DAYS</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-unit-box">
+            <span class="time-digit" id="hudHoursLeft">07</span>
+            <span class="time-label">HOURS</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-unit-box">
+            <span class="time-digit" id="hudMinsLeft">45</span>
+            <span class="time-label">MINS</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-unit-box">
+            <span class="time-digit" id="hudSecsLeft">12</span>
+            <span class="time-label">SECS</span>
+          </div>
+        </div>
+
+        <div class="sprint-velocity-metric">
+          <div class="velocity-label">DAILY RUN RATE NEEDED</div>
+          <div class="velocity-value" id="hudDailyNeeded">$33,147 <span>/day</span></div>
+          <div class="velocity-badge">WARP SPEED ⚡</div>
+        </div>
+      </div>
+
       <!-- 4 Core Executive KPI Cards -->
       <div class="kpi-grid">
         <!-- 1. Total Cash MTD -->
@@ -1944,6 +1986,43 @@
     }
     setInterval(updateDockClock, 1000);
     updateDockClock();
+
+    // Futuristic Sprint Countdown (Targets October 31, 2026, 23:59:59)
+    function updateSprintCountdown() {
+      const now = new Date();
+      const endOfMonth = new Date(2026, 9, 31, 23, 59, 59);
+      const diff = endOfMonth - now;
+      if (diff > 0) {
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const m = Math.floor((diff / (1000 * 60)) % 60);
+        const s = Math.floor((diff / 1000) % 60);
+
+        const elD = document.getElementById('hudDaysLeft');
+        const elH = document.getElementById('hudHoursLeft');
+        const elM = document.getElementById('hudMinsLeft');
+        const elS = document.getElementById('hudSecsLeft');
+        if (elD) elD.textContent = String(d).padStart(2, '0');
+        if (elH) elH.textContent = String(h).padStart(2, '0');
+        if (elM) elM.textContent = String(m).padStart(2, '0');
+        if (elS) elS.textContent = String(s).padStart(2, '0');
+      }
+    }
+    setInterval(updateSprintCountdown, 1000);
+    updateSprintCountdown();
+
+    // Interactive Holographic Cursor Spotlight Glow
+    document.addEventListener('mousemove', function(e) {
+      const targets = document.querySelectorAll('.kpi-card, .sprint-countdown-hud, .sheet-sync-container, .chart-card, .modern-table-card');
+      for (let i = 0; i < targets.length; i++) {
+        const card = targets[i];
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+      }
+    });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
   <script src="dashboard.js?v=20261025_161000" defer></script>
