@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -17,8 +17,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261025_133058">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261025_161000">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -27,6 +29,12 @@
   </script>
 </head>
 <body>
+  <!-- Ambient Cosmic Glow Orbs (Neo-Futuristic Deep Atmosphere) -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+  <div class="ambient-glow ambient-glow-4"></div>
+
   <!-- Loading Screen -->
   <div id="loader" class="loader-overlay">
     <div class="loader-content">
@@ -49,17 +57,18 @@
   <!-- Main Application Container -->
   <div id="app" class="app">
     
-    <!-- Top Navigation Bar -->
+    <!-- Top Navigation Bar (Neo-Futuristic Mission Control) -->
     <nav class="top-nav">
       <div class="nav-left">
-        <div class="logo-mark">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <div class="logo-mark cyber-logo">
+          <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
             <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="2.5"/>
             <path d="M10 16L14 20L22 12" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             <defs>
               <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
                 <stop stop-color="#6366f1"/>
-                <stop offset="1" stop-color="#06b6d4"/>
+                <stop offset="0.5" stop-color="#06b6d4"/>
+                <stop offset="1" stop-color="#10b981"/>
               </linearGradient>
             </defs>
           </svg>
@@ -67,12 +76,18 @@
         <div>
           <h1 class="nav-title">Big Team 01 — <span class="gradient-text">Executive Dashboard</span></h1>
           <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
-            Senior Manager: <strong>Saber Hussien</strong> | Month: <strong>October 2026 (MTD Day 25/31)</strong>
+            Senior Manager: <strong style="color: #f8fafc;">Saber Hussien</strong> | Month: <strong style="color: #38bdf8;">October 2026 (MTD Day 25/31)</strong>
           </div>
         </div>
       </div>
 
       <div class="nav-right">
+        <!-- Direct Quick Access to VIP Packages Rate Card Calculator -->
+        <a href="calculator.html" class="nav-calc-btn" title="فتح حاسبة الباقات المعتمدة وكروت العرض">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+          <span>Rate Card Calculator</span>
+        </a>
+
         <!-- Live Data Badges -->
         <div class="data-freshness">
           <span class="pulse-dot"></span>
@@ -1878,8 +1893,60 @@
 
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
   <script src="assets/html2canvas.min.js" defer></script>
+  <!-- Floating Futuristic Cyber Control Dock -->
+  <aside class="cyber-dock" id="cyberDock" aria-label="Futuristic Command Dock">
+    <div class="dock-telemetry-pill">
+      <span class="dock-live-dot"></span>
+      <span class="dock-clock" id="dockLiveClock">--:--:--</span>
+      <span class="dock-tag">OCTOBER MTD</span>
+    </div>
+    <div class="dock-nav-pills">
+      <button type="button" class="dock-btn" onclick="switchTab('overview')" title="Executive Overview">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        <span>Overview</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="switchTab('teams')" title="Small Teams (5)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Teams</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="switchTab('individuals')" title="Individual Reps (21)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Reps</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="switchTab('consumption')" title="Class Consumption (65%)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Consumption</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="switchTab('upgrade')" title="Early Upgrade Hub (20%)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span>Upgrade</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="switchTab('uncovered')" title="Uncovered Leads">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg>
+        <span>Leads</span>
+      </button>
+      <a href="calculator.html" class="dock-btn dock-calc-highlight" title="51Talk Packages Rate Card Calculator">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+        <span>Rate Card</span>
+      </a>
+      <button type="button" class="dock-btn dock-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to Top">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <script>
+    function updateDockClock() {
+      const el = document.getElementById('dockLiveClock');
+      if (!el) return;
+      const now = new Date();
+      el.textContent = now.toLocaleTimeString('en-US', { hour12: false });
+    }
+    setInterval(updateDockClock, 1000);
+    updateDockClock();
+  </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261025_133058" defer></script>
+  <script src="dashboard.js?v=20261025_161000" defer></script>
 </body>
 </html>
 

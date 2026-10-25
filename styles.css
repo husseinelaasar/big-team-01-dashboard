@@ -1877,3 +1877,506 @@ body::after {
   background: rgba(99, 102, 241, 0.08) !important;
 }
 
+/* =========================================================================
+   2026 NEO-FUTURISTIC CYBER-EXECUTIVE DASHBOARD DESIGN SYSTEM
+   نظام التصميم المستقبلي الفائق — مستوحى من المستقبل ومراكز القيادة المتقدمة
+   ========================================================================= */
+
+/* Ambient Glowing Cosmic Halos */
+.ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.28;
+  animation: ambientFloat 14s infinite alternate ease-in-out;
+}
+.ambient-glow-1 {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, #6366f1 0%, rgba(99, 102, 241, 0) 70%);
+  top: -120px;
+  left: -120px;
+  animation-duration: 16s;
+}
+.ambient-glow-2 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, #06b6d4 0%, rgba(6, 182, 212, 0) 70%);
+  top: 30%;
+  right: -180px;
+  animation-duration: 18s;
+  animation-delay: -4s;
+}
+.ambient-glow-3 {
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, #10b981 0%, rgba(16, 185, 129, 0) 70%);
+  bottom: 10%;
+  left: 20%;
+  animation-duration: 20s;
+  animation-delay: -8s;
+}
+.ambient-glow-4 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #f59e0b 0%, rgba(245, 158, 11, 0) 70%);
+  bottom: -100px;
+  right: 15%;
+  animation-duration: 22s;
+  animation-delay: -12s;
+}
+
+@keyframes ambientFloat {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(30px, 40px) scale(1.08); }
+  100% { transform: translate(-25px, -30px) scale(0.95); }
+}
+
+/* Futuristic Cyber Grid & Scanline Atmosphere */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 242, 254, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.035) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+  animation: gridDrift 28s linear infinite;
+}
+
+/* Sleek Cyber Glassmorphism for Top Navigation */
+.top-nav {
+  background: rgba(10, 14, 26, 0.88) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+/* Futuristic Logo Aura */
+.logo-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-mark.cyber-logo::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #6366f1, #06b6d4, #10b981, #f59e0b, #6366f1);
+  filter: blur(6px);
+  opacity: 0.7;
+  animation: logoAuraSpin 6s linear infinite;
+}
+@keyframes logoAuraSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.logo-mark svg {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cyber Title & Gradient */
+.nav-title {
+  font-family: 'Outfit', 'Inter', sans-serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+}
+.gradient-text {
+  background: linear-gradient(135deg, #a5b4fc 0%, #38bdf8 50%, #34d399 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Nav Telemetry Buttons & Badges */
+.nav-calc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(217, 119, 6, 0.28));
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  border-radius: 999px;
+  color: #ffd700;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+.nav-calc-btn:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.35), rgba(217, 119, 6, 0.5));
+  border-color: #ffd700;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.5);
+  color: #ffffff;
+}
+
+.data-freshness {
+  background: rgba(16, 185, 129, 0.12) !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  padding: 5px 12px !important;
+  border-radius: 999px !important;
+  color: #34d399 !important;
+  font-weight: 700 !important;
+  font-size: 0.76rem !important;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.15) !important;
+}
+
+.nav-source-badge {
+  background: rgba(56, 189, 248, 0.1) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  padding: 5px 12px !important;
+  border-radius: 999px !important;
+  color: #7dd3fc !important;
+  font-weight: 700 !important;
+  font-size: 0.76rem !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.15) !important;
+}
+.nav-source-badge:hover {
+  background: rgba(56, 189, 248, 0.2) !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.3) !important;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   TELEMETRY DATA SOURCES SYNC CONSOLE
+   ========================================================= */
+.sheet-sync-container {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(10, 15, 30, 0.95) 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.35) !important;
+  border-radius: 18px !important;
+  padding: 14px 20px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px) !important;
+  position: relative;
+  overflow: hidden;
+}
+.sheet-sync-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38bdf8, #6366f1, transparent);
+  animation: syncLaserSweep 4s infinite ease-in-out;
+}
+@keyframes syncLaserSweep {
+  0% { left: -100%; }
+  50%, 100% { left: 150%; }
+}
+.sheet-sync-item {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+  transition: all 0.25s ease !important;
+}
+.sheet-sync-item.synced {
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.04) 100%) !important;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.12) !important;
+}
+.sheet-sync-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.45) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* =========================================================
+   STARSHIP COMMAND BRIDGE — TAB BAR NAVIGATION
+   ========================================================= */
+.tab-bar {
+  background: rgba(10, 14, 26, 0.92) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 10px 0 14px !important;
+  gap: 6px !important;
+  backdrop-filter: blur(24px) !important;
+}
+.tab {
+  padding: 9px 18px !important;
+  border-radius: 12px !important;
+  border: 1px solid transparent !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  color: #94a3b8 !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  white-space: nowrap !important;
+}
+.tab svg {
+  transition: transform 0.25s ease, stroke 0.25s ease;
+}
+.tab:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  transform: translateY(-2px);
+}
+.tab:hover svg {
+  transform: scale(1.12);
+}
+.tab.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(6, 182, 212, 0.2) 100%) !important;
+  border-color: rgba(56, 189, 248, 0.6) !important;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+.tab.active::before {
+  width: 70% !important;
+  height: 2.5px !important;
+  background: linear-gradient(90deg, #6366f1, #38bdf8, #10b981) !important;
+  box-shadow: 0 0 10px #38bdf8, 0 0 5px #10b981 !important;
+}
+
+/* =========================================================
+   HOLOGRAPHIC EXECUTIVE KPI POWER CELLS
+   ========================================================= */
+.kpi-card {
+  background: linear-gradient(135deg, rgba(20, 28, 48, 0.85) 0%, rgba(11, 16, 30, 0.95) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  padding: 22px 24px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px) !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.kpi-card::before {
+  height: 3.5px !important;
+  box-shadow: 0 0 14px currentColor;
+}
+.kpi-cash::before {
+  background: linear-gradient(90deg, #10b981, #06b6d4, #38bdf8) !important;
+  box-shadow: 0 0 14px #10b981 !important;
+}
+.kpi-contracts::before {
+  background: linear-gradient(90deg, #38bdf8, #6366f1, #8b5cf6) !important;
+  box-shadow: 0 0 14px #38bdf8 !important;
+}
+.kpi-ach::before {
+  background: linear-gradient(90deg, #f59e0b, #ffd700, #f97316) !important;
+  box-shadow: 0 0 14px #f59e0b !important;
+}
+.kpi-base::before {
+  background: linear-gradient(90deg, #a855f7, #ec4899, #f43f5e) !important;
+  box-shadow: 0 0 14px #a855f7 !important;
+}
+
+.kpi-card:hover {
+  transform: translateY(-6px) scale(1.015) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 30px rgba(99, 102, 241, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+.kpi-icon {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+.kpi-label {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #94a3b8 !important;
+  margin-top: 10px !important;
+}
+.kpi-value {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 2.3rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em !important;
+  margin: 6px 0 !important;
+  line-height: 1.1 !important;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2) !important;
+}
+.kpi-progress {
+  height: 8px !important;
+  background: rgba(10, 16, 29, 0.9) !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+  position: relative !important;
+  margin: 10px 0 !important;
+}
+.kpi-bar {
+  border-radius: 999px !important;
+  position: relative !important;
+  box-shadow: 0 0 10px currentColor !important;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.kpi-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+  animation: laserSweep 2.5s infinite;
+}
+@keyframes laserSweep {
+  0% { left: -100%; }
+  50%, 100% { left: 150%; }
+}
+
+/* =========================================================
+   FUTURISTIC FLOATING CYBER DOCK (MISSION CONTROL)
+   ========================================================= */
+.cyber-dock {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(10, 14, 26, 0.92);
+  border: 1.5px solid rgba(99, 102, 241, 0.45);
+  border-radius: 999px;
+  padding: 6px 14px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(99, 102, 241, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  animation: dockEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes dockEntrance {
+  from { opacity: 0; transform: translate(-50%, 25px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+.dock-telemetry-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #cbd5e1;
+}
+.dock-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulse 1.5s infinite;
+}
+.dock-tag {
+  background: rgba(99, 102, 241, 0.25);
+  color: #a5b4fc;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.65rem;
+}
+.dock-nav-pills {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.dock-btn {
+  border: 1px solid transparent;
+  background: transparent;
+  color: #94a3b8;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.dock-btn svg {
+  flex-shrink: 0;
+}
+.dock-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.dock-calc-highlight {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.35)) !important;
+  border-color: rgba(245, 158, 11, 0.5) !important;
+  color: #ffd700 !important;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.3) !important;
+}
+.dock-calc-highlight:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.4), rgba(217, 119, 6, 0.6)) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) scale(1.05) !important;
+}
+.dock-top-btn {
+  background: linear-gradient(135deg, #6366f1, #38bdf8) !important;
+  color: #ffffff !important;
+  padding: 6px 10px !important;
+  box-shadow: 0 2px 10px rgba(99, 102, 241, 0.4) !important;
+}
+.dock-top-btn:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px) scale(1.08) !important;
+}
+
+/* Modern Glass HUD for Chart Cards */
+.chart-card,
+.modern-table-card,
+.table-container {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(10, 15, 28, 0.95) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(20px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.chart-card:hover,
+.modern-table-card:hover {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(99, 102, 241, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .cyber-dock {
+    bottom: 12px;
+    width: 95%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 6px 10px;
+  }
+}
+
