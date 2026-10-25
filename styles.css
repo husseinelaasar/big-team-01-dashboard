@@ -2564,3 +2564,99 @@ body::after {
   box-shadow: 0 0 12px rgba(245, 158, 11, 0.5);
 }
 
+
+
+/* =========================================================================
+   CRITICAL HAZARD BLINK & BORDER SYSTEM (Danger Red <-> Fluorescent Neon Yellow)
+   Any red number, word, tag, or badge blinks repeatedly between Vivid Danger
+   Red (#f43f5e) and Fluorescent Phosphor Neon Yellow (#ffff00), enclosed
+   inside a prominent, distinct hazard alert border with glowing shadows.
+   ========================================================================= */
+
+@keyframes hazardBlinkPulse {
+  0%, 100% {
+    color: #f43f5e !important;
+    -webkit-text-fill-color: #f43f5e !important;
+    text-shadow: 0 0 8px rgba(244, 63, 94, 0.85), 0 0 16px rgba(244, 63, 94, 0.45);
+    border-color: #f43f5e !important;
+    background-color: rgba(244, 63, 94, 0.16) !important;
+    box-shadow: 0 0 10px rgba(244, 63, 94, 0.55), inset 0 0 6px rgba(244, 63, 94, 0.25) !important;
+  }
+  50% {
+    color: #ffff00 !important; /* Pure Fluorescent / Neon Phosphor Yellow */
+    -webkit-text-fill-color: #ffff00 !important;
+    text-shadow: 0 0 12px rgba(255, 255, 0, 1), 0 0 24px rgba(250, 204, 21, 0.95), 0 0 34px rgba(234, 179, 8, 0.8);
+    border-color: #ffff00 !important;
+    background-color: rgba(255, 255, 0, 0.24) !important;
+    box-shadow: 0 0 16px rgba(255, 255, 0, 0.9), inset 0 0 8px rgba(255, 255, 0, 0.45) !important;
+  }
+}
+
+/* Explicit Hazard Badge & Alert Class */
+.hazard-alert,
+.hazard-badge,
+.hazard-blink,
+.op-badge-below,
+.pill-badge-rose,
+.pill-badge-danger {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px;
+  padding: 2px 8px !important;
+  border-radius: 6px !important;
+  border: 1.5px solid #f43f5e !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.3px;
+  animation: hazardBlinkPulse 1.2s infinite ease-in-out !important;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.hazard-alert *,
+.hazard-badge *,
+.op-badge-below *,
+.pill-badge-rose * {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+/* Big Value Numbers in KPI Cards (e.g. Zero-Class total) */
+.kpi-value.hazard-alert,
+div.hazard-alert {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 2px solid #f43f5e !important;
+  border-radius: 8px !important;
+  padding: 4px 12px !important;
+  animation: hazardBlinkPulse 1.2s infinite ease-in-out !important;
+}
+
+/* Table cells designated as hazard alerts */
+td.hazard-alert {
+  display: table-cell !important;
+  border: 1.5px solid #f43f5e !important;
+  animation: hazardBlinkPulse 1.2s infinite ease-in-out !important;
+}
+
+/* Auto-target red inline styles on spans and strongs */
+span[style*="#f43f5e"],
+span[style*="#ef4444"],
+span[style*="244, 63, 94"],
+span[style*="239, 68, 68"],
+strong[style*="#f43f5e"],
+strong[style*="#ef4444"],
+strong[style*="244, 63, 94"],
+strong[style*="239, 68, 68"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #f43f5e;
+  border-radius: 5px;
+  padding: 1px 7px;
+  font-weight: 800;
+  animation: hazardBlinkPulse 1.2s infinite ease-in-out !important;
+  vertical-align: middle;
+}

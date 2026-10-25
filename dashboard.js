@@ -223,15 +223,15 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 50.17% vs Day 25 target 60%. Gap: 9.8pp. Need $17720/day to close.', time: '20261025_165127' },
-  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261025_165127' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (8.4%), EGSS-marwaahmed (9%), EGSS-negma (14.6%), EGSS-juliamonir01 (22.2%). Schedule targeted coaching sessions today.', time: '20261025_165127' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (78.9%), EGSS-ibrahimismaiel (95.4%), EGSS-khaledgonam (101.9%). Recognize in team channel!', time: '20261025_165127' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $3060/day', detail: 'Currently at 49.1% (17721/36080). Gap: $18359.', time: '20261025_165127' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $3454/day', detail: 'Currently at 40% (13806/34530). Gap: $20724.', time: '20261025_165127' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $5662/day', detail: 'Currently at 36.7% (19727/53700). Gap: $33973.', time: '20261025_165127' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 76 more renewals', detail: 'Current: 24/497 (4.8%). 20% target = 100. Focus on high-base reps.', time: '20261025_165127' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $128480 (60.2%). 6 days left. Daily need: $17720. Push all pending deals!', time: '20261025_165127' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 50.17% vs Day 25 target 60%. Gap: 9.8pp. Need $17720/day to close.', time: '20261025_165634' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261025_165634' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (8.4%), EGSS-marwaahmed (9%), EGSS-negma (14.6%), EGSS-juliamonir01 (22.2%). Schedule targeted coaching sessions today.', time: '20261025_165634' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (78.9%), EGSS-ibrahimismaiel (95.4%), EGSS-khaledgonam (101.9%). Recognize in team channel!', time: '20261025_165634' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $3060/day', detail: 'Currently at 49.1% (17721/36080). Gap: $18359.', time: '20261025_165634' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $3454/day', detail: 'Currently at 40% (13806/34530). Gap: $20724.', time: '20261025_165634' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $5662/day', detail: 'Currently at 36.7% (19727/53700). Gap: $33973.', time: '20261025_165634' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 76 more renewals', detail: 'Current: 24/497 (4.8%). 20% target = 100. Focus on high-base reps.', time: '20261025_165634' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $128480 (60.2%). 6 days left. Daily need: $17720. Push all pending deals!', time: '20261025_165634' },
 ];
 
 // =========================================================================
@@ -8484,6 +8484,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -11606,7 +11608,7 @@ function renderConsumptionTab() {
 
     <div class="kpi-card" style="border-top: 4px solid #f43f5e; background: var(--bg-card);">
       <div class="kpi-label">Zero-Class Accounts (Rescue Priority)</div>
-      <div class="kpi-value" style="color: #f43f5e; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
+      <div class="kpi-value hazard-alert" style="color: #f43f5e; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
         ${bigC0.toLocaleString()}
         <span style="font-size: 0.85rem; color: #fda4af;">(${zeroPct}%)</span>
       </div>
@@ -12110,6 +12112,66 @@ function renderEnglishClubTab() {
     </table>
   `;
 }
+
+
+// =========================================================================
+// Automatic Hazard Alert Scanner
+// Enforces blinking from Red to Fluorescent Yellow inside a distinct hazard border
+// for any numbers, words, or badges indicating danger, deficits, or below target.
+// =========================================================================
+function scanAndApplyHazardAlerts(root = document) {
+  try {
+    // 1. Tag all below-target badges & rose pill badges
+    const redBadges = root.querySelectorAll('.op-badge-below, .pill-badge-rose, .pill-badge-danger');
+    redBadges.forEach(el => el.classList.add('hazard-alert'));
+
+    // 2. Tag elements with red text/numbers
+    const textEls = root.querySelectorAll('span, strong, b, div.kpi-value, td, div.op-sub');
+    textEls.forEach(el => {
+      if (el.classList.contains('hazard-alert')) return;
+      const s = el.getAttribute('style') || '';
+      if (!s) return;
+      if (el.tagName === 'BODY' || el.tagName === 'SECTION') return;
+
+      const isRed = s.includes('#f43f5e') ||
+                    s.includes('#ef4444') ||
+                    s.includes('#e11d48') ||
+                    s.includes('#dc2626') ||
+                    s.includes('244, 63, 94') ||
+                    s.includes('239, 68, 68') ||
+                    s.includes('color: red') ||
+                    s.includes('color:red');
+
+      if (isRed) {
+        if (el.tagName === 'TD') {
+          // If a table cell has red color, wrap contents or tag inner span
+          if (el.children.length === 1 && (el.children[0].tagName === 'SPAN' || el.children[0].tagName === 'STRONG')) {
+            el.children[0].classList.add('hazard-alert');
+          } else if (!el.querySelector('.hazard-alert')) {
+            const inner = el.innerHTML.trim();
+            if (inner && !inner.startsWith('<span class="hazard-alert">')) {
+              el.innerHTML = '<span class="hazard-alert">' + inner + '</span>';
+            }
+          }
+        } else {
+          el.classList.add('hazard-alert');
+        }
+      }
+    });
+
+    // 3. Tag status badges that denote hazard / alert
+    const badges = root.querySelectorAll('.status-badge');
+    badges.forEach(b => {
+      const txt = b.textContent || '';
+      if (txt.includes('Action Needed') || txt.includes('Zero Upgrades') || txt.includes('Behind Pace') || txt.includes('LAG') || txt.includes('Deficit')) {
+        b.classList.add('hazard-alert');
+      }
+    });
+  } catch (err) {
+    console.warn('[HAZARD-ALERT] Scan notice:', err);
+  }
+}
+window.scanAndApplyHazardAlerts = scanAndApplyHazardAlerts;
 
 window.switchTab = switchTab;
 function switchTab(tabKey) {
@@ -14361,3 +14423,11 @@ function exportCurrentFilteredUncoveredCsv() {
 
 
 
+
+
+
+
+
+  // Auto-run hazard alert scan
+  setTimeout(() => scanAndApplyHazardAlerts(), 200);
+  setInterval(() => scanAndApplyHazardAlerts(), 2500);
