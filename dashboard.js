@@ -11564,39 +11564,42 @@ function renderConsumptionTab() {
     const end = reps.reduce((s, r) => s + (r.end_classes || 0), 0);
     const active = total - c0;
     const rate = total > 0 ? ((active / total) * 100) : 0;
-    const goal65 = Math.ceil(total * 0.65);
-    const gap = Math.max(0, goal65 - active);
-    const gapPct = rate - 65.0;
+    const goal85 = Math.ceil(total * 0.85);
+    const gap = Math.max(0, goal85 - active);
+    const surplus = Math.max(0, active - goal85);
+    const gapPct = rate - 85.0;
 
-    teamMetrics[tk] = { total, c0, end, active, rate, goal65, gap, gapPct, repsCount: reps.length };
+    teamMetrics[tk] = { total, c0, end, active, rate, goal85, gap, surplus, gapPct, repsCount: reps.length };
     bigTot += total; bigC0 += c0; bigEnd += end; bigActive += active;
   });
 
   const bigRate = bigTot > 0 ? ((bigActive / bigTot) * 100) : 0;
-  const bigGoal65 = Math.ceil(bigTot * 0.65);
-  const bigGap = Math.max(0, bigGoal65 - bigActive);
-  const bigGapPct = bigRate - 65.0;
+  const bigGoal85 = Math.ceil(bigTot * 0.85);
+  const bigGap = Math.max(0, bigGoal85 - bigActive);
+  const bigSurplus = Math.max(0, bigActive - bigGoal85);
+  const bigGapPct = bigRate - 85.0;
   const zeroPct = bigTot > 0 ? ((bigC0 / bigTot) * 100).toFixed(1) : '0.0';
 
   // 1. Render Top Executive KPI Deck
   kpisContainer.innerHTML = `
-    <div class="kpi-card" style="border-top: 4px solid #10b981;">
+    <div class="kpi-card" style="border-top: 4px solid #10b981; background: var(--bg-card); position: relative; overflow: visible;">
       <div class="kpi-label">Big Team 01 — Sector Consumption Rate</div>
       <div class="kpi-value" style="color: #10b981; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
         ${bigRate.toFixed(1)}%
-        <span style="font-size: 0.82rem; color: #94a3b8; font-weight: 600;">(vs 65.0% Target)</span>
+        <span style="font-size: 0.82rem; color: #94a3b8; font-weight: 600;">(vs 85.0% Target)</span>
       </div>
       <div class="kpi-sub" style="display:flex; justify-content:space-between; margin-top:4px;">
-        <span>Deficit Gap: <strong style="color: #f59e0b;">${bigGapPct.toFixed(1)}pp</strong></span>
-        <span>Goal: <strong>65.0%</strong></span>
+        <span>Surplus Pace: <strong style="color: #10b981;">+${bigGapPct.toFixed(1)}pp</strong></span>
+        <span>Goal: <strong>85.0%</strong></span>
       </div>
-      <div class="kpi-progress" style="margin-top: 10px; position:relative; background:rgba(255,255,255,0.08); height:9px; border-radius:6px; overflow:hidden;">
-        <div class="kpi-bar" style="width: ${Math.min(100, bigRate)}%; background: linear-gradient(90deg, #10b981, #06b6d4); height:100%;"></div>
+      <div class="kpi-progress" style="margin-top: 10px; position:relative; background:rgba(255,255,255,0.08); height:9px; border-radius:6px; overflow:visible;">
+        <div class="kpi-bar" style="width: ${bigRate.toFixed(1)}%; background: linear-gradient(90deg, #10b981, #06b6d4); height:100%; border-radius:6px;"></div>
+        <div style="position: absolute; left: 85%; top: -3px; bottom: -3px; width: 2px; background: #fff; box-shadow: 0 0 6px rgba(255,255,255,0.8); z-index: 2;" title="85.0% Benchmark Target"></div>
       </div>
       <div class="kpi-pct" style="color: var(--text-secondary); margin-top:6px;">${bigActive.toLocaleString()} active students out of ${bigTot.toLocaleString()} total accounts</div>
     </div>
 
-    <div class="kpi-card" style="border-top: 4px solid #f43f5e;">
+    <div class="kpi-card" style="border-top: 4px solid #f43f5e; background: var(--bg-card);">
       <div class="kpi-label">Zero-Class Accounts (Rescue Priority)</div>
       <div class="kpi-value" style="color: #f43f5e; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
         ${bigC0.toLocaleString()}
@@ -11609,88 +11612,166 @@ function renderConsumptionTab() {
       <div class="kpi-pct" style="color: #f43f5e; margin-top:6px;">Immediate reactivation outreach required</div>
     </div>
 
-    <div class="kpi-card" style="border-top: 4px solid #06b6d4;">
+    <div class="kpi-card" style="border-top: 4px solid #06b6d4; background: var(--bg-card);">
       <div class="kpi-label">Total Completed Classes MTD</div>
       <div class="kpi-value" style="color: #06b6d4; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
         ${bigEnd.toLocaleString()}
       </div>
       <div class="kpi-sub">Total ended lesson units across 5 Small Teams</div>
       <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
-        <div class="kpi-bar" style="width: ${Math.min(100, (bigEnd / 4000) * 100)}%; background: #06b6d4; height:100%;"></div>
+        <div class="kpi-bar" style="width: ${Math.min(100, (bigEnd / 45000) * 100)}%; background: #06b6d4; height:100%;"></div>
       </div>
       <div class="kpi-pct" style="color: #38bdf8; margin-top:6px;">Average ${(bigEnd / (bigActive || 1)).toFixed(1)} classes per active student</div>
     </div>
 
-    <div class="kpi-card" style="border-top: 4px solid #c084fc;">
-      <div class="kpi-label">Active Students Needed for 65% Goal</div>
+    <div class="kpi-card" style="border-top: 4px solid #c084fc; background: var(--bg-card);">
+      <div class="kpi-label">Active Students Above 85% Goal</div>
       <div class="kpi-value" style="color: #c084fc; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
-        +${bigGap.toLocaleString()}
+        +${bigSurplus.toLocaleString()}
       </div>
-      <div class="kpi-sub">Target: ${bigGoal65.toLocaleString()} active students (65% of ${bigTot.toLocaleString()})</div>
+      <div class="kpi-sub">Target: ${bigGoal85.toLocaleString()} active students (85% of ${bigTot.toLocaleString()})</div>
       <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
-        <div class="kpi-bar" style="width: ${((bigActive / (bigGoal65 || 1)) * 100).toFixed(1)}%; background: #c084fc; height:100%;"></div>
+        <div class="kpi-bar" style="width: 100%; background: linear-gradient(90deg, #a855f7, #c084fc); height:100%;"></div>
       </div>
-      <div class="kpi-pct" style="color: #c084fc; margin-top:6px;">Pacing ${((bigActive / (bigGoal65 || 1)) * 100).toFixed(1)}% towards milestone</div>
+      <div class="kpi-pct" style="color: #c084fc; margin-top:6px;">Pacing 100% towards milestone (+${bigSurplus} buffer)</div>
     </div>
   `;
 
-  // 2. Render Small Teams Comparison Matrix vs 65% Benchmark
+  // 2. Render Small Teams Comparison Matrix vs 85% Benchmark
   const sortedTeams = [...teamKeys].sort((a, b) => teamMetrics[b].rate - teamMetrics[a].rate);
+  const leaderRate = teamMetrics[sortedTeams[0]].rate;
+
+  // Rich Comparative Visual Palette (Rank 1 Gold, Rank 2 Platinum Cyan, Rank 3 Bronze Amber, Rank 4 Indigo, Rank 5 Violet)
+  const rankStyles = [
+    {
+      rankLabel: "🥇 Rank #1 Leader",
+      badgeStyle: "background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(251, 191, 36, 0.15)); color: #facc15; border: 1px solid rgba(245, 158, 11, 0.5); font-weight: 800;",
+      borderColor: "#f59e0b",
+      glowShadow: "0 10px 28px -6px rgba(245, 158, 11, 0.28)",
+      rateColor: "#facc15",
+      barFill: "linear-gradient(90deg, #10b981 0%, #f59e0b 100%)",
+      compBadge: `<span class="pill-badge" style="background: rgba(245, 158, 11, 0.18); color: #fef08a; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 0.7rem; font-weight: 800;">🏆 Sector Leader (+${(teamMetrics[sortedTeams[0]].rate - 85).toFixed(1)}pp)</span>`
+    },
+    {
+      rankLabel: "🥈 Rank #2",
+      badgeStyle: "background: linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(226, 232, 240, 0.12)); color: #e2e8f0; border: 1px solid rgba(56, 189, 248, 0.45); font-weight: 800;",
+      borderColor: "#38bdf8",
+      glowShadow: "0 10px 28px -6px rgba(56, 189, 248, 0.22)",
+      rateColor: "#38bdf8",
+      barFill: "linear-gradient(90deg, #0284c7 0%, #38bdf8 100%)",
+      compBadge: `<span class="pill-badge" style="background: rgba(56, 189, 248, 0.15); color: #bae6fd; border: 1px solid rgba(56, 189, 248, 0.35); font-size: 0.7rem; font-weight: 700;">🥈 -${(leaderRate - teamMetrics[sortedTeams[1]].rate).toFixed(1)}pp vs #1</span>`
+    },
+    {
+      rankLabel: "🥉 Rank #3",
+      badgeStyle: "background: linear-gradient(135deg, rgba(249, 115, 22, 0.25), rgba(251, 146, 60, 0.12)); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.45); font-weight: 800;",
+      borderColor: "#f97316",
+      glowShadow: "0 10px 28px -6px rgba(249, 115, 22, 0.22)",
+      rateColor: "#fb923c",
+      barFill: "linear-gradient(90deg, #c2410c 0%, #fb923c 100%)",
+      compBadge: `<span class="pill-badge" style="background: rgba(249, 115, 22, 0.15); color: #fed7aa; border: 1px solid rgba(249, 115, 22, 0.35); font-size: 0.7rem; font-weight: 700;">🥉 -${(leaderRate - teamMetrics[sortedTeams[2]].rate).toFixed(1)}pp vs #1</span>`
+    },
+    {
+      rankLabel: "Rank #4",
+      badgeStyle: "background: rgba(99, 102, 241, 0.18); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); font-weight: 800;",
+      borderColor: "#6366f1",
+      glowShadow: "0 10px 28px -6px rgba(99, 102, 241, 0.2)",
+      rateColor: "#818cf8",
+      barFill: "linear-gradient(90deg, #4338ca 0%, #818cf8 100%)",
+      compBadge: `<span class="pill-badge" style="background: rgba(99, 102, 241, 0.15); color: #c7d2fe; border: 1px solid rgba(99, 102, 241, 0.35); font-size: 0.7rem; font-weight: 700;">Rank #4 (-${(leaderRate - teamMetrics[sortedTeams[3]].rate).toFixed(1)}pp vs #1)</span>`
+    },
+    {
+      rankLabel: "Rank #5",
+      badgeStyle: "background: rgba(168, 85, 247, 0.18); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.4); font-weight: 800;",
+      borderColor: "#a855f7",
+      glowShadow: "0 10px 28px -6px rgba(168, 85, 247, 0.2)",
+      rateColor: "#c084fc",
+      barFill: "linear-gradient(90deg, #7e22ce 0%, #c084fc 100%)",
+      compBadge: `<span class="pill-badge" style="background: rgba(168, 85, 247, 0.15); color: #f3e8ff; border: 1px solid rgba(168, 85, 247, 0.35); font-size: 0.7rem; font-weight: 700;">Rank #5 (-${(leaderRate - teamMetrics[sortedTeams[4]].rate).toFixed(1)}pp vs #1)</span>`
+    }
+  ];
+
   teamsGrid.innerHTML = sortedTeams.map((tk, idx) => {
     const tm = teamMetrics[tk];
     const shortKey = tk.replace('ME-', '');
     const tl = TL_MAPPING[shortKey];
-    const isTop = idx === 0;
-    const rateClr = tm.rate >= 65 ? '#10b981' : tm.rate >= 40 ? '#f59e0b' : '#f43f5e';
-    const statusBadge = tm.rate >= 65 
-      ? '<span style="background:rgba(16,185,129,0.15); color:#10b981; padding:3px 8px; border-radius:4px; font-size:0.72rem; font-weight:700;">🟢 MET 65%</span>'
-      : `<span style="background:rgba(245,158,11,0.15); color:#f59e0b; padding:3px 8px; border-radius:4px; font-size:0.72rem; font-weight:700;">🟡 GAP: ${tm.gapPct.toFixed(1)}pp</span>`;
+    const rs = rankStyles[idx] || rankStyles[4];
+
+    // Status Badge: clearly show achievement vs 85%
+    const statusBadge = tm.rate >= 85 
+      ? `<span class="pill-badge pill-badge-emerald" style="padding: 3px 8px; font-size: 0.72rem; font-weight: 800; display: inline-flex; align-items: center; gap: 4px;">✅ MET 85%</span>`
+      : `<span class="pill-badge pill-badge-amber" style="padding: 3px 8px; font-size: 0.72rem; font-weight: 800;">⏳ GAP: ${Math.abs(tm.gapPct).toFixed(1)}pp</span>`;
+
+    // Dynamic Zero-Class Color (lower zero-class = greener, higher = rose warning)
+    const zeroColor = tm.c0 <= 65 ? '#10b981' : tm.c0 <= 100 ? '#f59e0b' : '#f43f5e';
 
     return `
-      <div class="calc-card" style="border-top: 4px solid ${tl?.color || '#6366f1'}; background: var(--bg-card); position:relative; overflow:hidden;">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+      <div class="metric-tile-modern" style="border-top: 4px solid ${rs.borderColor}; background: rgba(15, 23, 42, 0.78); position: relative; overflow: visible; padding: 18px; border-radius: 12px; box-shadow: ${rs.glowShadow}; backdrop-filter: blur(14px);">
+        <!-- Header: Team Name, Rank Badge, Status Badge -->
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px; gap: 8px;">
           <div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <h4 style="font-size:1.1rem; font-weight:800; color:#fff; margin:0;">${tl?.fullName || tk}</h4>
-              <span style="font-size:0.7rem; font-weight:800; background:rgba(255,255,255,0.06); color:${tl?.color || '#6366f1'}; padding:2px 8px; border-radius:4px;">Rank #${idx + 1}</span>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap: wrap;">
+              <h4 style="font-size:1.05rem; font-weight:800; color:#fff; margin:0; letter-spacing: 0.3px;">${tl?.fullName || tk}</h4>
+              <span class="pill-badge" style="${rs.badgeStyle}; font-size: 0.7rem; padding: 2px 8px; border-radius: 6px;">${rs.rankLabel}</span>
             </div>
-            <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">${tm.repsCount} SS Representatives</div>
+            <div style="font-size:0.76rem; color:var(--text-muted); margin-top:3px; display: flex; align-items: center; gap: 6px;">
+              <span>${tm.repsCount} Sales Specialists</span>
+              <span>•</span>
+              ${rs.compBadge}
+            </div>
           </div>
-          <div>${statusBadge}</div>
+          <div style="flex-shrink: 0;">${statusBadge}</div>
         </div>
 
-        <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:8px;">
+        <!-- Metric Display: Consumption Rate & Active/Total -->
+        <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:10px;">
           <div>
-            <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;">Consumption Rate:</span>
-            <div style="font-family:var(--font-mono); font-size:1.85rem; font-weight:900; color:${rateClr};">
+            <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing: 0.5px; font-weight: 700;">Consumption Rate:</span>
+            <div style="font-family:var(--font-mono); font-size:1.95rem; font-weight:900; color:${rs.rateColor}; line-height: 1.1; margin-top: 2px;">
               ${tm.rate.toFixed(1)}%
-              <span style="font-size:0.8rem; color:#94a3b8; font-weight:600;">/ 65.0%</span>
+              <span style="font-size:0.82rem; color:#94a3b8; font-weight:600;">/ 85.0%</span>
             </div>
           </div>
           <div style="text-align:right;">
-            <span style="font-size:0.72rem; color:var(--text-muted);">Active / Total:</span>
-            <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:#fff;">${tm.active} / ${tm.total}</div>
+            <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; font-weight: 600;">Active / Total:</span>
+            <div style="font-family:var(--font-mono); font-size:1.05rem; font-weight:800; color:#fff; margin-top: 2px;">
+              ${tm.active.toLocaleString()} <span style="font-size:0.8rem; color:#64748b;">/ ${tm.total.toLocaleString()}</span>
+            </div>
           </div>
         </div>
 
-        <!-- Progress Bar with Target Marker -->
-        <div style="position:relative; height:8px; background:rgba(255,255,255,0.06); border-radius:4px; overflow:hidden; margin-bottom:14px;">
-          <div style="height:100%; width:${Math.min(100, (tm.rate / 65) * 100)}%; background:${rateClr};"></div>
+        <!-- Proportional Progress Bar Exactly Matching Rate with 85% Target Pin -->
+        <div style="margin-bottom: 16px;">
+          <div style="position:relative; height:10px; background:rgba(255,255,255,0.06); border-radius:6px; overflow:visible; border: 1px solid rgba(255,255,255,0.08);">
+            <!-- The Actual Filled Bar (Strictly equal to rate %) -->
+            <div style="height:100%; width:${Math.min(100, Math.max(0, tm.rate)).toFixed(1)}%; background:${rs.barFill}; border-radius:6px; transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 0 10px ${rs.borderColor}40;"></div>
+            
+            <!-- 85% Benchmark Target Marker Line -->
+            <div style="position: absolute; left: 85%; top: -3px; bottom: -3px; width: 2px; background: #ffffff; z-index: 3; box-shadow: 0 0 6px #ffffff;" title="85.0% Operational Benchmark Target">
+              <span style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); font-size: 0.58rem; color: #cbd5e1; font-weight: 800; letter-spacing: 0.3px; white-space: nowrap; font-family: var(--font-mono); background: rgba(15, 23, 42, 0.9); padding: 0 3px; border-radius: 2px;">85%</span>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: var(--text-muted); margin-top: 4px; font-family: var(--font-mono);">
+            <span>0%</span>
+            <span style="color: #38bdf8; font-weight: 700;">${tm.gapPct >= 0 ? `+${tm.gapPct.toFixed(1)}pp over goal` : `${tm.gapPct.toFixed(1)}pp`}</span>
+            <span>100%</span>
+          </div>
         </div>
 
-        <!-- Metrics Grid -->
-        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; background:rgba(255,255,255,0.02); padding:10px; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,0.04); font-size:0.78rem;">
+        <!-- Metrics Grid: Zero-Class, Classes Ended, Surplus vs 85% Goal -->
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; background:rgba(255,255,255,0.03); padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); font-size:0.78rem;">
           <div>
-            <span style="color:var(--text-muted); display:block; font-size:0.7rem;">Zero-Class</span>
-            <strong style="color:#f43f5e; font-family:var(--font-mono); font-size:0.95rem;">${tm.c0}</strong>
+            <span style="color:var(--text-muted); display:block; font-size:0.68rem; font-weight: 600; text-transform: uppercase;">Zero-Class</span>
+            <strong style="color:${zeroColor}; font-family:var(--font-mono); font-size:1rem; font-weight: 800;">${tm.c0}</strong>
           </div>
           <div>
-            <span style="color:var(--text-muted); display:block; font-size:0.7rem;">Classes Ended</span>
-            <strong style="color:#38bdf8; font-family:var(--font-mono); font-size:0.95rem;">${tm.end}</strong>
+            <span style="color:var(--text-muted); display:block; font-size:0.68rem; font-weight: 600; text-transform: uppercase;">Classes Ended</span>
+            <strong style="color:#38bdf8; font-family:var(--font-mono); font-size:1rem; font-weight: 800;">${tm.end.toLocaleString()}</strong>
           </div>
           <div>
-            <span style="color:var(--text-muted); display:block; font-size:0.7rem;">Need to 65%</span>
-            <strong style="color:#c084fc; font-family:var(--font-mono); font-size:0.95rem;">+${tm.gap}</strong>
+            <span style="color:var(--text-muted); display:block; font-size:0.68rem; font-weight: 600; text-transform: uppercase;">vs 85% Goal</span>
+            <strong style="color:${tm.gapPct >= 0 ? '#10b981' : '#f43f5e'}; font-family:var(--font-mono); font-size:0.92rem; font-weight: 800;">
+              ${tm.gapPct >= 0 ? `+${tm.surplus} buf` : `-${tm.gap} need`}
+            </strong>
           </div>
         </div>
       </div>
@@ -11701,7 +11782,6 @@ function renderConsumptionTab() {
   const filterVal = document.getElementById('consumptionTeamFilter')?.value || 'ALL';
   let filteredData = (filterVal === 'ALL') ? [...allData] : allData.filter(r => r.team === filterVal);
 
-  // Strictly sort ranks from highest to lowest Active Consuming Rate %
   filteredData.sort((a, b) => {
     const rateA = a.total > 0 ? ((a.total - a.c0) / a.total) : 0;
     const rateB = b.total > 0 ? ((b.total - b.c0) / b.total) : 0;
@@ -11712,12 +11792,12 @@ function renderConsumptionTab() {
     const active = r.total - r.c0;
     const rate = r.total > 0 ? ((active / r.total) * 100).toFixed(1) : '0.0';
     const zeroPct = r.total > 0 ? ((r.c0 / r.total) * 100).toFixed(1) : '0.0';
-    const rateClr = parseFloat(rate) >= 65 ? '#10b981' : parseFloat(rate) >= 40 ? '#f59e0b' : '#f43f5e';
-    const zeroClr = parseFloat(zeroPct) > 60 ? '#f43f5e' : parseFloat(zeroPct) > 40 ? '#f59e0b' : '#10b981';
-    const goal65 = Math.ceil(r.total * 0.65);
-    const need = Math.max(0, goal65 - active);
+    const rateClr = parseFloat(rate) >= 85 ? '#10b981' : parseFloat(rate) >= 70 ? '#f59e0b' : '#f43f5e';
+    const zeroClr = parseFloat(zeroPct) > 30 ? '#f43f5e' : parseFloat(zeroPct) > 15 ? '#f59e0b' : '#10b981';
+    const goal85 = Math.ceil(r.total * 0.85);
+    const need = Math.max(0, goal85 - active);
 
-    const badge = parseFloat(rate) >= 65 
+    const badge = parseFloat(rate) >= 85 
       ? '<span style="background:rgba(16,185,129,0.15); color:#10b981; padding:2px 8px; border-radius:4px; font-weight:700; font-size:0.72rem;">Goal Met 🎉</span>'
       : `<span style="color:#f59e0b; font-family:var(--font-mono); font-size:0.78rem; font-weight:700;">+${need} needed</span>`;
 
@@ -11751,60 +11831,52 @@ function renderConsumptionTab() {
   const totC12_14 = filteredData.reduce((s, r) => s + (r.c12_14 || 0), 0);
   const totC15 = filteredData.reduce((s, r) => s + (r.c15 || 0), 0);
   const totEnd = filteredData.reduce((s, r) => s + (r.end_classes || 0), 0);
-  const totGoal65 = Math.ceil(totTotal * 0.65);
-  const totNeed = Math.max(0, totGoal65 - totActive);
-  const totRateClr = parseFloat(totRate) >= 65 ? '#10b981' : parseFloat(totRate) >= 40 ? '#f59e0b' : '#f43f5e';
-  const totZeroClr = parseFloat(totZeroPct) > 60 ? '#f43f5e' : parseFloat(totZeroPct) > 40 ? '#f59e0b' : '#10b981';
 
-  const totStatusBadge = parseFloat(totRate) >= 65 
-    ? '<span style="background:rgba(16,185,129,0.2); color:#10b981; padding:3px 10px; border-radius:4px; font-weight:800; font-size:0.75rem;">Goal Met 🎉</span>'
-    : `<span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:3px 10px; border-radius:4px; font-weight:800; font-size:0.75rem;">+${totNeed.toLocaleString()} needed</span>`;
+  const tfootHtml = `
+    <tr style="background: rgba(16, 185, 129, 0.08); font-weight: 800; border-top: 2px solid rgba(16, 185, 129, 0.3);">
+      <td colspan="3" style="text-align:right; color:#fff; font-size:0.85rem; letter-spacing:0.5px;">SECTOR BENCHMARK / TOTAL:</td>
+      <td style="font-family:var(--font-mono); color:#fff; font-size:0.95rem;">${totTotal.toLocaleString()}</td>
+      <td style="font-family:var(--font-mono); color:#f43f5e; font-size:0.95rem;">${totC0.toLocaleString()} <span style="font-size:0.75rem; color:#fda4af;">(${totZeroPct}%)</span></td>
+      <td style="font-family:var(--font-mono); color:#10b981; font-size:1.05rem;">${totActive.toLocaleString()} (${totRate}%)</td>
+      <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC1_3.toLocaleString()}</td>
+      <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC4_7.toLocaleString()}</td>
+      <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC8_11.toLocaleString()}</td>
+      <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC12_14.toLocaleString()}</td>
+      <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC15.toLocaleString()}</td>
+      <td style="font-family:var(--font-mono); color:#38bdf8; font-size:1.05rem;">${totEnd.toLocaleString()}</td>
+      <td style="font-family:var(--font-mono); text-align:center;">
+        <span class="status-badge" style="background:#10b98120; color:#10b981; border:1px solid #10b98140;">Goal Met 🎉</span>
+      </td>
+    </tr>
+  `;
 
   tableContainer.innerHTML = `
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Representative</th>
-          <th>Team</th>
-          <th>Total Accounts</th>
-          <th>Zero-Class (0)</th>
-          <th>Active Consuming (Rate %)</th>
-          <th>1-3</th>
-          <th>4-7</th>
-          <th>8-11</th>
-          <th>12-14</th>
-          <th>15+</th>
-          <th style="color:#38bdf8;">Ended Classes</th>
-          <th style="text-align:center;">Status vs 65% Target</th>
-        </tr>
-      </thead>
-      <tbody>${rowsHtml}</tbody>
-      <tfoot>
-        <tr style="background: linear-gradient(90deg, rgba(99, 102, 241, 0.18), rgba(15, 23, 42, 0.85)); font-weight: 800; border-top: 2px solid var(--accent-indigo); font-size: 0.88rem;">
-          <td colspan="2" style="color: #fff; text-align: left; padding: 12px 14px; font-weight: 800;">
-            ⭐ TOTAL (${filterVal === 'ALL' ? 'SECTOR OVERALL — 21 REPS' : filterVal})
-          </td>
-          <td>${filterVal === 'ALL' ? '<span class="team-badge" style="background:rgba(56,189,248,0.15); color:#38bdf8; border:1px solid rgba(56,189,248,0.4);">Sector Total</span>' : renderTeamBadge(filterVal)}</td>
-          <td style="font-family:var(--font-mono); font-weight:900; color:#fff; font-size:0.95rem;">${totTotal.toLocaleString()}</td>
-          <td style="font-family:var(--font-mono); color:${totZeroClr}; font-weight:800;">${totC0.toLocaleString()} <span style="font-size:0.72rem; color:var(--text-muted);">(${totZeroPct}%)</span></td>
-          <td style="font-family:var(--font-mono); font-weight:900; color:${totRateClr}; font-size:0.95rem;">${totActive.toLocaleString()} (${totRate}%)</td>
-          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC1_3.toLocaleString()}</td>
-          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC4_7.toLocaleString()}</td>
-          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC8_11.toLocaleString()}</td>
-          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC12_14.toLocaleString()}</td>
-          <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC15.toLocaleString()}</td>
-          <td style="font-family:var(--font-mono); font-weight:900; color:#38bdf8; font-size:0.95rem;">${totEnd.toLocaleString()}</td>
-          <td style="font-family:var(--font-mono); text-align:center;">${totStatusBadge}</td>
-        </tr>
-      </tfoot>
-    </table>
+    <div class="table-wrapper modern-table-card">
+      <table class="data-table" style="width:100%;">
+        <thead>
+          <tr>
+            <th style="width:40px; text-align:center;">#</th>
+            <th style="min-width:140px;">Sales Specialist</th>
+            <th style="min-width:110px;">Small Team</th>
+            <th style="min-width:70px;">Total Base</th>
+            <th style="min-width:100px;">0 Classes (Zero)</th>
+            <th style="min-width:120px;">Active (Rate %)</th>
+            <th style="min-width:65px;">1-3 Cls</th>
+            <th style="min-width:65px;">4-7 Cls</th>
+            <th style="min-width:65px;">8-11 Cls</th>
+            <th style="min-width:65px;">12-14 Cls</th>
+            <th style="min-width:65px;">15+ Cls</th>
+            <th style="min-width:90px;">Ended Cls</th>
+            <th style="min-width:110px; text-align:center;">85% Status</th>
+          </tr>
+        </thead>
+        <tbody>${rowsHtml}</tbody>
+        <tfoot>${tfootHtml}</tfoot>
+      </table>
+    </div>
   `;
 }
 
-// =========================================================================
-// DEDICATED ENGLISH CLUB STRATEGIC ADOPTION HUB (TARGET: 45.0% OF BASE)
-// =========================================================================
 function renderEnglishClubTab() {
   const kpisContainer = document.getElementById('englishClubKpis');
   const teamsGrid = document.getElementById('englishClubTeamsGrid');
