@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261025_164500">
+  <link rel="stylesheet" href="styles.css?v=20261025_165500">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -159,8 +159,8 @@
       </button>
       <button class="tab" data-tab="consumption" onclick="switchTab('consumption')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Class Consumption (85%)
-        <span style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">85% GOAL</span>
+        Class Consumption (95%)
+        <span style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">95% GOAL</span>
       </button>
       <button class="tab" data-tab="upgrade" onclick="switchTab('upgrade')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
@@ -408,7 +408,7 @@
 
     
     <!-- ============================================== -->
-    <!-- TAB: DEDICATED CLASS CONSUMPTION HUB (65% GOAL)-->
+    <!-- TAB: DEDICATED CLASS CONSUMPTION HUB (95% GOAL)-->
     <!-- ============================================== -->
     <section id="tab-consumption" class="tab-content">
       <div class="section-header">
@@ -427,14 +427,14 @@
       <!-- 4 Top Executive Consumption KPI Deck -->
       <div class="consumption-kpi-deck" id="consumptionKpis" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-bottom: 28px;"></div>
 
-      <!-- Small Teams Comparison Matrix vs 65% Benchmark -->
+      <!-- Small Teams Comparison Matrix vs 95% Benchmark -->
       <div class="table-wrapper" style="margin-bottom: 32px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
           <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Small Teams Class Consumption Matrix vs 85% Target
+            Small Teams Class Consumption Matrix vs 95% Target
           </h3>
-          <span style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 3px 10px; border-radius: 4px; font-weight: 700;">85.0% Operational Benchmark</span>
+          <span style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 3px 10px; border-radius: 4px; font-weight: 700;">95.0% Operational Benchmark</span>
         </div>
         <div id="consumptionTeamsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 20px;"></div>
       </div>
@@ -585,10 +585,10 @@
           </div>
           <div class="metric-tile-modern" style="border-left: 3px solid #818cf8; padding: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; color: #818cf8; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
-              <span>📚</span> DIRECTIVE 3: Class Consumption Target (85%)
+              <span>📚</span> DIRECTIVE 3: Class Consumption Target (95%)
             </div>
             <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
-              <strong>Macro Benchmark:</strong> 65% Overall student lesson attendance.<br>
+              <strong>Macro Benchmark:</strong> 95% Overall student lesson attendance.<br>
               <span style="color: #a5b4fc; font-weight: 600;">Priority:</span> Immediate rescue of 0-class students across all teams.
             </div>
           </div>
@@ -1345,18 +1345,18 @@
           <div class="op-title">Module 2: Unfixed Teachers</div>
           <div class="op-value" id="opFtTotal">0</div>
           <div class="op-sub">
-            M0 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 80%)<br>
-            M1 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 80%)
+            M0 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 95%)<br>
+            M1 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 95%)
           </div>
         </div>
 
         <!-- Module 3 Card -->
         <div class="op-card m3" onclick="switchOperationsModule(3)" id="opCard3">
-          <div class="op-title">Module 3: Class Consumption & Zero-Class (65% Goal)</div>
+          <div class="op-title">Module 3: Class Consumption & Zero-Class (95% Goal)</div>
           <div class="op-value" id="opCcTotal">0</div>
           <div class="op-sub">
             <strong style="color: #94a3b8;">0</strong> Zero-Class Leads (Rescue)<br>
-            Target: 85% Overall Consumption
+            Target: 95% Overall Consumption
           </div>
         </div>
 
@@ -1381,7 +1381,7 @@
             <span>👩‍🏫</span> Module 2: Unfixed Teachers (1,680 Leads - M0/M1/M2)
           </button>
           <button class="op-pill p3" onclick="switchOperationsModule(3)" id="opPill3">
-            <span>🎓</span> Module 3: Class Consumption & Zero-Class (65% Goal)
+            <span>🎓</span> Module 3: Class Consumption & Zero-Class (95% Goal)
           </button>
           <button class="op-pill p4" onclick="switchOperationsModule(4)" id="opPill4">
             <span>🗣️</span> Module 4: English Club (45% Goal)
@@ -1873,9 +1873,9 @@
         <div style="display: flex; align-items: center; gap: 8px;">
           <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Operational Metric:</label>
           <select id="mtdMetricFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff;" onchange="renderMtdTab()">
-            <option value="consumption">🟢 Class Consumption (85% Goal)</option>
+            <option value="consumption">🟢 Class Consumption (95% Goal)</option>
             <option value="englishClub">🔵 English Club (45% Goal)</option>
-            <option value="unfixed">🟡 Unfixed Teacher Binding (80% Goal)</option>
+            <option value="unfixed">🟡 Fixed Teacher Binding (95% Goal)</option>
             <option value="upgrade">🟣 Early Upgrade M2 (20% Goal)</option>
           </select>
         </div>
@@ -1955,7 +1955,7 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         <span>Reps</span>
       </button>
-      <button type="button" class="dock-btn" onclick="switchTab('consumption')" title="Class Consumption (65%)">
+      <button type="button" class="dock-btn" onclick="switchTab('consumption')" title="Class Consumption (95%)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <span>Consumption</span>
       </button>
@@ -2025,9 +2025,10 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261025_164500" defer></script>
+  <script src="dashboard.js?v=20261025_165500" defer></script>
 </body>
 </html>
+
 
 
 

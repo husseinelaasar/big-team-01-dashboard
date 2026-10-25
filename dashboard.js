@@ -223,15 +223,15 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 50.17% vs Day 25 target 60%. Gap: 9.8pp. Need $17720/day to close.', time: '20261025_133058' },
-  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261025_133058' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (8.4%), EGSS-marwaahmed (9%), EGSS-negma (14.6%), EGSS-juliamonir01 (22.2%). Schedule targeted coaching sessions today.', time: '20261025_133058' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (78.9%), EGSS-ibrahimismaiel (95.4%), EGSS-khaledgonam (101.9%). Recognize in team channel!', time: '20261025_133058' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $3060/day', detail: 'Currently at 49.1% (17721/36080). Gap: $18359.', time: '20261025_133058' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $3454/day', detail: 'Currently at 40% (13806/34530). Gap: $20724.', time: '20261025_133058' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $5662/day', detail: 'Currently at 36.7% (19727/53700). Gap: $33973.', time: '20261025_133058' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 76 more renewals', detail: 'Current: 24/497 (4.8%). 20% target = 100. Focus on high-base reps.', time: '20261025_133058' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $128480 (60.2%). 6 days left. Daily need: $17720. Push all pending deals!', time: '20261025_133058' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 50.17% vs Day 25 target 60%. Gap: 9.8pp. Need $17720/day to close.', time: '20261025_165127' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261025_165127' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (8.4%), EGSS-marwaahmed (9%), EGSS-negma (14.6%), EGSS-juliamonir01 (22.2%). Schedule targeted coaching sessions today.', time: '20261025_165127' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (78.9%), EGSS-ibrahimismaiel (95.4%), EGSS-khaledgonam (101.9%). Recognize in team channel!', time: '20261025_165127' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $3060/day', detail: 'Currently at 49.1% (17721/36080). Gap: $18359.', time: '20261025_165127' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $3454/day', detail: 'Currently at 40% (13806/34530). Gap: $20724.', time: '20261025_165127' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $5662/day', detail: 'Currently at 36.7% (19727/53700). Gap: $33973.', time: '20261025_165127' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 76 more renewals', detail: 'Current: 24/497 (4.8%). 20% target = 100. Focus on high-base reps.', time: '20261025_165127' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $128480 (60.2%). 6 days left. Daily need: $17720. Push all pending deals!', time: '20261025_165127' },
 ];
 
 // =========================================================================
@@ -413,10 +413,10 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official October 2026 Cash Targets Plan)
-  const totalCash = 107067; // from Individual Sheet Col G (or 指标看板 Col C)
-  const totalTarget = 213390; // from 指标看板 Col F
+  const totalCash = 107067; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
+  const totalTarget = 213390; // from æŒ‡æ ‡çœ‹æ¿ Col F
   const sectorAchPct = Math.round((totalCash / totalTarget) * 1000) / 10; // 5.3%
-  const totalContracts = 118; // from 指标看板 Col D
+  const totalContracts = 118; // from æŒ‡æ ‡çœ‹æ¿ Col D
   const totalContractsTarget = 252; // Official October Contracts Target Plan (252 contracts)
   const totalUpgradeM2 = individuals.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0) || 3;
   const totalNormalRenewals = Math.max(0, totalContracts - totalUpgradeM2); // 18 from Student_Detail32
@@ -842,7 +842,7 @@ function renderBigTeamSummary(model) {
 
   // Macro commentary for Big Team 01 Sector
     let macroStatusBadge = '<span class="pill-badge" style="background: rgba(148, 163, 184, 0.15); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.3);"><span class="pulse-dot" style="background: #94a3b8;"></span> ⚪ OCTOBER KICKOFF</span>';
-  let macroCommentary = 'Big Team 01 is starting October 2026 with a clean slate. Awaiting official Cash Targets and Upgrade M2 allocations from Senior Management. Current operational focuses: 65% Class Consumption and 45% English Club attendance.';
+  let macroCommentary = 'Big Team 01 is starting October 2026 with a clean slate. Awaiting official Cash Targets and Upgrade M2 allocations from Senior Management. Current operational focuses: 95% Class Consumption and 45% English Club attendance.';
   if (s.totalTarget > 0) {
     if (s.achievement >= 100) {
       macroStatusBadge = `<span class="pill-badge pill-badge-emerald"><span class="pulse-dot pulse-dot-emerald"></span> 🏆 TARGET SURPASSED</span>`;
@@ -8482,6 +8482,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -8600,12 +8602,12 @@ function renderOperationsTab() {
       const m0PctNum = parseFloat(r.m0Pct) || 0;
       const m1PctNum = parseFloat(r.m1Pct) || 0;
       const m2PctNum = parseFloat(r.m2Pct) || 0;
-      const m0Badge = m0PctNum >= 80 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
-      const m1Badge = m1PctNum >= 80 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
-      const m2Badge = m2PctNum >= 80 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
-      const m0Clr = m0PctNum >= 80 ? '#10b981' : m0PctNum >= 50 ? '#f59e0b' : '#f43f5e';
-      const m1Clr = m1PctNum >= 80 ? '#10b981' : m1PctNum >= 70 ? '#f59e0b' : '#f43f5e';
-      const m2Clr = m2PctNum >= 80 ? '#10b981' : m2PctNum >= 70 ? '#f59e0b' : '#f43f5e';
+      const m0Badge = m0PctNum >= 95 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
+      const m1Badge = m1PctNum >= 95 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
+      const m2Badge = m2PctNum >= 95 ? `<span class="op-badge-met">Met</span>` : `<span class="op-badge-below">Below</span>`;
+      const m0Clr = m0PctNum >= 95 ? '#10b981' : m0PctNum >= 75 ? '#f59e0b' : '#f43f5e';
+      const m1Clr = m1PctNum >= 95 ? '#10b981' : m1PctNum >= 75 ? '#f59e0b' : '#f43f5e';
+      const m2Clr = m2PctNum >= 95 ? '#10b981' : m2PctNum >= 75 ? '#f59e0b' : '#f43f5e';
 
       return `
         <tr>
@@ -8650,15 +8652,15 @@ function renderOperationsTab() {
             <th>M0 Leads</th>
             <th>M0 Fixed</th>
             <th>M0 Fix %</th>
-            <th style="text-align: center;">vs 80% Target</th>
+            <th style="text-align: center;">vs 95% Target</th>
             <th>M1 Leads</th>
             <th>M1 Fixed</th>
             <th>M1 Fix %</th>
-            <th style="text-align: center;">vs 80% Target</th>
+            <th style="text-align: center;">vs 95% Target</th>
             <th>M2 Leads</th>
             <th>M2 Fixed</th>
             <th>M2 Fix %</th>
-            <th style="text-align: center;">vs 80% Target</th>
+            <th style="text-align: center;">vs 95% Target</th>
           </tr>
         </thead>
         <tbody>${rowsHtml}</tbody>
@@ -8668,15 +8670,15 @@ function renderOperationsTab() {
             <td style="font-family: var(--font-mono);">${sumM0Tot}</td>
             <td style="font-family: var(--font-mono); color: #34d399;">${sumM0Fix}</td>
             <td style="font-family: var(--font-mono); color: #10b981;">${avgM0}</td>
-            <td style="text-align: center;">${parseFloat(avgM0) >= 80 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
+            <td style="text-align: center;">${parseFloat(avgM0) >= 95 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
             <td style="font-family: var(--font-mono);">${sumM1Tot}</td>
             <td style="font-family: var(--font-mono); color: #34d399;">${sumM1Fix}</td>
             <td style="font-family: var(--font-mono); color: #10b981;">${avgM1}</td>
-            <td style="text-align: center;">${parseFloat(avgM1) >= 80 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
+            <td style="text-align: center;">${parseFloat(avgM1) >= 95 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
             <td style="font-family: var(--font-mono);">${sumM2Tot}</td>
             <td style="font-family: var(--font-mono); color: #34d399;">${sumM2Fix}</td>
             <td style="font-family: var(--font-mono); color: #10b981;">${avgM2}</td>
-            <td style="text-align: center;">${parseFloat(avgM2) >= 80 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
+            <td style="text-align: center;">${parseFloat(avgM2) >= 95 ? '<span class="op-badge-met">Met</span>' : '<span class="op-badge-below">Below</span>'}</td>
           </tr>
         </tfoot>
       </table>
@@ -9202,7 +9204,7 @@ function onPersonalRepSelected() {
       <div style="background: rgba(160, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
         <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 Students Without Fixed Teachers</div>
         <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${info.ftCount} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">students</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 80%</div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 95%</div>
       </div>
 
       <div style="background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
@@ -9293,7 +9295,7 @@ function onPersonalTeamSelected() {
       <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
         <div style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase;">👩‍🏫 Students Without Fixed Teachers</div>
         <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 900; color: #fff;">${teamData.ftCount.toLocaleString()} <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">students</span></div>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 80%</div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Linking target 95%</div>
       </div>
 
       <div style="background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: var(--radius-md); padding: 12px 16px;">
@@ -10812,7 +10814,7 @@ function renderMtdTab() {
   const metricConfig = {
     consumption: { label: "Class Consumption", key: "ccRate", target: 65, color: "#10b981", unit: "%" },
     englishClub: { label: "English Club",       key: "ecRate", target: 45, color: "#38bdf8", unit: "%" },
-    unfixed:     { label: "Teacher Binding",   key: "ftRate", target: 80, color: "#f59e0b", unit: "%" },
+    unfixed:     { label: "Teacher Binding",   key: "ftRate", target: 95, color: "#f59e0b", unit: "%" },
     upgrade:     { label: "Early Upgrade M2",  key: "upgRate", target: 20, color: "#c084fc", unit: "%" }
   };
 
@@ -11351,7 +11353,7 @@ function renderComparisonTab() {
     kpiBanner("Class Consumption (Avg)", avgCC_today, avgCC_yd, 65, "#10b981") +
     kpiBanner("English Club (Avg)", avgEC_today, avgEC_yd, 45, "#38bdf8") +
     kpiBanner("Upgrade Rate (Avg)", avgUpg_today, avgUpg_yd, 20, "#c084fc") +
-    kpiBanner("Teacher Binding Rate (Avg)", avgFT_today, avgFT_yd, 80, "#f59e0b", "Unfixed Leads: " + totFT_tdUnf + " (" + (deltaFT_unf <= 0 ? ("🟢 " + deltaFT_unf + " resolved") : ("🔴 +" + deltaFT_unf + " new")) + ")") +
+    kpiBanner("Teacher Binding Rate (Avg)", avgFT_today, avgFT_yd, 95, "#f59e0b", "Unfixed Leads: " + totFT_tdUnf + " (" + (deltaFT_unf <= 0 ? ("🟢 " + deltaFT_unf + " resolved") : ("🔴 +" + deltaFT_unf + " new")) + ")") +
     '<div class="kpi-card" style="border-top: 4px solid #6366f1;">' +
       '<div class="kpi-label">Rep Movement Summary</div>' +
       '<div style="display:flex; gap:12px; margin:12px 0;">' +
@@ -11482,7 +11484,7 @@ function renderComparisonTab() {
     totDeltaCell(totEC_today - totEC_yd) +
     totRateCell(totUpg_today, totUpg_yd, 20) +
     totDeltaCell(totUpg_today - totUpg_yd) +
-    totRateCell(avgFT_today, avgFT_yd, 80, totFT_tdUnf + " unfixed") +
+    totRateCell(avgFT_today, avgFT_yd, 95, totFT_tdUnf + " unfixed") +
     totDeltaCell(avgFT_today - avgFT_yd, ftTotSub) +
   '</tr>';
 
@@ -11531,7 +11533,7 @@ function renderComparisonTab() {
       '<span style="color:#f43f5e; margin-left:10px;">▼ Decline</span>' +
       '<span style="color:#64748b; margin-left:10px;">= No Change</span>' +
       '&nbsp;|&nbsp; <em>Top = Today (5 Oct), Bottom = Yesterday (' + (yd.label || "4 Oct") + ')</em>' +
-      '&nbsp;|&nbsp; Benchmarks: CC 65% · EC 45% · Upgrade 20% · Teacher Binding 80%' +
+      '&nbsp;|&nbsp; Benchmarks: CC 95% · EC 45% · Upgrade 20% · Teacher Binding 95%' +
     '</div>';
 }
 window.renderComparisonTab = renderComparisonTab;
@@ -11564,20 +11566,20 @@ function renderConsumptionTab() {
     const end = reps.reduce((s, r) => s + (r.end_classes || 0), 0);
     const active = total - c0;
     const rate = total > 0 ? ((active / total) * 100) : 0;
-    const goal85 = Math.ceil(total * 0.85);
-    const gap = Math.max(0, goal85 - active);
-    const surplus = Math.max(0, active - goal85);
-    const gapPct = rate - 85.0;
+    const goal95 = Math.ceil(total * 0.95);
+    const gap = Math.max(0, goal95 - active);
+    const surplus = Math.max(0, active - goal95);
+    const gapPct = rate - 95.0;
 
-    teamMetrics[tk] = { total, c0, end, active, rate, goal85, gap, surplus, gapPct, repsCount: reps.length };
+    teamMetrics[tk] = { total, c0, end, active, rate, goal95, gap, surplus, gapPct, repsCount: reps.length };
     bigTot += total; bigC0 += c0; bigEnd += end; bigActive += active;
   });
 
   const bigRate = bigTot > 0 ? ((bigActive / bigTot) * 100) : 0;
-  const bigGoal85 = Math.ceil(bigTot * 0.85);
-  const bigGap = Math.max(0, bigGoal85 - bigActive);
-  const bigSurplus = Math.max(0, bigActive - bigGoal85);
-  const bigGapPct = bigRate - 85.0;
+  const bigGoal95 = Math.ceil(bigTot * 0.95);
+  const bigGap = Math.max(0, bigGoal95 - bigActive);
+  const bigSurplus = Math.max(0, bigActive - bigGoal95);
+  const bigGapPct = bigRate - 95.0;
   const zeroPct = bigTot > 0 ? ((bigC0 / bigTot) * 100).toFixed(1) : '0.0';
 
   // 1. Render Top Executive KPI Deck
@@ -11586,15 +11588,18 @@ function renderConsumptionTab() {
       <div class="kpi-label">Big Team 01 — Sector Consumption Rate</div>
       <div class="kpi-value" style="color: #10b981; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
         ${bigRate.toFixed(1)}%
-        <span style="font-size: 0.82rem; color: #94a3b8; font-weight: 600;">(vs 85.0% Target)</span>
+        <span style="font-size: 0.82rem; color: #94a3b8; font-weight: 600;">(vs 95.0% Target)</span>
       </div>
       <div class="kpi-sub" style="display:flex; justify-content:space-between; margin-top:4px;">
-        <span>Surplus Pace: <strong style="color: #10b981;">+${bigGapPct.toFixed(1)}pp</strong></span>
-        <span>Goal: <strong>85.0%</strong></span>
+        <span>Deficit to 95%: <strong style="color: #f59e0b;">${bigGapPct.toFixed(1)}pp</strong></span>
+        <span>Goal: <strong>95.0%</strong></span>
       </div>
       <div class="kpi-progress" style="margin-top: 10px; position:relative; background:rgba(255,255,255,0.08); height:9px; border-radius:6px; overflow:visible;">
-        <div class="kpi-bar" style="width: ${bigRate.toFixed(1)}%; background: linear-gradient(90deg, #10b981, #06b6d4); height:100%; border-radius:6px;"></div>
-        <div style="position: absolute; left: 85%; top: -3px; bottom: -3px; width: 2px; background: #fff; box-shadow: 0 0 6px rgba(255,255,255,0.8); z-index: 2;" title="85.0% Benchmark Target"></div>
+        <div class="kpi-bar" style="width: ${Math.min(100, bigRate).toFixed(1)}%; background: linear-gradient(90deg, #10b981, #06b6d4); height:100%; border-radius:6px;"></div>
+        <!-- 95% Benchmark Target Pin -->
+        <div style="position: absolute; left: 95%; top: -3px; bottom: -3px; width: 2px; background: #fff; box-shadow: 0 0 6px rgba(255,255,255,0.9); z-index: 2;" title="95.0% Benchmark Target">
+          <span style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); font-size: 0.58rem; color: #cbd5e1; font-weight: 800; font-family: var(--font-mono); background: rgba(15, 23, 42, 0.9); padding: 0 3px; border-radius: 2px;">95%</span>
+        </div>
       </div>
       <div class="kpi-pct" style="color: var(--text-secondary); margin-top:6px;">${bigActive.toLocaleString()} active students out of ${bigTot.toLocaleString()} total accounts</div>
     </div>
@@ -11625,19 +11630,19 @@ function renderConsumptionTab() {
     </div>
 
     <div class="kpi-card" style="border-top: 4px solid #c084fc; background: var(--bg-card);">
-      <div class="kpi-label">Active Students Above 85% Goal</div>
+      <div class="kpi-label">Active Students Needed for 95% Goal</div>
       <div class="kpi-value" style="color: #c084fc; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 900;">
-        +${bigSurplus.toLocaleString()}
+        +${bigGap.toLocaleString()}
       </div>
-      <div class="kpi-sub">Target: ${bigGoal85.toLocaleString()} active students (85% of ${bigTot.toLocaleString()})</div>
+      <div class="kpi-sub">Target: ${bigGoal95.toLocaleString()} active students (95% of ${bigTot.toLocaleString()})</div>
       <div class="kpi-progress" style="margin-top: 10px; height:9px; background:rgba(255,255,255,0.08); border-radius:6px; overflow:hidden;">
-        <div class="kpi-bar" style="width: 100%; background: linear-gradient(90deg, #a855f7, #c084fc); height:100%;"></div>
+        <div class="kpi-bar" style="width: ${((bigActive / (bigGoal95 || 1)) * 100).toFixed(1)}%; background: linear-gradient(90deg, #a855f7, #c084fc); height:100%;"></div>
       </div>
-      <div class="kpi-pct" style="color: #c084fc; margin-top:6px;">Pacing 100% towards milestone (+${bigSurplus} buffer)</div>
+      <div class="kpi-pct" style="color: #c084fc; margin-top:6px;">Pacing ${((bigActive / (bigGoal95 || 1)) * 100).toFixed(1)}% towards 95% milestone</div>
     </div>
   `;
 
-  // 2. Render Small Teams Comparison Matrix vs 85% Benchmark
+  // 2. Render Small Teams Comparison Matrix vs 95% Benchmark
   const sortedTeams = [...teamKeys].sort((a, b) => teamMetrics[b].rate - teamMetrics[a].rate);
   const leaderRate = teamMetrics[sortedTeams[0]].rate;
 
@@ -11650,7 +11655,7 @@ function renderConsumptionTab() {
       glowShadow: "0 10px 28px -6px rgba(245, 158, 11, 0.28)",
       rateColor: "#facc15",
       barFill: "linear-gradient(90deg, #10b981 0%, #f59e0b 100%)",
-      compBadge: `<span class="pill-badge" style="background: rgba(245, 158, 11, 0.18); color: #fef08a; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 0.7rem; font-weight: 800;">🏆 Sector Leader (+${(teamMetrics[sortedTeams[0]].rate - 85).toFixed(1)}pp)</span>`
+      compBadge: `<span class="pill-badge" style="background: rgba(245, 158, 11, 0.18); color: #fef08a; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 0.7rem; font-weight: 800;">🏆 Sector Leader (Gap: ${Math.abs(teamMetrics[sortedTeams[0]].gapPct).toFixed(1)}pp to 95%)</span>`
     },
     {
       rankLabel: "🥈 Rank #2",
@@ -11696,9 +11701,9 @@ function renderConsumptionTab() {
     const tl = TL_MAPPING[shortKey];
     const rs = rankStyles[idx] || rankStyles[4];
 
-    // Status Badge: clearly show achievement vs 85%
-    const statusBadge = tm.rate >= 85 
-      ? `<span class="pill-badge pill-badge-emerald" style="padding: 3px 8px; font-size: 0.72rem; font-weight: 800; display: inline-flex; align-items: center; gap: 4px;">✅ MET 85%</span>`
+    // Status Badge: clearly show achievement vs 95%
+    const statusBadge = tm.rate >= 95 
+      ? `<span class="pill-badge pill-badge-emerald" style="padding: 3px 8px; font-size: 0.72rem; font-weight: 800; display: inline-flex; align-items: center; gap: 4px;">✅ MET 95%</span>`
       : `<span class="pill-badge pill-badge-amber" style="padding: 3px 8px; font-size: 0.72rem; font-weight: 800;">⏳ GAP: ${Math.abs(tm.gapPct).toFixed(1)}pp</span>`;
 
     // Dynamic Zero-Class Color (lower zero-class = greener, higher = rose warning)
@@ -11728,7 +11733,7 @@ function renderConsumptionTab() {
             <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing: 0.5px; font-weight: 700;">Consumption Rate:</span>
             <div style="font-family:var(--font-mono); font-size:1.95rem; font-weight:900; color:${rs.rateColor}; line-height: 1.1; margin-top: 2px;">
               ${tm.rate.toFixed(1)}%
-              <span style="font-size:0.82rem; color:#94a3b8; font-weight:600;">/ 85.0%</span>
+              <span style="font-size:0.82rem; color:#94a3b8; font-weight:600;">/ 95.0%</span>
             </div>
           </div>
           <div style="text-align:right;">
@@ -11739,25 +11744,25 @@ function renderConsumptionTab() {
           </div>
         </div>
 
-        <!-- Proportional Progress Bar Exactly Matching Rate with 85% Target Pin -->
+        <!-- Proportional Progress Bar Exactly Matching Rate with 95% Target Pin -->
         <div style="margin-bottom: 16px;">
           <div style="position:relative; height:10px; background:rgba(255,255,255,0.06); border-radius:6px; overflow:visible; border: 1px solid rgba(255,255,255,0.08);">
             <!-- The Actual Filled Bar (Strictly equal to rate %) -->
             <div style="height:100%; width:${Math.min(100, Math.max(0, tm.rate)).toFixed(1)}%; background:${rs.barFill}; border-radius:6px; transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 0 10px ${rs.borderColor}40;"></div>
             
-            <!-- 85% Benchmark Target Marker Line -->
-            <div style="position: absolute; left: 85%; top: -3px; bottom: -3px; width: 2px; background: #ffffff; z-index: 3; box-shadow: 0 0 6px #ffffff;" title="85.0% Operational Benchmark Target">
-              <span style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); font-size: 0.58rem; color: #cbd5e1; font-weight: 800; letter-spacing: 0.3px; white-space: nowrap; font-family: var(--font-mono); background: rgba(15, 23, 42, 0.9); padding: 0 3px; border-radius: 2px;">85%</span>
+            <!-- 95% Benchmark Target Marker Line -->
+            <div style="position: absolute; left: 95%; top: -3px; bottom: -3px; width: 2px; background: #ffffff; z-index: 3; box-shadow: 0 0 6px #ffffff;" title="95.0% Operational Benchmark Target">
+              <span style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); font-size: 0.58rem; color: #cbd5e1; font-weight: 800; letter-spacing: 0.3px; white-space: nowrap; font-family: var(--font-mono); background: rgba(15, 23, 42, 0.9); padding: 0 3px; border-radius: 2px;">95%</span>
             </div>
           </div>
           <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: var(--text-muted); margin-top: 4px; font-family: var(--font-mono);">
             <span>0%</span>
-            <span style="color: #38bdf8; font-weight: 700;">${tm.gapPct >= 0 ? `+${tm.gapPct.toFixed(1)}pp over goal` : `${tm.gapPct.toFixed(1)}pp`}</span>
+            <span style="color: #38bdf8; font-weight: 700;">${tm.gapPct >= 0 ? `+${tm.gapPct.toFixed(1)}pp over goal` : `${tm.gapPct.toFixed(1)}pp to 95%`}</span>
             <span>100%</span>
           </div>
         </div>
 
-        <!-- Metrics Grid: Zero-Class, Classes Ended, Surplus vs 85% Goal -->
+        <!-- Metrics Grid: Zero-Class, Classes Ended, Gap/Surplus vs 95% Goal -->
         <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; background:rgba(255,255,255,0.03); padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); font-size:0.78rem;">
           <div>
             <span style="color:var(--text-muted); display:block; font-size:0.68rem; font-weight: 600; text-transform: uppercase;">Zero-Class</span>
@@ -11768,8 +11773,8 @@ function renderConsumptionTab() {
             <strong style="color:#38bdf8; font-family:var(--font-mono); font-size:1rem; font-weight: 800;">${tm.end.toLocaleString()}</strong>
           </div>
           <div>
-            <span style="color:var(--text-muted); display:block; font-size:0.68rem; font-weight: 600; text-transform: uppercase;">vs 85% Goal</span>
-            <strong style="color:${tm.gapPct >= 0 ? '#10b981' : '#f43f5e'}; font-family:var(--font-mono); font-size:0.92rem; font-weight: 800;">
+            <span style="color:var(--text-muted); display:block; font-size:0.68rem; font-weight: 600; text-transform: uppercase;">vs 95% Goal</span>
+            <strong style="color:${tm.gapPct >= 0 ? '#10b981' : '#f59e0b'}; font-family:var(--font-mono); font-size:0.92rem; font-weight: 800;">
               ${tm.gapPct >= 0 ? `+${tm.surplus} buf` : `-${tm.gap} need`}
             </strong>
           </div>
@@ -11792,12 +11797,12 @@ function renderConsumptionTab() {
     const active = r.total - r.c0;
     const rate = r.total > 0 ? ((active / r.total) * 100).toFixed(1) : '0.0';
     const zeroPct = r.total > 0 ? ((r.c0 / r.total) * 100).toFixed(1) : '0.0';
-    const rateClr = parseFloat(rate) >= 85 ? '#10b981' : parseFloat(rate) >= 70 ? '#f59e0b' : '#f43f5e';
+    const rateClr = parseFloat(rate) >= 95 ? '#10b981' : parseFloat(rate) >= 80 ? '#f59e0b' : '#f43f5e';
     const zeroClr = parseFloat(zeroPct) > 30 ? '#f43f5e' : parseFloat(zeroPct) > 15 ? '#f59e0b' : '#10b981';
-    const goal85 = Math.ceil(r.total * 0.85);
-    const need = Math.max(0, goal85 - active);
+    const goal95 = Math.ceil(r.total * 0.95);
+    const need = Math.max(0, goal95 - active);
 
-    const badge = parseFloat(rate) >= 85 
+    const badge = parseFloat(rate) >= 95 
       ? '<span style="background:rgba(16,185,129,0.15); color:#10b981; padding:2px 8px; border-radius:4px; font-weight:700; font-size:0.72rem;">Goal Met 🎉</span>'
       : `<span style="color:#f59e0b; font-family:var(--font-mono); font-size:0.78rem; font-weight:700;">+${need} needed</span>`;
 
@@ -11831,6 +11836,8 @@ function renderConsumptionTab() {
   const totC12_14 = filteredData.reduce((s, r) => s + (r.c12_14 || 0), 0);
   const totC15 = filteredData.reduce((s, r) => s + (r.c15 || 0), 0);
   const totEnd = filteredData.reduce((s, r) => s + (r.end_classes || 0), 0);
+  const totGoal95 = Math.ceil(totTotal * 0.95);
+  const totNeed = Math.max(0, totGoal95 - totActive);
 
   const tfootHtml = `
     <tr style="background: rgba(16, 185, 129, 0.08); font-weight: 800; border-top: 2px solid rgba(16, 185, 129, 0.3);">
@@ -11845,7 +11852,7 @@ function renderConsumptionTab() {
       <td style="font-family:var(--font-mono); color:#cbd5e1;">${totC15.toLocaleString()}</td>
       <td style="font-family:var(--font-mono); color:#38bdf8; font-size:1.05rem;">${totEnd.toLocaleString()}</td>
       <td style="font-family:var(--font-mono); text-align:center;">
-        <span class="status-badge" style="background:#10b98120; color:#10b981; border:1px solid #10b98140;">Goal Met 🎉</span>
+        ${parseFloat(totRate) >= 95 ? '<span class="status-badge" style="background:#10b98120; color:#10b981; border:1px solid #10b98140;">Goal Met 🎉</span>' : `<span class="status-badge" style="background:#f59e0b20; color:#f59e0b; border:1px solid #f59e0b40;">+${totNeed.toLocaleString()} needed</span>`}
       </td>
     </tr>
   `;
@@ -11867,7 +11874,7 @@ function renderConsumptionTab() {
             <th style="min-width:65px;">12-14 Cls</th>
             <th style="min-width:65px;">15+ Cls</th>
             <th style="min-width:90px;">Ended Cls</th>
-            <th style="min-width:110px; text-align:center;">85% Status</th>
+            <th style="min-width:110px; text-align:center;">95% Status</th>
           </tr>
         </thead>
         <tbody>${rowsHtml}</tbody>
@@ -13673,6 +13680,10 @@ function exportCurrentFilteredUncoveredCsv() {
   const fullCsv = csvHeader + csvRows;
   triggerCsvDownload(fullCsv, `Uncovered_Leads_Filtered_${uncovState.team}_${filtered.length}_accounts.csv`);
 }
+
+
+
+
 
 
 
