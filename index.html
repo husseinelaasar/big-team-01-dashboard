@@ -82,6 +82,12 @@
       </div>
 
       <div class="nav-right">
+        <!-- Share Dashboard Public Link Button -->
+        <button type="button" class="nav-share-btn" id="shareDashboardBtn" onclick="copyDashboardPublicUrl()" title="Share live online dashboard link with your team">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          <span id="navShareBtnText">Share Dashboard</span>
+        </button>
+
         <!-- Direct Quick Access to VIP Packages Rate Card Calculator -->
         <a href="calculator.html" class="nav-calc-btn" title="فتح حاسبة الباقات المعتمدة وكروت العرض">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
@@ -99,6 +105,20 @@
         </div>
       </div>
     </nav>
+    <!-- Local File Sharing Warning Banner -->
+    <div id="localFileNoticeBar" class="local-notice-bar" style="display: none;">
+      <div class="local-notice-content">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.2rem;">⚠️</span>
+          <span>You are viewing a <strong>local file on your computer</strong> (<code>file:///...</code>). Team members cannot open this file link.</span>
+        </div>
+        <button type="button" class="local-copy-btn" onclick="copyDashboardPublicUrl()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy Public Link for Team</span>
+        </button>
+      </div>
+    </div>
+
 
     <!-- Data Synchronization Verification Widget -->
     <div class="sheet-sync-container">
@@ -2026,6 +2046,74 @@
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
   <script src="dashboard.js?v=20261026_113454" defer></script>
+
+  <script>
+    // Copy Official Public Dashboard Link
+    function copyDashboardPublicUrl() {
+      const hash = window.location.hash || '#overview';
+      const publicBase = 'https://husseinelaasar.github.io/big-team-01-dashboard/';
+      const fullShareUrl = publicBase + hash;
+      
+      const finishCopy = () => {
+        const btnText = document.getElementById('navShareBtnText');
+        if (btnText) {
+          const orig = btnText.textContent;
+          btnText.textContent = '✓ Copied Link!';
+          setTimeout(() => { btnText.textContent = orig; }, 3000);
+        }
+        showShareToast(fullShareUrl);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(fullShareUrl).then(finishCopy).catch(() => {
+          promptFallback(fullShareUrl);
+        });
+      } else {
+        promptFallback(fullShareUrl);
+      }
+    }
+
+    function promptFallback(url) {
+      window.prompt('Copy this public link to share with your team:', url);
+    }
+
+    function showShareToast(url) {
+      let toast = document.getElementById('shareDashboardToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'shareDashboardToast';
+        toast.className = 'share-toast';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = `
+        <div class="toast-head">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <strong>Public Share Link Copied!</strong>
+        </div>
+        <div class="toast-body">
+          Team members can open this live link from any computer or mobile:
+          <div class="toast-url">${url}</div>
+        </div>
+      `;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 5000);
+    }
+
+    // Auto-detect if user opened via local file protocol
+    if (window.location.protocol === 'file:') {
+      const checkNotice = () => {
+        const bar = document.getElementById('localFileNoticeBar');
+        if (bar) bar.style.display = 'block';
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', checkNotice);
+      } else {
+        checkNotice();
+      }
+    }
+  </script>
 </body>
 </html>
 
