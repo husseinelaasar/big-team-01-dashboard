@@ -223,15 +223,15 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 50.17% vs Day 25 target 60%. Gap: 9.8pp. Need $17720/day to close.', time: '20261025_165634' },
-  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261025_165634' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (8.4%), EGSS-marwaahmed (9%), EGSS-negma (14.6%), EGSS-juliamonir01 (22.2%). Schedule targeted coaching sessions today.', time: '20261025_165634' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (78.9%), EGSS-ibrahimismaiel (95.4%), EGSS-khaledgonam (101.9%). Recognize in team channel!', time: '20261025_165634' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $3060/day', detail: 'Currently at 49.1% (17721/36080). Gap: $18359.', time: '20261025_165634' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $3454/day', detail: 'Currently at 40% (13806/34530). Gap: $20724.', time: '20261025_165634' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $5662/day', detail: 'Currently at 36.7% (19727/53700). Gap: $33973.', time: '20261025_165634' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 76 more renewals', detail: 'Current: 24/497 (4.8%). 20% target = 100. Focus on high-base reps.', time: '20261025_165634' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $128480 (60.2%). 6 days left. Daily need: $17720. Push all pending deals!', time: '20261025_165634' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 50.17% vs Day 26 target 64%. Gap: 13.8pp. Need $21265/day to close.', time: '20261026_053447' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261026_053447' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (8.4%), EGSS-marwaahmed (9%), EGSS-negma (14.6%), EGSS-juliamonir01 (22.2%). Schedule targeted coaching sessions today.', time: '20261026_053447' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-mohamedha (78.9%), EGSS-ibrahimismaiel (95.4%), EGSS-khaledgonam (101.9%). Recognize in team channel!', time: '20261026_053447' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS10 needs $3672/day', detail: 'Currently at 49.1% (17721/36080). Gap: $18359.', time: '20261026_053447' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS13 needs $4145/day', detail: 'Currently at 40% (13806/34530). Gap: $20724.', time: '20261026_053447' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $6795/day', detail: 'Currently at 36.7% (19727/53700). Gap: $33973.', time: '20261026_053447' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 76 more renewals', detail: 'Current: 24/497 (4.8%). 20% target = 100. Focus on high-base reps.', time: '20261026_053447' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $123539 (57.9%). 5 days left. Daily need: $21265. Push all pending deals!', time: '20261026_053447' },
 ];
 
 // =========================================================================
@@ -314,7 +314,7 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 25; // Current MTD Day (Oct 3, 2026)
+  const daysPassed = 26; // Current MTD Day (Oct 3, 2026)
   const daysInMonth = 31;
   const daysLeft = daysInMonth - daysPassed;
   const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 11;
@@ -8486,6 +8486,10 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -14431,3 +14435,11 @@ function exportCurrentFilteredUncoveredCsv() {
   // Auto-run hazard alert scan
   setTimeout(() => scanAndApplyHazardAlerts(), 200);
   setInterval(() => scanAndApplyHazardAlerts(), 2500);
+
+
+
+
+
+
+
+
