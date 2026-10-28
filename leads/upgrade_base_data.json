@@ -3956,8 +3956,8 @@
         "Representative":  "EGSS-samira01",
         "TeamCode":  "ME-EGSS05",
         "TeamName":  "ME-EGSS05小组",
-        "UpgradeM2":  0,
-        "Status":  "Pending Target"
+        "UpgradeM2":  1,
+        "Status":  "Upgraded (M2 Closed)"
     },
     {
         "StudentID":  "64181054",
