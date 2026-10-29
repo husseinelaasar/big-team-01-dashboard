@@ -223,13 +223,13 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 63.93% vs Day 29 target 90%. Gap: 26.1pp. Need $38482/day to close.', time: '20261029_004725' },
-  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261029_004725' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (8.4%), EGSS-negma (14.6%), EGSS-marwaahmed (18%), EGSS-alihesham01 (25%). Schedule targeted coaching sessions today.', time: '20261029_004725' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-khaledgonam (109.2%), EGSS-ibrahimismaiel (110%), EGSS-mohamedha (114.2%). Recognize in team channel!', time: '20261029_004725' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $15346/day', detail: 'Currently at 42.8% (23007/53700). Gap: $30693.', time: '20261029_004725' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 70 more renewals', detail: 'Current: 30/497 (6%). 20% target = 100. Focus on high-base reps.', time: '20261029_004725' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $141131 (66.1%). 2 days left. Daily need: $38482. Push all pending deals!', time: '20261029_004725' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 63.93% vs Day 29 target 90%. Gap: 26.1pp. Need $38482/day to close.', time: '20261029_044727' },
+  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261029_044727' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (8.4%), EGSS-negma (14.6%), EGSS-marwaahmed (18%), EGSS-alihesham01 (25%). Schedule targeted coaching sessions today.', time: '20261029_044727' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-khaledgonam (109.2%), EGSS-ibrahimismaiel (110%), EGSS-mohamedha (114.2%). Recognize in team channel!', time: '20261029_044727' },
+  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $15346/day', detail: 'Currently at 42.8% (23007/53700). Gap: $30693.', time: '20261029_044727' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 70 more renewals', detail: 'Current: 30/497 (6%). 20% target = 100. Focus on high-base reps.', time: '20261029_044727' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $141131 (66.1%). 2 days left. Daily need: $38482. Push all pending deals!', time: '20261029_044727' },
 ];
 
 // =========================================================================
@@ -8536,6 +8536,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -14481,6 +14483,10 @@ function exportCurrentFilteredUncoveredCsv() {
   // Auto-run hazard alert scan
   setTimeout(() => scanAndApplyHazardAlerts(), 200);
   setInterval(() => scanAndApplyHazardAlerts(), 2500);
+
+
+
+
 
 
 
