@@ -1100,8 +1100,8 @@
         "Representative":  "EGSS-mahmoud04",
         "TeamCode":  "ME-EGSS01",
         "TeamName":  "ME-EGSS01小组",
-        "UpgradeM2":  0,
-        "Status":  "Pending Target"
+        "UpgradeM2":  1,
+        "Status":  "Upgraded (M2 Closed)"
     },
     {
         "StudentID":  "63034742",
@@ -3676,8 +3676,8 @@
         "Representative":  "EGSS-mahmoud04",
         "TeamCode":  "ME-EGSS01",
         "TeamName":  "ME-EGSS01小组",
-        "UpgradeM2":  0,
-        "Status":  "Pending Target"
+        "UpgradeM2":  1,
+        "Status":  "Upgraded (M2 Closed)"
     },
     {
         "StudentID":  "64157873",

@@ -27,7 +27,7 @@ const TL_MAPPING = {
   "EGSS05": { tl: "EGSS-ibrahimismaiel", leaderName: "Ibrahim Abd El Shakour", fullName: "ME-EGSS05 (Ibrahim Abd El Shakour)", color: "#06b6d4", bg: "rgba(6, 182, 212, 0.15)", border: "rgba(6, 182, 212, 0.4)", text: "#22d3ee", badgeClass: "team-badge-05" },
   "EGSS10": { tl: "EGSS-abdelrhmanshehata", leaderName: "Abdelrhman Shehata", fullName: "ME-EGSS10 (Abdelrhman Shehata)", color: "#10b981", bg: "rgba(16, 185, 129, 0.15)", border: "rgba(16, 185, 129, 0.4)", text: "#34d399", badgeClass: "team-badge-10" },
   "EGSS13": { tl: "EGSS-mohamedha", leaderName: "Mohamedha", fullName: "ME-EGSS13 (Mohamedha)", color: "#f59e0b", bg: "rgba(245, 158, 11, 0.15)", border: "rgba(245, 158, 11, 0.4)", text: "#fbbf24", badgeClass: "team-badge-13" },
-  "EGSS30": { tl: "EGSS-AdhmGadAllah", leaderName: "Adhm GadAllah", fullName: "ME-EGSS30 (Adhm GadAllah)", color: "#f43f5e", bg: "rgba(244, 63, 94, 0.15)", border: "rgba(244, 63, 94, 0.4)", text: "#fb7185", badgeClass: "team-badge-30" }
+  "EGSS30": { tl: "EGSS-AdhmGadAllah", leaderName: "Adhm GadAllah", fullName: "ME-EGSS30 (Adhm GadAllah)", color: "#ff3b57", bg: "rgba(255, 59, 87, 0.2)", border: "rgba(255, 59, 87, 0.5)", text: "#ff6b81", badgeClass: "team-badge-30" }
 };
 
 function getTeamConfig(teamKey) {
@@ -134,33 +134,33 @@ const NEW_CONTRACTS_TARGETS = {
 
 // Reconciled Small Team Totals (Sum of Active Members, Leaver Refunds Charged to Sector)
 const OFFICIAL_TEAMS_DATA = {
-  "EGSS05": { gross: 58354, refund: 2080, cash: 56274, target: 60500, contracts: 62, officialAch: 93 },
-  "EGSS30": { gross: 21433, refund: 0, cash: 21433, target: 28580, contracts: 23, officialAch: 75 },
-  "EGSS10": { gross: 20523, refund: 0, cash: 20523, target: 36080, contracts: 20, officialAch: 56.9 },
-  "EGSS13": { gross: 18850, refund: 1184, cash: 17666, target: 34530, contracts: 18, officialAch: 51.2 },
-  "EGSS01": { gross: 23007, refund: 0, cash: 23007, target: 53700, contracts: 22, officialAch: 42.8 },
+  "EGSS05": { gross: 62864, refund: 2080, cash: 60784, target: 60500, contracts: 67, officialAch: 100.5 },
+  "EGSS30": { gross: 23403, refund: 0, cash: 23403, target: 28580, contracts: 25, officialAch: 81.9 },
+  "EGSS13": { gross: 23690, refund: 1184, cash: 22506, target: 34530, contracts: 22, officialAch: 65.2 },
+  "EGSS10": { gross: 22563, refund: 0, cash: 22563, target: 36080, contracts: 22, officialAch: 62.5 },
+  "EGSS01": { gross: 32097, refund: 0, cash: 32097, target: 53700, contracts: 30, officialAch: 59.8 },
 };
 
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 5600, refund: 0, target: 7990, contracts: 5, officialAch: 70.1, upgradeM2: 0, normalRenewals: 5, upgradeBase: 28, poolRenewals: 0 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 7420, refund: 0, target: 7990, contracts: 6, officialAch: 92.9, upgradeM2: 0, normalRenewals: 6, upgradeBase: 28, poolRenewals: 0 },
   { name: "EGSS-ashraqatal", team: "EGSS01", cash: 880, refund: 0, target: 10420, contracts: 1, officialAch: 8.4, upgradeM2: 1, normalRenewals: 0, upgradeBase: 29, poolRenewals: 1 },
   { name: "EGSS-negma", team: "EGSS01", cash: 1352, refund: 0, target: 9260, contracts: 2, officialAch: 14.6, upgradeM2: 0, normalRenewals: 2, upgradeBase: 35, poolRenewals: 0 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 4195, refund: 0, target: 10710, contracts: 5, officialAch: 39.2, upgradeM2: 0, normalRenewals: 5, upgradeBase: 22, poolRenewals: 0 },
-  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 10980, refund: 0, target: 15320, contracts: 9, officialAch: 71.7, upgradeM2: 3, normalRenewals: 6, upgradeBase: 31, poolRenewals: 3 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 7375, refund: 0, target: 10710, contracts: 7, officialAch: 68.9, upgradeM2: 0, normalRenewals: 7, upgradeBase: 22, poolRenewals: 0 },
+  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 15070, refund: 0, target: 15320, contracts: 14, officialAch: 98.4, upgradeM2: 5, normalRenewals: 9, upgradeBase: 31, poolRenewals: 5 },
   { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 9095, refund: 0, target: 10380, contracts: 10, officialAch: 87.6, upgradeM2: 2, normalRenewals: 8, upgradeBase: 19, poolRenewals: 2 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 8732, refund: 0, target: 8180, contracts: 8, officialAch: 106.7, upgradeM2: 3, normalRenewals: 5, upgradeBase: 21, poolRenewals: 3 },
-  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 10811, refund: 2080, target: 9830, contracts: 14, officialAch: 110, upgradeM2: 1, normalRenewals: 13, upgradeBase: 27, poolRenewals: 1 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 9752, refund: 0, target: 8180, contracts: 9, officialAch: 119.2, upgradeM2: 3, normalRenewals: 6, upgradeBase: 21, poolRenewals: 3 },
+  { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 12561, refund: 2080, target: 9830, contracts: 16, officialAch: 127.8, upgradeM2: 1, normalRenewals: 15, upgradeBase: 27, poolRenewals: 1 },
   { name: "EGSS-khaledgonam", team: "EGSS05", cash: 11950, refund: 0, target: 10940, contracts: 12, officialAch: 109.2, upgradeM2: 0, normalRenewals: 12, upgradeBase: 13, poolRenewals: 0 },
-  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 6506, refund: 0, target: 9090, contracts: 8, officialAch: 71.6, upgradeM2: 1, normalRenewals: 7, upgradeBase: 16, poolRenewals: 1 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 9180, refund: 0, target: 12080, contracts: 10, officialAch: 76, upgradeM2: 1, normalRenewals: 9, upgradeBase: 17, poolRenewals: 1 },
+  { name: "EGSS-omarmoneb", team: "EGSS05", cash: 7226, refund: 0, target: 9090, contracts: 9, officialAch: 79.5, upgradeM2: 1, normalRenewals: 8, upgradeBase: 16, poolRenewals: 1 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 10200, refund: 0, target: 12080, contracts: 11, officialAch: 84.4, upgradeM2: 0, normalRenewals: 11, upgradeBase: 17, poolRenewals: 0 },
   { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 4036, refund: 0, target: 8100, contracts: 6, officialAch: 49.8, upgradeM2: 3, normalRenewals: 3, upgradeBase: 27, poolRenewals: 3 },
-  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 7432, refund: 0, target: 13820, contracts: 6, officialAch: 53.8, upgradeM2: 2, normalRenewals: 4, upgradeBase: 34, poolRenewals: 2 },
+  { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 9472, refund: 0, target: 13820, contracts: 8, officialAch: 68.5, upgradeM2: 2, normalRenewals: 6, upgradeBase: 34, poolRenewals: 2 },
   { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 9055, refund: 0, target: 14160, contracts: 8, officialAch: 63.9, upgradeM2: 2, normalRenewals: 6, upgradeBase: 32, poolRenewals: 2 },
-  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 6800, refund: 0, target: 10760, contracts: 7, officialAch: 63.2, upgradeM2: 3, normalRenewals: 4, upgradeBase: 26, poolRenewals: 3 },
-  { name: "EGSS-hayamhassan", team: "EGSS13", cash: -354, refund: 1184, target: 4370, contracts: 2, officialAch: -8.1, upgradeM2: 2, normalRenewals: 0, upgradeBase: 21, poolRenewals: 2 },
+  { name: "EGSS-amrsafwat", team: "EGSS13", cash: 8960, refund: 0, target: 10760, contracts: 8, officialAch: 83.3, upgradeM2: 3, normalRenewals: 5, upgradeBase: 26, poolRenewals: 3 },
+  { name: "EGSS-hayamhassan", team: "EGSS13", cash: 2326, refund: 1184, target: 4370, contracts: 5, officialAch: 53.2, upgradeM2: 2, normalRenewals: 3, upgradeBase: 21, poolRenewals: 2 },
   { name: "EGSS-marwaahmed", team: "EGSS13", cash: 2040, refund: 0, target: 11360, contracts: 2, officialAch: 18, upgradeM2: 0, normalRenewals: 2, upgradeBase: 16, poolRenewals: 0 },
   { name: "EGSS-mohamedha", team: "EGSS13", cash: 9180, refund: 0, target: 8040, contracts: 7, officialAch: 114.2, upgradeM2: 0, normalRenewals: 7, upgradeBase: 20, poolRenewals: 0 },
-  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 12143, refund: 0, target: 11960, contracts: 12, officialAch: 101.5, upgradeM2: 2, normalRenewals: 10, upgradeBase: 26, poolRenewals: 2 },
+  { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 14113, refund: 0, target: 11960, contracts: 14, officialAch: 118, upgradeM2: 2, normalRenewals: 12, upgradeBase: 26, poolRenewals: 2 },
   { name: "EGSS-alihesham01", team: "EGSS30", cash: 1900, refund: 0, target: 7610, contracts: 2, officialAch: 25, upgradeM2: 1, normalRenewals: 1, upgradeBase: 18, poolRenewals: 1 },
   { name: "EGSS-titooooo", team: "EGSS30", cash: 7390, refund: 0, target: 9010, contracts: 9, officialAch: 82, upgradeM2: 3, normalRenewals: 6, upgradeBase: 19, poolRenewals: 3 },
 ];
@@ -192,20 +192,20 @@ const POOL22_M2_COVERAGE = {
   "EGSS-ashraqatal": 47.1,
   "EGSS-negma": 0,
   "EGSS-juliamonir01": 77.8,
-  "EGSS-mahmoud04": 72,
-  "EGSS-abdelrahmannasef": 76,
+  "EGSS-mahmoud04": 76,
+  "EGSS-abdelrahmannasef": 94.1,
   "EGSS-ehabzaky01": 92.3,
   "EGSS-ibrahimismaiel": 84.2,
   "EGSS-khaledgonam": 100,
-  "EGSS-omarmoneb": 81.2,
-  "EGSS-samira01": 88.2,
+  "EGSS-omarmoneb": 72.7,
+  "EGSS-samira01": 100,
   "EGSS-abdelrhmanshehata": 73.3,
-  "EGSS-ahmedshoukry": 53.6,
+  "EGSS-ahmedshoukry": 57.1,
   "EGSS-mahmoudkhamis": 72.7,
   "EGSS-amrsafwat": 92.9,
-  "EGSS-hayamhassan": 68.4,
+  "EGSS-hayamhassan": 75,
   "EGSS-marwaahmed": 78.6,
-  "EGSS-mohamedha": 53.3,
+  "EGSS-mohamedha": 25,
   "EGSS-adhmgadallah": 87.5,
   "EGSS-alihesham01": 84.6,
   "EGSS-titooooo": 84.6,
@@ -223,13 +223,11 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 63.93% vs Day 29 target 90%. Gap: 26.1pp. Need $38482/day to close.', time: '20261029_044727' },
-  { type: 'critical', icon: '🚨', title: '1 Reps with Zero/Negative Cash', detail: 'Urgent: EGSS-hayamhassan. Immediate 1:1 coaching required.', time: '20261029_044727' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-hayamhassan (-8.1%), EGSS-ashraqatal (8.4%), EGSS-negma (14.6%), EGSS-marwaahmed (18%), EGSS-alihesham01 (25%). Schedule targeted coaching sessions today.', time: '20261029_044727' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-khaledgonam (109.2%), EGSS-ibrahimismaiel (110%), EGSS-mohamedha (114.2%). Recognize in team channel!', time: '20261029_044727' },
-  { type: 'warning', icon: '⚠', title: 'ME-EGSS01 needs $15346/day', detail: 'Currently at 42.8% (23007/53700). Gap: $30693.', time: '20261029_044727' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 70 more renewals', detail: 'Current: 30/497 (6%). 20% target = 100. Focus on high-base reps.', time: '20261029_044727' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $141131 (66.1%). 2 days left. Daily need: $38482. Push all pending deals!', time: '20261029_044727' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 74.45% vs Day 30 target 96%. Gap: 21.5pp. Need $54513/day to close.', time: '20261030_004726' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (8.4%), EGSS-negma (14.6%), EGSS-marwaahmed (18%), EGSS-alihesham01 (25%), EGSS-abdelrhmanshehata (49.8%). Schedule targeted coaching sessions today.', time: '20261030_004726' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-adhmgadallah (118%), EGSS-ehabzaky01 (119.2%), EGSS-ibrahimismaiel (127.8%). Recognize in team channel!', time: '20261030_004726' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 69 more renewals', detail: 'Current: 31/497 (6.2%). 20% target = 100. Focus on high-base reps.', time: '20261030_004726' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $158877 (74.5%). 1 days left. Daily need: $54513. Push all pending deals!', time: '20261030_004726' },
 ];
 
 // =========================================================================
@@ -312,7 +310,7 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 29; // Current MTD Day (Oct 3, 2026)
+  const daysPassed = 30; // Current MTD Day (Oct 3, 2026)
   const daysInMonth = 31;
   const daysLeft = daysInMonth - daysPassed;
   const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 11;
@@ -411,10 +409,10 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official October 2026 Cash Targets Plan)
-  const totalCash = 136427; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
+  const totalCash = 158877; // from Individual Sheet Col G (or æŒ‡æ ‡çœ‹æ¿ Col C)
   const totalTarget = 213390; // from æŒ‡æ ‡çœ‹æ¿ Col F
   const sectorAchPct = Math.round((totalCash / totalTarget) * 1000) / 10; // 5.3%
-  const totalContracts = 145; // from æŒ‡æ ‡çœ‹æ¿ Col D
+  const totalContracts = 166; // from æŒ‡æ ‡çœ‹æ¿ Col D
   const totalContractsTarget = 252; // Official October Contracts Target Plan (252 contracts)
   const totalUpgradeM2 = individuals.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0) || 3;
   const totalNormalRenewals = Math.max(0, totalContracts - totalUpgradeM2); // 18 from Student_Detail32
@@ -461,7 +459,7 @@ function getStatus(ach) {
 function getStatusColor(ach) {
   if (ach >= 80) return '#10b981';
   if (ach >= 50) return '#f59e0b';
-  if (ach > 0) return '#f43f5e';
+  if (ach > 0) return '#ff3b57';
   return '#64748b';
 }
 
@@ -921,7 +919,7 @@ function renderBigTeamSummary(model) {
   const rowsHtml = sortedTeams.map((t, idx) => {
     const diffPct = Math.round((t.displayAch - pacePct) * 10) / 10;
     const diffSign = diffPct >= 0 ? '+' : '';
-    const paceClr = t.displayAch >= pacePct ? '#10b981' : (t.displayAch >= pacePct - 8 ? '#f59e0b' : '#f43f5e');
+    const paceClr = t.displayAch >= pacePct ? '#10b981' : (t.displayAch >= pacePct - 8 ? '#f59e0b' : '#ff3b57');
     const paceLabel = t.displayAch >= pacePct ? 'Ahead' : (t.displayAch >= pacePct - 8 ? 'Near' : 'Behind');
     const achClr = getStatusColor(t.displayAch);
 
@@ -1284,7 +1282,7 @@ function renderOverviewTable(model) {
     const deltaPace = Math.round((r.achievement - pacePct) * 10) / 10;
     const isAhead = r.achievement >= pacePct;
     const isNear = r.achievement >= (pacePct - 10);
-    const paceStatusClr = isAhead ? '#10b981' : (isNear ? '#f59e0b' : '#f43f5e');
+    const paceStatusClr = isAhead ? '#10b981' : (isNear ? '#f59e0b' : '#ff3b57');
     const paceTag = isAhead ? 'Ahead' : (isNear ? 'Near' : 'Behind');
 
     const tr = document.createElement('tr');
@@ -1557,7 +1555,7 @@ function renderIndividualsTab(model) {
     const deltaPace = Math.round((r.achievement - pacePct) * 10) / 10;
     const isAhead = r.achievement >= pacePct;
     const isNear = r.achievement >= (pacePct - 10);
-    const paceStatusClr = isAhead ? '#10b981' : (isNear ? '#f59e0b' : '#f43f5e');
+    const paceStatusClr = isAhead ? '#10b981' : (isNear ? '#f59e0b' : '#ff3b57');
     const repRank = teamFilter === 'all' ? sectorRankMap.get(r.name) : teamRankMap.get(r.name);
     const cleanRepName = r.name.replace(/^(ME-|EGSS\d+-|EOSS\d+-|EGLP\d+-)/i, '');
 
@@ -6421,173 +6419,173 @@ const MASTER_OPERATIONS_DATA = {
                         {
                             "name":  "EGSS-AbdelrahmanNASEF",
                             "team":  "ME-EGSS05",
-                            "total":  257,
-                            "end_classes":  2645,
+                            "total":  221,
+                            "end_classes":  2367,
                             "avg_classes":  0,
-                            "c0":  25,
-                            "c1_3":  13,
-                            "c4_7":  35,
-                            "c8_11":  75,
-                            "c12_14":  59,
-                            "c15":  50,
-                            "c12":  109,
-                            "p0":  "9.7%",
-                            "p4":  "85.2%",
-                            "p8":  "71.6%",
-                            "p12":  "42.4%",
-                            "p15":  "19.5%"
+                            "c0":  19,
+                            "c1_3":  11,
+                            "c4_7":  29,
+                            "c8_11":  58,
+                            "c12_14":  52,
+                            "c15":  52,
+                            "c12":  104,
+                            "p0":  "8.6%",
+                            "p4":  "86.4%",
+                            "p8":  "73.3%",
+                            "p12":  "47.1%",
+                            "p15":  "23.5%"
                         },
                         {
                             "name":  "EGSS-ehabzaky01",
                             "team":  "ME-EGSS05",
                             "total":  238,
-                            "end_classes":  2166,
+                            "end_classes":  2273,
                             "avg_classes":  0,
                             "c0":  26,
-                            "c1_3":  22,
-                            "c4_7":  31,
-                            "c8_11":  81,
-                            "c12_14":  51,
-                            "c15":  27,
-                            "c12":  78,
+                            "c1_3":  19,
+                            "c4_7":  28,
+                            "c8_11":  72,
+                            "c12_14":  57,
+                            "c15":  36,
+                            "c12":  93,
                             "p0":  "10.9%",
-                            "p4":  "79.8%",
-                            "p8":  "66.8%",
-                            "p12":  "32.8%",
-                            "p15":  "11.3%"
+                            "p4":  "81.1%",
+                            "p8":  "69.3%",
+                            "p12":  "39.1%",
+                            "p15":  "15.1%"
                         },
                         {
                             "name":  "EGSS-Ibrahimismaiel",
                             "team":  "ME-EGSS05",
                             "total":  274,
-                            "end_classes":  2058,
+                            "end_classes":  2161,
                             "avg_classes":  0,
                             "c0":  51,
-                            "c1_3":  36,
-                            "c4_7":  37,
-                            "c8_11":  83,
-                            "c12_14":  44,
-                            "c15":  23,
-                            "c12":  67,
+                            "c1_3":  33,
+                            "c4_7":  32,
+                            "c8_11":  74,
+                            "c12_14":  52,
+                            "c15":  32,
+                            "c12":  84,
                             "p0":  "18.6%",
-                            "p4":  "68.2%",
-                            "p8":  "54.7%",
-                            "p12":  "24.5%",
-                            "p15":  "8.4%"
+                            "p4":  "69.3%",
+                            "p8":  "57.7%",
+                            "p12":  "30.7%",
+                            "p15":  "11.7%"
                         },
                         {
                             "name":  "EGSS-KhaledGonam",
                             "team":  "ME-EGSS05",
                             "total":  263,
-                            "end_classes":  2079,
+                            "end_classes":  2190,
                             "avg_classes":  0,
                             "c0":  39,
-                            "c1_3":  28,
-                            "c4_7":  56,
-                            "c8_11":  66,
-                            "c12_14":  45,
-                            "c15":  29,
-                            "c12":  74,
+                            "c1_3":  26,
+                            "c4_7":  53,
+                            "c8_11":  62,
+                            "c12_14":  46,
+                            "c15":  37,
+                            "c12":  83,
                             "p0":  "14.8%",
-                            "p4":  "74.5%",
-                            "p8":  "53.2%",
-                            "p12":  "28.1%",
-                            "p15":  "11%"
+                            "p4":  "75.3%",
+                            "p8":  "55.1%",
+                            "p12":  "31.6%",
+                            "p15":  "14.1%"
                         },
                         {
                             "name":  "EGSS-OmarMoneb",
                             "team":  "ME-EGSS05",
-                            "total":  256,
-                            "end_classes":  2199,
+                            "total":  220,
+                            "end_classes":  1971,
                             "avg_classes":  0,
-                            "c0":  26,
-                            "c1_3":  18,
-                            "c4_7":  51,
-                            "c8_11":  92,
-                            "c12_14":  46,
-                            "c15":  23,
-                            "c12":  69,
-                            "p0":  "10.2%",
-                            "p4":  "82.8%",
-                            "p8":  "62.9%",
-                            "p12":  "27%",
-                            "p15":  "9%"
+                            "c0":  21,
+                            "c1_3":  16,
+                            "c4_7":  34,
+                            "c8_11":  77,
+                            "c12_14":  50,
+                            "c15":  22,
+                            "c12":  72,
+                            "p0":  "9.5%",
+                            "p4":  "83.2%",
+                            "p8":  "67.7%",
+                            "p12":  "32.7%",
+                            "p15":  "10%"
                         },
                         {
                             "name":  "EGSS-samira01",
                             "team":  "ME-EGSS05",
-                            "total":  279,
-                            "end_classes":  2670,
+                            "total":  244,
+                            "end_classes":  2394,
                             "avg_classes":  0,
-                            "c0":  34,
+                            "c0":  31,
                             "c1_3":  18,
-                            "c4_7":  33,
-                            "c8_11":  84,
-                            "c12_14":  62,
-                            "c15":  48,
+                            "c4_7":  25,
+                            "c8_11":  60,
+                            "c12_14":  57,
+                            "c15":  53,
                             "c12":  110,
-                            "p0":  "12.2%",
-                            "p4":  "81.4%",
-                            "p8":  "69.5%",
-                            "p12":  "39.4%",
-                            "p15":  "17.2%"
+                            "p0":  "12.7%",
+                            "p4":  "79.9%",
+                            "p8":  "69.7%",
+                            "p12":  "45.1%",
+                            "p15":  "21.7%"
                         },
                         {
                             "name":  "EGSS-ashraqatal",
                             "team":  "ME-EGSS01",
-                            "total":  255,
-                            "end_classes":  2322,
+                            "total":  300,
+                            "end_classes":  2848,
                             "avg_classes":  0,
-                            "c0":  26,
-                            "c1_3":  22,
-                            "c4_7":  43,
-                            "c8_11":  85,
-                            "c12_14":  39,
-                            "c15":  40,
-                            "c12":  79,
-                            "p0":  "10.2%",
-                            "p4":  "81.2%",
-                            "p8":  "64.3%",
-                            "p12":  "31%",
-                            "p15":  "15.7%"
+                            "c0":  32,
+                            "c1_3":  25,
+                            "c4_7":  47,
+                            "c8_11":  84,
+                            "c12_14":  53,
+                            "c15":  59,
+                            "c12":  112,
+                            "p0":  "10.7%",
+                            "p4":  "81%",
+                            "p8":  "65.3%",
+                            "p12":  "37.3%",
+                            "p15":  "19.7%"
                         },
                         {
                             "name":  "EGSS-juliamonir01",
                             "team":  "ME-EGSS01",
-                            "total":  260,
-                            "end_classes":  2540,
+                            "total":  302,
+                            "end_classes":  3079,
                             "avg_classes":  0,
-                            "c0":  24,
-                            "c1_3":  15,
-                            "c4_7":  32,
-                            "c8_11":  84,
-                            "c12_14":  64,
-                            "c15":  41,
-                            "c12":  105,
-                            "p0":  "9.2%",
-                            "p4":  "85%",
-                            "p8":  "72.7%",
-                            "p12":  "40.4%",
-                            "p15":  "15.8%"
+                            "c0":  28,
+                            "c1_3":  19,
+                            "c4_7":  35,
+                            "c8_11":  82,
+                            "c12_14":  75,
+                            "c15":  63,
+                            "c12":  138,
+                            "p0":  "9.3%",
+                            "p4":  "84.4%",
+                            "p8":  "72.8%",
+                            "p12":  "45.7%",
+                            "p15":  "20.9%"
                         },
                         {
                             "name":  "EGSS-mahmoud04",
                             "team":  "ME-EGSS01",
-                            "total":  290,
-                            "end_classes":  2476,
+                            "total":  330,
+                            "end_classes":  2998,
                             "avg_classes":  0,
-                            "c0":  43,
-                            "c1_3":  25,
-                            "c4_7":  59,
-                            "c8_11":  68,
-                            "c12_14":  50,
-                            "c15":  45,
-                            "c12":  95,
-                            "p0":  "14.8%",
-                            "p4":  "76.6%",
-                            "p8":  "56.2%",
-                            "p12":  "32.8%",
-                            "p15":  "15.5%"
+                            "c0":  46,
+                            "c1_3":  28,
+                            "c4_7":  53,
+                            "c8_11":  80,
+                            "c12_14":  63,
+                            "c15":  60,
+                            "c12":  123,
+                            "p0":  "13.9%",
+                            "p4":  "77.6%",
+                            "p8":  "61.5%",
+                            "p12":  "37.3%",
+                            "p15":  "18.2%"
                         },
                         {
                             "name":  "EGSS-negma",
@@ -6611,211 +6609,211 @@ const MASTER_OPERATIONS_DATA = {
                         {
                             "name":  "EGSS-nohayoussry",
                             "team":  "ME-EGSS01",
-                            "total":  256,
-                            "end_classes":  2386,
+                            "total":  297,
+                            "end_classes":  2968,
                             "avg_classes":  0,
-                            "c0":  24,
-                            "c1_3":  16,
-                            "c4_7":  45,
-                            "c8_11":  81,
-                            "c12_14":  49,
-                            "c15":  41,
-                            "c12":  90,
-                            "p0":  "9.4%",
-                            "p4":  "84.4%",
-                            "p8":  "66.8%",
-                            "p12":  "35.2%",
-                            "p15":  "16%"
+                            "c0":  30,
+                            "c1_3":  18,
+                            "c4_7":  40,
+                            "c8_11":  80,
+                            "c12_14":  62,
+                            "c15":  67,
+                            "c12":  129,
+                            "p0":  "10.1%",
+                            "p4":  "83.8%",
+                            "p8":  "70.4%",
+                            "p12":  "43.4%",
+                            "p15":  "22.6%"
                         },
                         {
                             "name":  "EGSS-Amrsafwat",
                             "team":  "ME-EGSS13",
-                            "total":  258,
-                            "end_classes":  2483,
+                            "total":  259,
+                            "end_classes":  2617,
                             "avg_classes":  0,
                             "c0":  19,
                             "c1_3":  16,
-                            "c4_7":  45,
-                            "c8_11":  106,
-                            "c12_14":  34,
-                            "c15":  38,
-                            "c12":  72,
-                            "p0":  "7.4%",
-                            "p4":  "86.4%",
-                            "p8":  "69%",
-                            "p12":  "27.9%",
-                            "p15":  "14.7%"
+                            "c4_7":  43,
+                            "c8_11":  85,
+                            "c12_14":  49,
+                            "c15":  47,
+                            "c12":  96,
+                            "p0":  "7.3%",
+                            "p4":  "86.5%",
+                            "p8":  "69.9%",
+                            "p12":  "37.1%",
+                            "p15":  "18.1%"
                         },
                         {
                             "name":  "EGSS-hayamhassan",
                             "team":  "ME-EGSS13",
-                            "total":  186,
-                            "end_classes":  2026,
+                            "total":  205,
+                            "end_classes":  2332,
                             "avg_classes":  0,
-                            "c0":  7,
+                            "c0":  11,
                             "c1_3":  9,
-                            "c4_7":  18,
-                            "c8_11":  74,
-                            "c12_14":  38,
-                            "c15":  40,
-                            "c12":  78,
-                            "p0":  "3.8%",
-                            "p4":  "91.4%",
-                            "p8":  "81.7%",
-                            "p12":  "41.9%",
-                            "p15":  "21.5%"
+                            "c4_7":  17,
+                            "c8_11":  65,
+                            "c12_14":  47,
+                            "c15":  56,
+                            "c12":  103,
+                            "p0":  "5.4%",
+                            "p4":  "90.2%",
+                            "p8":  "82%",
+                            "p12":  "50.2%",
+                            "p15":  "27.3%"
                         },
                         {
                             "name":  "EGSS-marwaahmed",
                             "team":  "ME-EGSS13",
                             "total":  251,
-                            "end_classes":  2349,
+                            "end_classes":  2469,
                             "avg_classes":  0,
                             "c0":  27,
                             "c1_3":  16,
-                            "c4_7":  41,
-                            "c8_11":  81,
-                            "c12_14":  43,
-                            "c15":  43,
-                            "c12":  86,
+                            "c4_7":  36,
+                            "c8_11":  66,
+                            "c12_14":  52,
+                            "c15":  54,
+                            "c12":  106,
                             "p0":  "10.8%",
                             "p4":  "82.9%",
-                            "p8":  "66.5%",
-                            "p12":  "34.3%",
-                            "p15":  "17.1%"
+                            "p8":  "68.5%",
+                            "p12":  "42.2%",
+                            "p15":  "21.5%"
                         },
                         {
                             "name":  "EGSS-mohamedha",
                             "team":  "ME-EGSS13",
-                            "total":  250,
-                            "end_classes":  2147,
+                            "total":  213,
+                            "end_classes":  1832,
                             "avg_classes":  0,
-                            "c0":  32,
-                            "c1_3":  27,
-                            "c4_7":  46,
-                            "c8_11":  68,
-                            "c12_14":  43,
-                            "c15":  34,
-                            "c12":  77,
-                            "p0":  "12.8%",
-                            "p4":  "76.4%",
-                            "p8":  "58%",
-                            "p12":  "30.8%",
-                            "p15":  "13.6%"
+                            "c0":  29,
+                            "c1_3":  22,
+                            "c4_7":  37,
+                            "c8_11":  55,
+                            "c12_14":  38,
+                            "c15":  32,
+                            "c12":  70,
+                            "p0":  "13.6%",
+                            "p4":  "76.1%",
+                            "p8":  "58.7%",
+                            "p12":  "32.9%",
+                            "p15":  "15%"
                         },
                         {
                             "name":  "EGSS-AdhmGadAllah",
                             "team":  "ME-EGSS30",
-                            "total":  251,
-                            "end_classes":  2556,
+                            "total":  250,
+                            "end_classes":  2685,
                             "avg_classes":  0,
                             "c0":  18,
-                            "c1_3":  19,
-                            "c4_7":  30,
-                            "c8_11":  77,
-                            "c12_14":  65,
-                            "c15":  42,
-                            "c12":  107,
+                            "c1_3":  15,
+                            "c4_7":  33,
+                            "c8_11":  57,
+                            "c12_14":  69,
+                            "c15":  58,
+                            "c12":  127,
                             "p0":  "7.2%",
-                            "p4":  "85.3%",
-                            "p8":  "73.3%",
-                            "p12":  "42.6%",
-                            "p15":  "16.7%"
+                            "p4":  "86.8%",
+                            "p8":  "73.6%",
+                            "p12":  "50.8%",
+                            "p15":  "23.2%"
                         },
                         {
                             "name":  "EGSS-alihesham01",
                             "team":  "ME-EGSS30",
                             "total":  141,
-                            "end_classes":  1476,
+                            "end_classes":  1549,
                             "avg_classes":  0,
                             "c0":  10,
                             "c1_3":  7,
-                            "c4_7":  23,
-                            "c8_11":  40,
-                            "c12_14":  30,
-                            "c15":  31,
-                            "c12":  61,
+                            "c4_7":  20,
+                            "c8_11":  36,
+                            "c12_14":  32,
+                            "c15":  36,
+                            "c12":  68,
                             "p0":  "7.1%",
                             "p4":  "87.9%",
-                            "p8":  "71.6%",
-                            "p12":  "43.3%",
-                            "p15":  "22%"
+                            "p8":  "73.8%",
+                            "p12":  "48.2%",
+                            "p15":  "25.5%"
                         },
                         {
                             "name":  "EGSS-titooooo",
                             "team":  "ME-EGSS30",
                             "total":  248,
-                            "end_classes":  2394,
+                            "end_classes":  2511,
                             "avg_classes":  0,
-                            "c0":  26,
-                            "c1_3":  14,
-                            "c4_7":  29,
-                            "c8_11":  83,
-                            "c12_14":  55,
-                            "c15":  41,
-                            "c12":  96,
-                            "p0":  "10.5%",
+                            "c0":  25,
+                            "c1_3":  15,
+                            "c4_7":  23,
+                            "c8_11":  79,
+                            "c12_14":  57,
+                            "c15":  49,
+                            "c12":  106,
+                            "p0":  "10.1%",
                             "p4":  "83.9%",
-                            "p8":  "72.2%",
-                            "p12":  "38.7%",
-                            "p15":  "16.5%"
+                            "p8":  "74.6%",
+                            "p12":  "42.7%",
+                            "p15":  "19.8%"
                         },
                         {
                             "name":  "EGSS-abdelrhmanshehata",
                             "team":  "ME-EGSS10",
                             "total":  188,
-                            "end_classes":  1976,
+                            "end_classes":  2080,
                             "avg_classes":  0,
                             "c0":  21,
-                            "c1_3":  13,
-                            "c4_7":  20,
-                            "c8_11":  53,
-                            "c12_14":  34,
-                            "c15":  47,
-                            "c12":  81,
+                            "c1_3":  12,
+                            "c4_7":  18,
+                            "c8_11":  44,
+                            "c12_14":  39,
+                            "c15":  54,
+                            "c12":  93,
                             "p0":  "11.2%",
-                            "p4":  "81.9%",
-                            "p8":  "71.3%",
-                            "p12":  "43.1%",
-                            "p15":  "25%"
+                            "p4":  "82.4%",
+                            "p8":  "72.9%",
+                            "p12":  "49.5%",
+                            "p15":  "28.7%"
                         },
                         {
                             "name":  "EGSS-AhmedShoukry",
                             "team":  "ME-EGSS10",
                             "total":  280,
-                            "end_classes":  2838,
+                            "end_classes":  2973,
                             "avg_classes":  0,
                             "c0":  12,
-                            "c1_3":  17,
-                            "c4_7":  40,
-                            "c8_11":  112,
-                            "c12_14":  49,
-                            "c15":  50,
-                            "c12":  99,
+                            "c1_3":  16,
+                            "c4_7":  38,
+                            "c8_11":  89,
+                            "c12_14":  65,
+                            "c15":  60,
+                            "c12":  125,
                             "p0":  "4.3%",
-                            "p4":  "89.6%",
-                            "p8":  "75.4%",
-                            "p12":  "35.4%",
-                            "p15":  "17.9%"
+                            "p4":  "90%",
+                            "p8":  "76.4%",
+                            "p12":  "44.6%",
+                            "p15":  "21.4%"
                         },
                         {
                             "name":  "EGSS-Mahmoudkhamis",
                             "team":  "ME-EGSS10",
                             "total":  281,
-                            "end_classes":  2882,
+                            "end_classes":  3031,
                             "avg_classes":  0,
                             "c0":  15,
-                            "c1_3":  18,
-                            "c4_7":  28,
-                            "c8_11":  107,
-                            "c12_14":  61,
-                            "c15":  52,
-                            "c12":  113,
+                            "c1_3":  16,
+                            "c4_7":  24,
+                            "c8_11":  93,
+                            "c12_14":  70,
+                            "c15":  63,
+                            "c12":  133,
                             "p0":  "5.3%",
-                            "p4":  "88.3%",
-                            "p8":  "78.3%",
-                            "p12":  "40.2%",
-                            "p15":  "18.5%"
+                            "p4":  "89%",
+                            "p8":  "80.4%",
+                            "p12":  "47.3%",
+                            "p15":  "22.4%"
                         }
                     ],
     "unfixed":  [
@@ -6825,19 +6823,19 @@ const MASTER_OPERATIONS_DATA = {
                         "m0Tot":  15,
                         "m0Fix":  13,
                         "m0Pct":  "86.7%",
-                        "m1Tot":  24,
-                        "m1Fix":  22,
-                        "m1Pct":  "91.7%",
-                        "m2Tot":  27,
-                        "m2Fix":  25,
-                        "m2Pct":  "92.6%"
+                        "m1Tot":  18,
+                        "m1Fix":  18,
+                        "m1Pct":  "100%",
+                        "m2Tot":  19,
+                        "m2Fix":  17,
+                        "m2Pct":  "89.5%"
                     },
                     {
                         "name":  "EGSS-ehabzaky01",
                         "team":  "ME-EGSS05",
-                        "m0Tot":  24,
-                        "m0Fix":  20,
-                        "m0Pct":  "83.3%",
+                        "m0Tot":  25,
+                        "m0Fix":  22,
+                        "m0Pct":  "88%",
                         "m1Tot":  26,
                         "m1Fix":  23,
                         "m1Pct":  "88.5%",
@@ -6848,9 +6846,9 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-Ibrahimismaiel",
                         "team":  "ME-EGSS05",
-                        "m0Tot":  10,
-                        "m0Fix":  7,
-                        "m0Pct":  "70%",
+                        "m0Tot":  12,
+                        "m0Fix":  8,
+                        "m0Pct":  "66.7%",
                         "m1Tot":  23,
                         "m1Fix":  19,
                         "m1Pct":  "82.6%",
@@ -6861,9 +6859,9 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-KhaledGonam",
                         "team":  "ME-EGSS05",
-                        "m0Tot":  12,
-                        "m0Fix":  8,
-                        "m0Pct":  "66.7%",
+                        "m0Tot":  15,
+                        "m0Fix":  9,
+                        "m0Pct":  "60%",
                         "m1Tot":  13,
                         "m1Fix":  13,
                         "m1Pct":  "100%",
@@ -6874,38 +6872,38 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-OmarMoneb",
                         "team":  "ME-EGSS05",
-                        "m0Tot":  15,
+                        "m0Tot":  13,
                         "m0Fix":  9,
-                        "m0Pct":  "60%",
-                        "m1Tot":  22,
-                        "m1Fix":  21,
-                        "m1Pct":  "95.5%",
-                        "m2Tot":  20,
-                        "m2Fix":  16,
-                        "m2Pct":  "80%"
+                        "m0Pct":  "69.2%",
+                        "m1Tot":  18,
+                        "m1Fix":  17,
+                        "m1Pct":  "94.4%",
+                        "m2Tot":  15,
+                        "m2Fix":  11,
+                        "m2Pct":  "73.3%"
                     },
                     {
                         "name":  "EGSS-samira01",
                         "team":  "ME-EGSS05",
-                        "m0Tot":  17,
-                        "m0Fix":  12,
-                        "m0Pct":  "70.6%",
+                        "m0Tot":  15,
+                        "m0Fix":  10,
+                        "m0Pct":  "66.7%",
                         "m1Tot":  14,
                         "m1Fix":  12,
                         "m1Pct":  "85.7%",
-                        "m2Tot":  23,
-                        "m2Fix":  22,
-                        "m2Pct":  "95.7%"
+                        "m2Tot":  17,
+                        "m2Fix":  16,
+                        "m2Pct":  "94.1%"
                     },
                     {
                         "name":  "EGSS-ashraqatal",
                         "team":  "ME-EGSS01",
-                        "m0Tot":  11,
+                        "m0Tot":  15,
                         "m0Fix":  8,
-                        "m0Pct":  "72.7%",
-                        "m1Tot":  24,
-                        "m1Fix":  22,
-                        "m1Pct":  "91.7%",
+                        "m0Pct":  "53.3%",
+                        "m1Tot":  31,
+                        "m1Fix":  27,
+                        "m1Pct":  "87.1%",
                         "m2Tot":  29,
                         "m2Fix":  26,
                         "m2Pct":  "89.7%"
@@ -6913,24 +6911,24 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-juliamonir01",
                         "team":  "ME-EGSS01",
-                        "m0Tot":  20,
-                        "m0Fix":  14,
-                        "m0Pct":  "70%",
-                        "m1Tot":  12,
-                        "m1Fix":  10,
-                        "m1Pct":  "83.3%",
-                        "m2Tot":  21,
-                        "m2Fix":  17,
-                        "m2Pct":  "81%"
+                        "m0Tot":  24,
+                        "m0Fix":  17,
+                        "m0Pct":  "70.8%",
+                        "m1Tot":  16,
+                        "m1Fix":  12,
+                        "m1Pct":  "75%",
+                        "m2Tot":  23,
+                        "m2Fix":  18,
+                        "m2Pct":  "78.3%"
                     },
                     {
                         "name":  "EGSS-mahmoud04",
                         "team":  "ME-EGSS01",
-                        "m0Tot":  11,
-                        "m0Fix":  5,
-                        "m0Pct":  "45.5%",
-                        "m1Tot":  16,
-                        "m1Fix":  16,
+                        "m0Tot":  14,
+                        "m0Fix":  9,
+                        "m0Pct":  "64.3%",
+                        "m1Tot":  19,
+                        "m1Fix":  19,
                         "m1Pct":  "100%",
                         "m2Tot":  31,
                         "m2Fix":  29,
@@ -6939,7 +6937,7 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-negma",
                         "team":  "ME-EGSS01",
-                        "m0Tot":  2,
+                        "m0Tot":  0,
                         "m0Fix":  0,
                         "m0Pct":  "0%",
                         "m1Tot":  0,
@@ -6952,12 +6950,12 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-nohayoussry",
                         "team":  "ME-EGSS01",
-                        "m0Tot":  12,
-                        "m0Fix":  9,
-                        "m0Pct":  "75%",
-                        "m1Tot":  17,
-                        "m1Fix":  17,
-                        "m1Pct":  "100%",
+                        "m0Tot":  15,
+                        "m0Fix":  14,
+                        "m0Pct":  "93.3%",
+                        "m1Tot":  26,
+                        "m1Fix":  25,
+                        "m1Pct":  "96.2%",
                         "m2Tot":  27,
                         "m2Fix":  25,
                         "m2Pct":  "92.6%"
@@ -6965,9 +6963,9 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-Amrsafwat",
                         "team":  "ME-EGSS13",
-                        "m0Tot":  13,
-                        "m0Fix":  8,
-                        "m0Pct":  "61.5%",
+                        "m0Tot":  14,
+                        "m0Fix":  9,
+                        "m0Pct":  "64.3%",
                         "m1Tot":  17,
                         "m1Fix":  16,
                         "m1Pct":  "94.1%",
@@ -6978,48 +6976,48 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-hayamhassan",
                         "team":  "ME-EGSS13",
-                        "m0Tot":  12,
-                        "m0Fix":  10,
-                        "m0Pct":  "83.3%",
-                        "m1Tot":  35,
-                        "m1Fix":  32,
-                        "m1Pct":  "91.4%",
-                        "m2Tot":  22,
-                        "m2Fix":  22,
+                        "m0Tot":  16,
+                        "m0Fix":  15,
+                        "m0Pct":  "93.8%",
+                        "m1Tot":  37,
+                        "m1Fix":  34,
+                        "m1Pct":  "91.9%",
+                        "m2Tot":  23,
+                        "m2Fix":  23,
                         "m2Pct":  "100%"
                     },
                     {
                         "name":  "EGSS-marwaahmed",
                         "team":  "ME-EGSS13",
-                        "m0Tot":  8,
+                        "m0Tot":  10,
                         "m0Fix":  7,
-                        "m0Pct":  "87.5%",
+                        "m0Pct":  "70%",
                         "m1Tot":  24,
                         "m1Fix":  22,
                         "m1Pct":  "91.7%",
-                        "m2Tot":  14,
+                        "m2Tot":  15,
                         "m2Fix":  14,
-                        "m2Pct":  "100%"
+                        "m2Pct":  "93.3%"
                     },
                     {
                         "name":  "EGSS-mohamedha",
                         "team":  "ME-EGSS13",
-                        "m0Tot":  12,
-                        "m0Fix":  7,
-                        "m0Pct":  "58.3%",
-                        "m1Tot":  23,
-                        "m1Fix":  18,
-                        "m1Pct":  "78.3%",
-                        "m2Tot":  27,
-                        "m2Fix":  25,
-                        "m2Pct":  "92.6%"
+                        "m0Tot":  13,
+                        "m0Fix":  9,
+                        "m0Pct":  "69.2%",
+                        "m1Tot":  19,
+                        "m1Fix":  14,
+                        "m1Pct":  "73.7%",
+                        "m2Tot":  20,
+                        "m2Fix":  18,
+                        "m2Pct":  "90%"
                     },
                     {
                         "name":  "EGSS-AdhmGadAllah",
                         "team":  "ME-EGSS30",
-                        "m0Tot":  15,
-                        "m0Fix":  11,
-                        "m0Pct":  "73.3%",
+                        "m0Tot":  16,
+                        "m0Fix":  12,
+                        "m0Pct":  "75%",
                         "m1Tot":  18,
                         "m1Fix":  18,
                         "m1Pct":  "100%",
@@ -7043,22 +7041,22 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-titooooo",
                         "team":  "ME-EGSS30",
-                        "m0Tot":  12,
-                        "m0Fix":  8,
-                        "m0Pct":  "66.7%",
+                        "m0Tot":  13,
+                        "m0Fix":  9,
+                        "m0Pct":  "69.2%",
                         "m1Tot":  29,
                         "m1Fix":  27,
                         "m1Pct":  "93.1%",
                         "m2Tot":  18,
-                        "m2Fix":  17,
-                        "m2Pct":  "94.4%"
+                        "m2Fix":  16,
+                        "m2Pct":  "88.9%"
                     },
                     {
                         "name":  "EGSS-abdelrhmanshehata",
                         "team":  "ME-EGSS10",
-                        "m0Tot":  13,
-                        "m0Fix":  9,
-                        "m0Pct":  "69.2%",
+                        "m0Tot":  14,
+                        "m0Fix":  11,
+                        "m0Pct":  "78.6%",
                         "m1Tot":  27,
                         "m1Fix":  25,
                         "m1Pct":  "92.6%",
@@ -7069,9 +7067,9 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-AhmedShoukry",
                         "team":  "ME-EGSS10",
-                        "m0Tot":  14,
-                        "m0Fix":  12,
-                        "m0Pct":  "85.7%",
+                        "m0Tot":  15,
+                        "m0Fix":  14,
+                        "m0Pct":  "93.3%",
                         "m1Tot":  26,
                         "m1Fix":  24,
                         "m1Pct":  "92.3%",
@@ -7082,9 +7080,9 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-Mahmoudkhamis",
                         "team":  "ME-EGSS10",
-                        "m0Tot":  16,
-                        "m0Fix":  12,
-                        "m0Pct":  "75%",
+                        "m0Tot":  17,
+                        "m0Fix":  14,
+                        "m0Pct":  "82.4%",
                         "m1Tot":  25,
                         "m1Fix":  25,
                         "m1Pct":  "100%",
@@ -7121,7 +7119,7 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-mahmoud04",
                         "team":  "ME-EGSS01",
-                        "upgradeM2":  3,
+                        "upgradeM2":  5,
                         "upgradeBase":  31
                     },
                     {
@@ -7157,7 +7155,7 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-samira01",
                         "team":  "ME-EGSS05",
-                        "upgradeM2":  1,
+                        "upgradeM2":  0,
                         "upgradeBase":  17
                     },
                     {
@@ -7227,39 +7225,39 @@ const MASTER_OPERATIONS_DATA = {
                     "team":  "ME-EGSS05",
                     "ec":  2,
                     "r1":  1,
-                    "r2":  0,
+                    "r2":  1,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  7,
+                    "absence":  6,
                     "total":  10
                 },
                 {
                     "name":  "EGSS-ehabzaky01",
                     "team":  "ME-EGSS05",
                     "ec":  0,
-                    "r1":  3,
-                    "r2":  0,
-                    "r3":  1,
-                    "r4":  2,
-                    "r6d":  1,
+                    "r1":  1,
+                    "r2":  2,
+                    "r3":  0,
+                    "r4":  0,
+                    "r6d":  0,
                     "r6e":  0,
-                    "absence":  4,
-                    "total":  11
+                    "absence":  2,
+                    "total":  5
                 },
                 {
                     "name":  "EGSS-Ibrahimismaiel",
                     "team":  "ME-EGSS05",
-                    "ec":  2,
+                    "ec":  0,
                     "r1":  1,
                     "r2":  1,
-                    "r3":  1,
+                    "r3":  0,
                     "r4":  1,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  5,
-                    "total":  11
+                    "absence":  0,
+                    "total":  3
                 },
                 {
                     "name":  "EGSS-KhaledGonam",
@@ -7271,389 +7269,389 @@ const MASTER_OPERATIONS_DATA = {
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  1,
-                    "total":  2
+                    "absence":  2,
+                    "total":  3
                 },
                 {
                     "name":  "EGSS-OmarMoneb",
                     "team":  "ME-EGSS05",
                     "ec":  0,
-                    "r1":  3,
+                    "r1":  0,
                     "r2":  0,
-                    "r3":  1,
-                    "r4":  1,
+                    "r3":  0,
+                    "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  3,
-                    "total":  8
+                    "absence":  1,
+                    "total":  1
                 },
                 {
                     "name":  "EGSS-samira01",
                     "team":  "ME-EGSS05",
-                    "ec":  1,
-                    "r1":  3,
+                    "ec":  0,
+                    "r1":  0,
                     "r2":  0,
-                    "r3":  2,
+                    "r3":  0,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  6,
-                    "total":  12
+                    "absence":  0,
+                    "total":  0
                 },
                 {
                     "name":  "EGSS-ashraqatal",
                     "team":  "ME-EGSS01",
-                    "ec":  3,
+                    "ec":  1,
                     "r1":  0,
-                    "r2":  3,
-                    "r3":  1,
-                    "r4":  2,
+                    "r2":  0,
+                    "r3":  2,
+                    "r4":  1,
                     "r6d":  1,
                     "r6e":  0,
-                    "absence":  5,
-                    "total":  15
+                    "absence":  6,
+                    "total":  11
                 },
                 {
                     "name":  "EGSS-juliamonir01",
                     "team":  "ME-EGSS01",
                     "ec":  1,
-                    "r1":  4,
-                    "r2":  1,
-                    "r3":  0,
+                    "r1":  0,
+                    "r2":  0,
+                    "r3":  1,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  6,
-                    "total":  12
+                    "absence":  0,
+                    "total":  2
                 },
                 {
                     "name":  "EGSS-mahmoud04",
                     "team":  "ME-EGSS01",
-                    "ec":  3,
-                    "r1":  4,
-                    "r2":  1,
+                    "ec":  1,
+                    "r1":  0,
+                    "r2":  4,
                     "r3":  0,
-                    "r4":  0,
+                    "r4":  1,
                     "r6d":  2,
-                    "r6e":  1,
-                    "absence":  4,
-                    "total":  15
+                    "r6e":  0,
+                    "absence":  3,
+                    "total":  11
                 },
                 {
                     "name":  "EGSS-negma",
                     "team":  "ME-EGSS01",
                     "ec":  0,
-                    "r1":  2,
+                    "r1":  0,
                     "r2":  0,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
                     "absence":  0,
-                    "total":  2
+                    "total":  0
                 },
                 {
                     "name":  "EGSS-nohayoussry",
                     "team":  "ME-EGSS01",
                     "ec":  0,
-                    "r1":  3,
-                    "r2":  1,
-                    "r3":  0,
-                    "r4":  1,
-                    "r6d":  3,
-                    "r6e":  0,
-                    "absence":  5,
-                    "total":  13
-                },
-                {
-                    "name":  "EGSS-Amrsafwat",
-                    "team":  "ME-EGSS13",
-                    "ec":  0,
-                    "r1":  4,
-                    "r2":  0,
-                    "r3":  0,
-                    "r4":  1,
-                    "r6d":  0,
-                    "r6e":  0,
-                    "absence":  1,
-                    "total":  6
-                },
-                {
-                    "name":  "EGSS-hayamhassan",
-                    "team":  "ME-EGSS13",
-                    "ec":  0,
-                    "r1":  2,
+                    "r1":  0,
                     "r2":  0,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
                     "absence":  0,
-                    "total":  2
+                    "total":  0
+                },
+                {
+                    "name":  "EGSS-Amrsafwat",
+                    "team":  "ME-EGSS13",
+                    "ec":  0,
+                    "r1":  0,
+                    "r2":  0,
+                    "r3":  0,
+                    "r4":  0,
+                    "r6d":  0,
+                    "r6e":  0,
+                    "absence":  0,
+                    "total":  0
+                },
+                {
+                    "name":  "EGSS-hayamhassan",
+                    "team":  "ME-EGSS13",
+                    "ec":  0,
+                    "r1":  0,
+                    "r2":  0,
+                    "r3":  0,
+                    "r4":  0,
+                    "r6d":  0,
+                    "r6e":  0,
+                    "absence":  0,
+                    "total":  0
                 },
                 {
                     "name":  "EGSS-marwaahmed",
                     "team":  "ME-EGSS13",
                     "ec":  0,
                     "r1":  0,
-                    "r2":  1,
-                    "r3":  2,
-                    "r4":  1,
-                    "r6d":  2,
+                    "r2":  0,
+                    "r3":  0,
+                    "r4":  0,
+                    "r6d":  1,
                     "r6e":  0,
-                    "absence":  3,
-                    "total":  9
+                    "absence":  0,
+                    "total":  1
                 },
                 {
                     "name":  "EGSS-mohamedha",
                     "team":  "ME-EGSS13",
                     "ec":  1,
-                    "r1":  4,
-                    "r2":  2,
-                    "r3":  1,
+                    "r1":  0,
+                    "r2":  0,
+                    "r3":  0,
                     "r4":  1,
                     "r6d":  8,
                     "r6e":  0,
-                    "absence":  8,
-                    "total":  25
+                    "absence":  4,
+                    "total":  14
                 },
                 {
                     "name":  "EGSS-AdhmGadAllah",
                     "team":  "ME-EGSS30",
                     "ec":  0,
-                    "r1":  2,
-                    "r2":  0,
+                    "r1":  1,
+                    "r2":  1,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  4,
-                    "total":  6
+                    "absence":  0,
+                    "total":  2
                 },
                 {
                     "name":  "EGSS-alihesham01",
                     "team":  "ME-EGSS30",
                     "ec":  0,
-                    "r1":  2,
+                    "r1":  0,
                     "r2":  0,
-                    "r3":  2,
+                    "r3":  0,
                     "r4":  0,
                     "r6d":  1,
                     "r6e":  0,
                     "absence":  1,
-                    "total":  6
+                    "total":  2
                 },
                 {
                     "name":  "EGSS-titooooo",
                     "team":  "ME-EGSS30",
-                    "ec":  5,
-                    "r1":  3,
-                    "r2":  2,
-                    "r3":  0,
-                    "r4":  1,
+                    "ec":  1,
+                    "r1":  0,
+                    "r2":  0,
+                    "r3":  1,
+                    "r4":  0,
                     "r6d":  5,
                     "r6e":  0,
-                    "absence":  6,
-                    "total":  22
+                    "absence":  1,
+                    "total":  8
                 },
                 {
                     "name":  "EGSS-abdelrhmanshehata",
                     "team":  "ME-EGSS10",
                     "ec":  0,
-                    "r1":  1,
+                    "r1":  0,
                     "r2":  0,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  4,
-                    "total":  5
+                    "absence":  0,
+                    "total":  0
                 },
                 {
                     "name":  "EGSS-AhmedShoukry",
                     "team":  "ME-EGSS10",
-                    "ec":  1,
-                    "r1":  2,
-                    "r2":  1,
-                    "r3":  1,
-                    "r4":  2,
+                    "ec":  0,
+                    "r1":  0,
+                    "r2":  0,
+                    "r3":  0,
+                    "r4":  1,
                     "r6d":  0,
-                    "r6e":  1,
-                    "absence":  6,
-                    "total":  14
+                    "r6e":  0,
+                    "absence":  1,
+                    "total":  2
                 },
                 {
                     "name":  "EGSS-Mahmoudkhamis",
                     "team":  "ME-EGSS10",
                     "ec":  1,
-                    "r1":  1,
-                    "r2":  0,
+                    "r1":  0,
+                    "r2":  1,
                     "r3":  1,
                     "r4":  0,
                     "r6d":  2,
                     "r6e":  0,
-                    "absence":  1,
-                    "total":  6
+                    "absence":  0,
+                    "total":  5
                 }
             ],
     "englishClub":  [
                         {
                             "name":  "EGSS-AbdelrahmanNASEF",
                             "team":  "ME-EGSS05",
-                            "base":  123,
-                            "book":  39,
-                            "att":  30,
-                            "pct":  "24.4%",
-                            "goal":  56,
-                            "need":  26
+                            "base":  107,
+                            "book":  32,
+                            "att":  26,
+                            "pct":  "24.3%",
+                            "goal":  49,
+                            "need":  23
                         },
                         {
                             "name":  "EGSS-ehabzaky01",
                             "team":  "ME-EGSS05",
-                            "base":  132,
-                            "book":  56,
-                            "att":  36,
-                            "pct":  "27.3%",
+                            "base":  133,
+                            "book":  64,
+                            "att":  40,
+                            "pct":  "30.1%",
                             "goal":  60,
-                            "need":  24
+                            "need":  20
                         },
                         {
                             "name":  "EGSS-Ibrahimismaiel",
                             "team":  "ME-EGSS05",
-                            "base":  119,
+                            "base":  121,
                             "book":  33,
                             "att":  22,
-                            "pct":  "18.5%",
-                            "goal":  54,
-                            "need":  32
+                            "pct":  "18.2%",
+                            "goal":  55,
+                            "need":  33
                         },
                         {
                             "name":  "EGSS-KhaledGonam",
                             "team":  "ME-EGSS05",
-                            "base":  100,
+                            "base":  101,
                             "book":  16,
                             "att":  10,
-                            "pct":  "10%",
-                            "goal":  45,
-                            "need":  35
+                            "pct":  "9.9%",
+                            "goal":  46,
+                            "need":  36
                         },
                         {
                             "name":  "EGSS-OmarMoneb",
                             "team":  "ME-EGSS05",
-                            "base":  114,
-                            "book":  58,
-                            "att":  24,
-                            "pct":  "21.1%",
-                            "goal":  52,
-                            "need":  28
+                            "base":  97,
+                            "book":  51,
+                            "att":  21,
+                            "pct":  "21.6%",
+                            "goal":  44,
+                            "need":  23
                         },
                         {
                             "name":  "EGSS-samira01",
                             "team":  "ME-EGSS05",
-                            "base":  101,
-                            "book":  34,
-                            "att":  21,
-                            "pct":  "20.8%",
-                            "goal":  46,
-                            "need":  25
+                            "base":  89,
+                            "book":  28,
+                            "att":  19,
+                            "pct":  "21.3%",
+                            "goal":  41,
+                            "need":  22
                         },
                         {
                             "name":  "EGSS-ashraqatal",
                             "team":  "ME-EGSS01",
-                            "base":  128,
-                            "book":  44,
-                            "att":  21,
-                            "pct":  "16.4%",
-                            "goal":  58,
-                            "need":  37
+                            "base":  149,
+                            "book":  55,
+                            "att":  25,
+                            "pct":  "16.8%",
+                            "goal":  68,
+                            "need":  43
                         },
                         {
                             "name":  "EGSS-juliamonir01",
                             "team":  "ME-EGSS01",
-                            "base":  100,
-                            "book":  38,
-                            "att":  32,
-                            "pct":  "32%",
-                            "goal":  45,
-                            "need":  13
+                            "base":  121,
+                            "book":  46,
+                            "att":  36,
+                            "pct":  "29.8%",
+                            "goal":  55,
+                            "need":  19
                         },
                         {
                             "name":  "EGSS-mahmoud04",
                             "team":  "ME-EGSS01",
-                            "base":  111,
-                            "book":  22,
-                            "att":  13,
-                            "pct":  "11.7%",
-                            "goal":  50,
-                            "need":  37
+                            "base":  134,
+                            "book":  34,
+                            "att":  18,
+                            "pct":  "13.4%",
+                            "goal":  61,
+                            "need":  43
                         },
                         {
                             "name":  "EGSS-negma",
                             "team":  "ME-EGSS01",
-                            "base":  1,
+                            "base":  0,
                             "book":  0,
                             "att":  0,
                             "pct":  "0%",
-                            "goal":  1,
-                            "need":  1
+                            "goal":  0,
+                            "need":  0
                         },
                         {
                             "name":  "EGSS-nohayoussry",
                             "team":  "ME-EGSS01",
-                            "base":  151,
-                            "book":  74,
-                            "att":  57,
-                            "pct":  "37.7%",
-                            "goal":  68,
-                            "need":  11
+                            "base":  172,
+                            "book":  87,
+                            "att":  65,
+                            "pct":  "37.8%",
+                            "goal":  78,
+                            "need":  13
                         },
                         {
                             "name":  "EGSS-Amrsafwat",
                             "team":  "ME-EGSS13",
-                            "base":  119,
+                            "base":  118,
                             "book":  32,
                             "att":  20,
-                            "pct":  "16.8%",
+                            "pct":  "16.9%",
                             "goal":  54,
                             "need":  34
                         },
                         {
                             "name":  "EGSS-hayamhassan",
                             "team":  "ME-EGSS13",
-                            "base":  132,
-                            "book":  47,
-                            "att":  33,
-                            "pct":  "25%",
-                            "goal":  60,
-                            "need":  27
+                            "base":  139,
+                            "book":  53,
+                            "att":  40,
+                            "pct":  "28.8%",
+                            "goal":  63,
+                            "need":  23
                         },
                         {
                             "name":  "EGSS-marwaahmed",
                             "team":  "ME-EGSS13",
-                            "base":  105,
+                            "base":  107,
                             "book":  60,
                             "att":  42,
-                            "pct":  "40%",
-                            "goal":  48,
-                            "need":  6
+                            "pct":  "39.3%",
+                            "goal":  49,
+                            "need":  7
                         },
                         {
                             "name":  "EGSS-mohamedha",
                             "team":  "ME-EGSS13",
-                            "base":  112,
-                            "book":  6,
+                            "base":  97,
+                            "book":  2,
                             "att":  1,
-                            "pct":  "0.9%",
-                            "goal":  51,
-                            "need":  50
+                            "pct":  "1%",
+                            "goal":  44,
+                            "need":  43
                         },
                         {
                             "name":  "EGSS-AdhmGadAllah",
                             "team":  "ME-EGSS30",
-                            "base":  91,
+                            "base":  89,
                             "book":  10,
                             "att":  10,
-                            "pct":  "11%",
+                            "pct":  "11.2%",
                             "goal":  41,
                             "need":  31
                         },
@@ -7670,20 +7668,20 @@ const MASTER_OPERATIONS_DATA = {
                         {
                             "name":  "EGSS-titooooo",
                             "team":  "ME-EGSS30",
-                            "base":  120,
+                            "base":  125,
                             "book":  20,
                             "att":  12,
-                            "pct":  "10%",
-                            "goal":  54,
-                            "need":  42
+                            "pct":  "9.6%",
+                            "goal":  57,
+                            "need":  45
                         },
                         {
                             "name":  "EGSS-abdelrhmanshehata",
                             "team":  "ME-EGSS10",
-                            "base":  85,
+                            "base":  86,
                             "book":  33,
                             "att":  29,
-                            "pct":  "34.1%",
+                            "pct":  "33.7%",
                             "goal":  39,
                             "need":  10
                         },
@@ -7700,15 +7698,33 @@ const MASTER_OPERATIONS_DATA = {
                         {
                             "name":  "EGSS-Mahmoudkhamis",
                             "team":  "ME-EGSS10",
-                            "base":  139,
+                            "base":  140,
                             "book":  70,
                             "att":  42,
-                            "pct":  "30.2%",
+                            "pct":  "30%",
                             "goal":  63,
                             "need":  21
                         }
                     ]
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8903,151 +8919,151 @@ function renderOperationsTab() {
 
 const LEADS_SUMMARY = {
     "EGSS-juliamonir01":  {
-                              "ccCount":  260,
-                              "ftCount":  78,
-                              "sopCount":  12,
-                              "ecCount":  100,
-                              "totalLeads":  450
+                              "ccCount":  302,
+                              "ftCount":  87,
+                              "sopCount":  2,
+                              "ecCount":  121,
+                              "totalLeads":  512
                           },
     "EGSS-marwaahmed":  {
                             "ccCount":  251,
-                            "ftCount":  57,
-                            "sopCount":  23,
-                            "ecCount":  105,
-                            "totalLeads":  436
+                            "ftCount":  58,
+                            "sopCount":  4,
+                            "ecCount":  107,
+                            "totalLeads":  420
                         },
     "EGSS-titooooo":  {
                           "ccCount":  248,
-                          "ftCount":  43,
-                          "sopCount":  72,
-                          "ecCount":  120,
-                          "totalLeads":  483
+                          "ftCount":  46,
+                          "sopCount":  57,
+                          "ecCount":  125,
+                          "totalLeads":  476
                       },
     "EGSS-nohayoussry":  {
-                             "ccCount":  256,
-                             "ftCount":  45,
-                             "sopCount":  33,
-                             "ecCount":  151,
-                             "totalLeads":  485
+                             "ccCount":  297,
+                             "ftCount":  49,
+                             "sopCount":  0,
+                             "ecCount":  172,
+                             "totalLeads":  518
                          },
     "EGSS-ashraqatal":  {
-                            "ccCount":  255,
-                            "ftCount":  68,
-                            "sopCount":  52,
-                            "ecCount":  128,
-                            "totalLeads":  503
+                            "ccCount":  300,
+                            "ftCount":  79,
+                            "sopCount":  48,
+                            "ecCount":  149,
+                            "totalLeads":  576
                         },
     "EGSS-mohamedha":  {
-                           "ccCount":  250,
-                           "ftCount":  63,
-                           "sopCount":  95,
-                           "ecCount":  112,
-                           "totalLeads":  520
+                           "ccCount":  213,
+                           "ftCount":  56,
+                           "sopCount":  84,
+                           "ecCount":  97,
+                           "totalLeads":  450
                        },
     "EGSS-abdelrahmannasef":  {
-                                  "ccCount":  257,
-                                  "ftCount":  44,
+                                  "ccCount":  221,
+                                  "ftCount":  39,
                                   "sopCount":  20,
-                                  "ecCount":  123,
-                                  "totalLeads":  444
+                                  "ecCount":  107,
+                                  "totalLeads":  387
                               },
     "EGSS-alihesham01":  {
                              "ccCount":  141,
-                             "ftCount":  41,
-                             "sopCount":  21,
+                             "ftCount":  40,
+                             "sopCount":  16,
                              "ecCount":  63,
-                             "totalLeads":  266
+                             "totalLeads":  260
                          },
     "EGSS-samira01":  {
-                          "ccCount":  279,
+                          "ccCount":  244,
                           "ftCount":  51,
-                          "sopCount":  12,
-                          "ecCount":  101,
-                          "totalLeads":  443
+                          "sopCount":  0,
+                          "ecCount":  89,
+                          "totalLeads":  384
                       },
     "EGSS-mahmoudkhamis":  {
                                "ccCount":  281,
-                               "ftCount":  48,
-                               "sopCount":  6,
-                               "ecCount":  139,
-                               "totalLeads":  474
+                               "ftCount":  47,
+                               "sopCount":  5,
+                               "ecCount":  140,
+                               "totalLeads":  473
                            },
     "EGSS-adhmgadallah":  {
-                              "ccCount":  251,
-                              "ftCount":  67,
-                              "sopCount":  17,
-                              "ecCount":  91,
-                              "totalLeads":  426
+                              "ccCount":  250,
+                              "ftCount":  70,
+                              "sopCount":  2,
+                              "ecCount":  89,
+                              "totalLeads":  411
                           },
     "EGSS-amrsafwat":  {
-                           "ccCount":  258,
-                           "ftCount":  55,
-                           "sopCount":  6,
-                           "ecCount":  119,
-                           "totalLeads":  438
+                           "ccCount":  259,
+                           "ftCount":  54,
+                           "sopCount":  0,
+                           "ecCount":  118,
+                           "totalLeads":  431
                        },
     "EGSS-hayamhassan":  {
-                             "ccCount":  186,
-                             "ftCount":  29,
-                             "sopCount":  2,
-                             "ecCount":  132,
-                             "totalLeads":  349
+                             "ccCount":  205,
+                             "ftCount":  27,
+                             "sopCount":  0,
+                             "ecCount":  139,
+                             "totalLeads":  371
                          },
     "EGSS-mahmoud04":  {
-                           "ccCount":  290,
-                           "ftCount":  61,
-                           "sopCount":  67,
-                           "ecCount":  111,
-                           "totalLeads":  529
+                           "ccCount":  330,
+                           "ftCount":  65,
+                           "sopCount":  61,
+                           "ecCount":  134,
+                           "totalLeads":  590
                        },
     "EGSS-ahmedshoukry":  {
                               "ccCount":  280,
                               "ftCount":  76,
-                              "sopCount":  14,
+                              "sopCount":  2,
                               "ecCount":  146,
-                              "totalLeads":  516
+                              "totalLeads":  504
                           },
     "EGSS-negma":  {
                        "ccCount":  0,
-                       "ftCount":  2,
-                       "sopCount":  2,
-                       "ecCount":  null,
-                       "totalLeads":  4
+                       "ftCount":  0,
+                       "sopCount":  0,
+                       "ecCount":  0,
+                       "totalLeads":  0
                    },
     "EGSS-abdelrhmanshehata":  {
                                    "ccCount":  188,
-                                   "ftCount":  45,
-                                   "sopCount":  5,
-                                   "ecCount":  85,
-                                   "totalLeads":  323
+                                   "ftCount":  44,
+                                   "sopCount":  0,
+                                   "ecCount":  86,
+                                   "totalLeads":  318
                                },
     "EGSS-ibrahimismaiel":  {
                                 "ccCount":  274,
-                                "ftCount":  91,
-                                "sopCount":  110,
-                                "ecCount":  119,
-                                "totalLeads":  594
+                                "ftCount":  92,
+                                "sopCount":  102,
+                                "ecCount":  121,
+                                "totalLeads":  589
                             },
     "EGSS-omarmoneb":  {
-                           "ccCount":  256,
-                           "ftCount":  71,
-                           "sopCount":  8,
-                           "ecCount":  114,
-                           "totalLeads":  449
+                           "ccCount":  220,
+                           "ftCount":  65,
+                           "sopCount":  null,
+                           "ecCount":  97,
+                           "totalLeads":  382
                        },
     "EGSS-ehabzaky01":  {
                             "ccCount":  238,
-                            "ftCount":  43,
-                            "sopCount":  11,
-                            "ecCount":  132,
-                            "totalLeads":  424
+                            "ftCount":  42,
+                            "sopCount":  5,
+                            "ecCount":  133,
+                            "totalLeads":  418
                         },
     "EGSS-khaledgonam":  {
                              "ccCount":  263,
-                             "ftCount":  53,
-                             "sopCount":  44,
-                             "ecCount":  100,
-                             "totalLeads":  460
+                             "ftCount":  55,
+                             "sopCount":  45,
+                             "ecCount":  101,
+                             "totalLeads":  464
                          }
 };
 
@@ -12401,21 +12417,21 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-10-28 11:32:18', name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-10-29 18:53:24', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
       chkId: 'chkECSheet',
       timeId: 'timeECSheet',
       itemId: 'syncItemEC',
-      latestTime: '2026-10-28 11:29:44', name: 'English Club Sheet'
+      latestTime: '2026-10-29 18:53:24', name: 'English Club Sheet'
     },
     {
       idPrefix: 'SOP',
       chkId: 'chkSOPSheet',
       timeId: 'timeSOPSheet',
       itemId: 'syncItemSOP',
-      latestTime: '2026-10-28 11:29:10', name: 'SOP Compliance Sheet'
+      latestTime: '2026-10-29 18:53:24', name: 'SOP Compliance Sheet'
     }
   ];
 
@@ -14483,6 +14499,43 @@ function exportCurrentFilteredUncoveredCsv() {
   // Auto-run hazard alert scan
   setTimeout(() => scanAndApplyHazardAlerts(), 200);
   setInterval(() => scanAndApplyHazardAlerts(), 2500);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

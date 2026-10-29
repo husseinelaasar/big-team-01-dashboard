@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    Big Team 01 Executive Dashboard — Styles v2.0
    Design: Premium dark glassmorphism + micro-animations
    ============================================ */
@@ -50,12 +50,12 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 14px;
+  font-size: 15.5px;
 }
 
 body {
   font-family: var(--font);
-  background: var(--bg-primary);
+  background: #020812;
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
@@ -67,25 +67,27 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 800px 600px at 20% 10%, rgba(99, 102, 241, 0.08), transparent),
-    radial-gradient(ellipse 600px 400px at 80% 80%, rgba(6, 182, 212, 0.06), transparent),
-    radial-gradient(ellipse 400px 300px at 50% 50%, rgba(139, 92, 246, 0.04), transparent);
+    radial-gradient(ellipse 1100px 700px at 15% 5%, rgba(0, 212, 255, 0.11), transparent),
+    radial-gradient(ellipse 900px 600px at 85% 15%, rgba(99, 102, 241, 0.10), transparent),
+    radial-gradient(ellipse 700px 500px at 10% 85%, rgba(16, 185, 129, 0.08), transparent),
+    radial-gradient(ellipse 600px 400px at 90% 80%, rgba(245, 158, 11, 0.06), transparent),
+    radial-gradient(ellipse 500px 350px at 50% 50%, rgba(56, 189, 248, 0.05), transparent);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Subtle animated grid background */
+/* Mission Control Grid */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(rgba(0, 212, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
   pointer-events: none;
   z-index: 0;
-  animation: gridDrift 20s linear infinite;
+  animation: gridDrift 32s linear infinite;
 }
 @keyframes gridDrift {
   0% { transform: translate(0, 0); }
@@ -402,11 +404,13 @@ body::after {
   margin: 32px 0 16px;
 }
 .section-header h2 {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.28rem;
+  font-weight: 800;
   letter-spacing: -0.01em;
   position: relative;
-  padding-left: 14px;
+  padding-left: 16px;
+  color: #e2e8f0;
+  text-shadow: 0 0 18px rgba(129, 140, 248, 0.25);
 }
 .section-header h2::before {
   content: '';
@@ -520,15 +524,15 @@ body::after {
 .kpi-base .kpi-icon { background: rgba(139, 92, 246, 0.15); color: var(--accent-violet); }
 
 .kpi-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
 .kpi-value {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
@@ -592,7 +596,7 @@ body::after {
 }
 .commission-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-md);
   padding: 20px;
   position: relative;
@@ -629,7 +633,7 @@ body::after {
 /* ============ CHART CONTAINER ============ */
 .chart-container {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-lg);
   padding: 24px;
   overflow-x: auto;
@@ -685,7 +689,7 @@ body::after {
   overflow-x: auto;
   width: 100%;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255,255,255,0.14);
   backdrop-filter: blur(8px);
   -webkit-overflow-scrolling: touch;
 }
@@ -693,7 +697,7 @@ body::after {
   width: 100%;
   table-layout: auto;
   border-collapse: collapse;
-  font-size: 0.78rem;
+  font-size: 0.83rem;
 }
 .data-table thead {
   background: rgba(99, 102, 241, 0.08);
@@ -710,25 +714,25 @@ body::after {
   opacity: 0.4;
 }
 .data-table th {
-  padding: 8px 4px !important;
+  padding: 10px 6px !important;
   text-align: center !important;
   vertical-align: middle !important;
-  font-weight: 700;
-  color: var(--text-secondary);
-  font-size: 0.71rem !important;
+  font-weight: 800;
+  color: #b4c4da !important;
+  font-size: 0.76rem !important;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
-  border-bottom: 1px solid var(--border-glass);
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
   white-space: nowrap;
-  line-height: 1.2 !important;
+  line-height: 1.3 !important;
 }
 .data-table td {
-  padding: 6px 4px !important;
+  padding: 8px 6px !important;
   text-align: center !important;
   vertical-align: middle !important;
-  border-bottom: 1px solid var(--border-glass);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
   color: var(--text-primary);
-  font-size: 0.76rem !important;
+  font-size: 0.81rem !important;
   transition: background 0.2s ease;
   white-space: nowrap;
 }
@@ -832,7 +836,7 @@ body::after {
 /* ============ CALC-CARD (shared card style for JS-generated cards) ============ */
 .calc-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-lg);
   padding: 22px 24px;
   backdrop-filter: blur(12px);
@@ -870,14 +874,15 @@ body::after {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  letter-spacing: -0.01em;
 }
 
 .team-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-lg);
   padding: 24px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -893,8 +898,10 @@ body::after {
   margin-bottom: 16px;
 }
 .team-card-title {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  letter-spacing: -0.01em;
 }
 .team-card-ach {
   font-family: var(--font-mono);
@@ -962,7 +969,7 @@ body::after {
 }
 .ind-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-lg);
   padding: 20px;
   transition: all 0.3s ease;
@@ -979,8 +986,9 @@ body::after {
   margin-bottom: 16px;
 }
 .ind-name {
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #e2e8f0;
 }
 .ind-team {
   font-size: 0.7rem;
@@ -1080,13 +1088,14 @@ body::after {
 }
 .sop-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-lg);
   padding: 24px;
 }
 .sop-card-title {
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #e2e8f0;
   margin-bottom: 4px;
 }
 .sop-card-avg {
@@ -1137,7 +1146,7 @@ body::after {
 }
 .rec-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-lg);
   padding: 24px;
   transition: transform 0.2s ease;
@@ -1163,8 +1172,9 @@ body::after {
 .rec-icon.info { background: rgba(99, 102, 241, 0.15); }
 .rec-icon.success { background: rgba(16, 185, 129, 0.15); }
 .rec-title {
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #e2e8f0;
 }
 .rec-priority {
   font-size: 0.65rem;
@@ -1346,7 +1356,7 @@ body::after {
 }
 .op-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-lg);
   padding: 20px;
   position: relative;
@@ -1717,11 +1727,11 @@ body::after {
 
 /* Modern SaaS Table Styling */
 .modern-table-card {
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.3);
-  background: rgba(11, 17, 32, 0.8);
+  box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.45);
+  background: rgba(18, 28, 50, 0.92);
 }
 
 .modern-table-card table {
@@ -1731,16 +1741,16 @@ body::after {
 }
 
 .modern-table-card th {
-  background: rgba(15, 23, 42, 0.95) !important;
+  background: rgba(20, 30, 52, 0.98) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.06em !important;
-  color: #94a3b8 !important;
-  padding: 12px 10px !important;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important;
+  color: #b4c4da !important;
+  padding: 13px 10px !important;
+  border-bottom: 2px solid rgba(129, 140, 248, 0.3) !important;
   position: sticky;
   top: 0;
   z-index: 5;
@@ -1748,7 +1758,8 @@ body::after {
 
 .modern-table-card td {
   padding: 12px 10px !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  font-size: 0.82rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
   transition: background 0.15s ease;
 }
 
@@ -1889,13 +1900,13 @@ body::after {
   filter: blur(140px);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.28;
+  opacity: 0.35;
   animation: ambientFloat 14s infinite alternate ease-in-out;
 }
 .ambient-glow-1 {
   width: 650px;
   height: 650px;
-  background: radial-gradient(circle, #6366f1 0%, rgba(99, 102, 241, 0) 70%);
+  background: radial-gradient(circle, #00d4ff 0%, rgba(0, 212, 255, 0) 70%);
   top: -120px;
   left: -120px;
   animation-duration: 16s;
@@ -1940,12 +1951,12 @@ body::after {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0, 242, 254, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.035) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(rgba(0, 212, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
   pointer-events: none;
   z-index: 0;
-  animation: gridDrift 28s linear infinite;
+  animation: gridDrift 32s linear infinite;
 }
 
 /* Sleek Cyber Glassmorphism for Top Navigation */
@@ -1990,7 +2001,7 @@ body::after {
 /* Cyber Title & Gradient */
 .nav-title {
   font-family: 'Outfit', 'Inter', sans-serif !important;
-  font-size: 1.35rem !important;
+  font-size: 1.4rem !important;
   font-weight: 800 !important;
   letter-spacing: -0.01em !important;
 }
@@ -2060,7 +2071,7 @@ body::after {
    ========================================================= */
 .sheet-sync-container {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(10, 15, 30, 0.95) 100%) !important;
-  border: 1px solid rgba(99, 102, 241, 0.35) !important;
+  border: 1px solid rgba(129, 140, 248, 0.45) !important;
   border-radius: 18px !important;
   padding: 14px 20px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
@@ -2104,8 +2115,8 @@ body::after {
    STARSHIP COMMAND BRIDGE — TAB BAR NAVIGATION
    ========================================================= */
 .tab-bar {
-  background: rgba(10, 14, 26, 0.92) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(12, 18, 32, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13) !important;
   padding: 10px 0 14px !important;
   gap: 6px !important;
   backdrop-filter: blur(24px) !important;
@@ -2153,11 +2164,11 @@ body::after {
    HOLOGRAPHIC EXECUTIVE KPI POWER CELLS
    ========================================================= */
 .kpi-card {
-  background: linear-gradient(135deg, rgba(20, 28, 48, 0.85) 0%, rgba(11, 16, 30, 0.95) 100%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: linear-gradient(145deg, rgba(28, 40, 66, 0.95) 0%, rgba(17, 26, 46, 0.98) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 20px !important;
   padding: 22px 24px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 0 0 transparent !important;
   backdrop-filter: blur(20px) !important;
   position: relative;
   overflow: hidden;
@@ -2186,8 +2197,8 @@ body::after {
 
 .kpi-card:hover {
   transform: translateY(-6px) scale(1.015) !important;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 30px rgba(99, 102, 241, 0.25) !important;
-  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(129, 140, 248, 0.35) !important;
+  border-color: rgba(129, 140, 248, 0.55) !important;
 }
 .kpi-icon {
   width: 44px !important;
@@ -2200,22 +2211,22 @@ body::after {
 }
 .kpi-label {
   font-family: 'Inter', sans-serif !important;
-  font-size: 0.78rem !important;
+  font-size: 0.83rem !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.06em !important;
-  color: #94a3b8 !important;
+  letter-spacing: 0.07em !important;
+  color: #b4c4da !important;
   margin-top: 10px !important;
 }
 .kpi-value {
   font-family: 'Outfit', sans-serif !important;
-  font-size: 2.3rem !important;
+  font-size: 2.5rem !important;
   font-weight: 900 !important;
   color: #ffffff !important;
   letter-spacing: -0.02em !important;
   margin: 6px 0 !important;
   line-height: 1.1 !important;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2) !important;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.28) !important;
 }
 .kpi-progress {
   height: 8px !important;
@@ -2390,7 +2401,7 @@ body::after {
   flex-wrap: wrap;
   gap: 16px;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(10, 16, 32, 0.98) 100%) !important;
-  border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+  border: 1.5px solid rgba(34, 211, 238, 0.45) !important;
   border-radius: 20px !important;
   padding: 16px 24px !important;
   margin-bottom: 20px !important;
@@ -2577,11 +2588,11 @@ body::after {
 
 @keyframes goldLuminousBorder {
   0%, 100% {
-    border-color: #ffd700 !important;
+    border-color: #ff3b57 !important;
     box-shadow: 0 0 5px rgba(250, 204, 21, 0.4), inset 0 0 3px rgba(250, 204, 21, 0.15) !important;
   }
   50% {
-    border-color: #fef08a !important; /* Fluorescent Bright Gold Shine */
+    border-color: #ff6b81 !important; /* Fluorescent Bright Gold Shine */
     box-shadow: 0 0 9px rgba(254, 240, 138, 0.7), 0 0 16px rgba(245, 158, 11, 0.35), inset 0 0 5px rgba(254, 240, 138, 0.25) !important;
   }
 }
@@ -2599,14 +2610,14 @@ body::after {
   gap: 5px;
   padding: 1.5px 7px !important;
   border-radius: 5px !important;
-  border: 1px solid #ffd700 !important; /* Thin Fluorescent Gold Border */
+  border: 1.5px solid #ff3b57 !important; /* Thin Fluorescent Gold Border */
   color: #f43f5e !important;           /* Solid, Razor-Sharp Red */
   -webkit-text-fill-color: #f43f5e !important;
   text-shadow: none !important;        /* Pure Clarity, Zero Blur */
   font-weight: 800 !important;
   line-height: 1.25 !important;
   letter-spacing: 0.3px;
-  background-color: rgba(15, 23, 42, 0.95) !important;
+  background-color: rgba(255, 45, 85, 0.25) !important;
   box-shadow: 0 0 6px rgba(250, 204, 21, 0.4), inset 0 0 3px rgba(250, 204, 21, 0.15) !important;
   animation: goldLuminousBorder 2s infinite ease-in-out !important;
   vertical-align: middle;
@@ -2628,13 +2639,13 @@ div.hazard-alert {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  border: 1.5px solid #ffd700 !important;
+  border: 1.5px solid #ff3b57 !important;
   border-radius: 8px !important;
   padding: 4px 14px !important;
   color: #f43f5e !important;
   -webkit-text-fill-color: #f43f5e !important;
   text-shadow: none !important;
-  background-color: rgba(15, 23, 42, 0.95) !important;
+  background-color: rgba(255, 45, 85, 0.25) !important;
   box-shadow: 0 0 8px rgba(250, 204, 21, 0.45), inset 0 0 4px rgba(250, 204, 21, 0.2) !important;
   animation: goldLuminousBorder 2s infinite ease-in-out !important;
 }
@@ -2642,7 +2653,7 @@ div.hazard-alert {
 /* Table cells designated as hazard alerts */
 td.hazard-alert {
   display: table-cell !important;
-  border: 1px solid #ffd700 !important;
+  border: 1.5px solid #ff3b57 !important;
   background-color: rgba(15, 23, 42, 0.85) !important;
   animation: goldLuminousBorder 2s infinite ease-in-out !important;
 }
@@ -2659,14 +2670,14 @@ strong[style*="239, 68, 68"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ffd700 !important; /* Thin Fluorescent Gold Border */
+  border: 1.5px solid #ff3b57 !important; /* Thin Fluorescent Gold Border */
   border-radius: 5px;
   padding: 1px 6px;
   color: #f43f5e !important;
   -webkit-text-fill-color: #f43f5e !important;
   text-shadow: none !important;
   font-weight: 800;
-  background-color: rgba(15, 23, 42, 0.95);
+  background-color: rgba(255, 45, 85, 0.18);
   box-shadow: 0 0 6px rgba(250, 204, 21, 0.4), inset 0 0 3px rgba(250, 204, 21, 0.15) !important;
   animation: goldLuminousBorder 2s infinite ease-in-out !important;
   vertical-align: middle;
@@ -2796,3 +2807,1341 @@ strong[style*="239, 68, 68"] {
   font-size: 0.75rem;
   word-break: break-all;
 }
+
+
+
+
+
+
+/* =========================================================================
+   v4.0 VISUAL HIERARCHY MASTER OVERRIDES
+   — Better Contrast / Font Size / Card Independence / Section Distinction
+   ========================================================================= */
+
+/* ── Body background: slightly lighter, richer navy (not pure black) */
+body {
+  background: linear-gradient(160deg, #0d1220 0%, #111826 40%, #0c1520 100%) !important;
+}
+
+/* ── Global font bump */
+html {
+  font-size: 15.5px !important;
+}
+
+/* ── Section h2 titles: clearly distinct from content */
+.section-header h2 {
+  font-size: 1.3rem !important;
+  font-weight: 800 !important;
+  color: #e8eef5 !important;
+  text-shadow: 0 1px 16px rgba(129, 140, 248, 0.22) !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ── Section header accent bar: brighter */
+.section-header h2::before {
+  background: var(--gradient-primary) !important;
+  width: 5px !important;
+  box-shadow: 0 0 10px rgba(129, 140, 248, 0.55) !important;
+}
+
+/* ── kpi-label: titles are clearly different from values */
+.kpi-label, [class*="kpi-label"] {
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  color: #a8bdd4 !important;
+  letter-spacing: 0.07em !important;
+  text-transform: uppercase !important;
+}
+
+/* ── kpi-value: large, bright, high-impact */
+.kpi-value, [class*="kpi-value"] {
+  font-size: 2.5rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 24px rgba(255,255,255,0.22) !important;
+}
+
+/* ── kpi-sub and kpi-pct: readable muted text */
+.kpi-sub { font-size: 0.82rem !important; color: #8a9ab5 !important; }
+.kpi-pct { font-size: 0.76rem !important; color: #7d8fa8 !important; }
+
+/* ── All card elements: distinct from background with visible borders */
+.kpi-card, .calc-card, .team-card, .ind-card, .sop-card,
+.rec-card, .op-card, .commission-card, .chart-container,
+.metric-tile-modern, .sheet-sync-container {
+  border-color: rgba(255, 255, 255, 0.17) !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.48), inset 0 1px 0 rgba(255,255,255,0.09) !important;
+}
+
+/* ── Card headings: bigger, distinct from body content */
+.team-card-title, .sop-card-title, .rec-title, .calc-title,
+.ind-name, .op-card .op-title {
+  color: #dce8f5 !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+}
+
+/* ── op-card value: big and vivid */
+.op-card .op-value {
+  font-size: 2.2rem !important;
+  font-weight: 900 !important;
+  color: #fff !important;
+}
+
+/* ── op-card title/label: distinct */
+.op-card .op-title {
+  font-size: 0.8rem !important;
+  color: #a8bdd4 !important;
+  font-weight: 800 !important;
+}
+
+/* ── Table th: clearly headers not content */
+.data-table th,
+.modern-table-card th,
+#uncoveredStudentsLiveTable th,
+#individualFullTable th,
+#masterUpgradeTable th,
+#bigTeamSummaryTable th {
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  color: #b4c4da !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  background: rgba(20, 30, 52, 0.98) !important;
+  border-bottom: 1.5px solid rgba(129, 140, 248, 0.25) !important;
+}
+
+/* ── Table td: readable body text */
+.data-table td,
+.modern-table-card td,
+#individualFullTable td,
+#masterUpgradeTable td,
+#bigTeamSummaryTable td {
+  font-size: 0.82rem !important;
+  color: #dce8f5 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+/* ── Sheet sync items: clear inner separation */
+.sheet-sync-item {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+}
+.sheet-name { font-size: 0.9rem !important; color: #dce8f5 !important; font-weight: 700 !important; }
+.sheet-time { font-size: 0.76rem !important; color: #7d95b0 !important; }
+
+/* ── Tab text: readable size */
+.tab {
+  font-size: 0.87rem !important;
+  font-weight: 700 !important;
+  color: #8fa5be !important;
+}
+.tab.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(129,140,248,0.22) 0%, rgba(34,211,238,0.17) 100%) !important;
+  border-color: rgba(34, 211, 238, 0.55) !important;
+}
+
+/* ── Nav title: bigger, prominent */
+.nav-title {
+  font-size: 1.42rem !important;
+  font-weight: 800 !important;
+  color: #f0f4f8 !important;
+}
+
+/* ── Commission values: distinct from labels */
+.commission-card .comm-label {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: #a8bdd4 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+.commission-card .comm-value {
+  font-size: 1.65rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+.commission-card .comm-detail {
+  font-size: 0.78rem !important;
+  color: #8a9ab5 !important;
+}
+
+/* ── Team member rows: readable */
+.team-member-name { font-size: 0.84rem !important; color: #b4c4da !important; }
+.team-member-cash { font-size: 0.84rem !important; font-weight: 700 !important; }
+.team-stat-value { font-size: 1.15rem !important; font-weight: 800 !important; }
+.team-stat-label { font-size: 0.68rem !important; color: #7d95b0 !important; }
+
+/* ── ind-stat: clear size hierarchy */
+.ind-stat-value { font-size: 1.02rem !important; font-weight: 800 !important; }
+.ind-stat-label { font-size: 0.65rem !important; color: #7d95b0 !important; }
+
+/* ── SOP round label */
+.sop-round-label { font-size: 0.76rem !important; color: #a8bdd4 !important; font-weight: 600 !important; }
+
+/* ── recommendations body */
+.rec-body { font-size: 0.85rem !important; color: #b0bfd4 !important; }
+.rec-priority { font-size: 0.7rem !important; font-weight: 700 !important; }
+
+/* ── Sprint HUD */
+.sprint-hud-title { font-size: 1.05rem !important; font-weight: 900 !important; }
+.sprint-hud-sub { font-size: 0.82rem !important; color: #94a3b8 !important; }
+.time-digit { font-size: 1.65rem !important; }
+
+/* ── Status badges: crisper */
+.status-badge { font-size: 0.72rem !important; font-weight: 700 !important; }
+.status-on-track { background: rgba(52, 211, 153, 0.18) !important; color: #34d399 !important; border: 1px solid rgba(52,211,153,0.35) !important; }
+.status-at-risk { background: rgba(251, 191, 36, 0.18) !important; color: #fbbf24 !important; border: 1px solid rgba(251,191,36,0.35) !important; }
+.status-behind { background: rgba(251, 113, 133, 0.18) !important; color: #fb7185 !important; border: 1px solid rgba(251,113,133,0.35) !important; }
+
+/* ── Filter select */
+.filter-select, .modern-select { font-size: 0.86rem !important; }
+
+/* ── Data freshness & source badge: more readable */
+.data-freshness { font-size: 0.8rem !important; }
+.nav-source-badge { font-size: 0.8rem !important; }
+
+
+/* =========================================================================
+   ROOT VARIABLE OVERRIDE — v4.0 Upgrade (overrides the original :root above)
+   All variables redefined here for better readability and visual hierarchy
+   ========================================================================= */
+:root {
+  --bg-primary: #0d1220 !important;
+  --bg-secondary: #141d30;
+  --bg-card: rgba(24, 35, 58, 0.92);
+  --bg-card-hover: rgba(34, 49, 80, 0.96);
+  --bg-glass: rgba(255, 255, 255, 0.055);
+  --border-glass: rgba(255, 255, 255, 0.14);
+  --border-active: rgba(129, 140, 248, 0.65);
+  --text-primary: #f8fafc;
+  --text-secondary: #b4c4da;
+  --text-muted: #7d95b0;
+  --text-dim: #566880;
+  --accent-indigo: #818cf8;
+  --accent-cyan: #22d3ee;
+  --accent-emerald: #34d399;
+  --accent-amber: #fbbf24;
+  --accent-rose: #fb7185;
+  --accent-violet: #a78bfa;
+  --gradient-primary: linear-gradient(135deg, #818cf8, #22d3ee);
+  --gradient-success: linear-gradient(135deg, #34d399, #22d3ee);
+  --gradient-warning: linear-gradient(135deg, #fbbf24, #f97316);
+  --gradient-danger: linear-gradient(135deg, #fb7185, #e11d48);
+  --shadow-glow: 0 0 40px rgba(129, 140, 248, 0.22);
+  --shadow-glow-lg: 0 0 60px rgba(129, 140, 248, 0.32);
+}
+
+
+
+/* =========================================================================
+   =========================================================================
+   ?? NASA MISSION CONTROL & WALL STREET TRADING FLOOR THEME (v5.0) ??
+   High-Contrast Aerospace Telemetry & Financial Command Terminal
+   =========================================================================
+   ========================================================================= */
+
+/* ── 1. GLOBAL ROOT VARIABLES (AEROSPACE BLUEPRINT & FINANCIAL TERMINAL) ── */
+:root {
+  /* Aerospace Command Slate - distinctly visible, NOT pitch black */
+  --bg-primary: #0a1324 !important;
+  --bg-secondary: #0f1d36 !important;
+  --bg-card: #13223f !important;
+  --bg-card-hover: #192c52 !important;
+  --bg-glass: rgba(56, 189, 248, 0.05) !important;
+  --border-glass: rgba(56, 189, 248, 0.28) !important;
+  --border-active: #00f2fe !important;
+
+  /* High-Contrast Aerospace Text */
+  --text-primary: #ffffff !important;
+  --text-secondary: #cbd5e1 !important;
+  --text-muted: #94a3b8 !important;
+  --text-dim: #64748b !important;
+
+  /* Telemetry Neon Accents (NASA / Bloomberg) */
+  --accent-cyan: #00f2fe !important;       /* NASA Telemetry Primary */
+  --accent-indigo: #818cf8 !important;     /* Mission Orbit Indigo */
+  --accent-emerald: #00e676 !important;    /* Bloomberg Ticker Gain Green */
+  --accent-amber: #ffb300 !important;      /* Flight Warning Amber */
+  --accent-rose: #ff3366 !important;       /* Critical Hazard Laser Red */
+  --accent-violet: #c084fc !important;     /* Special Target Violet */
+
+  --gradient-primary: linear-gradient(135deg, #00f2fe 0%, #38bdf8 50%, #818cf8 100%) !important;
+  --gradient-success: linear-gradient(135deg, #00e676 0%, #10b981 100%) !important;
+  --gradient-warning: linear-gradient(135deg, #ffb300 0%, #f97316 100%) !important;
+  --gradient-danger: linear-gradient(135deg, #ff3366 0%, #e11d48 100%) !important;
+
+  --shadow-glow: 0 0 25px rgba(0, 242, 254, 0.25) !important;
+  --shadow-glow-lg: 0 0 45px rgba(0, 242, 254, 0.35) !important;
+}
+
+/* ── 2. NASA MISSION CONTROL BODY & BACKGROUND DOME ── */
+body {
+  background: radial-gradient(circle at 50% -20%, #172d54 0%, #0d1a33 40%, #070e1c 100%) !important;
+  color: var(--text-primary) !important;
+  min-height: 100vh !important;
+}
+
+/* Technical Coordinate Grid Overlay (Blueprint Radar) */
+body::after {
+  content: '' !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background-image:
+    linear-gradient(rgba(0, 242, 254, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.045) 1px, transparent 1px) !important;
+  background-size: 38px 38px !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  animation: gridDrift 35s linear infinite !important;
+}
+
+/* Luminous Ambient Halos */
+.ambient-glow {
+  opacity: 0.22 !important;
+}
+.ambient-glow-1 {
+  background: radial-gradient(circle, #00f2fe 0%, rgba(0, 242, 254, 0) 70%) !important;
+}
+.ambient-glow-2 {
+  background: radial-gradient(circle, #38bdf8 0%, rgba(56, 189, 248, 0) 70%) !important;
+}
+
+/* ── 3. TOP MISSION CONTROL BAR & TELEMETRY NAV ── */
+.top-nav {
+  background: rgba(10, 20, 38, 0.94) !important;
+  border-bottom: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55), 0 1px 0 rgba(0, 242, 254, 0.2) !important;
+  backdrop-filter: blur(20px) !important;
+}
+.nav-title {
+  font-size: 1.45rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.01em !important;
+}
+.gradient-text {
+  background: linear-gradient(135deg, #00f2fe 0%, #38bdf8 50%, #a78bfa 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 25px rgba(0, 242, 254, 0.45) !important;
+}
+
+/* Navigation Badges */
+.data-freshness {
+  background: rgba(0, 230, 118, 0.12) !important;
+  border: 1px solid rgba(0, 230, 118, 0.45) !important;
+  color: #00e676 !important;
+  font-weight: 800 !important;
+  font-size: 0.82rem !important;
+  box-shadow: 0 0 14px rgba(0, 230, 118, 0.2) !important;
+}
+.nav-source-badge {
+  background: rgba(0, 242, 254, 0.12) !important;
+  border: 1px solid rgba(0, 242, 254, 0.45) !important;
+  color: #00f2fe !important;
+  font-weight: 800 !important;
+  font-size: 0.82rem !important;
+  box-shadow: 0 0 14px rgba(0, 242, 254, 0.2) !important;
+}
+
+/* ── 4. MISSION CONTROL FLIGHT DECK (TABS) ── */
+.tab-bar {
+  background: rgba(10, 19, 36, 0.95) !important;
+  border-bottom: 1.5px solid rgba(56, 189, 248, 0.25) !important;
+}
+.tab {
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  color: #94a3b8 !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+  transition: all 0.2s ease !important;
+}
+.tab:hover {
+  color: #ffffff !important;
+  background: rgba(56, 189, 248, 0.1) !important;
+  border-color: rgba(56, 189, 248, 0.3) !important;
+}
+.tab.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.25) 0%, rgba(56, 189, 248, 0.2) 100%) !important;
+  border: 1.5px solid #00f2fe !important;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+/* ── 5. SECTION HEADERS & SUB-HEADINGS (CLEAR CONTRAST) ── */
+.section-header {
+  margin: 32px 0 18px !important;
+}
+.section-header h2 {
+  font-size: 1.35rem !important;
+  font-weight: 900 !important;
+  color: #e0f2fe !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  position: relative !important;
+  padding-left: 18px !important;
+}
+.section-header h2::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 5px !important;
+  height: 80% !important;
+  background: linear-gradient(180deg, #00f2fe, #38bdf8) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 12px #00f2fe !important;
+}
+.source-tag {
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  color: #7dd3fc !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+}
+
+/* ── 6. AEROSPACE INSTRUMENT CARDS & MODULAR INDEPENDENCE ── */
+/* All cards elevated with visible lighter slate backgrounds and glowing frames */
+.kpi-card,
+.metric-tile-modern,
+.calc-card,
+.team-card,
+.ind-card,
+.sop-card,
+.rec-card,
+.op-card,
+.commission-card,
+.chart-container,
+.sheet-sync-container,
+.sprint-countdown-hud {
+  background: linear-gradient(145deg, #13223f 0%, #0d1930 100%) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(125, 211, 252, 0.15) !important;
+  backdrop-filter: blur(16px) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.kpi-card:hover,
+.metric-tile-modern:hover,
+.calc-card:hover,
+.team-card:hover,
+.ind-card:hover,
+.sop-card:hover,
+.rec-card:hover,
+.op-card:hover,
+.commission-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: #00f2fe !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 242, 254, 0.3) !important;
+}
+
+/* Card Titles / Labels: Ice-Cyan Telemetry Labels (Distinct from Values) */
+.kpi-label,
+.comm-label,
+.team-stat-label,
+.ind-stat-label,
+.op-card .op-title,
+.sheet-sync-title {
+  color: #38bdf8 !important;
+  font-weight: 800 !important;
+  font-size: 0.80rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+/* Card Heading Names (e.g. Rep Names, Team Names) */
+.team-card-title,
+.sop-card-title,
+.rec-title,
+.calc-title,
+.ind-name {
+  color: #f0fdf4 !important;
+  font-size: 1.1rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Large Numbers & Values: Razor-Sharp Pure White with JetBrains Mono */
+.kpi-value,
+.comm-value,
+.op-card .op-value {
+  font-family: 'JetBrains Mono', 'Outfit', sans-serif !important;
+  font-size: 2.4rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  line-height: 1.1 !important;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.35) !important;
+}
+.kpi-sub,
+.kpi-pct {
+  color: #94a3b8 !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+}
+
+/* ── 7. WALL STREET & NASA TELEMETRY DATA TABLE (PRESERVED & ENHANCED) ── */
+.table-wrapper,
+#individualTableView,
+.modern-table-card {
+  background: #0d182d !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.38) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(125, 211, 252, 0.2) !important;
+  overflow: hidden !important;
+}
+
+.data-table,
+#individualFullTable {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* Wall Street Bloomberg Header Bar */
+.data-table thead,
+#individualFullTable thead {
+  background: #142444 !important;
+  position: relative !important;
+}
+.data-table th,
+#individualFullTable th {
+  background: #142444 !important;
+  color: #7dd3fc !important;
+  font-size: 0.80rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  padding: 12px 6px !important;
+  border-bottom: 2.5px solid #00f2fe !important;
+  border-right: 1px solid rgba(56, 189, 248, 0.2) !important;
+  white-space: nowrap !important;
+  line-height: 1.25 !important;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.3) !important;
+}
+.data-table th:last-child,
+#individualFullTable th:last-child {
+  border-right: none !important;
+}
+
+/* Table Body Rows: High-Contrast Alternating Aerospace Slate */
+.data-table tbody tr:nth-child(odd) {
+  background: #0d172a !important;
+}
+.data-table tbody tr:nth-child(even) {
+  background: #111e36 !important;
+}
+
+/* Live Scanner Hover Effect */
+.data-table tbody tr:hover {
+  background: rgba(0, 242, 254, 0.12) !important;
+  box-shadow: inset 4px 0 0 #00f2fe !important;
+}
+
+/* Table Cells */
+.data-table td,
+#individualFullTable td {
+  padding: 9px 6px !important;
+  color: #f8fafc !important;
+  font-size: 0.84rem !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.04) !important;
+  white-space: nowrap !important;
+  transition: background 0.15s ease !important;
+}
+.data-table td:last-child,
+#individualFullTable td:last-child {
+  border-right: none !important;
+}
+
+/* Rep Names in Table */
+#individualFullTable td:nth-child(2) strong {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 0.86rem !important;
+}
+
+/* Table Footer Summary Row */
+.data-table tfoot tr,
+#individualFullTable tfoot tr {
+  background: #172a4d !important;
+  border-top: 2.5px solid #00f2fe !important;
+}
+.data-table tfoot td,
+#individualFullTable tfoot td {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  font-size: 0.88rem !important;
+  padding: 12px 6px !important;
+}
+
+/* ── 8. TELEMETRY BADGES (STATUS, PACE, 20% GOAL, COMMISSION) ── */
+.status-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 3px 9px !important;
+  border-radius: 6px !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+/* ON TRACK (Live Green Pulse) */
+.status-on-track {
+  background: rgba(0, 230, 118, 0.16) !important;
+  color: #00e676 !important;
+  border: 1px solid rgba(0, 230, 118, 0.45) !important;
+  box-shadow: 0 0 10px rgba(0, 230, 118, 0.25) !important;
+}
+
+/* AT RISK (Amber Alert) */
+.status-at-risk {
+  background: rgba(255, 179, 0, 0.16) !important;
+  color: #ffb300 !important;
+  border: 1px solid rgba(255, 179, 0, 0.45) !important;
+  box-shadow: 0 0 10px rgba(255, 179, 0, 0.25) !important;
+}
+
+/* BEHIND (Critical Red) */
+.status-behind {
+  background: rgba(255, 51, 102, 0.16) !important;
+  color: #ff3366 !important;
+  border: 1px solid rgba(255, 51, 102, 0.45) !important;
+  box-shadow: 0 0 10px rgba(255, 51, 102, 0.25) !important;
+}
+
+/* 20% Goal Column Highlight */
+#individualFullTable th:nth-child(10),
+#individualFullTable td:nth-child(10) {
+  background: rgba(192, 132, 252, 0.08) !important;
+  border-left: 1.5px solid rgba(192, 132, 252, 0.35) !important;
+  border-right: 1.5px solid rgba(192, 132, 252, 0.35) !important;
+}
+
+/* Exp Comm Highlight */
+#individualFullTable th:nth-child(12),
+#individualFullTable td:nth-child(12) {
+  background: rgba(0, 230, 118, 0.08) !important;
+  border-left: 1.5px solid rgba(0, 230, 118, 0.35) !important;
+}
+
+/* Next Band Highlight */
+#individualFullTable th:nth-child(13),
+#individualFullTable td:nth-child(13) {
+  background: rgba(0, 242, 254, 0.08) !important;
+}
+
+/* Target Gap Highlight */
+#individualFullTable th:nth-child(14),
+#individualFullTable td:nth-child(14) {
+  background: rgba(255, 179, 0, 0.08) !important;
+  border-right: 1.5px solid rgba(255, 179, 0, 0.35) !important;
+}
+
+/* ── 9. VIEW CONTROLS & FILTER BAR ── */
+.filter-bar {
+  background: rgba(14, 25, 46, 0.85) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 12px 18px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+}
+.filter-select,
+.modern-select {
+  background: #142444 !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.4) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  padding: 8px 14px !important;
+}
+.filter-select:focus,
+.modern-select:focus {
+  border-color: #00f2fe !important;
+  box-shadow: 0 0 14px rgba(0, 242, 254, 0.4) !important;
+}
+
+.view-btn {
+  background: #142444 !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  color: #94a3b8 !important;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+  padding: 7px 16px !important;
+  font-size: 0.84rem !important;
+}
+.view-btn.active {
+  background: linear-gradient(135deg, #00f2fe, #38bdf8) !important;
+  color: #070e1c !important;
+  border-color: #00f2fe !important;
+  font-weight: 900 !important;
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.45) !important;
+}
+
+/* ── 10. REPS CARDS IN INDIVIDUALS TAB (METRIC-TILE-MODERN) ── */
+.metric-tile-modern {
+  background: linear-gradient(145deg, #13223f 0%, #0d1930 100%) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.32) !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ── 11. DATA SYNC VERIFICATION CONSOLE ── */
+.sheet-sync-container {
+  background: linear-gradient(145deg, #13223f 0%, #0d1930 100%) !important;
+  border: 1.5px solid rgba(0, 242, 254, 0.35) !important;
+}
+.sheet-sync-item {
+  background: #162646 !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+.sheet-sync-item.synced {
+  border-color: rgba(0, 230, 118, 0.5) !important;
+  background: rgba(0, 230, 118, 0.08) !important;
+  box-shadow: 0 0 14px rgba(0, 230, 118, 0.15) !important;
+}
+.sheet-name {
+  color: #ffffff !important;
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+}
+.sheet-time {
+  color: #38bdf8 !important;
+  font-family: var(--font-mono) !important;
+}
+
+
+/* =========================================================================
+   AEROSPACE LASER-VERMILION & BLOOMBERG HIGH-CONTRAST ALERT SYSTEM (v5.1)
+   Superior clarity: eliminates dull red absorption on dark backgrounds.
+   ========================================================================= */
+
+@keyframes pulseLaserRed {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 59, 87, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 59, 87, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+  }
+}
+
+/* Status Badges & Hazard Badges: White Text on High-Contrast Vivid Red Capsule */
+.hazard-alert,
+.hazard-badge,
+.hazard-blink,
+.op-badge-below,
+.pill-badge-rose,
+.pill-badge-danger,
+.status-behind {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 3px 10px !important;
+  border-radius: 6px !important;
+  border: 1.5px solid #ff3b57 !important;
+  background: linear-gradient(135deg, rgba(255, 59, 87, 0.4) 0%, rgba(225, 29, 72, 0.5) 100%) !important;
+  color: #ffffff !important;           /* 100% Razor-Sharp Pure White text for infinite legibility */
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 900 !important;
+  font-size: 0.76rem !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 0 12px rgba(255, 59, 87, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  animation: pulseLaserRed 2.5s infinite ease-in-out !important;
+  vertical-align: middle !important;
+}
+
+.hazard-alert *,
+.hazard-badge *,
+.op-badge-below *,
+.pill-badge-rose *,
+.status-behind * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Big Value Numbers in KPI Cards (e.g. Zero-Class total) */
+.kpi-value.hazard-alert,
+div.hazard-alert {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1.5px solid #ff3b57 !important;
+  border-radius: 10px !important;
+  padding: 6px 16px !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(255, 59, 87, 0.35) 0%, rgba(225, 29, 72, 0.45) 100%) !important;
+  box-shadow: 0 0 16px rgba(255, 59, 87, 0.5) !important;
+  animation: pulseLaserRed 2.5s infinite ease-in-out !important;
+}
+
+/* Table cells designated as hazard alerts */
+td.hazard-alert {
+  display: table-cell !important;
+  border: 1px solid #ff3b57 !important;
+  background: rgba(255, 59, 87, 0.22) !important;
+  color: #ffffff !important;
+}
+
+/* High-Contrast Laser Vermilion for Numbers, Pacing & Negative Metric Spans */
+span[style*="#f43f5e"],
+span[style*="#ef4444"],
+span[style*="244, 63, 94"],
+span[style*="239, 68, 68"],
+strong[style*="#f43f5e"],
+strong[style*="#ef4444"],
+strong[style*="244, 63, 94"],
+strong[style*="239, 68, 68"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 59, 87, 0.18) !important;
+  border: 1px solid rgba(255, 77, 109, 0.55) !important;
+  border-radius: 5px !important;
+  padding: 2px 7px !important;
+  color: #ff526c !important;           /* Bright high-luminance laser vermilion */
+  -webkit-text-fill-color: #ff526c !important;
+  text-shadow: 0 0 10px rgba(255, 77, 109, 0.65) !important;
+  font-weight: 900 !important;
+  font-family: var(--font-mono) !important;
+  box-shadow: 0 0 8px rgba(255, 59, 87, 0.25) !important;
+  vertical-align: middle !important;
+}
+
+
+
+
+/* =========================================================================
+   =========================================================================
+   ? EXECUTIVE MIDNIGHT TITANIUM THEME (v6.0) ?
+   Rich Depth, Visible Distinct Panels, Crisp Borders & Razor-Sharp Contrast
+   =========================================================================
+   ========================================================================= */
+
+/* ── 1. GLOBAL ROOT VARIABLES ── */
+:root {
+  /* Rich Midnight Titanium Canvas (Not pitch black, not sterile white) */
+  --bg-primary: #0a101d !important;
+  --bg-secondary: #0f182b !important;
+  --bg-card: #152238 !important;           /* Visibly lighter than background! */
+  --bg-card-hover: #1b2c48 !important;
+  --bg-glass: rgba(21, 34, 56, 0.85) !important;
+  --border-glass: #263854 !important;
+  --border-active: #38bdf8 !important;
+
+  /* Crisp Typography */
+  --text-primary: #ffffff !important;
+  --text-secondary: #cbd5e1 !important;
+  --text-muted: #94a3b8 !important;
+  --text-dim: #64748b !important;
+
+  /* Executive Accents */
+  --accent-cyan: #38bdf8 !important;
+  --accent-indigo: #818cf8 !important;
+  --accent-emerald: #10b981 !important;
+  --accent-amber: #f59e0b !important;
+  --accent-rose: #ff3b57 !important;
+  --accent-violet: #a855f7 !important;
+
+  --gradient-primary: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%) !important;
+  --gradient-success: linear-gradient(135deg, #10b981 0%, #06b6d4 100%) !important;
+  --gradient-warning: linear-gradient(135deg, #f59e0b 0%, #f97316 100%) !important;
+  --gradient-danger: linear-gradient(135deg, #ff3b57 0%, #e11d48 100%) !important;
+
+  --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.22) !important;
+  --shadow-glow-lg: 0 0 45px rgba(56, 189, 248, 0.32) !important;
+}
+
+/* ── 2. EXECUTIVE MIDNIGHT CANVAS ── */
+body {
+  background: radial-gradient(ellipse at 50% 0%, #162640 0%, #0d1626 50%, #080d17 100%) !important;
+  color: #ffffff !important;
+  min-height: 100vh !important;
+}
+
+/* Elegant Blueprint Micro-Grid Overlay */
+body::after {
+  content: '' !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px) !important;
+  background-size: 36px 36px !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  animation: none !important;
+  display: block !important;
+}
+
+body::before {
+  display: none !important;
+}
+
+.ambient-glow {
+  opacity: 0.18 !important;
+}
+.ambient-glow-1 {
+  background: radial-gradient(circle, #38bdf8 0%, rgba(56, 189, 248, 0) 70%) !important;
+}
+.ambient-glow-2 {
+  background: radial-gradient(circle, #818cf8 0%, rgba(129, 140, 248, 0) 70%) !important;
+}
+
+/* ── 3. TOP COMMAND NAVIGATION ── */
+.top-nav {
+  background: rgba(11, 18, 30, 0.94) !important;
+  border-bottom: 1.5px solid #263854 !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: blur(20px) !important;
+}
+.nav-title {
+  font-size: 1.45rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+}
+.nav-title .gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 60%, #a855f7 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.4) !important;
+}
+.top-nav strong {
+  color: #f8fafc !important;
+}
+
+.data-freshness {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border: 1px solid rgba(16, 185, 129, 0.4) !important;
+  color: #34d399 !important;
+  font-weight: 800 !important;
+}
+.nav-source-badge {
+  background: rgba(56, 189, 248, 0.15) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  color: #38bdf8 !important;
+  font-weight: 800 !important;
+}
+
+/* ── 4. TAB NAVIGATION ── */
+.tab-bar {
+  background: rgba(11, 18, 30, 0.95) !important;
+  border-bottom: 1.5px solid #263854 !important;
+  backdrop-filter: blur(20px) !important;
+}
+.tab {
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  color: #94a3b8 !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+}
+.tab:hover {
+  color: #ffffff !important;
+  background: rgba(56, 189, 248, 0.08) !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
+}
+.tab.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.25) 0%, rgba(129, 140, 248, 0.2) 100%) !important;
+  border: 1.5px solid #38bdf8 !important;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.3) !important;
+}
+
+/* ── 5. SECTION HEADERS & DISTINCTION ── */
+.section-header h2 {
+  font-size: 1.35rem !important;
+  font-weight: 900 !important;
+  color: #f8fafc !important;
+  letter-spacing: 0.01em !important;
+  position: relative !important;
+  padding-left: 18px !important;
+}
+.section-header h2::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 5px !important;
+  height: 80% !important;
+  background: linear-gradient(180deg, #38bdf8, #818cf8) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 10px #38bdf8 !important;
+}
+.source-tag {
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  color: #7dd3fc !important;
+  font-weight: 700 !important;
+}
+
+/* ── 6. CARDS & PANELS: 100% INDEPENDENT WITH CRISP BORDERS ── */
+/* Notice: background is #16243c, visibly lighter than body #080d17! */
+.kpi-card,
+.metric-tile-modern,
+.calc-card,
+.team-card,
+.ind-card,
+.sop-card,
+.rec-card,
+.op-card,
+.commission-card,
+.chart-container,
+.sheet-sync-container,
+.sprint-countdown-hud {
+  background: linear-gradient(145deg, #16243c 0%, #111d31 100%) !important;
+  border: 1.5px solid #2e4366 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(16px) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.kpi-card:hover,
+.metric-tile-modern:hover,
+.calc-card:hover,
+.team-card:hover,
+.ind-card:hover,
+.sop-card:hover,
+.rec-card:hover,
+.op-card:hover,
+.commission-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65), 0 0 20px rgba(56, 189, 248, 0.25) !important;
+}
+
+/* Card Heading Names & Titles */
+.team-card-title,
+.sop-card-title,
+.rec-title,
+.calc-title,
+.ind-name,
+.sprint-hud-title {
+  color: #f8fafc !important;
+  font-size: 1.08rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Card Labels: Electric Cyan (Completely distinct from numbers!) */
+.kpi-label,
+.comm-label,
+.team-stat-label,
+.ind-stat-label,
+.op-card .op-title,
+.sheet-sync-title {
+  color: #38bdf8 !important;
+  font-weight: 800 !important;
+  font-size: 0.80rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+/* Data Values: Pure Bright White */
+.kpi-value,
+.comm-value,
+.op-card .op-value,
+.team-stat-value,
+.ind-stat-value,
+.time-digit {
+  font-family: 'JetBrains Mono', 'Outfit', sans-serif !important;
+  font-size: 2.3rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  line-height: 1.15 !important;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.25) !important;
+}
+.kpi-sub,
+.kpi-pct {
+  color: #94a3b8 !important;
+  font-weight: 600 !important;
+}
+
+/* ── 7. DATA TABLES (HIGH-CONTRAST TITANIUM DESK) ── */
+.table-wrapper,
+#individualTableView,
+.modern-table-card {
+  background: #111c2e !important;
+  border: 1.5px solid #2e4366 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  overflow: hidden !important;
+}
+
+.data-table,
+#individualFullTable {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* Header Band */
+.data-table thead,
+#individualFullTable thead {
+  background: #182844 !important;
+}
+.data-table th,
+#individualFullTable th {
+  background: #182844 !important;
+  color: #7dd3fc !important;
+  font-size: 0.79rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  padding: 12px 6px !important;
+  border-bottom: 2.5px solid #38bdf8 !important;
+  border-right: 1px solid rgba(56, 189, 248, 0.18) !important;
+  white-space: nowrap !important;
+}
+.data-table th:last-child,
+#individualFullTable th:last-child {
+  border-right: none !important;
+}
+
+/* Alternating Rows */
+.data-table tbody tr:nth-child(odd) {
+  background: #101928 !important;
+}
+.data-table tbody tr:nth-child(even) {
+  background: #142136 !important;
+}
+
+/* Row Hover */
+.data-table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.14) !important;
+  box-shadow: inset 3px 0 0 #38bdf8 !important;
+}
+
+/* Cells */
+.data-table td,
+#individualFullTable td {
+  padding: 9px 6px !important;
+  color: #f8fafc !important;
+  font-size: 0.83rem !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.04) !important;
+  white-space: nowrap !important;
+}
+.data-table td:last-child,
+#individualFullTable td:last-child {
+  border-right: none !important;
+}
+
+/* Rep Names */
+#individualFullTable td:nth-child(2) strong {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 0.86rem !important;
+}
+
+/* Footer Summary */
+.data-table tfoot tr,
+#individualFullTable tfoot tr {
+  background: #1a2c4a !important;
+  border-top: 2.5px solid #38bdf8 !important;
+}
+.data-table tfoot td,
+#individualFullTable tfoot td {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  font-size: 0.88rem !important;
+  padding: 12px 6px !important;
+}
+
+/* Specialized Columns */
+#individualFullTable th:nth-child(10),
+#individualFullTable td:nth-child(10) {
+  background: rgba(168, 85, 247, 0.1) !important;
+  border-left: 1.5px solid rgba(168, 85, 247, 0.35) !important;
+  border-right: 1.5px solid rgba(168, 85, 247, 0.35) !important;
+}
+
+#individualFullTable th:nth-child(12),
+#individualFullTable td:nth-child(12) {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border-left: 1.5px solid rgba(16, 185, 129, 0.35) !important;
+}
+
+#individualFullTable th:nth-child(13),
+#individualFullTable td:nth-child(13) {
+  background: rgba(56, 189, 248, 0.1) !important;
+}
+
+#individualFullTable th:nth-child(14),
+#individualFullTable td:nth-child(14) {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border-right: 1.5px solid rgba(245, 158, 11, 0.35) !important;
+}
+
+/* ── 8. RAZOR-SHARP LASER VERMILION RED (NO MUD, 100% CLARITY) ── */
+.status-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 3px 9px !important;
+  border-radius: 6px !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+/* ON TRACK */
+.status-on-track {
+  background: rgba(16, 185, 129, 0.18) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.45) !important;
+}
+
+/* AT RISK */
+.status-at-risk {
+  background: rgba(245, 158, 11, 0.18) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(245, 158, 11, 0.45) !important;
+}
+
+/* BEHIND: High-Contrast Crimson Capsule with White Text */
+.status-behind,
+.hazard-alert,
+.hazard-badge,
+.op-badge-below,
+.pill-badge-rose,
+.pill-badge-danger {
+  background: linear-gradient(135deg, rgba(255, 59, 87, 0.35) 0%, rgba(225, 29, 72, 0.45) 100%) !important;
+  border: 1.5px solid #ff3b57 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 900 !important;
+  box-shadow: 0 0 12px rgba(255, 59, 87, 0.35) !important;
+}
+
+.hazard-alert *,
+.hazard-badge *,
+.op-badge-below *,
+.pill-badge-rose *,
+.status-behind * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Negative Pacing & Deficit Spans */
+span[style*="#f43f5e"],
+span[style*="#ef4444"],
+span[style*="#ff3b57"],
+span[style*="244, 63, 94"],
+span[style*="239, 68, 68"],
+strong[style*="#f43f5e"],
+strong[style*="#ef4444"],
+strong[style*="#ff3b57"],
+strong[style*="244, 63, 94"],
+strong[style*="239, 68, 68"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 59, 87, 0.18) !important;
+  border: 1px solid rgba(255, 77, 109, 0.55) !important;
+  border-radius: 5px !important;
+  padding: 2px 7px !important;
+  color: #ff526c !important;
+  -webkit-text-fill-color: #ff526c !important;
+  text-shadow: 0 0 8px rgba(255, 77, 109, 0.5) !important;
+  font-weight: 900 !important;
+  font-family: var(--font-mono) !important;
+  vertical-align: middle !important;
+}
+
+/* ── 9. CONTROLS, FILTERS & INPUTS ── */
+.filter-bar {
+  background: #132034 !important;
+  border: 1.5px solid #2e4366 !important;
+  border-radius: 12px !important;
+  padding: 12px 18px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+}
+.filter-select,
+.modern-select {
+  background: #182844 !important;
+  border: 1.5px solid #2e4366 !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+}
+.filter-select:focus,
+.modern-select:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.35) !important;
+}
+
+.view-btn {
+  background: #182844 !important;
+  border: 1px solid #2e4366 !important;
+  color: #94a3b8 !important;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+}
+.view-btn.active {
+  background: linear-gradient(135deg, #38bdf8, #818cf8) !important;
+  color: #080e1a !important;
+  -webkit-text-fill-color: #080e1a !important;
+  border-color: #38bdf8 !important;
+  font-weight: 900 !important;
+}
+
+/* ── 10. FLOATING DOCK ── */
+.cyber-dock {
+  background: rgba(13, 22, 36, 0.94) !important;
+  border: 1.5px solid #2e4366 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+.dock-telemetry-pill {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid #2e4366 !important;
+  color: #cbd5e1 !important;
+}
+.dock-btn {
+  color: #94a3b8 !important;
+}
+.dock-btn:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+/* ── 11. DATA SYNC CONSOLE ── */
+.sheet-sync-container {
+  background: linear-gradient(145deg, #16243c 0%, #111d31 100%) !important;
+  border: 1.5px solid #2e4366 !important;
+}
+.sheet-sync-item {
+  background: #111a2a !important;
+  border: 1px solid #263854 !important;
+}
+.sheet-sync-item.synced {
+  border-color: rgba(16, 185, 129, 0.5) !important;
+  background: rgba(16, 185, 129, 0.08) !important;
+}
+.sheet-name {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+.sheet-time {
+  color: #38bdf8 !important;
+}
+

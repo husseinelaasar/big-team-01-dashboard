@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير العملاء ذوي الحضور الصفري (532 عميلاً) - Big Team 01</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0A0F1D;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.85);
+            --bg-card-hover: rgba(31, 41, 55, 0.95);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.2);
+            --text-primary: #F9FAFB;
+            --text-secondary: #9CA3AF;
+            --text-muted: #6B7280;
+            --accent-cyan: #06B6D4;
+            --accent-blue: #3B82F6;
+            --accent-emerald: #10B981;
+            --accent-amber: #F59E0B;
+            --accent-rose: #F43F5E;
+            --accent-purple: #8B5CF6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            padding: 24px;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.12) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .brand-title h1 {
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+
+        .brand-title p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0284C7 0%, #2563EB 100%);
+            color: #FFF;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+            color: #FFF;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* KPI Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .kpi-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 20px;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-hover);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        .kpi-total::before { background: linear-gradient(90deg, #38BDF8, #818CF8); }
+        .kpi-uncontacted::before { background: linear-gradient(90deg, #F43F5E, #FB7185); }
+        .kpi-priority::before { background: linear-gradient(90deg, #10B981, #34D399); }
+        .kpi-nofixed::before { background: linear-gradient(90deg, #F59E0B, #FBBF24); }
+        .kpi-churned::before { background: linear-gradient(90deg, #EC4899, #F472B6); }
+        .kpi-zeropoints::before { background: linear-gradient(90deg, #8B5CF6, #A78BFA); }
+
+        .kpi-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .kpi-value {
+            font-size: 32px;
+            font-weight: 900;
+            color: #FFF;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .kpi-subtext {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-kpi {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+
+        .badge-red { background: rgba(244, 63, 94, 0.2); color: #FDA4AF; }
+        .badge-green { background: rgba(16, 185, 129, 0.2); color: #6EE7B7; }
+        .badge-amber { background: rgba(245, 158, 11, 0.2); color: #FCD34D; }
+        .badge-blue { background: rgba(59, 130, 246, 0.2); color: #93C5FD; }
+        .badge-purple { background: rgba(139, 92, 246, 0.2); color: #C4B5FD; }
+
+        /* Quick Filter Tags */
+        .presets-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .preset-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-left: 8px;
+        }
+
+        .preset-tag {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .preset-tag:hover, .preset-tag.active {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60A5FA;
+            border-color: #3B82F6;
+            transform: scale(1.03);
+        }
+
+        .preset-tag.urgent.active {
+            background: rgba(244, 63, 94, 0.25);
+            color: #FDA4AF;
+            border-color: #F43F5E;
+        }
+
+        /* Filter Controls */
+        .filters-panel {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr auto;
+            gap: 14px;
+            align-items: end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .filter-group label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-secondary);
+        }
+
+        .filter-input, .filter-select {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 14px;
+            color: #FFF;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .filter-input:focus, .filter-select:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .filter-select option {
+            background: var(--bg-secondary);
+            color: #FFF;
+        }
+
+        .filter-stats {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+
+        /* Table Card */
+        .table-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            max-height: 620px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+            font-size: 13.5px;
+        }
+
+        thead {
+            position: sticky;
+            top: 0;
+            background: #111827;
+            z-index: 10;
+        }
+
+        th {
+            padding: 14px 16px;
+            color: var(--text-secondary);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border);
+            cursor: pointer;
+            white-space: nowrap;
+            user-select: none;
+        }
+
+        th:hover {
+            color: #FFF;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .stu-id {
+            font-family: monospace;
+            font-size: 14px;
+            font-weight: 700;
+            color: #38BDF8;
+        }
+
+        .badge-status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 11.5px;
+            font-weight: 700;
+        }
+
+        .status-covered {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34D399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-uncovered {
+            background: rgba(244, 63, 94, 0.15);
+            color: #FB7185;
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .points-pill {
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+        .points-zero {
+            color: var(--text-muted);
+        }
+
+        .points-positive {
+            color: #FBBF24;
+        }
+
+        .points-high {
+            color: #34D399;
+        }
+
+        /* Pagination */
+        .pagination-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: rgba(0, 0, 0, 0.25);
+            border-top: 1px solid var(--border);
+        }
+
+        .pagination-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .page-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border);
+            color: #FFF;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            background: rgba(59, 130, 246, 0.3);
+            border-color: var(--accent-blue);
+        }
+
+        .page-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* Insights & Executive Sections */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insight-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+        }
+
+        .insight-card h3 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #FFF;
+        }
+
+        .reasons-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .reason-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .reason-num {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60A5FA;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            flex-shrink: 0;
+            font-size: 13px;
+        }
+
+        .reason-item h4 {
+            font-size: 14px;
+            color: #FFF;
+            margin-bottom: 3px;
+        }
+
+        .reason-item p {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+        }
+
+        .bar-container {
+            margin-bottom: 12px;
+        }
+
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12.5px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text-secondary);
+        }
+
+        .bar-track {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 100px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 100px;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #111827;
+            border: 1px solid var(--border-hover);
+            border-radius: 20px;
+            max-width: 650px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 28px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 14px;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media print {
+            body { background: #FFF !important; color: #000 !important; padding: 0 !important; }
+            .container { max-width: 100% !important; }
+            header, .presets-bar, .filters-panel, .pagination-bar, .header-actions { display: none !important; }
+            .kpi-card { background: #FFF !important; border: 1px solid #CCC !important; color: #000 !important; box-shadow: none !important; }
+            .kpi-value { color: #000 !important; }
+            .table-card { border: 1px solid #CCC !important; background: #FFF !important; box-shadow: none !important; }
+            .table-responsive { max-height: none !important; overflow: visible !important; }
+            table { font-size: 10px !important; color: #000 !important; }
+            th { background: #EEE !important; color: #000 !important; border: 1px solid #CCC !important; }
+            td { border: 1px solid #DDD !important; color: #000 !important; }
+            .insight-card { background: #FFF !important; border: 1px solid #CCC !important; color: #000 !important; page-break-inside: avoid; }
+            .reason-item { background: #F9F9F9 !important; border: 1px solid #EEE !important; }
+            .reason-item h4, .reason-item p { color: #000 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <div class="brand-title">
+            <h1>تقرير العملاء ذوي الحضور الصفري (532 عميلاً)</h1>
+            <p>51Talk - كشف استهلاك الحصص المعتمد (Sheet 30) | Big Team 01 (Saber Hussien) | بيانات 26 أكتوبر 2026</p>
+        </div>
+        <div class="header-actions">
+            <button class="btn btn-success" onclick="exportFilteredCSV()">
+                📥 تصدير Excel (CSV)
+            </button>
+            <button class="btn btn-primary" onclick="window.print()">
+                🖨️ طباعة / حفظ PDF
+            </button>
+            <button class="btn btn-secondary" onclick="resetFilters()">
+                🔄 إعادة تعيين
+            </button>
+        </div>
+    </header>
+
+    <!-- KPI Grid -->
+    <div class="kpi-grid">
+        <div class="kpi-card kpi-total">
+            <div class="kpi-label">
+                <span>إجمالي الحضور الصفري</span>
+                <span class="badge-kpi badge-blue">10.7% من النشطين</span>
+            </div>
+            <div class="kpi-value">532</div>
+            <div class="kpi-subtext">عميل لم يحضروا أي حصة هذا الشهر</div>
+        </div>
+
+        <div class="kpi-card kpi-uncontacted">
+            <div class="kpi-label">
+                <span>لم يتم التواصل معهم</span>
+                <span class="badge-kpi badge-red">66.2% غياب متابعة</span>
+            </div>
+            <div class="kpi-value">352</div>
+            <div class="kpi-subtext">طالب بدون أي تغطية أو اتصال من الـ SS</div>
+        </div>
+
+        <div class="kpi-card kpi-priority">
+            <div class="kpi-label">
+                <span>يملكون رصيداً متاحاً</span>
+                <span class="badge-kpi badge-green">91.9% جاهزون للحضور</span>
+            </div>
+            <div class="kpi-value">489</div>
+            <div class="kpi-subtext">متوسط الرصيد 66.2 حصة لكل طالب!</div>
+        </div>
+
+        <div class="kpi-card kpi-nofixed">
+            <div class="kpi-label">
+                <span>بدون معلم ثابت</span>
+                <span class="badge-kpi badge-amber">66.5% سبب رئيسي</span>
+            </div>
+            <div class="kpi-value">354</div>
+            <div class="kpi-subtext">طالب يعانون من عدم استقرار المعلمين</div>
+        </div>
+
+        <div class="kpi-card kpi-churned">
+            <div class="kpi-label">
+                <span>توقفوا فجأة هذا الشهر</span>
+                <span class="badge-kpi badge-blue">47.7% خطر تسرب</span>
+            </div>
+            <div class="kpi-value">254</div>
+            <div class="kpi-subtext">كانوا نشطين الشهر الماضي وتوقفوا</div>
+        </div>
+
+        <div class="kpi-card kpi-zeropoints">
+            <div class="kpi-label">
+                <span>رصيد منتهي (0 نقطة)</span>
+                <span class="badge-kpi badge-purple">8.1% بحاجة تجديد</span>
+            </div>
+            <div class="kpi-value">43</div>
+            <div class="kpi-subtext">حسابات مستنفدة الرصيد بالكامل</div>
+        </div>
+    </div>
+
+    <!-- Quick Presets -->
+    <div class="presets-bar">
+        <span class="preset-title">⚡ تصفية سريعة:</span>
+        <div class="preset-tag active" id="tagAllPreset" onclick="applyPreset('all', this)">الكل (532)</div>
+        <div class="preset-tag urgent" onclick="applyPreset('urgent', this)">🚨 أولوية عاجلة: لديهم رصيد ولم يتم التواصل (318)</div>
+        <div class="preset-tag" onclick="applyPreset('churned', this)">⚠️ توقفوا فجأة هذا الشهر (254)</div>
+        <div class="preset-tag" onclick="applyPreset('hasPoints', this)">💰 يملكون رصيد نقاط (489)</div>
+        <div class="preset-tag" onclick="applyPreset('noFixed', this)">🚫 بدون معلم ثابت (354)</div>
+        <div class="preset-tag" onclick="applyPreset('uncovered', this)">📞 لم يتم التواصل معهم (352)</div>
+        <div class="preset-tag" onclick="applyPreset('covered', this)">✅ تم التواصل معهم (180)</div>
+        <div class="preset-tag" onclick="applyPreset('zeroPoints', this)">💳 رصيد منتهي 0 نقاط (43)</div>
+    </div>
+
+    <!-- Filter Controls Panel -->
+    <div class="filters-panel">
+        <div class="filter-group">
+            <label>🔍 بحث فوري (كود الطالب / مسؤول الـ SS):</label>
+            <input type="text" id="searchInput" class="filter-input" placeholder="اكتب رقم الطالب أو اسم الموظف..." oninput="filterData()">
+        </div>
+
+        <div class="filter-group">
+            <label>فريق العمل الصغير (Team):</label>
+            <select id="teamFilter" class="filter-select" onchange="filterData()">
+                <option value="">جميع الفرق</option>
+                <option value="ME-EGSS05">ME-EGSS05 (213 طالب)</option>
+                <option value="ME-EGSS01">ME-EGSS01 (119 طالب)</option>
+                <option value="ME-EGSS13">ME-EGSS13 (90 طالب)</option>
+                <option value="ME-EGSS30">ME-EGSS30 (58 طالب)</option>
+                <option value="ME-EGSS10">ME-EGSS10 (52 طالب)</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>حوض العميل (Pool):</label>
+            <select id="poolFilter" class="filter-select" onchange="filterData()">
+                <option value="">جميع الأحواض</option>
+                <option value="outside pool">outside pool (359)</option>
+                <option value="Exp Non-0">Exp Non-0 (120)</option>
+                <option value="FOE Non-0">FOE Non-0 (48)</option>
+                <option value="Upgrade M2">Upgrade M2 (4)</option>
+                <option value="period">period (1)</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>حالة التواصل (Contacted):</label>
+            <select id="coveredFilter" class="filter-select" onchange="filterData()">
+                <option value="">الكل</option>
+                <option value="0">لم يتم التواصل (352)</option>
+                <option value="1">تم التواصل والتغطية (180)</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>حالة الرصيد (Points):</label>
+            <select id="pointsFilter" class="filter-select" onchange="filterData()">
+                <option value="">الكل</option>
+                <option value="has">لديه رصيد نقاط (489)</option>
+                <option value="zero">رصيد منتهي (43)</option>
+            </select>
+        </div>
+
+        <div class="filter-stats">
+            <span id="resultCount">عرض 532 من 532 عميلاً</span>
+        </div>
+    </div>
+
+    <!-- Main Table Card -->
+    <div class="table-card">
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th onclick="sortTable('id')">كود الطالب (ID) ↕</th>
+                        <th onclick="sortTable('team')">الفريق ↕</th>
+                        <th onclick="sortTable('agent')">مسؤول الـ SS ↕</th>
+                        <th onclick="sortTable('poolDetail')">الحوض التفصيلي ↕</th>
+                        <th onclick="sortTable('paddock')">حوض الشهر (M) ↕</th>
+                        <th onclick="sortTable('points')">الرصيد الحالي ↕</th>
+                        <th onclick="sortTable('covered')">التواصل هذا الشهر ↕</th>
+                        <th onclick="sortTable('lastMonth')">حصص الشهر الماضي ↕</th>
+                        <th onclick="sortTable('fixedTeacher')">معلم ثابت ↕</th>
+                        <th>الملاحظات والـ SOP</th>
+                        <th>تفاصيل</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr><td colspan="12" style="text-align: center; padding: 40px; color: var(--text-secondary);">جاري تحميل بيانات الـ 532 عميلاً...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination Bar -->
+        <div class="pagination-bar">
+            <div>
+                <span id="pageInfo" style="font-size: 13px; color: var(--text-secondary);">الصفحة 1 من 22</span>
+                <select id="pageSizeSelect" class="filter-select" style="padding: 4px 8px; font-size: 12px; margin-right: 12px;" onchange="changePageSize()">
+                    <option value="25">25 سجل لكل صفحة</option>
+                    <option value="50">50 سجل لكل صفحة</option>
+                    <option value="100">100 سجل لكل صفحة</option>
+                    <option value="532">عرض الكل (532)</option>
+                </select>
+            </div>
+            <div class="pagination-controls">
+                <button class="page-btn" id="prevBtn" onclick="prevPage()">السابق</button>
+                <button class="page-btn" id="nextBtn" onclick="nextPage()">التالي</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Insights & Strategy Grid -->
+    <div class="insights-grid">
+        <!-- Root Causes -->
+        <div class="insight-card">
+            <h3>🎯 أسباب عدم حضور الـ 532 عميلاً حتى الآن</h3>
+            <ul class="reasons-list">
+                <li class="reason-item">
+                    <div class="reason-num">1</div>
+                    <div>
+                        <h4>إهمال التواصل مع من يملكون رصيداً (318 طالباً)</h4>
+                        <p>من بين الـ 489 طالباً الذين يملكون رصيداً صالحاً، هناك <strong>318 طالباً لم يتواصل معهم أي مسؤول SS</strong> هذا الشهر لتشجيعهم وجدولة حصصهم!</p>
+                    </div>
+                </li>
+                <li class="reason-item">
+                    <div class="reason-num">2</div>
+                    <div>
+                        <h4>غياب المعلم الثابت (66.5% من الطلاب)</h4>
+                        <p>354 طالباً ليس لديهم معلم مرتبط مما يؤدي إلى تكاسل ولي الأمر وتردده في حجز معلمين مختلفين كل أسبوع.</p>
+                    </div>
+                </li>
+                <li class="reason-item">
+                    <div class="reason-num">3</div>
+                    <div>
+                        <h4>التوقف المفاجئ بعد نشاط الشهر الماضي (47.7%)</h4>
+                        <p>254 طالباً كانوا يستهلكون حصصاً الشهر الماضي (بمتوسط 6 حصص) وتوقفوا فجأة هذا الشهر ويجب إنقاذهم فوراً.</p>
+                    </div>
+                </li>
+                <li class="reason-item">
+                    <div class="reason-num">4</div>
+                    <div>
+                        <h4>الحجز دون حضور No-Show (167 طالباً)</h4>
+                        <p>قام 167 طالباً بحجز 530 حصة بالفعل في جداولهم هذا الشهر ولكنهم تغيبوا عنها بسبب مواعيد المدارس أو مشاكل تقنية.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Pools & Distribution -->
+        <div class="insight-card">
+            <h3>📊 توزيع الـ 532 طالباً حسب الأحواض والفرق</h3>
+            
+            <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 13px; color: var(--text-secondary); margin-bottom: 10px;">توزيع الأحواض (Pools):</h4>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Outside Pool (الحوض الخارجي)</span><span>359 (67.5%)</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 67.5%; background: #38BDF8;"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Exp Non-0 (عقود منتهية برصيد)</span><span>120 (22.6%)</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 22.6%; background: #8B5CF6;"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>FOE Non-0 (باقة أولى برصيد)</span><span>48 (9.0%)</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 9%; background: #F59E0B;"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Upgrade M2 & Period (ترقية وحماية)</span><span>5 (0.9%)</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 5%; background: #10B981;"></div></div>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="font-size: 13px; color: var(--text-secondary); margin-bottom: 10px;">التوزيع حسب فرق الـ SS:</h4>
+                <div class="bar-container">
+                    <div class="bar-label"><span>فريق ME-EGSS05</span><span>213 طالب (140 لم يتواصل معهم)</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 40.0%; background: #F43F5E;"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>فريق ME-EGSS01</span><span>119 طالب (83 لم يتواصل معهم)</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 22.4%; background: #FB7185;"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>فريق ME-EGSS13</span><span>90 طالب (63 لم يتواصل معهم)</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 16.9%; background: #F59E0B;"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>فريق ME-EGSS30</span><span>58 طالب (37 لم يتواصل معهم)</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 10.9%; background: #3B82F6;"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>فريق ME-EGSS10</span><span>52 طالب (29 لم يتواصل معهم)</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 9.8%; background: #8B5CF6;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Student Detail Modal -->
+<div class="modal-overlay" id="detailModal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3 id="modalTitle" style="color: #38BDF8;">تفاصيل الطالب</h3>
+            <button class="modal-close" onclick="closeModalDirect()">&times;</button>
+        </div>
+        <div id="modalBody" style="font-size: 13.5px; line-height: 1.8;">
+            <!-- Modal details -->
+        </div>
+    </div>
+</div>
+
+<script>
+let allStudents = [];
+let filteredStudents = [];
+let currentPage = 1;
+let pageSize = 25;
+let currentSortCol = 'points';
+let sortAsc = false;
+
+// Load student data from students_data.json (532 students)
+fetch('students_data.json')
+    .then(response => response.json())
+    .then(data => {
+        allStudents = data;
+        filteredStudents = [...allStudents];
+        sortTable('points', true);
+    })
+    .catch(err => {
+        console.error('Error loading students data:', err);
+        document.getElementById('tableBody').innerHTML = '<tr><td colspan="12" style="text-align: center; color: #F43F5E;">حدث خطأ في تحميل البيانات. يرجى التأكد من تشغيل السيرفر.</td></tr>';
+    });
+
+function renderTable() {
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+
+    if (filteredStudents.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="12" style="text-align: center; padding: 30px; color: var(--text-secondary);">لا توجد نتائج تطابق معايير البحث الحالية.</td></tr>';
+        document.getElementById('resultCount').innerText = 'عرض 0 من ' + allStudents.length + ' عميلاً';
+        document.getElementById('pageInfo').innerText = 'الصفحة 0 من 0';
+        return;
+    }
+
+    const start = (currentPage - 1) * pageSize;
+    const end = Math.min(start + pageSize, filteredStudents.length);
+    const pageItems = filteredStudents.slice(start, end);
+
+    pageItems.forEach((st, idx) => {
+        const tr = document.createElement('tr');
+        
+        const coveredBadge = st.covered === 1 
+            ? '<span class="badge-status status-covered">تم التواصل</span>'
+            : '<span class="badge-status status-uncovered">لم يتم التواصل</span>';
+
+        let pointsClass = 'points-zero';
+        if (st.points > 30) pointsClass = 'points-high';
+        else if (st.points > 0) pointsClass = 'points-positive';
+
+        const fixedTeacherBadge = st.fixedTeacher === 'YES'
+            ? '<span style="color: #34D399; font-weight: 700;">نعم</span>'
+            : '<span style="color: #6B7280;">لا</span>';
+
+        const sopsSnippet = st.sopDetails 
+            ? `<span style="font-size: 11px; color: #CBD5E1;" title="${st.sopDetails}">${st.sopDetails.substring(0, 38)}...</span>`
+            : '<span style="color: #4B5563;">لا يوجد</span>';
+
+        tr.innerHTML = `
+            <td style="color: var(--text-muted);">${start + idx + 1}</td>
+            <td class="stu-id">${st.id}</td>
+            <td>${st.team}</td>
+            <td style="color: #CBD5E1;">${st.agent}</td>
+            <td><span class="badge-kpi badge-purple">${st.poolDetail}</span></td>
+            <td><span class="badge-kpi badge-blue">${st.paddock || '-'}</span></td>
+            <td class="points-pill ${pointsClass}">${st.points}</td>
+            <td>${coveredBadge}</td>
+            <td style="font-weight: 700; color: ${st.lastMonth > 0 ? '#38BDF8' : '#6B7280'};">${st.lastMonth}</td>
+            <td>${fixedTeacherBadge}</td>
+            <td>${sopsSnippet}</td>
+            <td>
+                <button class="btn btn-secondary" style="padding: 4px 10px; font-size: 11px;" onclick="showStudentModal('${st.id}')">عرض</button>
+            </td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    const totalPages = Math.ceil(filteredStudents.length / pageSize) || 1;
+    document.getElementById('pageInfo').innerText = `الصفحة ${currentPage} من ${totalPages}`;
+    document.getElementById('prevBtn').disabled = currentPage <= 1;
+    document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+    document.getElementById('resultCount').innerText = `عرض ${filteredStudents.length} من ${allStudents.length} عميلاً`;
+}
+
+function filterData() {
+    const search = document.getElementById('searchInput').value.trim().toLowerCase();
+    const team = document.getElementById('teamFilter').value;
+    const pool = document.getElementById('poolFilter').value;
+    const covered = document.getElementById('coveredFilter').value;
+    const points = document.getElementById('pointsFilter').value;
+
+    filteredStudents = allStudents.filter(st => {
+        if (search && !st.id.toLowerCase().includes(search) && !st.agent.toLowerCase().includes(search)) return false;
+        if (team && st.team !== team) return false;
+        if (pool && st.poolDetail !== pool) return false;
+        if (covered !== "" && st.covered !== parseInt(covered)) return false;
+        if (points === 'has' && st.points <= 0) return false;
+        if (points === 'zero' && st.points > 0) return false;
+        return true;
+    });
+
+    currentPage = 1;
+    sortTable(currentSortCol, true);
+}
+
+function applyPreset(preset, el) {
+    document.querySelectorAll('.preset-tag').forEach(tag => tag.classList.remove('active'));
+    if (el) el.classList.add('active');
+
+    resetFilterInputs();
+
+    if (preset === 'all') {
+        filteredStudents = [...allStudents];
+    } else if (preset === 'urgent') {
+        filteredStudents = allStudents.filter(st => st.points > 0 && st.covered === 0);
+    } else if (preset === 'churned') {
+        filteredStudents = allStudents.filter(st => st.lastMonth > 0);
+    } else if (preset === 'zeroPoints') {
+        filteredStudents = allStudents.filter(st => st.points <= 0);
+    } else if (preset === 'hasPoints') {
+        filteredStudents = allStudents.filter(st => st.points > 0);
+    } else if (preset === 'uncovered') {
+        filteredStudents = allStudents.filter(st => st.covered === 0);
+    } else if (preset === 'covered') {
+        filteredStudents = allStudents.filter(st => st.covered === 1);
+    } else if (preset === 'noFixed') {
+        filteredStudents = allStudents.filter(st => st.fixedTeacher !== 'YES');
+    }
+
+    currentPage = 1;
+    sortTable(currentSortCol, true);
+}
+
+function resetFilterInputs() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('teamFilter').value = '';
+    document.getElementById('poolFilter').value = '';
+    document.getElementById('coveredFilter').value = '';
+    document.getElementById('pointsFilter').value = '';
+}
+
+function resetFilters() {
+    resetFilterInputs();
+    document.querySelectorAll('.preset-tag').forEach(tag => tag.classList.remove('active'));
+    document.getElementById('tagAllPreset').classList.add('active');
+    filteredStudents = [...allStudents];
+    currentPage = 1;
+    sortTable('points', true);
+}
+
+function sortTable(col, maintainOrder = false) {
+    if (!maintainOrder) {
+        if (currentSortCol === col) sortAsc = !sortAsc;
+        else { currentSortCol = col; sortAsc = false; }
+    }
+
+    filteredStudents.sort((a, b) => {
+        let valA = a[col];
+        let valB = b[col];
+
+        if (typeof valA === 'string') {
+            return sortAsc ? valA.localeCompare(valB) : valB.localeCompare(valA);
+        } else {
+            return sortAsc ? valA - valB : valB - valA;
+        }
+    });
+
+    renderTable();
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+    }
+}
+
+function nextPage() {
+    const totalPages = Math.ceil(filteredStudents.length / pageSize);
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+    }
+}
+
+function changePageSize() {
+    pageSize = parseInt(document.getElementById('pageSizeSelect').value);
+    currentPage = 1;
+    renderTable();
+}
+
+function showStudentModal(id) {
+    const st = allStudents.find(s => s.id === id);
+    if (!st) return;
+
+    document.getElementById('modalTitle').innerText = `ملف الطالب: ${st.id}`;
+    document.getElementById('modalBody').innerHTML = `
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px;">
+            <div><strong style="color: var(--text-secondary);">الفريق:</strong> ${st.team}</div>
+            <div><strong style="color: var(--text-secondary);">مسؤول الـ SS:</strong> ${st.agent}</div>
+            <div><strong style="color: var(--text-secondary);">الحوض التفصيلي:</strong> ${st.poolDetail}</div>
+            <div><strong style="color: var(--text-secondary);">حوض الشهر (M):</strong> ${st.paddock || 'غير محدد'}</div>
+            <div><strong style="color: var(--text-secondary);">الرصيد الحالي:</strong> <span style="font-weight: 800; color: #FBBF24;">${st.points} نقطة</span></div>
+            <div><strong style="color: var(--text-secondary);">حالة التواصل:</strong> ${st.covered === 1 ? '<span style="color:#34D399; font-weight:700;">تم التواصل</span>' : '<span style="color:#FB7185; font-weight:700;">لم يتم التواصل</span>'}</div>
+            <div><strong style="color: var(--text-secondary);">استهلاك الشهر الماضي:</strong> ${st.lastMonth} حصة</div>
+            <div><strong style="color: var(--text-secondary);">معلم ثابت:</strong> ${st.fixedTeacher === 'YES' ? 'نعم (' + st.bindingAmt + ')' : 'لا'}</div>
+            <div><strong style="color: var(--text-secondary);">تاريخ أول شراء:</strong> ${st.firstPaid || '-'}</div>
+            <div><strong style="color: var(--text-secondary);">تاريخ آخر شراء:</strong> ${st.lastPaid || '-'}</div>
+        </div>
+        <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 14px;">
+            <strong style="color: #38BDF8; display: block; margin-bottom: 6px;">سجلات الـ SOP والـ Feedback المسجل:</strong>
+            <p style="color: #E2E8F0; font-size: 13px;">${st.sopDetails || 'لا توجد مهام SOP مسجلة لهذا الطالب خلال الشهر.'}</p>
+        </div>
+        <div style="background: rgba(59, 130, 246, 0.1); padding: 12px 14px; border-radius: 10px; border-right: 4px solid #3B82F6;">
+            <strong style="color: #60A5FA;">الإجراء التشغيلي الموصى به:</strong>
+            <p style="color: #CBD5E1; font-size: 12.5px; margin-top: 4px;">
+                ${st.points > 0 
+                    ? '⚠️ اتصال فوري بولي الأمر وتثبيت معلم دائم لجدولة الحصص المتبقية (' + st.points + ' نقطة) لإنعاش استهلاك الشهر الحالي.' 
+                    : '💳 تقديم عرض تجديد مخفض خاص بحوض ' + st.poolDetail + ' لتجديد باقة الحصص.'}
+            </p>
+        </div>
+    `;
+
+    document.getElementById('detailModal').style.display = 'flex';
+}
+
+function closeModalDirect() {
+    document.getElementById('detailModal').style.display = 'none';
+}
+
+function closeModal(e) {
+    if (e.target.id === 'detailModal') {
+        closeModalDirect();
+    }
+}
+
+function exportFilteredCSV() {
+    let csv = "StudentID,Team,Agent,Pool,PoolDetail,PaddockDetail,CurrentPoints,CoveredThisMonth,LastMonthConsumption,FixedTeacher,SOPDetails\n";
+    filteredStudents.forEach(st => {
+        csv += `"${st.id}","${st.team}","${st.agent}","${st.pool}","${st.poolDetail}","${st.paddock}",${st.points},${st.covered},${st.lastMonth},"${st.fixedTeacher}","${st.sopDetails.replace(/"/g, '""')}"\n`;
+    });
+
+    const blob = new Blob(["\uFEFF" + csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", `zero_consumption_532_students_\${filteredStudents.length}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+</script>
+
+</body>
+</html>
