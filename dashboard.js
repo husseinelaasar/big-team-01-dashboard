@@ -136,8 +136,8 @@ const NEW_CONTRACTS_TARGETS = {
 const OFFICIAL_TEAMS_DATA = {
   "EGSS05": { gross: 66989, refund: 2080, cash: 64909, target: 60500, contracts: 72, officialAch: 107.3 },
   "EGSS30": { gross: 25003, refund: 0, cash: 25003, target: 28580, contracts: 27, officialAch: 87.5 },
-  "EGSS01": { gross: 35777, refund: 0, cash: 35777, target: 53700, contracts: 34, officialAch: 66.6 },
-  "EGSS10": { gross: 23583, refund: 0, cash: 23583, target: 36080, contracts: 23, officialAch: 65.4 },
+  "EGSS01": { gross: 36797, refund: 0, cash: 36797, target: 53700, contracts: 35, officialAch: 68.5 },
+  "EGSS10": { gross: 24383, refund: 0, cash: 24383, target: 36080, contracts: 24, officialAch: 67.6 },
   "EGSS13": { gross: 23690, refund: 1184, cash: 22506, target: 34530, contracts: 22, officialAch: 65.2 },
 };
 
@@ -145,7 +145,7 @@ const REPS_DATA = [
   { name: "EGSS-nohayoussry", team: "EGSS01", cash: 7420, refund: 0, target: 7990, contracts: 6, officialAch: 92.9, upgradeM2: 0, normalRenewals: 6, upgradeBase: 28, poolRenewals: 0 },
   { name: "EGSS-ashraqatal", team: "EGSS01", cash: 1760, refund: 0, target: 10420, contracts: 2, officialAch: 16.9, upgradeM2: 2, normalRenewals: 0, upgradeBase: 29, poolRenewals: 2 },
   { name: "EGSS-negma", team: "EGSS01", cash: 1352, refund: 0, target: 9260, contracts: 2, officialAch: 14.6, upgradeM2: 0, normalRenewals: 2, upgradeBase: 35, poolRenewals: 0 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 8835, refund: 0, target: 10710, contracts: 8, officialAch: 82.5, upgradeM2: 0, normalRenewals: 8, upgradeBase: 22, poolRenewals: 0 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 9855, refund: 0, target: 10710, contracts: 9, officialAch: 92, upgradeM2: 0, normalRenewals: 9, upgradeBase: 22, poolRenewals: 0 },
   { name: "EGSS-mahmoud04", team: "EGSS01", cash: 16410, refund: 0, target: 15320, contracts: 16, officialAch: 107.1, upgradeM2: 5, normalRenewals: 11, upgradeBase: 31, poolRenewals: 5 },
   { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 10555, refund: 0, target: 10380, contracts: 11, officialAch: 101.7, upgradeM2: 2, normalRenewals: 9, upgradeBase: 19, poolRenewals: 2 },
   { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 9752, refund: 0, target: 8180, contracts: 9, officialAch: 119.2, upgradeM2: 4, normalRenewals: 5, upgradeBase: 21, poolRenewals: 4 },
@@ -153,7 +153,7 @@ const REPS_DATA = [
   { name: "EGSS-khaledgonam", team: "EGSS05", cash: 12610, refund: 0, target: 10940, contracts: 13, officialAch: 115.3, upgradeM2: 0, normalRenewals: 13, upgradeBase: 13, poolRenewals: 0 },
   { name: "EGSS-omarmoneb", team: "EGSS05", cash: 7226, refund: 0, target: 9090, contracts: 9, officialAch: 79.5, upgradeM2: 1, normalRenewals: 8, upgradeBase: 16, poolRenewals: 1 },
   { name: "EGSS-samira01", team: "EGSS05", cash: 12205, refund: 0, target: 12080, contracts: 14, officialAch: 101, upgradeM2: 1, normalRenewals: 13, upgradeBase: 17, poolRenewals: 1 },
-  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 4036, refund: 0, target: 8100, contracts: 6, officialAch: 49.8, upgradeM2: 4, normalRenewals: 2, upgradeBase: 27, poolRenewals: 4 },
+  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 4836, refund: 0, target: 8100, contracts: 7, officialAch: 59.7, upgradeM2: 4, normalRenewals: 3, upgradeBase: 27, poolRenewals: 4 },
   { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 9472, refund: 0, target: 13820, contracts: 8, officialAch: 68.5, upgradeM2: 2, normalRenewals: 6, upgradeBase: 34, poolRenewals: 2 },
   { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 10075, refund: 0, target: 14160, contracts: 9, officialAch: 71.2, upgradeM2: 2, normalRenewals: 7, upgradeBase: 32, poolRenewals: 2 },
   { name: "EGSS-amrsafwat", team: "EGSS13", cash: 8960, refund: 0, target: 10760, contracts: 8, officialAch: 83.3, upgradeM2: 3, normalRenewals: 5, upgradeBase: 26, poolRenewals: 3 },
@@ -223,11 +223,11 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 79.34% vs Day 30 target 96%. Gap: 16.7pp. Need $44088/day to close.', time: '20261030_153938' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-negma (14.6%), EGSS-ashraqatal (16.9%), EGSS-marwaahmed (18%), EGSS-alihesham01 (35.5%), EGSS-abdelrhmanshehata (49.8%). Schedule targeted coaching sessions today.', time: '20261030_153938' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-adhmgadallah (118%), EGSS-ehabzaky01 (119.2%), EGSS-ibrahimismaiel (127.8%). Recognize in team channel!', time: '20261030_153938' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 64 more renewals', detail: 'Current: 36/497 (7.2%). 20% target = 100. Focus on high-base reps.', time: '20261030_153938' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $169302 (79.3%). 1 days left. Daily need: $44088. Push all pending deals!', time: '20261030_153938' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 80.19% vs Day 31 target 102%. Gap: 21.8pp. Need $0/day to close.', time: '20261031_010635' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-negma (14.6%), EGSS-ashraqatal (16.9%), EGSS-marwaahmed (18%), EGSS-alihesham01 (35.5%), EGSS-hayamhassan (53.2%). Schedule targeted coaching sessions today.', time: '20261031_010635' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-adhmgadallah (118%), EGSS-ehabzaky01 (119.2%), EGSS-ibrahimismaiel (127.8%). Recognize in team channel!', time: '20261031_010635' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 64 more renewals', detail: 'Current: 36/497 (7.2%). 20% target = 100. Focus on high-base reps.', time: '20261031_010635' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $165602 (77.6%). 0 days left. Daily need: $0. Push all pending deals!', time: '20261031_010635' },
 ];
 
 // =========================================================================
@@ -310,7 +310,7 @@ function calculateSSCommission(netCash, teamAch, teamTarget, teamCash, repAch) {
 
 // Build Unified Data Intelligence Model
 function buildDataModel() {
-  const daysPassed = 30; // Current MTD Day (Oct 3, 2026)
+  const daysPassed = 31; // Current MTD Day (Oct 3, 2026)
   const daysInMonth = 31;
   const daysLeft = daysInMonth - daysPassed;
   const expectedPace = OFFICIAL_PACING_CURVE[daysPassed] || 11;
@@ -409,10 +409,10 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official October 2026 Cash Targets Plan)
-  const totalCash = 169302; // from Individual Sheet Col G (or 指标看板 Col C)
+  const totalCash = 171122; // from Individual Sheet Col G (or 指标看板 Col C)
   const totalTarget = 213390; // from 指标看板 Col F
   const sectorAchPct = Math.round((totalCash / totalTarget) * 1000) / 10; // 5.3%
-  const totalContracts = 178; // from 指标看板 Col D
+  const totalContracts = 180; // from 指标看板 Col D
   const totalContractsTarget = 252; // Official October Contracts Target Plan (252 contracts)
   const totalUpgradeM2 = individuals.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
   const totalNormalRenewals = Math.max(0, totalContracts - totalUpgradeM2); // 18 from Student_Detail32
@@ -7269,8 +7269,8 @@ const MASTER_OPERATIONS_DATA = {
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  2,
-                    "total":  3
+                    "absence":  0,
+                    "total":  1
                 },
                 {
                     "name":  "EGSS-OmarMoneb",
@@ -7308,8 +7308,8 @@ const MASTER_OPERATIONS_DATA = {
                     "r4":  1,
                     "r6d":  1,
                     "r6e":  0,
-                    "absence":  6,
-                    "total":  11
+                    "absence":  5,
+                    "total":  10
                 },
                 {
                     "name":  "EGSS-juliamonir01",
@@ -7397,10 +7397,10 @@ const MASTER_OPERATIONS_DATA = {
                     "r2":  0,
                     "r3":  0,
                     "r4":  0,
-                    "r6d":  1,
+                    "r6d":  0,
                     "r6e":  0,
                     "absence":  0,
-                    "total":  1
+                    "total":  0
                 },
                 {
                     "name":  "EGSS-mohamedha",
@@ -7419,14 +7419,14 @@ const MASTER_OPERATIONS_DATA = {
                     "name":  "EGSS-AdhmGadAllah",
                     "team":  "ME-EGSS30",
                     "ec":  0,
-                    "r1":  1,
-                    "r2":  1,
+                    "r1":  0,
+                    "r2":  0,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
                     "absence":  0,
-                    "total":  2
+                    "total":  0
                 },
                 {
                     "name":  "EGSS-alihesham01",
@@ -7707,6 +7707,24 @@ const MASTER_OPERATIONS_DATA = {
                         }
                     ]
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8938,9 +8956,9 @@ const LEADS_SUMMARY = {
     "EGSS-marwaahmed":  {
                             "ccCount":  251,
                             "ftCount":  54,
-                            "sopCount":  4,
+                            "sopCount":  0,
                             "ecCount":  97,
-                            "totalLeads":  406
+                            "totalLeads":  402
                         },
     "EGSS-titooooo":  {
                           "ccCount":  247,
@@ -8959,9 +8977,9 @@ const LEADS_SUMMARY = {
     "EGSS-ashraqatal":  {
                             "ccCount":  297,
                             "ftCount":  78,
-                            "sopCount":  48,
+                            "sopCount":  46,
                             "ecCount":  134,
-                            "totalLeads":  557
+                            "totalLeads":  555
                         },
     "EGSS-mohamedha":  {
                            "ccCount":  209,
@@ -9001,9 +9019,9 @@ const LEADS_SUMMARY = {
     "EGSS-adhmgadallah":  {
                               "ccCount":  249,
                               "ftCount":  65,
-                              "sopCount":  2,
+                              "sopCount":  0,
                               "ecCount":  76,
-                              "totalLeads":  392
+                              "totalLeads":  390
                           },
     "EGSS-amrsafwat":  {
                            "ccCount":  257,
@@ -9022,9 +9040,9 @@ const LEADS_SUMMARY = {
     "EGSS-mahmoud04":  {
                            "ccCount":  317,
                            "ftCount":  65,
-                           "sopCount":  61,
+                           "sopCount":  22,
                            "ecCount":  119,
-                           "totalLeads":  562
+                           "totalLeads":  523
                        },
     "EGSS-ahmedshoukry":  {
                               "ccCount":  279,
@@ -9071,9 +9089,9 @@ const LEADS_SUMMARY = {
     "EGSS-khaledgonam":  {
                              "ccCount":  255,
                              "ftCount":  52,
-                             "sopCount":  45,
+                             "sopCount":  42,
                              "ecCount":  87,
-                             "totalLeads":  439
+                             "totalLeads":  436
                          }
 };
 
@@ -12427,21 +12445,21 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-10-30 14:28:37', name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-10-30 21:13:24', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
       chkId: 'chkECSheet',
       timeId: 'timeECSheet',
       itemId: 'syncItemEC',
-      latestTime: '2026-10-30 14:23:28', name: 'English Club Sheet'
+      latestTime: '2026-10-30 21:13:24', name: 'English Club Sheet'
     },
     {
       idPrefix: 'SOP',
       chkId: 'chkSOPSheet',
       timeId: 'timeSOPSheet',
       itemId: 'syncItemSOP',
-      latestTime: '2026-10-30 14:22:59', name: 'SOP Compliance Sheet'
+      latestTime: '2026-10-30 21:13:23', name: 'SOP Compliance Sheet'
     }
   ];
 
@@ -14509,6 +14527,42 @@ function exportCurrentFilteredUncoveredCsv() {
   // Auto-run hazard alert scan
   setTimeout(() => scanAndApplyHazardAlerts(), 200);
   setInterval(() => scanAndApplyHazardAlerts(), 2500);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

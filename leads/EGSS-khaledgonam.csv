@@ -1,11 +1,9 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-khaledgonam | Generated: 2026-10-30 15:39
+# Representative: EGSS-khaledgonam | Generated: 2026-10-31 01:06
 
-=== 1. SOP PENDING TASKS (45) ===
+=== 1. SOP PENDING TASKS (42) ===
 Student_ID,Task_Name,Expiration_Time
 58732609,"Round 1  Awareness building (First call)",20261031 18:55:00
-62814948,"SS:Service warning - absence",20261031 18:55:00
-63416804,"SS:Service warning - absence",20261031 18:55:00
 58300787,"SS：Service warning - class interruption",20261031 23:59:59
 58304605,"SS：Service warning - class interruption",20261031 23:59:59
 58925465,"SS：Service warning - class interruption",20261031 23:59:59
@@ -45,7 +43,6 @@ Student_ID,Task_Name,Expiration_Time
 63273724,"SS：Service warning - class interruption",20261031 23:59:59
 63324423,"SS：Service warning - class interruption",20261031 23:59:59
 63389237,"SS：Service warning - class interruption",20261031 23:59:59
-63416804,"SS：Service warning - class interruption",20261031 23:59:59
 63426050,"SS：Service warning - class interruption",20261031 23:59:59
 63452831,"SS：Service warning - class interruption",20261031 23:59:59
 
@@ -441,8 +438,8 @@ Student_ID,Level,Completed,Status
 64157238,"1",0,"Booking Required"
 64313133,"3",1,"Attended"
 60535581,"3",0,"Booking Required"
-64271454,"1",1,"Attended"
 62818022,"1",0,"Booking Required"
+64271454,"1",1,"Attended"
 59758773,"2",0,"Booking Required"
 64395735,"2",0,"Booking Required"
 64411128,"2",0,"Booking Required"

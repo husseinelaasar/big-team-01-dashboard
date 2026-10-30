@@ -9,9 +9,9 @@
     "EGSS-marwaahmed":  {
                             "ccCount":  251,
                             "ftCount":  54,
-                            "sopCount":  4,
+                            "sopCount":  0,
                             "ecCount":  97,
-                            "totalLeads":  406
+                            "totalLeads":  402
                         },
     "EGSS-titooooo":  {
                           "ccCount":  247,
@@ -30,9 +30,9 @@
     "EGSS-ashraqatal":  {
                             "ccCount":  297,
                             "ftCount":  78,
-                            "sopCount":  48,
+                            "sopCount":  46,
                             "ecCount":  134,
-                            "totalLeads":  557
+                            "totalLeads":  555
                         },
     "EGSS-mohamedha":  {
                            "ccCount":  209,
@@ -72,9 +72,9 @@
     "EGSS-adhmgadallah":  {
                               "ccCount":  249,
                               "ftCount":  65,
-                              "sopCount":  2,
+                              "sopCount":  0,
                               "ecCount":  76,
-                              "totalLeads":  392
+                              "totalLeads":  390
                           },
     "EGSS-amrsafwat":  {
                            "ccCount":  257,
@@ -93,9 +93,9 @@
     "EGSS-mahmoud04":  {
                            "ccCount":  317,
                            "ftCount":  65,
-                           "sopCount":  61,
+                           "sopCount":  22,
                            "ecCount":  119,
-                           "totalLeads":  562
+                           "totalLeads":  523
                        },
     "EGSS-ahmedshoukry":  {
                               "ccCount":  279,
@@ -142,8 +142,8 @@
     "EGSS-khaledgonam":  {
                              "ccCount":  255,
                              "ftCount":  52,
-                             "sopCount":  45,
+                             "sopCount":  42,
                              "ecCount":  87,
-                             "totalLeads":  439
+                             "totalLeads":  436
                          }
 }

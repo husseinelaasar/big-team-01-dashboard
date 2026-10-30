@@ -1,5 +1,5 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-ehabzaky01 | Generated: 2026-10-30 15:39
+# Representative: EGSS-ehabzaky01 | Generated: 2026-10-31 01:06
 
 === 1. SOP PENDING TASKS (5) ===
 Student_ID,Task_Name,Expiration_Time
@@ -305,8 +305,8 @@ Student_ID,Level,Completed,Status
 63146293,"0",0,"Booking Required"
 59579268,"1",0,"Booking Required"
 63162939,"1",0,"Booking Required"
-63174276,"1",0,"Booking Required"
 63174166,"2",0,"Booking Required"
+63174276,"1",0,"Booking Required"
 63164166,"2",1,"Attended"
 61723596,"0",1,"Attended"
 62044650,"3",0,"Booking Required"
@@ -351,8 +351,8 @@ Student_ID,Level,Completed,Status
 63671406,"1",0,"Booking Required"
 63681587,"0",1,"Attended"
 63655005,"1",0,"Booking Required"
-63682352,"1",1,"Attended"
 60131952,"1",0,"Booking Required"
+63682352,"1",1,"Attended"
 63688784,"2",0,"Booked"
 63688695,"2",0,"Booking Required"
 63652858,"1",0,"Booking Required"
@@ -394,8 +394,8 @@ Student_ID,Level,Completed,Status
 61420176,"0",1,"Attended"
 64232141,"0",1,"Attended"
 64232138,"0",1,"Attended"
-64236386,"0",1,"Attended"
 64269720,"0",1,"Attended"
+64236386,"0",1,"Attended"
 64255653,"2",1,"Attended"
 64247864,"1",2,"Attended"
 64244901,"1",1,"Attended"
@@ -407,6 +407,6 @@ Student_ID,Level,Completed,Status
 63835952,"0",1,"Attended"
 64431542,"0",1,"Attended"
 64186667,"1",1,"Attended"
+58788539,"0",0,"Booked"
 64476288,"3",0,"Booking Required"
 64476767,"2",0,"Booking Required"
-58788539,"0",0,"Booked"
