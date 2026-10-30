@@ -223,11 +223,11 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 74.45% vs Day 30 target 96%. Gap: 21.5pp. Need $54513/day to close.', time: '20261030_044726' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (8.4%), EGSS-negma (14.6%), EGSS-marwaahmed (18%), EGSS-alihesham01 (25%), EGSS-abdelrhmanshehata (49.8%). Schedule targeted coaching sessions today.', time: '20261030_044726' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-adhmgadallah (118%), EGSS-ehabzaky01 (119.2%), EGSS-ibrahimismaiel (127.8%). Recognize in team channel!', time: '20261030_044726' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 69 more renewals', detail: 'Current: 31/497 (6.2%). 20% target = 100. Focus on high-base reps.', time: '20261030_044726' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $158877 (74.5%). 1 days left. Daily need: $54513. Push all pending deals!', time: '20261030_044726' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 74.45% vs Day 30 target 96%. Gap: 21.5pp. Need $54513/day to close.', time: '20261030_084727' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-ashraqatal (8.4%), EGSS-negma (14.6%), EGSS-marwaahmed (18%), EGSS-alihesham01 (25%), EGSS-abdelrhmanshehata (49.8%). Schedule targeted coaching sessions today.', time: '20261030_084727' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-adhmgadallah (118%), EGSS-ehabzaky01 (119.2%), EGSS-ibrahimismaiel (127.8%). Recognize in team channel!', time: '20261030_084727' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 69 more renewals', detail: 'Current: 31/497 (6.2%). 20% target = 100. Focus on high-base reps.', time: '20261030_084727' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $158877 (74.5%). 1 days left. Daily need: $54513. Push all pending deals!', time: '20261030_084727' },
 ];
 
 // =========================================================================
@@ -8556,6 +8556,8 @@ const MASTER_OPERATIONS_DATA = {
 
 
 
+
+
 window.MASTER_OPERATIONS_DATA = MASTER_OPERATIONS_DATA;
 
 let currentOperationsModule = 1;
@@ -14501,6 +14503,10 @@ function exportCurrentFilteredUncoveredCsv() {
   // Auto-run hazard alert scan
   setTimeout(() => scanAndApplyHazardAlerts(), 200);
   setInterval(() => scanAndApplyHazardAlerts(), 2500);
+
+
+
+
 
 
 
