@@ -138,31 +138,31 @@ const OFFICIAL_TEAMS_DATA = {
   "EGSS30": { gross: 25003, refund: 0, cash: 25003, target: 28580, contracts: 27, officialAch: 87.5 },
   "EGSS01": { gross: 38377, refund: 0, cash: 38377, target: 53700, contracts: 37, officialAch: 71.5 },
   "EGSS10": { gross: 25723, refund: 0, cash: 25723, target: 36080, contracts: 26, officialAch: 71.3 },
-  "EGSS13": { gross: 23690, refund: 1184, cash: 22506, target: 34530, contracts: 22, officialAch: 65.2 },
+  "EGSS13": { gross: 24970, refund: 1184, cash: 23786, target: 34530, contracts: 23, officialAch: 68.9 },
 };
 
 const REPS_DATA = [
-  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 8120, refund: 0, target: 7990, contracts: 7, officialAch: 101.6, upgradeM2: 1, normalRenewals: 6, upgradeBase: 28, poolRenewals: 1 },
-  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 2640, refund: 0, target: 10420, contracts: 3, officialAch: 25.3, upgradeM2: 2, normalRenewals: 1, upgradeBase: 29, poolRenewals: 2 },
-  { name: "EGSS-negma", team: "EGSS01", cash: 1352, refund: 0, target: 9260, contracts: 2, officialAch: 14.6, upgradeM2: 0, normalRenewals: 2, upgradeBase: 35, poolRenewals: 0 },
-  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 9855, refund: 0, target: 10710, contracts: 9, officialAch: 92, upgradeM2: 0, normalRenewals: 9, upgradeBase: 22, poolRenewals: 0 },
-  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 16410, refund: 0, target: 15320, contracts: 16, officialAch: 107.1, upgradeM2: 5, normalRenewals: 11, upgradeBase: 31, poolRenewals: 5 },
+  { name: "EGSS-nohayoussry", team: "EGSS01", cash: 8120, refund: 0, target: 7990, contracts: 7, officialAch: 101.6, upgradeM2: 0, normalRenewals: 6, upgradeBase: 28, poolRenewals: 0 },
+  { name: "EGSS-ashraqatal", team: "EGSS01", cash: 2640, refund: 0, target: 10420, contracts: 3, officialAch: 25.3, upgradeM2: 3, normalRenewals: 0, upgradeBase: 29, poolRenewals: 3 },
+  { name: "EGSS-negma", team: "EGSS01", cash: 1352, refund: 0, target: 9260, contracts: 2, officialAch: 14.6, upgradeM2: 0, normalRenewals: 0, upgradeBase: 35, poolRenewals: 0 },
+  { name: "EGSS-juliamonir01", team: "EGSS01", cash: 9855, refund: 0, target: 10710, contracts: 9, officialAch: 92, upgradeM2: 0, normalRenewals: 8, upgradeBase: 22, poolRenewals: 0 },
+  { name: "EGSS-mahmoud04", team: "EGSS01", cash: 16410, refund: 0, target: 15320, contracts: 16, officialAch: 107.1, upgradeM2: 5, normalRenewals: 12, upgradeBase: 31, poolRenewals: 5 },
   { name: "EGSS-abdelrahmannasef", team: "EGSS05", cash: 10555, refund: 0, target: 10380, contracts: 11, officialAch: 101.7, upgradeM2: 2, normalRenewals: 9, upgradeBase: 19, poolRenewals: 2 },
-  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 9752, refund: 0, target: 8180, contracts: 9, officialAch: 119.2, upgradeM2: 3, normalRenewals: 6, upgradeBase: 21, poolRenewals: 3 },
+  { name: "EGSS-ehabzaky01", team: "EGSS05", cash: 9752, refund: 0, target: 8180, contracts: 9, officialAch: 119.2, upgradeM2: 4, normalRenewals: 5, upgradeBase: 21, poolRenewals: 4 },
   { name: "EGSS-ibrahimismaiel", team: "EGSS05", cash: 12561, refund: 2080, target: 9830, contracts: 16, officialAch: 127.8, upgradeM2: 1, normalRenewals: 15, upgradeBase: 27, poolRenewals: 1 },
   { name: "EGSS-khaledgonam", team: "EGSS05", cash: 12610, refund: 0, target: 10940, contracts: 13, officialAch: 115.3, upgradeM2: 0, normalRenewals: 13, upgradeBase: 13, poolRenewals: 0 },
   { name: "EGSS-omarmoneb", team: "EGSS05", cash: 7226, refund: 0, target: 9090, contracts: 9, officialAch: 79.5, upgradeM2: 1, normalRenewals: 8, upgradeBase: 16, poolRenewals: 1 },
-  { name: "EGSS-samira01", team: "EGSS05", cash: 12205, refund: 0, target: 12080, contracts: 14, officialAch: 101, upgradeM2: 0, normalRenewals: 14, upgradeBase: 17, poolRenewals: 0 },
-  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 4836, refund: 0, target: 8100, contracts: 7, officialAch: 59.7, upgradeM2: 3, normalRenewals: 4, upgradeBase: 27, poolRenewals: 3 },
+  { name: "EGSS-samira01", team: "EGSS05", cash: 12205, refund: 0, target: 12080, contracts: 14, officialAch: 101, upgradeM2: 1, normalRenewals: 13, upgradeBase: 17, poolRenewals: 1 },
+  { name: "EGSS-abdelrhmanshehata", team: "EGSS10", cash: 4836, refund: 0, target: 8100, contracts: 7, officialAch: 59.7, upgradeM2: 4, normalRenewals: 3, upgradeBase: 27, poolRenewals: 4 },
   { name: "EGSS-ahmedshoukry", team: "EGSS10", cash: 9472, refund: 0, target: 13820, contracts: 8, officialAch: 68.5, upgradeM2: 2, normalRenewals: 6, upgradeBase: 34, poolRenewals: 2 },
   { name: "EGSS-mahmoudkhamis", team: "EGSS10", cash: 11415, refund: 0, target: 14160, contracts: 11, officialAch: 80.6, upgradeM2: 2, normalRenewals: 9, upgradeBase: 32, poolRenewals: 2 },
   { name: "EGSS-amrsafwat", team: "EGSS13", cash: 8960, refund: 0, target: 10760, contracts: 8, officialAch: 83.3, upgradeM2: 3, normalRenewals: 5, upgradeBase: 26, poolRenewals: 3 },
   { name: "EGSS-hayamhassan", team: "EGSS13", cash: 2326, refund: 1184, target: 4370, contracts: 5, officialAch: 53.2, upgradeM2: 2, normalRenewals: 3, upgradeBase: 21, poolRenewals: 2 },
-  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 2040, refund: 0, target: 11360, contracts: 2, officialAch: 18, upgradeM2: 0, normalRenewals: 2, upgradeBase: 16, poolRenewals: 0 },
-  { name: "EGSS-mohamedha", team: "EGSS13", cash: 9180, refund: 0, target: 8040, contracts: 7, officialAch: 114.2, upgradeM2: 0, normalRenewals: 7, upgradeBase: 20, poolRenewals: 0 },
+  { name: "EGSS-marwaahmed", team: "EGSS13", cash: 3320, refund: 0, target: 11360, contracts: 3, officialAch: 29.2, upgradeM2: 0, normalRenewals: 2, upgradeBase: 16, poolRenewals: 0 },
+  { name: "EGSS-mohamedha", team: "EGSS13", cash: 9180, refund: 0, target: 8040, contracts: 7, officialAch: 114.2, upgradeM2: 0, normalRenewals: 6, upgradeBase: 20, poolRenewals: 0 },
   { name: "EGSS-adhmgadallah", team: "EGSS30", cash: 14113, refund: 0, target: 11960, contracts: 14, officialAch: 118, upgradeM2: 2, normalRenewals: 12, upgradeBase: 26, poolRenewals: 2 },
   { name: "EGSS-alihesham01", team: "EGSS30", cash: 2700, refund: 0, target: 7610, contracts: 3, officialAch: 35.5, upgradeM2: 1, normalRenewals: 2, upgradeBase: 18, poolRenewals: 1 },
-  { name: "EGSS-titooooo", team: "EGSS30", cash: 8190, refund: 0, target: 9010, contracts: 10, officialAch: 90.9, upgradeM2: 3, normalRenewals: 7, upgradeBase: 19, poolRenewals: 3 },
+  { name: "EGSS-titooooo", team: "EGSS30", cash: 8190, refund: 0, target: 9010, contracts: 10, officialAch: 90.9, upgradeM2: 4, normalRenewals: 6, upgradeBase: 19, poolRenewals: 4 },
 ];
 
 // SOP Process Compliance Data (51Talk Data Center)
@@ -223,11 +223,11 @@ const OFFICIAL_PACING_CURVE = {
 };
 
 const DAILY_RECOMMENDATIONS = [
-  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 81.56% vs Day 31 target 102%. Gap: 20.4pp. Need $0/day to close.', time: '20261031_130032' },
-  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-negma (14.6%), EGSS-marwaahmed (18%), EGSS-ashraqatal (25.3%), EGSS-alihesham01 (35.5%), EGSS-hayamhassan (53.2%). Schedule targeted coaching sessions today.', time: '20261031_130032' },
-  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-adhmgadallah (118%), EGSS-ehabzaky01 (119.2%), EGSS-ibrahimismaiel (127.8%). Recognize in team channel!', time: '20261031_130032' },
-  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 67 more renewals', detail: 'Current: 33/497 (6.6%). 20% target = 100. Focus on high-base reps.', time: '20261031_130032' },
-  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $168428 (78.9%). 0 days left. Daily need: $0. Push all pending deals!', time: '20261031_130032' },
+  { type: 'critical', icon: '🔴', title: 'Sector BEHIND Pace', detail: 'Ach 82.16% vs Day 31 target 102%. Gap: 19.8pp. Need $0/day to close.', time: '20261031_130929' },
+  { type: 'action', icon: '📋', title: 'Bottom 5 Reps Need Support', detail: 'EGSS-negma (14.6%), EGSS-ashraqatal (25.3%), EGSS-marwaahmed (29.2%), EGSS-alihesham01 (35.5%), EGSS-hayamhassan (53.2%). Schedule targeted coaching sessions today.', time: '20261031_130929' },
+  { type: 'success', icon: '⭐', title: 'Top 3 Stars Today', detail: 'EGSS-adhmgadallah (118%), EGSS-ehabzaky01 (119.2%), EGSS-ibrahimismaiel (127.8%). Recognize in team channel!', time: '20261031_130929' },
+  { type: 'action', icon: '🎯', title: 'Upgrade M2: Need 63 more renewals', detail: 'Current: 37/497 (7.4%). 20% target = 100. Focus on high-base reps.', time: '20261031_130929' },
+  { type: 'action', icon: '🏁', title: 'End-of-Month Sprint Mode', detail: 'Projected: $169666 (79.5%). 0 days left. Daily need: $0. Push all pending deals!', time: '20261031_130929' },
 ];
 
 // =========================================================================
@@ -409,13 +409,13 @@ function buildDataModel() {
   });
 
   // Reconciled Sector Totals (Official October 2026 Cash Targets Plan)
-  const totalCash = 174042; // from Individual Sheet Col G (or 指标看板 Col C)
+  const totalCash = 175322; // from Individual Sheet Col G (or 指标看板 Col C)
   const totalTarget = 213390; // from 指标看板 Col F
   const sectorAchPct = Math.round((totalCash / totalTarget) * 1000) / 10; // 5.3%
-  const totalContracts = 184; // from 指标看板 Col D
+  const totalContracts = 185; // from 指标看板 Col D
   const totalContractsTarget = 252; // Official October Contracts Target Plan (252 contracts)
-  const totalUpgradeM2 = individuals.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
-  const totalNormalRenewals = Math.max(0, totalContracts - totalUpgradeM2); // 18 from Student_Detail32
+  const totalUpgradeM2 = Math.max(38, individuals.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0));
+  const totalNormalRenewals = Math.max(143, individuals.reduce((sum, r) => sum + (r.normalRenewals || 0), 0));
   const totalUpgradeBase = individuals.reduce((sum, r) => sum + (r.upgradeBase || 0), 0) || 497;
   const totalUpgrade20Target = Math.ceil(totalUpgradeBase * 0.20); // 100
   const totalUpgrade20Needed = Math.max(0, totalUpgrade20Target - totalUpgradeM2); // 97
@@ -1596,6 +1596,7 @@ function renderIndividualsTab(model) {
         </span>
       </td>
       <td style="font-family: var(--font-mono); font-weight: 800; color: ${r.upgradeM2 > 0 ? '#10b981' : 'var(--text-muted)'}; font-size: 0.85rem;">${r.upgradeM2}</td>
+      <td style="font-family: var(--font-mono); font-weight: 800; color: ${r.normalRenewals > 0 ? '#38bdf8' : 'var(--text-muted)'}; font-size: 0.85rem;">${r.normalRenewals || 0}</td>
       <td style="font-family: var(--font-mono); color: var(--text-secondary); font-size: 0.80rem;">${r.upgradeBase}</td>
       <td style="font-family: var(--font-mono); text-align: center; vertical-align: middle; background: rgba(192, 132, 252, 0.05); border-left: 1px solid rgba(192, 132, 252, 0.2); border-right: 1px solid rgba(192, 132, 252, 0.2); white-space: nowrap;">
         <strong style="color: #c084fc; font-size: 0.88rem;">${r.upgrade20Target}</strong>
@@ -1661,6 +1662,7 @@ function renderIndividualsTab(model) {
             <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(sectorExpCash)}</div>
           </td>
           <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${s.totalUpgradeM2}</td>
+          <td style="font-family: var(--font-mono); color: #38bdf8; font-size: 0.95rem;">${s.totalNormalRenewals}</td>
           <td style="font-family: var(--font-mono);">${s.totalUpgradeBase}</td>
           <td style="font-family: var(--font-mono); color: #c084fc; text-align: center;">
             <strong style="font-size: 0.95rem;">${s.totalUpgrade20Target}</strong>
@@ -1685,8 +1687,9 @@ function renderIndividualsTab(model) {
       const teamAch = teamTarget > 0 ? ((teamCash / teamTarget) * 100) : 0;
       const teamExpCash = Math.round(teamTarget * (pacePct / 100));
       const teamDeltaPace = Math.round((teamAch - pacePct) * 10) / 10;
-      const teamUpgradeM2 = filtered.reduce((sum, r) => sum + r.upgradeM2, 0);
-      const teamUpgradeBase = filtered.reduce((sum, r) => sum + r.upgradeBase, 0);
+      const teamUpgradeM2 = filtered.reduce((sum, r) => sum + (r.upgradeM2 || 0), 0);
+      const teamNormalRenewals = filtered.reduce((sum, r) => sum + (r.normalRenewals || 0), 0);
+      const teamUpgradeBase = filtered.reduce((sum, r) => sum + (r.upgradeBase || 0), 0);
       const teamUpgrade20Target = Math.ceil(teamUpgradeBase * 0.20);
       const teamUpgrade20Needed = Math.max(0, teamUpgrade20Target - teamUpgradeM2);
       const teamUpgradeRate = teamUpgradeBase > 0 ? ((teamUpgradeM2 / teamUpgradeBase) * 100) : 0;
@@ -1709,6 +1712,7 @@ function renderIndividualsTab(model) {
             <div style="font-size: 0.68rem; color: #38bdf8; margin-top: 2px; font-family: var(--font-mono);">Exp: ${fmt(teamExpCash)}</div>
           </td>
           <td style="font-family: var(--font-mono); color: #10b981; font-size: 0.95rem;">${teamUpgradeM2}</td>
+          <td style="font-family: var(--font-mono); color: #38bdf8; font-size: 0.95rem;">${teamNormalRenewals}</td>
           <td style="font-family: var(--font-mono);">${teamUpgradeBase}</td>
           <td style="font-family: var(--font-mono); color: #c084fc; text-align: center;">
             <strong style="font-size: 0.95rem;">${teamUpgrade20Target}</strong>
@@ -7095,13 +7099,13 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-nohayoussry",
                         "team":  "ME-EGSS01",
-                        "upgradeM2":  1,
+                        "upgradeM2":  0,
                         "upgradeBase":  28
                     },
                     {
                         "name":  "EGSS-ashraqatal",
                         "team":  "ME-EGSS01",
-                        "upgradeM2":  2,
+                        "upgradeM2":  3,
                         "upgradeBase":  29
                     },
                     {
@@ -7131,7 +7135,7 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-ehabzaky01",
                         "team":  "ME-EGSS05",
-                        "upgradeM2":  3,
+                        "upgradeM2":  4,
                         "upgradeBase":  21
                     },
                     {
@@ -7155,13 +7159,13 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-samira01",
                         "team":  "ME-EGSS05",
-                        "upgradeM2":  0,
+                        "upgradeM2":  1,
                         "upgradeBase":  17
                     },
                     {
                         "name":  "EGSS-abdelrhmanshehata",
                         "team":  "ME-EGSS10",
-                        "upgradeM2":  3,
+                        "upgradeM2":  4,
                         "upgradeBase":  27
                     },
                     {
@@ -7215,7 +7219,7 @@ const MASTER_OPERATIONS_DATA = {
                     {
                         "name":  "EGSS-titooooo",
                         "team":  "ME-EGSS30",
-                        "upgradeM2":  3,
+                        "upgradeM2":  4,
                         "upgradeBase":  19
                     }
                 ],
@@ -7225,13 +7229,13 @@ const MASTER_OPERATIONS_DATA = {
                     "team":  "ME-EGSS05",
                     "ec":  0,
                     "r1":  1,
-                    "r2":  1,
+                    "r2":  0,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
                     "absence":  1,
-                    "total":  3
+                    "total":  2
                 },
                 {
                     "name":  "EGSS-ehabzaky01",
@@ -7329,13 +7333,13 @@ const MASTER_OPERATIONS_DATA = {
                     "team":  "ME-EGSS01",
                     "ec":  1,
                     "r1":  0,
-                    "r2":  4,
+                    "r2":  0,
                     "r3":  0,
                     "r4":  1,
                     "r6d":  2,
                     "r6e":  0,
                     "absence":  3,
-                    "total":  11
+                    "total":  7
                 },
                 {
                     "name":  "EGSS-negma",
@@ -7474,24 +7478,24 @@ const MASTER_OPERATIONS_DATA = {
                     "r1":  0,
                     "r2":  0,
                     "r3":  0,
-                    "r4":  1,
+                    "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
-                    "absence":  1,
-                    "total":  2
+                    "absence":  0,
+                    "total":  0
                 },
                 {
                     "name":  "EGSS-Mahmoudkhamis",
                     "team":  "ME-EGSS10",
-                    "ec":  1,
+                    "ec":  0,
                     "r1":  0,
-                    "r2":  1,
-                    "r3":  1,
+                    "r2":  0,
+                    "r3":  0,
                     "r4":  0,
-                    "r6d":  2,
+                    "r6d":  0,
                     "r6e":  0,
                     "absence":  0,
-                    "total":  5
+                    "total":  0
                 }
             ],
     "englishClub":  [
@@ -7707,6 +7711,10 @@ const MASTER_OPERATIONS_DATA = {
                         }
                     ]
 };
+
+
+
+
 
 
 
@@ -8985,9 +8993,9 @@ const LEADS_SUMMARY = {
     "EGSS-ashraqatal":  {
                             "ccCount":  297,
                             "ftCount":  79,
-                            "sopCount":  46,
+                            "sopCount":  43,
                             "ecCount":  134,
-                            "totalLeads":  556
+                            "totalLeads":  553
                         },
     "EGSS-mohamedha":  {
                            "ccCount":  209,
@@ -8999,9 +9007,9 @@ const LEADS_SUMMARY = {
     "EGSS-abdelrahmannasef":  {
                                   "ccCount":  220,
                                   "ftCount":  45,
-                                  "sopCount":  13,
+                                  "sopCount":  12,
                                   "ecCount":  94,
-                                  "totalLeads":  372
+                                  "totalLeads":  371
                               },
     "EGSS-alihesham01":  {
                              "ccCount":  139,
@@ -9020,9 +9028,9 @@ const LEADS_SUMMARY = {
     "EGSS-mahmoudkhamis":  {
                                "ccCount":  280,
                                "ftCount":  47,
-                               "sopCount":  5,
+                               "sopCount":  0,
                                "ecCount":  124,
-                               "totalLeads":  456
+                               "totalLeads":  451
                            },
     "EGSS-adhmgadallah":  {
                               "ccCount":  249,
@@ -9048,16 +9056,16 @@ const LEADS_SUMMARY = {
     "EGSS-mahmoud04":  {
                            "ccCount":  317,
                            "ftCount":  69,
-                           "sopCount":  18,
+                           "sopCount":  7,
                            "ecCount":  119,
-                           "totalLeads":  523
+                           "totalLeads":  512
                        },
     "EGSS-ahmedshoukry":  {
                               "ccCount":  279,
                               "ftCount":  73,
-                              "sopCount":  2,
+                              "sopCount":  0,
                               "ecCount":  132,
-                              "totalLeads":  486
+                              "totalLeads":  484
                           },
     "EGSS-negma":  {
                        "ccCount":  0,
@@ -12453,21 +12461,21 @@ function checkSheetSyncStatus() {
       chkId: 'chkLensSheet',
       timeId: 'timeLensSheet',
       itemId: 'syncItemLens',
-      latestTime: '2026-10-31 11:32:18', name: 'Lens Sheet (POOL_Detail16)'
+      latestTime: '2026-10-31 13:08:46', name: 'Lens Sheet (POOL_Detail16)'
     },
     {
       idPrefix: 'EC',
       chkId: 'chkECSheet',
       timeId: 'timeECSheet',
       itemId: 'syncItemEC',
-      latestTime: '2026-10-31 12:47:19', name: 'English Club Sheet'
+      latestTime: '2026-10-31 13:08:46', name: 'English Club Sheet'
     },
     {
       idPrefix: 'SOP',
       chkId: 'chkSOPSheet',
       timeId: 'timeSOPSheet',
       itemId: 'syncItemSOP',
-      latestTime: '2026-10-31 11:31:11', name: 'SOP Compliance Sheet'
+      latestTime: '2026-10-31 13:08:45', name: 'SOP Compliance Sheet'
     }
   ];
 
@@ -14535,6 +14543,12 @@ function exportCurrentFilteredUncoveredCsv() {
   // Auto-run hazard alert scan
   setTimeout(() => scanAndApplyHazardAlerts(), 200);
   setInterval(() => scanAndApplyHazardAlerts(), 2500);
+
+
+
+
+
+
 
 
 
