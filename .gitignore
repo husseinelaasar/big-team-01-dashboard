@@ -30,3 +30,8 @@ Old/
 scratch/
 
 Data Center/
+
+# Security & Source Protection
+dashboard.src.js
+security_shield.js
+*.bak*

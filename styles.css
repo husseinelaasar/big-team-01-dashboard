@@ -4145,3 +4145,13 @@ strong[style*="239, 68, 68"] {
   color: #38bdf8 !important;
 }
 
+
+
+/* ============ ANTI-COPY & ANTI-SELECTION PROTECTION ============ */
+html, body, *:not(input):not(textarea):not(select) {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
