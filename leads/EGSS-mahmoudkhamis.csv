@@ -1,13 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-mahmoudkhamis | Generated: 2026-10-31 13:00
+# Representative: EGSS-mahmoudkhamis | Generated: 2026-10-31 13:09
 
-=== 1. SOP PENDING TASKS (5) ===
+=== 1. SOP PENDING TASKS (0) ===
 Student_ID,Task_Name,Expiration_Time
-63375633,"Round 2  Trust Enhancement (First Class Follow-up)",20261031 18:55:00
-64569077,"English Club Booking",20261031 18:55:00
-64591355,"Round 3 Habit Cultivation (1st Unit Assessment)",20261031 18:55:00
-60826872,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
-63980171,"Round 5 Learning Path Planning-Upgrade outsidepool",20261031 23:59:59
 
 === 2. UNFIXED TEACHER BINDING (47) ===
 Student_ID,Pool_Cohort,Classes,Priority
@@ -349,8 +344,8 @@ Student_ID,Level,Completed,Status
 63147817,"1",0,"Booking Required"
 63068393,"3",1,"Attended"
 63181031,"1",1,"Attended"
-61514239,"1",0,"Booking Required"
 63225332,"0",0,"Booking Required"
+61514239,"1",0,"Booking Required"
 58617061,"1",0,"Booking Required"
 63216516,"1",0,"Booking Required"
 63265206,"1",0,"Booking Required"
@@ -461,8 +456,8 @@ Student_ID,Level,Completed,Status
 64286367,"0",1,"Attended"
 64323065,"3",0,"Booking Required"
 59614444,"3",0,"Booked"
-64410225,"0",0,"Booking Required"
 60393843,"1",1,"Attended"
+64410225,"0",0,"Booking Required"
 64430780,"2",1,"Attended"
 59387628,"1",0,"Booking Required"
 64314782,"1",0,"Booking Required"

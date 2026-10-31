@@ -176,7 +176,7 @@
                                                          "high":  315
                                                      }
                                    },
-                 "generatedAt":  "2026-10-31 13:01:18",
+                 "generatedAt":  "2026-10-31 13:10:13",
                  "dormantCount":  978,
                  "uncontactedCount":  23,
                  "lowTierCount":  201,
@@ -27779,12 +27779,12 @@
                   },
                   {
                       "PriorityRank":  1534,
-                      "StudentId":  "63045215",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
+                      "StudentId":  "58441892",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  9,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "\u003e=8 Classes (Medium-High)",
@@ -27797,12 +27797,12 @@
                   },
                   {
                       "PriorityRank":  1535,
-                      "StudentId":  "58441892",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "63045215",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  9,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "\u003e=8 Classes (Medium-High)",
@@ -29831,9 +29831,9 @@
                   },
                   {
                       "PriorityRank":  1648,
-                      "StudentId":  "63399017",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "63446516",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -29849,9 +29849,9 @@
                   },
                   {
                       "PriorityRank":  1649,
-                      "StudentId":  "63446516",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "63399017",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -29885,24 +29885,6 @@
                   },
                   {
                       "PriorityRank":  1651,
-                      "StudentId":  "63799176",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  8,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "\u003e=8 Classes (Medium-High)",
-                      "LastConnectionTime":  "2026-07-27 00:00:00",
-                      "ConnectionDisplay":  "2026-07-27 00:00:00",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260720",
-                      "RecommendedAction":  "HIGH PRIORITY - Serious Student Retention",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  1652,
                       "StudentId":  "63813382",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -29916,6 +29898,24 @@
                       "ConnectionDisplay":  "2026-07-27 00:00:00",
                       "ConnectionSource":  "CRM System Outreach",
                       "LastPaidDate":  "20260725",
+                      "RecommendedAction":  "HIGH PRIORITY - Serious Student Retention",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  1652,
+                      "StudentId":  "63799176",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  8,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "\u003e=8 Classes (Medium-High)",
+                      "LastConnectionTime":  "2026-07-27 00:00:00",
+                      "ConnectionDisplay":  "2026-07-27 00:00:00",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260720",
                       "RecommendedAction":  "HIGH PRIORITY - Serious Student Retention",
                       "IsCovered":  0
                   },
@@ -31667,24 +31667,6 @@
                   },
                   {
                       "PriorityRank":  1750,
-                      "StudentId":  "62016583",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  7,
-                      "BookedUnattended":  1,
-                      "AttendanceTier":  "\u003e=4 Classes (Medium)",
-                      "LastConnectionTime":  "2025-12-09 00:00:00",
-                      "ConnectionDisplay":  "2025-12-09 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251209",
-                      "RecommendedAction":  "PRIORITY - Active Student Upgrade Pitch",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  1751,
                       "StudentId":  "62024047",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -31702,8 +31684,26 @@
                       "IsCovered":  0
                   },
                   {
+                      "PriorityRank":  1751,
+                      "StudentId":  "62016583",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  7,
+                      "BookedUnattended":  1,
+                      "AttendanceTier":  "\u003e=4 Classes (Medium)",
+                      "LastConnectionTime":  "2025-12-09 00:00:00",
+                      "ConnectionDisplay":  "2025-12-09 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251209",
+                      "RecommendedAction":  "PRIORITY - Active Student Upgrade Pitch",
+                      "IsCovered":  0
+                  },
+                  {
                       "PriorityRank":  1752,
-                      "StudentId":  "61312508",
+                      "StudentId":  "62043842",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -31721,7 +31721,7 @@
                   },
                   {
                       "PriorityRank":  1753,
-                      "StudentId":  "62043842",
+                      "StudentId":  "61312508",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -33395,12 +33395,12 @@
                   },
                   {
                       "PriorityRank":  1846,
-                      "StudentId":  "58615004",
+                      "StudentId":  "61840681",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  6,
                       "BookedUnattended":  1,
                       "AttendanceTier":  "\u003e=4 Classes (Medium)",
@@ -33413,12 +33413,12 @@
                   },
                   {
                       "PriorityRank":  1847,
-                      "StudentId":  "61840681",
+                      "StudentId":  "58615004",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  6,
                       "BookedUnattended":  1,
                       "AttendanceTier":  "\u003e=4 Classes (Medium)",
@@ -35555,24 +35555,6 @@
                   },
                   {
                       "PriorityRank":  1966,
-                      "StudentId":  "63980171",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  5,
-                      "BookedUnattended":  1,
-                      "AttendanceTier":  "\u003e=4 Classes (Medium)",
-                      "LastConnectionTime":  "2026-10-25 13:18:19",
-                      "ConnectionDisplay":  "2026-10-25 13:18:19",
-                      "ConnectionSource":  "SOP Completed Touch",
-                      "LastPaidDate":  "20260809",
-                      "RecommendedAction":  "PRIORITY - Active Student Upgrade Pitch",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  1967,
                       "StudentId":  "64191206",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -35590,7 +35572,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1968,
+                      "PriorityRank":  1967,
                       "StudentId":  "63315633",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -35608,7 +35590,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1969,
+                      "PriorityRank":  1968,
                       "StudentId":  "63487290",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -35626,7 +35608,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1970,
+                      "PriorityRank":  1969,
                       "StudentId":  "63887738",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -35644,7 +35626,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1971,
+                      "PriorityRank":  1970,
                       "StudentId":  "63651375",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -35662,7 +35644,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1972,
+                      "PriorityRank":  1971,
                       "StudentId":  "63681579",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -35680,7 +35662,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1973,
+                      "PriorityRank":  1972,
                       "StudentId":  "63523714",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -35698,7 +35680,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1974,
+                      "PriorityRank":  1973,
                       "StudentId":  "62225026",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -35716,7 +35698,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1975,
+                      "PriorityRank":  1974,
                       "StudentId":  "63734720",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -35734,7 +35716,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1976,
+                      "PriorityRank":  1975,
                       "StudentId":  "63437256",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -35752,7 +35734,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1977,
+                      "PriorityRank":  1976,
                       "StudentId":  "63464843",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -35770,7 +35752,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1978,
+                      "PriorityRank":  1977,
                       "StudentId":  "61716413",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -35788,7 +35770,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1979,
+                      "PriorityRank":  1978,
                       "StudentId":  "62173127",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -35806,7 +35788,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1980,
+                      "PriorityRank":  1979,
                       "StudentId":  "59849952",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -35824,7 +35806,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1981,
+                      "PriorityRank":  1980,
                       "StudentId":  "60597337",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -35842,7 +35824,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  1982,
+                      "PriorityRank":  1981,
                       "StudentId":  "63613742",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -35856,6 +35838,24 @@
                       "ConnectionDisplay":  "2026-10-30 17:05:36",
                       "ConnectionSource":  "SOP Completed Touch",
                       "LastPaidDate":  "20260702",
+                      "RecommendedAction":  "PRIORITY - Active Student Upgrade Pitch",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  1982,
+                      "StudentId":  "63980171",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  5,
+                      "BookedUnattended":  1,
+                      "AttendanceTier":  "\u003e=4 Classes (Medium)",
+                      "LastConnectionTime":  "2026-10-31 13:55:27",
+                      "ConnectionDisplay":  "2026-10-31 13:55:27",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20260809",
                       "RecommendedAction":  "PRIORITY - Active Student Upgrade Pitch",
                       "IsCovered":  0
                   },
@@ -35951,7 +35951,7 @@
                   },
                   {
                       "PriorityRank":  1988,
-                      "StudentId":  "61207161",
+                      "StudentId":  "61220263",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -35969,7 +35969,7 @@
                   },
                   {
                       "PriorityRank":  1989,
-                      "StudentId":  "61220263",
+                      "StudentId":  "61207161",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -36329,24 +36329,6 @@
                   },
                   {
                       "PriorityRank":  2009,
-                      "StudentId":  "61801131",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  4,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "\u003e=4 Classes (Medium)",
-                      "LastConnectionTime":  "2026-10-13 18:40:53",
-                      "ConnectionDisplay":  "2026-10-13 18:40:53",
-                      "ConnectionSource":  "SOP Completed Touch",
-                      "LastPaidDate":  "20260621",
-                      "RecommendedAction":  "PRIORITY - Active Student Upgrade Pitch",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2010,
                       "StudentId":  "61074099",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -36364,7 +36346,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2011,
+                      "PriorityRank":  2010,
                       "StudentId":  "62848843",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -36382,7 +36364,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2012,
+                      "PriorityRank":  2011,
                       "StudentId":  "60532782",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -36400,7 +36382,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2013,
+                      "PriorityRank":  2012,
                       "StudentId":  "58036307",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -36418,7 +36400,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2014,
+                      "PriorityRank":  2013,
                       "StudentId":  "60474847",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -36436,7 +36418,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2015,
+                      "PriorityRank":  2014,
                       "StudentId":  "58655748",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -36454,7 +36436,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2016,
+                      "PriorityRank":  2015,
                       "StudentId":  "61429207",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -36472,7 +36454,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2017,
+                      "PriorityRank":  2016,
                       "StudentId":  "59750382",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -36490,7 +36472,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2018,
+                      "PriorityRank":  2017,
                       "StudentId":  "63453181",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -36508,7 +36490,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2019,
+                      "PriorityRank":  2018,
                       "StudentId":  "60109275",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -36526,7 +36508,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2020,
+                      "PriorityRank":  2019,
                       "StudentId":  "61059857",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -36544,7 +36526,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2021,
+                      "PriorityRank":  2020,
                       "StudentId":  "63781985",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -36562,7 +36544,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2022,
+                      "PriorityRank":  2021,
                       "StudentId":  "62257906",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -36580,7 +36562,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2023,
+                      "PriorityRank":  2022,
                       "StudentId":  "59605742",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -36598,7 +36580,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2024,
+                      "PriorityRank":  2023,
                       "StudentId":  "64253105",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -36616,7 +36598,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2025,
+                      "PriorityRank":  2024,
                       "StudentId":  "61681962",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -36634,7 +36616,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2026,
+                      "PriorityRank":  2025,
                       "StudentId":  "57880776",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -36652,7 +36634,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2027,
+                      "PriorityRank":  2026,
                       "StudentId":  "61804073",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -36670,7 +36652,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2028,
+                      "PriorityRank":  2027,
                       "StudentId":  "62122533",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -36688,7 +36670,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2029,
+                      "PriorityRank":  2028,
                       "StudentId":  "59470001",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -36706,7 +36688,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2030,
+                      "PriorityRank":  2029,
                       "StudentId":  "62849638",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -36724,7 +36706,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2031,
+                      "PriorityRank":  2030,
                       "StudentId":  "60215401",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -36742,7 +36724,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2032,
+                      "PriorityRank":  2031,
                       "StudentId":  "62324291",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -36760,7 +36742,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2033,
+                      "PriorityRank":  2032,
                       "StudentId":  "63596137",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -36778,7 +36760,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2034,
+                      "PriorityRank":  2033,
                       "StudentId":  "63892943",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -36796,7 +36778,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2035,
+                      "PriorityRank":  2034,
                       "StudentId":  "64115210",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -36814,7 +36796,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2036,
+                      "PriorityRank":  2035,
                       "StudentId":  "63812711",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -36832,7 +36814,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2037,
+                      "PriorityRank":  2036,
                       "StudentId":  "64113463",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -36850,7 +36832,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2038,
+                      "PriorityRank":  2037,
                       "StudentId":  "60151685",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -36868,7 +36850,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2039,
+                      "PriorityRank":  2038,
                       "StudentId":  "61349693",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -36886,7 +36868,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2040,
+                      "PriorityRank":  2039,
                       "StudentId":  "63050560",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -36904,7 +36886,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2041,
+                      "PriorityRank":  2040,
                       "StudentId":  "58454729",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -36922,7 +36904,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2042,
+                      "PriorityRank":  2041,
                       "StudentId":  "61064269",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -36936,6 +36918,24 @@
                       "ConnectionDisplay":  "2026-10-30 17:39:22",
                       "ConnectionSource":  "SOP Completed Touch",
                       "LastPaidDate":  "20250827",
+                      "RecommendedAction":  "PRIORITY - Active Student Upgrade Pitch",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2042,
+                      "StudentId":  "61801131",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  4,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "\u003e=4 Classes (Medium)",
+                      "LastConnectionTime":  "2026-10-31 13:06:36",
+                      "ConnectionDisplay":  "2026-10-31 13:06:36",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20260621",
                       "RecommendedAction":  "PRIORITY - Active Student Upgrade Pitch",
                       "IsCovered":  0
                   },
@@ -38651,24 +38651,6 @@
                   },
                   {
                       "PriorityRank":  2138,
-                      "StudentId":  "63539607",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  2,
-                      "BookedUnattended":  1,
-                      "AttendanceTier":  "1-3 Classes (Low)",
-                      "LastConnectionTime":  "2026-10-12 16:15:29",
-                      "ConnectionDisplay":  "2026-10-12 16:15:29",
-                      "ConnectionSource":  "SOP Completed Touch",
-                      "LastPaidDate":  "20260730",
-                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2139,
                       "StudentId":  "62352341",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -38686,7 +38668,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2140,
+                      "PriorityRank":  2139,
                       "StudentId":  "60820761",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -38704,7 +38686,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2141,
+                      "PriorityRank":  2140,
                       "StudentId":  "61991828",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -38722,7 +38704,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2142,
+                      "PriorityRank":  2141,
                       "StudentId":  "63265206",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -38740,7 +38722,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2143,
+                      "PriorityRank":  2142,
                       "StudentId":  "61953046",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -38758,7 +38740,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2144,
+                      "PriorityRank":  2143,
                       "StudentId":  "63878108",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -38772,6 +38754,24 @@
                       "ConnectionDisplay":  "2026-10-15 14:36:38",
                       "ConnectionSource":  "SOP Completed Touch",
                       "LastPaidDate":  "20260729",
+                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2144,
+                      "StudentId":  "63575382",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  2,
+                      "BookedUnattended":  1,
+                      "AttendanceTier":  "1-3 Classes (Low)",
+                      "LastConnectionTime":  "2026-10-15 19:08:10",
+                      "ConnectionDisplay":  "2026-10-15 19:08:10",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20260630",
                       "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
                       "IsCovered":  0
                   },
@@ -38795,24 +38795,6 @@
                   },
                   {
                       "PriorityRank":  2146,
-                      "StudentId":  "63575382",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  2,
-                      "BookedUnattended":  1,
-                      "AttendanceTier":  "1-3 Classes (Low)",
-                      "LastConnectionTime":  "2026-10-15 19:08:10",
-                      "ConnectionDisplay":  "2026-10-15 19:08:10",
-                      "ConnectionSource":  "SOP Completed Touch",
-                      "LastPaidDate":  "20260630",
-                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2147,
                       "StudentId":  "59619652",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -38830,7 +38812,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2148,
+                      "PriorityRank":  2147,
                       "StudentId":  "60766103",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -38848,7 +38830,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2149,
+                      "PriorityRank":  2148,
                       "StudentId":  "62874196",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -38866,7 +38848,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2150,
+                      "PriorityRank":  2149,
                       "StudentId":  "63395838",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -38884,7 +38866,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2151,
+                      "PriorityRank":  2150,
                       "StudentId":  "62794607",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -38902,7 +38884,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2152,
+                      "PriorityRank":  2151,
                       "StudentId":  "63994914",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -38920,7 +38902,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2153,
+                      "PriorityRank":  2152,
                       "StudentId":  "59244604",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -38938,7 +38920,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2154,
+                      "PriorityRank":  2153,
                       "StudentId":  "62475632",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -38956,7 +38938,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2155,
+                      "PriorityRank":  2154,
                       "StudentId":  "61973943",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -38974,7 +38956,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2156,
+                      "PriorityRank":  2155,
                       "StudentId":  "61480934",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -38992,7 +38974,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2157,
+                      "PriorityRank":  2156,
                       "StudentId":  "60370920",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -39010,7 +38992,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2158,
+                      "PriorityRank":  2157,
                       "StudentId":  "59928368",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -39028,7 +39010,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2159,
+                      "PriorityRank":  2158,
                       "StudentId":  "62609058",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -39046,7 +39028,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2160,
+                      "PriorityRank":  2159,
                       "StudentId":  "62335863",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -39064,7 +39046,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2161,
+                      "PriorityRank":  2160,
                       "StudentId":  "63837785",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -39082,7 +39064,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2162,
+                      "PriorityRank":  2161,
                       "StudentId":  "63528382",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -39100,7 +39082,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2163,
+                      "PriorityRank":  2162,
                       "StudentId":  "62378475",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -39118,7 +39100,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2164,
+                      "PriorityRank":  2163,
                       "StudentId":  "63867656",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -39136,7 +39118,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2165,
+                      "PriorityRank":  2164,
                       "StudentId":  "60765656",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -39154,7 +39136,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2166,
+                      "PriorityRank":  2165,
                       "StudentId":  "60757478",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -39172,7 +39154,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2167,
+                      "PriorityRank":  2166,
                       "StudentId":  "64112159",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -39190,7 +39172,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2168,
+                      "PriorityRank":  2167,
                       "StudentId":  "63446817",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -39204,6 +39186,24 @@
                       "ConnectionDisplay":  "2026-10-31 12:18:13",
                       "ConnectionSource":  "SOP Completed Touch",
                       "LastPaidDate":  "20260620",
+                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2168,
+                      "StudentId":  "63539607",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  2,
+                      "BookedUnattended":  1,
+                      "AttendanceTier":  "1-3 Classes (Low)",
+                      "LastConnectionTime":  "2026-10-31 13:11:26",
+                      "ConnectionDisplay":  "2026-10-31 13:11:26",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20260730",
                       "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
                       "IsCovered":  0
                   },
@@ -39281,24 +39281,6 @@
                   },
                   {
                       "PriorityRank":  2173,
-                      "StudentId":  "61438126",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  1,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "1-3 Classes (Low)",
-                      "LastConnectionTime":  "2025-10-04 00:00:00",
-                      "ConnectionDisplay":  "2025-10-04 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251004",
-                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2174,
                       "StudentId":  "61511084",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -39316,7 +39298,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2175,
+                      "PriorityRank":  2174,
                       "StudentId":  "61524554",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -39334,7 +39316,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2176,
+                      "PriorityRank":  2175,
                       "StudentId":  "61884354",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -39352,7 +39334,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2177,
+                      "PriorityRank":  2176,
                       "StudentId":  "60987924",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -39370,7 +39352,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2178,
+                      "PriorityRank":  2177,
                       "StudentId":  "62404162",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -39384,6 +39366,24 @@
                       "ConnectionDisplay":  "2026-01-28 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260128",
+                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2178,
+                      "StudentId":  "62339566",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  1,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "1-3 Classes (Low)",
+                      "LastConnectionTime":  "2026-02-01 00:00:00",
+                      "ConnectionDisplay":  "2026-02-01 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260201",
                       "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
                       "IsCovered":  0
                   },
@@ -39425,24 +39425,6 @@
                   },
                   {
                       "PriorityRank":  2181,
-                      "StudentId":  "62339566",
-                      "Rep":  "EGSS-khaledgonam",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  1,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "1-3 Classes (Low)",
-                      "LastConnectionTime":  "2026-02-01 00:00:00",
-                      "ConnectionDisplay":  "2026-02-01 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260201",
-                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2182,
                       "StudentId":  "59822115",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -39460,7 +39442,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2183,
+                      "PriorityRank":  2182,
                       "StudentId":  "63050319",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -39478,7 +39460,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2184,
+                      "PriorityRank":  2183,
                       "StudentId":  "63047847",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -39496,7 +39478,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2185,
+                      "PriorityRank":  2184,
                       "StudentId":  "63094888",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -39514,7 +39496,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2186,
+                      "PriorityRank":  2185,
                       "StudentId":  "58789375",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -39532,7 +39514,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2187,
+                      "PriorityRank":  2186,
                       "StudentId":  "63507740",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -39550,7 +39532,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2188,
+                      "PriorityRank":  2187,
                       "StudentId":  "63517197",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -39564,6 +39546,24 @@
                       "ConnectionDisplay":  "2026-06-23 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260623",
+                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2188,
+                      "StudentId":  "63504490",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  1,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "1-3 Classes (Low)",
+                      "LastConnectionTime":  "2026-06-28 00:00:00",
+                      "ConnectionDisplay":  "2026-06-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260628",
                       "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
                       "IsCovered":  0
                   },
@@ -39587,24 +39587,6 @@
                   },
                   {
                       "PriorityRank":  2190,
-                      "StudentId":  "63504490",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  1,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "1-3 Classes (Low)",
-                      "LastConnectionTime":  "2026-06-28 00:00:00",
-                      "ConnectionDisplay":  "2026-06-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260628",
-                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2191,
                       "StudentId":  "63581205",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -39618,6 +39600,24 @@
                       "ConnectionDisplay":  "2026-06-29 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260629",
+                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2191,
+                      "StudentId":  "63712696",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  1,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "1-3 Classes (Low)",
+                      "LastConnectionTime":  "2026-07-16 00:00:00",
+                      "ConnectionDisplay":  "2026-07-16 00:00:00",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260711",
                       "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
                       "IsCovered":  0
                   },
@@ -39641,24 +39641,6 @@
                   },
                   {
                       "PriorityRank":  2193,
-                      "StudentId":  "63712696",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  1,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "1-3 Classes (Low)",
-                      "LastConnectionTime":  "2026-07-16 00:00:00",
-                      "ConnectionDisplay":  "2026-07-16 00:00:00",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260711",
-                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2194,
                       "StudentId":  "59031891",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -39676,7 +39658,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2195,
+                      "PriorityRank":  2194,
                       "StudentId":  "63711216",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -39694,7 +39676,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2196,
+                      "PriorityRank":  2195,
                       "StudentId":  "63711578",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -39712,7 +39694,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2197,
+                      "PriorityRank":  2196,
                       "StudentId":  "64283494",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -39730,7 +39712,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2198,
+                      "PriorityRank":  2197,
                       "StudentId":  "63559893",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -39748,7 +39730,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2199,
+                      "PriorityRank":  2198,
                       "StudentId":  "62544267",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -39766,7 +39748,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2200,
+                      "PriorityRank":  2199,
                       "StudentId":  "59372122",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -39784,7 +39766,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2201,
+                      "PriorityRank":  2200,
                       "StudentId":  "60475775",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -39802,7 +39784,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2202,
+                      "PriorityRank":  2201,
                       "StudentId":  "64131603",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -39820,7 +39802,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2203,
+                      "PriorityRank":  2202,
                       "StudentId":  "63000154",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -39838,7 +39820,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2204,
+                      "PriorityRank":  2203,
                       "StudentId":  "59064752",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -39856,7 +39838,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2205,
+                      "PriorityRank":  2204,
                       "StudentId":  "61593728",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -39874,7 +39856,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2206,
+                      "PriorityRank":  2205,
                       "StudentId":  "62630577",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -39892,7 +39874,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2207,
+                      "PriorityRank":  2206,
                       "StudentId":  "58814728",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -39910,7 +39892,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2208,
+                      "PriorityRank":  2207,
                       "StudentId":  "62978645",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -39928,7 +39910,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2209,
+                      "PriorityRank":  2208,
                       "StudentId":  "63035084",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -39946,7 +39928,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2210,
+                      "PriorityRank":  2209,
                       "StudentId":  "59345785",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -39964,7 +39946,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2211,
+                      "PriorityRank":  2210,
                       "StudentId":  "60709868",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -39982,7 +39964,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2212,
+                      "PriorityRank":  2211,
                       "StudentId":  "63569328",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -40000,7 +39982,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2213,
+                      "PriorityRank":  2212,
                       "StudentId":  "62272582",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -40018,7 +40000,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2214,
+                      "PriorityRank":  2213,
                       "StudentId":  "62827841",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -40036,7 +40018,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2215,
+                      "PriorityRank":  2214,
                       "StudentId":  "63878111",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -40054,7 +40036,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2216,
+                      "PriorityRank":  2215,
                       "StudentId":  "62522720",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -40072,7 +40054,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2217,
+                      "PriorityRank":  2216,
                       "StudentId":  "62309284",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -40090,7 +40072,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2218,
+                      "PriorityRank":  2217,
                       "StudentId":  "63074702",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -40108,7 +40090,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2219,
+                      "PriorityRank":  2218,
                       "StudentId":  "63035917",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -40126,7 +40108,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2220,
+                      "PriorityRank":  2219,
                       "StudentId":  "61337662",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -40144,7 +40126,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2221,
+                      "PriorityRank":  2220,
                       "StudentId":  "63051040",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -40162,7 +40144,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2222,
+                      "PriorityRank":  2221,
                       "StudentId":  "61088182",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -40180,7 +40162,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2223,
+                      "PriorityRank":  2222,
                       "StudentId":  "63487118",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -40198,7 +40180,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2224,
+                      "PriorityRank":  2223,
                       "StudentId":  "61731632",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -40216,7 +40198,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2225,
+                      "PriorityRank":  2224,
                       "StudentId":  "64061011",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -40234,7 +40216,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2226,
+                      "PriorityRank":  2225,
                       "StudentId":  "61452288",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -40252,7 +40234,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2227,
+                      "PriorityRank":  2226,
                       "StudentId":  "62315501",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -40270,7 +40252,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2228,
+                      "PriorityRank":  2227,
                       "StudentId":  "63693463",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -40288,7 +40270,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2229,
+                      "PriorityRank":  2228,
                       "StudentId":  "62453515",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -40306,7 +40288,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2230,
+                      "PriorityRank":  2229,
                       "StudentId":  "62073061",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -40324,7 +40306,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2231,
+                      "PriorityRank":  2230,
                       "StudentId":  "62239833",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -40342,7 +40324,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2232,
+                      "PriorityRank":  2231,
                       "StudentId":  "60868504",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -40360,7 +40342,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2233,
+                      "PriorityRank":  2232,
                       "StudentId":  "63401468",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -40378,7 +40360,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2234,
+                      "PriorityRank":  2233,
                       "StudentId":  "60778908",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -40396,7 +40378,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2235,
+                      "PriorityRank":  2234,
                       "StudentId":  "62378896",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -40414,7 +40396,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2236,
+                      "PriorityRank":  2235,
                       "StudentId":  "63584121",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -40432,7 +40414,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2237,
+                      "PriorityRank":  2236,
                       "StudentId":  "59276259",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -40450,7 +40432,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2238,
+                      "PriorityRank":  2237,
                       "StudentId":  "63072588",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -40468,7 +40450,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2239,
+                      "PriorityRank":  2238,
                       "StudentId":  "62137031",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -40486,7 +40468,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2240,
+                      "PriorityRank":  2239,
                       "StudentId":  "61612369",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -40504,7 +40486,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2241,
+                      "PriorityRank":  2240,
                       "StudentId":  "59761902",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -40522,7 +40504,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2242,
+                      "PriorityRank":  2241,
                       "StudentId":  "58788648",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -40540,7 +40522,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2243,
+                      "PriorityRank":  2242,
                       "StudentId":  "58783940",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -40558,10 +40540,28 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2244,
-                      "StudentId":  "63661343",
-                      "Rep":  "EGSS-ashraqatal",
+                      "PriorityRank":  2243,
+                      "StudentId":  "61438126",
+                      "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  1,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "1-3 Classes (Low)",
+                      "LastConnectionTime":  "2026-10-31 12:25:16",
+                      "ConnectionDisplay":  "2026-10-31 12:25:16",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20251004",
+                      "RecommendedAction":  "STANDARD - Re-engagement \u0026 Habit Building",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2244,
+                      "StudentId":  "63764411",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -40571,84 +40571,12 @@
                       "LastConnectionTime":  "1970-01-01 00:00:00",
                       "ConnectionDisplay":  "No Connection Recorded",
                       "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260706",
+                      "LastPaidDate":  "20260720",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
                       "PriorityRank":  2245,
-                      "StudentId":  "63734706",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "1970-01-01 00:00:00",
-                      "ConnectionDisplay":  "No Connection Recorded",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260714",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2246,
-                      "StudentId":  "63793823",
-                      "Rep":  "EGSS-nohayoussry",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "1970-01-01 00:00:00",
-                      "ConnectionDisplay":  "No Connection Recorded",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260722",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2247,
-                      "StudentId":  "63673002",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "1970-01-01 00:00:00",
-                      "ConnectionDisplay":  "No Connection Recorded",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260708",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2248,
-                      "StudentId":  "63001390",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "1970-01-01 00:00:00",
-                      "ConnectionDisplay":  "No Connection Recorded",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260705",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2249,
                       "StudentId":  "63719901",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -40666,10 +40594,10 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2250,
-                      "StudentId":  "63764411",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
+                      "PriorityRank":  2246,
+                      "StudentId":  "63661343",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -40679,7 +40607,79 @@
                       "LastConnectionTime":  "1970-01-01 00:00:00",
                       "ConnectionDisplay":  "No Connection Recorded",
                       "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260720",
+                      "LastPaidDate":  "20260706",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2247,
+                      "StudentId":  "63734706",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "1970-01-01 00:00:00",
+                      "ConnectionDisplay":  "No Connection Recorded",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260714",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2248,
+                      "StudentId":  "63793823",
+                      "Rep":  "EGSS-nohayoussry",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "1970-01-01 00:00:00",
+                      "ConnectionDisplay":  "No Connection Recorded",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260722",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2249,
+                      "StudentId":  "63001390",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "1970-01-01 00:00:00",
+                      "ConnectionDisplay":  "No Connection Recorded",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260705",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2250,
+                      "StudentId":  "63673002",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "1970-01-01 00:00:00",
+                      "ConnectionDisplay":  "No Connection Recorded",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260708",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -40847,7 +40847,7 @@
                   },
                   {
                       "PriorityRank":  2260,
-                      "StudentId":  "58940671",
+                      "StudentId":  "58601487",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -40883,7 +40883,7 @@
                   },
                   {
                       "PriorityRank":  2262,
-                      "StudentId":  "58601487",
+                      "StudentId":  "58940671",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -40901,12 +40901,12 @@
                   },
                   {
                       "PriorityRank":  2263,
-                      "StudentId":  "58945859",
+                      "StudentId":  "58949231",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -40919,12 +40919,12 @@
                   },
                   {
                       "PriorityRank":  2264,
-                      "StudentId":  "58949231",
+                      "StudentId":  "58945859",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -40955,7 +40955,7 @@
                   },
                   {
                       "PriorityRank":  2266,
-                      "StudentId":  "58962064",
+                      "StudentId":  "58219973",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -40973,7 +40973,7 @@
                   },
                   {
                       "PriorityRank":  2267,
-                      "StudentId":  "58219973",
+                      "StudentId":  "58962064",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -41081,7 +41081,7 @@
                   },
                   {
                       "PriorityRank":  2273,
-                      "StudentId":  "59120063",
+                      "StudentId":  "59119508",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -41099,7 +41099,7 @@
                   },
                   {
                       "PriorityRank":  2274,
-                      "StudentId":  "59119508",
+                      "StudentId":  "59120063",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -41279,7 +41279,7 @@
                   },
                   {
                       "PriorityRank":  2284,
-                      "StudentId":  "59573155",
+                      "StudentId":  "58981273",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -41297,7 +41297,7 @@
                   },
                   {
                       "PriorityRank":  2285,
-                      "StudentId":  "58981273",
+                      "StudentId":  "59573155",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -41333,24 +41333,6 @@
                   },
                   {
                       "PriorityRank":  2287,
-                      "StudentId":  "59046041",
-                      "Rep":  "EGSS-alihesham01",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2024-12-28 00:00:00",
-                      "ConnectionDisplay":  "2024-12-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20241228",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2288,
                       "StudentId":  "59573242",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -41368,13 +41350,31 @@
                       "IsCovered":  0
                   },
                   {
+                      "PriorityRank":  2288,
+                      "StudentId":  "59046041",
+                      "Rep":  "EGSS-alihesham01",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2024-12-28 00:00:00",
+                      "ConnectionDisplay":  "2024-12-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20241228",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
                       "PriorityRank":  2289,
-                      "StudentId":  "59669317",
+                      "StudentId":  "59669428",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -41387,12 +41387,12 @@
                   },
                   {
                       "PriorityRank":  2290,
-                      "StudentId":  "59669428",
+                      "StudentId":  "59669317",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -41783,7 +41783,7 @@
                   },
                   {
                       "PriorityRank":  2312,
-                      "StudentId":  "60264813",
+                      "StudentId":  "60264745",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -41801,7 +41801,7 @@
                   },
                   {
                       "PriorityRank":  2313,
-                      "StudentId":  "60264745",
+                      "StudentId":  "60264813",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -41927,24 +41927,6 @@
                   },
                   {
                       "PriorityRank":  2320,
-                      "StudentId":  "60349376",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-06-01 00:00:00",
-                      "ConnectionDisplay":  "2025-06-01 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250601",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2321,
                       "StudentId":  "60422971",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -41962,9 +41944,27 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2322,
+                      "PriorityRank":  2321,
                       "StudentId":  "58811104",
                       "Rep":  "EGSS-abdelrhmanshehata",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-06-01 00:00:00",
+                      "ConnectionDisplay":  "2025-06-01 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250601",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2322,
+                      "StudentId":  "60349376",
+                      "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
@@ -41999,7 +41999,7 @@
                   },
                   {
                       "PriorityRank":  2324,
-                      "StudentId":  "59193612",
+                      "StudentId":  "60471772",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -42017,7 +42017,7 @@
                   },
                   {
                       "PriorityRank":  2325,
-                      "StudentId":  "60471772",
+                      "StudentId":  "59193612",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -42053,12 +42053,12 @@
                   },
                   {
                       "PriorityRank":  2327,
-                      "StudentId":  "60540033",
-                      "Rep":  "EGSS-omarmoneb",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "60531198",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -42071,12 +42071,12 @@
                   },
                   {
                       "PriorityRank":  2328,
-                      "StudentId":  "60531198",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "60540033",
+                      "Rep":  "EGSS-omarmoneb",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -42161,12 +42161,12 @@
                   },
                   {
                       "PriorityRank":  2333,
-                      "StudentId":  "60620852",
-                      "Rep":  "EGSS-marwaahmed",
+                      "StudentId":  "60444063",
+                      "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -42179,12 +42179,12 @@
                   },
                   {
                       "PriorityRank":  2334,
-                      "StudentId":  "60444063",
-                      "Rep":  "EGSS-amrsafwat",
+                      "StudentId":  "60620852",
+                      "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -42323,24 +42323,6 @@
                   },
                   {
                       "PriorityRank":  2342,
-                      "StudentId":  "60735518",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-07-13 00:00:00",
-                      "ConnectionDisplay":  "2025-07-13 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250713",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2343,
                       "StudentId":  "60721228",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -42358,13 +42340,31 @@
                       "IsCovered":  0
                   },
                   {
+                      "PriorityRank":  2343,
+                      "StudentId":  "60735518",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-07-13 00:00:00",
+                      "ConnectionDisplay":  "2025-07-13 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250713",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
                       "PriorityRank":  2344,
-                      "StudentId":  "60728217",
+                      "StudentId":  "60726980",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -42377,12 +42377,12 @@
                   },
                   {
                       "PriorityRank":  2345,
-                      "StudentId":  "60726980",
+                      "StudentId":  "60728217",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -42575,42 +42575,6 @@
                   },
                   {
                       "PriorityRank":  2356,
-                      "StudentId":  "60845684",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-07-27 00:00:00",
-                      "ConnectionDisplay":  "2025-07-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250727",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2357,
-                      "StudentId":  "60305849",
-                      "Rep":  "EGSS-hayamhassan",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-07-27 00:00:00",
-                      "ConnectionDisplay":  "2025-07-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250727",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2358,
                       "StudentId":  "60818234",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -42628,25 +42592,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2359,
-                      "StudentId":  "60847805",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-07-27 00:00:00",
-                      "ConnectionDisplay":  "2025-07-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250727",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2360,
+                      "PriorityRank":  2357,
                       "StudentId":  "60847530",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -42664,27 +42610,9 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2361,
-                      "StudentId":  "58069481",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-07-28 00:00:00",
-                      "ConnectionDisplay":  "2025-07-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250728",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2362,
-                      "StudentId":  "60852844",
-                      "Rep":  "EGSS-khaledgonam",
+                      "PriorityRank":  2358,
+                      "StudentId":  "60845684",
+                      "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
@@ -42692,15 +42620,51 @@
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-07-28 00:00:00",
-                      "ConnectionDisplay":  "2025-07-28 00:00:00",
+                      "LastConnectionTime":  "2025-07-27 00:00:00",
+                      "ConnectionDisplay":  "2025-07-27 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250728",
+                      "LastPaidDate":  "20250727",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2363,
+                      "PriorityRank":  2359,
+                      "StudentId":  "60305849",
+                      "Rep":  "EGSS-hayamhassan",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-07-27 00:00:00",
+                      "ConnectionDisplay":  "2025-07-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250727",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2360,
+                      "StudentId":  "60847805",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-07-27 00:00:00",
+                      "ConnectionDisplay":  "2025-07-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250727",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2361,
                       "StudentId":  "60853044",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -42718,13 +42682,49 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2364,
-                      "StudentId":  "59680006",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
+                      "PriorityRank":  2362,
+                      "StudentId":  "58069481",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-07-28 00:00:00",
+                      "ConnectionDisplay":  "2025-07-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250728",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2363,
+                      "StudentId":  "60852844",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-07-28 00:00:00",
+                      "ConnectionDisplay":  "2025-07-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250728",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2364,
+                      "StudentId":  "60768298",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -42737,12 +42737,12 @@
                   },
                   {
                       "PriorityRank":  2365,
-                      "StudentId":  "60768298",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "59680006",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -42845,24 +42845,6 @@
                   },
                   {
                       "PriorityRank":  2371,
-                      "StudentId":  "60898609",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-08-07 00:00:00",
-                      "ConnectionDisplay":  "2025-08-07 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250807",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2372,
                       "StudentId":  "60917706",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -42880,7 +42862,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2373,
+                      "PriorityRank":  2372,
                       "StudentId":  "60923057",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -42898,13 +42880,31 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2374,
-                      "StudentId":  "59851866",
+                      "PriorityRank":  2373,
+                      "StudentId":  "60898609",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-08-07 00:00:00",
+                      "ConnectionDisplay":  "2025-08-07 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250807",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2374,
+                      "StudentId":  "60910057",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -42917,12 +42917,12 @@
                   },
                   {
                       "PriorityRank":  2375,
-                      "StudentId":  "60910057",
+                      "StudentId":  "59851866",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43007,27 +43007,9 @@
                   },
                   {
                       "PriorityRank":  2380,
-                      "StudentId":  "60966540",
-                      "Rep":  "EGSS-omarmoneb",
+                      "StudentId":  "60966877",
+                      "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-08-13 00:00:00",
-                      "ConnectionDisplay":  "2025-08-13 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250813",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2381,
-                      "StudentId":  "60943876",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp 0-cr",
@@ -43042,7 +43024,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2382,
+                      "PriorityRank":  2381,
                       "StudentId":  "60918496",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -43060,10 +43042,28 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2383,
-                      "StudentId":  "60966877",
-                      "Rep":  "EGSS-khaledgonam",
+                      "PriorityRank":  2382,
+                      "StudentId":  "60966540",
+                      "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-08-13 00:00:00",
+                      "ConnectionDisplay":  "2025-08-13 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250813",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2383,
+                      "StudentId":  "60943876",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp 0-cr",
@@ -43115,12 +43115,12 @@
                   },
                   {
                       "PriorityRank":  2386,
-                      "StudentId":  "59565178",
-                      "Rep":  "EGSS-abdelrhmanshehata",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "58908469",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43133,12 +43133,12 @@
                   },
                   {
                       "PriorityRank":  2387,
-                      "StudentId":  "58908469",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "59565178",
+                      "Rep":  "EGSS-abdelrhmanshehata",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43187,12 +43187,12 @@
                   },
                   {
                       "PriorityRank":  2390,
-                      "StudentId":  "61053715",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "58673629",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43205,12 +43205,12 @@
                   },
                   {
                       "PriorityRank":  2391,
-                      "StudentId":  "58673629",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "61053715",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43241,7 +43241,7 @@
                   },
                   {
                       "PriorityRank":  2393,
-                      "StudentId":  "61052542",
+                      "StudentId":  "61019591",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -43259,7 +43259,7 @@
                   },
                   {
                       "PriorityRank":  2394,
-                      "StudentId":  "61019591",
+                      "StudentId":  "61052542",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -43313,42 +43313,6 @@
                   },
                   {
                       "PriorityRank":  2397,
-                      "StudentId":  "61038675",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-08-27 00:00:00",
-                      "ConnectionDisplay":  "2025-08-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250827",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2398,
-                      "StudentId":  "61052482",
-                      "Rep":  "EGSS-juliamonir01",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-08-27 00:00:00",
-                      "ConnectionDisplay":  "2025-08-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250827",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2399,
                       "StudentId":  "61092323",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -43366,13 +43330,49 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2400,
+                      "PriorityRank":  2398,
+                      "StudentId":  "61038675",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-08-27 00:00:00",
+                      "ConnectionDisplay":  "2025-08-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250827",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2399,
                       "StudentId":  "60968948",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-08-27 00:00:00",
+                      "ConnectionDisplay":  "2025-08-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250827",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2400,
+                      "StudentId":  "61052482",
+                      "Rep":  "EGSS-juliamonir01",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43457,6 +43457,24 @@
                   },
                   {
                       "PriorityRank":  2405,
+                      "StudentId":  "61122649",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-08-31 00:00:00",
+                      "ConnectionDisplay":  "2025-08-31 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250831",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2406,
                       "StudentId":  "61122278",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -43474,31 +43492,13 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2406,
+                      "PriorityRank":  2407,
                       "StudentId":  "61092226",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-08-31 00:00:00",
-                      "ConnectionDisplay":  "2025-08-31 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250831",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2407,
-                      "StudentId":  "61122649",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43601,24 +43601,6 @@
                   },
                   {
                       "PriorityRank":  2413,
-                      "StudentId":  "61199529",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-09-07 00:00:00",
-                      "ConnectionDisplay":  "2025-09-07 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250907",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2414,
                       "StudentId":  "61137809",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -43636,13 +43618,31 @@
                       "IsCovered":  0
                   },
                   {
+                      "PriorityRank":  2414,
+                      "StudentId":  "61199529",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-09-07 00:00:00",
+                      "ConnectionDisplay":  "2025-09-07 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250907",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
                       "PriorityRank":  2415,
-                      "StudentId":  "61164207",
-                      "Rep":  "EGSS-juliamonir01",
-                      "Team":  "ME-EGSS01",
+                      "StudentId":  "59282415",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43655,12 +43655,12 @@
                   },
                   {
                       "PriorityRank":  2416,
-                      "StudentId":  "59282415",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "61164207",
+                      "Rep":  "EGSS-juliamonir01",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43691,42 +43691,6 @@
                   },
                   {
                       "PriorityRank":  2418,
-                      "StudentId":  "61211845",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-09-09 00:00:00",
-                      "ConnectionDisplay":  "2025-09-09 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250909",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2419,
-                      "StudentId":  "61210589",
-                      "Rep":  "EGSS-alihesham01",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-09-09 00:00:00",
-                      "ConnectionDisplay":  "2025-09-09 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250909",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2420,
                       "StudentId":  "61212008",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -43744,7 +43708,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2421,
+                      "PriorityRank":  2419,
+                      "StudentId":  "61211845",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-09-09 00:00:00",
+                      "ConnectionDisplay":  "2025-09-09 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250909",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2420,
                       "StudentId":  "61216363",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -43762,8 +43744,26 @@
                       "IsCovered":  0
                   },
                   {
+                      "PriorityRank":  2421,
+                      "StudentId":  "61210589",
+                      "Rep":  "EGSS-alihesham01",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-09-09 00:00:00",
+                      "ConnectionDisplay":  "2025-09-09 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250909",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
                       "PriorityRank":  2422,
-                      "StudentId":  "61186676",
+                      "StudentId":  "61236838",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -43781,9 +43781,9 @@
                   },
                   {
                       "PriorityRank":  2423,
-                      "StudentId":  "61141245",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "61186676",
+                      "Rep":  "EGSS-juliamonir01",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE 0-cr",
@@ -43799,9 +43799,9 @@
                   },
                   {
                       "PriorityRank":  2424,
-                      "StudentId":  "61236838",
-                      "Rep":  "EGSS-juliamonir01",
-                      "Team":  "ME-EGSS01",
+                      "StudentId":  "61141245",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE 0-cr",
@@ -43853,24 +43853,6 @@
                   },
                   {
                       "PriorityRank":  2427,
-                      "StudentId":  "61261500",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-09-16 00:00:00",
-                      "ConnectionDisplay":  "2025-09-16 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250916",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2428,
                       "StudentId":  "58792423",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -43888,13 +43870,31 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2429,
-                      "StudentId":  "61302951",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
+                      "PriorityRank":  2428,
+                      "StudentId":  "61261500",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-09-16 00:00:00",
+                      "ConnectionDisplay":  "2025-09-16 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250916",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2429,
+                      "StudentId":  "61301404",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43925,24 +43925,6 @@
                   },
                   {
                       "PriorityRank":  2431,
-                      "StudentId":  "61301404",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-09-17 00:00:00",
-                      "ConnectionDisplay":  "2025-09-17 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20250917",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2432,
                       "StudentId":  "61286142",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -43960,13 +43942,31 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2433,
-                      "StudentId":  "61165568",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
+                      "PriorityRank":  2432,
+                      "StudentId":  "61302951",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-09-17 00:00:00",
+                      "ConnectionDisplay":  "2025-09-17 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20250917",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2433,
+                      "StudentId":  "61328687",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -43979,12 +43979,12 @@
                   },
                   {
                       "PriorityRank":  2434,
-                      "StudentId":  "61328687",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
+                      "StudentId":  "61165568",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -44033,12 +44033,12 @@
                   },
                   {
                       "PriorityRank":  2437,
-                      "StudentId":  "61356020",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "61348741",
+                      "Rep":  "EGSS-omarmoneb",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -44105,12 +44105,12 @@
                   },
                   {
                       "PriorityRank":  2441,
-                      "StudentId":  "61348741",
-                      "Rep":  "EGSS-omarmoneb",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "61356020",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -44339,12 +44339,12 @@
                   },
                   {
                       "PriorityRank":  2454,
-                      "StudentId":  "61501321",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "61485865",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -44375,12 +44375,12 @@
                   },
                   {
                       "PriorityRank":  2456,
-                      "StudentId":  "61485865",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "61501321",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -44501,7 +44501,7 @@
                   },
                   {
                       "PriorityRank":  2463,
-                      "StudentId":  "58831441",
+                      "StudentId":  "61628567",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -44519,7 +44519,7 @@
                   },
                   {
                       "PriorityRank":  2464,
-                      "StudentId":  "61628567",
+                      "StudentId":  "58831441",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -44555,42 +44555,6 @@
                   },
                   {
                       "PriorityRank":  2466,
-                      "StudentId":  "61260771",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-10-31 00:00:00",
-                      "ConnectionDisplay":  "2025-10-31 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251031",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2467,
-                      "StudentId":  "61662534",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-10-31 00:00:00",
-                      "ConnectionDisplay":  "2025-10-31 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251031",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2468,
                       "StudentId":  "61260568",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -44608,7 +44572,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2469,
+                      "PriorityRank":  2467,
                       "StudentId":  "61658191",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -44626,7 +44590,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2470,
+                      "PriorityRank":  2468,
                       "StudentId":  "61666257",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -44644,25 +44608,43 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2471,
-                      "StudentId":  "61684505",
-                      "Rep":  "EGSS-khaledgonam",
+                      "PriorityRank":  2469,
+                      "StudentId":  "61662534",
+                      "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-01 00:00:00",
-                      "ConnectionDisplay":  "2025-11-01 00:00:00",
+                      "LastConnectionTime":  "2025-10-31 00:00:00",
+                      "ConnectionDisplay":  "2025-10-31 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251101",
+                      "LastPaidDate":  "20251031",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2472,
+                      "PriorityRank":  2470,
+                      "StudentId":  "61260771",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-10-31 00:00:00",
+                      "ConnectionDisplay":  "2025-10-31 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251031",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2471,
                       "StudentId":  "61676608",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -44680,25 +44662,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2473,
-                      "StudentId":  "61683428",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
+                      "PriorityRank":  2472,
+                      "StudentId":  "61684505",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-03 00:00:00",
-                      "ConnectionDisplay":  "2025-11-03 00:00:00",
+                      "LastConnectionTime":  "2025-11-01 00:00:00",
+                      "ConnectionDisplay":  "2025-11-01 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251103",
+                      "LastPaidDate":  "20251101",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2474,
+                      "PriorityRank":  2473,
                       "StudentId":  "61684187",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -44716,13 +44698,31 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2475,
-                      "StudentId":  "61694435",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
+                      "PriorityRank":  2474,
+                      "StudentId":  "61683428",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-11-03 00:00:00",
+                      "ConnectionDisplay":  "2025-11-03 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251103",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2475,
+                      "StudentId":  "58595547",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -44735,12 +44735,12 @@
                   },
                   {
                       "PriorityRank":  2476,
-                      "StudentId":  "58595547",
-                      "Rep":  "EGSS-khaledgonam",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "61694435",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -44789,24 +44789,6 @@
                   },
                   {
                       "PriorityRank":  2479,
-                      "StudentId":  "61732716",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-06 00:00:00",
-                      "ConnectionDisplay":  "2025-11-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2480,
                       "StudentId":  "61672528",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -44824,25 +44806,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2481,
-                      "StudentId":  "61706939",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  2480,
+                      "StudentId":  "61732716",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-08 00:00:00",
-                      "ConnectionDisplay":  "2025-11-08 00:00:00",
+                      "LastConnectionTime":  "2025-11-06 00:00:00",
+                      "ConnectionDisplay":  "2025-11-06 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251108",
+                      "LastPaidDate":  "20251106",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2482,
+                      "PriorityRank":  2481,
                       "StudentId":  "61753414",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -44860,8 +44842,26 @@
                       "IsCovered":  0
                   },
                   {
+                      "PriorityRank":  2482,
+                      "StudentId":  "61706939",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-11-08 00:00:00",
+                      "ConnectionDisplay":  "2025-11-08 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251108",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
                       "PriorityRank":  2483,
-                      "StudentId":  "61766174",
+                      "StudentId":  "61782695",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -44879,7 +44879,7 @@
                   },
                   {
                       "PriorityRank":  2484,
-                      "StudentId":  "61782695",
+                      "StudentId":  "61766174",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -44915,12 +44915,12 @@
                   },
                   {
                       "PriorityRank":  2486,
-                      "StudentId":  "60412782",
+                      "StudentId":  "61786175",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -44933,12 +44933,12 @@
                   },
                   {
                       "PriorityRank":  2487,
-                      "StudentId":  "61786175",
+                      "StudentId":  "60412782",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -45023,7 +45023,7 @@
                   },
                   {
                       "PriorityRank":  2492,
-                      "StudentId":  "61828562",
+                      "StudentId":  "61829388",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -45041,7 +45041,7 @@
                   },
                   {
                       "PriorityRank":  2493,
-                      "StudentId":  "61829388",
+                      "StudentId":  "61828562",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -45131,24 +45131,6 @@
                   },
                   {
                       "PriorityRank":  2498,
-                      "StudentId":  "61883811",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-22 00:00:00",
-                      "ConnectionDisplay":  "2025-11-22 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251122",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2499,
                       "StudentId":  "61875263",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -45166,7 +45148,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2500,
+                      "PriorityRank":  2499,
                       "StudentId":  "61875601",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -45184,13 +45166,13 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2501,
-                      "StudentId":  "61630854",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
+                      "PriorityRank":  2500,
+                      "StudentId":  "61883811",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -45198,6 +45180,24 @@
                       "ConnectionDisplay":  "2025-11-22 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20251122",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2501,
+                      "StudentId":  "61800134",
+                      "Rep":  "EGSS-abdelrhmanshehata",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-11-23 00:00:00",
+                      "ConnectionDisplay":  "2025-11-23 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251123",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -45221,24 +45221,6 @@
                   },
                   {
                       "PriorityRank":  2503,
-                      "StudentId":  "61800134",
-                      "Rep":  "EGSS-abdelrhmanshehata",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-23 00:00:00",
-                      "ConnectionDisplay":  "2025-11-23 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251123",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2504,
                       "StudentId":  "61909682",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -45256,7 +45238,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2505,
+                      "PriorityRank":  2504,
                       "StudentId":  "61909279",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -45274,7 +45256,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2506,
+                      "PriorityRank":  2505,
                       "StudentId":  "61859841",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -45292,7 +45274,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2507,
+                      "PriorityRank":  2506,
                       "StudentId":  "61908751",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -45306,6 +45288,24 @@
                       "ConnectionDisplay":  "2025-11-26 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20251126",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2507,
+                      "StudentId":  "61919318",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-11-27 00:00:00",
+                      "ConnectionDisplay":  "2025-11-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251127",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -45383,42 +45383,6 @@
                   },
                   {
                       "PriorityRank":  2512,
-                      "StudentId":  "61925239",
-                      "Rep":  "EGSS-khaledgonam",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-27 00:00:00",
-                      "ConnectionDisplay":  "2025-11-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251127",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2513,
-                      "StudentId":  "61919318",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-27 00:00:00",
-                      "ConnectionDisplay":  "2025-11-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251127",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2514,
                       "StudentId":  "61874301",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -45436,25 +45400,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2515,
-                      "StudentId":  "61935790",
-                      "Rep":  "EGSS-ibrahimismaiel",
+                      "PriorityRank":  2513,
+                      "StudentId":  "61925239",
+                      "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-28 00:00:00",
-                      "ConnectionDisplay":  "2025-11-28 00:00:00",
+                      "LastConnectionTime":  "2025-11-27 00:00:00",
+                      "ConnectionDisplay":  "2025-11-27 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251128",
+                      "LastPaidDate":  "20251127",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2516,
+                      "PriorityRank":  2514,
                       "StudentId":  "59188442",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -45472,25 +45436,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2517,
-                      "StudentId":  "59823261",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-28 00:00:00",
-                      "ConnectionDisplay":  "2025-11-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251128",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2518,
+                      "PriorityRank":  2515,
                       "StudentId":  "61087026",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -45508,7 +45454,43 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2519,
+                      "PriorityRank":  2516,
+                      "StudentId":  "59823261",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-11-28 00:00:00",
+                      "ConnectionDisplay":  "2025-11-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251128",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2517,
+                      "StudentId":  "61935790",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-11-28 00:00:00",
+                      "ConnectionDisplay":  "2025-11-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251128",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2518,
                       "StudentId":  "60870383",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -45522,6 +45504,24 @@
                       "ConnectionDisplay":  "2025-11-29 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20251129",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2519,
+                      "StudentId":  "60639083",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-11-30 00:00:00",
+                      "ConnectionDisplay":  "2025-11-30 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251130",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -45545,12 +45545,12 @@
                   },
                   {
                       "PriorityRank":  2521,
-                      "StudentId":  "60639083",
-                      "Rep":  "EGSS-marwaahmed",
+                      "StudentId":  "58637491",
+                      "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -45581,42 +45581,6 @@
                   },
                   {
                       "PriorityRank":  2523,
-                      "StudentId":  "61949079",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-30 00:00:00",
-                      "ConnectionDisplay":  "2025-11-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251130",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2524,
-                      "StudentId":  "58637491",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-11-30 00:00:00",
-                      "ConnectionDisplay":  "2025-11-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251130",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2525,
                       "StudentId":  "61941732",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -45634,13 +45598,13 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2526,
-                      "StudentId":  "61941826",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
+                      "PriorityRank":  2524,
+                      "StudentId":  "61949079",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -45652,7 +45616,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2527,
+                      "PriorityRank":  2525,
                       "StudentId":  "61867056",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -45670,7 +45634,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2528,
+                      "PriorityRank":  2526,
                       "StudentId":  "61923410",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -45688,7 +45652,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2529,
+                      "PriorityRank":  2527,
+                      "StudentId":  "61941826",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-11-30 00:00:00",
+                      "ConnectionDisplay":  "2025-11-30 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251130",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2528,
                       "StudentId":  "61959581",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -45706,7 +45688,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2530,
+                      "PriorityRank":  2529,
                       "StudentId":  "61958120",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -45724,7 +45706,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2531,
+                      "PriorityRank":  2530,
                       "StudentId":  "61968900",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -45742,7 +45724,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2532,
+                      "PriorityRank":  2531,
                       "StudentId":  "62007498",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -45760,7 +45742,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2533,
+                      "PriorityRank":  2532,
                       "StudentId":  "60517434",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -45778,7 +45760,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2534,
+                      "PriorityRank":  2533,
                       "StudentId":  "62044544",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -45796,7 +45778,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2535,
+                      "PriorityRank":  2534,
                       "StudentId":  "62044633",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -45814,7 +45796,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2536,
+                      "PriorityRank":  2535,
                       "StudentId":  "59735323",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -45832,7 +45814,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2537,
+                      "PriorityRank":  2536,
                       "StudentId":  "61722183",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -45850,9 +45832,27 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2538,
+                      "PriorityRank":  2537,
                       "StudentId":  "61828313",
                       "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-12-16 00:00:00",
+                      "ConnectionDisplay":  "2025-12-16 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251216",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2538,
+                      "StudentId":  "62043307",
+                      "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
@@ -45887,19 +45887,19 @@
                   },
                   {
                       "PriorityRank":  2540,
-                      "StudentId":  "62043307",
+                      "StudentId":  "62072328",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-12-16 00:00:00",
-                      "ConnectionDisplay":  "2025-12-16 00:00:00",
+                      "LastConnectionTime":  "2025-12-17 00:00:00",
+                      "ConnectionDisplay":  "2025-12-17 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251216",
+                      "LastPaidDate":  "20251217",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -45923,24 +45923,6 @@
                   },
                   {
                       "PriorityRank":  2542,
-                      "StudentId":  "62072328",
-                      "Rep":  "EGSS-omarmoneb",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-12-17 00:00:00",
-                      "ConnectionDisplay":  "2025-12-17 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251217",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2543,
                       "StudentId":  "62064876",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -45958,7 +45940,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2544,
+                      "PriorityRank":  2543,
                       "StudentId":  "59822193",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -45976,7 +45958,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2545,
+                      "PriorityRank":  2544,
                       "StudentId":  "59362697",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -45994,7 +45976,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2546,
+                      "PriorityRank":  2545,
                       "StudentId":  "58743101",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -46012,25 +45994,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2547,
-                      "StudentId":  "62114553",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-12-23 00:00:00",
-                      "ConnectionDisplay":  "2025-12-23 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251223",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2548,
+                      "PriorityRank":  2546,
                       "StudentId":  "62108203",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -46048,43 +46012,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2549,
-                      "StudentId":  "62119838",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-12-23 00:00:00",
-                      "ConnectionDisplay":  "2025-12-23 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251223",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2550,
-                      "StudentId":  "62121263",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-12-23 00:00:00",
-                      "ConnectionDisplay":  "2025-12-23 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251223",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2551,
+                      "PriorityRank":  2547,
                       "StudentId":  "62124135",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -46102,7 +46030,61 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2552,
+                      "PriorityRank":  2548,
+                      "StudentId":  "62121263",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-12-23 00:00:00",
+                      "ConnectionDisplay":  "2025-12-23 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251223",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2549,
+                      "StudentId":  "62114553",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-12-23 00:00:00",
+                      "ConnectionDisplay":  "2025-12-23 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251223",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2550,
+                      "StudentId":  "62119838",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-12-23 00:00:00",
+                      "ConnectionDisplay":  "2025-12-23 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251223",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2551,
                       "StudentId":  "60043794",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -46120,7 +46102,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2553,
+                      "PriorityRank":  2552,
                       "StudentId":  "62064770",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -46134,6 +46116,24 @@
                       "ConnectionDisplay":  "2025-12-25 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20251225",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2553,
+                      "StudentId":  "62149731",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-12-28 00:00:00",
+                      "ConnectionDisplay":  "2025-12-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251228",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -46157,9 +46157,9 @@
                   },
                   {
                       "PriorityRank":  2555,
-                      "StudentId":  "62149731",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "61784793",
+                      "Rep":  "EGSS-omarmoneb",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE 0-cr",
@@ -46193,24 +46193,6 @@
                   },
                   {
                       "PriorityRank":  2557,
-                      "StudentId":  "61784793",
-                      "Rep":  "EGSS-omarmoneb",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-12-28 00:00:00",
-                      "ConnectionDisplay":  "2025-12-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251228",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2558,
                       "StudentId":  "62115625",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -46224,6 +46206,24 @@
                       "ConnectionDisplay":  "2025-12-28 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20251228",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2558,
+                      "StudentId":  "62159995",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2025-12-29 00:00:00",
+                      "ConnectionDisplay":  "2025-12-29 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20251229",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -46265,24 +46265,6 @@
                   },
                   {
                       "PriorityRank":  2561,
-                      "StudentId":  "62159995",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2025-12-29 00:00:00",
-                      "ConnectionDisplay":  "2025-12-29 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20251229",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2562,
                       "StudentId":  "62160583",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -46300,7 +46282,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2563,
+                      "PriorityRank":  2562,
                       "StudentId":  "62115315",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -46318,7 +46300,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2564,
+                      "PriorityRank":  2563,
                       "StudentId":  "60552114",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -46336,7 +46318,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2565,
+                      "PriorityRank":  2564,
                       "StudentId":  "59792914",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -46354,61 +46336,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2566,
-                      "StudentId":  "62225165",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-06 00:00:00",
-                      "ConnectionDisplay":  "2026-01-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2567,
-                      "StudentId":  "61733518",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-06 00:00:00",
-                      "ConnectionDisplay":  "2026-01-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2568,
-                      "StudentId":  "62226282",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-06 00:00:00",
-                      "ConnectionDisplay":  "2026-01-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2569,
+                      "PriorityRank":  2565,
                       "StudentId":  "60866619",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -46426,115 +46354,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2570,
-                      "StudentId":  "62225354",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-06 00:00:00",
-                      "ConnectionDisplay":  "2026-01-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2571,
-                      "StudentId":  "62224449",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-06 00:00:00",
-                      "ConnectionDisplay":  "2026-01-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2572,
-                      "StudentId":  "61733259",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-06 00:00:00",
-                      "ConnectionDisplay":  "2026-01-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2573,
-                      "StudentId":  "62221252",
-                      "Rep":  "EGSS-juliamonir01",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-06 00:00:00",
-                      "ConnectionDisplay":  "2026-01-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2574,
-                      "StudentId":  "62225517",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-06 00:00:00",
-                      "ConnectionDisplay":  "2026-01-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2575,
-                      "StudentId":  "62222441",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-06 00:00:00",
-                      "ConnectionDisplay":  "2026-01-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260106",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2576,
+                      "PriorityRank":  2566,
                       "StudentId":  "62217331",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -46552,7 +46372,133 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2577,
+                      "PriorityRank":  2567,
+                      "StudentId":  "62226282",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-06 00:00:00",
+                      "ConnectionDisplay":  "2026-01-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260106",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2568,
+                      "StudentId":  "62225165",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-06 00:00:00",
+                      "ConnectionDisplay":  "2026-01-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260106",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2569,
+                      "StudentId":  "62225354",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-06 00:00:00",
+                      "ConnectionDisplay":  "2026-01-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260106",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2570,
+                      "StudentId":  "62221252",
+                      "Rep":  "EGSS-juliamonir01",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-06 00:00:00",
+                      "ConnectionDisplay":  "2026-01-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260106",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2571,
+                      "StudentId":  "61733259",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-06 00:00:00",
+                      "ConnectionDisplay":  "2026-01-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260106",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2572,
+                      "StudentId":  "62224449",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-06 00:00:00",
+                      "ConnectionDisplay":  "2026-01-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260106",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2573,
+                      "StudentId":  "61733518",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-06 00:00:00",
+                      "ConnectionDisplay":  "2026-01-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260106",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2574,
                       "StudentId":  "62217647",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -46570,7 +46516,43 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2578,
+                      "PriorityRank":  2575,
+                      "StudentId":  "62225517",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-06 00:00:00",
+                      "ConnectionDisplay":  "2026-01-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260106",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2576,
+                      "StudentId":  "62222441",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-06 00:00:00",
+                      "ConnectionDisplay":  "2026-01-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260106",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2577,
                       "StudentId":  "58347148",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -46588,25 +46570,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2579,
-                      "StudentId":  "62254758",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-10 00:00:00",
-                      "ConnectionDisplay":  "2026-01-10 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260110",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2580,
+                      "PriorityRank":  2578,
                       "StudentId":  "62256213",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -46624,7 +46588,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2581,
+                      "PriorityRank":  2579,
                       "StudentId":  "62241245",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -46638,6 +46602,42 @@
                       "ConnectionDisplay":  "2026-01-10 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260110",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2580,
+                      "StudentId":  "62254758",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-10 00:00:00",
+                      "ConnectionDisplay":  "2026-01-10 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260110",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2581,
+                      "StudentId":  "62255621",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-11 00:00:00",
+                      "ConnectionDisplay":  "2026-01-11 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260111",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -46661,24 +46661,6 @@
                   },
                   {
                       "PriorityRank":  2583,
-                      "StudentId":  "62255621",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-11 00:00:00",
-                      "ConnectionDisplay":  "2026-01-11 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260111",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2584,
                       "StudentId":  "58617882",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -46696,43 +46678,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2585,
-                      "StudentId":  "62279076",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-13 00:00:00",
-                      "ConnectionDisplay":  "2026-01-13 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260113",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2586,
-                      "StudentId":  "58440976",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-13 00:00:00",
-                      "ConnectionDisplay":  "2026-01-13 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260113",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2587,
+                      "PriorityRank":  2584,
                       "StudentId":  "62279423",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -46750,13 +46696,67 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2588,
+                      "PriorityRank":  2585,
+                      "StudentId":  "58440976",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-13 00:00:00",
+                      "ConnectionDisplay":  "2026-01-13 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260113",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2586,
+                      "StudentId":  "62279076",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-13 00:00:00",
+                      "ConnectionDisplay":  "2026-01-13 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260113",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2587,
                       "StudentId":  "60539585",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-14 00:00:00",
+                      "ConnectionDisplay":  "2026-01-14 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260114",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2588,
+                      "StudentId":  "58662957",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -46787,19 +46787,19 @@
                   },
                   {
                       "PriorityRank":  2590,
-                      "StudentId":  "58662957",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "60453176",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-14 00:00:00",
-                      "ConnectionDisplay":  "2026-01-14 00:00:00",
+                      "LastConnectionTime":  "2026-01-16 00:00:00",
+                      "ConnectionDisplay":  "2026-01-16 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260114",
+                      "LastPaidDate":  "20260116",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -46823,19 +46823,19 @@
                   },
                   {
                       "PriorityRank":  2592,
-                      "StudentId":  "60453176",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
+                      "StudentId":  "59197885",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-16 00:00:00",
-                      "ConnectionDisplay":  "2026-01-16 00:00:00",
+                      "LastConnectionTime":  "2026-01-19 00:00:00",
+                      "ConnectionDisplay":  "2026-01-19 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260116",
+                      "LastPaidDate":  "20260119",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -46859,19 +46859,19 @@
                   },
                   {
                       "PriorityRank":  2594,
-                      "StudentId":  "59197885",
-                      "Rep":  "EGSS-amrsafwat",
+                      "StudentId":  "62324380",
+                      "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-19 00:00:00",
-                      "ConnectionDisplay":  "2026-01-19 00:00:00",
+                      "LastConnectionTime":  "2026-01-20 00:00:00",
+                      "ConnectionDisplay":  "2026-01-20 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260119",
+                      "LastPaidDate":  "20260120",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -46895,42 +46895,6 @@
                   },
                   {
                       "PriorityRank":  2596,
-                      "StudentId":  "62324380",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-20 00:00:00",
-                      "ConnectionDisplay":  "2026-01-20 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260120",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2597,
-                      "StudentId":  "58153999",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-21 00:00:00",
-                      "ConnectionDisplay":  "2026-01-21 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260121",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2598,
                       "StudentId":  "62317581",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -46948,7 +46912,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2599,
+                      "PriorityRank":  2597,
                       "StudentId":  "62343944",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -46962,6 +46926,42 @@
                       "ConnectionDisplay":  "2026-01-21 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260121",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2598,
+                      "StudentId":  "58153999",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-21 00:00:00",
+                      "ConnectionDisplay":  "2026-01-21 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260121",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2599,
+                      "StudentId":  "62345722",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-22 00:00:00",
+                      "ConnectionDisplay":  "2026-01-22 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260122",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -46985,24 +46985,6 @@
                   },
                   {
                       "PriorityRank":  2601,
-                      "StudentId":  "62351077",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-22 00:00:00",
-                      "ConnectionDisplay":  "2026-01-22 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260122",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2602,
                       "StudentId":  "62338705",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -47020,13 +47002,13 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2603,
-                      "StudentId":  "62345722",
+                      "PriorityRank":  2602,
+                      "StudentId":  "62351077",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -47034,6 +47016,24 @@
                       "ConnectionDisplay":  "2026-01-22 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260122",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2603,
+                      "StudentId":  "59415103",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-25 00:00:00",
+                      "ConnectionDisplay":  "2026-01-25 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260125",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -47057,24 +47057,6 @@
                   },
                   {
                       "PriorityRank":  2605,
-                      "StudentId":  "59415103",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-25 00:00:00",
-                      "ConnectionDisplay":  "2026-01-25 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260125",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2606,
                       "StudentId":  "62327179",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -47092,7 +47074,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2607,
+                      "PriorityRank":  2606,
                       "StudentId":  "62271411",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -47110,43 +47092,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2608,
-                      "StudentId":  "62320737",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-27 00:00:00",
-                      "ConnectionDisplay":  "2026-01-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260127",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2609,
-                      "StudentId":  "62395795",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-27 00:00:00",
-                      "ConnectionDisplay":  "2026-01-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260127",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2610,
+                      "PriorityRank":  2607,
                       "StudentId":  "62344325",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -47164,13 +47110,67 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2611,
+                      "PriorityRank":  2608,
                       "StudentId":  "62394825",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-27 00:00:00",
+                      "ConnectionDisplay":  "2026-01-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260127",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2609,
+                      "StudentId":  "62320737",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-27 00:00:00",
+                      "ConnectionDisplay":  "2026-01-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260127",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2610,
+                      "StudentId":  "62395795",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-27 00:00:00",
+                      "ConnectionDisplay":  "2026-01-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260127",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2611,
+                      "StudentId":  "62396463",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -47201,96 +47201,6 @@
                   },
                   {
                       "PriorityRank":  2613,
-                      "StudentId":  "62396463",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-27 00:00:00",
-                      "ConnectionDisplay":  "2026-01-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260127",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2614,
-                      "StudentId":  "62392112",
-                      "Rep":  "EGSS-abdelrhmanshehata",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-28 00:00:00",
-                      "ConnectionDisplay":  "2026-01-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260128",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2615,
-                      "StudentId":  "58623648",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-28 00:00:00",
-                      "ConnectionDisplay":  "2026-01-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260128",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2616,
-                      "StudentId":  "59611665",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-28 00:00:00",
-                      "ConnectionDisplay":  "2026-01-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260128",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2617,
-                      "StudentId":  "62394751",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-28 00:00:00",
-                      "ConnectionDisplay":  "2026-01-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260128",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2618,
                       "StudentId":  "62400700",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -47308,7 +47218,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2619,
+                      "PriorityRank":  2614,
                       "StudentId":  "62387246",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -47326,7 +47236,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2620,
+                      "PriorityRank":  2615,
+                      "StudentId":  "62401002",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-28 00:00:00",
+                      "ConnectionDisplay":  "2026-01-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260128",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2616,
                       "StudentId":  "59952313",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -47344,10 +47272,82 @@
                       "IsCovered":  0
                   },
                   {
+                      "PriorityRank":  2617,
+                      "StudentId":  "58623648",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-28 00:00:00",
+                      "ConnectionDisplay":  "2026-01-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260128",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2618,
+                      "StudentId":  "62394751",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-28 00:00:00",
+                      "ConnectionDisplay":  "2026-01-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260128",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2619,
+                      "StudentId":  "59611665",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-28 00:00:00",
+                      "ConnectionDisplay":  "2026-01-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260128",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2620,
+                      "StudentId":  "62392112",
+                      "Rep":  "EGSS-abdelrhmanshehata",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-28 00:00:00",
+                      "ConnectionDisplay":  "2026-01-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260128",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
                       "PriorityRank":  2621,
-                      "StudentId":  "62401002",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
+                      "StudentId":  "62340463",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE 0-cr",
@@ -47381,12 +47381,12 @@
                   },
                   {
                       "PriorityRank":  2623,
-                      "StudentId":  "61885311",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "62403101",
+                      "Rep":  "EGSS-omarmoneb",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -47399,7 +47399,7 @@
                   },
                   {
                       "PriorityRank":  2624,
-                      "StudentId":  "62340463",
+                      "StudentId":  "61885311",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -47435,19 +47435,19 @@
                   },
                   {
                       "PriorityRank":  2626,
-                      "StudentId":  "62403101",
-                      "Rep":  "EGSS-omarmoneb",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "62404011",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-28 00:00:00",
-                      "ConnectionDisplay":  "2026-01-28 00:00:00",
+                      "LastConnectionTime":  "2026-01-29 00:00:00",
+                      "ConnectionDisplay":  "2026-01-29 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260128",
+                      "LastPaidDate":  "20260129",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -47471,24 +47471,6 @@
                   },
                   {
                       "PriorityRank":  2628,
-                      "StudentId":  "62404011",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-29 00:00:00",
-                      "ConnectionDisplay":  "2026-01-29 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260129",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2629,
                       "StudentId":  "62411627",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -47506,7 +47488,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2630,
+                      "PriorityRank":  2629,
                       "StudentId":  "62409023",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -47524,43 +47506,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2631,
-                      "StudentId":  "62416496",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-30 00:00:00",
-                      "ConnectionDisplay":  "2026-01-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260130",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2632,
-                      "StudentId":  "62405340",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-30 00:00:00",
-                      "ConnectionDisplay":  "2026-01-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260130",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2633,
+                      "PriorityRank":  2630,
                       "StudentId":  "62241615",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -47578,79 +47524,43 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2634,
-                      "StudentId":  "59359306",
-                      "Rep":  "EGSS-alihesham01",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-31 00:00:00",
-                      "ConnectionDisplay":  "2026-01-31 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260131",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2635,
-                      "StudentId":  "60433387",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-31 00:00:00",
-                      "ConnectionDisplay":  "2026-01-31 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260131",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2636,
-                      "StudentId":  "60270432",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
+                      "PriorityRank":  2631,
+                      "StudentId":  "62405340",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-31 00:00:00",
-                      "ConnectionDisplay":  "2026-01-31 00:00:00",
+                      "LastConnectionTime":  "2026-01-30 00:00:00",
+                      "ConnectionDisplay":  "2026-01-30 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260131",
+                      "LastPaidDate":  "20260130",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2637,
-                      "StudentId":  "62422388",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  2632,
+                      "StudentId":  "62416496",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-01-31 00:00:00",
-                      "ConnectionDisplay":  "2026-01-31 00:00:00",
+                      "LastConnectionTime":  "2026-01-30 00:00:00",
+                      "ConnectionDisplay":  "2026-01-30 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260131",
+                      "LastPaidDate":  "20260130",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2638,
+                      "PriorityRank":  2633,
                       "StudentId":  "62425391",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -47668,7 +47578,43 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2639,
+                      "PriorityRank":  2634,
+                      "StudentId":  "60270432",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-31 00:00:00",
+                      "ConnectionDisplay":  "2026-01-31 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260131",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2635,
+                      "StudentId":  "62422388",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-31 00:00:00",
+                      "ConnectionDisplay":  "2026-01-31 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260131",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2636,
                       "StudentId":  "61773295",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -47682,6 +47628,60 @@
                       "ConnectionDisplay":  "2026-01-31 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260131",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2637,
+                      "StudentId":  "59359306",
+                      "Rep":  "EGSS-alihesham01",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-31 00:00:00",
+                      "ConnectionDisplay":  "2026-01-31 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260131",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2638,
+                      "StudentId":  "60433387",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-01-31 00:00:00",
+                      "ConnectionDisplay":  "2026-01-31 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260131",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2639,
+                      "StudentId":  "62448520",
+                      "Rep":  "EGSS-omarmoneb",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-03 00:00:00",
+                      "ConnectionDisplay":  "2026-02-03 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260203",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -47705,24 +47705,6 @@
                   },
                   {
                       "PriorityRank":  2641,
-                      "StudentId":  "62448268",
-                      "Rep":  "EGSS-omarmoneb",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-03 00:00:00",
-                      "ConnectionDisplay":  "2026-02-03 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260203",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2642,
                       "StudentId":  "62448856",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -47740,13 +47722,13 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2643,
-                      "StudentId":  "62448520",
+                      "PriorityRank":  2642,
+                      "StudentId":  "62448268",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -47754,6 +47736,24 @@
                       "ConnectionDisplay":  "2026-02-03 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260203",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2643,
+                      "StudentId":  "62421903",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-04 00:00:00",
+                      "ConnectionDisplay":  "2026-02-04 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260204",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -47777,60 +47777,6 @@
                   },
                   {
                       "PriorityRank":  2645,
-                      "StudentId":  "62421903",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-04 00:00:00",
-                      "ConnectionDisplay":  "2026-02-04 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260204",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2646,
-                      "StudentId":  "62431650",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-05 00:00:00",
-                      "ConnectionDisplay":  "2026-02-05 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260205",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2647,
-                      "StudentId":  "62438430",
-                      "Rep":  "EGSS-khaledgonam",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-05 00:00:00",
-                      "ConnectionDisplay":  "2026-02-05 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260205",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2648,
                       "StudentId":  "62441728",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -47848,13 +47794,67 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2649,
+                      "PriorityRank":  2646,
+                      "StudentId":  "62438430",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-05 00:00:00",
+                      "ConnectionDisplay":  "2026-02-05 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260205",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2647,
+                      "StudentId":  "62431650",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-05 00:00:00",
+                      "ConnectionDisplay":  "2026-02-05 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260205",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2648,
                       "StudentId":  "62477210",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-08 00:00:00",
+                      "ConnectionDisplay":  "2026-02-08 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260208",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2649,
+                      "StudentId":  "62476509",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -47885,96 +47885,6 @@
                   },
                   {
                       "PriorityRank":  2651,
-                      "StudentId":  "62476509",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-08 00:00:00",
-                      "ConnectionDisplay":  "2026-02-08 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260208",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2652,
-                      "StudentId":  "61031468",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-09 00:00:00",
-                      "ConnectionDisplay":  "2026-02-09 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260209",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2653,
-                      "StudentId":  "59555669",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-09 00:00:00",
-                      "ConnectionDisplay":  "2026-02-09 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260209",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2654,
-                      "StudentId":  "62465592",
-                      "Rep":  "EGSS-omarmoneb",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-09 00:00:00",
-                      "ConnectionDisplay":  "2026-02-09 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260209",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2655,
-                      "StudentId":  "62491239",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-09 00:00:00",
-                      "ConnectionDisplay":  "2026-02-09 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260209",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2656,
                       "StudentId":  "62483202",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -47992,10 +47902,10 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2657,
-                      "StudentId":  "62487734",
-                      "Rep":  "EGSS-khaledgonam",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  2652,
+                      "StudentId":  "59555669",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE Non-0",
@@ -48010,7 +47920,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2658,
+                      "PriorityRank":  2653,
+                      "StudentId":  "61031468",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-09 00:00:00",
+                      "ConnectionDisplay":  "2026-02-09 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260209",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2654,
                       "StudentId":  "62440410",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -48028,43 +47956,61 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2659,
-                      "StudentId":  "62498434",
+                      "PriorityRank":  2655,
+                      "StudentId":  "62487734",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-09 00:00:00",
+                      "ConnectionDisplay":  "2026-02-09 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260209",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2656,
+                      "StudentId":  "62465592",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-10 00:00:00",
-                      "ConnectionDisplay":  "2026-02-10 00:00:00",
+                      "LastConnectionTime":  "2026-02-09 00:00:00",
+                      "ConnectionDisplay":  "2026-02-09 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260210",
+                      "LastPaidDate":  "20260209",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2660,
-                      "StudentId":  "62495085",
+                      "PriorityRank":  2657,
+                      "StudentId":  "62491239",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-10 00:00:00",
-                      "ConnectionDisplay":  "2026-02-10 00:00:00",
+                      "LastConnectionTime":  "2026-02-09 00:00:00",
+                      "ConnectionDisplay":  "2026-02-09 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260210",
+                      "LastPaidDate":  "20260209",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2661,
+                      "PriorityRank":  2658,
                       "StudentId":  "62483376",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -48082,45 +48028,27 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2662,
-                      "StudentId":  "62501059",
-                      "Rep":  "EGSS-khaledgonam",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  2659,
+                      "StudentId":  "62495085",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-11 00:00:00",
-                      "ConnectionDisplay":  "2026-02-11 00:00:00",
+                      "LastConnectionTime":  "2026-02-10 00:00:00",
+                      "ConnectionDisplay":  "2026-02-10 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260211",
+                      "LastPaidDate":  "20260210",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2663,
-                      "StudentId":  "62505997",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-11 00:00:00",
-                      "ConnectionDisplay":  "2026-02-11 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260211",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2664,
-                      "StudentId":  "62503925",
-                      "Rep":  "EGSS-khaledgonam",
+                      "PriorityRank":  2660,
+                      "StudentId":  "62498434",
+                      "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
@@ -48128,69 +48056,15 @@
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-11 00:00:00",
-                      "ConnectionDisplay":  "2026-02-11 00:00:00",
+                      "LastConnectionTime":  "2026-02-10 00:00:00",
+                      "ConnectionDisplay":  "2026-02-10 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260211",
+                      "LastPaidDate":  "20260210",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2665,
-                      "StudentId":  "62499911",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-11 00:00:00",
-                      "ConnectionDisplay":  "2026-02-11 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260211",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2666,
-                      "StudentId":  "62507096",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-11 00:00:00",
-                      "ConnectionDisplay":  "2026-02-11 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260211",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2667,
-                      "StudentId":  "62506516",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-11 00:00:00",
-                      "ConnectionDisplay":  "2026-02-11 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260211",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2668,
+                      "PriorityRank":  2661,
                       "StudentId":  "62506795",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -48208,7 +48082,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2669,
+                      "PriorityRank":  2662,
+                      "StudentId":  "62507096",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-11 00:00:00",
+                      "ConnectionDisplay":  "2026-02-11 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260211",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2663,
                       "StudentId":  "62496791",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -48222,6 +48114,114 @@
                       "ConnectionDisplay":  "2026-02-11 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260211",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2664,
+                      "StudentId":  "62501059",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-11 00:00:00",
+                      "ConnectionDisplay":  "2026-02-11 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260211",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2665,
+                      "StudentId":  "62506516",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-11 00:00:00",
+                      "ConnectionDisplay":  "2026-02-11 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260211",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2666,
+                      "StudentId":  "62503925",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-11 00:00:00",
+                      "ConnectionDisplay":  "2026-02-11 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260211",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2667,
+                      "StudentId":  "62505997",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-11 00:00:00",
+                      "ConnectionDisplay":  "2026-02-11 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260211",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2668,
+                      "StudentId":  "62499911",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-11 00:00:00",
+                      "ConnectionDisplay":  "2026-02-11 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260211",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2669,
+                      "StudentId":  "62481887",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-12 00:00:00",
+                      "ConnectionDisplay":  "2026-02-12 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260212",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -48263,24 +48263,42 @@
                   },
                   {
                       "PriorityRank":  2672,
-                      "StudentId":  "62481887",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "62476586",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-12 00:00:00",
-                      "ConnectionDisplay":  "2026-02-12 00:00:00",
+                      "LastConnectionTime":  "2026-02-14 00:00:00",
+                      "ConnectionDisplay":  "2026-02-14 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260212",
+                      "LastPaidDate":  "20260214",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
                       "PriorityRank":  2673,
+                      "StudentId":  "62474819",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-14 00:00:00",
+                      "ConnectionDisplay":  "2026-02-14 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260214",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2674,
                       "StudentId":  "58236992",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -48298,31 +48316,13 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2674,
+                      "PriorityRank":  2675,
                       "StudentId":  "62454870",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-14 00:00:00",
-                      "ConnectionDisplay":  "2026-02-14 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260214",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2675,
-                      "StudentId":  "62474819",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -48353,19 +48353,19 @@
                   },
                   {
                       "PriorityRank":  2677,
-                      "StudentId":  "62476586",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "61380011",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-14 00:00:00",
-                      "ConnectionDisplay":  "2026-02-14 00:00:00",
+                      "LastConnectionTime":  "2026-02-15 00:00:00",
+                      "ConnectionDisplay":  "2026-02-15 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260214",
+                      "LastPaidDate":  "20260215",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -48389,24 +48389,6 @@
                   },
                   {
                       "PriorityRank":  2679,
-                      "StudentId":  "61380011",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-15 00:00:00",
-                      "ConnectionDisplay":  "2026-02-15 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260215",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2680,
                       "StudentId":  "62065468",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -48424,7 +48406,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2681,
+                      "PriorityRank":  2680,
                       "StudentId":  "61569373",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -48442,7 +48424,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2682,
+                      "PriorityRank":  2681,
                       "StudentId":  "62544533",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -48460,7 +48442,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2683,
+                      "PriorityRank":  2682,
                       "StudentId":  "62482269",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -48478,25 +48460,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2684,
-                      "StudentId":  "62549935",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-20 00:00:00",
-                      "ConnectionDisplay":  "2026-02-20 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260220",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2685,
+                      "PriorityRank":  2683,
                       "StudentId":  "62431139",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -48514,7 +48478,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2686,
+                      "PriorityRank":  2684,
                       "StudentId":  "62549791",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -48532,7 +48496,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2687,
+                      "PriorityRank":  2685,
+                      "StudentId":  "62549935",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-20 00:00:00",
+                      "ConnectionDisplay":  "2026-02-20 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260220",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2686,
                       "StudentId":  "62540325",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -48550,7 +48532,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2688,
+                      "PriorityRank":  2687,
                       "StudentId":  "62555698",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -48568,7 +48550,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2689,
+                      "PriorityRank":  2688,
                       "StudentId":  "62290266",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -48586,7 +48568,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2690,
+                      "PriorityRank":  2689,
                       "StudentId":  "62556539",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -48600,6 +48582,24 @@
                       "ConnectionDisplay":  "2026-02-23 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260223",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2690,
+                      "StudentId":  "62244666",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-24 00:00:00",
+                      "ConnectionDisplay":  "2026-02-24 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260224",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -48641,24 +48641,6 @@
                   },
                   {
                       "PriorityRank":  2693,
-                      "StudentId":  "62244666",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-24 00:00:00",
-                      "ConnectionDisplay":  "2026-02-24 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260224",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2694,
                       "StudentId":  "62554820",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -48676,7 +48658,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2695,
+                      "PriorityRank":  2694,
                       "StudentId":  "62575304",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -48690,6 +48672,24 @@
                       "ConnectionDisplay":  "2026-02-26 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260226",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2695,
+                      "StudentId":  "58549740",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-27 00:00:00",
+                      "ConnectionDisplay":  "2026-02-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260227",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -48713,24 +48713,6 @@
                   },
                   {
                       "PriorityRank":  2697,
-                      "StudentId":  "58549740",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-27 00:00:00",
-                      "ConnectionDisplay":  "2026-02-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260227",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2698,
                       "StudentId":  "62551464",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -48748,7 +48730,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2699,
+                      "PriorityRank":  2698,
                       "StudentId":  "60710495",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -48766,13 +48748,31 @@
                       "IsCovered":  0
                   },
                   {
+                      "PriorityRank":  2699,
+                      "StudentId":  "62555694",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-28 00:00:00",
+                      "ConnectionDisplay":  "2026-02-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260228",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
                       "PriorityRank":  2700,
-                      "StudentId":  "62596506",
+                      "StudentId":  "62603095",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -48803,12 +48803,12 @@
                   },
                   {
                       "PriorityRank":  2702,
-                      "StudentId":  "62555694",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "62596506",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -48821,60 +48821,6 @@
                   },
                   {
                       "PriorityRank":  2703,
-                      "StudentId":  "60445901",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-28 00:00:00",
-                      "ConnectionDisplay":  "2026-02-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260228",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2704,
-                      "StudentId":  "62596323",
-                      "Rep":  "EGSS-ehabzaky01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-28 00:00:00",
-                      "ConnectionDisplay":  "2026-02-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260228",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2705,
-                      "StudentId":  "62603095",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-02-28 00:00:00",
-                      "ConnectionDisplay":  "2026-02-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260228",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2706,
                       "StudentId":  "62596340",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -48892,7 +48838,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2707,
+                      "PriorityRank":  2704,
+                      "StudentId":  "60445901",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-28 00:00:00",
+                      "ConnectionDisplay":  "2026-02-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260228",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2705,
                       "StudentId":  "62546162",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -48910,7 +48874,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2708,
+                      "PriorityRank":  2706,
+                      "StudentId":  "62596323",
+                      "Rep":  "EGSS-ehabzaky01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-02-28 00:00:00",
+                      "ConnectionDisplay":  "2026-02-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260228",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2707,
                       "StudentId":  "62378470",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -48928,7 +48910,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2709,
+                      "PriorityRank":  2708,
                       "StudentId":  "62603624",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -48946,7 +48928,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2710,
+                      "PriorityRank":  2709,
                       "StudentId":  "62596738",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -48964,7 +48946,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2711,
+                      "PriorityRank":  2710,
                       "StudentId":  "62609089",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -48982,10 +48964,28 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2712,
-                      "StudentId":  "62620467",
+                      "PriorityRank":  2711,
+                      "StudentId":  "62627870",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-03-04 00:00:00",
+                      "ConnectionDisplay":  "2026-03-04 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260304",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2712,
+                      "StudentId":  "62603217",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE Non-0",
@@ -49019,9 +49019,9 @@
                   },
                   {
                       "PriorityRank":  2714,
-                      "StudentId":  "62603217",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "62620467",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "首单到期",
                       "PoolDetail":  "FOE Non-0",
@@ -49037,24 +49037,6 @@
                   },
                   {
                       "PriorityRank":  2715,
-                      "StudentId":  "62627870",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-03-04 00:00:00",
-                      "ConnectionDisplay":  "2026-03-04 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260304",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2716,
                       "StudentId":  "62616354",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -49068,6 +49050,24 @@
                       "ConnectionDisplay":  "2026-03-05 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260305",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2716,
+                      "StudentId":  "62638075",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-03-06 00:00:00",
+                      "ConnectionDisplay":  "2026-03-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260306",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -49091,24 +49091,6 @@
                   },
                   {
                       "PriorityRank":  2718,
-                      "StudentId":  "62638075",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-03-06 00:00:00",
-                      "ConnectionDisplay":  "2026-03-06 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260306",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2719,
                       "StudentId":  "62629969",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -49126,7 +49108,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2720,
+                      "PriorityRank":  2719,
                       "StudentId":  "60792943",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -49140,6 +49122,24 @@
                       "ConnectionDisplay":  "2026-03-07 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260307",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2720,
+                      "StudentId":  "62630638",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-03-08 00:00:00",
+                      "ConnectionDisplay":  "2026-03-08 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260308",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -49163,24 +49163,6 @@
                   },
                   {
                       "PriorityRank":  2722,
-                      "StudentId":  "62630638",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-03-08 00:00:00",
-                      "ConnectionDisplay":  "2026-03-08 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260308",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2723,
                       "StudentId":  "62660317",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -49198,7 +49180,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2724,
+                      "PriorityRank":  2723,
                       "StudentId":  "62672256",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -49212,6 +49194,24 @@
                       "ConnectionDisplay":  "2026-03-11 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260311",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2724,
+                      "StudentId":  "62674764",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-03-12 00:00:00",
+                      "ConnectionDisplay":  "2026-03-12 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260312",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -49235,24 +49235,6 @@
                   },
                   {
                       "PriorityRank":  2726,
-                      "StudentId":  "62674764",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-03-12 00:00:00",
-                      "ConnectionDisplay":  "2026-03-12 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260312",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2727,
                       "StudentId":  "62712709",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -49270,7 +49252,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2728,
+                      "PriorityRank":  2727,
                       "StudentId":  "62728395",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -49288,7 +49270,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2729,
+                      "PriorityRank":  2728,
                       "StudentId":  "62455114",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -49306,43 +49288,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2730,
-                      "StudentId":  "62711973",
-                      "Rep":  "EGSS-alihesham01",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-03-26 00:00:00",
-                      "ConnectionDisplay":  "2026-03-26 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260326",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2731,
-                      "StudentId":  "62787895",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-03-26 00:00:00",
-                      "ConnectionDisplay":  "2026-03-26 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260326",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2732,
+                      "PriorityRank":  2729,
                       "StudentId":  "62779575",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -49360,7 +49306,43 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2733,
+                      "PriorityRank":  2730,
+                      "StudentId":  "62787895",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-03-26 00:00:00",
+                      "ConnectionDisplay":  "2026-03-26 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260326",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2731,
+                      "StudentId":  "62711973",
+                      "Rep":  "EGSS-alihesham01",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-03-26 00:00:00",
+                      "ConnectionDisplay":  "2026-03-26 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260326",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2732,
                       "StudentId":  "62780515",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -49378,7 +49360,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2734,
+                      "PriorityRank":  2733,
                       "StudentId":  "62788019",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -49396,7 +49378,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2735,
+                      "PriorityRank":  2734,
                       "StudentId":  "62796312",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -49414,13 +49396,13 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2736,
-                      "StudentId":  "62806268",
-                      "Rep":  "EGSS-khaledgonam",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  2735,
+                      "StudentId":  "62803685",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -49432,7 +49414,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2737,
+                      "PriorityRank":  2736,
                       "StudentId":  "60121985",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -49450,13 +49432,13 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2738,
-                      "StudentId":  "62803685",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
+                      "PriorityRank":  2737,
+                      "StudentId":  "62806268",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE 0-cr",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -49464,6 +49446,24 @@
                       "ConnectionDisplay":  "2026-03-29 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260329",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2738,
+                      "StudentId":  "62825962",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-03-31 00:00:00",
+                      "ConnectionDisplay":  "2026-03-31 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260331",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -49487,8 +49487,8 @@
                   },
                   {
                       "PriorityRank":  2740,
-                      "StudentId":  "62825962",
-                      "Rep":  "EGSS-khaledgonam",
+                      "StudentId":  "62833800",
+                      "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
@@ -49496,16 +49496,16 @@
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-03-31 00:00:00",
-                      "ConnectionDisplay":  "2026-03-31 00:00:00",
+                      "LastConnectionTime":  "2026-04-01 00:00:00",
+                      "ConnectionDisplay":  "2026-04-01 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260331",
+                      "LastPaidDate":  "20260401",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
                       "PriorityRank":  2741,
-                      "StudentId":  "61097236",
+                      "StudentId":  "62835045",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -49541,42 +49541,6 @@
                   },
                   {
                       "PriorityRank":  2743,
-                      "StudentId":  "62833800",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-01 00:00:00",
-                      "ConnectionDisplay":  "2026-04-01 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260401",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2744,
-                      "StudentId":  "62835045",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-01 00:00:00",
-                      "ConnectionDisplay":  "2026-04-01 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260401",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2745,
                       "StudentId":  "62831540",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -49594,7 +49558,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2746,
+                      "PriorityRank":  2744,
                       "StudentId":  "62834129",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -49612,7 +49576,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2747,
+                      "PriorityRank":  2745,
+                      "StudentId":  "61097236",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-01 00:00:00",
+                      "ConnectionDisplay":  "2026-04-01 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260401",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2746,
                       "StudentId":  "62834852",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -49630,7 +49612,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2748,
+                      "PriorityRank":  2747,
                       "StudentId":  "62854446",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -49648,7 +49630,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2749,
+                      "PriorityRank":  2748,
                       "StudentId":  "58822771",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -49662,6 +49644,24 @@
                       "ConnectionDisplay":  "2026-04-05 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260405",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2749,
+                      "StudentId":  "62865688",
+                      "Rep":  "EGSS-abdelrhmanshehata",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-06 00:00:00",
+                      "ConnectionDisplay":  "2026-04-06 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260406",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -49685,12 +49685,12 @@
                   },
                   {
                       "PriorityRank":  2751,
-                      "StudentId":  "62865688",
-                      "Rep":  "EGSS-abdelrhmanshehata",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "62871744",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "首单到期",
+                      "PoolDetail":  "FOE Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -49721,19 +49721,19 @@
                   },
                   {
                       "PriorityRank":  2753,
-                      "StudentId":  "62871744",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "62862484",
+                      "Rep":  "EGSS-abdelrhmanshehata",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "首单到期",
-                      "PoolDetail":  "FOE Non-0",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-06 00:00:00",
-                      "ConnectionDisplay":  "2026-04-06 00:00:00",
+                      "LastConnectionTime":  "2026-04-07 00:00:00",
+                      "ConnectionDisplay":  "2026-04-07 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260406",
+                      "LastPaidDate":  "20260407",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -49775,19 +49775,19 @@
                   },
                   {
                       "PriorityRank":  2756,
-                      "StudentId":  "62862484",
-                      "Rep":  "EGSS-abdelrhmanshehata",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "62881542",
+                      "Rep":  "EGSS-juliamonir01",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-07 00:00:00",
-                      "ConnectionDisplay":  "2026-04-07 00:00:00",
+                      "LastConnectionTime":  "2026-04-08 00:00:00",
+                      "ConnectionDisplay":  "2026-04-08 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260407",
+                      "LastPaidDate":  "20260408",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -49811,24 +49811,6 @@
                   },
                   {
                       "PriorityRank":  2758,
-                      "StudentId":  "62881542",
-                      "Rep":  "EGSS-juliamonir01",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-08 00:00:00",
-                      "ConnectionDisplay":  "2026-04-08 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260408",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2759,
                       "StudentId":  "62896581",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -49846,7 +49828,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2760,
+                      "PriorityRank":  2759,
                       "StudentId":  "59800903",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -49864,7 +49846,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2761,
+                      "PriorityRank":  2760,
                       "StudentId":  "58706508",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -49882,10 +49864,28 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2762,
+                      "PriorityRank":  2761,
                       "StudentId":  "62815648",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-11 00:00:00",
+                      "ConnectionDisplay":  "2026-04-11 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260411",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2762,
+                      "StudentId":  "62903014",
+                      "Rep":  "EGSS-ehabzaky01",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp Non-0",
@@ -49919,24 +49919,6 @@
                   },
                   {
                       "PriorityRank":  2764,
-                      "StudentId":  "62903014",
-                      "Rep":  "EGSS-ehabzaky01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-11 00:00:00",
-                      "ConnectionDisplay":  "2026-04-11 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260411",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2765,
                       "StudentId":  "59148585",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -49954,7 +49936,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2766,
+                      "PriorityRank":  2765,
                       "StudentId":  "62927000",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -49972,7 +49954,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2767,
+                      "PriorityRank":  2766,
                       "StudentId":  "62894830",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -49990,43 +49972,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2768,
-                      "StudentId":  "60405276",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-18 00:00:00",
-                      "ConnectionDisplay":  "2026-04-18 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260418",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2769,
-                      "StudentId":  "62961966",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-18 00:00:00",
-                      "ConnectionDisplay":  "2026-04-18 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260418",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2770,
+                      "PriorityRank":  2767,
                       "StudentId":  "62962305",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -50044,43 +49990,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2771,
-                      "StudentId":  "62962211",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-18 00:00:00",
-                      "ConnectionDisplay":  "2026-04-18 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260418",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2772,
-                      "StudentId":  "62956239",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-18 00:00:00",
-                      "ConnectionDisplay":  "2026-04-18 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260418",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2773,
+                      "PriorityRank":  2768,
                       "StudentId":  "62961211",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -50098,7 +50008,79 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2774,
+                      "PriorityRank":  2769,
+                      "StudentId":  "62962211",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-18 00:00:00",
+                      "ConnectionDisplay":  "2026-04-18 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260418",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2770,
+                      "StudentId":  "60405276",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-18 00:00:00",
+                      "ConnectionDisplay":  "2026-04-18 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260418",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2771,
+                      "StudentId":  "62956239",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-18 00:00:00",
+                      "ConnectionDisplay":  "2026-04-18 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260418",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2772,
+                      "StudentId":  "62961966",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-18 00:00:00",
+                      "ConnectionDisplay":  "2026-04-18 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260418",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2773,
                       "StudentId":  "60581443",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -50116,7 +50098,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2775,
+                      "PriorityRank":  2774,
                       "StudentId":  "62968132",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -50134,7 +50116,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2776,
+                      "PriorityRank":  2775,
                       "StudentId":  "62985087",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -50152,7 +50134,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2777,
+                      "PriorityRank":  2776,
                       "StudentId":  "62815632",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -50170,7 +50152,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2778,
+                      "PriorityRank":  2777,
                       "StudentId":  "63024935",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -50188,43 +50170,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2779,
-                      "StudentId":  "63024428",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-27 00:00:00",
-                      "ConnectionDisplay":  "2026-04-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260427",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2780,
-                      "StudentId":  "58605582",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-27 00:00:00",
-                      "ConnectionDisplay":  "2026-04-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260427",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2781,
+                      "PriorityRank":  2778,
                       "StudentId":  "63021589",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -50242,13 +50188,67 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2782,
+                      "PriorityRank":  2779,
+                      "StudentId":  "61001058",
+                      "Rep":  "EGSS-omarmoneb",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-27 00:00:00",
+                      "ConnectionDisplay":  "2026-04-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260427",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2780,
+                      "StudentId":  "63024428",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-27 00:00:00",
+                      "ConnectionDisplay":  "2026-04-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260427",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2781,
                       "StudentId":  "62840178",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-27 00:00:00",
+                      "ConnectionDisplay":  "2026-04-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260427",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2782,
+                      "StudentId":  "58605582",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
@@ -50279,24 +50279,6 @@
                   },
                   {
                       "PriorityRank":  2784,
-                      "StudentId":  "61001058",
-                      "Rep":  "EGSS-omarmoneb",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-27 00:00:00",
-                      "ConnectionDisplay":  "2026-04-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260427",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2785,
                       "StudentId":  "58812837",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -50314,7 +50296,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2786,
+                      "PriorityRank":  2785,
                       "StudentId":  "63047557",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -50332,7 +50314,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2787,
+                      "PriorityRank":  2786,
                       "StudentId":  "63056046",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -50350,7 +50332,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2788,
+                      "PriorityRank":  2787,
                       "StudentId":  "61650702",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -50368,7 +50350,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2789,
+                      "PriorityRank":  2788,
                       "StudentId":  "61842035",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -50386,15 +50368,33 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2790,
-                      "StudentId":  "59938767",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
+                      "PriorityRank":  2789,
+                      "StudentId":  "63067829",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
-                      "BookedUnattended":  0,
+                      "BookedUnattended":  2,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-04-30 00:00:00",
+                      "ConnectionDisplay":  "2026-04-30 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260430",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2790,
+                      "StudentId":  "58644726",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  2,
                       "AttendanceTier":  "0 Classes (Dormant)",
                       "LastConnectionTime":  "2026-04-30 00:00:00",
                       "ConnectionDisplay":  "2026-04-30 00:00:00",
@@ -50423,14 +50423,14 @@
                   },
                   {
                       "PriorityRank":  2792,
-                      "StudentId":  "58644726",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
+                      "StudentId":  "59938767",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
-                      "BookedUnattended":  2,
+                      "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
                       "LastConnectionTime":  "2026-04-30 00:00:00",
                       "ConnectionDisplay":  "2026-04-30 00:00:00",
@@ -50441,27 +50441,27 @@
                   },
                   {
                       "PriorityRank":  2793,
-                      "StudentId":  "63067829",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
+                      "StudentId":  "63078108",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
+                      "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
-                      "BookedUnattended":  2,
+                      "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-04-30 00:00:00",
-                      "ConnectionDisplay":  "2026-04-30 00:00:00",
+                      "LastConnectionTime":  "2026-05-02 00:00:00",
+                      "ConnectionDisplay":  "2026-05-02 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260430",
+                      "LastPaidDate":  "20260502",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
                   {
                       "PriorityRank":  2794,
-                      "StudentId":  "63078320",
-                      "Rep":  "EGSS-nohayoussry",
-                      "Team":  "ME-EGSS01",
+                      "StudentId":  "63077884",
+                      "Rep":  "EGSS-amrsafwat",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp 0-cr",
@@ -50495,9 +50495,9 @@
                   },
                   {
                       "PriorityRank":  2796,
-                      "StudentId":  "63078108",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "63078320",
+                      "Rep":  "EGSS-nohayoussry",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp 0-cr",
@@ -50513,24 +50513,6 @@
                   },
                   {
                       "PriorityRank":  2797,
-                      "StudentId":  "63077884",
-                      "Rep":  "EGSS-amrsafwat",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-05-02 00:00:00",
-                      "ConnectionDisplay":  "2026-05-02 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260502",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2798,
                       "StudentId":  "63067108",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -50548,7 +50530,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2799,
+                      "PriorityRank":  2798,
                       "StudentId":  "63111860",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -50566,7 +50548,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2800,
+                      "PriorityRank":  2799,
                       "StudentId":  "63107211",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -50580,6 +50562,24 @@
                       "ConnectionDisplay":  "2026-05-08 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260508",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2800,
+                      "StudentId":  "63121807",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-05-10 00:00:00",
+                      "ConnectionDisplay":  "2026-05-10 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260510",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -50603,19 +50603,19 @@
                   },
                   {
                       "PriorityRank":  2802,
-                      "StudentId":  "63121807",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
+                      "StudentId":  "63153643",
+                      "Rep":  "EGSS-juliamonir01",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
                       "PoolDetail":  "Exp 0-cr",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-05-10 00:00:00",
-                      "ConnectionDisplay":  "2026-05-10 00:00:00",
+                      "LastConnectionTime":  "2026-05-11 00:00:00",
+                      "ConnectionDisplay":  "2026-05-11 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260510",
+                      "LastPaidDate":  "20260511",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -50657,24 +50657,6 @@
                   },
                   {
                       "PriorityRank":  2805,
-                      "StudentId":  "63153643",
-                      "Rep":  "EGSS-juliamonir01",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-05-11 00:00:00",
-                      "ConnectionDisplay":  "2026-05-11 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260511",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2806,
                       "StudentId":  "63174104",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -50692,7 +50674,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2807,
+                      "PriorityRank":  2806,
                       "StudentId":  "60096294",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -50710,7 +50692,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2808,
+                      "PriorityRank":  2807,
                       "StudentId":  "59657775",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -50728,7 +50710,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2809,
+                      "PriorityRank":  2808,
                       "StudentId":  "63188140",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -50746,7 +50728,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2810,
+                      "PriorityRank":  2809,
                       "StudentId":  "61514239",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -50764,7 +50746,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2811,
+                      "PriorityRank":  2810,
                       "StudentId":  "58335651",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -50782,25 +50764,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2812,
-                      "StudentId":  "63236216",
-                      "Rep":  "EGSS-ehabzaky01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-05-31 00:00:00",
-                      "ConnectionDisplay":  "2026-05-31 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260531",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2813,
+                      "PriorityRank":  2811,
                       "StudentId":  "61197624",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -50818,7 +50782,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2814,
+                      "PriorityRank":  2812,
                       "StudentId":  "59750272",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -50836,7 +50800,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2815,
+                      "PriorityRank":  2813,
+                      "StudentId":  "63236216",
+                      "Rep":  "EGSS-ehabzaky01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-05-31 00:00:00",
+                      "ConnectionDisplay":  "2026-05-31 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260531",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2814,
                       "StudentId":  "63325725",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -50854,7 +50836,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2816,
+                      "PriorityRank":  2815,
                       "StudentId":  "63388231",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -50872,7 +50854,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2817,
+                      "PriorityRank":  2816,
                       "StudentId":  "63359229",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -50886,6 +50868,24 @@
                       "ConnectionDisplay":  "2026-06-09 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260609",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2817,
+                      "StudentId":  "63466099",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-06-18 00:00:00",
+                      "ConnectionDisplay":  "2026-06-18 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260618",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -50909,24 +50909,6 @@
                   },
                   {
                       "PriorityRank":  2819,
-                      "StudentId":  "63466099",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-06-18 00:00:00",
-                      "ConnectionDisplay":  "2026-06-18 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260618",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2820,
                       "StudentId":  "61079616",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -50940,6 +50922,24 @@
                       "ConnectionDisplay":  "2026-06-20 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260620",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2820,
+                      "StudentId":  "58457679",
+                      "Rep":  "EGSS-omarmoneb",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp 0-cr",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-06-21 00:00:00",
+                      "ConnectionDisplay":  "2026-06-21 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260621",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -50963,19 +50963,19 @@
                   },
                   {
                       "PriorityRank":  2822,
-                      "StudentId":  "58457679",
-                      "Rep":  "EGSS-omarmoneb",
+                      "StudentId":  "63488481",
+                      "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "到期",
-                      "PoolDetail":  "Exp 0-cr",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-06-21 00:00:00",
-                      "ConnectionDisplay":  "2026-06-21 00:00:00",
+                      "LastConnectionTime":  "2026-06-22 00:00:00",
+                      "ConnectionDisplay":  "2026-06-22 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260621",
+                      "LastPaidDate":  "20260622",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -50999,78 +50999,6 @@
                   },
                   {
                       "PriorityRank":  2824,
-                      "StudentId":  "63488481",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-06-22 00:00:00",
-                      "ConnectionDisplay":  "2026-06-22 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260622",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2825,
-                      "StudentId":  "63465341",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-06-23 00:00:00",
-                      "ConnectionDisplay":  "2026-06-23 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260623",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2826,
-                      "StudentId":  "59510090",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-06-23 00:00:00",
-                      "ConnectionDisplay":  "2026-06-23 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260623",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2827,
-                      "StudentId":  "63466014",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-06-23 00:00:00",
-                      "ConnectionDisplay":  "2026-06-23 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260623",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2828,
                       "StudentId":  "61943086",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51088,7 +51016,61 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2829,
+                      "PriorityRank":  2825,
+                      "StudentId":  "59510090",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-06-23 00:00:00",
+                      "ConnectionDisplay":  "2026-06-23 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260623",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2826,
+                      "StudentId":  "63466014",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-06-23 00:00:00",
+                      "ConnectionDisplay":  "2026-06-23 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260623",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2827,
+                      "StudentId":  "63465341",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-06-23 00:00:00",
+                      "ConnectionDisplay":  "2026-06-23 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260623",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2828,
                       "StudentId":  "63499498",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51106,7 +51088,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2830,
+                      "PriorityRank":  2829,
                       "StudentId":  "63522159",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51124,7 +51106,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2831,
+                      "PriorityRank":  2830,
                       "StudentId":  "63500057",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51142,7 +51124,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2832,
+                      "PriorityRank":  2831,
                       "StudentId":  "63510075",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -51160,7 +51142,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2833,
+                      "PriorityRank":  2832,
                       "StudentId":  "62954800",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -51174,6 +51156,24 @@
                       "ConnectionDisplay":  "2026-06-27 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260627",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2833,
+                      "StudentId":  "63505581",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-06-28 00:00:00",
+                      "ConnectionDisplay":  "2026-06-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260628",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -51215,24 +51215,6 @@
                   },
                   {
                       "PriorityRank":  2836,
-                      "StudentId":  "63505581",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-06-28 00:00:00",
-                      "ConnectionDisplay":  "2026-06-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260628",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2837,
                       "StudentId":  "63580888",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -51250,7 +51232,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2838,
+                      "PriorityRank":  2837,
                       "StudentId":  "63602621",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -51268,7 +51250,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2839,
+                      "PriorityRank":  2838,
                       "StudentId":  "63682785",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51286,7 +51268,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2840,
+                      "PriorityRank":  2839,
                       "StudentId":  "63710428",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -51300,6 +51282,24 @@
                       "ConnectionDisplay":  "2026-07-15 00:00:00",
                       "ConnectionSource":  "CRM System Outreach",
                       "LastPaidDate":  "20260711",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2840,
+                      "StudentId":  "63765605",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-07-20 00:00:00",
+                      "ConnectionDisplay":  "2026-07-20 00:00:00",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260718",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -51323,24 +51323,6 @@
                   },
                   {
                       "PriorityRank":  2842,
-                      "StudentId":  "63765605",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-07-20 00:00:00",
-                      "ConnectionDisplay":  "2026-07-20 00:00:00",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260718",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2843,
                       "StudentId":  "63619317",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51358,7 +51340,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2844,
+                      "PriorityRank":  2843,
                       "StudentId":  "63582858",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -51372,6 +51354,24 @@
                       "ConnectionDisplay":  "2026-07-26 00:00:00",
                       "ConnectionSource":  "CRM System Outreach",
                       "LastPaidDate":  "20260703",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2844,
+                      "StudentId":  "63762996",
+                      "Rep":  "EGSS-hayamhassan",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-07-27 00:00:00",
+                      "ConnectionDisplay":  "2026-07-27 00:00:00",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260721",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -51413,24 +51413,6 @@
                   },
                   {
                       "PriorityRank":  2847,
-                      "StudentId":  "63762996",
-                      "Rep":  "EGSS-hayamhassan",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-07-27 00:00:00",
-                      "ConnectionDisplay":  "2026-07-27 00:00:00",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260721",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2848,
                       "StudentId":  "63850836",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51448,7 +51430,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2849,
+                      "PriorityRank":  2848,
                       "StudentId":  "63481217",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -51466,7 +51448,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2850,
+                      "PriorityRank":  2849,
                       "StudentId":  "61968742",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -51484,7 +51466,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2851,
+                      "PriorityRank":  2850,
                       "StudentId":  "59740880",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -51498,6 +51480,24 @@
                       "ConnectionDisplay":  "2026-08-03 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260803",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2851,
+                      "StudentId":  "63929723",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-08-04 00:00:00",
+                      "ConnectionDisplay":  "2026-08-04 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260804",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -51521,24 +51521,6 @@
                   },
                   {
                       "PriorityRank":  2853,
-                      "StudentId":  "63929723",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-08-04 00:00:00",
-                      "ConnectionDisplay":  "2026-08-04 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260804",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2854,
                       "StudentId":  "63662189",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -51556,7 +51538,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2855,
+                      "PriorityRank":  2854,
                       "StudentId":  "63712877",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51574,7 +51556,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2856,
+                      "PriorityRank":  2855,
                       "StudentId":  "63651617",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -51592,7 +51574,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2857,
+                      "PriorityRank":  2856,
                       "StudentId":  "63969297",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -51610,7 +51592,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2858,
+                      "PriorityRank":  2857,
                       "StudentId":  "61595040",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -51624,6 +51606,24 @@
                       "ConnectionDisplay":  "2026-08-13 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260813",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2858,
+                      "StudentId":  "58734324",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-08-14 00:00:00",
+                      "ConnectionDisplay":  "2026-08-14 00:00:00",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260730",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -51647,24 +51647,6 @@
                   },
                   {
                       "PriorityRank":  2860,
-                      "StudentId":  "58734324",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-08-14 00:00:00",
-                      "ConnectionDisplay":  "2026-08-14 00:00:00",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260730",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2861,
                       "StudentId":  "63798500",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -51678,6 +51660,24 @@
                       "ConnectionDisplay":  "2026-08-15 00:00:00",
                       "ConnectionSource":  "CRM System Outreach",
                       "LastPaidDate":  "20260720",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2861,
+                      "StudentId":  "63824247",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-08-16 00:00:00",
+                      "ConnectionDisplay":  "2026-08-16 00:00:00",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260730",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -51701,19 +51701,19 @@
                   },
                   {
                       "PriorityRank":  2863,
-                      "StudentId":  "63824247",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "63831404",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
+                      "Pool":  "到期",
+                      "PoolDetail":  "Exp Non-0",
                       "AttendedClasses":  0,
                       "BookedUnattended":  0,
                       "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-08-16 00:00:00",
-                      "ConnectionDisplay":  "2026-08-16 00:00:00",
+                      "LastConnectionTime":  "2026-08-18 00:00:00",
+                      "ConnectionDisplay":  "2026-08-18 00:00:00",
                       "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260730",
+                      "LastPaidDate":  "20260731",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -51737,24 +51737,6 @@
                   },
                   {
                       "PriorityRank":  2865,
-                      "StudentId":  "63831404",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "到期",
-                      "PoolDetail":  "Exp Non-0",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-08-18 00:00:00",
-                      "ConnectionDisplay":  "2026-08-18 00:00:00",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260731",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2866,
                       "StudentId":  "63566644",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -51772,7 +51754,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2867,
+                      "PriorityRank":  2866,
                       "StudentId":  "63998215",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -51790,7 +51772,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2868,
+                      "PriorityRank":  2867,
                       "StudentId":  "63638104",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -51804,6 +51786,24 @@
                       "ConnectionDisplay":  "2026-08-20 00:00:00",
                       "ConnectionSource":  "CRM System Outreach",
                       "LastPaidDate":  "20260706",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2868,
+                      "StudentId":  "63570678",
+                      "Rep":  "EGSS-adhmgadallah",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-08-24 00:00:00",
+                      "ConnectionDisplay":  "2026-08-24 00:00:00",
+                      "ConnectionSource":  "CRM System Outreach",
+                      "LastPaidDate":  "20260704",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -51827,24 +51827,6 @@
                   },
                   {
                       "PriorityRank":  2870,
-                      "StudentId":  "63570678",
-                      "Rep":  "EGSS-adhmgadallah",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-08-24 00:00:00",
-                      "ConnectionDisplay":  "2026-08-24 00:00:00",
-                      "ConnectionSource":  "CRM System Outreach",
-                      "LastPaidDate":  "20260704",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2871,
                       "StudentId":  "64117235",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -51862,7 +51844,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2872,
+                      "PriorityRank":  2871,
                       "StudentId":  "63995025",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51880,7 +51862,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2873,
+                      "PriorityRank":  2872,
                       "StudentId":  "63988309",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -51898,7 +51880,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2874,
+                      "PriorityRank":  2873,
                       "StudentId":  "64149857",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -51916,7 +51898,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2875,
+                      "PriorityRank":  2874,
                       "StudentId":  "64180537",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -51934,7 +51916,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2876,
+                      "PriorityRank":  2875,
                       "StudentId":  "64259571",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -51948,6 +51930,24 @@
                       "ConnectionDisplay":  "2026-09-08 00:00:00",
                       "ConnectionSource":  "Last 1v1 Payment",
                       "LastPaidDate":  "20260908",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2876,
+                      "StudentId":  "64328730",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-09-13 00:00:00",
+                      "ConnectionDisplay":  "2026-09-13 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20260913",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -51971,24 +51971,6 @@
                   },
                   {
                       "PriorityRank":  2878,
-                      "StudentId":  "64328730",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-09-13 00:00:00",
-                      "ConnectionDisplay":  "2026-09-13 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20260913",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2879,
                       "StudentId":  "63506448",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -52006,7 +51988,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2880,
+                      "PriorityRank":  2879,
                       "StudentId":  "59209102",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -52024,7 +52006,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2881,
+                      "PriorityRank":  2880,
                       "StudentId":  "63147637",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -52042,7 +52024,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2882,
+                      "PriorityRank":  2881,
                       "StudentId":  "58657392",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -52060,7 +52042,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2883,
+                      "PriorityRank":  2882,
                       "StudentId":  "64472730",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -52078,7 +52060,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2884,
+                      "PriorityRank":  2883,
                       "StudentId":  "57950524",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -52096,7 +52078,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2885,
+                      "PriorityRank":  2884,
                       "StudentId":  "63969199",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -52114,7 +52096,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2886,
+                      "PriorityRank":  2885,
                       "StudentId":  "58553254",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -52132,7 +52114,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2887,
+                      "PriorityRank":  2886,
                       "StudentId":  "63925269",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -52150,7 +52132,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2888,
+                      "PriorityRank":  2887,
                       "StudentId":  "63682169",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -52168,7 +52150,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2889,
+                      "PriorityRank":  2888,
                       "StudentId":  "63682349",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -52186,7 +52168,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2890,
+                      "PriorityRank":  2889,
                       "StudentId":  "63178748",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -52204,7 +52186,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2891,
+                      "PriorityRank":  2890,
                       "StudentId":  "60790453",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -52222,7 +52204,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2892,
+                      "PriorityRank":  2891,
                       "StudentId":  "58794138",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -52240,7 +52222,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2893,
+                      "PriorityRank":  2892,
                       "StudentId":  "59687173",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -52258,7 +52240,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2894,
+                      "PriorityRank":  2893,
                       "StudentId":  "64512436",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -52276,7 +52258,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2895,
+                      "PriorityRank":  2894,
                       "StudentId":  "62496545",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -52294,7 +52276,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2896,
+                      "PriorityRank":  2895,
                       "StudentId":  "63878318",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -52312,7 +52294,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2897,
+                      "PriorityRank":  2896,
                       "StudentId":  "61076306",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -52330,7 +52312,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2898,
+                      "PriorityRank":  2897,
                       "StudentId":  "63581947",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -52348,7 +52330,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2899,
+                      "PriorityRank":  2898,
                       "StudentId":  "58855945",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -52366,7 +52348,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2900,
+                      "PriorityRank":  2899,
                       "StudentId":  "58803557",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -52384,7 +52366,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2901,
+                      "PriorityRank":  2900,
                       "StudentId":  "63174276",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -52402,7 +52384,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2902,
+                      "PriorityRank":  2901,
                       "StudentId":  "59731674",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -52420,7 +52402,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2903,
+                      "PriorityRank":  2902,
                       "StudentId":  "60432266",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -52438,7 +52420,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2904,
+                      "PriorityRank":  2903,
                       "StudentId":  "57842666",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -52456,7 +52438,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2905,
+                      "PriorityRank":  2904,
                       "StudentId":  "57957399",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -52474,7 +52456,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2906,
+                      "PriorityRank":  2905,
                       "StudentId":  "61958115",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -52492,7 +52474,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2907,
+                      "PriorityRank":  2906,
                       "StudentId":  "58788005",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -52510,7 +52492,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2908,
+                      "PriorityRank":  2907,
                       "StudentId":  "61778461",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -52528,7 +52510,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2909,
+                      "PriorityRank":  2908,
                       "StudentId":  "58732829",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -52546,7 +52528,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2910,
+                      "PriorityRank":  2909,
                       "StudentId":  "61572545",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -52564,7 +52546,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2911,
+                      "PriorityRank":  2910,
                       "StudentId":  "60016396",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -52582,7 +52564,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2912,
+                      "PriorityRank":  2911,
                       "StudentId":  "60553880",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -52600,7 +52582,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2913,
+                      "PriorityRank":  2912,
                       "StudentId":  "62392199",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -52618,7 +52600,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2914,
+                      "PriorityRank":  2913,
                       "StudentId":  "62790876",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -52636,7 +52618,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2915,
+                      "PriorityRank":  2914,
                       "StudentId":  "62777795",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -52654,7 +52636,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2916,
+                      "PriorityRank":  2915,
                       "StudentId":  "62967968",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -52672,7 +52654,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2917,
+                      "PriorityRank":  2916,
                       "StudentId":  "62817886",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -52690,7 +52672,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2918,
+                      "PriorityRank":  2917,
                       "StudentId":  "63534996",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -52708,7 +52690,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2919,
+                      "PriorityRank":  2918,
                       "StudentId":  "61893224",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -52726,7 +52708,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2920,
+                      "PriorityRank":  2919,
                       "StudentId":  "57937832",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -52744,7 +52726,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2921,
+                      "PriorityRank":  2920,
                       "StudentId":  "62116241",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -52762,7 +52744,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2922,
+                      "PriorityRank":  2921,
                       "StudentId":  "57940129",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -52780,7 +52762,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2923,
+                      "PriorityRank":  2922,
                       "StudentId":  "59522660",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -52798,7 +52780,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2924,
+                      "PriorityRank":  2923,
                       "StudentId":  "59579268",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -52816,7 +52798,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2925,
+                      "PriorityRank":  2924,
                       "StudentId":  "63435590",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -52834,7 +52816,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2926,
+                      "PriorityRank":  2925,
                       "StudentId":  "63998840",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -52852,7 +52834,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2927,
+                      "PriorityRank":  2926,
                       "StudentId":  "58834437",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -52870,7 +52852,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2928,
+                      "PriorityRank":  2927,
                       "StudentId":  "62675771",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -52888,7 +52870,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2929,
+                      "PriorityRank":  2928,
                       "StudentId":  "62493653",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -52906,7 +52888,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2930,
+                      "PriorityRank":  2929,
                       "StudentId":  "58309264",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -52924,7 +52906,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2931,
+                      "PriorityRank":  2930,
                       "StudentId":  "60327199",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -52942,7 +52924,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2932,
+                      "PriorityRank":  2931,
                       "StudentId":  "62309504",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -52960,7 +52942,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2933,
+                      "PriorityRank":  2932,
                       "StudentId":  "60707245",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -52978,7 +52960,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2934,
+                      "PriorityRank":  2933,
                       "StudentId":  "63232816",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -52996,7 +52978,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2935,
+                      "PriorityRank":  2934,
                       "StudentId":  "59615056",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -53014,7 +52996,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2936,
+                      "PriorityRank":  2935,
                       "StudentId":  "59494738",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -53032,7 +53014,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2937,
+                      "PriorityRank":  2936,
                       "StudentId":  "59689461",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -53050,7 +53032,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2938,
+                      "PriorityRank":  2937,
                       "StudentId":  "59841842",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -53064,6 +53046,24 @@
                       "ConnectionDisplay":  "2026-10-08 19:00:00",
                       "ConnectionSource":  "SOP Completed Touch",
                       "LastPaidDate":  "20260506",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  2938,
+                      "StudentId":  "60950961",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-08 19:00:06",
+                      "ConnectionDisplay":  "2026-10-08 19:00:06",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20250811",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   },
@@ -53087,24 +53087,6 @@
                   },
                   {
                       "PriorityRank":  2940,
-                      "StudentId":  "60950961",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-08 19:00:06",
-                      "ConnectionDisplay":  "2026-10-08 19:00:06",
-                      "ConnectionSource":  "SOP Completed Touch",
-                      "LastPaidDate":  "20250811",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  2941,
                       "StudentId":  "60563297",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -53122,7 +53104,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2942,
+                      "PriorityRank":  2941,
                       "StudentId":  "62682787",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -53140,7 +53122,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2943,
+                      "PriorityRank":  2942,
                       "StudentId":  "63368136",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -53158,7 +53140,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2944,
+                      "PriorityRank":  2943,
                       "StudentId":  "61037248",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -53176,7 +53158,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2945,
+                      "PriorityRank":  2944,
                       "StudentId":  "63216527",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -53194,7 +53176,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2946,
+                      "PriorityRank":  2945,
                       "StudentId":  "63224023",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -53212,7 +53194,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2947,
+                      "PriorityRank":  2946,
                       "StudentId":  "60424397",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -53230,7 +53212,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2948,
+                      "PriorityRank":  2947,
                       "StudentId":  "58505359",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -53248,7 +53230,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2949,
+                      "PriorityRank":  2948,
                       "StudentId":  "58841379",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -53266,7 +53248,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2950,
+                      "PriorityRank":  2949,
                       "StudentId":  "58958253",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -53284,7 +53266,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2951,
+                      "PriorityRank":  2950,
                       "StudentId":  "61959498",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -53302,7 +53284,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2952,
+                      "PriorityRank":  2951,
                       "StudentId":  "62034784",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -53320,7 +53302,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2953,
+                      "PriorityRank":  2952,
                       "StudentId":  "63847885",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -53338,7 +53320,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2954,
+                      "PriorityRank":  2953,
                       "StudentId":  "58329782",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -53356,7 +53338,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2955,
+                      "PriorityRank":  2954,
                       "StudentId":  "59639798",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -53374,7 +53356,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2956,
+                      "PriorityRank":  2955,
                       "StudentId":  "63309060",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -53392,7 +53374,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2957,
+                      "PriorityRank":  2956,
                       "StudentId":  "60141044",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -53410,7 +53392,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2958,
+                      "PriorityRank":  2957,
                       "StudentId":  "60668857",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -53428,7 +53410,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2959,
+                      "PriorityRank":  2958,
                       "StudentId":  "64568026",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -53446,7 +53428,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2960,
+                      "PriorityRank":  2959,
                       "StudentId":  "61705238",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -53464,7 +53446,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2961,
+                      "PriorityRank":  2960,
                       "StudentId":  "58345823",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -53482,7 +53464,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2962,
+                      "PriorityRank":  2961,
                       "StudentId":  "62712931",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -53500,7 +53482,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2963,
+                      "PriorityRank":  2962,
                       "StudentId":  "60138036",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -53518,7 +53500,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2964,
+                      "PriorityRank":  2963,
                       "StudentId":  "60852357",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -53536,7 +53518,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2965,
+                      "PriorityRank":  2964,
                       "StudentId":  "60414699",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -53554,7 +53536,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2966,
+                      "PriorityRank":  2965,
                       "StudentId":  "62940181",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -53572,7 +53554,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2967,
+                      "PriorityRank":  2966,
                       "StudentId":  "62622751",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -53590,7 +53572,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2968,
+                      "PriorityRank":  2967,
                       "StudentId":  "63876385",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -53608,7 +53590,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2969,
+                      "PriorityRank":  2968,
                       "StudentId":  "59743557",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -53626,7 +53608,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2970,
+                      "PriorityRank":  2969,
                       "StudentId":  "59806149",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -53644,7 +53626,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2971,
+                      "PriorityRank":  2970,
                       "StudentId":  "60122480",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -53662,7 +53644,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2972,
+                      "PriorityRank":  2971,
                       "StudentId":  "61940673",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -53680,7 +53662,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2973,
+                      "PriorityRank":  2972,
                       "StudentId":  "61284447",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -53698,7 +53680,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2974,
+                      "PriorityRank":  2973,
                       "StudentId":  "60922910",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -53716,7 +53698,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2975,
+                      "PriorityRank":  2974,
                       "StudentId":  "60427058",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -53734,7 +53716,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2976,
+                      "PriorityRank":  2975,
                       "StudentId":  "61206925",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -53752,7 +53734,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2977,
+                      "PriorityRank":  2976,
                       "StudentId":  "61507435",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -53770,7 +53752,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2978,
+                      "PriorityRank":  2977,
                       "StudentId":  "61436600",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -53788,7 +53770,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2979,
+                      "PriorityRank":  2978,
                       "StudentId":  "61060913",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -53806,7 +53788,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2980,
+                      "PriorityRank":  2979,
                       "StudentId":  "61512509",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -53824,7 +53806,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2981,
+                      "PriorityRank":  2980,
                       "StudentId":  "60919238",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -53842,7 +53824,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2982,
+                      "PriorityRank":  2981,
                       "StudentId":  "62059135",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -53860,7 +53842,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2983,
+                      "PriorityRank":  2982,
                       "StudentId":  "64571326",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -53878,7 +53860,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2984,
+                      "PriorityRank":  2983,
                       "StudentId":  "61114962",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -53896,7 +53878,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2985,
+                      "PriorityRank":  2984,
                       "StudentId":  "62017039",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -53914,7 +53896,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2986,
+                      "PriorityRank":  2985,
                       "StudentId":  "59961518",
                       "Rep":  "EGSS-hayamhassan",
                       "Team":  "ME-EGSS13",
@@ -53932,7 +53914,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2987,
+                      "PriorityRank":  2986,
                       "StudentId":  "63229030",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -53950,7 +53932,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2988,
+                      "PriorityRank":  2987,
                       "StudentId":  "61462322",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -53968,7 +53950,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2989,
+                      "PriorityRank":  2988,
                       "StudentId":  "63884426",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -53986,7 +53968,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2990,
+                      "PriorityRank":  2989,
                       "StudentId":  "61518007",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -54004,7 +53986,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2991,
+                      "PriorityRank":  2990,
                       "StudentId":  "61331661",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -54022,7 +54004,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2992,
+                      "PriorityRank":  2991,
                       "StudentId":  "62310412",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -54040,7 +54022,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2993,
+                      "PriorityRank":  2992,
                       "StudentId":  "61934203",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -54058,7 +54040,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2994,
+                      "PriorityRank":  2993,
                       "StudentId":  "62028148",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -54076,7 +54058,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2995,
+                      "PriorityRank":  2994,
                       "StudentId":  "60712068",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -54094,7 +54076,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2996,
+                      "PriorityRank":  2995,
                       "StudentId":  "58792434",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -54112,7 +54094,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2997,
+                      "PriorityRank":  2996,
                       "StudentId":  "59927786",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -54130,7 +54112,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2998,
+                      "PriorityRank":  2997,
                       "StudentId":  "61938509",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -54148,7 +54130,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  2999,
+                      "PriorityRank":  2998,
                       "StudentId":  "62780548",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -54166,7 +54148,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3000,
+                      "PriorityRank":  2999,
                       "StudentId":  "59938576",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -54184,7 +54166,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3001,
+                      "PriorityRank":  3000,
                       "StudentId":  "64620272",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -54202,7 +54184,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3002,
+                      "PriorityRank":  3001,
                       "StudentId":  "62255656",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -54220,7 +54202,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3003,
+                      "PriorityRank":  3002,
                       "StudentId":  "61446853",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -54238,7 +54220,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3004,
+                      "PriorityRank":  3003,
                       "StudentId":  "63426050",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -54256,7 +54238,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3005,
+                      "PriorityRank":  3004,
                       "StudentId":  "59969620",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -54274,7 +54256,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3006,
+                      "PriorityRank":  3005,
                       "StudentId":  "64553348",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -54292,7 +54274,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3007,
+                      "PriorityRank":  3006,
                       "StudentId":  "62627344",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -54310,7 +54292,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3008,
+                      "PriorityRank":  3007,
                       "StudentId":  "62623201",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -54328,7 +54310,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3009,
+                      "PriorityRank":  3008,
                       "StudentId":  "59938893",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -54346,7 +54328,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3010,
+                      "PriorityRank":  3009,
                       "StudentId":  "59949963",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -54364,7 +54346,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3011,
+                      "PriorityRank":  3010,
                       "StudentId":  "59973588",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -54382,7 +54364,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3012,
+                      "PriorityRank":  3011,
                       "StudentId":  "63447286",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -54400,7 +54382,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3013,
+                      "PriorityRank":  3012,
                       "StudentId":  "61745778",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -54418,7 +54400,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3014,
+                      "PriorityRank":  3013,
                       "StudentId":  "61762646",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -54436,7 +54418,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3015,
+                      "PriorityRank":  3014,
                       "StudentId":  "61866459",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -54454,7 +54436,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3016,
+                      "PriorityRank":  3015,
                       "StudentId":  "64632868",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -54472,7 +54454,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3017,
+                      "PriorityRank":  3016,
                       "StudentId":  "63809911",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -54490,7 +54472,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3018,
+                      "PriorityRank":  3017,
                       "StudentId":  "62668240",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -54508,7 +54490,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3019,
+                      "PriorityRank":  3018,
                       "StudentId":  "62711040",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -54526,7 +54508,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3020,
+                      "PriorityRank":  3019,
                       "StudentId":  "62403669",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -54544,7 +54526,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3021,
+                      "PriorityRank":  3020,
                       "StudentId":  "59333342",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -54562,7 +54544,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3022,
+                      "PriorityRank":  3021,
                       "StudentId":  "61261410",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -54580,7 +54562,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3023,
+                      "PriorityRank":  3022,
                       "StudentId":  "61312990",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -54598,7 +54580,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3024,
+                      "PriorityRank":  3023,
                       "StudentId":  "64512937",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -54616,7 +54598,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3025,
+                      "PriorityRank":  3024,
                       "StudentId":  "62346533",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -54634,7 +54616,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3026,
+                      "PriorityRank":  3025,
                       "StudentId":  "62045627",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -54652,7 +54634,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3027,
+                      "PriorityRank":  3026,
                       "StudentId":  "62202773",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -54670,7 +54652,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3028,
+                      "PriorityRank":  3027,
                       "StudentId":  "59057056",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -54688,7 +54670,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3029,
+                      "PriorityRank":  3028,
                       "StudentId":  "62096485",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -54706,7 +54688,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3030,
+                      "PriorityRank":  3029,
                       "StudentId":  "64597069",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -54724,7 +54706,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3031,
+                      "PriorityRank":  3030,
                       "StudentId":  "60559355",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -54742,7 +54724,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3032,
+                      "PriorityRank":  3031,
                       "StudentId":  "61168320",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -54760,7 +54742,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3033,
+                      "PriorityRank":  3032,
                       "StudentId":  "61169631",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -54778,7 +54760,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3034,
+                      "PriorityRank":  3033,
                       "StudentId":  "62249285",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -54796,7 +54778,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3035,
+                      "PriorityRank":  3034,
                       "StudentId":  "62043395",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -54814,7 +54796,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3036,
+                      "PriorityRank":  3035,
                       "StudentId":  "59992642",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -54832,7 +54814,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3037,
+                      "PriorityRank":  3036,
                       "StudentId":  "63724496",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -54850,7 +54832,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3038,
+                      "PriorityRank":  3037,
                       "StudentId":  "60277322",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -54868,7 +54850,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3039,
+                      "PriorityRank":  3038,
                       "StudentId":  "62401932",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -54886,7 +54868,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3040,
+                      "PriorityRank":  3039,
                       "StudentId":  "64512385",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -54904,7 +54886,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3041,
+                      "PriorityRank":  3040,
                       "StudentId":  "62318061",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -54922,7 +54904,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3042,
+                      "PriorityRank":  3041,
                       "StudentId":  "59899728",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -54940,7 +54922,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3043,
+                      "PriorityRank":  3042,
                       "StudentId":  "62807927",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -54958,7 +54940,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3044,
+                      "PriorityRank":  3043,
                       "StudentId":  "64562612",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -54976,7 +54958,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3045,
+                      "PriorityRank":  3044,
                       "StudentId":  "63709880",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -54994,7 +54976,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3046,
+                      "PriorityRank":  3045,
                       "StudentId":  "62028525",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -55012,7 +54994,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3047,
+                      "PriorityRank":  3046,
                       "StudentId":  "58299156",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -55030,7 +55012,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3048,
+                      "PriorityRank":  3047,
                       "StudentId":  "61565510",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -55048,7 +55030,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3049,
+                      "PriorityRank":  3048,
                       "StudentId":  "62321855",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -55066,7 +55048,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3050,
+                      "PriorityRank":  3049,
                       "StudentId":  "61783155",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -55084,7 +55066,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3051,
+                      "PriorityRank":  3050,
                       "StudentId":  "61943021",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -55102,7 +55084,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3052,
+                      "PriorityRank":  3051,
                       "StudentId":  "62430317",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -55120,7 +55102,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3053,
+                      "PriorityRank":  3052,
                       "StudentId":  "62044281",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -55138,7 +55120,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3054,
+                      "PriorityRank":  3053,
                       "StudentId":  "62071116",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -55156,7 +55138,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3055,
+                      "PriorityRank":  3054,
                       "StudentId":  "62073691",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -55174,7 +55156,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3056,
+                      "PriorityRank":  3055,
                       "StudentId":  "62271612",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -55192,7 +55174,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3057,
+                      "PriorityRank":  3056,
                       "StudentId":  "62453792",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -55210,7 +55192,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3058,
+                      "PriorityRank":  3057,
                       "StudentId":  "62489530",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -55228,7 +55210,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3059,
+                      "PriorityRank":  3058,
                       "StudentId":  "62478921",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -55246,7 +55228,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3060,
+                      "PriorityRank":  3059,
                       "StudentId":  "59818649",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -55264,7 +55246,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3061,
+                      "PriorityRank":  3060,
                       "StudentId":  "63321399",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -55282,7 +55264,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3062,
+                      "PriorityRank":  3061,
                       "StudentId":  "62870929",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -55300,7 +55282,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3063,
+                      "PriorityRank":  3062,
                       "StudentId":  "61420090",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55318,7 +55300,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3064,
+                      "PriorityRank":  3063,
                       "StudentId":  "61420166",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55336,7 +55318,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3065,
+                      "PriorityRank":  3064,
                       "StudentId":  "64236778",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -55354,7 +55336,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3066,
+                      "PriorityRank":  3065,
                       "StudentId":  "59105294",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55372,7 +55354,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3067,
+                      "PriorityRank":  3066,
                       "StudentId":  "64560496",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -55390,7 +55372,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3068,
+                      "PriorityRank":  3067,
                       "StudentId":  "63379475",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -55408,7 +55390,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3069,
+                      "PriorityRank":  3068,
                       "StudentId":  "58551098",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -55426,7 +55408,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3070,
+                      "PriorityRank":  3069,
                       "StudentId":  "62263004",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -55444,7 +55426,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3071,
+                      "PriorityRank":  3070,
                       "StudentId":  "62376739",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -55462,7 +55444,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3072,
+                      "PriorityRank":  3071,
                       "StudentId":  "58095475",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -55480,7 +55462,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3073,
+                      "PriorityRank":  3072,
                       "StudentId":  "62044650",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -55498,7 +55480,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3074,
+                      "PriorityRank":  3073,
                       "StudentId":  "60998589",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -55516,7 +55498,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3075,
+                      "PriorityRank":  3074,
                       "StudentId":  "61408491",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -55534,7 +55516,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3076,
+                      "PriorityRank":  3075,
                       "StudentId":  "63385843",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -55552,7 +55534,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3077,
+                      "PriorityRank":  3076,
                       "StudentId":  "62317418",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -55570,7 +55552,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3078,
+                      "PriorityRank":  3077,
                       "StudentId":  "62317564",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -55588,7 +55570,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3079,
+                      "PriorityRank":  3078,
                       "StudentId":  "62970395",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -55606,7 +55588,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3080,
+                      "PriorityRank":  3079,
                       "StudentId":  "59620042",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -55624,7 +55606,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3081,
+                      "PriorityRank":  3080,
                       "StudentId":  "58913488",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -55642,7 +55624,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3082,
+                      "PriorityRank":  3081,
                       "StudentId":  "64680693",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55660,7 +55642,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3083,
+                      "PriorityRank":  3082,
                       "StudentId":  "64695288",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55678,7 +55660,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3084,
+                      "PriorityRank":  3083,
                       "StudentId":  "58594437",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -55696,7 +55678,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3085,
+                      "PriorityRank":  3084,
                       "StudentId":  "58432337",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55714,7 +55696,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3086,
+                      "PriorityRank":  3085,
                       "StudentId":  "58904709",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55732,7 +55714,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3087,
+                      "PriorityRank":  3086,
                       "StudentId":  "58904616",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55750,7 +55732,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3088,
+                      "PriorityRank":  3087,
                       "StudentId":  "62392157",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55768,7 +55750,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3089,
+                      "PriorityRank":  3088,
                       "StudentId":  "62771862",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55786,7 +55768,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3090,
+                      "PriorityRank":  3089,
                       "StudentId":  "59345381",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55804,7 +55786,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3091,
+                      "PriorityRank":  3090,
                       "StudentId":  "64709224",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -55822,7 +55804,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3092,
+                      "PriorityRank":  3091,
                       "StudentId":  "62512594",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -55840,7 +55822,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3093,
+                      "PriorityRank":  3092,
                       "StudentId":  "62520955",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -55858,7 +55840,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3094,
+                      "PriorityRank":  3093,
                       "StudentId":  "63757121",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -55876,7 +55858,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3095,
+                      "PriorityRank":  3094,
                       "StudentId":  "64562454",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -55894,7 +55876,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3096,
+                      "PriorityRank":  3095,
                       "StudentId":  "64112684",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -55912,7 +55894,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3097,
+                      "PriorityRank":  3096,
                       "StudentId":  "64313359",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -55930,7 +55912,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3098,
+                      "PriorityRank":  3097,
                       "StudentId":  "64669331",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -55948,7 +55930,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3099,
+                      "PriorityRank":  3098,
                       "StudentId":  "64642918",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -55966,7 +55948,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3100,
+                      "PriorityRank":  3099,
                       "StudentId":  "64708393",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -55984,7 +55966,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3101,
+                      "PriorityRank":  3100,
                       "StudentId":  "63702549",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -56002,7 +55984,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3102,
+                      "PriorityRank":  3101,
                       "StudentId":  "64527807",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -56020,7 +56002,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3103,
+                      "PriorityRank":  3102,
                       "StudentId":  "63523117",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -56038,7 +56020,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3104,
+                      "PriorityRank":  3103,
                       "StudentId":  "64701475",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -56056,7 +56038,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3105,
+                      "PriorityRank":  3104,
                       "StudentId":  "64570997",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -56074,7 +56056,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3106,
+                      "PriorityRank":  3105,
                       "StudentId":  "64562460",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -56092,7 +56074,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3107,
+                      "PriorityRank":  3106,
                       "StudentId":  "64725768",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -56110,7 +56092,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3108,
+                      "PriorityRank":  3107,
                       "StudentId":  "64674091",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -56128,7 +56110,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3109,
+                      "PriorityRank":  3108,
                       "StudentId":  "62582171",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -56146,7 +56128,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3110,
+                      "PriorityRank":  3109,
                       "StudentId":  "64708507",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -56164,7 +56146,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3111,
+                      "PriorityRank":  3110,
                       "StudentId":  "64532447",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -56182,7 +56164,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3112,
+                      "PriorityRank":  3111,
                       "StudentId":  "63323551",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -56200,7 +56182,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3113,
+                      "PriorityRank":  3112,
                       "StudentId":  "64737278",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -56218,7 +56200,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3114,
+                      "PriorityRank":  3113,
                       "StudentId":  "59402945",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -56236,7 +56218,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3115,
+                      "PriorityRank":  3114,
                       "StudentId":  "62606298",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -56254,7 +56236,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3116,
+                      "PriorityRank":  3115,
                       "StudentId":  "60177401",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -56272,7 +56254,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3117,
+                      "PriorityRank":  3116,
                       "StudentId":  "62869744",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -56290,7 +56272,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3118,
+                      "PriorityRank":  3117,
                       "StudentId":  "60276667",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -56308,7 +56290,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3119,
+                      "PriorityRank":  3118,
                       "StudentId":  "64726155",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -56326,7 +56308,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3120,
+                      "PriorityRank":  3119,
                       "StudentId":  "64535091",
                       "Rep":  "EGSS-abdelrhmanshehata",
                       "Team":  "ME-EGSS10",
@@ -56344,7 +56326,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3121,
+                      "PriorityRank":  3120,
                       "StudentId":  "64716893",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -56362,7 +56344,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3122,
+                      "PriorityRank":  3121,
                       "StudentId":  "64623894",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -56380,7 +56362,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3123,
+                      "PriorityRank":  3122,
                       "StudentId":  "62984619",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -56398,7 +56380,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3124,
+                      "PriorityRank":  3123,
                       "StudentId":  "60799472",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -56416,7 +56398,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3125,
+                      "PriorityRank":  3124,
                       "StudentId":  "61302385",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -56434,10 +56416,28 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3126,
+                      "PriorityRank":  3125,
                       "StudentId":  "64754008",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-27 00:00:00",
+                      "ConnectionDisplay":  "2026-10-27 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261027",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3126,
+                      "StudentId":  "64753001",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -56471,24 +56471,6 @@
                   },
                   {
                       "PriorityRank":  3128,
-                      "StudentId":  "64753001",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-27 00:00:00",
-                      "ConnectionDisplay":  "2026-10-27 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261027",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3129,
                       "StudentId":  "59138590",
                       "Rep":  "EGSS-ibrahimismaiel",
                       "Team":  "ME-EGSS05",
@@ -56506,7 +56488,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3130,
+                      "PriorityRank":  3129,
                       "StudentId":  "63570486",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -56524,7 +56506,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3131,
+                      "PriorityRank":  3130,
                       "StudentId":  "60234022",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -56542,7 +56524,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3132,
+                      "PriorityRank":  3131,
                       "StudentId":  "62274364",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -56560,25 +56542,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3133,
-                      "StudentId":  "64743717",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-27 18:36:51",
-                      "ConnectionDisplay":  "2026-10-27 18:36:51",
-                      "ConnectionSource":  "SOP Completed Touch",
-                      "LastPaidDate":  "20261026",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3134,
+                      "PriorityRank":  3132,
                       "StudentId":  "64708857",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -56596,7 +56560,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3135,
+                      "PriorityRank":  3133,
                       "StudentId":  "62491936",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -56614,7 +56578,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3136,
+                      "PriorityRank":  3134,
                       "StudentId":  "62540030",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -56632,10 +56596,46 @@
                       "IsCovered":  0
                   },
                   {
+                      "PriorityRank":  3135,
+                      "StudentId":  "64754239",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-28 00:00:00",
+                      "ConnectionDisplay":  "2026-10-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261028",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3136,
+                      "StudentId":  "64761095",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-28 00:00:00",
+                      "ConnectionDisplay":  "2026-10-28 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261028",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
                       "PriorityRank":  3137,
-                      "StudentId":  "64653878",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
+                      "StudentId":  "64673885",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -56669,8 +56669,8 @@
                   },
                   {
                       "PriorityRank":  3139,
-                      "StudentId":  "64761095",
-                      "Rep":  "EGSS-mahmoud04",
+                      "StudentId":  "64757464",
+                      "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
@@ -56687,9 +56687,9 @@
                   },
                   {
                       "PriorityRank":  3140,
-                      "StudentId":  "64754239",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
+                      "StudentId":  "64754517",
+                      "Rep":  "EGSS-marwaahmed",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -56705,9 +56705,9 @@
                   },
                   {
                       "PriorityRank":  3141,
-                      "StudentId":  "64673885",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
+                      "StudentId":  "61285714",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -56723,9 +56723,9 @@
                   },
                   {
                       "PriorityRank":  3142,
-                      "StudentId":  "64754517",
-                      "Rep":  "EGSS-marwaahmed",
-                      "Team":  "ME-EGSS13",
+                      "StudentId":  "64724621",
+                      "Rep":  "EGSS-khaledgonam",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -56759,42 +56759,6 @@
                   },
                   {
                       "PriorityRank":  3144,
-                      "StudentId":  "64724621",
-                      "Rep":  "EGSS-khaledgonam",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-28 00:00:00",
-                      "ConnectionDisplay":  "2026-10-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261028",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3145,
-                      "StudentId":  "64757464",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-28 00:00:00",
-                      "ConnectionDisplay":  "2026-10-28 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261028",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3146,
                       "StudentId":  "59442986",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -56812,10 +56776,10 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3147,
-                      "StudentId":  "61285714",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
+                      "PriorityRank":  3145,
+                      "StudentId":  "64653878",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -56830,7 +56794,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3148,
+                      "PriorityRank":  3146,
                       "StudentId":  "64733028",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -56848,7 +56812,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3149,
+                      "PriorityRank":  3147,
                       "StudentId":  "64732652",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -56866,7 +56830,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3150,
+                      "PriorityRank":  3148,
                       "StudentId":  "64711946",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -56884,7 +56848,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3151,
+                      "PriorityRank":  3149,
                       "StudentId":  "64742334",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -56902,7 +56866,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3152,
+                      "PriorityRank":  3150,
                       "StudentId":  "64563102",
                       "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
@@ -56920,7 +56884,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3153,
+                      "PriorityRank":  3151,
                       "StudentId":  "64752768",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -56938,7 +56902,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3154,
+                      "PriorityRank":  3152,
                       "StudentId":  "59313626",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -56956,7 +56920,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3155,
+                      "PriorityRank":  3153,
                       "StudentId":  "60818846",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -56974,7 +56938,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3156,
+                      "PriorityRank":  3154,
                       "StudentId":  "64703497",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -56992,7 +56956,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3157,
+                      "PriorityRank":  3155,
                       "StudentId":  "64751014",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -57010,7 +56974,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3158,
+                      "PriorityRank":  3156,
                       "StudentId":  "64704327",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -57028,7 +56992,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3159,
+                      "PriorityRank":  3157,
                       "StudentId":  "64661305",
                       "Rep":  "EGSS-ahmedshoukry",
                       "Team":  "ME-EGSS10",
@@ -57046,7 +57010,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3160,
+                      "PriorityRank":  3158,
                       "StudentId":  "64725203",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -57064,7 +57028,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3161,
+                      "PriorityRank":  3159,
                       "StudentId":  "63661936",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -57082,25 +57046,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3162,
-                      "StudentId":  "62212647",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-28 14:15:39",
-                      "ConnectionDisplay":  "2026-10-28 14:15:39",
-                      "ConnectionSource":  "SOP Completed Touch",
-                      "LastPaidDate":  "20261027",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3163,
+                      "PriorityRank":  3160,
                       "StudentId":  "62808146",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -57118,7 +57064,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3164,
+                      "PriorityRank":  3161,
                       "StudentId":  "64736114",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -57136,7 +57082,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3165,
+                      "PriorityRank":  3162,
                       "StudentId":  "60646412",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -57154,7 +57100,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3166,
+                      "PriorityRank":  3163,
                       "StudentId":  "64736515",
                       "Rep":  "EGSS-alihesham01",
                       "Team":  "ME-EGSS30",
@@ -57172,7 +57118,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3167,
+                      "PriorityRank":  3164,
                       "StudentId":  "59786078",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -57190,7 +57136,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3168,
+                      "PriorityRank":  3165,
                       "StudentId":  "59281176",
                       "Rep":  "EGSS-marwaahmed",
                       "Team":  "ME-EGSS13",
@@ -57208,7 +57154,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3169,
+                      "PriorityRank":  3166,
                       "StudentId":  "62833919",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -57226,7 +57172,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3170,
+                      "PriorityRank":  3167,
                       "StudentId":  "63045669",
                       "Rep":  "EGSS-mohamedha",
                       "Team":  "ME-EGSS13",
@@ -57244,25 +57190,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3171,
-                      "StudentId":  "64587095",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-28 19:09:11",
-                      "ConnectionDisplay":  "2026-10-28 19:09:11",
-                      "ConnectionSource":  "SOP Completed Touch",
-                      "LastPaidDate":  "20261010",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3172,
+                      "PriorityRank":  3168,
                       "StudentId":  "64587701",
                       "Rep":  "EGSS-ashraqatal",
                       "Team":  "ME-EGSS01",
@@ -57280,7 +57208,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3173,
+                      "PriorityRank":  3169,
+                      "StudentId":  "64587095",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-28 19:09:11",
+                      "ConnectionDisplay":  "2026-10-28 19:09:11",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20261010",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3170,
                       "StudentId":  "62057831",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -57298,7 +57244,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3174,
+                      "PriorityRank":  3171,
                       "StudentId":  "61927637",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -57316,7 +57262,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3175,
+                      "PriorityRank":  3172,
                       "StudentId":  "61272828",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -57334,7 +57280,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3176,
+                      "PriorityRank":  3173,
                       "StudentId":  "60586858",
                       "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
@@ -57352,7 +57298,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3177,
+                      "PriorityRank":  3174,
                       "StudentId":  "64763240",
                       "Rep":  "EGSS-mahmoudkhamis",
                       "Team":  "ME-EGSS10",
@@ -57370,61 +57316,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3178,
-                      "StudentId":  "64645902",
-                      "Rep":  "EGSS-ehabzaky01",
-                      "Team":  "ME-EGSS05",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-29 00:00:00",
-                      "ConnectionDisplay":  "2026-10-29 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261029",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3179,
-                      "StudentId":  "64769224",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-29 00:00:00",
-                      "ConnectionDisplay":  "2026-10-29 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261029",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3180,
-                      "StudentId":  "64770917",
-                      "Rep":  "EGSS-mahmoudkhamis",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-29 00:00:00",
-                      "ConnectionDisplay":  "2026-10-29 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261029",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3181,
+                      "PriorityRank":  3175,
                       "StudentId":  "64772222",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
@@ -57442,10 +57334,10 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3182,
-                      "StudentId":  "64772392",
-                      "Rep":  "EGSS-nohayoussry",
-                      "Team":  "ME-EGSS01",
+                      "PriorityRank":  3176,
+                      "StudentId":  "64769224",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -57460,27 +57352,9 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3183,
-                      "StudentId":  "64737449",
-                      "Rep":  "EGSS-titooooo",
-                      "Team":  "ME-EGSS30",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-29 00:00:00",
-                      "ConnectionDisplay":  "2026-10-29 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261029",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3184,
-                      "StudentId":  "64664437",
-                      "Rep":  "EGSS-abdelrahmannasef",
+                      "PriorityRank":  3177,
+                      "StudentId":  "64645902",
+                      "Rep":  "EGSS-ehabzaky01",
                       "Team":  "ME-EGSS05",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
@@ -57496,10 +57370,10 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3185,
-                      "StudentId":  "64719633",
-                      "Rep":  "EGSS-abdelrahmannasef",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  3178,
+                      "StudentId":  "64770917",
+                      "Rep":  "EGSS-mahmoudkhamis",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -57514,7 +57388,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3186,
+                      "PriorityRank":  3179,
                       "StudentId":  "64694050",
                       "Rep":  "EGSS-abdelrahmannasef",
                       "Team":  "ME-EGSS05",
@@ -57532,9 +57406,27 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3187,
-                      "StudentId":  "64770422",
-                      "Rep":  "EGSS-juliamonir01",
+                      "PriorityRank":  3180,
+                      "StudentId":  "64664437",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-29 00:00:00",
+                      "ConnectionDisplay":  "2026-10-29 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261029",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3181,
+                      "StudentId":  "64772392",
+                      "Rep":  "EGSS-nohayoussry",
                       "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
@@ -57550,8 +57442,8 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3188,
-                      "StudentId":  "60140878",
+                      "PriorityRank":  3182,
+                      "StudentId":  "64737449",
                       "Rep":  "EGSS-titooooo",
                       "Team":  "ME-EGSS30",
                       "BigTeam":  "MEKSA-EGSS01",
@@ -57568,7 +57460,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3189,
+                      "PriorityRank":  3183,
+                      "StudentId":  "64719633",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-29 00:00:00",
+                      "ConnectionDisplay":  "2026-10-29 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261029",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3184,
                       "StudentId":  "64762432",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -57586,10 +57496,10 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3190,
-                      "StudentId":  "64723879",
-                      "Rep":  "EGSS-samira01",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  3185,
+                      "StudentId":  "64770422",
+                      "Rep":  "EGSS-juliamonir01",
+                      "Team":  "ME-EGSS01",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -57604,7 +57514,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3191,
+                      "PriorityRank":  3186,
                       "StudentId":  "59029925",
                       "Rep":  "EGSS-amrsafwat",
                       "Team":  "ME-EGSS13",
@@ -57622,7 +57532,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3192,
+                      "PriorityRank":  3187,
+                      "StudentId":  "64723879",
+                      "Rep":  "EGSS-samira01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-29 00:00:00",
+                      "ConnectionDisplay":  "2026-10-29 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261029",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3188,
                       "StudentId":  "64723508",
                       "Rep":  "EGSS-samira01",
                       "Team":  "ME-EGSS05",
@@ -57640,7 +57568,25 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3193,
+                      "PriorityRank":  3189,
+                      "StudentId":  "60140878",
+                      "Rep":  "EGSS-titooooo",
+                      "Team":  "ME-EGSS30",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-29 00:00:00",
+                      "ConnectionDisplay":  "2026-10-29 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261029",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3190,
                       "StudentId":  "64751180",
                       "Rep":  "EGSS-juliamonir01",
                       "Team":  "ME-EGSS01",
@@ -57658,7 +57604,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3194,
+                      "PriorityRank":  3191,
                       "StudentId":  "64771768",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -57676,115 +57622,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3195,
-                      "StudentId":  "64778384",
-                      "Rep":  "EGSS-ashraqatal",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-30 00:00:00",
-                      "ConnectionDisplay":  "2026-10-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261030",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3196,
-                      "StudentId":  "64592041",
-                      "Rep":  "EGSS-mahmoud04",
-                      "Team":  "ME-EGSS01",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-30 00:00:00",
-                      "ConnectionDisplay":  "2026-10-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261030",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3197,
-                      "StudentId":  "64771799",
-                      "Rep":  "EGSS-ahmedshoukry",
-                      "Team":  "ME-EGSS10",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-30 00:00:00",
-                      "ConnectionDisplay":  "2026-10-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261030",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3198,
-                      "StudentId":  "64764348",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-30 00:00:00",
-                      "ConnectionDisplay":  "2026-10-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261030",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3199,
-                      "StudentId":  "64779180",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-30 00:00:00",
-                      "ConnectionDisplay":  "2026-10-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261030",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3200,
-                      "StudentId":  "64779296",
-                      "Rep":  "EGSS-mohamedha",
-                      "Team":  "ME-EGSS13",
-                      "BigTeam":  "MEKSA-EGSS01",
-                      "Pool":  "围场外",
-                      "PoolDetail":  "outside pool",
-                      "AttendedClasses":  0,
-                      "BookedUnattended":  0,
-                      "AttendanceTier":  "0 Classes (Dormant)",
-                      "LastConnectionTime":  "2026-10-30 00:00:00",
-                      "ConnectionDisplay":  "2026-10-30 00:00:00",
-                      "ConnectionSource":  "Last 1v1 Payment",
-                      "LastPaidDate":  "20261030",
-                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
-                      "IsCovered":  0
-                  },
-                  {
-                      "PriorityRank":  3201,
+                      "PriorityRank":  3192,
                       "StudentId":  "59823625",
                       "Rep":  "EGSS-omarmoneb",
                       "Team":  "ME-EGSS05",
@@ -57802,7 +57640,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3202,
+                      "PriorityRank":  3193,
                       "StudentId":  "64771841",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -57820,10 +57658,10 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3203,
-                      "StudentId":  "62774064",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  3194,
+                      "StudentId":  "64764348",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -57838,10 +57676,10 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3204,
-                      "StudentId":  "62811958",
-                      "Rep":  "EGSS-ibrahimismaiel",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  3195,
+                      "StudentId":  "64779180",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -57856,10 +57694,10 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3205,
-                      "StudentId":  "62987890",
-                      "Rep":  "EGSS-ehabzaky01",
-                      "Team":  "ME-EGSS05",
+                      "PriorityRank":  3196,
+                      "StudentId":  "64771799",
+                      "Rep":  "EGSS-ahmedshoukry",
+                      "Team":  "ME-EGSS10",
                       "BigTeam":  "MEKSA-EGSS01",
                       "Pool":  "围场外",
                       "PoolDetail":  "outside pool",
@@ -57874,7 +57712,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3206,
+                      "PriorityRank":  3197,
                       "StudentId":  "64771770",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -57892,7 +57730,115 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3207,
+                      "PriorityRank":  3198,
+                      "StudentId":  "64779296",
+                      "Rep":  "EGSS-mohamedha",
+                      "Team":  "ME-EGSS13",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-30 00:00:00",
+                      "ConnectionDisplay":  "2026-10-30 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261030",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3199,
+                      "StudentId":  "64778384",
+                      "Rep":  "EGSS-ashraqatal",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-30 00:00:00",
+                      "ConnectionDisplay":  "2026-10-30 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261030",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3200,
+                      "StudentId":  "62774064",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-30 00:00:00",
+                      "ConnectionDisplay":  "2026-10-30 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261030",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3201,
+                      "StudentId":  "62987890",
+                      "Rep":  "EGSS-ehabzaky01",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-30 00:00:00",
+                      "ConnectionDisplay":  "2026-10-30 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261030",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3202,
+                      "StudentId":  "62811958",
+                      "Rep":  "EGSS-ibrahimismaiel",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-30 00:00:00",
+                      "ConnectionDisplay":  "2026-10-30 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261030",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3203,
+                      "StudentId":  "64592041",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-30 00:00:00",
+                      "ConnectionDisplay":  "2026-10-30 00:00:00",
+                      "ConnectionSource":  "Last 1v1 Payment",
+                      "LastPaidDate":  "20261030",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3204,
                       "StudentId":  "64723231",
                       "Rep":  "EGSS-adhmgadallah",
                       "Team":  "ME-EGSS30",
@@ -57910,7 +57856,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3208,
+                      "PriorityRank":  3205,
                       "StudentId":  "58620248",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -57928,7 +57874,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3209,
+                      "PriorityRank":  3206,
                       "StudentId":  "59450779",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -57946,7 +57892,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3210,
+                      "PriorityRank":  3207,
                       "StudentId":  "59579205",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -57964,7 +57910,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3211,
+                      "PriorityRank":  3208,
                       "StudentId":  "60201379",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -57982,7 +57928,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3212,
+                      "PriorityRank":  3209,
                       "StudentId":  "60464711",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -58000,7 +57946,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3213,
+                      "PriorityRank":  3210,
                       "StudentId":  "63522668",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -58018,7 +57964,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3214,
+                      "PriorityRank":  3211,
                       "StudentId":  "60693517",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -58036,7 +57982,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3215,
+                      "PriorityRank":  3212,
                       "StudentId":  "60753039",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -58054,7 +58000,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3216,
+                      "PriorityRank":  3213,
                       "StudentId":  "63503004",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -58072,7 +58018,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3217,
+                      "PriorityRank":  3214,
                       "StudentId":  "58732609",
                       "Rep":  "EGSS-khaledgonam",
                       "Team":  "ME-EGSS05",
@@ -58090,7 +58036,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3218,
+                      "PriorityRank":  3215,
                       "StudentId":  "63102368",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -58108,7 +58054,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3219,
+                      "PriorityRank":  3216,
                       "StudentId":  "62350122",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -58126,7 +58072,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3220,
+                      "PriorityRank":  3217,
                       "StudentId":  "62179770",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -58144,7 +58090,7 @@
                       "IsCovered":  0
                   },
                   {
-                      "PriorityRank":  3221,
+                      "PriorityRank":  3218,
                       "StudentId":  "61796164",
                       "Rep":  "EGSS-mahmoud04",
                       "Team":  "ME-EGSS01",
@@ -58158,6 +58104,60 @@
                       "ConnectionDisplay":  "2026-10-31 12:22:06",
                       "ConnectionSource":  "SOP Completed Touch",
                       "LastPaidDate":  "20251114",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3219,
+                      "StudentId":  "61630854",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-31 12:29:52",
+                      "ConnectionDisplay":  "2026-10-31 12:29:52",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20251122",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3220,
+                      "StudentId":  "64743717",
+                      "Rep":  "EGSS-abdelrahmannasef",
+                      "Team":  "ME-EGSS05",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-31 13:01:36",
+                      "ConnectionDisplay":  "2026-10-31 13:01:36",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20261026",
+                      "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
+                      "IsCovered":  0
+                  },
+                  {
+                      "PriorityRank":  3221,
+                      "StudentId":  "62212647",
+                      "Rep":  "EGSS-mahmoud04",
+                      "Team":  "ME-EGSS01",
+                      "BigTeam":  "MEKSA-EGSS01",
+                      "Pool":  "围场外",
+                      "PoolDetail":  "outside pool",
+                      "AttendedClasses":  0,
+                      "BookedUnattended":  0,
+                      "AttendanceTier":  "0 Classes (Dormant)",
+                      "LastConnectionTime":  "2026-10-31 13:14:31",
+                      "ConnectionDisplay":  "2026-10-31 13:14:31",
+                      "ConnectionSource":  "SOP Completed Touch",
+                      "LastPaidDate":  "20261027",
                       "RecommendedAction":  "REACTIVATION - Dormant Student Win-Back",
                       "IsCovered":  0
                   }

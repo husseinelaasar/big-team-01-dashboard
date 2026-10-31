@@ -30,9 +30,9 @@
     "EGSS-ashraqatal":  {
                             "ccCount":  297,
                             "ftCount":  79,
-                            "sopCount":  46,
+                            "sopCount":  43,
                             "ecCount":  134,
-                            "totalLeads":  556
+                            "totalLeads":  553
                         },
     "EGSS-mohamedha":  {
                            "ccCount":  209,
@@ -44,9 +44,9 @@
     "EGSS-abdelrahmannasef":  {
                                   "ccCount":  220,
                                   "ftCount":  45,
-                                  "sopCount":  13,
+                                  "sopCount":  12,
                                   "ecCount":  94,
-                                  "totalLeads":  372
+                                  "totalLeads":  371
                               },
     "EGSS-alihesham01":  {
                              "ccCount":  139,
@@ -65,9 +65,9 @@
     "EGSS-mahmoudkhamis":  {
                                "ccCount":  280,
                                "ftCount":  47,
-                               "sopCount":  5,
+                               "sopCount":  0,
                                "ecCount":  124,
-                               "totalLeads":  456
+                               "totalLeads":  451
                            },
     "EGSS-adhmgadallah":  {
                               "ccCount":  249,
@@ -93,16 +93,16 @@
     "EGSS-mahmoud04":  {
                            "ccCount":  317,
                            "ftCount":  69,
-                           "sopCount":  18,
+                           "sopCount":  7,
                            "ecCount":  119,
-                           "totalLeads":  523
+                           "totalLeads":  512
                        },
     "EGSS-ahmedshoukry":  {
                               "ccCount":  279,
                               "ftCount":  73,
-                              "sopCount":  2,
+                              "sopCount":  0,
                               "ecCount":  132,
-                              "totalLeads":  486
+                              "totalLeads":  484
                           },
     "EGSS-negma":  {
                        "ccCount":  0,
