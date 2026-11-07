@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261101_103533">
+  <link rel="stylesheet" href="styles.css?v=20261107_132444">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -77,7 +77,7 @@
         <div>
           <h1 class="nav-title">Big Team 01 — <span class="gradient-text">Executive Dashboard</span></h1>
           <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
-            Senior Manager: <strong style="color: #f8fafc;">Saber Hussien</strong> | Month: <strong style="color: #38bdf8;">October 2026 (MTD Day 1/31)</strong>
+            Senior Manager: <strong style="color: #f8fafc;">Saber Hussien</strong> | Month: <strong style="color: #38bdf8;">November 2026 (MTD Day 7/30)</strong>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@
         <!-- Live Data Badges -->
         <div class="data-freshness">
           <span class="pulse-dot"></span>
-          <span id="dataDate">Oct 1-1, 2026 (Day 1)</span>
+          <span id="dataDate">Nov 1-7, 2026 (Day 7)</span>
         </div>
         <div class="nav-source-badge" title="Verified against CRM Renewal Performance & POOL_Detail16">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -137,9 +137,9 @@
           <label class="sheet-checkbox-label">
             <input type="checkbox" id="chkLensSheet" checked disabled>
             <span class="checkbox-custom"></span>
-            <span class="sheet-name">1. Lens Sheet (POOL_Detail16)</span>
+            <span class="sheet-name">1. Lens Sheet (Student_Detail)</span>
           </label>
-          <div class="sheet-time" id="timeLensSheet">Updated: 2026-09-16 12:07:34</div>
+          <div class="sheet-time" id="timeLensSheet">Updated: 2026-11-07 10:49:20</div>
         </div>
 
         <!-- 2. English Club -->
@@ -149,7 +149,7 @@
             <span class="checkbox-custom"></span>
             <span class="sheet-name">2. English Club Sheet</span>
           </label>
-          <div class="sheet-time" id="timeECSheet">Updated: 2026-09-16 14:38:00</div>
+          <div class="sheet-time" id="timeECSheet">Updated: 2026-11-07 12:43:15</div>
         </div>
 
         <!-- 3. SOP Sheet -->
@@ -159,7 +159,7 @@
             <span class="checkbox-custom"></span>
             <span class="sheet-name">3. SOP Compliance Sheet</span>
           </label>
-          <div class="sheet-time" id="timeSOPSheet">Updated: 2026-09-16 14:22:00</div>
+          <div class="sheet-time" id="timeSOPSheet">Updated: 2026-11-07 10:49:16</div>
         </div>
       </div>
     </div>
@@ -180,8 +180,8 @@
       </button>
       <button class="tab" data-tab="consumption" onclick="switchTab('consumption')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Class Consumption (95%)
-        <span style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">95% GOAL</span>
+        Class Consumption (82%)
+        <span style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">82% GOAL</span>
       </button>
       <button class="tab" data-tab="upgrade" onclick="switchTab('upgrade')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
@@ -240,8 +240,8 @@
             <span class="orb-core">⚡</span>
           </div>
           <div>
-            <div class="sprint-hud-title">OCTOBER SPRINT MISSION CONTROL • FINAL PUSH</div>
-            <div class="sprint-hud-sub">Big Team 01 Target: <strong>$305,950 Cash</strong> | <strong>252 Orders</strong></div>
+            <div class="sprint-hud-title">NOVEMBER SPRINT MISSION CONTROL</div>
+            <div class="sprint-hud-sub">Big Team 01: <strong>$43,639 Cash MTD</strong> | <strong>44 Orders</strong></div>
           </div>
         </div>
 
@@ -282,10 +282,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <div class="kpi-label">Total Cash Revenue (MTD)</div>
-          <div class="kpi-value" id="totalCash">id="totalCash">$181,232<</div>
-          <div class="kpi-sub" id="cashTarget">Target: $305,950 | Projected: $99,987</div>
+          <div class="kpi-value" id="totalCash">$43,639</div>
+          <div class="kpi-sub" id="cashTarget">Target: Pending Allocation | Projected: $187,024</div>
           <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 0%;"></div></div>
-          <div class="kpi-pct" id="cashPct">0% Achieved</div>
+          <div class="kpi-pct" id="cashPct">44 Orders MTD</div>
         </div>
 
         <!-- 2. Total Contracts & Breakdown -->
@@ -294,8 +294,8 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
           <div class="kpi-label">Total Contracts (Orders)</div>
-          <div class="kpi-value" id="totalContracts">190</div>
-          <div class="kpi-sub" id="contractsSub">Normal: 2976 | Upgrade M2: 34</div>
+          <div class="kpi-value" id="totalContracts">44</div>
+          <div class="kpi-sub" id="contractsSub">Normal: 73 | Upgrade M2: 5</div>
           <div class="kpi-progress"><div class="kpi-bar" id="contractsBar" style="width: 0%;"></div></div>
           <div class="kpi-pct" id="contractsPct">Avg: $1,093 / contract</div>
         </div>
@@ -305,11 +305,11 @@
           <div class="kpi-icon" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <div class="kpi-label">Day 1 Target Benchmark</div>
+          <div class="kpi-label">Day 7 Target Benchmark</div>
           <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">0%</div>
-          <div class="kpi-sub" id="achSub">Day 1 Benchmark: 5% | Target: $305,950</div>
+          <div class="kpi-sub" id="achSub">Day 7 Benchmark: 23% | Target: Pending</div>
           <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 0%; background: linear-gradient(90deg, #6366f1, #38bdf8);"></div></div>
-          <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 1 of 31 | Expected Target Pace: 5% (30 Days Left)</div>
+          <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 7 of 30 | Expected Target Pace: 23% (23 Days Left)</div>
         </div>
 
         <!-- 4. Active Reps & Upgrade Conversion -->
@@ -318,10 +318,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <div class="kpi-label">Active Reps & M2 Conversion</div>
-          <div class="kpi-value" id="totalReps">21 Reps</div>
-          <div class="kpi-sub" id="baseLeads">34 M2 Upgrades / 497 Pool Base | 20% Goal: 100 (97 needed)</div>
+          <div class="kpi-value" id="totalReps">19 Reps</div>
+          <div class="kpi-sub" id="baseLeads">5 M2 Upgrades / 497 Pool Base | 20% Goal: 100 (97 needed)</div>
           <div class="kpi-progress"><div class="kpi-bar" id="repsBar" style="width: 0%;"></div></div>
-          <div class="kpi-pct" id="repsPct">6.8% M2 Upgrade Conversion (3/497)</div>
+          <div class="kpi-pct" id="repsPct">1% M2 Upgrade Conversion (3/497)</div>
         </div>
       </div>
 
@@ -333,7 +333,7 @@
             Comparison of revenue velocity across all teams and Big Team 01 against the official pacing curve (5% to 103%)
           </p>
         </div>
-        <span class="source-tag">Source: CRM live data (Oct 1–3, 2026)</span>
+        <span class="source-tag">Source: CRM live data (Nov 1–7, 2026)</span>
       </div>
       <div class="chart-container" id="teamBarsContainer"></div>
 
@@ -350,7 +350,7 @@
     <section id="tab-teams" class="tab-content">
       <div class="section-header">
         <h2>Small Team Performance Breakdown</h2>
-        <span class="source-tag">Teams 01, 05, 10, 13, 30 | Oct 1–3, 2026 (Day 3)</span>
+        <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1–7, 2026 (Day 7)</span>
       </div>
       <div id="smallTeamCards" class="team-cards-grid"></div>
     </section>
@@ -361,7 +361,7 @@
     <section id="tab-individuals" class="tab-content">
       <div class="section-header">
         <h2>Individual Performance Deep Dive</h2>
-        <span class="source-tag" id="individualRepsCountTag">21 Active Sales Specialists | Oct 1–3, 2026 (Day 3)</span>
+        <span class="source-tag" id="individualRepsCountTag">19 Active Sales Specialists | Nov 1–7, 2026 (Day 7)</span>
       </div>
       
       <!-- Filter and Sort Controls -->
@@ -374,7 +374,7 @@
             <option value="EGSS05">ME-EGSS05 (Ibrahimismaiel)</option>
             <option value="EGSS10">ME-EGSS10 (AbdelrhmanShehata)</option>
             <option value="EGSS13">ME-EGSS13 (Mohamedha)</option>
-            <option value="EGSS30">ME-EGSS30 (AdhmGadAllah)</option>
+            <option value="EGSS30">ME-EGSS30 (Saber Hussien)</option>
           </select>
           
           <label style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-left: 8px;">Sort By:</label>
@@ -430,17 +430,17 @@
 
     
     <!-- ============================================== -->
-    <!-- TAB: DEDICATED CLASS CONSUMPTION HUB (95% GOAL)-->
+    <!-- TAB: DEDICATED CLASS CONSUMPTION HUB (82% GOAL)-->
     <!-- ============================================== -->
     <section id="tab-consumption" class="tab-content">
       <div class="section-header">
         <div>
           <h2 style="display: flex; align-items: center; gap: 10px;">
             <span>🎓</span> Big Team 01 — Class Consumption Intelligence Hub
-            <span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; padding: 2px 8px;">BENCHMARK TARGET: 65.0% OVERALL</span>
+            <span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; padding: 2px 8px;">BENCHMARK TARGET: 82.0% OVERALL</span>
           </h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
-            Active student consumption and Zero-Class rescue intelligence: Big Team 01 (Sector Total) vs 5 Small Teams against the official 65.0% operational target.
+            Active student consumption and Zero-Class rescue intelligence: Big Team 01 (Sector Total) vs 5 Small Teams against the official 82.0% operational target.
           </p>
         </div>
         <span class="source-tag">Source: All in one Master.xlsx (Class_Consumption_Leads_Detail)</span>
@@ -449,12 +449,12 @@
       <!-- 4 Top Executive Consumption KPI Deck -->
       <div class="consumption-kpi-deck" id="consumptionKpis" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-bottom: 28px;"></div>
 
-      <!-- Small Teams Comparison Matrix vs 95% Benchmark -->
+      <!-- Small Teams Comparison Matrix vs 82% Benchmark -->
       <div class="table-wrapper" style="margin-bottom: 32px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
           <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Small Teams Class Consumption Matrix vs 95% Target
+            Small Teams Class Consumption Matrix vs 82% Target
           </h3>
           <span style="font-size: 0.75rem; background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 3px 10px; border-radius: 4px; font-weight: 700;">95.0% Operational Benchmark</span>
         </div>
@@ -465,7 +465,7 @@
       <div class="table-wrapper">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
           <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
-            <span>📋</span> Individual Sales Rep Class Consumption Performance (21 Reps)
+            <span>📋</span> Individual Sales Rep Class Consumption Performance (19 Reps)
           </h3>
           <div style="display: flex; gap: 10px; align-items: center;">
             <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
@@ -475,7 +475,7 @@
               <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour)</option>
               <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata)</option>
               <option value="ME-EGSS13">ME-EGSS13 (Mohamedha)</option>
-              <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah)</option>
+              <option value="ME-EGSS30">ME-EGSS30 (Saber Hussien)</option>
             </select>
           </div>
         </div>
@@ -510,7 +510,7 @@
             <span class="pill-badge" id="upgCardRate" style="background: rgba(148, 163, 184, 0.15); color: #94a3b8;">0.0% Conv.</span>
           </div>
           <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #fff; margin-top: 6px;" id="upgCardActual">0</div>
-          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Awaiting October SCRM Allocation</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Awaiting November SCRM Allocation</div>
         </div>
         <!-- Card 2: M-2 Pool Base -->
         <div class="metric-tile-modern" style="border-top: 3px solid #6366f1;">
@@ -519,7 +519,7 @@
             <span class="pill-badge pill-badge-cyan" style="font-size: 0.68rem;">5 Small Teams</span>
           </div>
           <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #fff; margin-top: 6px;" id="upgCardBase">0</div>
-          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Awaiting October Leads Allocation</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Awaiting November Leads Allocation</div>
         </div>
         <!-- Card 3: 20% Benchmark Target -->
         <div class="metric-tile-modern" style="border-top: 3px solid #c084fc;">
@@ -554,7 +554,7 @@
               <div id="upgCardProgBar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #6366f1, #38bdf8); border-radius: 999px;"></div>
             </div>
           </div>
-          <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 8px;">October 2026 Kickoff</div>
+          <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 8px;">November 2026 Kickoff</div>
         </div>
         <!-- Card 6: Outreach Intensity -->
         <div class="metric-tile-modern" style="border-top: 3px solid #facc15;">
@@ -563,7 +563,7 @@
             <span class="pill-badge pill-badge-amber" style="font-size: 0.68rem;">POOL22</span>
           </div>
           <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #facc15; margin-top: 6px;" id="upgCardTouch">0.0%</div>
-          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">October Baseline</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">November Baseline</div>
         </div>
       </div>
 
@@ -589,10 +589,10 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;" id="upgradePlaybookCards">
           <div class="metric-tile-modern" style="border-left: 3px solid #38bdf8; padding: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; color: #38bdf8; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
-              <span>🎯</span> DIRECTIVE 1: October Leads Baseline
+              <span>🎯</span> DIRECTIVE 1: November Leads Baseline
             </div>
             <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
-              <strong>21 Active Reps Across 5 Teams:</strong> Ready for new October student assignments.<br>
+              <strong>19 Active Reps Across 5 Teams:</strong> Ready for new November student assignments.<br>
               <span style="color: #38bdf8; font-weight: 600;">Status:</span> Awaiting official SCRM M-2 student allocation.
             </div>
           </div>
@@ -607,10 +607,10 @@
           </div>
           <div class="metric-tile-modern" style="border-left: 3px solid #818cf8; padding: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; color: #818cf8; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
-              <span>📚</span> DIRECTIVE 3: Class Consumption Target (95%)
+              <span>📚</span> DIRECTIVE 3: Class Consumption Target (82%)
             </div>
             <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
-              <strong>Macro Benchmark:</strong> 95% Overall student lesson attendance.<br>
+              <strong>Macro Benchmark:</strong> 82% Overall student lesson attendance.<br>
               <span style="color: #a5b4fc; font-weight: 600;">Priority:</span> Immediate rescue of 0-class students across all teams.
             </div>
           </div>
@@ -636,7 +636,7 @@
             <option value="EGSS05">ME-EGSS05 (Ibrahimismaiel)</option>
             <option value="EGSS10">ME-EGSS10 (AbdelrhmanShehata)</option>
             <option value="EGSS13">ME-EGSS13 (Mohamedha)</option>
-            <option value="EGSS30">ME-EGSS30 (AdhmGadAllah)</option>
+            <option value="EGSS30">ME-EGSS30 (Saber Hussien)</option>
           </select>
           <!-- Sort Filter -->
           <select id="upgradeSortFilter" class="modern-select">
@@ -686,13 +686,13 @@
             <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
               <span style="font-size: 1.5rem;">📥</span>
               <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin: 0; display: inline-flex; align-items: center; gap: 8px;">
-                October 2026 Upgrade Base Data Sheets &amp; Member Download Hub
+                November 2026 Upgrade Base Data Sheets &amp; Member Download Hub
               </h3>
               <span class="pill-badge pill-badge-purple" style="font-size: 0.75rem; font-weight: 700;">497 STUDENT ACCOUNTS</span>
               <span class="pill-badge pill-badge-cyan" style="font-size: 0.75rem; font-weight: 700;">M1 &amp; M2 AUTHORITATIVE ALLOCATION</span>
             </div>
             <p style="font-size: 0.85rem; color: #94a3b8; margin: 6px 0 0 0; line-height: 1.5;">
-              Authoritative student-level allocation for all 5 Small Teams and 21 Sales Specialists. Every team member can search, inspect, and download their personalized upgrade leads sheet directly.
+              Authoritative student-level allocation for all 5 Small Teams and 19 Sales Specialists. Every team member can search, inspect, and download their personalized upgrade leads sheet directly.
             </p>
           </div>
           <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
@@ -907,11 +907,11 @@
           <!-- Individual SS Download Selector -->
           <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.05);">
             <label style="display: block; font-size: 0.78rem; font-weight: 700; color: #a5b4fc; margin-bottom: 8px;">
-              👤 Download for Specific Sales Specialist (21 Reps Available):
+              👤 Download for Specific Sales Specialist (19 Reps Available):
             </label>
             <div style="display: flex; gap: 8px; align-items: center;">
               <select id="uncovRepDownloadSelect" class="modern-select" style="flex: 1; padding: 8px 12px; font-size: 0.82rem; background: var(--bg-card); color: #fff; border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 6px;">
-                <!-- Populated dynamically with all 21 reps -->
+                <!-- Populated dynamically with all 19 reps -->
               </select>
               <button type="button" id="btnDownloadSelectedRep" class="pill-badge pill-badge-purple" style="cursor: pointer; padding: 8px 14px; font-size: 0.82rem; font-weight: 700; border: none; white-space: nowrap;">
                 📥 Download SS CSV
@@ -995,7 +995,7 @@
             <!-- Rep Dropdown, Search & Export View -->
             <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
               <select id="uncovFilterRepSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; background: var(--bg-card); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 150px;">
-                <option value="ALL">All 21 Reps</option>
+                <option value="ALL">All 19 Reps</option>
               </select>
               <select id="uncovFilterPoolSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; background: var(--bg-card); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 130px;">
                 <option value="ALL">All Pools</option>
@@ -1090,7 +1090,7 @@
       <div class="table-wrapper">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
           <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
-            <span>📋</span> Individual Sales Rep English Club Adoption Roster (21 Reps)
+            <span>📋</span> Individual Sales Rep English Club Adoption Roster (19 Reps)
           </h3>
           <div style="display: flex; gap: 10px; align-items: center;">
             <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
@@ -1100,7 +1100,7 @@
               <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour)</option>
               <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata)</option>
               <option value="ME-EGSS13">ME-EGSS13 (Mohamedha)</option>
-              <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah)</option>
+              <option value="ME-EGSS30">ME-EGSS30 (Saber Hussien)</option>
             </select>
           </div>
         </div>
@@ -1243,7 +1243,7 @@
                   <span style="font-size: 1.1rem;">👤</span>
                   <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">1. Individual Sales Rep Breakdown</h4>
                 </div>
-                <span style="font-size: 0.68rem; background: rgba(99, 102, 241, 0.15); color: #818cf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">21 REPS</span>
+                <span style="font-size: 0.68rem; background: rgba(99, 102, 241, 0.15); color: #818cf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">19 REPS</span>
               </div>
               <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0 0 12px 0;">Select your name to review individual task counts and student breakdown directly on-screen.</p>
             </div>
@@ -1275,7 +1275,7 @@
                 <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour - Team 05)</option>
                 <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata - Team 10)</option>
                 <option value="ME-EGSS13">ME-EGSS13 (Mohamedha - Team 13)</option>
-                <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah - Team 30)</option>
+                <option value="ME-EGSS30">ME-EGSS30 (Saber Hussien - Team 30)</option>
                 <option value="BIG_TEAM_01">⭐ Big Team 01 (All Teams Combined / Sector Total)</option>
               </select>
             </div>
@@ -1367,18 +1367,18 @@
           <div class="op-title">Module 2: Unfixed Teachers</div>
           <div class="op-value" id="opFtTotal">0</div>
           <div class="op-sub">
-            M0 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 95%)<br>
-            M1 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 95%)
+            M0 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 83%)<br>
+            M1 Fix: <strong style="color: #94a3b8;">0.0%</strong> (Target 83%)
           </div>
         </div>
 
         <!-- Module 3 Card -->
         <div class="op-card m3" onclick="switchOperationsModule(3)" id="opCard3">
-          <div class="op-title">Module 3: Class Consumption & Zero-Class (95% Goal)</div>
+          <div class="op-title">Module 3: Class Consumption & Zero-Class (82% Goal)</div>
           <div class="op-value" id="opCcTotal">0</div>
           <div class="op-sub">
             <strong style="color: #94a3b8;">0</strong> Zero-Class Leads (Rescue)<br>
-            Target: 95% Overall Consumption
+            Target: 82% Overall Consumption
           </div>
         </div>
 
@@ -1403,7 +1403,7 @@
             <span>👩‍🏫</span> Module 2: Unfixed Teachers (1,680 Leads - M0/M1/M2)
           </button>
           <button class="op-pill p3" onclick="switchOperationsModule(3)" id="opPill3">
-            <span>🎓</span> Module 3: Class Consumption & Zero-Class (95% Goal)
+            <span>🎓</span> Module 3: Class Consumption & Zero-Class (82% Goal)
           </button>
           <button class="op-pill p4" onclick="switchOperationsModule(4)" id="opPill4">
             <span>🗣️</span> Module 4: English Club (45% Goal)
@@ -1853,7 +1853,7 @@
           <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour)</option>
           <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata)</option>
           <option value="ME-EGSS13">ME-EGSS13 (Mohamedha)</option>
-          <option value="ME-EGSS30">ME-EGSS30 (Adhm GadAllah)</option>
+          <option value="ME-EGSS30">ME-EGSS30 (Saber Hussien)</option>
         </select>
         <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Sort By:</label>
         <select id="cmpSortFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderComparisonTab()">
@@ -1887,7 +1887,7 @@
             Cumulative month-to-date tracking across all October operational days with interactive multi-metric charts and rep velocity.
           </p>
         </div>
-        <span class="source-tag">Timeline: 3 Oct → 5 Oct (MTD Day 1/31)</span>
+        <span class="source-tag">Timeline: 1 Nov → 7 Nov (MTD Day 7/30)</span>
       </div>
 
       <!-- Controls & Filters -->
@@ -1895,9 +1895,9 @@
         <div style="display: flex; align-items: center; gap: 8px;">
           <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Operational Metric:</label>
           <select id="mtdMetricFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff;" onchange="renderMtdTab()">
-            <option value="consumption">🟢 Class Consumption (95% Goal)</option>
+            <option value="consumption">🟢 Class Consumption (82% Goal)</option>
             <option value="englishClub">🔵 English Club (45% Goal)</option>
-            <option value="unfixed">🟡 Fixed Teacher Binding (95% Goal)</option>
+            <option value="unfixed">🟡 Fixed Teacher Binding (83% Goal)</option>
             <option value="upgrade">🟣 Early Upgrade M2 (20% Goal)</option>
           </select>
         </div>
@@ -1910,7 +1910,7 @@
             <option value="ME-EGSS05" style="color: #22d3ee;">ME-EGSS05 (Ibrahim Abd El Shakour - Team 05)</option>
             <option value="ME-EGSS10" style="color: #34d399;">ME-EGSS10 (Abdelrhman Shehata - Team 10)</option>
             <option value="ME-EGSS13" style="color: #fbbf24;">ME-EGSS13 (Mohamedha - Team 13)</option>
-            <option value="ME-EGSS30" style="color: #fb7185;">ME-EGSS30 (Adhm GadAllah - Team 30)</option>
+            <option value="ME-EGSS30" style="color: #fb7185;">ME-EGSS30 (Saber Hussien - Team 30)</option>
           </select>
         </div>
       </div>
@@ -1944,7 +1944,7 @@
         <span>Big Team 01 — ME-EGSS01 | Senior Manager: <strong>Saber Hussien</strong></span>
       </div>
       <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dim);">
-        <span id="dataTimestamp">Last Update: Oct 3, 2026</span>
+        <span id="dataTimestamp">Last Update: Nov 7, 2026</span>
       </div>
       <div class="footer-right">
         <span>Data Sources: 
@@ -1962,7 +1962,7 @@
     <div class="dock-telemetry-pill">
       <span class="dock-live-dot"></span>
       <span class="dock-clock" id="dockLiveClock">--:--:--</span>
-      <span class="dock-tag">OCTOBER MTD</span>
+      <span class="dock-tag">NOVEMBER MTD</span>
     </div>
     <div class="dock-nav-pills">
       <button type="button" class="dock-btn" onclick="switchTab('overview')" title="Executive Overview">
@@ -1977,7 +1977,7 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         <span>Reps</span>
       </button>
-      <button type="button" class="dock-btn" onclick="switchTab('consumption')" title="Class Consumption (95%)">
+      <button type="button" class="dock-btn" onclick="switchTab('consumption')" title="Class Consumption (82%)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <span>Consumption</span>
       </button>
@@ -2012,7 +2012,7 @@
     // Futuristic Sprint Countdown (Targets October 31, 2026, 23:59:59)
     function updateSprintCountdown() {
       const now = new Date();
-      const endOfMonth = new Date(2026, 9, 31, 23, 59, 59);
+      const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
       const diff = endOfMonth - now;
       if (diff > 0) {
         const d = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -2047,7 +2047,7 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261101_103533" defer></script>
+  <script src="dashboard.js?v=20261107_132444" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link
@@ -2118,6 +2118,30 @@
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
