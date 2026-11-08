@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261108_120535">
+  <link rel="stylesheet" href="styles.css?v=20261108_130254">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -241,7 +241,7 @@
           </div>
           <div>
             <div class="sprint-hud-title">NOVEMBER SPRINT MISSION CONTROL</div>
-            <div class="sprint-hud-sub">Big Team 01: <strong>$43,639 Cash MTD</strong> | <strong>44 Orders</strong></div>
+            <div class="sprint-hud-sub">Big Team 01 Target: <strong>$173,541 Cash</strong> | <strong>48 Orders MTD</strong></div>
           </div>
         </div>
 
@@ -269,8 +269,8 @@
 
         <div class="sprint-velocity-metric">
           <div class="velocity-label">DAILY RUN RATE NEEDED</div>
-          <div class="velocity-value" id="hudDailyNeeded">$33,147 <span>/day</span></div>
-          <div class="velocity-badge">WARP SPEED ⚡</div>
+          <div class="velocity-value" id="hudDailyNeeded">$33,742 <span>/day</span></div>
+          <div class="velocity-badge">ON TRACK ⚡</div>
         </div>
       </div>
 
@@ -283,9 +283,9 @@
           </div>
           <div class="kpi-label">Total Cash Revenue (MTD)</div>
           <div class="kpi-value" id="totalCash">$47,214</div>
-          <div class="kpi-sub" id="cashTarget">Target: Pending Allocation | Projected: $177,052</div>
+          <div class="kpi-sub" id="cashTarget">Target: $173,541 | Projected: $177,052</div>
           <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 0%;"></div></div>
-          <div class="kpi-pct" id="cashPct">44 Orders MTD</div>
+          <div class="kpi-pct" id="cashPct">27.21% Achieved</div>
         </div>
 
         <!-- 2. Total Contracts & Breakdown -->
@@ -306,8 +306,8 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div class="kpi-label">Day 8 Target Benchmark</div>
-          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">0%</div>
-          <div class="kpi-sub" id="achSub">Day 8 Benchmark: 24% | Target: Pending</div>
+          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">27.21%</div>
+          <div class="kpi-sub" id="achSub">Day 8 Benchmark: 24% | Target: $173,541</div>
           <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 0%; background: linear-gradient(90deg, #6366f1, #38bdf8);"></div></div>
           <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 8 of 30 | Expected Target Pace: 24% (22 Days Left)</div>
         </div>
@@ -2047,7 +2047,7 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261108_120535" defer></script>
+  <script src="dashboard.js?v=20261108_130254" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link
@@ -2118,6 +2118,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
