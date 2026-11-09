@@ -616,61 +616,61 @@
                         "name":  "EGSS-ashraqatal",
                         "team":  "ME-EGSS01",
                         "upgradeM2":  0,
-                        "upgradeBase":  29
+                        "upgradeBase":  31
                     },
                     {
                         "name":  "EGSS-juliamonir01",
                         "team":  "ME-EGSS01",
                         "upgradeM2":  0,
-                        "upgradeBase":  22
+                        "upgradeBase":  16
                     },
                     {
                         "name":  "EGSS-nohayoussry",
                         "team":  "ME-EGSS01",
                         "upgradeM2":  0,
-                        "upgradeBase":  28
+                        "upgradeBase":  26
                     },
                     {
                         "name":  "EGSS-mahmoud04",
                         "team":  "ME-EGSS01",
                         "upgradeM2":  1,
-                        "upgradeBase":  31
+                        "upgradeBase":  20
                     },
                     {
                         "name":  "EGSS-samira01",
                         "team":  "ME-EGSS05",
                         "upgradeM2":  0,
-                        "upgradeBase":  17
+                        "upgradeBase":  16
                     },
                     {
                         "name":  "EGSS-abdelrahmannasef",
                         "team":  "ME-EGSS05",
                         "upgradeM2":  0,
-                        "upgradeBase":  19
+                        "upgradeBase":  18
                     },
                     {
                         "name":  "EGSS-ehabzaky01",
                         "team":  "ME-EGSS05",
                         "upgradeM2":  0,
-                        "upgradeBase":  21
+                        "upgradeBase":  27
                     },
                     {
                         "name":  "EGSS-ibrahimismaiel",
                         "team":  "ME-EGSS05",
                         "upgradeM2":  1,
-                        "upgradeBase":  27
+                        "upgradeBase":  23
                     },
                     {
                         "name":  "EGSS-khaledgonam",
                         "team":  "ME-EGSS05",
                         "upgradeM2":  0,
-                        "upgradeBase":  13
+                        "upgradeBase":  14
                     },
                     {
                         "name":  "EGSS-omarmoneb",
                         "team":  "ME-EGSS05",
                         "upgradeM2":  1,
-                        "upgradeBase":  16
+                        "upgradeBase":  19
                     },
                     {
                         "name":  "EGSS-alihesham01",
@@ -682,31 +682,31 @@
                         "name":  "EGSS-abdelrhmanshehata",
                         "team":  "ME-EGSS10",
                         "upgradeM2":  1,
-                        "upgradeBase":  27
+                        "upgradeBase":  28
                     },
                     {
                         "name":  "EGSS-hayamhassan",
                         "team":  "ME-EGSS10",
                         "upgradeM2":  2,
-                        "upgradeBase":  21
+                        "upgradeBase":  37
                     },
                     {
                         "name":  "EGSS-titooooo",
                         "team":  "ME-EGSS10",
                         "upgradeM2":  0,
-                        "upgradeBase":  19
+                        "upgradeBase":  31
                     },
                     {
                         "name":  "EGSS-marwaahmed",
                         "team":  "ME-EGSS13",
                         "upgradeM2":  0,
-                        "upgradeBase":  16
+                        "upgradeBase":  25
                     },
                     {
                         "name":  "EGSS-amrsafwat",
                         "team":  "ME-EGSS13",
                         "upgradeM2":  1,
-                        "upgradeBase":  26
+                        "upgradeBase":  18
                     },
                     {
                         "name":  "EGSS-mohamedha",
@@ -718,13 +718,13 @@
                         "name":  "EGSS-ahmedshoukry",
                         "team":  "ME-EGSS30",
                         "upgradeM2":  0,
-                        "upgradeBase":  34
+                        "upgradeBase":  26
                     },
                     {
                         "name":  "EGSS-mahmoudkhamis",
                         "team":  "ME-EGSS30",
                         "upgradeM2":  0,
-                        "upgradeBase":  32
+                        "upgradeBase":  25
                     }
                 ],
     "sop":  [
