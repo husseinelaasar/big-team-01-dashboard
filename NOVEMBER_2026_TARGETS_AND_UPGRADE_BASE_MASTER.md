@@ -272,3 +272,10 @@ A prominent 7-column matrix table (`.benchmark-matrix-card`) has been inserted d
   - Background badge: `background: rgba(240, 171, 252, 0.22); border: 1.5px solid #e879f9; box-shadow: 0 0 12px rgba(232, 121, 249, 0.4);`.
 - **Below-Track Dual Badges**:
   - Upgraded the tick milestone labels below the track into glowing framed badges: `.ruler-sub-d15` (`D15: 40%` cyan) and `.ruler-sub-d16` (`D16: 41%` magenta).
+
+
+---
+
+## 👤 UPDATE: SENIOR MANAGER / TEAM LEADER NAME STANDARDIZATION (2026-11-15 19:48)
+- Updated Senior Manager / ME-EGSS30 Leader name from `Saber Hussien` to **`Hussein El A'sar`** across all dashboard views, navigation headers, dropdown filters, metadata tags, and footer notes.
+- Compiled to `dashboard.js` and updated cache buster to `v=20261115_194811`.
