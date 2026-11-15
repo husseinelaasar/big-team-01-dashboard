@@ -181,3 +181,40 @@ No target reallocation applied. All 7 members have their independent, individual
   - 📸 نسخ صورة الـ 5 كروت لدينج توك: Captures the full 5-card grid at 2x retina scale.
   - 📥 تحميل كصورة PNG: High-resolution PNG download fallback.
 - **Target Recipient**: Verified DingTalk group Big Team Champs - Mega (cidx9ITXJyqktd2CvhI8op0Ig==).
+
+
+---
+
+## 🚀 UPDATE: NEXT DAY BENCHMARK (DAY 16: 41%) & INDIVIDUAL CASH REQUIREMENT ENGINE (2026-11-15)
+
+### 1. Executive Summary & Objective
+As requested by Senior Management, a comprehensive **Next Day Benchmark (BM) Forecasting & Individual Cash Requirement Engine** has been implemented across the Big Team 01 Executive Dashboard. This provides forward-looking velocity intelligence, allowing sales specialists and team leaders to see not only where they stand today (Day 15: 40%), but precisely what revenue is required to maintain pacing tomorrow (Day 16: 41%).
+
+### 2. Pacing Scale & Timeline Enhancements (`#overview`)
+- **Dual Floating Benchmark Markers**:
+  - **Day 15 (Today) BM: 40%** — Cyan floating pin & dashed guide-line (`$69,416` Sector target).
+  - **Day 16 (Next Day) BM: 41%** — Purple floating pin & dotted guide-line (`$71,152` Sector target, `+$814 Met`).
+- **Interactive Ruler Track**:
+  - Distinct Day 16 tick line and pin placed accurately at $41\% / 103\% = 39.805\%$ of the scale.
+  - Header badge displaying real-time surplus or deficit against Day 16 benchmark.
+- **Small Teams & Sector Bars**:
+  - Dual tick lines on Big Team 01 bar and all 5 small team tracks showing both Day 15 and Day 16 milestones.
+  - Informational subtitle on each track reporting the exact cash needed to achieve the Day 16 benchmark.
+
+### 3. Individual Sales Rep Next Day BM Column (`#individuals`)
+A dedicated column has been added to the master table (`#individualFullTable`):
+- **Column Header**: `🚀 Next Day BM (D16: 41%)` with distinct purple theme styling and tooltip.
+- **Dynamic Status Display**:
+  - **When Met ($r.cash \ge \text{target} \times 0.41$)**: Green pill badge showing `✓ Met (+${surplus})` with the Day 16 BM threshold.
+  - **When Below ($r.cash < \text{target} \times 0.41$)**: High-contrast rose danger pill showing `+${needed} Needed` in bold, highlighting the exact cash gap to reach Day 16 BM.
+- **Cards View Integration**:
+  - Dedicated Next Day BM strip added to every individual sales rep card in the Cards view.
+- **Table Footer Summary**:
+  - Sector Total footer displaying `✓ Sector Met (+$814)` and total Day 16 target of `$71,152`.
+  - Team Filter footer dynamically calculating the selected team's Day 16 target, surplus, or deficit.
+
+### 4. High-Contrast Light Theme Final Polish
+- Fixed Class Consumption rank badges (`Rank #1 Leader`, `Rank #2`, `Rank #3`, `Rank #4`) with high-contrast text and crisp borders.
+- Fixed `👥 Sales Specialists` pill badges across all team cards.
+- Restored bold black font (`#0f172a`) on Orders and Upgrade Base numbers in the Executive Overview summary table.
+- Upgraded timeline ruler header title and subtitles to crisp `#ffffff` text in all display modes.

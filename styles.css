@@ -6785,3 +6785,23 @@ body.light-theme .rec-text-cell {
   filter: brightness(1.1) !important;
   transform: translateY(-1px) !important;
 }
+
+/* ── Pacing Scale Header High Contrast in all themes ── */
+.pacing-scale-header h3,
+body.light-theme .pacing-scale-header h3,
+[data-theme="light"] .pacing-scale-header h3 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+.pacing-scale-header span,
+body.light-theme .pacing-scale-header span,
+[data-theme="light"] .pacing-scale-header span {
+  color: #cbd5e1 !important;
+}
+
+.pacing-scale-header strong,
+body.light-theme .pacing-scale-header strong,
+[data-theme="light"] .pacing-scale-header strong {
+  color: #ffffff !important;
+}
