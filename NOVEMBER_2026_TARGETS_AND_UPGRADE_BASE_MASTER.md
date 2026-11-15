@@ -249,3 +249,12 @@ A prominent 7-column matrix table (`.benchmark-matrix-card`) has been inserted d
 - **Select / Dropdown Menus**: Enforced `color-scheme: light !important; background: #ffffff !important; color: #0f172a !important;` on all select elements and options to prevent dark popup menus on Windows Chrome.
 - **Team Roster Text**: Enforced dark, bold typography (`#0f172a`) on sales rep names, targets, and M2 counts in light mode.
 - **Below-BM Badges**: High-contrast rose/red framed borders (`#ef4444`) with dark red text (`#991b1b`) on `#fee2e2` backgrounds.
+
+
+---
+
+## 🛠️ UPDATE: VERTICAL GUIDELINES BOUNDARY ISOLATION (2026-11-15 18:45)
+- **Eliminated Page-Wide Guideline Bleed**: Separated `.benchmark-matrix-card` from the pacing bars container into its own independent DOM card (`container.appendChild(matrixCard)`).
+- **Strict Pacing Scope**: Confined the continuous vertical benchmark lines (`guideLine` Day 15: 40% and `guideLineNext` Day 16: 41%) exclusively to `pacing-bars-wrapper`.
+- **Accurate Starting Point**: Guidelines now start at `top: 125px` (precisely aligning with the ruler scale track) down across Big Team 01 and the 5 Small Team progress bars, stopping at `bottom: 8px`.
+- **Zero Interference with Target Matrix**: The Benchmark Required Cash Target Matrix table is now completely clean with zero overlapping lines or visual obstruction across any column or numbers.
