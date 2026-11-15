@@ -5171,3 +5171,269 @@ tr[data-rank="1"] td:first-child, tr.rank-1 td:first-child {
   align-items: center !important;
   gap: 6px !important;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   ☀️ LUMINOUS EXECUTIVE LIGHT THEME (Zero Gloom / 100% Bright)
+   ══════════════════════════════════════════════════════════════ */
+body.light-theme,
+[data-theme="light"] body {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+body.light-theme::before,
+[data-theme="light"] body::before {
+  background: 
+    radial-gradient(ellipse 1200px 800px at 10% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 1000px 700px at 90% 10%, rgba(34, 211, 238, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 900px 600px at 50% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2ff 40%, #f0fdf4 100%) !important;
+}
+
+body.light-theme::after,
+[data-theme="light"] body::after {
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px) !important;
+  opacity: 0.8 !important;
+}
+
+/* Light Top Nav */
+body.light-theme .top-nav,
+[data-theme="light"] .top-nav {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+body.light-theme .top-nav strong,
+body.light-theme .top-nav h1,
+body.light-theme .top-nav .title {
+  color: #0f172a !important;
+}
+body.light-theme .top-nav small,
+body.light-theme .top-nav .subtitle {
+  color: #64748b !important;
+}
+
+/* Light Tab Bar */
+body.light-theme .tab-bar,
+[data-theme="light"] .tab-bar {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+body.light-theme .tab,
+[data-theme="light"] .tab {
+  color: #64748b !important;
+}
+body.light-theme .tab:hover,
+[data-theme="light"] .tab:hover {
+  color: #0f172a !important;
+  background: rgba(99, 102, 241, 0.06) !important;
+}
+body.light-theme .tab.active,
+[data-theme="light"] .tab.active {
+  color: #4f46e5 !important;
+  border-bottom-color: #4f46e5 !important;
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.08), transparent) !important;
+}
+
+/* Light Cards */
+body.light-theme .kpi-card,
+body.light-theme .ind-card-pro,
+body.light-theme .ind-hud-card,
+body.light-theme .calc-card,
+body.light-theme .chart-card,
+body.light-theme .card,
+body.light-theme .metric-tile-modern,
+[data-theme="light"] .kpi-card,
+[data-theme="light"] .ind-card-pro,
+[data-theme="light"] .ind-hud-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.04) !important;
+}
+body.light-theme .kpi-card:hover,
+body.light-theme .ind-card-pro:hover,
+body.light-theme .ind-hud-card:hover {
+  box-shadow: 0 20px 35px -5px rgba(99, 102, 241, 0.12), 0 10px 15px -5px rgba(0, 0, 0, 0.05) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+/* Light Card Typography */
+body.light-theme .kpi-label,
+body.light-theme .ind-hud-label { color: #64748b !important; }
+body.light-theme .kpi-value,
+body.light-theme .ind-hud-val { color: #0f172a !important; }
+body.light-theme .kpi-sub,
+body.light-theme .ind-hud-sub { color: #64748b !important; }
+body.light-theme .section-header h2 { color: #0f172a !important; text-shadow: none !important; }
+
+/* Light Individual Card Elements */
+body.light-theme .ind-rep-name { color: #0f172a !important; }
+body.light-theme .ind-rep-role { color: #64748b !important; }
+body.light-theme .ind-metric-box {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+body.light-theme .ind-metric-box:hover {
+  background: #f1f5f9 !important;
+}
+body.light-theme .ind-metric-label { color: #64748b !important; }
+body.light-theme .ind-metric-val { color: #0f172a !important; }
+body.light-theme .ind-metric-sub { color: #64748b !important; }
+body.light-theme .ind-metric-sub strong { color: #1e293b !important; }
+body.light-theme .ind-card-footer {
+  background: #f0fdf4 !important;
+  border-color: #bbf7d0 !important;
+  color: #166534 !important;
+}
+
+/* Light Table */
+body.light-theme .table-wrapper,
+body.light-theme .data-table-wrapper {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04) !important;
+}
+body.light-theme .data-table th,
+body.light-theme #individualFullTable th {
+  background: #f8fafc !important;
+  color: #475569 !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+body.light-theme .data-table td,
+body.light-theme #individualFullTable td {
+  color: #334155 !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+body.light-theme .data-table tr:hover td,
+body.light-theme #individualFullTable tr:hover td {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+}
+body.light-theme .data-table tr:nth-child(even) td {
+  background: #fafafa !important;
+}
+body.light-theme .data-table tfoot td {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-top: 2px solid #e2e8f0 !important;
+}
+
+/* Sprint HUD Light */
+body.light-theme .sprint-countdown-hud {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+body.light-theme .countdown-digit,
+body.light-theme .time-unit .value {
+  color: #0f172a !important;
+}
+body.light-theme .daily-target-amount {
+  color: #0284c7 !important;
+}
+
+/* Data sync widget */
+body.light-theme .sheet-sync-item {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+body.light-theme .sheet-name { color: #0f172a !important; }
+
+/* Filter controls */
+body.light-theme select,
+body.light-theme .filter-select,
+body.light-theme .modern-select {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+body.light-theme .view-btn {
+  background: #ffffff !important;
+  color: #64748b !important;
+  border-color: #cbd5e1 !important;
+}
+body.light-theme .view-btn.active {
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+  border-color: #4f46e5 !important;
+}
+
+
+
+/* ══════════════════════════════════════════════════════════════
+   ☀️ COMPREHENSIVE LIGHT THEME OVERRIDES FOR ALL TABS
+   ══════════════════════════════════════════════════════════════ */
+body.light-theme .kpi-card,
+body.light-theme .calc-card,
+body.light-theme .chart-card,
+body.light-theme .card,
+body.light-theme .metric-tile-modern,
+body.light-theme .team-card,
+body.light-theme .scheme-tile,
+body.light-theme .sop-card,
+body.light-theme .rec-card,
+body.light-theme .op-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-theme .kpi-card:hover,
+body.light-theme .calc-card:hover,
+body.light-theme .team-card:hover {
+  box-shadow: 0 16px 35px rgba(99, 102, 241, 0.12), 0 4px 10px rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+/* Make sure all titles, headings, and value numbers in light mode are dark */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme .kpi-value,
+body.light-theme .table-wrapper td,
+body.light-theme strong,
+body.light-theme b {
+  color: #0f172a !important;
+}
+
+/* Keep accented numbers colorful */
+body.light-theme td[style*="color: #10b981"],
+body.light-theme span[style*="color: #10b981"],
+body.light-theme strong[style*="color: #10b981"] {
+  color: #059669 !important;
+}
+
+body.light-theme td[style*="color: #38bdf8"],
+body.light-theme span[style*="color: #38bdf8"],
+body.light-theme strong[style*="color: #38bdf8"] {
+  color: #0284c7 !important;
+}
+
+body.light-theme td[style*="color: #facc15"],
+body.light-theme span[style*="color: #facc15"],
+body.light-theme strong[style*="color: #facc15"] {
+  color: #d97706 !important;
+}
+
+body.light-theme td[style*="color: #f43f5e"],
+body.light-theme span[style*="color: #f43f5e"],
+body.light-theme strong[style*="color: #f43f5e"] {
+  color: #e11d48 !important;
+}
+
+/* Footer in Light Mode */
+body.light-theme footer,
+body.light-theme .footer {
+  background: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
+  color: #64748b !important;
+}
+
+/* Loader in Light Mode */
+body.light-theme .loader-overlay {
+  background: #f8fafc !important;
+}
