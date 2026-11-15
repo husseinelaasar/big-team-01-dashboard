@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261115_170556">
+  <link rel="stylesheet" href="styles.css?v=20261115_173416">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -355,9 +355,19 @@
     <!-- TAB 2: SMALL TEAMS DEEP DIVE -->
     <!-- ============================================== -->
     <section id="tab-teams" class="tab-content">
-      <div class="section-header">
-        <h2>Small Team Performance Breakdown</h2>
-        <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1–7, 2026 (Day 7)</span>
+      <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h2>Small Team Performance Breakdown</h2>
+          <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1–15, 2026 (MTD Day 15/30)</span>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <button type="button" class="btn-card-snap" onclick="copyCardImage('smallTeamCards', 'All 5 Small Teams')" title="نسخ صورة الـ 5 كروت معاً للصقها مباشرة في DingTalk Mega Group" style="cursor: pointer; background: linear-gradient(135deg, #4f46e5, #6366f1); border: 1.5px solid #818cf8; color: #ffffff; border-radius: 8px; padding: 6px 14px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35); transition: all 0.2s ease;">
+            📸 نسخ صورة الـ 5 كروت لدينج توك
+          </button>
+          <button type="button" class="btn-card-snap" onclick="downloadCardImage('smallTeamCards', 'Big_Team_01_Small_Teams_Nov15')" title="تحميل صورة الـ 5 كروت بدقة عالية كملف PNG" style="cursor: pointer; background: rgba(99, 102, 241, 0.12); border: 1.5px solid rgba(99, 102, 241, 0.35); color: var(--text-primary); border-radius: 8px; padding: 6px 12px; font-size: 0.8rem; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+            📥 تحميل كصورة PNG
+          </button>
+        </div>
       </div>
       <div id="smallTeamCards" class="team-cards-grid"></div>
     </section>
@@ -2067,7 +2077,7 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261115_170556" defer></script>
+  <script src="dashboard.js?v=20261115_173416" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link
@@ -2165,6 +2175,7 @@
   </script>
 </body>
 </html>
+
 
 
 

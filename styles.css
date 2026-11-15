@@ -6300,3 +6300,488 @@ body.light-theme .rec-text-cell {
   line-height: 1.45 !important;
 }
 
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   MASTER HIGH-CONTRAST & COLOR HARMONY ENGINE (LIGHT THEME & DARK THEME)
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* 1. NATIVE SELECT & OPTION ENGINE (FIXES BLACK-ON-BLACK WINDOWS CHROME POPUP) */
+html,
+body.light-theme,
+[data-theme="light"],
+body.light-theme select,
+body.light-theme .filter-select,
+body.light-theme .modern-select,
+body.light-theme option,
+[data-theme="light"] select,
+[data-theme="light"] .filter-select,
+[data-theme="light"] .modern-select,
+[data-theme="light"] option {
+  color-scheme: light !important;
+}
+
+body.light-theme select,
+body.light-theme .filter-select,
+body.light-theme .modern-select,
+[data-theme="light"] select,
+[data-theme="light"] .filter-select,
+[data-theme="light"] .modern-select {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+}
+
+body.light-theme select option,
+body.light-theme .filter-select option,
+body.light-theme .modern-select option,
+body.light-theme option,
+[data-theme="light"] select option,
+[data-theme="light"] .filter-select option,
+[data-theme="light"] .modern-select option,
+[data-theme="light"] option {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  font-weight: 600 !important;
+  padding: 8px 12px !important;
+}
+
+body:not(.light-theme) select,
+body:not(.light-theme) .filter-select,
+body:not(.light-theme) .modern-select,
+body:not(.light-theme) option {
+  color-scheme: dark !important;
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+/* 2. ALL TABLE HEADERS (CLEAN LIGHT SLATE HEADER INSTEAD OF DARK BLUE) */
+body.light-theme table thead th,
+body.light-theme .data-table thead th,
+body.light-theme .data-table th,
+body.light-theme #bigTeamSummaryTable th,
+body.light-theme #masterUpgradeTable th,
+body.light-theme #uncoveredStudentsLiveTable th,
+body.light-theme #individualFullTable th,
+[data-theme="light"] table thead th,
+[data-theme="light"] .data-table thead th,
+[data-theme="light"] .data-table th,
+[data-theme="light"] #bigTeamSummaryTable th,
+[data-theme="light"] #masterUpgradeTable th,
+[data-theme="light"] #uncoveredStudentsLiveTable th,
+[data-theme="light"] #individualFullTable th {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  border-bottom: 2px solid #cbd5e1 !important;
+  font-weight: 800 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* 3. TABLE BODY & SUMMARY TABLE CONTRAST (FIXES INVISIBLE ORDERS & UPGRADE BASE) */
+body.light-theme #bigTeamSummaryTable td,
+body.light-theme #bigTeamSummaryTable tbody td,
+body.light-theme #bigTeamSummaryTable tfoot td,
+body.light-theme .data-table tbody td,
+body.light-theme .data-table tfoot td,
+body.light-theme #individualFullTable td,
+body.light-theme #masterUpgradeTable td,
+body.light-theme #uncoveredStudentsLiveTable td,
+[data-theme="light"] #bigTeamSummaryTable td,
+[data-theme="light"] #bigTeamSummaryTable tbody td,
+[data-theme="light"] #bigTeamSummaryTable tfoot td,
+[data-theme="light"] .data-table tbody td,
+[data-theme="light"] .data-table tfoot td,
+[data-theme="light"] #individualFullTable td,
+[data-theme="light"] #masterUpgradeTable td,
+[data-theme="light"] #uncoveredStudentsLiveTable td {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+body.light-theme #bigTeamSummaryTable td strong,
+body.light-theme .data-table td strong,
+body.light-theme #individualFullTable td strong,
+body.light-theme #masterUpgradeTable td strong {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+/* Detailed Strategic Feedback column in #bigTeamSummaryTable */
+body.light-theme #bigTeamSummaryTable td:last-child,
+[data-theme="light"] #bigTeamSummaryTable td:last-child {
+  text-align: left !important;
+  color: #1e293b !important;
+  -webkit-text-fill-color: #1e293b !important;
+  font-size: 0.8rem !important;
+  line-height: 1.5 !important;
+}
+
+body.light-theme #bigTeamSummaryTable td:last-child strong,
+[data-theme="light"] #bigTeamSummaryTable td:last-child strong {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+/* 4. CLASS CONSUMPTION RANK BADGES & CARDS (IMAGE 1 HIGH CONTRAST) */
+body.light-theme #consumptionTeamsGrid .metric-tile-modern,
+[data-theme="light"] #consumptionTeamsGrid .metric-tile-modern {
+  background: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-theme #consumptionTeamsGrid h4,
+[data-theme="light"] #consumptionTeamsGrid h4 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  font-weight: 900 !important;
+}
+
+/* Rank 1: Gold / Amber */
+body.light-theme .comp-rank-1,
+body.light-theme #consumptionTeamsGrid span[style*="#fffbeb"],
+[data-theme="light"] #consumptionTeamsGrid span[style*="#fffbeb"] {
+  background: #fef3c7 !important;
+  color: #78350f !important;
+  -webkit-text-fill-color: #78350f !important;
+  border: 1.5px solid #d97706 !important;
+  font-weight: 800 !important;
+}
+
+/* Rank 2: Sky / Cyan */
+body.light-theme .comp-rank-2,
+body.light-theme #consumptionTeamsGrid span[style*="#f0f9ff"],
+[data-theme="light"] #consumptionTeamsGrid span[style*="#f0f9ff"] {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+  -webkit-text-fill-color: #0369a1 !important;
+  border: 1.5px solid #0284c7 !important;
+  font-weight: 800 !important;
+}
+
+/* Rank 3: Orange */
+body.light-theme .comp-rank-3,
+body.light-theme #consumptionTeamsGrid span[style*="#fff7ed"],
+[data-theme="light"] #consumptionTeamsGrid span[style*="#fff7ed"] {
+  background: #ffedd5 !important;
+  color: #9a3412 !important;
+  -webkit-text-fill-color: #9a3412 !important;
+  border: 1.5px solid #ea580c !important;
+  font-weight: 800 !important;
+}
+
+/* Rank 4: Indigo */
+body.light-theme .comp-rank-4,
+body.light-theme #consumptionTeamsGrid span[style*="#eef2ff"],
+[data-theme="light"] #consumptionTeamsGrid span[style*="#eef2ff"] {
+  background: #eef2ff !important;
+  color: #3730a3 !important;
+  -webkit-text-fill-color: #3730a3 !important;
+  border: 1.5px solid #6366f1 !important;
+  font-weight: 800 !important;
+}
+
+/* Rank 5: Violet / Purple */
+body.light-theme .comp-rank-5,
+body.light-theme #consumptionTeamsGrid span[style*="#faf5ff"],
+[data-theme="light"] #consumptionTeamsGrid span[style*="#faf5ff"] {
+  background: #faf5ff !important;
+  color: #6b21a8 !important;
+  -webkit-text-fill-color: #6b21a8 !important;
+  border: 1.5px solid #a855f7 !important;
+  font-weight: 800 !important;
+}
+
+/* 5. SMALL TEAMS ROSTER & BELOW-BM HIGH CONTRAST (IMAGE 3 & IMAGE 7) */
+body.light-theme .small-team-member-row,
+[data-theme="light"] .small-team-member-row {
+  background: #f8fafc !important;
+  border: 1.5px solid #e2e8f0 !important;
+}
+
+body.light-theme .small-team-member-row.member-below-bm,
+[data-theme="light"] .small-team-member-row.member-below-bm {
+  background: #fff1f2 !important;
+  border: 1.8px solid #ef4444 !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1) !important;
+}
+
+body.light-theme .st-rep-name,
+[data-theme="light"] .st-rep-name {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .st-cash-num,
+[data-theme="light"] .st-cash-num {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .st-target-num,
+[data-theme="light"] .st-target-num {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+  font-weight: 600 !important;
+}
+
+body.light-theme .st-m2-pill,
+[data-theme="light"] .st-m2-pill {
+  background: #f3e8ff !important;
+  color: #6b21a8 !important;
+  -webkit-text-fill-color: #6b21a8 !important;
+  border: 1.5px solid #d8b4fe !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .st-bm-below,
+[data-theme="light"] .st-bm-below {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  -webkit-text-fill-color: #991b1b !important;
+  border: 1.5px solid #ef4444 !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .st-bm-ahead,
+[data-theme="light"] .st-bm-ahead {
+  background: #dcfce7 !important;
+  color: #166534 !important;
+  -webkit-text-fill-color: #166534 !important;
+  border: 1.5px solid #22c55e !important;
+  font-weight: 800 !important;
+}
+
+/* Framing below-BM rep names and ACH% without danger icons */
+body.light-theme .rep-name-below-bm,
+body.light-theme .st-name-below-bm,
+body.light-theme .ind-rep-name-below-bm,
+[data-theme="light"] .rep-name-below-bm,
+[data-theme="light"] .st-name-below-bm,
+[data-theme="light"] .ind-rep-name-below-bm {
+  background: #fee2e2 !important;
+  border: 1.8px solid #ef4444 !important;
+  border-radius: 6px !important;
+  color: #991b1b !important;
+  -webkit-text-fill-color: #991b1b !important;
+  font-weight: 800 !important;
+  padding: 2px 7px !important;
+}
+
+body.light-theme .ach-below-bm,
+body.light-theme .st-ach-below-bm,
+[data-theme="light"] .ach-below-bm,
+[data-theme="light"] .st-ach-below-bm {
+  background: #fee2e2 !important;
+  border: 1.8px solid #ef4444 !important;
+  border-radius: 6px !important;
+  color: #991b1b !important;
+  -webkit-text-fill-color: #991b1b !important;
+  font-weight: 900 !important;
+  padding: 2px 7px !important;
+}
+
+/* 6. TOP NAVIGATION BAR TABS & BADGES (IMAGE 5 HIGH CONTRAST) */
+body.light-theme .nav-tabs .tab,
+[data-theme="light"] .nav-tabs .tab {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  -webkit-text-fill-color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+body.light-theme .nav-tabs .tab.active,
+[data-theme="light"] .nav-tabs .tab.active {
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: #4f46e5 !important;
+}
+
+body.light-theme .tab[data-tab="calculator"],
+[data-theme="light"] .tab[data-tab="calculator"] {
+  background: #fffbeb !important;
+  border: 1.5px solid #f59e0b !important;
+  color: #92400e !important;
+  -webkit-text-fill-color: #92400e !important;
+}
+
+body.light-theme .tab span[style*="background: linear-gradient(135deg, #f59e0b, #d97706)"],
+body.light-theme .tab span[style*="linear-gradient(135deg, #f59e0b, #d97706)"] {
+  background: #fef3c7 !important;
+  color: #78350f !important;
+  -webkit-text-fill-color: #78350f !important;
+  border: 1px solid #d97706 !important;
+  font-weight: 900 !important;
+}
+
+body.light-theme .tab span[style*="linear-gradient(135deg, #ef4444, #f97316)"] {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  -webkit-text-fill-color: #991b1b !important;
+  border: 1px solid #ef4444 !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .tab span[style*="linear-gradient(135deg, #f59e0b, #ef4444)"] {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  -webkit-text-fill-color: #991b1b !important;
+  border: 1px solid #ef4444 !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .tab span[style*="linear-gradient(135deg, #10b981, #06b6d4)"] {
+  background: #ecfdf5 !important;
+  color: #065f46 !important;
+  -webkit-text-fill-color: #065f46 !important;
+  border: 1px solid #10b981 !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .tab span[style*="linear-gradient(135deg, #10b981, #6366f1)"] {
+  background: #eef2ff !important;
+  color: #3730a3 !important;
+  -webkit-text-fill-color: #3730a3 !important;
+  border: 1px solid #6366f1 !important;
+  font-weight: 800 !important;
+}
+
+/* 7. GENERAL PILL BADGES IN LIGHT THEME */
+body.light-theme .pill-badge-emerald,
+[data-theme="light"] .pill-badge-emerald {
+  background: #ecfdf5 !important;
+  color: #065f46 !important;
+  -webkit-text-fill-color: #065f46 !important;
+  border: 1.5px solid #10b981 !important;
+}
+
+body.light-theme .pill-badge-cyan,
+[data-theme="light"] .pill-badge-cyan {
+  background: #f0f9ff !important;
+  color: #0369a1 !important;
+  -webkit-text-fill-color: #0369a1 !important;
+  border: 1.5px solid #0284c7 !important;
+}
+
+body.light-theme .pill-badge-amber,
+[data-theme="light"] .pill-badge-amber {
+  background: #fffbeb !important;
+  color: #92400e !important;
+  -webkit-text-fill-color: #92400e !important;
+  border: 1.5px solid #f59e0b !important;
+}
+
+body.light-theme .pill-badge-rose,
+[data-theme="light"] .pill-badge-rose {
+  background: #fef2f2 !important;
+  color: #9f1239 !important;
+  -webkit-text-fill-color: #9f1239 !important;
+  border: 1.5px solid #f43f5e !important;
+}
+
+body.light-theme .pill-badge-purple,
+[data-theme="light"] .pill-badge-purple {
+  background: #faf5ff !important;
+  color: #581c87 !important;
+  -webkit-text-fill-color: #581c87 !important;
+  border: 1.5px solid #8b5cf6 !important;
+}
+
+/* 8. ELIMINATE PALE/WASHED-OUT INLINE TEXT ON LIGHT THEME (CAREFULLY PRESERVING SATURATED BADGES) */
+body.light-theme [style*="color: #fff"]:not(.tab.active):not(.tab.active *):not(.btn-primary):not(.btn-primary *):not(.nav-share-btn):not(.nav-share-btn *):not(.btn-card-snap):not(.btn-card-snap *),
+body.light-theme [style*="color:#fff"]:not(.tab.active):not(.tab.active *):not(.btn-primary):not(.btn-primary *):not(.nav-share-btn):not(.nav-share-btn *):not(.btn-card-snap):not(.btn-card-snap *),
+body.light-theme [style*="color: #ffffff"]:not(.tab.active):not(.tab.active *):not(.btn-primary):not(.btn-primary *):not(.nav-share-btn):not(.nav-share-btn *):not(.btn-card-snap):not(.btn-card-snap *),
+body.light-theme [style*="color:#ffffff"]:not(.tab.active):not(.tab.active *):not(.btn-primary):not(.btn-primary *):not(.nav-share-btn):not(.nav-share-btn *):not(.btn-card-snap):not(.btn-card-snap *),
+[data-theme="light"] [style*="color: #fff"]:not(.tab.active):not(.tab.active *):not(.btn-primary):not(.btn-primary *):not(.nav-share-btn):not(.nav-share-btn *):not(.btn-card-snap):not(.btn-card-snap *) {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-theme [style*="color: #cbd5e1"],
+body.light-theme [style*="color:#cbd5e1"],
+body.light-theme [style*="color: #e2e8f0"],
+body.light-theme [style*="color:#e2e8f0"],
+body.light-theme [style*="color: #94a3b8"],
+body.light-theme [style*="color:#94a3b8"],
+body.light-theme [style*="color: #b0bfd4"],
+body.light-theme [style*="color:#b0bfd4"],
+body.light-theme [style*="color: #a8bdd4"],
+body.light-theme [style*="color:#a8bdd4"],
+body.light-theme [style*="color: var(--text-dim)"],
+body.light-theme [style*="color:var(--text-dim)"],
+body.light-theme [style*="color: var(--text-muted)"],
+body.light-theme [style*="color:var(--text-muted)"],
+[data-theme="light"] [style*="color: #cbd5e1"],
+[data-theme="light"] [style*="color:#cbd5e1"],
+[data-theme="light"] [style*="color: #e2e8f0"],
+[data-theme="light"] [style*="color:#e2e8f0"],
+[data-theme="light"] [style*="color: #94a3b8"],
+[data-theme="light"] [style*="color:#94a3b8"] {
+  color: #1e293b !important;
+  -webkit-text-fill-color: #1e293b !important;
+  font-weight: 500 !important;
+}
+
+body.light-theme [style*="color: #facc15"],
+body.light-theme [style*="color:#facc15"],
+body.light-theme [style*="color: #fde047"],
+body.light-theme [style*="color:#fde047"],
+body.light-theme [style*="color: #fbbf24"],
+body.light-theme [style*="color:#fbbf24"],
+[data-theme="light"] [style*="color: #facc15"],
+[data-theme="light"] [style*="color:#facc15"],
+[data-theme="light"] [style*="color: #fde047"] {
+  color: #b45309 !important;
+  -webkit-text-fill-color: #b45309 !important;
+  font-weight: 700 !important;
+}
+
+body.light-theme [style*="color: #c084fc"],
+body.light-theme [style*="color:#c084fc"],
+body.light-theme [style*="color: #a78bfa"],
+body.light-theme [style*="color:#a78bfa"],
+[data-theme="light"] [style*="color: #c084fc"],
+[data-theme="light"] [style*="color:#c084fc"] {
+  color: #6d28d9 !important;
+  -webkit-text-fill-color: #6d28d9 !important;
+  font-weight: 700 !important;
+}
+
+body.light-theme [style*="color: #38bdf8"],
+body.light-theme [style*="color:#38bdf8"],
+body.light-theme [style*="color: #60a5fa"],
+body.light-theme [style*="color:#60a5fa"],
+[data-theme="light"] [style*="color: #38bdf8"],
+[data-theme="light"] [style*="color:#38bdf8"] {
+  color: #0369a1 !important;
+  -webkit-text-fill-color: #0369a1 !important;
+  font-weight: 700 !important;
+}
+
+.rec-text-cell,
+body.light-theme .rec-text-cell {
+  color: #1e293b !important;
+  -webkit-text-fill-color: #1e293b !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+}
+
+/* Snap Buttons Styling */
+.btn-card-snap:hover {
+  filter: brightness(1.1) !important;
+  transform: translateY(-1px) !important;
+}
