@@ -176,6 +176,14 @@
         "Status":  "Pending Target"
     },
     {
+        "StudentID":  "58575428",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
         "StudentID":  "58656172",
         "Representative":  "EGSS-marwaahmed",
         "TeamCode":  "ME-EGSS13",
@@ -340,6 +348,14 @@
         "Representative":  "EGSS-amrsafwat",
         "TeamCode":  "ME-EGSS13",
         "TeamName":  "ME-EGSS13小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "59308517",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
         "Status":  "Pending Target"
     },
@@ -968,6 +984,14 @@
         "Status":  "Pending Target"
     },
     {
+        "StudentID":  "62992051",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
         "StudentID":  "63024656",
         "Representative":  "EGSS-mahmoud04",
         "TeamCode":  "ME-EGSS01",
@@ -980,6 +1004,14 @@
         "Representative":  "EGSS-mahmoudkhamis",
         "TeamCode":  "ME-EGSS30",
         "TeamName":  "ME-EGSS10小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "63051212",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
         "Status":  "Pending Target"
     },
@@ -1052,6 +1084,14 @@
         "Representative":  "EGSS-ashraqatal",
         "TeamCode":  "ME-EGSS01",
         "TeamName":  "ME-EGSS01小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "63389062",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
         "Status":  "Pending Target"
     },
@@ -1130,6 +1170,14 @@
     {
         "StudentID":  "63593960",
         "Representative":  "EGSS-khaledgonam",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "63600990",
+        "Representative":  "EGSS-ehabzaky01",
         "TeamCode":  "ME-EGSS05",
         "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
@@ -1256,6 +1304,14 @@
         "Status":  "Pending Target"
     },
     {
+        "StudentID":  "63867656",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
         "StudentID":  "63887061",
         "Representative":  "EGSS-alihesham01",
         "TeamCode":  "ME-EGSS05",
@@ -1274,6 +1330,14 @@
     {
         "StudentID":  "63888130",
         "Representative":  "EGSS-omarmoneb",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "63888514",
+        "Representative":  "EGSS-ehabzaky01",
         "TeamCode":  "ME-EGSS05",
         "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
@@ -1768,6 +1832,14 @@
         "Status":  "Pending Target"
     },
     {
+        "StudentID":  "63968028",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
         "StudentID":  "63969199",
         "Representative":  "EGSS-khaledgonam",
         "TeamCode":  "ME-EGSS05",
@@ -1928,6 +2000,22 @@
         "Status":  "Pending Target"
     },
     {
+        "StudentID":  "63987971",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "63988100",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
         "StudentID":  "63988309",
         "Representative":  "EGSS-ibrahimismaiel",
         "TeamCode":  "ME-EGSS05",
@@ -1986,6 +2074,14 @@
     {
         "StudentID":  "63995025",
         "Representative":  "EGSS-ibrahimismaiel",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "63996264",
+        "Representative":  "EGSS-ehabzaky01",
         "TeamCode":  "ME-EGSS05",
         "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
@@ -2280,10 +2376,34 @@
         "Status":  "Pending Target"
     },
     {
+        "StudentID":  "64043541",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "64044191",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
         "StudentID":  "64044297",
         "Representative":  "EGSS-amrsafwat",
         "TeamCode":  "ME-EGSS13",
         "TeamName":  "ME-EGSS13小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "64044932",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
         "Status":  "Pending Target"
     },
@@ -2300,6 +2420,14 @@
         "Representative":  "EGSS-mahmoudkhamis",
         "TeamCode":  "ME-EGSS30",
         "TeamName":  "ME-EGSS10小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "64050265",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
         "Status":  "Pending Target"
     },
@@ -2600,8 +2728,24 @@
         "Status":  "Pending Target"
     },
     {
+        "StudentID":  "64096077",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
         "StudentID":  "64097184",
         "Representative":  "EGSS-ibrahimismaiel",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "64100882",
+        "Representative":  "EGSS-ehabzaky01",
         "TeamCode":  "ME-EGSS05",
         "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
@@ -2696,6 +2840,14 @@
         "Status":  "Pending Target"
     },
     {
+        "StudentID":  "64113407",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
         "StudentID":  "64113463",
         "Representative":  "EGSS-khaledgonam",
         "TeamCode":  "ME-EGSS05",
@@ -2756,6 +2908,14 @@
         "Representative":  "EGSS-amrsafwat",
         "TeamCode":  "ME-EGSS13",
         "TeamName":  "ME-EGSS13小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "64123114",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
         "Status":  "Pending Target"
     },
@@ -2908,6 +3068,14 @@
         "Representative":  "EGSS-mahmoud04",
         "TeamCode":  "ME-EGSS01",
         "TeamName":  "ME-EGSS01小组",
+        "UpgradeM2":  0,
+        "Status":  "Pending Target"
+    },
+    {
+        "StudentID":  "64144285",
+        "Representative":  "EGSS-ehabzaky01",
+        "TeamCode":  "ME-EGSS05",
+        "TeamName":  "ME-EGSS05小组",
         "UpgradeM2":  0,
         "Status":  "Pending Target"
     },

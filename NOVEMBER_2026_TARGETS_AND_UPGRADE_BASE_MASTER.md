@@ -218,3 +218,34 @@ A dedicated column has been added to the master table (`#individualFullTable`):
 - Fixed `👥 Sales Specialists` pill badges across all team cards.
 - Restored bold black font (`#0f172a`) on Orders and Upgrade Base numbers in the Executive Overview summary table.
 - Upgraded timeline ruler header title and subtitles to crisp `#ffffff` text in all display modes.
+
+
+---
+
+## 🎯 UPDATE: PACING RULER SMART DUAL-PIN, BENCHMARK CASH MATRIX & FULL-WIDTH CARD EXPORT (2026-11-15 18:30)
+
+### 1. Collision Elimination on Pacing Ruler (`#overview`)
+- **Smart Dual-Benchmark Capsule**: Replaced the adjacent separate pins (which collided at 40% and 41%) with a single unified, centered capsule:
+  `📍 Today (D15): 40% ($69,416) | 🚀 Tomorrow (D16): 41% ($71,152)`
+- **Scale Milestone Buffer**: Removed crowded adjacent milestones `D14 (38%)` and `D17 (43%)`, leaving ample breathing room on both sides of the Day 15/16 benchmark.
+- **Unified Tick Label**: Below the ruler track, a single clean milestone line displays `D15: 40% • D16: 41%` with zero visual overlap.
+
+### 2. Dedicated Benchmark Required Cash Target Matrix (`#overview`)
+A prominent 7-column matrix table (`.benchmark-matrix-card`) has been inserted directly above the pacing ruler:
+- **Columns**: Team / Sector, Full Target ($), Net Cash Achieved, D15 Target (40%), D15 Status (+Surplus / -Deficit), D16 Target (41%), D16 Status (+Met / +Needed).
+- **Accurate Real-Time Values**:
+  - **Big Team 01 (Sector)**: Target `$173,541` | Net Cash `$71,966` | D15 BM `$69,416` (`+$2,550 Met`) | D16 BM `$71,152` (`+$814 Met`).
+  - **ME-EGSS30**: Target `$21,036` | Net Cash `$11,851` | D15 BM `$8,414` (`+$3,437 Met`) | D16 BM `$8,625` (`+$3,226 Met`).
+  - **ME-EGSS13**: Target `$31,515` | Net Cash `$16,798` | D15 BM `$12,606` (`+$4,192 Met`) | D16 BM `$12,921` (`+$3,877 Met`).
+  - **ME-EGSS10**: Target `$22,283` | Net Cash `$10,698` | D15 BM `$8,913` (`+$1,785 Met`) | D16 BM `$9,136` (`+$1,562 Met`).
+  - **ME-EGSS05**: Target `$60,248` | Net Cash `$21,687` | D15 BM `$24,099` (`-$2,412 Deficit`) | D16 BM `$24,702` (`+$3,015 Needed`).
+  - **ME-EGSS01**: Target `$38,456` | Net Cash `$12,537` | D15 BM `$15,382` (`-$2,845 Deficit`) | D16 BM `$15,767` (`+$3,230 Needed`).
+
+### 3. Small Teams Card Snapshot Engine Repair (`#teams`)
+- **Full ScrollWidth Canvas**: Fixed horizontal viewport clipping by setting `windowWidth: Math.max(el.scrollWidth, 1920)` and scrolling the target element into view before capture. All 5 team cards now export completely at full width without cropped edges or washed-out text.
+- **Individual Card Download Buttons**: Added standalone `📥 تحميل` buttons on every individual card header alongside `📸 نسخ` for single-card DingTalk exports.
+
+### 4. Site-Wide High-Contrast & Dropdown Fixes
+- **Select / Dropdown Menus**: Enforced `color-scheme: light !important; background: #ffffff !important; color: #0f172a !important;` on all select elements and options to prevent dark popup menus on Windows Chrome.
+- **Team Roster Text**: Enforced dark, bold typography (`#0f172a`) on sales rep names, targets, and M2 counts in light mode.
+- **Below-BM Badges**: High-contrast rose/red framed borders (`#ef4444`) with dark red text (`#991b1b`) on `#fee2e2` backgrounds.

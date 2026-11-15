@@ -6805,3 +6805,65 @@ body.light-theme .pacing-scale-header strong,
 [data-theme="light"] .pacing-scale-header strong {
   color: #ffffff !important;
 }
+
+/* ── Smart Dual-Pin High Contrast ── */
+.smart-dual-pin,
+.smart-dual-pin *,
+body.light-theme .smart-dual-pin *,
+[data-theme="light"] .smart-dual-pin * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.smart-dual-pin .pin-d15-label {
+  color: #7dd3fc !important;
+  -webkit-text-fill-color: #7dd3fc !important;
+}
+
+.smart-dual-pin .pin-d16-label {
+  color: #d8b4fe !important;
+  -webkit-text-fill-color: #d8b4fe !important;
+}
+
+/* ── Benchmark Matrix Card Light Theme ── */
+body.light-theme .benchmark-matrix-card,
+[data-theme="light"] .benchmark-matrix-card {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-theme .benchmark-matrix-card h4,
+[data-theme="light"] .benchmark-matrix-card h4 {
+  color: #0f172a !important;
+}
+
+body.light-theme .benchmark-matrix-card table,
+[data-theme="light"] .benchmark-matrix-card table {
+  color: #0f172a !important;
+}
+
+body.light-theme .benchmark-matrix-card th,
+[data-theme="light"] .benchmark-matrix-card th {
+  color: #334155 !important;
+  background: #f1f5f9 !important;
+  border-bottom: 2px solid #cbd5e1 !important;
+}
+
+body.light-theme .benchmark-matrix-card td,
+[data-theme="light"] .benchmark-matrix-card td {
+  color: #0f172a !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+body.light-theme .benchmark-matrix-card tr.matrix-sector-row,
+[data-theme="light"] .benchmark-matrix-card tr.matrix-sector-row {
+  background: #eff6ff !important;
+  border-bottom: 2px solid #93c5fd !important;
+}
+
+body.light-theme .benchmark-matrix-card tr.matrix-sector-row td,
+[data-theme="light"] .benchmark-matrix-card tr.matrix-sector-row td {
+  color: #1e3a8a !important;
+  font-weight: 800 !important;
+}
