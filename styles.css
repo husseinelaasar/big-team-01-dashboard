@@ -6806,13 +6806,9 @@ body.light-theme .pacing-scale-header strong,
   color: #ffffff !important;
 }
 
-/* ── Smart Dual-Pin High Contrast ── */
-.smart-dual-pin,
-.smart-dual-pin *,
-body.light-theme .smart-dual-pin *,
-[data-theme="light"] .smart-dual-pin * {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
+/* ── Smart Dual-Pin High Contrast & Neon Glow ── */
+.smart-dual-pin {
+  z-index: 30 !important;
 }
 
 .smart-dual-pin .pin-d15-label {
@@ -6821,8 +6817,63 @@ body.light-theme .smart-dual-pin *,
 }
 
 .smart-dual-pin .pin-d16-label {
-  color: #d8b4fe !important;
-  -webkit-text-fill-color: #d8b4fe !important;
+  color: #f0abfc !important;
+  -webkit-text-fill-color: #f0abfc !important;
+}
+
+/* Day 15 (40% BM) Glowing Neon Cyan Badge */
+.bm-glow-d15,
+body.light-theme .bm-glow-d15,
+[data-theme="light"] .bm-glow-d15 {
+  color: #00f2fe !important;
+  -webkit-text-fill-color: #00f2fe !important;
+  font-weight: 900 !important;
+  font-size: 0.98rem !important;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.95), 0 0 22px rgba(0, 242, 254, 0.7) !important;
+  background: rgba(0, 242, 254, 0.22) !important;
+  border: 1.5px solid #00f2fe !important;
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.4) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Day 16 (41% BM) Glowing Neon Magenta/Purple Badge */
+.bm-glow-d16,
+body.light-theme .bm-glow-d16,
+[data-theme="light"] .bm-glow-d16 {
+  color: #f0abfc !important;
+  -webkit-text-fill-color: #f0abfc !important;
+  font-weight: 900 !important;
+  font-size: 0.98rem !important;
+  text-shadow: 0 0 10px rgba(240, 171, 252, 0.95), 0 0 22px rgba(232, 121, 249, 0.7) !important;
+  background: rgba(240, 171, 252, 0.22) !important;
+  border: 1.5px solid #e879f9 !important;
+  box-shadow: 0 0 12px rgba(232, 121, 249, 0.4) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Below-Track Glowing Badges */
+.ruler-sub-d15,
+body.light-theme .ruler-sub-d15,
+[data-theme="light"] .ruler-sub-d15 {
+  color: #00f2fe !important;
+  -webkit-text-fill-color: #00f2fe !important;
+  font-weight: 900 !important;
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.85) !important;
+  background: rgba(0, 242, 254, 0.18) !important;
+  border: 1.2px solid #00f2fe !important;
+}
+
+.ruler-sub-d16,
+body.light-theme .ruler-sub-d16,
+[data-theme="light"] .ruler-sub-d16 {
+  color: #f0abfc !important;
+  -webkit-text-fill-color: #f0abfc !important;
+  font-weight: 900 !important;
+  text-shadow: 0 0 8px rgba(240, 171, 252, 0.85) !important;
+  background: rgba(240, 171, 252, 0.18) !important;
+  border: 1.2px solid #e879f9 !important;
 }
 
 /* ── Benchmark Matrix Card Light Theme ── */

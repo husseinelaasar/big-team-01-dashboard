@@ -258,3 +258,17 @@ A prominent 7-column matrix table (`.benchmark-matrix-card`) has been inserted d
 - **Strict Pacing Scope**: Confined the continuous vertical benchmark lines (`guideLine` Day 15: 40% and `guideLineNext` Day 16: 41%) exclusively to `pacing-bars-wrapper`.
 - **Accurate Starting Point**: Guidelines now start at `top: 125px` (precisely aligning with the ruler scale track) down across Big Team 01 and the 5 Small Team progress bars, stopping at `bottom: 8px`.
 - **Zero Interference with Target Matrix**: The Benchmark Required Cash Target Matrix table is now completely clean with zero overlapping lines or visual obstruction across any column or numbers.
+
+
+---
+
+## 💡 UPDATE: GLOWING HIGH-CONTRAST DUAL-BM PERCENTAGES (2026-11-15 18:52)
+- **Eliminated Black-on-Dark Text Trap**: Replaced the muted `strong` tags inside the floating capsule with dedicated `.bm-glow-d15` and `.bm-glow-d16` neon badges protected by `-webkit-text-fill-color` and `!important` to prevent light-theme inheritance.
+- **Day 15 (Today: 40%) Glowing Neon Cyan**:
+  - Color: `#00f2fe` with neon glow (`text-shadow: 0 0 10px rgba(0, 242, 254, 0.95), 0 0 22px rgba(0, 242, 254, 0.7)`).
+  - Background badge: `background: rgba(0, 242, 254, 0.22); border: 1.5px solid #00f2fe; box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);`.
+- **Day 16 (Tomorrow: 41%) Glowing Neon Magenta / Violet**:
+  - Color: `#f0abfc` with neon glow (`text-shadow: 0 0 10px rgba(240, 171, 252, 0.95), 0 0 22px rgba(232, 121, 249, 0.7)`).
+  - Background badge: `background: rgba(240, 171, 252, 0.22); border: 1.5px solid #e879f9; box-shadow: 0 0 12px rgba(232, 121, 249, 0.4);`.
+- **Below-Track Dual Badges**:
+  - Upgraded the tick milestone labels below the track into glowing framed badges: `.ruler-sub-d15` (`D15: 40%` cyan) and `.ruler-sub-d16` (`D16: 41%` magenta).
