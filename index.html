@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261115_160316">
+  <link rel="stylesheet" href="styles.css?v=20261115_170556">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -409,6 +409,16 @@
       <div id="individualCards" class="individual-cards-grid"></div>
       
       <div id="individualTableView" class="table-wrapper hidden" style="margin-top: 14px; overflow-x: auto; width: 100%;">
+        <!-- Master Reps Count & Paging Health Banner -->
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: rgba(99, 102, 241, 0.08); border-bottom: 1px solid var(--border-glass); border-radius: 12px 12px 0 0; flex-wrap: wrap; gap: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 0.85rem; font-weight: 800; color: var(--text-primary);">👥 Big Team 01 Master Roster (All 19 Sales Specialists)</span>
+            <span class="pill-badge pill-badge-emerald" style="font-size: 0.70rem; padding: 2px 8px; font-weight: 800;">19 Reps Active • 100% Balanced</span>
+          </div>
+          <div style="font-size: 0.76rem; color: var(--text-secondary); font-weight: 600;">
+            ⬇️ Scroll down to view all 19 reps (#1 to #19) & Sector Totals
+          </div>
+        </div>
         <table class="data-table" id="individualFullTable" style="width: 100%;">
           <thead>
             <tr>
@@ -2057,7 +2067,7 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261115_160316" defer></script>
+  <script src="dashboard.js?v=20261115_170556" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link
