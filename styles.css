@@ -4155,3 +4155,653 @@ html, body, *:not(input):not(textarea):not(select) {
   user-select: none !important;
   -webkit-touch-callout: none !important;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   🚀 GENESIS REDESIGN — AURORA COMMAND THEME v3.0
+   Brilliant vibrant deep-space command center aesthetic
+   Applied: 2026-11-15 | Override Priority: MAXIMUM
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── GENESIS ROOT OVERRIDES ── */
+:root {
+  --bg-primary: #05080f !important;
+  --bg-secondary: #080d1a !important;
+  --bg-card: rgba(10, 16, 32, 0.75) !important;
+  --bg-card-hover: rgba(16, 26, 52, 0.9) !important;
+  --bg-glass: rgba(255,255,255,0.03) !important;
+  --border-glass: rgba(99,102,241,0.18) !important;
+  --border-active: rgba(99,102,241,0.6) !important;
+  --accent-indigo: #818cf8 !important;
+  --accent-cyan: #22d3ee !important;
+  --accent-emerald: #34d399 !important;
+  --accent-amber: #fbbf24 !important;
+  --accent-rose: #fb7185 !important;
+  --accent-violet: #a78bfa !important;
+  --gradient-primary: linear-gradient(135deg, #818cf8, #22d3ee) !important;
+  --gradient-success: linear-gradient(135deg, #34d399, #22d3ee) !important;
+  --gradient-warning: linear-gradient(135deg, #fbbf24, #f97316) !important;
+  --gradient-danger: linear-gradient(135deg, #fb7185, #e11d48) !important;
+  --shadow-glow: 0 0 40px rgba(99,102,241,0.25) !important;
+  --shadow-glow-lg: 0 0 60px rgba(99,102,241,0.35) !important;
+}
+
+/* ── GENESIS BODY — LIVING AURORA CANVAS ── */
+html, body {
+  background: #05080f !important;
+}
+
+body {
+  background: #05080f !important;
+  position: relative !important;
+}
+
+/* Remove old pseudo-element bg patterns — replaced below */
+body::before {
+  content: '' !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background:
+    radial-gradient(ellipse 1400px 900px at 0% 0%,   rgba(99, 102, 241, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 1200px 800px at 100% 0%,  rgba(34, 211, 238, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse 1000px 700px at 50% 100%, rgba(167, 139, 250, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse 800px 600px at 0% 100%,   rgba(52, 211, 153, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 700px 500px at 100% 60%,  rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #05080f 0%, #080d1a 40%, #060b16 100%) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  animation: auroraPulse 18s ease-in-out infinite alternate !important;
+}
+
+@keyframes auroraPulse {
+  0%   { opacity: 0.85; }
+  50%  { opacity: 1.0; }
+  100% { opacity: 0.9; }
+}
+
+body::after {
+  content: '' !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px) !important;
+  background-size: 56px 56px !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  animation: gridDrift 40s linear infinite !important;
+  opacity: 0.6 !important;
+}
+
+/* ── GENESIS AMBIENT GLOWS — STRONGER & MORE COLORFUL ── */
+.ambient-glow {
+  opacity: 0.55 !important;
+  filter: blur(120px) !important;
+}
+
+.ambient-glow-1 {
+  width: 800px !important;
+  height: 800px !important;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.7) 0%, rgba(99, 102, 241, 0) 70%) !important;
+  top: -200px !important;
+  left: -200px !important;
+  animation-duration: 20s !important;
+}
+
+.ambient-glow-2 {
+  width: 850px !important;
+  height: 850px !important;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.65) 0%, rgba(34, 211, 238, 0) 70%) !important;
+  top: 20% !important;
+  right: -250px !important;
+  animation-duration: 24s !important;
+}
+
+.ambient-glow-3 {
+  width: 700px !important;
+  height: 700px !important;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.6) 0%, rgba(167, 139, 250, 0) 70%) !important;
+  bottom: 5% !important;
+  left: 15% !important;
+  animation-duration: 28s !important;
+}
+
+.ambient-glow-4 {
+  width: 600px !important;
+  height: 600px !important;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.5) 0%, rgba(52, 211, 153, 0) 70%) !important;
+  bottom: -100px !important;
+  right: 10% !important;
+  animation-duration: 22s !important;
+}
+
+/* ── TOP NAV — AURORA GLASS COMMAND BAR ── */
+.top-nav {
+  background: linear-gradient(135deg, rgba(8, 13, 26, 0.95) 0%, rgba(12, 20, 40, 0.98) 100%) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.3) !important;
+  backdrop-filter: blur(32px) !important;
+  -webkit-backdrop-filter: blur(32px) !important;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Top-nav gradient accent line */
+.top-nav::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #6366f1, #22d3ee, #34d399, #a78bfa, #22d3ee, #6366f1) !important;
+  background-size: 400% 100% !important;
+  animation: navLineSweep 6s linear infinite !important;
+}
+@keyframes navLineSweep {
+  0% { background-position: 0% 0; }
+  100% { background-position: 400% 0; }
+}
+
+/* ── TAB BAR — AURORA FLIGHT DECK ── */
+.tab-bar {
+  background: rgba(6, 10, 20, 0.9) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.2) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.tab {
+  color: rgba(148, 163, 184, 0.8) !important;
+  border-bottom: 2px solid transparent !important;
+  padding: 12px 18px !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
+  transition: all 0.25s ease !important;
+  position: relative !important;
+}
+
+.tab:hover {
+  color: #e2e8f0 !important;
+  background: rgba(99, 102, 241, 0.08) !important;
+}
+
+.tab.active {
+  color: #c7d2fe !important;
+  border-bottom-color: #818cf8 !important;
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.12), transparent) !important;
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.6) !important;
+}
+
+.tab.active::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 10% !important;
+  right: 10% !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, #818cf8, #22d3ee, transparent) !important;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.8) !important;
+  border-radius: 2px !important;
+}
+
+/* ── KPI CARDS — GENESIS CRYSTAL PANELS ── */
+.kpi-card,
+.kpi-card.kpi-cash,
+.kpi-card.kpi-contracts,
+.kpi-card.kpi-ach,
+.kpi-card.kpi-base {
+  background: linear-gradient(145deg, rgba(14, 22, 44, 0.85) 0%, rgba(10, 16, 32, 0.9) 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.2) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-radius: 16px !important;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.kpi-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(99, 102, 241, 0.5) !important;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(99, 102, 241, 0.2),
+    0 0 0 1px rgba(99, 102, 241, 0.3) inset !important;
+}
+
+/* KPI inner shimmer sweep */
+.kpi-card::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 60% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent) !important;
+  transform: skewX(-20deg) !important;
+  transition: left 0.6s ease !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+.kpi-card:hover::after { left: 160% !important; }
+
+/* Top gradient lines per card type */
+.kpi-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important; left: 0 !important; right: 0 !important;
+  height: 3px !important;
+  border-radius: 16px 16px 0 0 !important;
+}
+.kpi-cash::before    { background: linear-gradient(90deg, #6366f1, #22d3ee) !important; box-shadow: 0 0 15px rgba(99,102,241,0.6) !important; }
+.kpi-contracts::before { background: linear-gradient(90deg, #34d399, #22d3ee) !important; box-shadow: 0 0 15px rgba(52,211,153,0.6) !important; }
+.kpi-ach::before     { background: linear-gradient(90deg, #fbbf24, #f97316) !important; box-shadow: 0 0 15px rgba(251,191,36,0.5) !important; }
+.kpi-base::before    { background: linear-gradient(90deg, #a78bfa, #6366f1) !important; box-shadow: 0 0 15px rgba(167,139,250,0.5) !important; }
+
+/* KPI typography */
+.kpi-label { color: rgba(148, 163, 184, 0.9) !important; font-size: 0.72rem !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; font-weight: 600 !important; }
+.kpi-value { color: #f8fafc !important; font-size: 2rem !important; font-weight: 800 !important; font-family: 'JetBrains Mono', monospace !important; letter-spacing: -0.02em !important; text-shadow: 0 0 30px rgba(255,255,255,0.15) !important; }
+.kpi-sub   { color: rgba(148, 163, 184, 0.8) !important; font-size: 0.75rem !important; }
+.kpi-pct   { color: #c7d2fe !important; font-weight: 700 !important; font-size: 0.95rem !important; }
+
+/* ── SPRINT COUNTDOWN HUD ── */
+.sprint-countdown-hud {
+  background: linear-gradient(135deg, rgba(10, 16, 32, 0.95) 0%, rgba(14, 22, 44, 0.98) 100%) !important;
+  border: 1.5px solid rgba(99, 102, 241, 0.4) !important;
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(99, 102, 241, 0.15),
+    0 0 0 1px rgba(99, 102, 241, 0.1) inset !important;
+}
+
+/* ── SECTION HEADERS ── */
+.section-header h2 {
+  color: #f1f5f9 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  text-shadow: 0 0 40px rgba(99,102,241,0.3) !important;
+}
+.section-header h2::before {
+  background: linear-gradient(90deg, #6366f1, #22d3ee) !important;
+  box-shadow: 0 0 12px rgba(99,102,241,0.8) !important;
+  width: 4px !important;
+  border-radius: 2px !important;
+}
+
+/* ── DATA TABLE — AURORA GRID ── */
+.table-wrapper,
+.data-table-wrapper {
+  background: linear-gradient(145deg, rgba(10, 16, 32, 0.9) 0%, rgba(8, 13, 26, 0.95) 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.2) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+}
+
+.data-table th,
+#individualFullTable th,
+table th {
+  background: linear-gradient(90deg, rgba(14, 22, 44, 0.98) 0%, rgba(10, 16, 32, 0.98) 100%) !important;
+  color: rgba(199, 210, 254, 0.95) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid rgba(99, 102, 241, 0.3) !important;
+  padding: 14px 16px !important;
+}
+
+.data-table td,
+#individualFullTable td,
+table td {
+  color: #cbd5e1 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  padding: 12px 16px !important;
+}
+
+.data-table tr:hover td,
+#individualFullTable tr:hover td,
+table tbody tr:hover td {
+  background: rgba(99, 102, 241, 0.07) !important;
+  color: #f1f5f9 !important;
+  border-left: 2px solid rgba(99, 102, 241, 0.5) !important;
+}
+
+.data-table tr:nth-child(even) td {
+  background: rgba(99, 102, 241, 0.03) !important;
+}
+
+/* Table footer */
+.data-table tfoot td,
+table tfoot td {
+  background: linear-gradient(90deg, rgba(14, 22, 44, 0.98), rgba(10, 16, 32, 0.98)) !important;
+  color: #c7d2fe !important;
+  font-weight: 800 !important;
+  border-top: 2px solid rgba(99, 102, 241, 0.3) !important;
+}
+
+/* ── INDIVIDUAL REP CARDS (ind-card) — GENESIS CRYSTAL TILES ── */
+.ind-card {
+  background: linear-gradient(145deg, rgba(14, 22, 44, 0.85) 0%, rgba(10, 16, 32, 0.92) 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.2) !important;
+  border-radius: 18px !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.ind-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #6366f1, #22d3ee) !important;
+  border-radius: 18px 18px 0 0 !important;
+  opacity: 0.7 !important;
+}
+
+.ind-card:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+  border-color: rgba(99, 102, 241, 0.5) !important;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(99, 102, 241, 0.2),
+    0 0 0 1px rgba(99, 102, 241, 0.25) inset !important;
+}
+
+/* Top performer glow */
+.ind-card.top-performer::before,
+.ind-card[data-rank="1"]::before {
+  background: linear-gradient(90deg, #fbbf24, #f97316, #fbbf24) !important;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.6) !important;
+  animation: goldGlow 2s ease-in-out infinite alternate !important;
+  opacity: 1 !important;
+}
+
+@keyframes goldGlow {
+  from { box-shadow: 0 0 10px rgba(251, 191, 36, 0.4); }
+  to   { box-shadow: 0 0 25px rgba(251, 191, 36, 0.8); }
+}
+
+.ind-name { color: #f1f5f9 !important; font-weight: 800 !important; font-size: 1.05rem !important; }
+.ind-team { color: rgba(148, 163, 184, 0.75) !important; font-size: 0.7rem !important; }
+
+.ind-stat-value { color: #e2e8f0 !important; font-weight: 700 !important; }
+.ind-stat-label { color: rgba(100, 116, 139, 0.9) !important; }
+
+.ind-recommendation {
+  background: rgba(99, 102, 241, 0.08) !important;
+  border: 1px solid rgba(99, 102, 241, 0.18) !important;
+  color: rgba(148, 163, 184, 0.9) !important;
+  border-radius: 10px !important;
+}
+.ind-recommendation strong { color: #a5b4fc !important; }
+
+/* ── METRIC TILE MODERN (Individuals small tiles) ── */
+.metric-tile-modern {
+  background: linear-gradient(145deg, rgba(14, 22, 44, 0.85) 0%, rgba(10, 16, 32, 0.9) 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.18) !important;
+  backdrop-filter: blur(14px) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.metric-tile-modern:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.15) !important;
+}
+
+/* ── GENERAL CALC CARDS ── */
+.calc-card,
+.chart-card,
+.card {
+  background: linear-gradient(145deg, rgba(14, 22, 44, 0.85) 0%, rgba(10, 16, 32, 0.9) 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.18) !important;
+  backdrop-filter: blur(16px) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* ── DATA SOURCES SYNC WIDGET ── */
+.data-sources-widget,
+.sheet-sync-verification,
+.sync-widget,
+[class*="sheet-sync"],
+[class*="data-src"] {
+  background: linear-gradient(145deg, rgba(12, 20, 40, 0.95) 0%, rgba(8, 14, 28, 0.98) 100%) !important;
+  border: 1px solid rgba(99, 102, 241, 0.25) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.sheet-sync-item {
+  background: rgba(10, 16, 32, 0.6) !important;
+  border: 1px solid rgba(99, 102, 241, 0.15) !important;
+  border-radius: 10px !important;
+}
+
+.sheet-sync-item.synced {
+  border-color: rgba(52, 211, 153, 0.4) !important;
+  background: rgba(52, 211, 153, 0.06) !important;
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.1) !important;
+}
+
+.sheet-name   { color: #f1f5f9 !important; font-weight: 700 !important; }
+.sheet-time   { color: #67e8f9 !important; }
+
+/* ── STATUS BADGES ── */
+.badge-on-track, [class*="on-track"] {
+  background: rgba(52, 211, 153, 0.15) !important;
+  color: #34d399 !important;
+  border-color: rgba(52, 211, 153, 0.35) !important;
+}
+.badge-at-risk, [class*="at-risk"] {
+  background: rgba(251, 191, 36, 0.15) !important;
+  color: #fbbf24 !important;
+  border-color: rgba(251, 191, 36, 0.35) !important;
+}
+.badge-behind, [class*="behind"] {
+  background: rgba(251, 113, 133, 0.15) !important;
+  color: #fb7185 !important;
+  border-color: rgba(251, 113, 133, 0.35) !important;
+}
+
+/* ── FILTER CONTROLS ── */
+.filter-bar select,
+.filter-select,
+.modern-select,
+select {
+  background: rgba(10, 16, 32, 0.85) !important;
+  border: 1px solid rgba(99, 102, 241, 0.25) !important;
+  color: #e2e8f0 !important;
+  border-radius: 10px !important;
+}
+
+/* ── BUTTONS ── */
+button, .btn {
+  transition: all 0.2s ease !important;
+}
+
+/* ── FOOTER ── */
+footer, .footer {
+  background: rgba(5, 8, 15, 0.95) !important;
+  border-top: 1px solid rgba(99, 102, 241, 0.2) !important;
+  color: rgba(100, 116, 139, 0.8) !important;
+}
+
+/* ── LOADER MATCH ── */
+.loader-overlay {
+  background: #05080f !important;
+}
+
+/* ── INDIVIDUAL CARDS GRID SPACING ── */
+.individual-cards-grid {
+  gap: 20px !important;
+}
+
+/* ── SCROLL BARS ── */
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4) !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.65) !important;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 16, 32, 0.5) !important;
+}
+
+/* ── PILL BADGES ── */
+.pill-badge-emerald { background: rgba(52, 211, 153, 0.15) !important; color: #34d399 !important; border-color: rgba(52, 211, 153, 0.35) !important; }
+.pill-badge-cyan    { background: rgba(34, 211, 238, 0.15) !important; color: #22d3ee !important; border-color: rgba(34, 211, 238, 0.35) !important; }
+.pill-badge-purple  { background: rgba(167, 139, 250, 0.15) !important; color: #a78bfa !important; border-color: rgba(167, 139, 250, 0.35) !important; }
+.pill-badge-amber   { background: rgba(251, 191, 36, 0.15) !important; color: #fbbf24 !important; border-color: rgba(251, 191, 36, 0.35) !important; }
+.pill-badge-rose    { background: rgba(251, 113, 133, 0.15) !important; color: #fb7185 !important; border-color: rgba(251, 113, 133, 0.35) !important; }
+
+/* ── PROGRESS BARS ── */
+.kpi-progress {
+  background: rgba(99, 102, 241, 0.12) !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+}
+.kpi-bar {
+  border-radius: 999px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4) !important;
+}
+.kpi-cash .kpi-bar      { background: linear-gradient(90deg, #6366f1, #22d3ee) !important; }
+.kpi-contracts .kpi-bar { background: linear-gradient(90deg, #34d399, #22d3ee) !important; }
+.kpi-ach .kpi-bar       { background: linear-gradient(90deg, #fbbf24, #f97316) !important; }
+.kpi-base .kpi-bar      { background: linear-gradient(90deg, #a78bfa, #6366f1) !important; }
+
+/* ── GRADIENT TEXT ── */
+.gradient-text {
+  background: linear-gradient(135deg, #818cf8, #22d3ee) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* END GENESIS REDESIGN v3.0 */
+
+/* ══════════════════════════════════════════════════════════════
+   🌟 GENESIS POLISH — Tab & Section Extra Vibrancy Patch
+   ══════════════════════════════════════════════════════════════ */
+
+/* Warmer, more vivid top gradient aura */
+@keyframes auroraShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Individual tab section heading extra glow */
+#tab-individuals .section-header h2,
+#tab-individuals h2,
+#tab-individuals h3 {
+  color: #f1f5f9 !important;
+  text-shadow: 0 0 30px rgba(99, 102, 241, 0.4), 0 0 60px rgba(34, 211, 238, 0.2) !important;
+}
+
+/* Individual cards grid container */
+#tab-individuals {
+  padding-top: 4px !important;
+}
+
+/* Rep name in table — bright white */
+.rep-name-cell, td:first-child { 
+  color: #e2e8f0 !important; 
+  font-weight: 600 !important; 
+}
+
+/* Number cells — cool cyan */
+td.number-cell, td[class*="cash"], td[class*="revenue"] {
+  color: #67e8f9 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 600 !important;
+}
+
+/* Positive achievement cells */
+td[class*="ach"], td[class*="pct"] {
+  font-weight: 700 !important;
+}
+
+/* Top rank highlight */
+tr[data-rank="1"] td, tr.rank-1 td {
+  background: rgba(251, 191, 36, 0.05) !important;
+}
+tr[data-rank="1"] td:first-child, tr.rank-1 td:first-child {
+  color: #fbbf24 !important;
+  font-weight: 800 !important;
+}
+
+/* Commission card and calc card extra treatment */
+.calc-card:hover {
+  border-color: rgba(99, 102, 241, 0.45) !important;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.5), 0 0 25px rgba(99,102,241,0.15) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Section divider lines */
+.section-divider, hr {
+  border-color: rgba(99, 102, 241, 0.15) !important;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.3), transparent) !important;
+  height: 1px !important;
+  border: none !important;
+}
+
+/* Header dashboard title */
+.dashboard-title, .top-nav .title, .top-nav h1, .top-nav strong {
+  color: #f8fafc !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Sub-manager name */
+.manager-name, .top-nav .subtitle, .top-nav small {
+  color: rgba(148, 163, 184, 0.85) !important;
+}
+
+/* Sprint HUD countdown digits */
+.countdown-digit, [class*="countdown"] span, .time-unit .value {
+  color: #f1f5f9 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.6) !important;
+  font-weight: 800 !important;
+}
+
+/* Daily target number (right of sprint HUD) */
+.daily-target-amount, .sprint-daily-target, [class*="daily-rate"] {
+  color: #22d3ee !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.5) !important;
+}
+
+/* Commission portal tiles */
+.scheme-tile, .commission-tile {
+  background: linear-gradient(145deg, rgba(14,22,44,0.9), rgba(10,16,32,0.95)) !important;
+  border: 1px solid rgba(99,102,241,0.2) !important;
+  border-radius: 14px !important;
+}
+
+/* ── SHARE BUTTON ── */
+.btn-share, [class*="share-btn"], button[onclick*="share"] {
+  background: linear-gradient(135deg, #6366f1, #22d3ee) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.4) !important;
+}
+.btn-share:hover, [class*="share-btn"]:hover {
+  box-shadow: 0 8px 30px rgba(99,102,241,0.6) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* END GENESIS POLISH */
