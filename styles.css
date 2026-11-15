@@ -5437,3 +5437,114 @@ body.light-theme .footer {
 body.light-theme .loader-overlay {
   background: #f8fafc !important;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   🎨 HARMONIOUS EXECUTIVE COLOR PALETTE & UNIFIED TABLE ROWS
+   Fix: Eliminate contrasting alternating row colors (Zebra Striping)
+   Unified cohesive color system across all tables & rows
+   ══════════════════════════════════════════════════════════════ */
+
+/* 1. All rows have the EXACT SAME clean background (Zero zebra clash) */
+.data-table tbody tr,
+.data-table tbody tr:nth-child(odd),
+.data-table tbody tr:nth-child(even),
+#individualFullTable tbody tr,
+#individualFullTable tbody tr:nth-child(odd),
+#individualFullTable tbody tr:nth-child(even),
+table tbody tr,
+table tbody tr:nth-child(odd),
+table tbody tr:nth-child(even) {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7) !important;
+  transition: background 0.15s ease !important;
+}
+
+.data-table tbody tr td,
+.data-table tbody tr:nth-child(odd) td,
+.data-table tbody tr:nth-child(even) td,
+#individualFullTable tbody tr td,
+#individualFullTable tbody tr:nth-child(odd) td,
+#individualFullTable tbody tr:nth-child(even) td {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7) !important;
+}
+
+/* Light Theme: Pure clean uniform row background for ALL rows */
+body.light-theme .data-table tbody tr,
+body.light-theme .data-table tbody tr:nth-child(odd),
+body.light-theme .data-table tbody tr:nth-child(even),
+body.light-theme #individualFullTable tbody tr,
+body.light-theme #individualFullTable tbody tr:nth-child(odd),
+body.light-theme #individualFullTable tbody tr:nth-child(even),
+body.light-theme .data-table tbody tr td,
+body.light-theme #individualFullTable tbody tr td {
+  background: #ffffff !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  border-left: none !important;
+  border-right: none !important;
+  color: #334155 !important;
+}
+
+/* Subtle, cohesive row hover state */
+body.light-theme .data-table tbody tr:hover,
+body.light-theme .data-table tbody tr:hover td,
+body.light-theme #individualFullTable tbody tr:hover,
+body.light-theme #individualFullTable tbody tr:hover td {
+  background: #f8fafc !important;
+}
+
+/* Dark Theme (when toggled): Uniform dark slate for ALL rows */
+body:not(.light-theme) .data-table tbody tr,
+body:not(.light-theme) .data-table tbody tr:nth-child(odd),
+body:not(.light-theme) .data-table tbody tr:nth-child(even),
+body:not(.light-theme) #individualFullTable tbody tr,
+body:not(.light-theme) #individualFullTable tbody tr:nth-child(odd),
+body:not(.light-theme) #individualFullTable tbody tr:nth-child(even),
+body:not(.light-theme) .data-table tbody tr td,
+body:not(.light-theme) #individualFullTable tbody tr td {
+  background: #0d1527 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-left: none !important;
+  border-right: none !important;
+  color: #cbd5e1 !important;
+}
+
+body:not(.light-theme) .data-table tbody tr:hover,
+body:not(.light-theme) .data-table tbody tr:hover td,
+body:not(.light-theme) #individualFullTable tbody tr:hover,
+body:not(.light-theme) #individualFullTable tbody tr:hover td {
+  background: rgba(99, 102, 241, 0.08) !important;
+}
+
+/* 2. Eliminate colored column background stripes */
+.data-table td[style*="background:"],
+#individualFullTable td[style*="background:"],
+.data-table td[style*="background"],
+#individualFullTable td[style*="background"] {
+  background: transparent !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+body.light-theme .data-table td[style*="background:"],
+body.light-theme #individualFullTable td[style*="background:"],
+body.light-theme .data-table td[style*="background"],
+body.light-theme #individualFullTable td[style*="background"] {
+  background: #ffffff !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Consistent, professional typography in tables */
+body.light-theme .data-table th,
+body.light-theme #individualFullTable th {
+  background: #f8fafc !important;
+  color: #475569 !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+
+body.light-theme .data-table td strong,
+body.light-theme #individualFullTable td strong {
+  color: #0f172a !important;
+}
