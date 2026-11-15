@@ -5713,3 +5713,369 @@ body.light-theme .status-badge[style*="#8b5cf6"] {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
   gap: 18px !important;
 }
+
+
+/* ==========================================================================
+   MASTER EXECUTIVE POLISH v3.5: CONTRAST, BM DANGER FRAMING & ANTI-CLIPPING
+   ========================================================================== */
+
+/* ── 1. ANTI-CLIPPING & COMPREHENSIVE TEXT/BADGE PRESERVATION ── */
+.tab-bar {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scrollbar-width: thin !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: 10px 6px 14px !important;
+  gap: 8px !important;
+}
+
+.tab {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  max-width: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.tab span,
+.tab .pill-badge,
+.tab-badge {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  padding: 2px 8px !important;
+  border-radius: 6px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+
+/* Ensure no pill badge, status capsule or dock icon clips its text */
+.pill-badge,
+.status-badge,
+.op-pill,
+.ind-rank-badge,
+.velocity-badge,
+.ind-team-capsule,
+.ind-status-pill,
+.st-bm-badge,
+.st-m2-pill {
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  flex-shrink: 0 !important;
+  letter-spacing: normal !important;
+}
+
+/* Eliminate ellipsis truncation that cuts words in HUD & cards */
+.ind-hud-val,
+.ind-rep-name,
+.ind-rep-role {
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+  word-break: keep-all !important;
+}
+
+/* ── 2. BELOW BENCHMARK (BM) CRITICAL DANGER FRAMING & ALERTS ── */
+/* Table Rows Below BM */
+tr.row-below-bm {
+  background: rgba(239, 68, 68, 0.05) !important;
+  border-left: 5px solid #ef4444 !important;
+  transition: all 0.2s ease !important;
+}
+body.light-theme tr.row-below-bm,
+[data-theme="light"] tr.row-below-bm {
+  background: #fff1f2 !important;
+  border-top: 1.5px solid #fecdd3 !important;
+  border-bottom: 1.5px solid #fecdd3 !important;
+  border-left: 6px solid #e11d48 !important;
+  box-shadow: inset 0 0 8px rgba(225, 29, 72, 0.06) !important;
+}
+tr.row-below-bm:hover {
+  background: rgba(239, 68, 68, 0.1) !important;
+}
+body.light-theme tr.row-below-bm:hover,
+[data-theme="light"] tr.row-below-bm:hover {
+  background: #ffe4e6 !important;
+}
+
+/* Cards Below BM */
+.ind-card-pro.card-below-bm {
+  border: 2px solid #ef4444 !important;
+  box-shadow: 0 6px 22px rgba(239, 68, 68, 0.25) !important;
+  position: relative !important;
+}
+body.light-theme .ind-card-pro.card-below-bm,
+[data-theme="light"] .ind-card-pro.card-below-bm {
+  border: 2.5px solid #e11d48 !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%) !important;
+  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.18) !important;
+}
+
+/* Small Team Member Roster Executive Modern Redesign */
+.small-team-member-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 9px 14px !important;
+  border-radius: 10px !important;
+  margin-bottom: 8px !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.84rem !important;
+  gap: 12px !important;
+}
+.small-team-member-row.member-on-pace {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+body.light-theme .small-team-member-row.member-on-pace,
+[data-theme="light"] .small-team-member-row.member-on-pace {
+  background: #f8fafc !important;
+  border: 1.5px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+}
+.small-team-member-row.member-below-bm {
+  background: rgba(239, 68, 68, 0.07) !important;
+  border: 1.5px solid #ef4444 !important;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.15) !important;
+}
+body.light-theme .small-team-member-row.member-below-bm,
+[data-theme="light"] .small-team-member-row.member-below-bm {
+  background: #fff1f2 !important;
+  border: 1.8px solid #e11d48 !important;
+  box-shadow: 0 2px 10px rgba(225, 29, 72, 0.14) !important;
+}
+
+/* Member Roster Columns */
+.st-col-ident {
+  flex: 1.3 !important;
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+}
+.st-rep-name {
+  font-weight: 700 !important;
+  color: #f8fafc !important;
+  font-size: 0.86rem !important;
+  white-space: nowrap !important;
+}
+body.light-theme .st-rep-name,
+[data-theme="light"] .st-rep-name {
+  color: #0f172a !important;
+}
+.st-bm-badge {
+  margin-left: 8px !important;
+  font-size: 0.68rem !important;
+  padding: 2px 7px !important;
+  border-radius: 6px !important;
+  font-weight: 800 !important;
+  flex-shrink: 0 !important;
+}
+.st-col-m2 {
+  flex: 1 !important;
+  text-align: center !important;
+}
+.st-m2-pill {
+  font-size: 0.73rem !important;
+  font-weight: 700 !important;
+  padding: 3px 9px !important;
+  border-radius: 6px !important;
+  background: rgba(147, 51, 234, 0.14) !important;
+  color: #c084fc !important;
+  border: 1px solid rgba(147, 51, 234, 0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+}
+body.light-theme .st-m2-pill,
+[data-theme="light"] .st-m2-pill {
+  background: #faf5ff !important;
+  color: #6b21a8 !important;
+  border: 1.5px solid #d8b4fe !important;
+  font-weight: 800 !important;
+}
+.st-col-cash {
+  flex: 1.3 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  white-space: nowrap !important;
+}
+.st-cash-num {
+  font-weight: 800 !important;
+  color: #f8fafc !important;
+  font-size: 0.88rem !important;
+}
+body.light-theme .st-cash-num,
+[data-theme="light"] .st-cash-num {
+  color: #0f172a !important;
+}
+.st-target-num {
+  font-size: 0.74rem !important;
+  color: #94a3b8 !important;
+}
+body.light-theme .st-target-num,
+[data-theme="light"] .st-target-num {
+  color: #475569 !important;
+  font-weight: 600 !important;
+}
+.st-refund-num {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: #f43f5e !important;
+}
+
+/* ── 3. UNIVERSAL HIGH-CONTRAST LIGHT THEME GUARANTEE ── */
+body.light-theme,
+[data-theme="light"] body {
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --bg-card: #ffffff;
+  --border-glass: #cbd5e1;
+}
+
+/* Force dark readable text for all data tables in light mode */
+body.light-theme .data-table tbody td,
+body.light-theme .data-table tfoot td,
+body.light-theme #bigTeamSummaryTable td,
+[data-theme="light"] .data-table tbody td,
+[data-theme="light"] .data-table tfoot td,
+[data-theme="light"] #bigTeamSummaryTable td {
+  color: #0f172a !important;
+}
+
+body.light-theme .data-table tbody td strong,
+body.light-theme .data-table tfoot td strong,
+[data-theme="light"] .data-table tbody td strong {
+  color: #0f172a !important;
+}
+
+/* Strategic direction boxes & memo text */
+body.light-theme .strategic-memo-box,
+[data-theme="light"] .strategic-memo-box {
+  background: #f8fafc !important;
+  border: 1.5px solid #cbd5e1 !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+}
+body.light-theme .strategic-memo-box *,
+[data-theme="light"] .strategic-memo-box * {
+  color: #1e293b !important;
+}
+body.light-theme .strategic-memo-box strong,
+[data-theme="light"] .strategic-memo-box strong {
+  color: #0f172a !important;
+}
+
+/* Small team cards headers and metrics in light theme */
+body.light-theme .calc-card,
+[data-theme="light"] .calc-card {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+body.light-theme .calc-card h3,
+[data-theme="light"] .calc-card h3 {
+  color: #0f172a !important;
+  font-weight: 900 !important;
+}
+body.light-theme .calc-card [style*="color: #fff"],
+body.light-theme .calc-card [style*="color:#fff"],
+body.light-theme .calc-card [style*="color: #ffffff"],
+body.light-theme .calc-card [style*="color:#ffffff"] {
+  color: #0f172a !important;
+}
+body.light-theme .calc-card [style*="color: #cbd5e1"],
+body.light-theme .calc-card [style*="color:#cbd5e1"],
+body.light-theme .calc-card [style*="color: #94a3b8"] {
+  color: #475569 !important;
+}
+
+/* Table summary footer in light theme */
+body.light-theme #bigTeamSummaryTable tfoot tr,
+[data-theme="light"] #bigTeamSummaryTable tfoot tr {
+  background: #e2e8f0 !important;
+  border-top: 2.5px solid #4f46e5 !important;
+}
+body.light-theme #bigTeamSummaryTable tfoot td,
+[data-theme="light"] #bigTeamSummaryTable tfoot td {
+  color: #0f172a !important;
+}
+body.light-theme #bigTeamSummaryTable tfoot td strong,
+[data-theme="light"] #bigTeamSummaryTable tfoot td strong {
+  color: #0f172a !important;
+}
+
+
+/* ── Countdown HUD Title Contrast in Light Theme ── */
+body.light-theme .sprint-hud-title,
+[data-theme="light"] .sprint-hud-title {
+  color: #0f172a !important;
+  font-weight: 900 !important;
+}
+body.light-theme .sprint-hud-sub,
+[data-theme="light"] .sprint-hud-sub {
+  color: #334155 !important;
+  font-weight: 600 !important;
+}
+body.light-theme .sprint-countdown-hud,
+[data-theme="light"] .sprint-countdown-hud {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+body.light-theme .velocity-label,
+[data-theme="light"] .velocity-label {
+  color: #475569 !important;
+  font-weight: 700 !important;
+}
+
+/* 2-line small team member row styling */
+.small-team-member-row {
+  display: block !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  margin-bottom: 7px !important;
+  transition: all 0.2s ease !important;
+}
+.small-team-member-row.member-on-pace {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+body.light-theme .small-team-member-row.member-on-pace,
+[data-theme="light"] .small-team-member-row.member-on-pace {
+  background: #f8fafc !important;
+  border: 1.5px solid #e2e8f0 !important;
+}
+.small-team-member-row.member-below-bm {
+  background: rgba(239, 68, 68, 0.07) !important;
+  border: 1.8px solid #ef4444 !important;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.15) !important;
+}
+body.light-theme .small-team-member-row.member-below-bm,
+[data-theme="light"] .small-team-member-row.member-below-bm {
+  background: #fff1f2 !important;
+  border: 1.8px solid #e11d48 !important;
+  box-shadow: 0 2px 10px rgba(225, 29, 72, 0.12) !important;
+}
+
+
+/* ── Hidden Specificity Override Fix ── */
+#individualCards.hidden,
+#individualTableView.hidden,
+.individual-cards-grid.hidden,
+.table-wrapper.hidden,
+.hidden {
+  display: none !important;
+}

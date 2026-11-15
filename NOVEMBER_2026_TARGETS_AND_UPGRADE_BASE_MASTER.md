@@ -87,3 +87,33 @@ No target reallocation applied. All 7 members have their independent, individual
 2. **Target Normalization**: Targets for all 7 Team 5 members restored to their exact November master quotas with 0 reallocation add-ons.
 3. **Pipeline Persistence**: Configured in `update_dashboard.ps1` fallback maps and compiled to production `dashboard.js`.
 4. **Live Deployment**: Synced to [Big Team 01 Executive Dashboard](https://husseinelaasar.github.io/big-team-01-dashboard/).
+
+---
+
+## 🎨 6. Comprehensive UI/UX Enhancements & BM Danger Alert System (Nov 15, 2026)
+
+### A. Below-Benchmark (BM) Visual Danger Alert & Framing System
+- **Threshold**: Day 15 benchmark pace is **40.0%**. Any sales specialist whose achievement is below 40% (`achievement < pacePct`) is flagged:
+  - **Table View**: Rows receive `.row-below-bm` styling featuring a **6px solid `#e11d48`** crimson left indicator border, a delicate `#fff1f2` alert background highlight, and a bold **`⚠️ BEHIND BM`** danger pill adjacent to the rep name.
+  - **Card View**: Individual rep cards receive `.card-below-bm` styling with a full **2px solid `#ef4444`** warning border, `#fff1f2` backdrop, and animated danger badge.
+  - **Small Team Cards**: Every member roster row below benchmark displays a dedicated crimson banner: `⚠️ Below BM (-X.X%)`.
+
+### B. High-Contrast Typography & Light Theme Remediation
+- Replaced all pale/washed-out white inline text (`#fff`, `#cbd5e1`, `#ffffff`) on bright backgrounds with high-contrast palette tokens (`var(--text-primary)`, `#0f172a`, `#1e293b`).
+- Table columns for **Orders**, **Upgrade Base**, **20% Goal (Gap)**, and **Target Gap** now feature dark, readable weights and contrast ratios exceeding WCAG AAA standards.
+- Executive countdown timer HUD and sector synthesis memo callouts were refactored with dark slate text for effortless scanning.
+
+### C. Small Teams 3-Tiered Executive Roster Architecture
+- Resolved text collision and cramped layout within narrow cards (~280px wide) by transitioning from a single cramped row to a structured 3-tiered vertical layout:
+  - **Tier 1 (Header)**: Rep Name + Team Leader Crown (left) | Cash Achievement % Badge (right).
+  - **Tier 2 (Metrics)**: Net Cash / Target (left) | M2 Conversion Stats (right).
+  - **Tier 3 (Pacing Banner)**: Full-width Pacing Benchmark Bar (`🟢 Ahead of Pace` or `⚠️ Below BM`).
+
+### D. Anti-Clipping & Text Preservation System
+- Fixed clipped and truncated text in navigation tabs and action buttons:
+  - Added `.tab-bar { flex-wrap: nowrap !important; overflow-x: auto !important; }`
+  - Added `.tab { flex-shrink: 0 !important; white-space: nowrap !important; overflow: visible !important; }`
+  - Badges such as `Uncovered Leads (5,193) [PRIORITY HUB]`, `51 Talk Packages Calculator [RATE CARD]`, and `Performance Comparison [YD vs TD]` now render with zero clipping.
+
+### E. Sticky Table Headers
+- Configured persistent, non-drifting sticky headers (`position: sticky; top: 0; z-index: 10;`) with frosted glass backdrop blur across all main data tables so column headers remain visible while scrolling through rep performance.
