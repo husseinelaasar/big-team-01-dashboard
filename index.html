@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261115_153956">
+  <link rel="stylesheet" href="styles.css?v=20261115_160316">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -479,7 +479,7 @@
           </h3>
           <div style="display: flex; gap: 10px; align-items: center;">
             <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
-            <select id="consumptionTeamFilter" onchange="renderConsumptionTab()" class="filter-select" style="padding: 7px 12px; font-size: 0.82rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;">
+            <select id="consumptionTeamFilter" onchange="renderConsumptionTab()" class="filter-select" style="padding: 7px 12px; font-size: 0.82rem; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); ">
               <option value="ALL">All Teams (Big Team 01)</option>
               <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal)</option>
               <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour)</option>
@@ -729,7 +729,7 @@
               Select your name from the dropdown to instantly download your dedicated student base list with Student IDs and current M2 upgrade status.
             </p>
             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-              <select id="memberUpgradeSelect" class="modern-select" style="flex: 1; min-width: 220px; background: #0f172a; border-color: rgba(192, 132, 252, 0.4); color: #fff;">
+              <select id="memberUpgradeSelect" class="modern-select" style="flex: 1; min-width: 220px; border-color: rgba(192, 132, 252, 0.4); ">
                 <option value="">-- Choose Your Name --</option>
               </select>
               <button type="button" id="btnDownloadMemberUpg" class="btn-primary" style="background: linear-gradient(135deg, #9333ea, #6366f1); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 0.82rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
@@ -920,7 +920,7 @@
               👤 Download for Specific Sales Specialist (19 Reps Available):
             </label>
             <div style="display: flex; gap: 8px; align-items: center;">
-              <select id="uncovRepDownloadSelect" class="modern-select" style="flex: 1; padding: 8px 12px; font-size: 0.82rem; background: var(--bg-card); color: #fff; border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 6px;">
+              <select id="uncovRepDownloadSelect" class="modern-select" style="flex: 1; padding: 8px 12px; font-size: 0.82rem; border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 6px;">
                 <!-- Populated dynamically with all 19 reps -->
               </select>
               <button type="button" id="btnDownloadSelectedRep" class="pill-badge pill-badge-purple" style="cursor: pointer; padding: 8px 14px; font-size: 0.82rem; font-weight: 700; border: none; white-space: nowrap;">
@@ -1004,10 +1004,10 @@
 
             <!-- Rep Dropdown, Search & Export View -->
             <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-              <select id="uncovFilterRepSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; background: var(--bg-card); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 150px;">
+              <select id="uncovFilterRepSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 150px;">
                 <option value="ALL">All 19 Reps</option>
               </select>
-              <select id="uncovFilterPoolSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; background: var(--bg-card); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 130px;">
+              <select id="uncovFilterPoolSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 130px;">
                 <option value="ALL">All Pools</option>
                 <option value="outside pool">outside pool</option>
                 <option value="Upgrade M2">Upgrade M2</option>
@@ -1104,7 +1104,7 @@
           </h3>
           <div style="display: flex; gap: 10px; align-items: center;">
             <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
-            <select id="englishClubTeamFilter" onchange="renderEnglishClubTab()" class="filter-select" style="padding: 7px 12px; font-size: 0.82rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;">
+            <select id="englishClubTeamFilter" onchange="renderEnglishClubTab()" class="filter-select" style="padding: 7px 12px; font-size: 0.82rem; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); ">
               <option value="ALL">All Teams (Big Team 01)</option>
               <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal)</option>
               <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour)</option>
@@ -1259,7 +1259,7 @@
             </div>
 
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-              <select id="personalRepSelect" onchange="onPersonalRepSelected()" style="width: 100%; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff; cursor: pointer;">
+              <select id="personalRepSelect" onchange="onPersonalRepSelected()" style="width: 100%; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); border: 1px solid rgba(99, 102, 241, 0.4); cursor: pointer;">
                 <option value="">-- Select Your Name (Sales Rep) --</option>
               </select>
             </div>
@@ -1279,7 +1279,7 @@
             </div>
 
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-              <select id="personalTeamSelect" onchange="onPersonalTeamSelected()" style="width: 100%; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(6, 182, 212, 0.4); color: #fff; cursor: pointer;">
+              <select id="personalTeamSelect" onchange="onPersonalTeamSelected()" style="width: 100%; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: var(--radius-md); border: 1px solid rgba(6, 182, 212, 0.4); cursor: pointer;">
                 <option value="">-- Select Small Team --</option>
                 <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal - Team 01)</option>
                 <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour - Team 05)</option>
@@ -1425,7 +1425,7 @@
 
         <div style="display: flex; gap: 10px; align-items: center;">
           <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
-          <select id="opTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;">
+          <select id="opTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); ">
             <option value="ALL">All Teams (Big Team 01)</option>
             <option value="ME-EGSS01">ME-EGSS01</option>
             <option value="ME-EGSS05">ME-EGSS05</option>
@@ -1857,7 +1857,7 @@
       <!-- Filter Bar -->
       <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 24px; flex-wrap: wrap;">
         <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
-        <select id="cmpTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderComparisonTab()">
+        <select id="cmpTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); " onchange="renderComparisonTab()">
           <option value="ALL">All Teams (Big Team 01)</option>
           <option value="ME-EGSS01">ME-EGSS01 (Ashraqatal)</option>
           <option value="ME-EGSS05">ME-EGSS05 (Ibrahim Abd El Shakour)</option>
@@ -1866,7 +1866,7 @@
           <option value="ME-EGSS30">ME-EGSS30 (Saber Hussien)</option>
         </select>
         <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Sort By:</label>
-        <select id="cmpSortFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderComparisonTab()">
+        <select id="cmpSortFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); " onchange="renderComparisonTab()">
           <option value="consumption-desc">Class Consumption % (High to Low)</option>
           <option value="upgrade-desc">Upgrade Rate % (High to Low)</option>
           <option value="ec-desc">English Club % (High to Low)</option>
@@ -1904,7 +1904,7 @@
       <div style="display: flex; gap: 14px; align-items: center; margin-bottom: 24px; flex-wrap: wrap; background: rgba(15, 23, 42, 0.4); padding: 14px 18px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
         <div style="display: flex; align-items: center; gap: 8px;">
           <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Operational Metric:</label>
-          <select id="mtdMetricFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid rgba(99, 102, 241, 0.4); color: #fff;" onchange="renderMtdTab()">
+          <select id="mtdMetricFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(99, 102, 241, 0.4); " onchange="renderMtdTab()">
             <option value="consumption">🟢 Class Consumption (82% Goal)</option>
             <option value="englishClub">🔵 English Club (45% Goal)</option>
             <option value="unfixed">🟡 Fixed Teacher Binding (83% Goal)</option>
@@ -1914,7 +1914,7 @@
 
         <div style="display: flex; align-items: center; gap: 8px;">
           <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Filter Team:</label>
-          <select id="mtdTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--bg-card); border: 1px solid var(--border-glass); color: #fff;" onchange="renderMtdTab()">
+          <select id="mtdTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); " onchange="renderMtdTab()">
             <option value="ALL">⭐ All Teams (Big Team 01 - Sector Overview)</option>
             <option value="ME-EGSS01" style="color: #818cf8;">ME-EGSS01 (Ashraqatal - Team 01)</option>
             <option value="ME-EGSS05" style="color: #22d3ee;">ME-EGSS05 (Ibrahim Abd El Shakour - Team 05)</option>
@@ -2057,7 +2057,7 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261115_153956" defer></script>
+  <script src="dashboard.js?v=20261115_160316" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link

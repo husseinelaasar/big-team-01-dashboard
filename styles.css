@@ -1065,8 +1065,44 @@ body::after {
   border-color: var(--border-active);
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
-.filter-select option {
-  background: var(--bg-secondary);
+/* Universal Select & Option Dropdown Engine */
+select,
+.filter-select,
+.modern-select {
+  cursor: pointer;
+  outline: none;
+}
+body.light-theme select,
+body.light-theme .filter-select,
+body.light-theme .modern-select,
+body.light-theme select option,
+body.light-theme .filter-select option,
+body.light-theme .modern-select option,
+body.light-theme option,
+[data-theme="light"] select,
+[data-theme="light"] .filter-select,
+[data-theme="light"] .modern-select,
+[data-theme="light"] select option,
+[data-theme="light"] .filter-select option,
+[data-theme="light"] .modern-select option,
+[data-theme="light"] option {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+body:not(.light-theme) select,
+body:not(.light-theme) .filter-select,
+body:not(.light-theme) .modern-select,
+body:not(.light-theme) select option,
+body:not(.light-theme) .filter-select option,
+body:not(.light-theme) .modern-select option,
+body:not(.light-theme) option {
+  background: #0f172a !important;
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
 }
 
 /* ============ SOP GRID & REDESIGNED EXECUTIVE STYLES ============ */
@@ -6079,3 +6115,187 @@ body.light-theme .small-team-member-row.member-below-bm,
 .hidden {
   display: none !important;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   REPS BELOW BM — EXPLICIT NAME & ACH% FRAMING (ZERO DANGER MARKS)
+   ══════════════════════════════════════════════════════════════════════════ */
+.rep-name-below-bm,
+.st-name-below-bm,
+.ind-rep-name-below-bm {
+  border: 1.8px solid #ef4444 !important;
+  border-radius: 6px !important;
+  padding: 2px 8px !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+  color: inherit !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+body.light-theme .rep-name-below-bm,
+body.light-theme .st-name-below-bm,
+body.light-theme .ind-rep-name-below-bm {
+  background: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  color: #0f172a !important;
+}
+
+.ach-below-bm,
+.st-ach-below-bm {
+  border: 1.8px solid #ef4444 !important;
+  border-radius: 6px !important;
+  padding: 2px 7px !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+  color: #dc2626 !important;
+  font-weight: 800 !important;
+  display: inline-block !important;
+}
+
+body.light-theme .ach-below-bm,
+body.light-theme .st-ach-below-bm {
+  background: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  color: #b91c1c !important;
+}
+
+/* Pacing Banners (Small Teams) - High Contrast Guaranteed */
+.st-bm-below {
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #fca5a5 !important;
+  border: 1.5px solid #ef4444 !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .st-bm-below,
+[data-theme="light"] .st-bm-below {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  border: 1.5px solid #f87171 !important;
+  -webkit-text-fill-color: #991b1b !important;
+  font-weight: 800 !important;
+}
+
+.st-bm-ahead {
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #6ee7b7 !important;
+  border: 1.5px solid #10b981 !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .st-bm-ahead,
+[data-theme="light"] .st-bm-ahead {
+  background: #dcfce7 !important;
+  color: #166534 !important;
+  border: 1.5px solid #86efac !important;
+  -webkit-text-fill-color: #166534 !important;
+  font-weight: 800 !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   UNIVERSAL LIGHT THEME HIGH-CONTRAST ENGINE (ZERO WASHED OUT / PALE TEXT)
+   ══════════════════════════════════════════════════════════════════════════ */
+body.light-theme,
+[data-theme="light"] body {
+  --text-primary: #0f172a;
+  --text-secondary: #1e293b;
+  --text-muted: #334155;
+  --text-dim: #475569;
+}
+
+/* Force dark readable text for all table cells in light mode */
+body.light-theme table td,
+body.light-theme .data-table td,
+body.light-theme .table-wrapper td {
+  color: #0f172a;
+}
+
+/* 1. Eliminate White or Near-White text in Light Mode */
+body.light-theme [style*="color: #fff"],
+body.light-theme [style*="color:#fff"],
+body.light-theme [style*="color: #ffffff"],
+body.light-theme [style*="color:#ffffff"],
+body.light-theme [style*="color: white"],
+body.light-theme [style*="color:white"],
+[data-theme="light"] [style*="color: #fff"],
+[data-theme="light"] [style*="color:#fff"],
+[data-theme="light"] [style*="color: #ffffff"],
+[data-theme="light"] [style*="color:#ffffff"] {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+/* 2. Eliminate Pale Slate / Grey / Faint text in Light Mode (Early Upgrade recommendations, subtitles, notes) */
+body.light-theme [style*="color: #cbd5e1"],
+body.light-theme [style*="color:#cbd5e1"],
+body.light-theme [style*="color: #e2e8f0"],
+body.light-theme [style*="color:#e2e8f0"],
+body.light-theme [style*="color: #94a3b8"],
+body.light-theme [style*="color:#94a3b8"],
+body.light-theme [style*="color: #b0bfd4"],
+body.light-theme [style*="color:#b0bfd4"],
+body.light-theme [style*="color: #a8bdd4"],
+body.light-theme [style*="color:#a8bdd4"],
+body.light-theme [style*="color: var(--text-dim)"],
+body.light-theme [style*="color:var(--text-dim)"],
+body.light-theme [style*="color: var(--text-muted)"],
+body.light-theme [style*="color:var(--text-muted)"],
+[data-theme="light"] [style*="color: #cbd5e1"],
+[data-theme="light"] [style*="color:#cbd5e1"],
+[data-theme="light"] [style*="color: #e2e8f0"],
+[data-theme="light"] [style*="color:#e2e8f0"],
+[data-theme="light"] [style*="color: #94a3b8"],
+[data-theme="light"] [style*="color:#94a3b8"] {
+  color: #1e293b !important;
+  -webkit-text-fill-color: #1e293b !important;
+  font-weight: 500 !important;
+}
+
+/* 3. Eliminate Pale Yellow text on White (Coverage Rate, Alerts) */
+body.light-theme [style*="color: #facc15"],
+body.light-theme [style*="color:#facc15"],
+body.light-theme [style*="color: #fde047"],
+body.light-theme [style*="color:#fde047"],
+body.light-theme [style*="color: #fbbf24"],
+body.light-theme [style*="color:#fbbf24"],
+[data-theme="light"] [style*="color: #facc15"],
+[data-theme="light"] [style*="color:#facc15"],
+[data-theme="light"] [style*="color: #fde047"] {
+  color: #b45309 !important;
+  -webkit-text-fill-color: #b45309 !important;
+  font-weight: 700 !important;
+}
+
+/* 4. Eliminate Pale Purple / Magenta text on White (20% Goal, Upgrades) */
+body.light-theme [style*="color: #c084fc"],
+body.light-theme [style*="color:#c084fc"],
+body.light-theme [style*="color: #a78bfa"],
+body.light-theme [style*="color:#a78bfa"],
+[data-theme="light"] [style*="color: #c084fc"],
+[data-theme="light"] [style*="color:#c084fc"] {
+  color: #6d28d9 !important;
+  -webkit-text-fill-color: #6d28d9 !important;
+  font-weight: 700 !important;
+}
+
+/* 5. Eliminate Pale Cyan / Sky text on White */
+body.light-theme [style*="color: #38bdf8"],
+body.light-theme [style*="color:#38bdf8"],
+body.light-theme [style*="color: #60a5fa"],
+body.light-theme [style*="color:#60a5fa"],
+[data-theme="light"] [style*="color: #38bdf8"],
+[data-theme="light"] [style*="color:#38bdf8"] {
+  color: #0369a1 !important;
+  -webkit-text-fill-color: #0369a1 !important;
+  font-weight: 700 !important;
+}
+
+/* Actionable Recommendations Cell */
+.rec-text-cell,
+body.light-theme .rec-text-cell {
+  color: #1e293b !important;
+  -webkit-text-fill-color: #1e293b !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+}
+

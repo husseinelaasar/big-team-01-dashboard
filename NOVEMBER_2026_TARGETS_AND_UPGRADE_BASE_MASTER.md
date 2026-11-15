@@ -117,3 +117,36 @@ No target reallocation applied. All 7 members have their independent, individual
 
 ### E. Sticky Table Headers
 - Configured persistent, non-drifting sticky headers (`position: sticky; top: 0; z-index: 10;`) with frosted glass backdrop blur across all main data tables so column headers remain visible while scrolling through rep performance.
+
+---
+
+## 🚀 7. Executive Contrast Refinement & Dropdown Engine Overhaul (Nov 15, 2026 - Phase 2)
+
+### A. Dropdown Menus Visibility & Theme Architecture
+- **Root Cause**: Dropdown options `<option>` were inheriting dark navy background (`var(--bg-secondary)`) with dark text in Light Theme, making dropdown options invisible.
+- **Resolution**:
+  - Engineered a universal CSS engine for `<select>`, `.filter-select`, `.modern-select` and all `<option>` children.
+  - **Light Theme**: Forced solid `#ffffff` background with ultra-crisp `#0f172a` slate text and `#cbd5e1` borders for both the select field and its popup options.
+  - **Dark Theme**: Forced solid `#0f172a` background with `#f8fafc` white text and `#334155` borders.
+  - Stripped all legacy inline `color: #fff` attributes from `index.html` dropdown elements.
+
+### B. Below-Benchmark (BM) Refinement: Framing Rep Name & ACH% (Danger Mark Removed)
+- **Danger Mark Removal**: Removed all warning icons (`⚠️`) and `BEHIND BM` warning badges from rep rows, cards, and team rosters as instructed.
+- **Rep Name Framing**: Any sales specialist below Benchmark (`achievement < 40.0%`) now receives an explicit, clean executive frame directly surrounding their name:
+  - Class: `.rep-name-below-bm` / `.st-name-below-bm` / `.ind-rep-name-below-bm` (`border: 1.8px solid #ef4444; border-radius: 6px; padding: 2px 8px; background: #fee2e2; color: #0f172a; font-weight: 700;`).
+- **ACH% Framing**: The Achievement percentage (`ACH%`) column for reps below Benchmark is now placed inside a dedicated crimson frame:
+  - Class: `.ach-below-bm` / `.st-ach-below-bm` (`border: 1.8px solid #ef4444; border-radius: 6px; padding: 2px 7px; background: #fee2e2; color: #b91c1c; font-weight: 800;`).
+
+### C. Shaded Tables & Small Teams Pacing Banners Contrast
+- Reps below BM inside shaded Small Team cards now feature deep, high-contrast banner styling:
+  - **Below BM Banner**: Deep crimson `#991b1b` on `#fee2e2` with `#f87171` border and bold weight.
+  - **Ahead of Pace Banner**: Deep forest green `#166534` on `#dcfce7` with `#86efac` border.
+  - All text inside shaded member rows (`.st-cash-num`, `.st-target-num`, `.st-refund-num`, `.st-m2-pill`) upgraded to bold dark slate (`#0f172a`, `#475569`, `#b91c1c`, `#3730a3`).
+
+### D. Universal Site-Wide Elimination of Pale / Washed-Out Font Colors
+- **Actionable Recommendations**: Refactored the entire recommendations column in the Early Upgrade Hub (`#masterUpgradeTable`) from pale `#cbd5e1` to crisp `#0f172a` / `#1e293b` (`.rec-text-cell`).
+- **Universal Light Mode CSS Engine**: Implemented overarching CSS rules with maximum specificity targeting all elements across the entire dashboard:
+  - Neutralized all pale grey/slate text (`#cbd5e1`, `#e2e8f0`, `#94a3b8`, `#b0bfd4`, `#a8bdd4`) -> forced to sharp `#1e293b`.
+  - Neutralized bright/faint yellow text on white (`#facc15`, `#fde047`, `#fbbf24`) -> forced to deep accessible amber `#b45309`.
+  - Neutralized pale purple text (`#c084fc`, `#a78bfa`) -> forced to rich deep purple `#6d28d9`.
+  - Neutralized white/near-white text in data cells -> forced to solid `#0f172a`.
