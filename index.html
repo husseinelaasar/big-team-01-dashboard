@@ -366,6 +366,9 @@
         <span class="source-tag" id="individualRepsCountTag">18 Active Sales Specialists | Nov 1–7, 2026 (Day 7)</span>
       </div>
       
+      <!-- Individuals Mission Telemetry Strip -->
+      <div id="indSummaryBar" class="ind-summary-strip"></div>
+      
       <!-- Filter and Sort Controls -->
       <div class="filter-bar">
         <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
@@ -393,14 +396,14 @@
         </div>
 
         <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-          <button id="viewToggleCards" class="view-btn">Cards View</button>
-          <button id="viewToggleTable" class="view-btn active">Table View</button>
+          <button id="viewToggleCards" class="view-btn active">Cards View</button>
+          <button id="viewToggleTable" class="view-btn">Table View</button>
         </div>
       </div>
 
       <div id="individualCards" class="individual-cards-grid"></div>
       
-      <div id="individualTableView" class="table-wrapper" style="margin-top: 14px; overflow-x: auto; width: 100%;">
+      <div id="individualTableView" class="table-wrapper hidden" style="margin-top: 14px; overflow-x: auto; width: 100%;">
         <table class="data-table" id="individualFullTable" style="width: 100%;">
           <thead>
             <tr>
