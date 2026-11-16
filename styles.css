@@ -1,5 +1,5 @@
-﻿/* ============================================
-   Big Team 01 Executive Dashboard — Styles v2.0
+/* ============================================
+   Big Team 01 Executive Dashboard � Styles v2.0
    Design: Premium dark glassmorphism + micro-animations
    ============================================ */
 
@@ -1239,7 +1239,7 @@ body:not(.light-theme) option {
   position: relative;
 }
 .rec-body ul li::before {
-  content: '→';
+  content: '?';
   position: absolute;
   left: 0;
   color: var(--accent-indigo);
@@ -1926,7 +1926,7 @@ body:not(.light-theme) option {
 
 /* =========================================================================
    2026 NEO-FUTURISTIC CYBER-EXECUTIVE DASHBOARD DESIGN SYSTEM
-   نظام التصميم المستقبلي الفائق — مستوحى من المستقبل ومراكز القيادة المتقدمة
+   Ultra-Modern Executive Command Center Theme
    ========================================================================= */
 
 /* Ambient Glowing Cosmic Halos */
@@ -2148,7 +2148,7 @@ body::after {
 }
 
 /* =========================================================
-   STARSHIP COMMAND BRIDGE — TAB BAR NAVIGATION
+   STARSHIP COMMAND BRIDGE � TAB BAR NAVIGATION
    ========================================================= */
 .tab-bar {
   background: rgba(12, 18, 32, 0.95) !important;
@@ -2615,7 +2615,7 @@ body::after {
 
 /* =========================================================================
    LUMINOUS FLUORESCENT GOLD FRAME FOR RED TEXT & NUMBERS
-   (إطار ذهبي فسفوري لامع رفيع حول الكلمات والأحرف الحمراء)
+   (Luminous fluorescent gold frame around red text and numbers)
    1. The red text/numbers remain 100% crisp, solid, and sharp (#f43f5e) with NO blur.
    2. A delicate, ultra-thin (1px) fluorescent gold border wraps around the element.
    3. A gentle luminous golden aura/sheen pulses on the gold frame, creating high luxury
@@ -2851,20 +2851,20 @@ strong[style*="239, 68, 68"] {
 
 /* =========================================================================
    v4.0 VISUAL HIERARCHY MASTER OVERRIDES
-   — Better Contrast / Font Size / Card Independence / Section Distinction
+   � Better Contrast / Font Size / Card Independence / Section Distinction
    ========================================================================= */
 
-/* ── Body background: slightly lighter, richer navy (not pure black) */
+/* -- Body background: slightly lighter, richer navy (not pure black) */
 body {
   background: linear-gradient(160deg, #0d1220 0%, #111826 40%, #0c1520 100%) !important;
 }
 
-/* ── Global font bump */
+/* -- Global font bump */
 html {
   font-size: 15.5px !important;
 }
 
-/* ── Section h2 titles: clearly distinct from content */
+/* -- Section h2 titles: clearly distinct from content */
 .section-header h2 {
   font-size: 1.3rem !important;
   font-weight: 800 !important;
@@ -2873,14 +2873,14 @@ html {
   letter-spacing: -0.02em !important;
 }
 
-/* ── Section header accent bar: brighter */
+/* -- Section header accent bar: brighter */
 .section-header h2::before {
   background: var(--gradient-primary) !important;
   width: 5px !important;
   box-shadow: 0 0 10px rgba(129, 140, 248, 0.55) !important;
 }
 
-/* ── kpi-label: titles are clearly different from values */
+/* -- kpi-label: titles are clearly different from values */
 .kpi-label, [class*="kpi-label"] {
   font-size: 0.82rem !important;
   font-weight: 800 !important;
@@ -2889,7 +2889,7 @@ html {
   text-transform: uppercase !important;
 }
 
-/* ── kpi-value: large, bright, high-impact */
+/* -- kpi-value: large, bright, high-impact */
 .kpi-value, [class*="kpi-value"] {
   font-size: 2.5rem !important;
   font-weight: 900 !important;
@@ -2897,11 +2897,11 @@ html {
   text-shadow: 0 0 24px rgba(255,255,255,0.22) !important;
 }
 
-/* ── kpi-sub and kpi-pct: readable muted text */
+/* -- kpi-sub and kpi-pct: readable muted text */
 .kpi-sub { font-size: 0.82rem !important; color: #8a9ab5 !important; }
 .kpi-pct { font-size: 0.76rem !important; color: #7d8fa8 !important; }
 
-/* ── All card elements: distinct from background with visible borders */
+/* -- All card elements: distinct from background with visible borders */
 .kpi-card, .calc-card, .team-card, .ind-card, .sop-card,
 .rec-card, .op-card, .commission-card, .chart-container,
 .metric-tile-modern, .sheet-sync-container {
@@ -2909,7 +2909,7 @@ html {
   box-shadow: 0 6px 24px rgba(0,0,0,0.48), inset 0 1px 0 rgba(255,255,255,0.09) !important;
 }
 
-/* ── Card headings: bigger, distinct from body content */
+/* -- Card headings: bigger, distinct from body content */
 .team-card-title, .sop-card-title, .rec-title, .calc-title,
 .ind-name, .op-card .op-title {
   color: #dce8f5 !important;
@@ -2917,21 +2917,21 @@ html {
   font-size: 1.05rem !important;
 }
 
-/* ── op-card value: big and vivid */
+/* -- op-card value: big and vivid */
 .op-card .op-value {
   font-size: 2.2rem !important;
   font-weight: 900 !important;
   color: #fff !important;
 }
 
-/* ── op-card title/label: distinct */
+/* -- op-card title/label: distinct */
 .op-card .op-title {
   font-size: 0.8rem !important;
   color: #a8bdd4 !important;
   font-weight: 800 !important;
 }
 
-/* ── Table th: clearly headers not content */
+/* -- Table th: clearly headers not content */
 .data-table th,
 .modern-table-card th,
 #uncoveredStudentsLiveTable th,
@@ -2947,7 +2947,7 @@ html {
   border-bottom: 1.5px solid rgba(129, 140, 248, 0.25) !important;
 }
 
-/* ── Table td: readable body text */
+/* -- Table td: readable body text */
 .data-table td,
 .modern-table-card td,
 #individualFullTable td,
@@ -2958,7 +2958,7 @@ html {
   border-bottom: 1px solid rgba(255,255,255,0.07) !important;
 }
 
-/* ── Sheet sync items: clear inner separation */
+/* -- Sheet sync items: clear inner separation */
 .sheet-sync-item {
   background: rgba(255,255,255,0.04) !important;
   border: 1px solid rgba(255,255,255,0.12) !important;
@@ -2966,7 +2966,7 @@ html {
 .sheet-name { font-size: 0.9rem !important; color: #dce8f5 !important; font-weight: 700 !important; }
 .sheet-time { font-size: 0.76rem !important; color: #7d95b0 !important; }
 
-/* ── Tab text: readable size */
+/* -- Tab text: readable size */
 .tab {
   font-size: 0.87rem !important;
   font-weight: 700 !important;
@@ -2978,14 +2978,14 @@ html {
   border-color: rgba(34, 211, 238, 0.55) !important;
 }
 
-/* ── Nav title: bigger, prominent */
+/* -- Nav title: bigger, prominent */
 .nav-title {
   font-size: 1.42rem !important;
   font-weight: 800 !important;
   color: #f0f4f8 !important;
 }
 
-/* ── Commission values: distinct from labels */
+/* -- Commission values: distinct from labels */
 .commission-card .comm-label {
   font-size: 0.78rem !important;
   font-weight: 700 !important;
@@ -3003,44 +3003,44 @@ html {
   color: #8a9ab5 !important;
 }
 
-/* ── Team member rows: readable */
+/* -- Team member rows: readable */
 .team-member-name { font-size: 0.84rem !important; color: #b4c4da !important; }
 .team-member-cash { font-size: 0.84rem !important; font-weight: 700 !important; }
 .team-stat-value { font-size: 1.15rem !important; font-weight: 800 !important; }
 .team-stat-label { font-size: 0.68rem !important; color: #7d95b0 !important; }
 
-/* ── ind-stat: clear size hierarchy */
+/* -- ind-stat: clear size hierarchy */
 .ind-stat-value { font-size: 1.02rem !important; font-weight: 800 !important; }
 .ind-stat-label { font-size: 0.65rem !important; color: #7d95b0 !important; }
 
-/* ── SOP round label */
+/* -- SOP round label */
 .sop-round-label { font-size: 0.76rem !important; color: #a8bdd4 !important; font-weight: 600 !important; }
 
-/* ── recommendations body */
+/* -- recommendations body */
 .rec-body { font-size: 0.85rem !important; color: #b0bfd4 !important; }
 .rec-priority { font-size: 0.7rem !important; font-weight: 700 !important; }
 
-/* ── Sprint HUD */
+/* -- Sprint HUD */
 .sprint-hud-title { font-size: 1.05rem !important; font-weight: 900 !important; }
 .sprint-hud-sub { font-size: 0.82rem !important; color: #94a3b8 !important; }
 .time-digit { font-size: 1.65rem !important; }
 
-/* ── Status badges: crisper */
+/* -- Status badges: crisper */
 .status-badge { font-size: 0.72rem !important; font-weight: 700 !important; }
 .status-on-track { background: rgba(52, 211, 153, 0.18) !important; color: #34d399 !important; border: 1px solid rgba(52,211,153,0.35) !important; }
 .status-at-risk { background: rgba(251, 191, 36, 0.18) !important; color: #fbbf24 !important; border: 1px solid rgba(251,191,36,0.35) !important; }
 .status-behind { background: rgba(251, 113, 133, 0.18) !important; color: #fb7185 !important; border: 1px solid rgba(251,113,133,0.35) !important; }
 
-/* ── Filter select */
+/* -- Filter select */
 .filter-select, .modern-select { font-size: 0.86rem !important; }
 
-/* ── Data freshness & source badge: more readable */
+/* -- Data freshness & source badge: more readable */
 .data-freshness { font-size: 0.8rem !important; }
 .nav-source-badge { font-size: 0.8rem !important; }
 
 
 /* =========================================================================
-   ROOT VARIABLE OVERRIDE — v4.0 Upgrade (overrides the original :root above)
+   ROOT VARIABLE OVERRIDE � v4.0 Upgrade (overrides the original :root above)
    All variables redefined here for better readability and visual hierarchy
    ========================================================================= */
 :root {
@@ -3078,7 +3078,7 @@ html {
    =========================================================================
    ========================================================================= */
 
-/* ── 1. GLOBAL ROOT VARIABLES (AEROSPACE BLUEPRINT & FINANCIAL TERMINAL) ── */
+/* -- 1. GLOBAL ROOT VARIABLES (AEROSPACE BLUEPRINT & FINANCIAL TERMINAL) -- */
 :root {
   /* Aerospace Command Slate - distinctly visible, NOT pitch black */
   --bg-primary: #0a1324 !important;
@@ -3112,7 +3112,7 @@ html {
   --shadow-glow-lg: 0 0 45px rgba(0, 242, 254, 0.35) !important;
 }
 
-/* ── 2. NASA MISSION CONTROL BODY & BACKGROUND DOME ── */
+/* -- 2. NASA MISSION CONTROL BODY & BACKGROUND DOME -- */
 body {
   background: radial-gradient(circle at 50% -20%, #172d54 0%, #0d1a33 40%, #070e1c 100%) !important;
   color: var(--text-primary) !important;
@@ -3144,7 +3144,7 @@ body::after {
   background: radial-gradient(circle, #38bdf8 0%, rgba(56, 189, 248, 0) 70%) !important;
 }
 
-/* ── 3. TOP MISSION CONTROL BAR & TELEMETRY NAV ── */
+/* -- 3. TOP MISSION CONTROL BAR & TELEMETRY NAV -- */
 .top-nav {
   background: rgba(10, 20, 38, 0.94) !important;
   border-bottom: 1.5px solid rgba(56, 189, 248, 0.35) !important;
@@ -3182,7 +3182,7 @@ body::after {
   box-shadow: 0 0 14px rgba(0, 242, 254, 0.2) !important;
 }
 
-/* ── 4. MISSION CONTROL FLIGHT DECK (TABS) ── */
+/* -- 4. MISSION CONTROL FLIGHT DECK (TABS) -- */
 .tab-bar {
   background: rgba(10, 19, 36, 0.95) !important;
   border-bottom: 1.5px solid rgba(56, 189, 248, 0.25) !important;
@@ -3207,7 +3207,7 @@ body::after {
   box-shadow: 0 0 20px rgba(0, 242, 254, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
 }
 
-/* ── 5. SECTION HEADERS & SUB-HEADINGS (CLEAR CONTRAST) ── */
+/* -- 5. SECTION HEADERS & SUB-HEADINGS (CLEAR CONTRAST) -- */
 .section-header {
   margin: 32px 0 18px !important;
 }
@@ -3243,7 +3243,7 @@ body::after {
   font-size: 0.78rem !important;
 }
 
-/* ── 6. AEROSPACE INSTRUMENT CARDS & MODULAR INDEPENDENCE ── */
+/* -- 6. AEROSPACE INSTRUMENT CARDS & MODULAR INDEPENDENCE -- */
 /* All cards elevated with visible lighter slate backgrounds and glowing frames */
 .kpi-card,
 .metric-tile-modern,
@@ -3323,7 +3323,7 @@ body::after {
   font-weight: 600 !important;
 }
 
-/* ── 7. WALL STREET & NASA TELEMETRY DATA TABLE (PRESERVED & ENHANCED) ── */
+/* -- 7. WALL STREET & NASA TELEMETRY DATA TABLE (PRESERVED & ENHANCED) -- */
 .table-wrapper,
 #individualTableView,
 .modern-table-card {
@@ -3418,7 +3418,7 @@ body::after {
   padding: 12px 6px !important;
 }
 
-/* ── 8. TELEMETRY BADGES (STATUS, PACE, 20% GOAL, COMMISSION) ── */
+/* -- 8. TELEMETRY BADGES (STATUS, PACE, 20% GOAL, COMMISSION) -- */
 .status-badge {
   display: inline-flex !important;
   align-items: center !important;
@@ -3483,7 +3483,7 @@ body::after {
   border-right: 1.5px solid rgba(255, 179, 0, 0.35) !important;
 }
 
-/* ── 9. VIEW CONTROLS & FILTER BAR ── */
+/* -- 9. VIEW CONTROLS & FILTER BAR -- */
 .filter-bar {
   background: rgba(14, 25, 46, 0.85) !important;
   border: 1px solid rgba(56, 189, 248, 0.3) !important;
@@ -3525,7 +3525,7 @@ body::after {
   box-shadow: 0 0 16px rgba(0, 242, 254, 0.45) !important;
 }
 
-/* ── 10. REPS CARDS IN INDIVIDUALS TAB (METRIC-TILE-MODERN) ── */
+/* -- 10. REPS CARDS IN INDIVIDUALS TAB (METRIC-TILE-MODERN) -- */
 .metric-tile-modern {
   background: linear-gradient(145deg, #13223f 0%, #0d1930 100%) !important;
   border: 1.5px solid rgba(56, 189, 248, 0.32) !important;
@@ -3534,7 +3534,7 @@ body::after {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* ── 11. DATA SYNC VERIFICATION CONSOLE ── */
+/* -- 11. DATA SYNC VERIFICATION CONSOLE -- */
 .sheet-sync-container {
   background: linear-gradient(145deg, #13223f 0%, #0d1930 100%) !important;
   border: 1.5px solid rgba(0, 242, 254, 0.35) !important;
@@ -3669,7 +3669,7 @@ strong[style*="239, 68, 68"] {
    =========================================================================
    ========================================================================= */
 
-/* ── 1. GLOBAL ROOT VARIABLES ── */
+/* -- 1. GLOBAL ROOT VARIABLES -- */
 :root {
   /* Rich Midnight Titanium Canvas (Not pitch black, not sterile white) */
   --bg-primary: #0a101d !important;
@@ -3703,7 +3703,7 @@ strong[style*="239, 68, 68"] {
   --shadow-glow-lg: 0 0 45px rgba(56, 189, 248, 0.32) !important;
 }
 
-/* ── 2. EXECUTIVE MIDNIGHT CANVAS ── */
+/* -- 2. EXECUTIVE MIDNIGHT CANVAS -- */
 body {
   background: radial-gradient(ellipse at 50% 0%, #162640 0%, #0d1626 50%, #080d17 100%) !important;
   color: #ffffff !important;
@@ -3739,7 +3739,7 @@ body::before {
   background: radial-gradient(circle, #818cf8 0%, rgba(129, 140, 248, 0) 70%) !important;
 }
 
-/* ── 3. TOP COMMAND NAVIGATION ── */
+/* -- 3. TOP COMMAND NAVIGATION -- */
 .top-nav {
   background: rgba(11, 18, 30, 0.94) !important;
   border-bottom: 1.5px solid #263854 !important;
@@ -3774,7 +3774,7 @@ body::before {
   font-weight: 800 !important;
 }
 
-/* ── 4. TAB NAVIGATION ── */
+/* -- 4. TAB NAVIGATION -- */
 .tab-bar {
   background: rgba(11, 18, 30, 0.95) !important;
   border-bottom: 1.5px solid #263854 !important;
@@ -3799,7 +3799,7 @@ body::before {
   box-shadow: 0 0 18px rgba(56, 189, 248, 0.3) !important;
 }
 
-/* ── 5. SECTION HEADERS & DISTINCTION ── */
+/* -- 5. SECTION HEADERS & DISTINCTION -- */
 .section-header h2 {
   font-size: 1.35rem !important;
   font-weight: 900 !important;
@@ -3827,7 +3827,7 @@ body::before {
   font-weight: 700 !important;
 }
 
-/* ── 6. CARDS & PANELS: 100% INDEPENDENT WITH CRISP BORDERS ── */
+/* -- 6. CARDS & PANELS: 100% INDEPENDENT WITH CRISP BORDERS -- */
 /* Notice: background is #16243c, visibly lighter than body #080d17! */
 .kpi-card,
 .metric-tile-modern,
@@ -3910,7 +3910,7 @@ body::before {
   font-weight: 600 !important;
 }
 
-/* ── 7. DATA TABLES (HIGH-CONTRAST TITANIUM DESK) ── */
+/* -- 7. DATA TABLES (HIGH-CONTRAST TITANIUM DESK) -- */
 .table-wrapper,
 #individualTableView,
 .modern-table-card {
@@ -4026,7 +4026,7 @@ body::before {
   border-right: 1.5px solid rgba(245, 158, 11, 0.35) !important;
 }
 
-/* ── 8. RAZOR-SHARP LASER VERMILION RED (NO MUD, 100% CLARITY) ── */
+/* -- 8. RAZOR-SHARP LASER VERMILION RED (NO MUD, 100% CLARITY) -- */
 .status-badge {
   display: inline-flex !important;
   align-items: center !important;
@@ -4103,7 +4103,7 @@ strong[style*="239, 68, 68"] {
   vertical-align: middle !important;
 }
 
-/* ── 9. CONTROLS, FILTERS & INPUTS ── */
+/* -- 9. CONTROLS, FILTERS & INPUTS -- */
 .filter-bar {
   background: #132034 !important;
   border: 1.5px solid #2e4366 !important;
@@ -4141,7 +4141,7 @@ strong[style*="239, 68, 68"] {
   font-weight: 900 !important;
 }
 
-/* ── 10. FLOATING DOCK ── */
+/* -- 10. FLOATING DOCK -- */
 .cyber-dock {
   background: rgba(13, 22, 36, 0.94) !important;
   border: 1.5px solid #2e4366 !important;
@@ -4160,7 +4160,7 @@ strong[style*="239, 68, 68"] {
   color: #ffffff !important;
 }
 
-/* ── 11. DATA SYNC CONSOLE ── */
+/* -- 11. DATA SYNC CONSOLE -- */
 .sheet-sync-container {
   background: linear-gradient(145deg, #16243c 0%, #111d31 100%) !important;
   border: 1.5px solid #2e4366 !important;
@@ -4192,13 +4192,13 @@ html, body, *:not(input):not(textarea):not(select) {
   -webkit-touch-callout: none !important;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   🚀 GENESIS REDESIGN — AURORA COMMAND THEME v3.0
+/* --------------------------------------------------------------------------
+   ?? GENESIS REDESIGN � AURORA COMMAND THEME v3.0
    Brilliant vibrant deep-space command center aesthetic
    Applied: 2026-11-15 | Override Priority: MAXIMUM
-   ══════════════════════════════════════════════════════════════════════════ */
+   -------------------------------------------------------------------------- */
 
-/* ── GENESIS ROOT OVERRIDES ── */
+/* -- GENESIS ROOT OVERRIDES -- */
 :root {
   --bg-primary: #05080f !important;
   --bg-secondary: #080d1a !important;
@@ -4221,7 +4221,7 @@ html, body, *:not(input):not(textarea):not(select) {
   --shadow-glow-lg: 0 0 60px rgba(99,102,241,0.35) !important;
 }
 
-/* ── GENESIS BODY — LIVING AURORA CANVAS ── */
+/* -- GENESIS BODY � LIVING AURORA CANVAS -- */
 html, body {
   background: #05080f !important;
 }
@@ -4231,7 +4231,7 @@ body {
   position: relative !important;
 }
 
-/* Remove old pseudo-element bg patterns — replaced below */
+/* Remove old pseudo-element bg patterns � replaced below */
 body::before {
   content: '' !important;
   position: fixed !important;
@@ -4268,7 +4268,7 @@ body::after {
   opacity: 0.6 !important;
 }
 
-/* ── GENESIS AMBIENT GLOWS — STRONGER & MORE COLORFUL ── */
+/* -- GENESIS AMBIENT GLOWS � STRONGER & MORE COLORFUL -- */
 .ambient-glow {
   opacity: 0.55 !important;
   filter: blur(120px) !important;
@@ -4310,7 +4310,7 @@ body::after {
   animation-duration: 22s !important;
 }
 
-/* ── TOP NAV — AURORA GLASS COMMAND BAR ── */
+/* -- TOP NAV � AURORA GLASS COMMAND BAR -- */
 .top-nav {
   background: linear-gradient(135deg, rgba(8, 13, 26, 0.95) 0%, rgba(12, 20, 40, 0.98) 100%) !important;
   border-bottom: 1px solid rgba(99, 102, 241, 0.3) !important;
@@ -4336,7 +4336,7 @@ body::after {
   100% { background-position: 400% 0; }
 }
 
-/* ── TAB BAR — AURORA FLIGHT DECK ── */
+/* -- TAB BAR � AURORA FLIGHT DECK -- */
 .tab-bar {
   background: rgba(6, 10, 20, 0.9) !important;
   border-bottom: 1px solid rgba(99, 102, 241, 0.2) !important;
@@ -4378,7 +4378,7 @@ body::after {
   border-radius: 2px !important;
 }
 
-/* ── KPI CARDS — GENESIS CRYSTAL PANELS ── */
+/* -- KPI CARDS � GENESIS CRYSTAL PANELS -- */
 .kpi-card,
 .kpi-card.kpi-cash,
 .kpi-card.kpi-contracts,
@@ -4441,7 +4441,7 @@ body::after {
 .kpi-sub   { color: rgba(148, 163, 184, 0.8) !important; font-size: 0.75rem !important; }
 .kpi-pct   { color: #c7d2fe !important; font-weight: 700 !important; font-size: 0.95rem !important; }
 
-/* ── SPRINT COUNTDOWN HUD ── */
+/* -- SPRINT COUNTDOWN HUD -- */
 .sprint-countdown-hud {
   background: linear-gradient(135deg, rgba(10, 16, 32, 0.95) 0%, rgba(14, 22, 44, 0.98) 100%) !important;
   border: 1.5px solid rgba(99, 102, 241, 0.4) !important;
@@ -4451,7 +4451,7 @@ body::after {
     0 0 0 1px rgba(99, 102, 241, 0.1) inset !important;
 }
 
-/* ── SECTION HEADERS ── */
+/* -- SECTION HEADERS -- */
 .section-header h2 {
   color: #f1f5f9 !important;
   font-weight: 800 !important;
@@ -4465,7 +4465,7 @@ body::after {
   border-radius: 2px !important;
 }
 
-/* ── DATA TABLE — AURORA GRID ── */
+/* -- DATA TABLE � AURORA GRID -- */
 .table-wrapper,
 .data-table-wrapper {
   background: linear-gradient(145deg, rgba(10, 16, 32, 0.9) 0%, rgba(8, 13, 26, 0.95) 100%) !important;
@@ -4517,7 +4517,7 @@ table tfoot td {
   border-top: 2px solid rgba(99, 102, 241, 0.3) !important;
 }
 
-/* ── INDIVIDUAL REP CARDS (ind-card) — GENESIS CRYSTAL TILES ── */
+/* -- INDIVIDUAL REP CARDS (ind-card) � GENESIS CRYSTAL TILES -- */
 .ind-card {
   background: linear-gradient(145deg, rgba(14, 22, 44, 0.85) 0%, rgba(10, 16, 32, 0.92) 100%) !important;
   border: 1px solid rgba(99, 102, 241, 0.2) !important;
@@ -4580,7 +4580,7 @@ table tfoot td {
 }
 .ind-recommendation strong { color: #a5b4fc !important; }
 
-/* ── METRIC TILE MODERN (Individuals small tiles) ── */
+/* -- METRIC TILE MODERN (Individuals small tiles) -- */
 .metric-tile-modern {
   background: linear-gradient(145deg, rgba(14, 22, 44, 0.85) 0%, rgba(10, 16, 32, 0.9) 100%) !important;
   border: 1px solid rgba(99, 102, 241, 0.18) !important;
@@ -4595,7 +4595,7 @@ table tfoot td {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.15) !important;
 }
 
-/* ── GENERAL CALC CARDS ── */
+/* -- GENERAL CALC CARDS -- */
 .calc-card,
 .chart-card,
 .card {
@@ -4606,7 +4606,7 @@ table tfoot td {
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45) !important;
 }
 
-/* ── DATA SOURCES SYNC WIDGET ── */
+/* -- DATA SOURCES SYNC WIDGET -- */
 .data-sources-widget,
 .sheet-sync-verification,
 .sync-widget,
@@ -4633,7 +4633,7 @@ table tfoot td {
 .sheet-name   { color: #f1f5f9 !important; font-weight: 700 !important; }
 .sheet-time   { color: #67e8f9 !important; }
 
-/* ── STATUS BADGES ── */
+/* -- STATUS BADGES -- */
 .badge-on-track, [class*="on-track"] {
   background: rgba(52, 211, 153, 0.15) !important;
   color: #34d399 !important;
@@ -4650,7 +4650,7 @@ table tfoot td {
   border-color: rgba(251, 113, 133, 0.35) !important;
 }
 
-/* ── FILTER CONTROLS ── */
+/* -- FILTER CONTROLS -- */
 .filter-bar select,
 .filter-select,
 .modern-select,
@@ -4661,29 +4661,29 @@ select {
   border-radius: 10px !important;
 }
 
-/* ── BUTTONS ── */
+/* -- BUTTONS -- */
 button, .btn {
   transition: all 0.2s ease !important;
 }
 
-/* ── FOOTER ── */
+/* -- FOOTER -- */
 footer, .footer {
   background: rgba(5, 8, 15, 0.95) !important;
   border-top: 1px solid rgba(99, 102, 241, 0.2) !important;
   color: rgba(100, 116, 139, 0.8) !important;
 }
 
-/* ── LOADER MATCH ── */
+/* -- LOADER MATCH -- */
 .loader-overlay {
   background: #05080f !important;
 }
 
-/* ── INDIVIDUAL CARDS GRID SPACING ── */
+/* -- INDIVIDUAL CARDS GRID SPACING -- */
 .individual-cards-grid {
   gap: 20px !important;
 }
 
-/* ── SCROLL BARS ── */
+/* -- SCROLL BARS -- */
 ::-webkit-scrollbar-thumb {
   background: rgba(99, 102, 241, 0.4) !important;
 }
@@ -4694,14 +4694,14 @@ footer, .footer {
   background: rgba(10, 16, 32, 0.5) !important;
 }
 
-/* ── PILL BADGES ── */
+/* -- PILL BADGES -- */
 .pill-badge-emerald { background: rgba(52, 211, 153, 0.15) !important; color: #34d399 !important; border-color: rgba(52, 211, 153, 0.35) !important; }
 .pill-badge-cyan    { background: rgba(34, 211, 238, 0.15) !important; color: #22d3ee !important; border-color: rgba(34, 211, 238, 0.35) !important; }
 .pill-badge-purple  { background: rgba(167, 139, 250, 0.15) !important; color: #a78bfa !important; border-color: rgba(167, 139, 250, 0.35) !important; }
 .pill-badge-amber   { background: rgba(251, 191, 36, 0.15) !important; color: #fbbf24 !important; border-color: rgba(251, 191, 36, 0.35) !important; }
 .pill-badge-rose    { background: rgba(251, 113, 133, 0.15) !important; color: #fb7185 !important; border-color: rgba(251, 113, 133, 0.35) !important; }
 
-/* ── PROGRESS BARS ── */
+/* -- PROGRESS BARS -- */
 .kpi-progress {
   background: rgba(99, 102, 241, 0.12) !important;
   border-radius: 999px !important;
@@ -4718,7 +4718,7 @@ footer, .footer {
 .kpi-ach .kpi-bar       { background: linear-gradient(90deg, #fbbf24, #f97316) !important; }
 .kpi-base .kpi-bar      { background: linear-gradient(90deg, #a78bfa, #6366f1) !important; }
 
-/* ── GRADIENT TEXT ── */
+/* -- GRADIENT TEXT -- */
 .gradient-text {
   background: linear-gradient(135deg, #818cf8, #22d3ee) !important;
   -webkit-background-clip: text !important;
@@ -4728,9 +4728,9 @@ footer, .footer {
 
 /* END GENESIS REDESIGN v3.0 */
 
-/* ══════════════════════════════════════════════════════════════
-   🌟 GENESIS POLISH — Tab & Section Extra Vibrancy Patch
-   ══════════════════════════════════════════════════════════════ */
+/* --------------------------------------------------------------
+   ?? GENESIS POLISH � Tab & Section Extra Vibrancy Patch
+   -------------------------------------------------------------- */
 
 /* Warmer, more vivid top gradient aura */
 @keyframes auroraShift {
@@ -4752,13 +4752,13 @@ footer, .footer {
   padding-top: 4px !important;
 }
 
-/* Rep name in table — bright white */
+/* Rep name in table � bright white */
 .rep-name-cell, td:first-child { 
   color: #e2e8f0 !important; 
   font-weight: 600 !important; 
 }
 
-/* Number cells — cool cyan */
+/* Number cells � cool cyan */
 td.number-cell, td[class*="cash"], td[class*="revenue"] {
   color: #67e8f9 !important;
   font-family: 'JetBrains Mono', monospace !important;
@@ -4828,7 +4828,7 @@ tr[data-rank="1"] td:first-child, tr.rank-1 td:first-child {
   border-radius: 14px !important;
 }
 
-/* ── SHARE BUTTON ── */
+/* -- SHARE BUTTON -- */
 .btn-share, [class*="share-btn"], button[onclick*="share"] {
   background: linear-gradient(135deg, #6366f1, #22d3ee) !important;
   color: #fff !important;
@@ -4842,9 +4842,9 @@ tr[data-rank="1"] td:first-child, tr.rank-1 td:first-child {
 
 /* END GENESIS POLISH */
 
-/* ══════════════════════════════════════════════════════════════
-   💎 GENESIS INDIVIDUALS HUB — ULTRA-EXECUTIVE TEMPLATES v3.0
-   ══════════════════════════════════════════════════════════════ */
+/* --------------------------------------------------------------
+   ?? GENESIS INDIVIDUALS HUB � ULTRA-EXECUTIVE TEMPLATES v3.0
+   -------------------------------------------------------------- */
 
 /* Mini-HUD Telemetry Strip */
 .ind-summary-strip {
@@ -4914,7 +4914,7 @@ tr[data-rank="1"] td:first-child, tr.rank-1 td:first-child {
   color: rgba(148, 163, 184, 0.85) !important;
 }
 
-/* ── INDIVIDUAL CARD PRO (CARDS VIEW) ── */
+/* -- INDIVIDUAL CARD PRO (CARDS VIEW) -- */
 .individual-cards-grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important;
@@ -5208,9 +5208,9 @@ tr[data-rank="1"] td:first-child, tr.rank-1 td:first-child {
   gap: 6px !important;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   ☀️ LUMINOUS EXECUTIVE LIGHT THEME (Zero Gloom / 100% Bright)
-   ══════════════════════════════════════════════════════════════ */
+/* --------------------------------------------------------------
+   ?? LUMINOUS EXECUTIVE LIGHT THEME (Zero Gloom / 100% Bright)
+   -------------------------------------------------------------- */
 body.light-theme,
 [data-theme="light"] body {
   background: #f1f5f9 !important;
@@ -5398,9 +5398,9 @@ body.light-theme .view-btn.active {
 
 
 
-/* ══════════════════════════════════════════════════════════════
-   ☀️ COMPREHENSIVE LIGHT THEME OVERRIDES FOR ALL TABS
-   ══════════════════════════════════════════════════════════════ */
+/* --------------------------------------------------------------
+   ?? COMPREHENSIVE LIGHT THEME OVERRIDES FOR ALL TABS
+   -------------------------------------------------------------- */
 body.light-theme .kpi-card,
 body.light-theme .calc-card,
 body.light-theme .chart-card,
@@ -5474,11 +5474,11 @@ body.light-theme .loader-overlay {
   background: #f8fafc !important;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   🎨 HARMONIOUS EXECUTIVE COLOR PALETTE & UNIFIED TABLE ROWS
+/* --------------------------------------------------------------
+   ?? HARMONIOUS EXECUTIVE COLOR PALETTE & UNIFIED TABLE ROWS
    Fix: Eliminate contrasting alternating row colors (Zebra Striping)
    Unified cohesive color system across all tables & rows
-   ══════════════════════════════════════════════════════════════ */
+   -------------------------------------------------------------- */
 
 /* 1. All rows have the EXACT SAME clean background (Zero zebra clash) */
 .data-table tbody tr,
@@ -5585,9 +5585,9 @@ body.light-theme #individualFullTable td strong {
   color: #0f172a !important;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   📌 STICKY TABLE HEADERS & HIGH-CONTRAST TYPOGRAPHY SYSTEM
-   ══════════════════════════════════════════════════════════════ */
+/* --------------------------------------------------------------
+   ?? STICKY TABLE HEADERS & HIGH-CONTRAST TYPOGRAPHY SYSTEM
+   -------------------------------------------------------------- */
 
 /* 1. Full-Height Natural Scroll Tables (Zero Clipped Rows & Zero Scroll Traps) */
 .table-wrapper,
@@ -5756,7 +5756,7 @@ body.light-theme .status-badge[style*="#8b5cf6"] {
    MASTER EXECUTIVE POLISH v3.5: CONTRAST, BM DANGER FRAMING & ANTI-CLIPPING
    ========================================================================== */
 
-/* ── 1. ANTI-CLIPPING & COMPREHENSIVE TEXT/BADGE PRESERVATION ── */
+/* -- 1. ANTI-CLIPPING & COMPREHENSIVE TEXT/BADGE PRESERVATION -- */
 .tab-bar {
   display: flex !important;
   flex-wrap: nowrap !important;
@@ -5821,7 +5821,7 @@ body.light-theme .status-badge[style*="#8b5cf6"] {
   word-break: keep-all !important;
 }
 
-/* ── 2. BELOW BENCHMARK (BM) CRITICAL DANGER FRAMING & ALERTS ── */
+/* -- 2. BELOW BENCHMARK (BM) CRITICAL DANGER FRAMING & ALERTS -- */
 /* Table Rows Below BM */
 tr.row-below-bm {
   background: rgba(239, 68, 68, 0.05) !important;
@@ -5973,7 +5973,7 @@ body.light-theme .st-target-num,
   color: #f43f5e !important;
 }
 
-/* ── 3. UNIVERSAL HIGH-CONTRAST LIGHT THEME GUARANTEE ── */
+/* -- 3. UNIVERSAL HIGH-CONTRAST LIGHT THEME GUARANTEE -- */
 body.light-theme,
 [data-theme="light"] body {
   --text-primary: #0f172a;
@@ -6055,7 +6055,7 @@ body.light-theme #bigTeamSummaryTable tfoot td strong,
 }
 
 
-/* ── Countdown HUD Title Contrast in Light Theme ── */
+/* -- Countdown HUD Title Contrast in Light Theme -- */
 body.light-theme .sprint-hud-title,
 [data-theme="light"] .sprint-hud-title {
   color: #0f172a !important;
@@ -6108,7 +6108,7 @@ body.light-theme .small-team-member-row.member-below-bm,
 }
 
 
-/* ── Hidden Specificity Override Fix ── */
+/* -- Hidden Specificity Override Fix -- */
 #individualCards.hidden,
 #individualTableView.hidden,
 .individual-cards-grid.hidden,
@@ -6117,9 +6117,9 @@ body.light-theme .small-team-member-row.member-below-bm,
   display: none !important;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   REPS BELOW BM — EXPLICIT NAME & ACH% FRAMING (ZERO DANGER MARKS)
-   ══════════════════════════════════════════════════════════════════════════ */
+/* --------------------------------------------------------------------------
+   REPS BELOW BM � EXPLICIT NAME & ACH% FRAMING (ZERO DANGER MARKS)
+   -------------------------------------------------------------------------- */
 .rep-name-below-bm,
 .st-name-below-bm,
 .ind-rep-name-below-bm {
@@ -6193,9 +6193,9 @@ body.light-theme .st-bm-ahead,
   font-weight: 800 !important;
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
+/* --------------------------------------------------------------------------
    UNIVERSAL LIGHT THEME HIGH-CONTRAST ENGINE (ZERO WASHED OUT / PALE TEXT)
-   ══════════════════════════════════════════════════════════════════════════ */
+   -------------------------------------------------------------------------- */
 body.light-theme,
 [data-theme="light"] body {
   --text-primary: #0f172a;
@@ -6302,9 +6302,9 @@ body.light-theme .rec-text-cell {
 
 
 
-/* ══════════════════════════════════════════════════════════════════════════
+/* --------------------------------------------------------------------------
    MASTER HIGH-CONTRAST & COLOR HARMONY ENGINE (LIGHT THEME & DARK THEME)
-   ══════════════════════════════════════════════════════════════════════════ */
+   -------------------------------------------------------------------------- */
 
 /* 1. NATIVE SELECT & OPTION ENGINE (FIXES BLACK-ON-BLACK WINDOWS CHROME POPUP) */
 html,
@@ -6786,7 +6786,7 @@ body.light-theme .rec-text-cell {
   transform: translateY(-1px) !important;
 }
 
-/* ── Pacing Scale Header High Contrast in all themes ── */
+/* -- Pacing Scale Header High Contrast in all themes -- */
 .pacing-scale-header h3,
 body.light-theme .pacing-scale-header h3,
 [data-theme="light"] .pacing-scale-header h3 {
@@ -6806,7 +6806,7 @@ body.light-theme .pacing-scale-header strong,
   color: #ffffff !important;
 }
 
-/* ── Smart Dual-Pin High Contrast & Neon Glow ── */
+/* -- Smart Dual-Pin High Contrast & Neon Glow -- */
 .smart-dual-pin {
   z-index: 30 !important;
 }
@@ -6876,7 +6876,7 @@ body.light-theme .ruler-sub-d16,
   border: 1.2px solid #e879f9 !important;
 }
 
-/* ── Benchmark Matrix Card Light Theme ── */
+/* -- Benchmark Matrix Card Light Theme -- */
 body.light-theme .benchmark-matrix-card,
 [data-theme="light"] .benchmark-matrix-card {
   background: #ffffff !important;
@@ -6921,7 +6921,7 @@ body.light-theme .benchmark-matrix-card tr.matrix-sector-row td,
 
 
 /* =========================================================================
-   BIG TEAM 01 — AI COMMAND SUITE & LIGHT COCKPIT STYLES
+   BIG TEAM 01 � AI COMMAND SUITE & LIGHT COCKPIT STYLES
    Native light theme styling. Strictly clean backgrounds, zero dark colors.
    ========================================================================= */
 
@@ -7765,4 +7765,338 @@ body.light-theme .ind-rep-name,
 [data-theme="light"] .ind-rep-name {
   color: #0f172a !important;
   -webkit-text-fill-color: #0f172a !important;
+}
+
+
+/* =========================================================================
+   OCTOPUS AI CONVERSATIONAL VOICE SIMULATOR (LIGHT THEME NATIVE)
+   ========================================================================= */
+
+.ai-voice-simulator-card {
+  background: #ffffff;
+  border: 2px solid #818cf8;
+  border-radius: 18px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.10);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ai-voice-simulator-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4, #10b981);
+}
+
+.card-highlight-pulse {
+  animation: simHighlightGlow 2.5s ease-out;
+}
+
+@keyframes simHighlightGlow {
+  0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.6); }
+  50% { box-shadow: 0 0 35px 8px rgba(79, 70, 229, 0.35); }
+  100% { box-shadow: 0 8px 30px rgba(99, 102, 241, 0.10); }
+}
+
+.sim-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sim-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sim-mic-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.10);
+  border: 1.5px solid rgba(99, 102, 241, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.sim-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: 0.2px;
+}
+
+.sim-subtitle {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.sim-status-badge {
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border: 1.5px solid #10b981;
+}
+
+.sim-hero-strip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-voice-sim-hero {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-voice-sim-hero:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+  transform: translateY(-1px);
+}
+
+.btn-voice-sim-hero.speaking {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+  animation: pulseVoiceBtn 1.5s infinite;
+}
+
+@keyframes pulseVoiceBtn {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.soundwave-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+  padding: 0 8px;
+}
+
+.soundwave-bar .wave-bar {
+  width: 4px;
+  height: 8px;
+  background: #cbd5e1;
+  border-radius: 2px;
+  transition: height 0.2s ease, background 0.2s ease;
+}
+
+.soundwave-bar.active .wave-bar {
+  background: #4f46e5;
+  animation: soundwaveAnim 1.2s infinite ease-in-out alternate;
+}
+
+.soundwave-bar.active .wave-bar:nth-child(1) { animation-delay: 0.1s; }
+.soundwave-bar.active .wave-bar:nth-child(2) { animation-delay: 0.3s; }
+.soundwave-bar.active .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.soundwave-bar.active .wave-bar:nth-child(4) { animation-delay: 0.5s; }
+.soundwave-bar.active .wave-bar:nth-child(5) { animation-delay: 0.15s; }
+.soundwave-bar.active .wave-bar:nth-child(6) { animation-delay: 0.4s; }
+.soundwave-bar.active .wave-bar:nth-child(7) { animation-delay: 0.25s; }
+.soundwave-bar.active .wave-bar:nth-child(8) { animation-delay: 0.35s; }
+
+@keyframes soundwaveAnim {
+  0% { height: 6px; }
+  100% { height: 26px; }
+}
+
+.sim-speed-toggles {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.speed-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.speed-btn.active {
+  background: #eff6ff;
+  border-color: #4f46e5;
+  color: #4f46e5;
+}
+
+.sim-query-section {
+  margin-bottom: 16px;
+}
+
+.sim-query-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s ease;
+}
+
+.sim-query-input-wrapper:focus-within {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.sim-query-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.btn-sim-ask {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-sim-ask:hover {
+  background: #4338ca;
+}
+
+.sim-quick-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.chip-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.sim-chip {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 9999px;
+  padding: 4px 12px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sim-chip:hover {
+  background: #eff6ff;
+  border-color: #6366f1;
+  color: #4f46e5;
+}
+
+.sim-transcript-box {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+
+.transcript-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+.transcript-body {
+  font-size: 0.86rem;
+  color: #1e293b;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.pulse-text {
+  animation: textFlash 0.8s ease;
+}
+
+@keyframes textFlash {
+  0% { color: #4f46e5; }
+  100% { color: #1e293b; }
+}
+
+/* Floating AI Voice Assistant Button */
+.floating-ai-assistant-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: #ffffff;
+  border: 2px solid #6366f1;
+  color: #4f46e5;
+  border-radius: 9999px;
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.25s ease;
+}
+
+.floating-ai-assistant-btn:hover {
+  background: #4f46e5;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.35);
+}
+
+.float-ai-mic {
+  font-size: 1.2rem;
 }

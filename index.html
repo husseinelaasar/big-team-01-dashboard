@@ -1,18 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="security_shield.min.js"></script>
-  <title>Big Team 01 — Executive Performance Dashboard</title>
+  <title>Big Team 01 � Executive Performance Dashboard</title>
   <meta name="description" content="Official Executive Performance Dashboard for 51Talk Big Team 01. Live sales analytics, renewal & upgrade breakdown, team pacing, and SOP compliance.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Big Team 1 Dashboard — Executive Sales Performance">
+  <meta property="og:title" content="Big Team 1 Dashboard � Executive Sales Performance">
   <meta property="og:description" content="Official Live Performance Dashboard for 51Talk Big Team 01 (Senior Manager: Hussein El A'sar). Live revenue tracking, pacing benchmarks, M2 upgrade analysis, and SOP compliance.">
   <meta property="og:image" content="https://husseinelaasar.github.io/big-team-01-dashboard/assets/big_team_1_banner.jpg">
   <meta property="og:url" content="https://husseinelaasar.github.io/big-team-01-dashboard/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Big Team 1 Dashboard — Executive Sales Performance">
+  <meta name="twitter:title" content="Big Team 1 Dashboard � Executive Sales Performance">
   <meta name="twitter:description" content="Official Live Performance Dashboard for 51Talk Big Team 01. Accelerate Growth. Achieve Targets.">
   <meta name="twitter:image" content="https://husseinelaasar.github.io/big-team-01-dashboard/assets/big_team_1_banner.jpg">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261116_164707">
+  <link rel="stylesheet" href="styles.css?v=1794861581779">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -77,7 +77,7 @@
           </svg>
         </div>
         <div>
-          <h1 class="nav-title">Big Team 01 — <span class="gradient-text">Executive Dashboard</span></h1>
+          <h1 class="nav-title">Big Team 01 � <span class="gradient-text">Executive Dashboard</span></h1>
           <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
             Senior Manager: <strong style="color: #f8fafc;">Hussein El A'sar</strong> | Month: <strong style="color: #38bdf8;">November 2026 (MTD Day 16/30)</strong>
           </div>
@@ -85,10 +85,10 @@
       </div>
 
       <div class="nav-right">
-        <!-- Dual Currency Switcher (USD $ ⇄ SAR ر.س) -->
-        <div class="currency-toggle-group" id="currencyToggleGroup" title="Switch between USD ($) and SAR (ر.س)">
+        <!-- Dual Currency Switcher (USD $ ? SAR) -->
+        <div class="currency-toggle-group" id="currencyToggleGroup" title="Switch between USD ($) and SAR">
           <button type="button" class="currency-btn active" id="btnCurrUSD" onclick="setDashboardCurrency('USD')">$ USD</button>
-          <button type="button" class="currency-btn" id="btnCurrSAR" onclick="setDashboardCurrency('SAR')">ر.س SAR</button>
+          <button type="button" class="currency-btn" id="btnCurrSAR" onclick="setDashboardCurrency('SAR')">SAR</button>
         </div>
 
         <!-- Ask Big Team 01 Command Palette Button (Ctrl + K) -->
@@ -97,15 +97,9 @@
           <span class="cmd-text">Ask AI / Filter...</span>
           <kbd class="cmd-kbd">Ctrl K</kbd>
         </button>
-
-        <!-- Executive Voice Briefing Button -->
-        <button type="button" class="nav-voice-btn" id="masterVoiceBtn" onclick="toggleMasterVoice()" title="استمع للتحليل الصوتي التنفيذي المباشر (AI Voice Brief)">
-          <span class="voice-icon" id="masterVoiceIcon">🔊</span>
-          <span id="masterVoiceText">Voice Brief</span>
-        </button>
         <!-- Theme Toggle Button (Light/Dark) -->
         <button type="button" class="nav-theme-toggle-btn" id="themeToggleBtn" onclick="toggleDashboardTheme()" title="Switch between Light and Dark mode" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 10px; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.25s ease; border: 1px solid rgba(99, 102, 241, 0.35); background: rgba(99, 102, 241, 0.12); color: inherit;">
-          <span id="themeToggleIcon">🌙</span>
+          <span id="themeToggleIcon">??</span>
           <span id="themeToggleText">Dark Mode</span>
         </button>
         <!-- Share Dashboard Public Link Button -->
@@ -115,7 +109,7 @@
         </button>
 
         <!-- Direct Quick Access to VIP Packages Rate Card Calculator -->
-        <a href="calculator.html" class="nav-calc-btn" title="فتح حاسبة الباقات المعتمدة وكروت العرض">
+        <a href="calculator.html" class="nav-calc-btn" title="Open Packages Rate Card Calculator">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
           <span>Rate Card Calculator</span>
         </a>
@@ -135,7 +129,7 @@
     <div id="localFileNoticeBar" class="local-notice-bar" style="display: none;">
       <div class="local-notice-content">
         <div style="display: flex; align-items: center; gap: 8px;">
-          <span style="font-size: 1.2rem;">⚠️</span>
+          <span style="font-size: 1.2rem;">??</span>
           <span>You are viewing a <strong>local file on your computer</strong> (<code>file:///...</code>). Team members cannot open this file link.</span>
         </div>
         <button type="button" class="local-copy-btn" onclick="copyDashboardPublicUrl()">
@@ -197,7 +191,7 @@
       </button>
       <button class="tab" data-tab="dailyplan" onclick="switchTab('dailyplan')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        Daily Action Plan (خطة اليوم)
+        Daily Action Plan
         <span style="white-space: nowrap !important; flex-shrink: 0 !important; background: linear-gradient(135deg, #10b981, #06b6d4); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">AI TODAY</span>
       </button>
       <button class="tab" data-tab="teams" onclick="switchTab('teams')">
@@ -223,6 +217,11 @@
         Uncovered Leads (5,196)
         <span style="white-space: nowrap !important; flex-shrink: 0 !important; background: linear-gradient(135deg, #ef4444, #f97316); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">PRIORITY HUB</span>
       </button>
+      <a href="allocation_rules.html" class="tab" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(239, 68, 68, 0.2)); border: 1px solid rgba(245, 158, 11, 0.5); color: #fcd34d;" title="Open Allocation Rules & Lead Recovery Radar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        Allocation &amp; Reclaim Radar
+        <span style="white-space: nowrap !important; flex-shrink: 0 !important; background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 800;">RECLAIM RADAR</span>
+      </a>
       <button class="tab" data-tab="englishclub" onclick="switchTab('englishclub')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         English Club (45%)
@@ -263,11 +262,14 @@
     <!-- ============================================== -->
     <section id="tab-overview" class="tab-content active">
       <!-- Futuristic Sprint Mission Control Countdown HUD -->
+      <!-- ??? OCTOPUS AI EXECUTIVE VOICE CONVERSATION & PACING SIMULATOR -->
+      <div id="aiVoiceSimulatorContainer"></div>
+
       <div class="sprint-countdown-hud">
         <div class="sprint-hud-left">
           <div class="sprint-status-orb">
             <span class="orb-pulse-ring"></span>
-            <span class="orb-core">⚡</span>
+            <span class="orb-core">?</span>
           </div>
           <div>
             <div class="sprint-hud-title">NOVEMBER SPRINT MISSION CONTROL</div>
@@ -300,7 +302,7 @@
         <div class="sprint-velocity-metric">
           <div class="velocity-label">DAILY RUN RATE NEEDED</div>
           <div class="velocity-value" id="hudDailyNeeded">$7,141 <span>/day</span></div>
-          <div class="velocity-badge">ON TRACK ⚡</div>
+          <div class="velocity-badge">ON TRACK ?</div>
         </div>
       </div>
 
@@ -309,16 +311,16 @@
       <div class="simulation-time-slider-card">
         <div class="slider-header">
           <div class="slider-title-group">
-            <span class="slider-icon">⏳</span>
+            <span class="slider-icon">?</span>
             <div>
               <div class="slider-title">DATE PACING SIMULATOR & TIMELINE TRACKER</div>
-              <div class="slider-subtitle">Simulate benchmark pacing and gap across any day of the month (Days 1–30)</div>
+              <div class="slider-subtitle">Simulate benchmark pacing and gap across any day of the month (Days 1�30)</div>
             </div>
           </div>
           <div class="slider-badge-group">
-            <span class="slider-active-day-badge live" id="sliderDayLabel">🟢 Live Today: <strong>Day 16</strong> (41% BM)</span>
+            <span class="slider-active-day-badge live" id="sliderDayLabel">?? Live Today: <strong>Day 16</strong> (41% BM)</span>
             <button type="button" class="btn-reset-slider" onclick="resetDateSlider()" id="btnResetSlider" title="Snap back to today (Day 16)">
-              ↺ Today (Live)
+              ? Today (Live)
             </button>
           </div>
         </div>
@@ -391,12 +393,12 @@
       <!-- Small Teams Pacing & Target Comparison -->
       <div class="section-header">
         <div>
-          <h2>Small Teams & Big Team 01 — Cash Achievement vs Target</h2>
+          <h2>Small Teams & Big Team 01 � Cash Achievement vs Target</h2>
           <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 4px;">
             Comparison of revenue velocity across all teams and Big Team 01 against the official pacing curve (5% to 103%)
           </p>
         </div>
-        <span class="source-tag">Source: CRM live data (Nov 1–7, 2026)</span>
+        <span class="source-tag">Source: CRM live data (Nov 1�7, 2026)</span>
       </div>
       <div class="chart-container" id="teamBarsContainer"></div>
 
@@ -419,14 +421,14 @@
       <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
         <div>
           <h2>Small Team Performance Breakdown</h2>
-          <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1–15, 2026 (MTD Day 16/30)</span>
+          <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1�15, 2026 (MTD Day 16/30)</span>
         </div>
         <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-          <button type="button" class="btn-card-snap" onclick="copyCardImage('smallTeamCards', 'All 5 Small Teams')" title="نسخ صورة الـ 5 كروت معاً للصقها مباشرة في DingTalk Mega Group" style="cursor: pointer; background: linear-gradient(135deg, #4f46e5, #6366f1); border: 1.5px solid #818cf8; color: #ffffff; border-radius: 8px; padding: 6px 14px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35); transition: all 0.2s ease;">
-            📸 نسخ صورة الـ 5 كروت لدينج توك
+          <button type="button" class="btn-card-snap" onclick="copyCardImage('smallTeamCards', 'All 5 Small Teams')" title="Copy all 5 team cards to paste directly in DingTalk" style="cursor: pointer; background: linear-gradient(135deg, #4f46e5, #6366f1); border: 1.5px solid #818cf8; color: #ffffff; border-radius: 8px; padding: 6px 14px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35); transition: all 0.2s ease;">
+            ?? Copy 5 Team Cards for DingTalk
           </button>
-          <button type="button" class="btn-card-snap" onclick="downloadCardImage('smallTeamCards', 'Big_Team_01_Small_Teams_Nov15')" title="تحميل صورة الـ 5 كروت بدقة عالية كملف PNG" style="cursor: pointer; background: rgba(99, 102, 241, 0.12); border: 1.5px solid rgba(99, 102, 241, 0.35); color: var(--text-primary); border-radius: 8px; padding: 6px 12px; font-size: 0.8rem; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
-            📥 تحميل كصورة PNG
+          <button type="button" class="btn-card-snap" onclick="downloadCardImage('smallTeamCards', 'Big_Team_01_Small_Teams_Nov15')" title="Download high-resolution cards as PNG" style="cursor: pointer; background: rgba(99, 102, 241, 0.12); border: 1.5px solid rgba(99, 102, 241, 0.35); color: var(--text-primary); border-radius: 8px; padding: 6px 12px; font-size: 0.8rem; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+            ?? Download PNG
           </button>
         </div>
       </div>
@@ -439,7 +441,7 @@
     <section id="tab-individuals" class="tab-content">
       <div class="section-header">
         <h2>Individual Performance Deep Dive</h2>
-        <span class="source-tag" id="individualRepsCountTag">18 Active Sales Specialists | Nov 1–7, 2026 (Day 7)</span>
+        <span class="source-tag" id="individualRepsCountTag">18 Active Sales Specialists | Nov 1�7, 2026 (Day 7)</span>
       </div>
       
       <!-- Individuals Mission Telemetry Strip -->
@@ -449,31 +451,31 @@
       <!-- Tactical Action Filter Pills (OCTOPUS Style) -->
       <div class="tactical-pills-bar">
         <button type="button" class="tactical-pill active" data-filter="all" onclick="filterIndividualsByPill('all')">
-          <span>👥 All Reps</span>
+          <span>?? All Reps</span>
           <span class="pill-count">18</span>
         </button>
         <button type="button" class="tactical-pill" data-filter="behind" onclick="filterIndividualsByPill('behind')">
-          <span>⚠️ Behind BM</span>
+          <span>?? Behind BM</span>
           <span class="pill-count" id="pillCountBehind">7</span>
         </button>
         <button type="button" class="tactical-pill" data-filter="zero" onclick="filterIndividualsByPill('zero')">
-          <span>🚨 Zero Cash</span>
+          <span>?? Zero Cash</span>
           <span class="pill-count" id="pillCountZero">0</span>
         </button>
         <button type="button" class="tactical-pill" data-filter="nodeal" onclick="filterIndividualsByPill('nodeal')">
-          <span>📉 Low Deals (&le;2)</span>
+          <span>?? Low Deals (&le;2)</span>
           <span class="pill-count" id="pillCountNoDeal">3</span>
         </button>
         <button type="button" class="tactical-pill" data-filter="pending" onclick="filterIndividualsByPill('pending')">
-          <span>⏳ High Backlog</span>
+          <span>? High Backlog</span>
           <span class="pill-count" id="pillCountPending">5</span>
         </button>
         <button type="button" class="tactical-pill" data-filter="calls" onclick="filterIndividualsByPill('calls')">
-          <span>📞 Cover &lt; 70%</span>
+          <span>?? Cover &lt; 70%</span>
           <span class="pill-count" id="pillCountCalls">6</span>
         </button>
         <button type="button" class="tactical-pill" data-filter="ach100" onclick="filterIndividualsByPill('ach100')">
-          <span>🏆 100%+ Goal</span>
+          <span>?? 100%+ Goal</span>
           <span class="pill-count" id="pillCount100">0</span>
         </button>
         <button type="button" class="tactical-pill" data-filter="pod-EGSS01" onclick="filterIndividualsByPill('pod-EGSS01')">
@@ -513,7 +515,7 @@
           <label style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-left: 8px;">Sort By:</label>
           <select id="sortFilter" class="filter-select">
             <option value="ach-desc" selected>Cash Achievement % (High to Low)</option>
-            <option value="comm-desc">💰 Expected Commission (Highest Payout)</option>
+            <option value="comm-desc">?? Expected Commission (Highest Payout)</option>
             <option value="upg-rate-desc">Upgrade M2 Conversion % (High to Low)</option>
             <option value="cover-rate-desc">M2 Cover Rate % (High to Low)</option>
             <option value="cash-desc">Cash Revenue (High to Low)</option>
@@ -535,11 +537,11 @@
         <!-- Master Reps Count & Paging Health Banner -->
         <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: rgba(99, 102, 241, 0.08); border-bottom: 1px solid var(--border-glass); border-radius: 12px 12px 0 0; flex-wrap: wrap; gap: 8px;">
           <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 0.85rem; font-weight: 800; color: var(--text-primary);">👥 Big Team 01 Master Roster (All 18 Sales Specialists)</span>
-            <span class="pill-badge pill-badge-emerald" style="font-size: 0.70rem; padding: 2px 8px; font-weight: 800;">18 Reps Active • 100% Balanced</span>
+            <span style="font-size: 0.85rem; font-weight: 800; color: var(--text-primary);">?? Big Team 01 Master Roster (All 18 Sales Specialists)</span>
+            <span class="pill-badge pill-badge-emerald" style="font-size: 0.70rem; padding: 2px 8px; font-weight: 800;">18 Reps Active � 100% Balanced</span>
           </div>
           <div style="font-size: 0.76rem; color: var(--text-secondary); font-weight: 600;">
-            ⬇️ Scroll down to view all 19 reps (#1 to #19) & Sector Totals
+            ?? Scroll down to view all 19 reps (#1 to #19) & Sector Totals
           </div>
         </div>
         <table class="data-table" id="individualFullTable" style="width: 100%;">
@@ -552,7 +554,7 @@
               <th style="min-width: 65px; padding: 6px 3px;">Target ($)</th>
               <th style="min-width: 55px; padding: 6px 3px;">Ach %</th>
               <th style="min-width: 75px; color: #38bdf8; font-weight: 800; padding: 6px 3px;">Pace</th>
-              <th style="min-width: 115px; color: #8b5cf6; font-weight: 800; background: rgba(139, 92, 246, 0.08); border-left: 1.5px solid rgba(139, 92, 246, 0.3); border-right: 1.5px solid rgba(139, 92, 246, 0.3); padding: 6px 4px;" title="بنشمارك اليوم التالي والمبلغ المطلوب تحقيقه من كل موظف">🚀 Next Day BM (D16: 41%)</th>
+              <th style="min-width: 115px; color: #8b5cf6; font-weight: 800; background: rgba(139, 92, 246, 0.08); border-left: 1.5px solid rgba(139, 92, 246, 0.3); border-right: 1.5px solid rgba(139, 92, 246, 0.3); padding: 6px 4px;" title="Next day benchmark target and cash needed per specialist">?? Next Day BM (D16: 41%)</th>
               <th style="min-width: 35px; padding: 6px 2px;">M2</th>
               <th style="min-width: 48px; padding: 6px 2px; color: #38bdf8; font-weight: 800;">Renewal</th>
               <th style="min-width: 35px; padding: 6px 2px;">Base</th>
@@ -580,7 +582,7 @@
       <div class="section-header">
         <div>
           <h2 style="display: flex; align-items: center; gap: 10px;">
-            <span>🎓</span> Big Team 01 — Class Consumption Intelligence Hub
+            <span>??</span> Big Team 01 � Class Consumption Intelligence Hub
             <span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; padding: 2px 8px;">BENCHMARK TARGET: 82.0% OVERALL</span>
           </h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
@@ -609,7 +611,7 @@
       <div class="table-wrapper">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
           <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
-            <span>📋</span> Individual Sales Rep Class Consumption Performance (19 Reps)
+            <span>??</span> Individual Sales Rep Class Consumption Performance (19 Reps)
           </h3>
           <div style="display: flex; gap: 10px; align-items: center;">
             <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
@@ -635,14 +637,14 @@
       <div class="section-header">
         <div>
           <h2 style="display: flex; align-items: center; gap: 10px;">
-            <span>🚀</span> Early Upgrade (M2) Strategic Intelligence Hub
+            <span>??</span> Early Upgrade (M2) Strategic Intelligence Hub
             <span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; padding: 2px 8px;">OFFICIAL SCRM RECONCILED</span>
           </h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
             Dedicated conversion cockpit: M-2 student pool base, outreach contact intensity, 20% milestone pacing, remaining gaps, and rep-level actionable directives.
           </p>
         </div>
-        <span class="source-tag">Source: 海外SS-SCRM看板 (Subsheet: 升舱率达成 Col F &amp; POOL22)</span>
+        <span class="source-tag">Source: ??SS-SCRM?? (Subsheet: ????? Col F &amp; POOL22)</span>
       </div>
 
       <!-- 1. Top Executive Upgrade KPI Deck (6 Metric Cards) -->
@@ -672,7 +674,7 @@
             <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">Official Target</span>
           </div>
           <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #c084fc; margin-top: 6px;" id="upgCardTarget">0</div>
-          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Target Pending (Base × 20%)</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Target Pending (Base � 20%)</div>
         </div>
         <!-- Card 4: Remaining to Target -->
         <div class="metric-tile-modern" style="border-top: 3px solid #f43f5e;">
@@ -714,7 +716,7 @@
       <!-- 2. Small Teams Upgrade Comparison Grid -->
       <div style="margin-bottom: 24px;">
         <h3 style="font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-          <span>📊</span> Small Teams Upgrade Conversion &amp; 20% Target Velocity
+          <span>??</span> Small Teams Upgrade Conversion &amp; 20% Target Velocity
         </h3>
         <div id="upgradeSmallTeamsCards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;"></div>
       </div>
@@ -725,7 +727,7 @@
           <div>
             <span style="font-size: 0.72rem; font-weight: 800; color: #818cf8; text-transform: uppercase; letter-spacing: 0.06em;">Operational Intervention Hub</span>
             <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 2px 0 0 0; display: flex; align-items: center; gap: 8px;">
-              <span>🎯</span> Executive Upgrade Playbook &amp; Tactical Directives
+              <span>??</span> Executive Upgrade Playbook &amp; Tactical Directives
             </h3>
           </div>
           <span class="pill-badge pill-badge-cyan"><span class="pulse-dot pulse-dot-emerald"></span> Live Directives Active</span>
@@ -733,7 +735,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;" id="upgradePlaybookCards">
           <div class="metric-tile-modern" style="border-left: 3px solid #38bdf8; padding: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; color: #38bdf8; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
-              <span>🎯</span> DIRECTIVE 1: November Leads Baseline
+              <span>??</span> DIRECTIVE 1: November Leads Baseline
             </div>
             <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
               <strong>19 Active Reps Across 5 Teams:</strong> Ready for new November student assignments.<br>
@@ -742,16 +744,16 @@
           </div>
           <div class="metric-tile-modern" style="border-left: 3px solid #10b981; padding: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
-              <span>⚡</span> DIRECTIVE 2: 20% Upgrade Milestone
+              <span>?</span> DIRECTIVE 2: 20% Upgrade Milestone
             </div>
             <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
               <strong>Standard Benchmark:</strong> 20% conversion across assigned student base.<br>
-              <span style="color: #34d399; font-weight: 600;">Formula:</span> Goal = Ceil(Base × 0.20) will auto-activate upon allocation.
+              <span style="color: #34d399; font-weight: 600;">Formula:</span> Goal = Ceil(Base � 0.20) will auto-activate upon allocation.
             </div>
           </div>
           <div class="metric-tile-modern" style="border-left: 3px solid #818cf8; padding: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; color: #818cf8; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
-              <span>📚</span> DIRECTIVE 3: Class Consumption Target (82%)
+              <span>??</span> DIRECTIVE 3: Class Consumption Target (82%)
             </div>
             <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
               <strong>Macro Benchmark:</strong> 82% Overall student lesson attendance.<br>
@@ -760,7 +762,7 @@
           </div>
           <div class="metric-tile-modern" style="border-left: 3px solid #f59e0b; padding: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; color: #f59e0b; font-weight: 800; font-size: 0.85rem; margin-bottom: 6px;">
-              <span>🗣️</span> DIRECTIVE 4: English Club Target (45%)
+              <span>???</span> DIRECTIVE 4: English Club Target (45%)
             </div>
             <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
               <strong>Student Base Goal:</strong> 45% English Club attendance.<br>
@@ -784,17 +786,17 @@
           </select>
           <!-- Sort Filter -->
           <select id="upgradeSortFilter" class="modern-select">
-            <option value="rate-desc" selected>Conversion Rate % (Highest → Lowest)</option>
-            <option value="upgrades-desc">Actual Upgrades (High → Low)</option>
-            <option value="cov-desc">Coverage / Touch Intensity % (Highest → Lowest)</option>
+            <option value="rate-desc" selected>Conversion Rate % (Highest ? Lowest)</option>
+            <option value="upgrades-desc">Actual Upgrades (High ? Low)</option>
+            <option value="cov-desc">Coverage / Touch Intensity % (Highest ? Lowest)</option>
             <option value="needed-asc">Remaining Needed (Closest to 20% Goal)</option>
             <option value="needed-desc">Remaining Needed (Largest Gap First)</option>
             <option value="base-desc">Leads Base (Largest Pool First)</option>
-            <option value="cov-asc">Coverage / Touch Intensity % (Lowest → Highest)</option>
+            <option value="cov-asc">Coverage / Touch Intensity % (Lowest ? Highest)</option>
           </select>
         </div>
         <div style="display: flex; align-items: center; gap: 8px;">
-          <input type="text" id="upgradeSearchInput" class="modern-input" placeholder="🔍 Search rep name..." style="width: 230px;">
+          <input type="text" id="upgradeSearchInput" class="modern-input" placeholder="?? Search rep name..." style="width: 230px;">
         </div>
       </div>
 
@@ -828,7 +830,7 @@
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
           <div>
             <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-              <span style="font-size: 1.5rem;">📥</span>
+              <span style="font-size: 1.5rem;">??</span>
               <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin: 0; display: inline-flex; align-items: center; gap: 8px;">
                 November 2026 Upgrade Base Data Sheets &amp; Member Download Hub
               </h3>
@@ -841,10 +843,10 @@
           </div>
           <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
             <a href="leads/upgrade_base/M1_M2_Upgrade_Base_Master.csv" download="M1_M2_Upgrade_Base_Master.csv" class="pill-badge pill-badge-cyan" style="text-decoration: none; padding: 7px 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
-              <span>📊</span> Download Sector Master (CSV)
+              <span>??</span> Download Sector Master (CSV)
             </a>
             <a href="attachments/M1 &amp; M2 Data Base ID.xlsx" download="M1 &amp; M2 Data Base ID.xlsx" class="pill-badge pill-badge-purple" style="text-decoration: none; padding: 7px 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
-              <span>📗</span> Download Master Excel (.XLSX)
+              <span>??</span> Download Master Excel (.XLSX)
             </a>
           </div>
         </div>
@@ -855,7 +857,7 @@
           <div class="metric-tile-modern" style="border-left: 4px solid #c084fc; padding: 18px; background: rgba(30, 41, 59, 0.7);">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
               <div style="font-weight: 800; color: #e9d5ff; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
-                <span>👤</span> Download My Individual Rep Sheet
+                <span>??</span> Download My Individual Rep Sheet
               </div>
               <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">21 Active Reps</span>
             </div>
@@ -867,7 +869,7 @@
                 <option value="">-- Choose Your Name --</option>
               </select>
               <button type="button" id="btnDownloadMemberUpg" class="btn-primary" style="background: linear-gradient(135deg, #9333ea, #6366f1); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 0.82rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
-                <span>⬇️</span> Download (CSV)
+                <span>??</span> Download (CSV)
               </button>
             </div>
           </div>
@@ -876,7 +878,7 @@
           <div class="metric-tile-modern" style="border-left: 4px solid #06b6d4; padding: 18px; background: rgba(30, 41, 59, 0.7);">
             <div style="display: center; justify-content: space-between; align-items: center; margin-bottom: 10px; display: flex;">
               <div style="font-weight: 800; color: #a5f3fc; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
-                <span>👥</span> Download Small Team Sheets
+                <span>??</span> Download Small Team Sheets
               </div>
               <span class="pill-badge pill-badge-cyan" style="font-size: 0.68rem;">5 Small Teams</span>
             </div>
@@ -914,13 +916,13 @@
               <button type="button" class="pill-badge" data-filter="ME-EGSS10" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 10 (96)</button>
               <button type="button" class="pill-badge" data-filter="ME-EGSS13" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 13 (63)</button>
               <button type="button" class="pill-badge" data-filter="ME-EGSS30" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">Team 30 (51)</button>
-              <button type="button" class="pill-badge pill-badge-emerald" data-filter="UPGRADED" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">⭐ Upgraded (7)</button>
-              <button type="button" class="pill-badge pill-badge-amber" data-filter="PENDING" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">⏳ Pending (431)</button>
+              <button type="button" class="pill-badge pill-badge-emerald" data-filter="UPGRADED" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">? Upgraded (7)</button>
+              <button type="button" class="pill-badge pill-badge-amber" data-filter="PENDING" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem;">? Pending (431)</button>
             </div>
             <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-              <input type="text" id="upgStudentSearchInput" class="modern-input" placeholder="🔍 Search Student ID, Rep, Team..." style="width: 250px; font-size: 0.8rem; padding: 6px 12px;">
+              <input type="text" id="upgStudentSearchInput" class="modern-input" placeholder="?? Search Student ID, Rep, Team..." style="width: 250px; font-size: 0.8rem; padding: 6px 12px;">
               <button type="button" id="btnExportFilteredUpg" class="pill-badge pill-badge-cyan" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem; border: none;">
-                📥 Export Filtered View (CSV)
+                ?? Export Filtered View (CSV)
               </button>
             </div>
           </div>
@@ -946,9 +948,9 @@
           <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #94a3b8;">
             <div id="upgTablePaginationInfo">Showing 1-25 of 438 student accounts</div>
             <div style="display: flex; align-items: center; gap: 6px;">
-              <button type="button" id="btnUpgPrevPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">◀ Prev</button>
+              <button type="button" id="btnUpgPrevPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">? Prev</button>
               <span id="upgCurrentPageDisplay" style="color: #fff; font-weight: 700; font-family: var(--font-mono); margin: 0 4px;">1 / 20</span>
-              <button type="button" id="btnUpgNextPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">Next ▶</button>
+              <button type="button" id="btnUpgNextPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">Next ?</button>
               <select id="upgPageSizeSelect" class="modern-select" style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">
                 <option value="25" selected>25 per page</option>
                 <option value="50">50 per page</option>
@@ -973,7 +975,7 @@
       <div class="section-header">
         <div>
           <h2 style="display: flex; align-items: center; gap: 10px;">
-            <span>🎯</span> Uncovered Leads &amp; Outreach Prioritization Hub
+            <span>??</span> Uncovered Leads &amp; Outreach Prioritization Hub
             <span class="status-badge" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4); font-size: 0.75rem; padding: 2px 8px;">
               STUDENT_DETAIL26 COL H = 0
             </span>
@@ -1037,7 +1039,7 @@
           <div>
             <span style="font-size: 0.72rem; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.06em;">Self-Service Export Center</span>
             <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 2px 0 0 0; display: flex; align-items: center; gap: 8px;">
-              <span>📥</span> Download Uncovered Leads Data (Individual SS, Small Teams &amp; Master)
+              <span>??</span> Download Uncovered Leads Data (Individual SS, Small Teams &amp; Master)
             </h3>
           </div>
           <a href="leads/uncovered_leads/Master_Uncovered_Leads.csv" download="Master_Uncovered_Leads.csv" class="pill-badge pill-badge-cyan" style="text-decoration: none; padding: 8px 16px; font-size: 0.82rem; font-weight: 700; display: flex; align-items: center; gap: 6px;">
@@ -1051,14 +1053,14 @@
           <!-- Individual SS Download Selector -->
           <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.05);">
             <label style="display: block; font-size: 0.78rem; font-weight: 700; color: #a5b4fc; margin-bottom: 8px;">
-              👤 Download for Specific Sales Specialist (19 Reps Available):
+              ?? Download for Specific Sales Specialist (19 Reps Available):
             </label>
             <div style="display: flex; gap: 8px; align-items: center;">
               <select id="uncovRepDownloadSelect" class="modern-select" style="flex: 1; padding: 8px 12px; font-size: 0.82rem; border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 6px;">
                 <!-- Populated dynamically with all 19 reps -->
               </select>
               <button type="button" id="btnDownloadSelectedRep" class="pill-badge pill-badge-purple" style="cursor: pointer; padding: 8px 14px; font-size: 0.82rem; font-weight: 700; border: none; white-space: nowrap;">
-                📥 Download SS CSV
+                ?? Download SS CSV
               </button>
             </div>
           </div>
@@ -1066,7 +1068,7 @@
           <!-- Small Teams Fast Download Buttons -->
           <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.05);">
             <label style="display: block; font-size: 0.78rem; font-weight: 700; color: #34d399; margin-bottom: 8px;">
-              🏢 Small Teams Quick Download:
+              ?? Small Teams Quick Download:
             </label>
             <div style="display: flex; gap: 8px; flex-wrap: wrap;">
               <a href="leads/uncovered_leads/ME-EGSS01_Uncovered_Leads.csv" download="ME-EGSS01_Uncovered_Leads.csv" class="pill-badge" style="background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); text-decoration: none; padding: 6px 10px; font-size: 0.76rem; font-weight: 700;">
@@ -1097,22 +1099,22 @@
           <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: rgba(30, 41, 59, 0.5); padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05);">
             <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
               <span style="font-size: 0.78rem; font-weight: 800; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
-                ⚡ Sorting Priority:
+                ? Sorting Priority:
               </span>
               <button type="button" class="pill-badge active" id="btnSortPriority" data-sort="priority" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                🌟 Composite Priority (High Classes First + Oldest Connection First)
+                ?? Composite Priority (High Classes First + Oldest Connection First)
               </button>
               <button type="button" class="pill-badge" id="btnSortClasses" data-sort="classes" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                🎓 Highest Classes Attended First
+                ?? Highest Classes Attended First
               </button>
               <button type="button" class="pill-badge" id="btnSortOldestConn" data-sort="oldest" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                ⏳ Longest Uncontacted First (Oldest &rarr; Newest)
+                ? Longest Uncontacted First (Oldest &rarr; Newest)
               </button>
               <button type="button" class="pill-badge" id="btnSortNewestConn" data-sort="newest" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                🆕 Recently Contacted First (Newest &rarr; Oldest)
+                ?? Recently Contacted First (Newest &rarr; Oldest)
               </button>
               <button type="button" class="pill-badge" id="btnSortStuId" data-sort="id" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                🆔 Student ID
+                ?? Student ID
               </button>
             </div>
             <div style="font-size: 0.72rem; color: #94a3b8; font-family: var(--font-mono);">
@@ -1131,9 +1133,9 @@
               <button type="button" class="pill-badge" data-team="ME-EGSS13" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 13 (919)</button>
               <button type="button" class="pill-badge" data-team="ME-EGSS30" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 30 (656)</button>
               <span style="color: rgba(255,255,255,0.2); margin: 0 4px;">|</span>
-              <button type="button" class="pill-badge pill-badge-amber" data-tier="HIGH" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">🔥 High (&ge;8 cls)</button>
-              <button type="button" class="pill-badge pill-badge-emerald" data-tier="MED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">⭐ Regular (&ge;4 cls)</button>
-              <button type="button" class="pill-badge pill-badge-purple" data-tier="UNCONTACTED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">⏳ Uncontacted (1,834)</button>
+              <button type="button" class="pill-badge pill-badge-amber" data-tier="HIGH" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">?? High (&ge;8 cls)</button>
+              <button type="button" class="pill-badge pill-badge-emerald" data-tier="MED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">? Regular (&ge;4 cls)</button>
+              <button type="button" class="pill-badge pill-badge-purple" data-tier="UNCONTACTED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">? Uncontacted (1,834)</button>
             </div>
 
             <!-- Rep Dropdown, Search & Export View -->
@@ -1149,9 +1151,9 @@
                 <option value="FOE Non-0">FOE Non-0</option>
                 <option value="period">period</option>
               </select>
-              <input type="text" id="uncovStudentSearchInput" class="modern-input" placeholder="🔍 Search Student ID, Rep, Source..." style="width: 220px; font-size: 0.8rem; padding: 6px 12px;">
+              <input type="text" id="uncovStudentSearchInput" class="modern-input" placeholder="?? Search Student ID, Rep, Source..." style="width: 220px; font-size: 0.8rem; padding: 6px 12px;">
               <button type="button" id="btnExportFilteredUncov" class="pill-badge pill-badge-cyan" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem; border: none; white-space: nowrap;">
-                📥 Export Filtered View (CSV)
+                ?? Export Filtered View (CSV)
               </button>
             </div>
           </div>
@@ -1185,11 +1187,11 @@
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: #94a3b8;">
           <div id="uncovTablePaginationInfo">Showing 1-25 of 5,196 student accounts</div>
           <div style="display: flex; align-items: center; gap: 6px;">
-            <button type="button" id="btnUncovFirstPage" class="pill-badge" style="cursor: pointer; padding: 4px 8px;">⏮ First</button>
-            <button type="button" id="btnUncovPrevPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">◀ Prev</button>
+            <button type="button" id="btnUncovFirstPage" class="pill-badge" style="cursor: pointer; padding: 4px 8px;">? First</button>
+            <button type="button" id="btnUncovPrevPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">? Prev</button>
             <span id="uncovCurrentPageDisplay" style="color: #fff; font-weight: 700; font-family: var(--font-mono); margin: 0 4px;">1 / 208</span>
-            <button type="button" id="btnUncovNextPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">Next ▶</button>
-            <button type="button" id="btnUncovLastPage" class="pill-badge" style="cursor: pointer; padding: 4px 8px;">Last ⏭</button>
+            <button type="button" id="btnUncovNextPage" class="pill-badge" style="cursor: pointer; padding: 4px 10px;">Next ?</button>
+            <button type="button" id="btnUncovLastPage" class="pill-badge" style="cursor: pointer; padding: 4px 8px;">Last ?</button>
             <select id="uncovPageSizeSelect" class="modern-select" style="padding: 2px 8px; font-size: 0.75rem; margin-left: 8px;">
               <option value="25" selected>25 per page</option>
               <option value="50">50 per page</option>
@@ -1205,7 +1207,7 @@
       <div class="section-header">
         <div>
           <h2 style="display: flex; align-items: center; gap: 10px;">
-            <span>🗣️</span> Big Team 01 — English Club Strategic Adoption Hub
+            <span>???</span> Big Team 01 � English Club Strategic Adoption Hub
             <span class="status-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); font-size: 0.75rem; padding: 2px 8px;">BENCHMARK TARGET: 45.0% OF BASE</span>
           </h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
@@ -1234,7 +1236,7 @@
       <div class="table-wrapper">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding: 0 4px; flex-wrap: wrap; gap: 10px;">
           <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
-            <span>📋</span> Individual Sales Rep English Club Adoption Roster (19 Reps)
+            <span>??</span> Individual Sales Rep English Club Adoption Roster (19 Reps)
           </h3>
           <div style="display: flex; gap: 10px; align-items: center;">
             <label style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Filter Team:</label>
@@ -1277,9 +1279,9 @@
             SOP Lifecycle Compliance Heatmap (Unified Sector vs Small Teams Matrix)
           </h3>
           <div style="display: flex; align-items: center; gap: 8px; font-size: 0.75rem;">
-            <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 2px 8px; border-radius: 4px; font-weight: 600;">🟢 Target Met (≥ Target)</span>
-            <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 2px 8px; border-radius: 4px; font-weight: 600;">🟡 Near Target (-10%)</span>
-            <span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; padding: 2px 8px; border-radius: 4px; font-weight: 600;">🔴 Action Needed (&lt; -10%)</span>
+            <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 2px 8px; border-radius: 4px; font-weight: 600;">?? Target Met (= Target)</span>
+            <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 2px 8px; border-radius: 4px; font-weight: 600;">?? Near Target (-10%)</span>
+            <span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; padding: 2px 8px; border-radius: 4px; font-weight: 600;">?? Action Needed (&lt; -10%)</span>
           </div>
         </div>
         <table class="data-table" id="sopMatrixTable" style="width: 100%;">
@@ -1350,7 +1352,7 @@
     <section id="tab-operations" class="tab-content">
       <div class="section-header">
         <div>
-          <h2>Operations Master — Daily Task Execution & Student Rescue</h2>
+          <h2>Operations Master � Daily Task Execution & Student Rescue</h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
             Cross-functional operational tasks from All in One Master (SS Pending SOP, Unfixed Teachers, Zero-Class Rescue, and English Club).
           </p>
@@ -1366,7 +1368,7 @@
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
           <div>
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-              <span style="font-size: 1.25rem;">📊</span>
+              <span style="font-size: 1.25rem;">??</span>
               <h3 style="font-size: 1.15rem; font-weight: 800; color: #fff; margin: 0;">Operational Leads &amp; Tasks Cockpit</h3>
               <span class="pulse-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 0.7rem; padding: 2px 8px; border-radius: 6px; font-weight: 700;">LIVE METRICS</span>
             </div>
@@ -1384,7 +1386,7 @@
             <div>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                 <div style="display: flex; align-items: center; gap: 8px;">
-                  <span style="font-size: 1.1rem;">👤</span>
+                  <span style="font-size: 1.1rem;">??</span>
                   <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">1. Individual Sales Rep Breakdown</h4>
                 </div>
                 <span style="font-size: 0.68rem; background: rgba(99, 102, 241, 0.15); color: #818cf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">19 REPS</span>
@@ -1404,7 +1406,7 @@
             <div>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                 <div style="display: flex; align-items: center; gap: 8px;">
-                  <span style="font-size: 1.1rem;">👥</span>
+                  <span style="font-size: 1.1rem;">??</span>
                   <h4 style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 0;">2. Small Team Breakdown</h4>
                 </div>
                 <span style="font-size: 0.68rem; background: rgba(6, 182, 212, 0.15); color: #38bdf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">5 SMALL TEAMS</span>
@@ -1420,7 +1422,7 @@
                 <option value="ME-EGSS10">ME-EGSS10 (Abdelrhman Shehata - Team 10)</option>
                 <option value="ME-EGSS13">ME-EGSS13 (Mohamedha - Team 13)</option>
                 <option value="ME-EGSS30">ME-EGSS30 (Hussein El A'sar - Team 30)</option>
-                <option value="BIG_TEAM_01">⭐ Big Team 01 (All Teams Combined / Sector Total)</option>
+                <option value="BIG_TEAM_01">? Big Team 01 (All Teams Combined / Sector Total)</option>
               </select>
             </div>
           </div>
@@ -1430,7 +1432,7 @@
         <!-- Dynamic Rep Personal Mini-Cockpit -->
         <div id="repPersonalSummary" style="display: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-            <span style="font-size: 0.84rem; font-weight: 800; color: #10b981;">👤 Representative Individual Summary:</span>
+            <span style="font-size: 0.84rem; font-weight: 800; color: #10b981;">?? Representative Individual Summary:</span>
           </div>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;" id="repSummaryCards">
             <!-- Injected dynamically -->
@@ -1471,7 +1473,7 @@
               <span style="background: #f59e0b; color: #0f172a; font-size: 0.65rem; padding: 2px 8px; border-radius: 6px; font-weight: 900;">OFFICIAL RATE CARD</span>
             </div>
             <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 3px;">
-              Single &amp; Family (2 &amp; 3 Kids) • Upgrade &amp; Renewal • Approved prices with +10% markup &amp; Professional Program bonuses
+              Single &amp; Family (2 &amp; 3 Kids) � Upgrade &amp; Renewal � Approved prices with +10% markup &amp; Professional Program bonuses
             </div>
           </div>
         </div>
@@ -1482,14 +1484,14 @@
             font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 6px;
             box-shadow: 0 0 14px rgba(245, 158, 11, 0.35); transition: transform 0.15s;
           " onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='none'">
-            <span>🏷️</span> View Rates Below ↓
+            <span>???</span> View Rates Below ?
           </button>
           <a href="calculator.html" target="_blank" style="
             padding: 9px 16px; background: rgba(255,255,255,0.06);
             border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 8px; color: #fcd34d; font-size: 0.82rem;
             font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;
           ">
-            <span>🚀</span> Open Full Generator ↗
+            <span>??</span> Open Full Generator ?
           </a>
         </div>
       </div>
@@ -1541,19 +1543,19 @@
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
         <div class="op-module-pills" style="margin-bottom: 0;">
           <button class="op-pill p1 active" onclick="switchOperationsModule(1)" id="opPill1">
-            <span>📋</span> Module 1: SOP Pending (557 Tasks) (SOP Tasks)
+            <span>??</span> Module 1: SOP Pending (557 Tasks) (SOP Tasks)
           </button>
           <button class="op-pill p2" onclick="switchOperationsModule(2)" id="opPill2">
-            <span>👩‍🏫</span> Module 2: Unfixed Teachers (1,680 Leads - M0/M1/M2)
+            <span>?????</span> Module 2: Unfixed Teachers (1,680 Leads - M0/M1/M2)
           </button>
           <button class="op-pill p3" onclick="switchOperationsModule(3)" id="opPill3">
-            <span>🎓</span> Module 3: Class Consumption & Zero-Class (82% Goal)
+            <span>??</span> Module 3: Class Consumption & Zero-Class (82% Goal)
           </button>
           <button class="op-pill p4" onclick="switchOperationsModule(4)" id="opPill4">
-            <span>🗣️</span> Module 4: English Club (45% Goal)
+            <span>???</span> Module 4: English Club (45% Goal)
           </button>
           <button class="op-pill p5" onclick="document.getElementById('pkg-calc-section').scrollIntoView({behavior: 'smooth'})" id="opPill5" style="border: 1.5px solid rgba(245, 158, 11, 0.7); background: rgba(245, 158, 11, 0.16); color: #fcd34d; font-weight: 700;">
-            <span>🏷️</span> 51 Talk Packages Calculator
+            <span>???</span> 51 Talk Packages Calculator
           </button>
         </div>
 
@@ -1576,7 +1578,7 @@
       </div>
 
       <!-- ============================================================ -->
-      <!-- 51 TALK PACKAGES CALCULATOR — Embedded Rate Card Tool        -->
+      <!-- 51 TALK PACKAGES CALCULATOR � Embedded Rate Card Tool        -->
       <!-- ============================================================ -->
       <div id="pkg-calc-section" style="margin-top: 36px;">
 
@@ -1606,7 +1608,7 @@
                 <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; font-size: 0.65rem; padding: 2px 8px; border-radius: 6px; font-weight: 900; letter-spacing: 0.3px;">RATE CARD</span>
               </h3>
               <p style="font-size: 0.8rem; color: #94a3b8; margin: 3px 0 0 0;">
-                Official Upgrade &amp; Renewal pricing tool — Includes all package tiers, Professional Program discounts &amp; offer card generator
+                Official Upgrade &amp; Renewal pricing tool � Includes all package tiers, Professional Program discounts &amp; offer card generator
               </p>
             </div>
           </div>
@@ -1661,24 +1663,24 @@
               background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a;
               font-size: 0.78rem; font-weight: 800; cursor: pointer; font-family: inherit;
             ">
-              👤 Single (1 Student)
+              ?? Single (1 Student)
             </button>
             <button onclick="pkgShowTab('family2')" id="pkg-btn-family2" style="
               padding: 7px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12);
               background: transparent; color: #94a3b8;
               font-size: 0.78rem; font-weight: 700; cursor: pointer; font-family: inherit;
             ">
-              👨‍👧 Family (2 Kids)
+              ????? Family (2 Kids)
             </button>
             <button onclick="pkgShowTab('family3')" id="pkg-btn-family3" style="
               padding: 7px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12);
               background: transparent; color: #94a3b8;
               font-size: 0.78rem; font-weight: 700; cursor: pointer; font-family: inherit;
             ">
-              👨‍👩‍👧‍👦 Family (3 Kids)
+              ??????????? Family (3 Kids)
             </button>
             <div style="margin-left: auto; font-size: 0.72rem; color: #64748b;">
-              💡 All prices include +10% approved markup • Professional Program rates shown
+              ?? All prices include +10% approved markup � Professional Program rates shown
             </div>
           </div>
 
@@ -1698,7 +1700,7 @@
                     border: 1px solid rgba(245,158,11,0.3);
                   ">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    Upgrade — Single Student
+                    Upgrade � Single Student
                   </div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead>
@@ -1713,49 +1715,49 @@
                     <tbody>
                       <tr style="background: rgba(255,255,255,0.02);">
                         <td style="padding: 8px 11px; color: #e2e8f0;">6 Months</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">75 <span style="color: #00f5a0; font-size: 0.7rem;">+15🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">75 <span style="color: #00f5a0; font-size: 0.7rem;">+15??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">3,174</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,393</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">781</td>
                       </tr>
                       <tr>
                         <td style="padding: 8px 11px; color: #e2e8f0;">7 Months</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">90 <span style="color: #00f5a0; font-size: 0.7rem;">+20🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">90 <span style="color: #00f5a0; font-size: 0.7rem;">+20??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">3,300</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,607</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">693</td>
                       </tr>
                       <tr style="background: rgba(255,255,255,0.02);">
                         <td style="padding: 8px 11px; color: #e2e8f0;">9 Months</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">105 <span style="color: #00f5a0; font-size: 0.7rem;">+25🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">105 <span style="color: #00f5a0; font-size: 0.7rem;">+25??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">3,609</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,888</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">721</td>
                       </tr>
                       <tr style="background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent);">
-                        <td style="padding: 8px 11px; color: #fcd34d; font-weight: 800;">1 Year 🔥</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">150 <span style="color: #00f5a0; font-size: 0.7rem;">+35🎁</span></td>
+                        <td style="padding: 8px 11px; color: #fcd34d; font-weight: 800;">1 Year ??</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">150 <span style="color: #00f5a0; font-size: 0.7rem;">+35??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">6,380</td>
                         <td style="padding: 8px 11px; text-align: center; color: #f59e0b; font-weight: 900; font-size: 0.9rem;">3,630</td>
                         <td style="padding: 8px 11px; text-align: center; color: #34d399; font-weight: 800;">2,750</td>
                       </tr>
                       <tr>
                         <td style="padding: 8px 11px; color: #e2e8f0;">1.5 Years</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">225 <span style="color: #00f5a0; font-size: 0.7rem;">+50🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">225 <span style="color: #00f5a0; font-size: 0.7rem;">+50??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">9,653</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">5,280</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">4,373</td>
                       </tr>
                       <tr style="background: rgba(255,255,255,0.02);">
                         <td style="padding: 8px 11px; color: #e2e8f0;">2 Years</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">300 <span style="color: #00f5a0; font-size: 0.7rem;">+75🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">300 <span style="color: #00f5a0; font-size: 0.7rem;">+75??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">12,458</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">6,848</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">5,610</td>
                       </tr>
                       <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);">
-                        <td style="padding: 8px 11px; color: #a5b4fc; font-weight: 800;">2.5 Years 💎</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">375 <span style="color: #00f5a0; font-size: 0.7rem;">+100🎁</span></td>
+                        <td style="padding: 8px 11px; color: #a5b4fc; font-weight: 800;">2.5 Years ??</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">375 <span style="color: #00f5a0; font-size: 0.7rem;">+100??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">15,675</td>
                         <td style="padding: 8px 11px; text-align: center; color: #818cf8; font-weight: 900; font-size: 0.9rem;">8,580</td>
                         <td style="padding: 8px 11px; text-align: center; color: #34d399; font-weight: 800;">7,095</td>
@@ -1773,7 +1775,7 @@
                     border: 1px solid rgba(56,189,248,0.3);
                   ">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-                    Renewal — Single Student
+                    Renewal � Single Student
                   </div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead>
@@ -1788,49 +1790,49 @@
                     <tbody>
                       <tr style="background: rgba(255,255,255,0.02);">
                         <td style="padding: 8px 11px; color: #e2e8f0;">6 Months</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">75 <span style="color: #00f5a0; font-size: 0.7rem;">+15🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">75 <span style="color: #00f5a0; font-size: 0.7rem;">+15??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">2,970</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,723</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">247</td>
                       </tr>
                       <tr>
                         <td style="padding: 8px 11px; color: #e2e8f0;">7 Months</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">90 <span style="color: #00f5a0; font-size: 0.7rem;">+20🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">90 <span style="color: #00f5a0; font-size: 0.7rem;">+20??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">3,494</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">2,970</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">524</td>
                       </tr>
                       <tr style="background: rgba(255,255,255,0.02);">
                         <td style="padding: 8px 11px; color: #e2e8f0;">9 Months</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">105 <span style="color: #00f5a0; font-size: 0.7rem;">+25🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">105 <span style="color: #00f5a0; font-size: 0.7rem;">+25??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">4,125</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">3,300</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">825</td>
                       </tr>
                       <tr style="background: linear-gradient(90deg, rgba(14,165,233,0.1), transparent);">
-                        <td style="padding: 8px 11px; color: #7dd3fc; font-weight: 800;">1 Year 🔥</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">150 <span style="color: #00f5a0; font-size: 0.7rem;">+35🎁</span></td>
+                        <td style="padding: 8px 11px; color: #7dd3fc; font-weight: 800;">1 Year ??</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">150 <span style="color: #00f5a0; font-size: 0.7rem;">+35??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">6,903</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8; font-weight: 900; font-size: 0.9rem;">4,208</td>
                         <td style="padding: 8px 11px; text-align: center; color: #34d399; font-weight: 800;">2,695</td>
                       </tr>
                       <tr>
                         <td style="padding: 8px 11px; color: #e2e8f0;">1.5 Years</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">225 <span style="color: #00f5a0; font-size: 0.7rem;">+50🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">225 <span style="color: #00f5a0; font-size: 0.7rem;">+50??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">10,973</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">6,023</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">4,950</td>
                       </tr>
                       <tr style="background: rgba(255,255,255,0.02);">
                         <td style="padding: 8px 11px; color: #e2e8f0;">2 Years</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">300 <span style="color: #00f5a0; font-size: 0.7rem;">+75🎁</span></td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">300 <span style="color: #00f5a0; font-size: 0.7rem;">+75??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">13,695</td>
                         <td style="padding: 8px 11px; text-align: center; color: #10b981; font-weight: 800; font-size: 0.85rem;">7,508</td>
                         <td style="padding: 8px 11px; text-align: center; color: #38bdf8;">6,187</td>
                       </tr>
                       <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);">
-                        <td style="padding: 8px 11px; color: #a5b4fc; font-weight: 800;">2.5 Years 💎</td>
-                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">375 <span style="color: #00f5a0; font-size: 0.7rem;">+100🎁</span></td>
+                        <td style="padding: 8px 11px; color: #a5b4fc; font-weight: 800;">2.5 Years ??</td>
+                        <td style="padding: 8px 11px; text-align: center; color: #fff; font-weight: 700;">375 <span style="color: #00f5a0; font-size: 0.7rem;">+100??</span></td>
                         <td style="padding: 8px 11px; text-align: center; color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">16,253</td>
                         <td style="padding: 8px 11px; text-align: center; color: #818cf8; font-weight: 900; font-size: 0.9rem;">8,910</td>
                         <td style="padding: 8px 11px; text-align: center; color: #34d399; font-weight: 800;">7,343</td>
@@ -1846,7 +1848,7 @@
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
                 <div>
                   <div style="font-size: 0.78rem; font-weight: 800; color: #fcd34d; padding: 6px 12px; background: rgba(245,158,11,0.12); border-radius: 6px; border: 1px solid rgba(245,158,11,0.3); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
-                    ⭐ Upgrade — Family 2 Kids
+                    ? Upgrade � Family 2 Kids
                   </div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead><tr style="background: rgba(15,23,42,0.98);">
@@ -1859,14 +1861,14 @@
                       <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">6 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">150 / 75</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">8,745</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">4,455</td></tr>
                       <tr><td style="padding:8px 11px; color:#e2e8f0;">7 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">180 / 90</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">11,330</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">4,884</td></tr>
                       <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">9 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">210 / 105</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">12,595</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">5,396</td></tr>
-                      <tr style="background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent);"><td style="padding:8px 11px; color:#fcd34d; font-weight:800;">1 Year 🌟</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">300 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">13,200</td><td style="padding:8px 11px; text-align:center; color:#f59e0b; font-weight:900; font-size:0.9rem;">6,848</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent);"><td style="padding:8px 11px; color:#fcd34d; font-weight:800;">1 Year ??</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">300 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">13,200</td><td style="padding:8px 11px; text-align:center; color:#f59e0b; font-weight:900; font-size:0.9rem;">6,848</td></tr>
                       <tr><td style="padding:8px 11px; color:#e2e8f0;">1.5 Years</td><td style="padding:8px 11px; text-align:center; color:#fff;">450 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">19,305</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">9,653</td></tr>
                     </tbody>
                   </table>
                 </div>
                 <div>
                   <div style="font-size: 0.78rem; font-weight: 800; color: #7dd3fc; padding: 6px 12px; background: rgba(14,165,233,0.12); border-radius: 6px; border: 1px solid rgba(56,189,248,0.3); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
-                    🔄 Renewal — Family 2 Kids
+                    ?? Renewal � Family 2 Kids
                   </div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead><tr style="background: rgba(15,23,42,0.98);">
@@ -1879,7 +1881,7 @@
                       <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">6 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">150 / 75</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">7,865</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">4,785</td></tr>
                       <tr><td style="padding:8px 11px; color:#e2e8f0;">7 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">180 / 90</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">9,350</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">5,033</td></tr>
                       <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">9 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">210 / 105</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">10,615</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">5,528</td></tr>
-                      <tr style="background: linear-gradient(90deg, rgba(14,165,233,0.1), transparent);"><td style="padding:8px 11px; color:#7dd3fc; font-weight:800;">1 Year 🌟</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">300 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">15,345</td><td style="padding:8px 11px; text-align:center; color:#38bdf8; font-weight:900; font-size:0.9rem;">7,219</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(14,165,233,0.1), transparent);"><td style="padding:8px 11px; color:#7dd3fc; font-weight:800;">1 Year ??</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">300 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">15,345</td><td style="padding:8px 11px; text-align:center; color:#38bdf8; font-weight:900; font-size:0.9rem;">7,219</td></tr>
                       <tr><td style="padding:8px 11px; color:#e2e8f0;">1.5 Years</td><td style="padding:8px 11px; text-align:center; color:#fff;">450 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">21,945</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">10,148</td></tr>
                     </tbody>
                   </table>
@@ -1891,7 +1893,7 @@
             <div id="pkg-pane-family3" style="display:none;">
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
                 <div>
-                  <div style="font-size: 0.78rem; font-weight: 800; color: #fcd34d; padding: 6px 12px; background: rgba(245,158,11,0.12); border-radius: 6px; border: 1px solid rgba(245,158,11,0.3); margin-bottom: 10px;">⭐ Upgrade — Family 3 Kids</div>
+                  <div style="font-size: 0.78rem; font-weight: 800; color: #fcd34d; padding: 6px 12px; background: rgba(245,158,11,0.12); border-radius: 6px; border: 1px solid rgba(245,158,11,0.3); margin-bottom: 10px;">? Upgrade � Family 3 Kids</div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead><tr style="background: rgba(15,23,42,0.98);">
                       <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(245,158,11,0.25);">Duration</th>
@@ -1903,13 +1905,13 @@
                       <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">6 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">225 / 75</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">13,118</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">5,990</td></tr>
                       <tr><td style="padding:8px 11px; color:#e2e8f0;">7 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">270 / 90</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">7,370</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">6,633</td></tr>
                       <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">9 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">315 / 105</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">9,220</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">7,376</td></tr>
-                      <tr style="background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent);"><td style="padding:8px 11px; color:#fcd34d; font-weight:800;">1 Year 🏆</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">450 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">19,800</td><td style="padding:8px 11px; text-align:center; color:#f59e0b; font-weight:900; font-size:0.9rem;">9,702</td></tr>
-                      <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);"><td style="padding:8px 11px; color:#a5b4fc; font-weight:800;">1.5 Years 👑</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">675 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">28,958</td><td style="padding:8px 11px; text-align:center; color:#818cf8; font-weight:900; font-size:0.9rem;">13,662</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(245,158,11,0.12), transparent);"><td style="padding:8px 11px; color:#fcd34d; font-weight:800;">1 Year ??</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">450 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">19,800</td><td style="padding:8px 11px; text-align:center; color:#f59e0b; font-weight:900; font-size:0.9rem;">9,702</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);"><td style="padding:8px 11px; color:#a5b4fc; font-weight:800;">1.5 Years ??</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">675 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">28,958</td><td style="padding:8px 11px; text-align:center; color:#818cf8; font-weight:900; font-size:0.9rem;">13,662</td></tr>
                     </tbody>
                   </table>
                 </div>
                 <div>
-                  <div style="font-size: 0.78rem; font-weight: 800; color: #7dd3fc; padding: 6px 12px; background: rgba(14,165,233,0.12); border-radius: 6px; border: 1px solid rgba(56,189,248,0.3); margin-bottom: 10px;">🔄 Renewal — Family 3 Kids</div>
+                  <div style="font-size: 0.78rem; font-weight: 800; color: #7dd3fc; padding: 6px 12px; background: rgba(14,165,233,0.12); border-radius: 6px; border: 1px solid rgba(56,189,248,0.3); margin-bottom: 10px;">?? Renewal � Family 3 Kids</div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead><tr style="background: rgba(15,23,42,0.98);">
                       <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(56,189,248,0.2);">Duration</th>
@@ -1921,8 +1923,8 @@
                       <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">6 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">225 / 75</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">7,260</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">6,485</td></tr>
                       <tr><td style="padding:8px 11px; color:#e2e8f0;">7 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">270 / 90</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">8,030</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">6,782</td></tr>
                       <tr style="background: rgba(255,255,255,0.02);"><td style="padding:8px 11px; color:#e2e8f0;">9 Months</td><td style="padding:8px 11px; text-align:center; color:#fff;">315 / 105</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">8,910</td><td style="padding:8px 11px; text-align:center; color:#10b981; font-weight:800;">7,574</td></tr>
-                      <tr style="background: linear-gradient(90deg, rgba(14,165,233,0.1), transparent);"><td style="padding:8px 11px; color:#7dd3fc; font-weight:800;">1 Year 🏆</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">450 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">23,018</td><td style="padding:8px 11px; text-align:center; color:#38bdf8; font-weight:900; font-size:0.9rem;">10,024</td></tr>
-                      <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);"><td style="padding:8px 11px; color:#a5b4fc; font-weight:800;">1.5 Years 👑</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">675 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">32,918</td><td style="padding:8px 11px; text-align:center; color:#818cf8; font-weight:900; font-size:0.9rem;">14,108</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(14,165,233,0.1), transparent);"><td style="padding:8px 11px; color:#7dd3fc; font-weight:800;">1 Year ??</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">450 / 150</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">23,018</td><td style="padding:8px 11px; text-align:center; color:#38bdf8; font-weight:900; font-size:0.9rem;">10,024</td></tr>
+                      <tr style="background: linear-gradient(90deg, rgba(99,102,241,0.1), transparent);"><td style="padding:8px 11px; color:#a5b4fc; font-weight:800;">1.5 Years ??</td><td style="padding:8px 11px; text-align:center; color:#fff; font-weight:700;">675 / 225</td><td style="padding:8px 11px; text-align:center; color:#9ca3af; text-decoration:line-through; text-decoration-color:#ef4444;">32,918</td><td style="padding:8px 11px; text-align:center; color:#818cf8; font-weight:900; font-size:0.9rem;">14,108</td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -1938,9 +1940,9 @@
             ">
               <span><span style="color: #9ca3af; text-decoration: line-through; text-decoration-color: #ef4444;">Official</span> = Official tuition (with red strike)</span>
               <span><span style="color: #10b981; font-weight: 800;">Pro Price</span> = Professional Program discounted price</span>
-              <span><span style="color: #00f5a0;">🎁 N</span> = Free bonus classes</span>
-              <span>All prices in <strong style="color: #fcd34d;">SAR (ر.س)</strong></span>
-              <a href="http://localhost:5173" target="_blank" style="color: #6366f1; font-weight: 700; text-decoration: none; margin-left: auto;">🔗 Full Rate Card Tool →</a>
+              <span><span style="color: #00f5a0;">?? N</span> = Free bonus classes</span>
+              <span>All prices in <strong style="color: #fcd34d;">SAR</strong></span>
+              <a href="http://localhost:5173" target="_blank" style="color: #6366f1; font-weight: 700; text-decoration: none; margin-left: auto;">?? Full Rate Card Tool ?</a>
             </div>
           </div>
         </div>
@@ -1980,7 +1982,7 @@
     <section id="tab-comparison" class="tab-content">
       <div class="section-header">
         <div>
-          <h2>Performance Comparison — Yesterday vs Today</h2>
+          <h2>Performance Comparison � Yesterday vs Today</h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
             Side-by-side comparison of every rep's Class Consumption, Upgrade Rate, and English Club across two snapshots.
           </p>
@@ -2026,12 +2028,12 @@
     <section id="tab-mtd" class="tab-content">
       <div class="section-header">
         <div>
-          <h2>MTD Performance Trajectory &amp; Daily Evolution (Day 3 — 31)</h2>
+          <h2>MTD Performance Trajectory &amp; Daily Evolution (Day 3 � 31)</h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
             Cumulative month-to-date tracking across all October operational days with interactive multi-metric charts and rep velocity.
           </p>
         </div>
-        <span class="source-tag">Timeline: 1 Nov → 7 Nov (MTD Day 16/30)</span>
+        <span class="source-tag">Timeline: 1 Nov ? 7 Nov (MTD Day 16/30)</span>
       </div>
 
       <!-- Controls & Filters -->
@@ -2039,17 +2041,17 @@
         <div style="display: flex; align-items: center; gap: 8px;">
           <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Operational Metric:</label>
           <select id="mtdMetricFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(99, 102, 241, 0.4); " onchange="renderMtdTab()">
-            <option value="consumption">🟢 Class Consumption (82% Goal)</option>
-            <option value="englishClub">🔵 English Club (45% Goal)</option>
-            <option value="unfixed">🟡 Fixed Teacher Binding (83% Goal)</option>
-            <option value="upgrade">🟣 Early Upgrade M2 (20% Goal)</option>
+            <option value="consumption">?? Class Consumption (82% Goal)</option>
+            <option value="englishClub">?? English Club (45% Goal)</option>
+            <option value="unfixed">?? Fixed Teacher Binding (83% Goal)</option>
+            <option value="upgrade">?? Early Upgrade M2 (20% Goal)</option>
           </select>
         </div>
 
         <div style="display: flex; align-items: center; gap: 8px;">
           <label style="font-size: 0.82rem; color: #a5b4fc; font-weight: 700;">Filter Team:</label>
           <select id="mtdTeamFilter" class="filter-select" style="padding: 8px 14px; font-size: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); " onchange="renderMtdTab()">
-            <option value="ALL">⭐ All Teams (Big Team 01 - Sector Overview)</option>
+            <option value="ALL">? All Teams (Big Team 01 - Sector Overview)</option>
             <option value="ME-EGSS01" style="color: #818cf8;">ME-EGSS01 (Ashraqatal - Team 01)</option>
             <option value="ME-EGSS05" style="color: #22d3ee;">ME-EGSS05 (Ibrahim Abd El Shakour - Team 05)</option>
             <option value="ME-EGSS10" style="color: #34d399;">ME-EGSS10 (Abdelrhman Shehata - Team 10)</option>
@@ -2069,7 +2071,7 @@
             <h3 style="font-size: 1.05rem; font-weight: 800; color: #fff; margin: 0;">Multi-Day Trajectory Curve</h3>
             <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 3px;">Dynamic day-by-day progression against official benchmark targets.</p>
           </div>
-          <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px;">Day 3 → Day 31 Progression</span>
+          <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px;">Day 3 ? Day 31 Progression</span>
         </div>
         <div style="position: relative; height: 340px; width: 100%;">
           <canvas id="mtdChartCanvas"></canvas>
@@ -2085,7 +2087,7 @@
     <!-- Footer -->
     <footer class="dashboard-footer">
       <div class="footer-left">
-        <span>Big Team 01 — ME-EGSS01 | Senior Manager: <strong>Hussein El A'sar</strong></span>
+        <span>Big Team 01 � ME-EGSS01 | Senior Manager: <strong>Hussein El A'sar</strong></span>
       </div>
       <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dim);">
         <span id="dataTimestamp">Last Update: Nov 7, 2026</span>
@@ -2191,8 +2193,9 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261116_164707" defer></script>
-  <script src="dashboard_ai_command_suite.js?v=20261116_164707" defer></script>
+  <script src="dashboard.js?v=1794861581779" defer></script>
+  <script src="dashboard_ai_command_suite.js?v=1794861581779" defer></script>
+  <script src="dashboard_voice_assistant.js?v=1794861581779" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link
@@ -2205,7 +2208,7 @@
         const btnText = document.getElementById('navShareBtnText');
         if (btnText) {
           const orig = btnText.textContent;
-          btnText.textContent = '✓ Copied Link!';
+          btnText.textContent = '? Copied Link!';
           setTimeout(() => { btnText.textContent = orig; }, 3000);
         }
         showShareToast(fullShareUrl);
@@ -2270,7 +2273,7 @@
       const icon = document.getElementById('themeToggleIcon');
       const txt = document.getElementById('themeToggleText');
       if (icon && txt) {
-        icon.textContent = isLight ? '🌙' : '☀️';
+        icon.textContent = isLight ? '??' : '??';
         txt.textContent = isLight ? 'Dark Mode' : 'Light Mode';
       }
     }
@@ -2283,7 +2286,7 @@
           document.documentElement.classList.remove('light-theme');
           const icon = document.getElementById('themeToggleIcon');
           const txt = document.getElementById('themeToggleText');
-          if (icon && txt) { icon.textContent = '☀️'; txt.textContent = 'Light Mode'; }
+          if (icon && txt) { icon.textContent = '??'; txt.textContent = 'Light Mode'; }
         }
       } catch(e){}
     })();

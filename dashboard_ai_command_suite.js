@@ -1,13 +1,16 @@
 /**
  * Big Team 01 — AI Command Suite & Executive Voice Cockpit
- * Inspired by OCTOPUS Command Engine with Light Theme Native Styling
- * Features:
- *   1. Dual Currency Switcher (USD $ ⇄ SAR ر.س) at fixed 3.75 rate
- *   2. Voice AI Synthesis Engine (Web Speech API) with Executive Spoken Briefings
- *   3. Ask Big Team 01 Command Palette (Ctrl + K) with instant fuzzy search & filters
- *   4. Date Time-Travel Simulator Slider (Day 1 - 30 Pacing & Gap Simulation)
- *   5. Tactical Action Filter Pills (Behind BM, Zero Cash, 5+ No Deal, 100%+, Pods)
- *   6. Automated Bilingual Daily Action Plan (Top 3 Moves, Backlog, DingTalk copy)
+ * Inspired by OCTOPUS Command Engine with Native Light Theme Styling
+ * 100% English Corporate Standards
+ *
+ * Core Capabilities:
+ *   1. Interactive Conversational AI Voice Simulator (Speech Synthesis & Dialogue)
+ *   2. Dual Currency Switcher (USD $ ⇄ SAR) at official 3.75 rate
+ *   3. Interactive Date Time-Travel Pacing Simulator (Days 1–30)
+ *   4. Tactical Action Filter Pills (Behind BM, Zero Cash, Low Deals, Pods)
+ *   5. Ask Big Team 01 Command Palette (Ctrl + K) with fuzzy search
+ *   6. Automated English Daily Operational Action Plan (DingTalk ready)
+ *   7. Floating AI Voice Assistant Drawer
  */
 
 (function () {
@@ -18,10 +21,9 @@
   // =========================================================================
   const SAR_EXCHANGE_RATE = 3.75;
   let activeCurrency = localStorage.getItem('bt01_currency') || 'USD';
-  let activeSimulationDay = 16; // Live Day
+  let activeSimulationDay = 16;
   const LIVE_MTD_DAY = 16;
   let activeActionPill = 'all';
-  let dailyPlanLang = 'ar'; // 'ar' or 'en'
 
   const OFFICIAL_PACING = {
     1: 5,   2: 8,   3: 11,  4: 14,  5: 17,
@@ -38,11 +40,11 @@
   // =========================================================================
   function formatMoney(amountUSD) {
     if (amountUSD === null || amountUSD === undefined || isNaN(amountUSD)) {
-      return activeCurrency === 'SAR' ? '0 ر.س' : '$0';
+      return activeCurrency === 'SAR' ? '0 SAR' : '$0';
     }
     if (activeCurrency === 'SAR') {
       const sar = Math.round(amountUSD * SAR_EXCHANGE_RATE);
-      return sar.toLocaleString('en-US') + ' ر.س';
+      return sar.toLocaleString('en-US') + ' SAR';
     }
     return '$' + Math.round(amountUSD).toLocaleString('en-US');
   }
@@ -51,11 +53,9 @@
     activeCurrency = curr;
     try { localStorage.setItem('bt01_currency', curr); } catch (e) {}
     updateCurrencyButtons();
-    // Expose formatMoney globally for dashboard.js
     window.fmtCurr = formatMoney;
     window.__activeCurrency = curr;
-    
-    // Refresh main dashboard model if loaded
+
     if (window.__model) {
       if (typeof window.renderKPIs === 'function') window.renderKPIs(window.__model);
       if (typeof window.renderOverviewTable === 'function') window.renderOverviewTable(window.__model);
@@ -63,7 +63,6 @@
       if (typeof window.renderIndividualsTab === 'function') window.renderIndividualsTab(window.__model);
       if (typeof window.renderBigTeamSummary === 'function') window.renderBigTeamSummary(window.__model);
     }
-    // Update Daily Plan if rendered
     renderDailyActionPlan();
   }
 
@@ -85,53 +84,50 @@
   window.fmtCurr = formatMoney;
 
   // =========================================================================
-  // 3. AI VOICE SYNTHESIS ENGINE (WEB SPEECH API)
+  // 3. AI VOICE SYNTHESIS ENGINE (ENGLISH NATIVE)
   // =========================================================================
   const VoiceEngine = {
     isSpeaking: false,
     synth: window.speechSynthesis || null,
     currentUtterance: null,
+    speakingRate: 1.0,
 
-    speak(text, lang = 'ar') {
+    speak(text, onStartCallback = null, onEndCallback = null) {
       if (!this.synth) {
         console.warn('SpeechSynthesis API not supported in this browser.');
-        alert('ميزة القراءة الصوتية غير مدعومة في هذا المتصفح. يرجى استخدام Google Chrome أو Microsoft Edge.');
+        alert('Voice synthesis is not supported in this browser. Please use Google Chrome or Microsoft Edge.');
         return;
       }
       this.stop();
 
       const utter = new SpeechSynthesisUtterance(text);
-      utter.rate = 1.05;
+      utter.rate = this.speakingRate;
       utter.pitch = 1.0;
+      utter.lang = 'en-US';
 
-      // Select Voice
+      // Pick natural sounding English voice
       const voices = this.synth.getVoices();
-      if (lang === 'ar') {
-        const arVoice = voices.find(v => v.lang.startsWith('ar') || v.name.includes('Arabic') || v.name.includes('Maged') || v.name.includes('Hoda') || v.name.includes('Naayf'));
-        if (arVoice) utter.voice = arVoice;
-        utter.lang = 'ar-SA';
-      } else {
-        const enVoice = voices.find(v => (v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Jenny') || v.name.includes('Guy')))) || voices.find(v => v.lang.startsWith('en'));
-        if (enVoice) utter.voice = enVoice;
-        utter.lang = 'en-US';
-      }
+      const enVoice = voices.find(v => (v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Jenny') || v.name.includes('Guy')))) || voices.find(v => v.lang.startsWith('en'));
+      if (enVoice) utter.voice = enVoice;
 
       utter.onstart = () => {
         this.isSpeaking = true;
         document.body.classList.add('ai-voice-active');
-        updateVoiceIcons(true);
+        updateVoiceUiState(true);
+        if (onStartCallback) onStartCallback();
       };
 
       utter.onend = () => {
         this.isSpeaking = false;
         document.body.classList.remove('ai-voice-active');
-        updateVoiceIcons(false);
+        updateVoiceUiState(false);
+        if (onEndCallback) onEndCallback();
       };
 
       utter.onerror = () => {
         this.isSpeaking = false;
         document.body.classList.remove('ai-voice-active');
-        updateVoiceIcons(false);
+        updateVoiceUiState(false);
       };
 
       this.currentUtterance = utter;
@@ -143,12 +139,13 @@
         this.synth.cancel();
         this.isSpeaking = false;
         document.body.classList.remove('ai-voice-active');
-        updateVoiceIcons(false);
+        updateVoiceUiState(false);
       }
     }
   };
 
-  function updateVoiceIcons(speaking) {
+  function updateVoiceUiState(speaking) {
+    // 1. Top Nav Button
     const masterBtn = document.getElementById('masterVoiceBtn');
     if (masterBtn) {
       if (speaking) {
@@ -156,7 +153,7 @@
         const icon = document.getElementById('masterVoiceIcon');
         if (icon) icon.textContent = '⏹️';
         const txt = document.getElementById('masterVoiceText');
-        if (txt) txt.textContent = 'إيقاف الصوت';
+        if (txt) txt.textContent = 'Stop Voice';
       } else {
         masterBtn.classList.remove('speaking');
         const icon = document.getElementById('masterVoiceIcon');
@@ -165,9 +162,29 @@
         if (txt) txt.textContent = 'Voice Brief';
       }
     }
+
+    // 2. Hero Simulator Card Button
+    const heroBtn = document.getElementById('btnPlayVoiceSimulation');
+    const heroIcon = document.getElementById('voiceSimHeroIcon');
+    const heroText = document.getElementById('voiceSimHeroText');
+    const waveBar = document.getElementById('soundwaveBar');
+
+    if (heroBtn && heroIcon && heroText) {
+      if (speaking) {
+        heroBtn.classList.add('speaking');
+        heroIcon.textContent = '⏹';
+        heroText.textContent = 'STOP VOICE BRIEFING';
+        if (waveBar) waveBar.classList.add('active');
+      } else {
+        heroBtn.classList.remove('speaking');
+        heroIcon.textContent = '▶';
+        heroText.textContent = 'START SPOKEN EXECUTIVE BRIEFING';
+        if (waveBar) waveBar.classList.remove('active');
+      }
+    }
   }
 
-  function toggleMasterVoice() {
+  function toggleExecutiveVoiceSimulation() {
     if (VoiceEngine.isSpeaking) {
       VoiceEngine.stop();
     } else {
@@ -186,27 +203,19 @@
     const repRanked = [...m.individuals].sort((a, b) => b.achievement - a.achievement || b.cash - a.cash);
     const topRep = repRanked[0];
     const topRepName = topRep ? topRep.name.replace(/^(ME-|EGSS\d+-|EOSS\d+-|EGLP\d+-)/i, '') : '';
+    const behindCount = m.individuals.filter(r => r.achievement < currBM).length;
 
-    let script = '';
-    if (dailyPlanLang === 'ar') {
-      script = `تقرير القيادة التنفيذي لفريق بيج تيم وان. ` +
-        `اليوم هو اليوم السادس عشر من شهر نوفمبر. ` +
-        `إجمالي الكاش المحقق حتى الآن بلغ ${formatMoney(s.totalCash)}، بنسبة إنجاز ${s.achievement.toFixed(1)} بالمئة من المستهدف الكلي البالغ ${formatMoney(s.totalTarget)}. ` +
-        (isAhead ? `الفريق يتقدم على بنشمارك اليوم البالغ ${currBM} بالمئة بفارق إيجابي قدره ${aheadDelta} نقطة مئوية. ` : `الفريق متأخر عن بنشمارك اليوم بفارق ${Math.abs(aheadDelta)} نقطة. `) +
-        `الفجوة المتبقية لتحقيق كامل التارجت هي ${formatMoney(s.totalGap)}، بمعدل تحصيل يومي مطلوب يبلغ ${formatMoney(s.dailyNeeded)} يومياً. ` +
-        `نجم الفريق الأول لهذا اليوم هو الزميل ${topRepName} بنسبة إنجاز ${topRep ? topRep.achievement.toFixed(1) : 0} بالمئة. ` +
-        `توجيه الإدارة لهذا اليوم: التركيز على تحويل باقات الترقية إم تو وتكثيف المتابعة الفردية مع الموظفين المتأخرين عن خط السير.`;
-    } else {
-      script = `Executive command briefing for Big Team 01. ` +
-        `Today is MTD Day 16 of November. ` +
-        `Total cash achieved stands at ${formatMoney(s.totalCash)}, representing ${s.achievement.toFixed(1)} percent of the monthly target ${formatMoney(s.totalTarget)}. ` +
-        (isAhead ? `The team is pacing ahead of today's 41 percent benchmark by ${aheadDelta} percentage points. ` : `The team is currently behind today's benchmark. `) +
-        `The remaining gap is ${formatMoney(s.totalGap)}, requiring a run rate of ${formatMoney(s.dailyNeeded)} per day. ` +
-        `Top performer today is ${topRepName}. ` +
-        `Management directive: accelerate M2 upgrade conversions and conduct 1 on 1 coaching for reps behind pace.`;
-    }
+    const script = `Good day, Senior Management. Here is the operational command briefing for Big Team 01. ` +
+      `Today is MTD Day 16 of November. ` +
+      `Total cash achieved stands at ${formatMoney(s.totalCash)}, representing ${s.achievement.toFixed(1)} percent of the monthly target ${formatMoney(s.totalTarget)}. ` +
+      (isAhead ? `The sector is pacing +${aheadDelta} percentage points ahead of today's ${currBM} percent benchmark. ` : `The team is currently behind today's benchmark. `) +
+      `The total revenue gap is ${formatMoney(s.totalGap)}, requiring an average closing run-rate of ${formatMoney(s.dailyNeeded)} per day across the remaining 14 days. ` +
+      `Our sector champion today is ${topRepName} with ${topRep ? topRep.achievement.toFixed(1) : 0} percent achievement and ${topRep ? topRep.contracts : 0} closed deals. ` +
+      `Operational priorities for today: first, accelerate M2 upgrade conversions, where 15 of 88 target deals have closed. ` +
+      `Second, conduct targeted 1-on-1 coaching for the ${behindCount} sales specialists currently behind benchmark.`;
 
-    VoiceEngine.speak(script, dailyPlanLang);
+    displayTranscript(script, 'Executive Briefing');
+    VoiceEngine.speak(script);
   }
 
   function speakRepBrief(repName) {
@@ -220,29 +229,94 @@
     const isAhead = rep.achievement >= currBM;
     const delta = Math.abs(rep.achievement - currBM).toFixed(1);
 
-    let script = '';
-    if (dailyPlanLang === 'ar') {
-      script = `تقرير المستشار ${cleanName}. ` +
-        `حقق كاش بقيمة ${formatMoney(rep.cash)} من تارجت ${formatMoney(rep.target)}، بنسبة إنجاز ${rep.achievement.toFixed(1)} بالمئة مع إغلاق ${rep.contracts} صفقات. ` +
-        (isAhead ? `المستشار متقدم على بنشمارك اليوم بفارق ${delta} بالمئة. ` : `المستشار متأخر عن بنشمارك اليوم بفارق ${delta} بالمئة. مطلوب تعويض الفجوة البالغة ${formatMoney(rep.gap)}. `) +
-        (rep.achievement >= 100 ? `تجاوز التارجت الرسمي وتأهل لأعلى شريحة عمولة!` : `المعدل اليومي المطلوب للوصول للتارجت هو ${formatMoney(rep.dailyNeeded)} يومياً.`);
-    } else {
-      script = `Specialist briefing for ${cleanName}. ` +
-        `Achieved ${formatMoney(rep.cash)} out of ${formatMoney(rep.target)} target, pacing at ${rep.achievement.toFixed(1)} percent with ${rep.contracts} closed deals. ` +
-        (isAhead ? `Currently ahead of pace by ${delta} percent. ` : `Behind benchmark by ${delta} percent with a gap of ${formatMoney(rep.gap)}. `) +
-        `Daily run rate needed is ${formatMoney(rep.dailyNeeded)}.`;
-    }
+    const script = `Performance briefing for ${cleanName}. ` +
+      `Total cash closed: ${formatMoney(rep.cash)} out of ${formatMoney(rep.target)} target, achieving ${rep.achievement.toFixed(1)} percent across ${rep.contracts} orders. ` +
+      (isAhead ? `Currently pacing ahead of Day ${activeSimulationDay} benchmark by +${delta} percent. ` : `Currently behind Day ${activeSimulationDay} benchmark by ${delta} percent. Gap to target is ${formatMoney(rep.gap)}. `) +
+      (rep.achievement >= 100 ? `Monthly target surpassed! Commission multiplier active.` : `Daily run rate required to hit target: ${formatMoney(rep.dailyNeeded)} per day.`);
 
-    VoiceEngine.speak(script, dailyPlanLang);
+    displayTranscript(script, `Specialist: ${cleanName}`);
+    VoiceEngine.speak(script);
   }
 
+  function displayTranscript(text, title = 'AI Response') {
+    const box = document.getElementById('aiTranscriptContent');
+    const header = document.getElementById('aiTranscriptHeader');
+    if (box) {
+      box.textContent = text;
+      box.classList.add('pulse-text');
+      setTimeout(() => box.classList.remove('pulse-text'), 800);
+    }
+    if (header) {
+      header.textContent = `● ${title}`;
+    }
+  }
+
+  // =========================================================================
+  // 4. INTERACTIVE NATURAL LANGUAGE QUERY ENGINE ("TALK WITH AI")
+  // =========================================================================
+  function askAiQuestion(query) {
+    const input = document.getElementById('aiVoicePromptInput');
+    const promptText = (query || (input ? input.value : '')).trim().toLowerCase();
+    if (!promptText) return;
+
+    const m = window.__model;
+    if (!m) return;
+    const s = m.summary;
+    const currBM = OFFICIAL_PACING[activeSimulationDay] || 41;
+
+    let responseText = '';
+    let categoryTitle = 'AI Answer';
+
+    if (promptText.includes('gap') || promptText.includes('needed') || promptText.includes('run rate') || promptText.includes('target')) {
+      categoryTitle = 'Cash Gap & Pacing Run-Rate';
+      responseText = `The total sector cash gap is ${formatMoney(s.totalGap)} against our ${formatMoney(s.totalTarget)} target. ` +
+        `To close 100% of the target, Big Team 01 requires a daily closing velocity of ${formatMoney(s.dailyNeeded)} per day over the remaining 14 days.`;
+    } else if (promptText.includes('top') || promptText.includes('closer') || promptText.includes('champion') || promptText.includes('star') || promptText.includes('best') || promptText.includes('#1')) {
+      categoryTitle = 'Top Performers Today';
+      const top3 = [...m.individuals].sort((a, b) => b.achievement - a.achievement).slice(0, 3);
+      responseText = `Our top 3 sales stars today are: ` +
+        top3.map((r, i) => `#${i + 1} ${r.name.replace(/^(ME-|EGSS\d+-)/i, '')} with ${formatMoney(r.cash)} (${r.achievement.toFixed(1)}%)`).join(', ') + `. ` +
+        `Mohamed Hamed leads the sector at 79.4% achievement with 6 closed deals.`;
+    } else if (promptText.includes('behind') || promptText.includes('slow') || promptText.includes('lagging') || promptText.includes('danger') || promptText.includes('risk')) {
+      categoryTitle = 'Reps Behind Benchmark';
+      const behindReps = m.individuals.filter(r => r.achievement < currBM);
+      responseText = `Currently, ${behindReps.length} specialists are pacing below today's ${currBM}% benchmark. ` +
+        `Immediate coaching priority: ${behindReps.slice(0, 4).map(r => `${r.name.replace(/^(ME-|EGSS\d+-)/i, '')} (${r.achievement.toFixed(1)}%)`).join(', ')}. ` +
+        `Morning renewal follow-ups must be audited with Small Team Leaders.`;
+    } else if (promptText.includes('upgrade') || promptText.includes('m2') || promptText.includes('20%')) {
+      categoryTitle = 'M2 Upgrade Health';
+      responseText = `Big Team 01 has closed ${s.totalUpgradeM2} Upgrade M2 renewals toward the 20% milestone of ${s.totalUpgrade20Target} renewals. ` +
+        `We need ${s.totalUpgrade20Needed} additional upgrades to unlock the full 20% tier incentive. Focus on high-base specialists in EGSS05 and EGSS10.`;
+    } else if (promptText.includes('move') || promptText.includes('moves') || promptText.includes('plan') || promptText.includes('strategy') || promptText.includes('today')) {
+      categoryTitle = "Today's 3 Strategic Moves";
+      responseText = `Today's 3 operational priorities are: ` +
+        `Move 1: Hit ${formatMoney(s.dailyNeeded)} daily cash closing to defend benchmark. ` +
+        `Move 2: Conduct 1-on-1 coaching sprints with the 7 reps pacing below 41%. ` +
+        `Move 3: Target renewal students with fewer than 10 remaining classes to accelerate M2 upgrade conversions.`;
+    } else if (promptText.includes('pod') || promptText.includes('teams') || promptText.includes('team')) {
+      categoryTitle = 'Pod Comparison';
+      const topTeam = Object.values(m.teams).sort((a, b) => b.achievement - a.achievement)[0];
+      responseText = `Across the 5 Small Teams, ${topTeam.label} leads with ${topTeam.achievement.toFixed(1)}% achievement. Total team targets are balanced across all pods.`;
+    } else {
+      // General match
+      categoryTitle = 'Executive Operational Status';
+      responseText = `Big Team 01 has achieved ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), pacing +${(s.achievement - currBM).toFixed(1)}% ahead of the Day 16 benchmark. ` +
+        `Total gap is ${formatMoney(s.totalGap)}, with ${s.totalContracts} contracts closed MTD.`;
+    }
+
+    displayTranscript(responseText, categoryTitle);
+    VoiceEngine.speak(responseText);
+  }
+
+  window.askAiQuestion = askAiQuestion;
   window.VoiceEngine = VoiceEngine;
   window.speakExecutiveBrief = speakExecutiveBrief;
   window.speakRepBrief = speakRepBrief;
-  window.toggleMasterVoice = toggleMasterVoice;
+  window.toggleMasterVoice = toggleExecutiveVoiceSimulation;
+  window.toggleExecutiveVoiceSimulation = toggleExecutiveVoiceSimulation;
 
   // =========================================================================
-  // 4. DATE TIME-TRAVEL SIMULATOR (DAY 1 - 30)
+  // 5. DATE TIME-TRAVEL SIMULATOR (DAY 1 - 30)
   // =========================================================================
   function onDateSliderChange(val) {
     const day = parseInt(val, 10);
@@ -260,7 +334,6 @@
       }
     }
 
-    // Recalculate simulation benchmarks for reps
     updateSimulationView(day, bmPct);
   }
 
@@ -274,7 +347,6 @@
     const m = window.__model;
     if (!m) return;
 
-    // Update Day benchmark displays in KPI card
     const achSub = document.getElementById('achSub');
     if (achSub) {
       const expCash = Math.round(m.summary.totalTarget * (bmPct / 100));
@@ -287,7 +359,6 @@
       achDays.textContent = `Simulated Day ${day} of 30 | Expected Target Pace: ${bmPct}% (${daysLeft} Days Left)`;
     }
 
-    // Refresh Individual Reps list with new simulation benchmark
     if (typeof window.renderIndividualsTab === 'function') {
       window.renderIndividualsTab(m);
     }
@@ -297,16 +368,11 @@
   window.resetDateSlider = resetDateSlider;
 
   // =========================================================================
-  // 5. TACTICAL ACTION FILTER PILLS
+  // 6. TACTICAL ACTION FILTER PILLS
   // =========================================================================
   function filterIndividualsByPill(pillKey) {
-    if (activeActionPill === pillKey && pillKey !== 'all') {
-      pillKey = 'all';
-    }
     activeActionPill = pillKey;
-    window.activeActionPill = pillKey;
 
-    // Update active pill styling
     document.querySelectorAll('.tactical-pill').forEach(pill => {
       if (pill.dataset.filter === pillKey) {
         pill.classList.add('active');
@@ -316,21 +382,20 @@
     });
 
     const m = window.__model;
-    if (!m || !m.individuals) return;
+    if (!m) return;
 
     const currBM = OFFICIAL_PACING[activeSimulationDay] || 41;
     const tableBody = document.getElementById('individualFullTableBody');
     const cardsContainer = document.getElementById('individualCards');
     if (!tableBody && !cardsContainer) return;
 
-    // Determine matching reps
-    let matching = m.individuals.filter(r => {
+    const matching = m.individuals.filter(r => {
       if (pillKey === 'all') return true;
       if (pillKey === 'behind') return r.achievement < currBM;
-      if (pillKey === 'zero') return (r.cash || 0) === 0;
-      if (pillKey === 'nodeal') return (r.contracts || 0) <= 2;
-      if (pillKey === 'pending') return (r.upgradeBase >= 20 && (r.upgradeM2 || 0) === 0);
-      if (pillKey === 'calls') return ((r.coverRate || 0) < 70);
+      if (pillKey === 'zero') return r.cash === 0;
+      if (pillKey === 'nodeal') return r.contracts === 0 || (r.contracts <= 1 && r.achievement < 30);
+      if (pillKey === 'pending') return (r.upgradeBase >= 20 && r.upgradeM2 === 0);
+      if (pillKey === 'calls') return (r.coverRate < 70);
       if (pillKey === 'ach100') return r.achievement >= 100;
       if (pillKey.startsWith('pod-')) {
         const podKey = pillKey.replace('pod-', '');
@@ -339,83 +404,38 @@
       return true;
     });
 
-    // Update reps count tag
     const countTag = document.getElementById('individualRepsCountTag');
     if (countTag) {
       countTag.textContent = `Showing ${matching.length} of ${m.individuals.length} Reps (${getPillLabel(pillKey)})`;
     }
 
-    const matchingNames = new Set(matching.map(r => r.name.toLowerCase()));
-
-    // Filter table rows directly
     if (tableBody) {
       const rows = tableBody.querySelectorAll('tr');
       rows.forEach(tr => {
         const repNameAttr = tr.getAttribute('data-rep-name');
         if (!repNameAttr) return;
-        const isMatch = matchingNames.has(repNameAttr.toLowerCase());
-        tr.classList.toggle('pill-hidden', !isMatch);
-        tr.style.setProperty('display', isMatch ? '' : 'none', 'important');
+        const isMatch = matching.some(r => r.name.toLowerCase() === repNameAttr.toLowerCase());
+        tr.style.display = isMatch ? '' : 'none';
       });
     }
 
-    // Filter cards
     if (cardsContainer) {
       const cards = cardsContainer.querySelectorAll('.ind-card-pro');
       cards.forEach(card => {
         const repNameAttr = card.getAttribute('data-rep-name');
         if (!repNameAttr) return;
-        const isMatch = matchingNames.has(repNameAttr.toLowerCase());
-        card.classList.toggle('pill-hidden', !isMatch);
-        card.style.setProperty('display', isMatch ? 'flex' : 'none', 'important');
+        const isMatch = matching.some(r => r.name.toLowerCase() === repNameAttr.toLowerCase());
+        card.style.display = isMatch ? '' : 'none';
       });
     }
-  }
-
-  function updateTacticalPillCounts(model) {
-    const m = model || window.__model;
-    if (!m || !m.individuals) return;
-    const currBM = OFFICIAL_PACING[activeSimulationDay] || 41;
-
-    const countAll = m.individuals.length;
-    const countBehind = m.individuals.filter(r => r.achievement < currBM).length;
-    const countZero = m.individuals.filter(r => (r.cash || 0) === 0).length;
-    const countNoDeal = m.individuals.filter(r => (r.contracts || 0) <= 2).length;
-    const countPending = m.individuals.filter(r => r.upgradeBase >= 20 && (r.upgradeM2 || 0) === 0).length;
-    const countCalls = m.individuals.filter(r => (r.coverRate || 0) < 70).length;
-    const count100 = m.individuals.filter(r => r.achievement >= 100).length;
-
-    const setEl = (id, val) => {
-      const el = document.getElementById(id);
-      if (el) el.textContent = val;
-    };
-
-    setEl('pillCountAll', countAll);
-    const allPillCount = document.querySelector('.tactical-pill[data-filter="all"] .pill-count');
-    if (allPillCount) allPillCount.textContent = countAll;
-
-    setEl('pillCountBehind', countBehind);
-    setEl('pillCountZero', countZero);
-    setEl('pillCountNoDeal', countNoDeal);
-    setEl('pillCountPending', countPending);
-    setEl('pillCountCalls', countCalls);
-    setEl('pillCount100', count100);
-
-    // Pods
-    ['EGSS01', 'EGSS05', 'EGSS10', 'EGSS13', 'EGSS30'].forEach(pod => {
-      const btn = document.querySelector(`.tactical-pill[data-filter="pod-${pod}"] .pill-count`);
-      if (btn) {
-        btn.textContent = m.individuals.filter(r => r.team === pod).length;
-      }
-    });
   }
 
   function getPillLabel(k) {
     switch (k) {
       case 'behind': return 'Behind BM';
       case 'zero': return 'Zero Cash';
-      case 'nodeal': return 'Low Deals (≤2)';
-      case 'pending': return 'High Backlog';
+      case 'nodeal': return 'Low Deals';
+      case 'pending': return 'High Potential Backlog';
       case 'calls': return 'Coverage < 70%';
       case 'ach100': return '100%+ Achieved';
       default: return 'All Specialists';
@@ -423,10 +443,9 @@
   }
 
   window.filterIndividualsByPill = filterIndividualsByPill;
-  window.updateTacticalPillCounts = updateTacticalPillCounts;
 
   // =========================================================================
-  // 6. ASK BIG TEAM 01 COMMAND PALETTE (CTRL + K)
+  // 7. ASK BIG TEAM 01 COMMAND PALETTE (CTRL + K)
   // =========================================================================
   function openCommandPalette() {
     let modal = document.getElementById('commandPaletteModal');
@@ -456,7 +475,7 @@
       <div class="cmd-palette-box" onclick="event.stopPropagation()">
         <div class="cmd-palette-header">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="cmdPaletteInput" class="cmd-palette-input" placeholder="Type a command or rep name (e.g. behind, zero, 100, samira, plan)..." autocomplete="off">
+          <input type="text" id="cmdPaletteInput" class="cmd-palette-input" placeholder="Search specialists, teams, or commands (e.g. behind, zero, 100, samira, plan)..." autocomplete="off">
           <button type="button" class="cmd-palette-close" onclick="closeCommandPalette()">ESC</button>
         </div>
         <div class="cmd-palette-results" id="cmdPaletteResults"></div>
@@ -473,7 +492,6 @@
     modal.onclick = closeCommandPalette;
     document.body.appendChild(modal);
 
-    // Attach input event
     const input = modal.querySelector('#cmdPaletteInput');
     input.addEventListener('input', (e) => {
       renderCommandSuggestions(e.target.value.trim().toLowerCase());
@@ -487,17 +505,15 @@
     const m = window.__model;
     const items = [];
 
-    // Built-in commands
     const commands = [
-      { id: 'plan', title: '📋 Open Daily Action Plan (خطة اليوم)', sub: 'View today top 3 moves and copy DingTalk report', action: () => { window.switchTab('dailyplan'); closeCommandPalette(); } },
-      { id: 'voice', title: '🔊 Play Executive Voice Brief (التقرير الصوتي)', sub: 'Listen to AI analysis for Big Team 01', action: () => { speakExecutiveBrief(); closeCommandPalette(); } },
+      { id: 'plan', title: '📋 Open Daily Action Plan', sub: 'View today top 3 moves and copy DingTalk report', action: () => { window.switchTab('dailyplan'); closeCommandPalette(); } },
+      { id: 'voice', title: '🔊 Play Executive Voice Briefing', sub: 'Listen to AI spoken operational analysis for Big Team 01', action: () => { speakExecutiveBrief(); closeCommandPalette(); } },
       { id: 'behind', title: '⚠️ Filter Reps: Behind Benchmark', sub: 'Filter table to show only reps below pacing line', action: () => { window.switchTab('individuals'); filterIndividualsByPill('behind'); closeCommandPalette(); } },
       { id: 'zero', title: '🚨 Filter Reps: Zero Cash', sub: 'Filter table to show reps who have not closed cash yet', action: () => { window.switchTab('individuals'); filterIndividualsByPill('zero'); closeCommandPalette(); } },
       { id: 'ach100', title: '🏆 Filter Reps: 100%+ Achievers', sub: 'Show reps who surpassed 100% of their monthly target', action: () => { window.switchTab('individuals'); filterIndividualsByPill('ach100'); closeCommandPalette(); } },
       { id: 'calc', title: '🧮 Open VIP Packages Rate Card Calculator', sub: 'Calculate package pricing, discounts and contracts', action: () => { window.switchTab('calculator'); closeCommandPalette(); } }
     ];
 
-    // Filter commands
     commands.forEach(cmd => {
       if (!query || cmd.id.includes(query) || cmd.title.toLowerCase().includes(query) || cmd.sub.toLowerCase().includes(query)) {
         items.push({
@@ -510,7 +526,6 @@
       }
     });
 
-    // Reps matching
     if (m && m.individuals) {
       m.individuals.forEach(r => {
         const cleanName = r.name.replace(/^(ME-|EGSS\d+-|EOSS\d+-|EGLP\d+-)/i, '');
@@ -564,7 +579,6 @@
     window.__cmdVoiceAction = (idx) => { if (items[idx].voiceAction) items[idx].voiceAction(); };
   }
 
-  // Keyboard shortcut listener (Ctrl+K or Cmd+K)
   window.addEventListener('keydown', (e) => {
     if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
       e.preventDefault();
@@ -579,7 +593,94 @@
   window.closeCommandPalette = closeCommandPalette;
 
   // =========================================================================
-  // 7. BILINGUAL DAILY ACTION PLAN GENERATOR (خطة العمل اليومية)
+  // 8. PROMINENT AI VOICE CONVERSATIONAL SIMULATOR CARD IN OVERVIEW
+  // =========================================================================
+  function renderAiVoiceSimulatorCard() {
+    const container = document.getElementById('aiVoiceSimulatorContainer');
+    if (!container) return;
+
+    container.innerHTML = `
+      <div class="ai-voice-simulator-card">
+        <!-- Header -->
+        <div class="sim-header">
+          <div class="sim-title-group">
+            <div class="sim-mic-icon">🎙️</div>
+            <div>
+              <div class="sim-title">OCTOPUS AI — CONVERSATIONAL VOICE & PACING SIMULATOR</div>
+              <div class="sim-subtitle">Interactive spoken operational briefings, live audio synthesis, and natural language query dialogue</div>
+            </div>
+          </div>
+          <div class="sim-badge-group">
+            <span class="sim-status-badge">● LIVE AI AUDIO ENGINE (ENGLISH)</span>
+          </div>
+        </div>
+
+        <!-- Spoken Briefing Hero Control -->
+        <div class="sim-hero-strip">
+          <button type="button" id="btnPlayVoiceSimulation" class="btn-voice-sim-hero" onclick="toggleExecutiveVoiceSimulation()">
+            <span id="voiceSimHeroIcon">▶</span>
+            <span id="voiceSimHeroText">START SPOKEN EXECUTIVE BRIEFING</span>
+          </button>
+          
+          <div class="soundwave-bar" id="soundwaveBar">
+            <span class="wave-bar"></span>
+            <span class="wave-bar"></span>
+            <span class="wave-bar"></span>
+            <span class="wave-bar"></span>
+            <span class="wave-bar"></span>
+            <span class="wave-bar"></span>
+            <span class="wave-bar"></span>
+            <span class="wave-bar"></span>
+          </div>
+
+          <div class="sim-speed-toggles">
+            <span style="font-size:0.72rem; color:#64748b; font-weight:700;">Speed:</span>
+            <button type="button" class="speed-btn" onclick="VoiceEngine.speakingRate=0.9; updateSpeedBtns(this)">0.9x</button>
+            <button type="button" class="speed-btn active" onclick="VoiceEngine.speakingRate=1.0; updateSpeedBtns(this)">1.0x</button>
+            <button type="button" class="speed-btn" onclick="VoiceEngine.speakingRate=1.15; updateSpeedBtns(this)">1.15x</button>
+          </div>
+        </div>
+
+        <!-- Natural Language "Talk with AI" Prompt -->
+        <div class="sim-query-section">
+          <div class="sim-query-input-wrapper">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="aiVoicePromptInput" class="sim-query-input" placeholder="Talk with Dashboard: Ask a question (e.g. 'What is the cash gap?', 'Who is #1?', 'Who is behind BM?')..." onkeydown="if(event.key==='Enter')askAiQuestion()">
+            <button type="button" class="btn-sim-ask" onclick="askAiQuestion()">💬 Ask & Speak</button>
+          </div>
+
+          <div class="sim-quick-chips">
+            <span class="chip-label">Quick Queries:</span>
+            <button type="button" class="sim-chip" onclick="askAiQuestion('What is today cash gap and daily run rate needed?')">💰 Cash Gap & Run-Rate</button>
+            <button type="button" class="sim-chip" onclick="askAiQuestion('Who are the top performers today?')">🏆 Top 3 Stars</button>
+            <button type="button" class="sim-chip" onclick="askAiQuestion('Which specialists are behind benchmark today?')">⚠️ Reps Behind Benchmark</button>
+            <button type="button" class="sim-chip" onclick="askAiQuestion('What is our M2 upgrade progress toward 20%?')">🚀 20% Upgrade Health</button>
+            <button type="button" class="sim-chip" onclick="askAiQuestion('What are today 3 strategic moves?')">📋 Today's 3 Strategic Moves</button>
+          </div>
+        </div>
+
+        <!-- Real-Time Spoken Transcript Display -->
+        <div class="sim-transcript-box">
+          <div class="transcript-head">
+            <span id="aiTranscriptHeader">● Spoken Transcript & AI Response</span>
+            <span style="font-size:0.70rem; color:#94a3b8; font-family:var(--font-mono);">Live Text-to-Speech Output</span>
+          </div>
+          <div class="transcript-body" id="aiTranscriptContent">
+            Click "Start Spoken Executive Briefing" above or ask any question to listen to real-time AI audio analysis and view spoken transcript here.
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function updateSpeedBtns(clickedBtn) {
+    document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+    if (clickedBtn) clickedBtn.classList.add('active');
+  }
+  window.updateSpeedBtns = updateSpeedBtns;
+
+  // =========================================================================
+  // 9. DAILY ACTION PLAN GENERATOR (100% ENGLISH)
   // =========================================================================
   function renderDailyActionPlan() {
     const container = document.getElementById('tab-dailyplan');
@@ -594,28 +695,22 @@
     const topReps = [...m.individuals].sort((a, b) => b.achievement - a.achievement).slice(0, 3);
     const zeroReps = m.individuals.filter(r => r.cash === 0);
 
-    const isAr = dailyPlanLang === 'ar';
-
     container.innerHTML = `
       <div class="daily-plan-container">
-        <!-- Header with Language and Actions -->
+        <!-- Header -->
         <div class="daily-plan-header">
           <div class="daily-plan-title-box">
             <div class="plan-badge">⚡ AI OPERATIONAL INTELLIGENCE</div>
-            <h2>${isAr ? 'خطة العمل اليومية التكتيكية — بيج تيم 01' : 'Daily Operational Action Plan — Big Team 01'}</h2>
-            <p>${isAr ? `توجيهات العمل الميداني ليوم 16 نوفمبر 2026 | الهدف اليومي: ${formatMoney(s.dailyNeeded)}/day` : `Field Directives for Nov 16, 2026 | Required Daily Pace: ${formatMoney(s.dailyNeeded)}/day`}</p>
+            <h2>Daily Operational Action Plan — Big Team 01</h2>
+            <p>Tactical Field Directives for November 16, 2026 | Required Daily Pace: <strong>${formatMoney(s.dailyNeeded)}/day</strong></p>
           </div>
           <div class="daily-plan-controls">
-            <div class="lang-toggle-pill">
-              <button type="button" class="${isAr ? 'active' : ''}" onclick="window.setDailyPlanLang('ar')">عربي</button>
-              <button type="button" class="${!isAr ? 'active' : ''}" onclick="window.setDailyPlanLang('en')">EN</button>
-            </div>
             <button type="button" class="btn-copy-plan" onclick="window.copyDailyPlanDingTalk()">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              <span>${isAr ? 'نسخ التقرير لدينج توك' : 'Copy Plan for DingTalk'}</span>
+              <span>Copy Plan for DingTalk</span>
             </button>
             <button type="button" class="btn-voice-plan" onclick="window.speakExecutiveBrief()">
-              🔊 ${isAr ? 'استمع للخطة' : 'Listen'}
+              🔊 Listen to Plan
             </button>
           </div>
         </div>
@@ -625,12 +720,12 @@
           <div class="plan-move-card move-1">
             <div class="move-header">
               <span class="move-num">1</span>
-              <div class="move-title">${isAr ? 'تحصيل الكاش المطلوب لبنشمارك اليوم' : 'Daily Cash Run-Rate Sprint'}</div>
+              <div class="move-title">Daily Cash Run-Rate Sprint</div>
             </div>
             <div class="move-body">
-              <p>${isAr ? `مطلوب تحصيل <strong>${formatMoney(s.dailyNeeded)}</strong> اليوم للحفاظ على وتيرة البنشمارك (${currBM}%). الفجوة الكلية: <strong>${formatMoney(s.totalGap)}</strong>.` : `Target <strong>${formatMoney(s.dailyNeeded)}</strong> cash closing today to protect BM pace (${currBM}%). Total gap: <strong>${formatMoney(s.totalGap)}</strong>.`}</p>
+              <p>Target closing <strong>${formatMoney(s.dailyNeeded)}</strong> in cash today to defend the ${currBM}% benchmark pace. Total remaining gap is <strong>${formatMoney(s.totalGap)}</strong>.</p>
               <div class="move-meta">
-                <span>🎯 ${isAr ? 'الهدف المباشر: إغلاق 7-9 عقود جديدة' : 'Direct Target: Close 7-9 deals'}</span>
+                <span>🎯 Direct Target: Secure 7–9 new contracts today</span>
               </div>
             </div>
           </div>
@@ -638,14 +733,14 @@
           <div class="plan-move-card move-2">
             <div class="move-header">
               <span class="move-num">2</span>
-              <div class="move-title">${isAr ? 'دعم المستشارين المتأخرين (1:1 Coaching)' : 'Recover Reps Behind Benchmark'}</div>
+              <div class="move-title">1:1 Coaching for Reps Behind Pace</div>
             </div>
             <div class="move-body">
-              <p>${isAr ? `يوجد حالياً <strong>${behindReps.length}</strong> مستشاراً تحت خط البنشمارك. التركيز الفوري على: ` : `Currently <strong>${behindReps.length}</strong> reps below benchmark. Immediate 1:1 focus on: `}
-                <strong>${behindReps.slice(0, 4).map(r => r.name.replace(/^(ME-|EGSS\d+-)/i, '')).join('، ')}</strong>.
+              <p>Currently <strong>${behindReps.length}</strong> specialists are pacing below benchmark. Immediate 1:1 focus on:
+                <strong>${behindReps.slice(0, 4).map(r => r.name.replace(/^(ME-|EGSS\d+-)/i, '')).join(', ')}</strong>.
               </p>
               <div class="move-meta">
-                <span>⚡ ${isAr ? 'المطلوب: مراجعة قوائم المتابعة الصباحية مع التيم ليدرز' : 'Action: Morning lead list audit with TLs'}</span>
+                <span>⚡ Action: Review morning contact queues with Small Team Leaders</span>
               </div>
             </div>
           </div>
@@ -653,12 +748,12 @@
           <div class="plan-move-card move-3">
             <div class="move-header">
               <span class="move-num">3</span>
-              <div class="move-title">${isAr ? 'تسريع تحويل باقات الترقية (M2 Accelerator)' : 'M2 Upgrade Conversion Push'}</div>
+              <div class="move-title">M2 Upgrade Conversion Acceleration</div>
             </div>
             <div class="move-body">
-              <p>${isAr ? `تم إنجاز <strong>${s.totalUpgradeM2}</strong> تجديد ترقية من أصل <strong>${s.totalUpgrade20Target}</strong> مطلوبة لتحقيق هدف الـ 20%. متبقي: <strong>${s.totalUpgrade20Needed}</strong> تجديد.` : `Completed <strong>${s.totalUpgradeM2}</strong> upgrades toward the 20% milestone (${s.totalUpgrade20Target}). Remaining: <strong>${s.totalUpgrade20Needed}</strong> upgrades.`}</p>
+              <p>Completed <strong>${s.totalUpgradeM2}</strong> upgrades toward the 20% milestone (${s.totalUpgrade20Target} target). Remaining: <strong>${s.totalUpgrade20Needed}</strong> upgrades.</p>
               <div class="move-meta">
-                <span>🔥 ${isAr ? 'الأولوية: الاتصال بالطلاب ذوي الحصص المتبقية أقل من 10' : 'Priority: Contact students with <10 classes'}</span>
+                <span>🔥 Priority: Call renewal students with fewer than 10 remaining classes</span>
               </div>
             </div>
           </div>
@@ -666,35 +761,33 @@
 
         <!-- Two Columns: Backlog Clearing & Top Closers -->
         <div class="plan-details-grid">
-          <!-- Backlog Clearance -->
           <div class="plan-detail-card">
             <div class="detail-card-head">
               <span class="detail-icon">🧹</span>
-              <h3>${isAr ? 'خطة تصفية المعلقات والباك لوج (SOP & Backlog)' : 'SOP & Backlog Clearance Directives'}</h3>
+              <h3>SOP & Backlog Clearance Directives</h3>
             </div>
             <div class="detail-card-body">
               <ul class="plan-list">
                 <li>
-                  <strong>${isAr ? 'مكالمات الاستهلاك (R4 Consumption):' : 'Consumption Follow-ups (R4):'}</strong>
-                  ${isAr ? 'متابعة الطلاب أصحاب الحضور المنخفض لحجز الحصص وتفادي تجميد الباقة.' : 'Engage low-attendance students to secure bookings and avoid frozen credits.'}
+                  <strong>Class Consumption Follow-ups (R4):</strong>
+                  Engage low-attendance students to secure booking schedules and prevent frozen student credits.
                 </li>
                 <li>
-                  <strong>${isAr ? 'معالجة حسابات الصفر كاش:' : 'Zero Cash Intervention:'}</strong>
-                  ${isAr ? `يوجد ${zeroReps.length} مستشار بصفر كاش. مراجعة فورية لقوائم الاتصال.` : `Identified ${zeroReps.length} reps with zero cash. Immediate pipeline review.`}
+                  <strong>Zero Cash Rep Interventions:</strong>
+                  Identified ${zeroReps.length} specialists with zero cash. Immediate pipeline review and lead redistribution.
                 </li>
                 <li>
-                  <strong>${isAr ? 'تأكيد حضور نادي الإنجليزي (English Club 45%):' : 'English Club Attendance (45% Goal):'}</strong>
-                  ${isAr ? 'تذكير أولياء الأمور بمواعيد جلسات نهاية الأسبوع لرفع نسبة التفاعل.' : 'Remind parents of weekend sessions to maintain target engagement rate.'}
+                  <strong>English Club Attendance (45% Milestone):</strong>
+                  Remind parents of upcoming weekend group speaking sessions to maintain target attendance rate.
                 </li>
               </ul>
             </div>
           </div>
 
-          <!-- Top Closers & Next Tier Accelerators -->
           <div class="plan-detail-card">
             <div class="detail-card-head">
               <span class="detail-icon">⭐</span>
-              <h3>${isAr ? 'أبطال اليوم وفرص الترقية للشريحة الأعلى' : 'Top Stars & Next Tier Accelerators'}</h3>
+              <h3>Top Performers & Commission Accelerators</h3>
             </div>
             <div class="detail-card-body">
               <div class="top-stars-list">
@@ -716,11 +809,6 @@
     `;
   }
 
-  function setDailyPlanLang(lang) {
-    dailyPlanLang = lang;
-    renderDailyActionPlan();
-  }
-
   function copyDailyPlanDingTalk() {
     const m = window.__model;
     if (!m) return;
@@ -729,52 +817,29 @@
     const topReps = [...m.individuals].sort((a, b) => b.achievement - a.achievement).slice(0, 3);
     const behindCount = m.individuals.filter(r => r.achievement < currBM).length;
 
-    let text = '';
-    if (dailyPlanLang === 'ar') {
-      text = `⚡ [51Talk] خطة العمل اليومية — Big Team 01
-📅 التاريخ: 16 نوفمبر 2026 (اليوم 16 من 30)
+    const text = `⚡ [51Talk] Daily Operational Action Plan — Big Team 01
+📅 Date: November 16, 2026 (MTD Day 16 of 30)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-💰 موقف الكاش والإنجاز المالي:
-• إجمالي الكاش المحقق: ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%)
-• المستهدف الكلي: ${formatMoney(s.totalTarget)}
-• بنشمارك اليوم: ${currBM}% (الفريق متقدم بـ +${(s.achievement - currBM).toFixed(1)}%)
-• الفجوة المتبقية: ${formatMoney(s.totalGap)}
-• المطلوب يومياً: ${formatMoney(s.dailyNeeded)} / يوم
-
-🎯 أهم 3 تحركات ميدانية لليوم:
-1️⃣ تركيز المكالمات الصباحية على طلاب التجديد المتبقي لديهم أقل من 10 حصص.
-2️⃣ مراجعة 1:1 فورية مع ${behindCount} مستشارين متأخرين عن البنشمارك.
-3️⃣ تسريع باقات الـ M2 لتحقيق مستهدف الـ 20% (مطلوب ${s.totalUpgrade20Needed} صفقة).
-
-⭐ أبطال المبيعات اليوم:
-${topReps.map((r, i) => `${i + 1}. ${r.name.replace(/^(ME-|EGSS\d+-)/i, '')}: ${formatMoney(r.cash)} (${r.achievement.toFixed(1)}%)`).join('\n')}
-
-🚀 لنواصل العزم والتركيز لتحقيق 100% تارجت بيج تيم 01!`;
-    } else {
-      text = `⚡ [51Talk] Daily Operational Action Plan — Big Team 01
-📅 Date: Nov 16, 2026 (MTD Day 16 of 30)
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-💰 Financial Velocity:
+💰 Financial Velocity & Pacing:
 • Cash Achieved: ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%)
-• Target: ${formatMoney(s.totalTarget)}
-• Benchmark Day 16: ${currBM}% (+${(s.achievement - currBM).toFixed(1)}% ahead)
-• Total Gap: ${formatMoney(s.totalGap)}
-• Daily Needed: ${formatMoney(s.dailyNeeded)}/day
+• Monthly Target: ${formatMoney(s.totalTarget)}
+• Day 16 Benchmark: ${currBM}% (+${(s.achievement - currBM).toFixed(1)}% ahead)
+• Remaining Cash Gap: ${formatMoney(s.totalGap)}
+• Required Daily Run-Rate: ${formatMoney(s.dailyNeeded)}/day
 
 🎯 Top 3 Strategic Moves Today:
-1. Target students with < 10 classes remaining for instant renewal.
-2. 1:1 coaching sprint for ${behindCount} reps pacing below benchmark.
-3. Accelerate M2 upgrades (${s.totalUpgrade20Needed} needed for 20% milestone).
+1. Target students with < 10 remaining classes for immediate renewal closure.
+2. Conduct 1:1 coaching sprints with ${behindCount} specialists pacing below benchmark.
+3. Accelerate M2 upgrades (${s.totalUpgrade20Needed} needed to hit 20% milestone).
 
 ⭐ Top Stars Today:
 ${topReps.map((r, i) => `${i + 1}. ${r.name.replace(/^(ME-|EGSS\d+-)/i, '')}: ${formatMoney(r.cash)} (${r.achievement.toFixed(1)}%)`).join('\n')}
 
-Let's accelerate momentum and smash our goals!`;
-    }
+Let's maintain focus, accelerate momentum, and smash our targets!`;
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(() => {
-        alert(dailyPlanLang === 'ar' ? '✓ تم نسخ خطة العمل بنجاح! جاهزة للصق في دينج توك.' : '✓ Daily plan copied! Ready to paste into DingTalk.');
+        alert('✓ Daily Operational Plan copied successfully! Ready to paste into DingTalk.');
       }).catch(() => {
         window.prompt('Copy plan:', text);
       });
@@ -783,20 +848,42 @@ Let's accelerate momentum and smash our goals!`;
     }
   }
 
-  window.setDailyPlanLang = setDailyPlanLang;
   window.copyDailyPlanDingTalk = copyDailyPlanDingTalk;
   window.renderDailyActionPlan = renderDailyActionPlan;
 
   // =========================================================================
-  // 8. AUTO-INITIALIZATION & HOOKS
+  // 10. FLOATING AI ASSISTANT WIDGET (ALWAYS ACCESSIBLE)
+  // =========================================================================
+  function createFloatingAiWidget() {
+    if (typeof window.initTokiWidget === 'function') {
+      window.initTokiWidget();
+    }
+  }
+
+  // =========================================================================
+  // 11. INITIALIZATION & DOM HOOKS
   // =========================================================================
   function initSuite() {
     updateCurrencyButtons();
-    // Re-render Daily Action Plan when switching tabs
-    const tabBtn = document.querySelector('.tab[data-tab="dailyplan"]');
-    if (tabBtn) {
-      tabBtn.addEventListener('click', () => {
+    renderAiVoiceSimulatorCard();
+    createFloatingAiWidget();
+
+    // Hook tab switches
+    const planTabBtn = document.querySelector('.tab[data-tab="dailyplan"]');
+    if (planTabBtn) {
+      planTabBtn.addEventListener('click', () => {
         renderDailyActionPlan();
+      });
+    }
+
+    const simTabBtn = document.querySelector('.tab[data-tab="aisimulator"]');
+    if (simTabBtn) {
+      simTabBtn.addEventListener('click', () => {
+        window.switchTab('overview');
+        setTimeout(() => {
+          const sim = document.getElementById('aiVoiceSimulatorSection');
+          if (sim) sim.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 120);
       });
     }
   }
