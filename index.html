@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="security_shield.min.js"></script>
-  <title>Big Team 01 — Executive Performance Dashboard</title>
+  <title>Big Team 01 ï¿½ Executive Performance Dashboard</title>
   <meta name="description" content="Official Executive Performance Dashboard for 51Talk Big Team 01. Live sales analytics, renewal & upgrade breakdown, team pacing, and SOP compliance.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Big Team 1 Dashboard — Executive Sales Performance">
+  <meta property="og:title" content="Big Team 1 Dashboard ï¿½ Executive Sales Performance">
   <meta property="og:description" content="Official Live Performance Dashboard for 51Talk Big Team 01 (Senior Manager: Hussein El A'sar). Live revenue tracking, pacing benchmarks, M2 upgrade analysis, and SOP compliance.">
   <meta property="og:image" content="https://husseinelaasar.github.io/big-team-01-dashboard/assets/big_team_1_banner.jpg">
   <meta property="og:url" content="https://husseinelaasar.github.io/big-team-01-dashboard/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Big Team 1 Dashboard — Executive Sales Performance">
+  <meta name="twitter:title" content="Big Team 1 Dashboard ï¿½ Executive Sales Performance">
   <meta name="twitter:description" content="Official Live Performance Dashboard for 51Talk Big Team 01. Accelerate Growth. Achieve Targets.">
   <meta name="twitter:image" content="https://husseinelaasar.github.io/big-team-01-dashboard/assets/big_team_1_banner.jpg">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1794861581779">
+  <link rel="stylesheet" href="styles.css?v=1794862479539">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -77,7 +77,7 @@
           </svg>
         </div>
         <div>
-          <h1 class="nav-title">Big Team 01 — <span class="gradient-text">Executive Dashboard</span></h1>
+          <h1 class="nav-title">Big Team 01 ï¿½ <span class="gradient-text">Executive Dashboard</span></h1>
           <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
             Senior Manager: <strong style="color: #f8fafc;">Hussein El A'sar</strong> | Month: <strong style="color: #38bdf8;">November 2026 (MTD Day 16/30)</strong>
           </div>
@@ -89,6 +89,14 @@
         <div class="currency-toggle-group" id="currencyToggleGroup" title="Switch between USD ($) and SAR">
           <button type="button" class="currency-btn active" id="btnCurrUSD" onclick="setDashboardCurrency('USD')">$ USD</button>
           <button type="button" class="currency-btn" id="btnCurrSAR" onclick="setDashboardCurrency('SAR')">SAR</button>
+        </div>
+
+        
+        <!-- Tri-lingual Language Switcher (EN / AR / ZH) -->
+        <div class="lang-toggle-group" id="langToggleGroup" title="Language: English / Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© / ä¸­æ–‡">
+          <button type="button" class="lang-btn active" id="btnLangEN" onclick="setDashboardLanguage('en')">EN</button>
+          <button type="button" class="lang-btn" id="btnLangAR" onclick="setDashboardLanguage('ar')">Ø¹Ø±Ø¨ÙŠ</button>
+          <button type="button" class="lang-btn" id="btnLangZH" onclick="setDashboardLanguage('zh')">ä¸­æ–‡</button>
         </div>
 
         <!-- Ask Big Team 01 Command Palette Button (Ctrl + K) -->
@@ -314,7 +322,7 @@
             <span class="slider-icon">?</span>
             <div>
               <div class="slider-title">DATE PACING SIMULATOR & TIMELINE TRACKER</div>
-              <div class="slider-subtitle">Simulate benchmark pacing and gap across any day of the month (Days 1–30)</div>
+              <div class="slider-subtitle">Simulate benchmark pacing and gap across any day of the month (Days 1ï¿½30)</div>
             </div>
           </div>
           <div class="slider-badge-group">
@@ -393,12 +401,12 @@
       <!-- Small Teams Pacing & Target Comparison -->
       <div class="section-header">
         <div>
-          <h2>Small Teams & Big Team 01 — Cash Achievement vs Target</h2>
+          <h2>Small Teams & Big Team 01 ï¿½ Cash Achievement vs Target</h2>
           <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 4px;">
             Comparison of revenue velocity across all teams and Big Team 01 against the official pacing curve (5% to 103%)
           </p>
         </div>
-        <span class="source-tag">Source: CRM live data (Nov 1–7, 2026)</span>
+        <span class="source-tag">Source: CRM live data (Nov 1ï¿½7, 2026)</span>
       </div>
       <div class="chart-container" id="teamBarsContainer"></div>
 
@@ -421,7 +429,7 @@
       <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
         <div>
           <h2>Small Team Performance Breakdown</h2>
-          <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1–15, 2026 (MTD Day 16/30)</span>
+          <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1ï¿½15, 2026 (MTD Day 16/30)</span>
         </div>
         <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
           <button type="button" class="btn-card-snap" onclick="copyCardImage('smallTeamCards', 'All 5 Small Teams')" title="Copy all 5 team cards to paste directly in DingTalk" style="cursor: pointer; background: linear-gradient(135deg, #4f46e5, #6366f1); border: 1.5px solid #818cf8; color: #ffffff; border-radius: 8px; padding: 6px 14px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35); transition: all 0.2s ease;">
@@ -441,7 +449,7 @@
     <section id="tab-individuals" class="tab-content">
       <div class="section-header">
         <h2>Individual Performance Deep Dive</h2>
-        <span class="source-tag" id="individualRepsCountTag">18 Active Sales Specialists | Nov 1–7, 2026 (Day 7)</span>
+        <span class="source-tag" id="individualRepsCountTag">18 Active Sales Specialists | Nov 1ï¿½7, 2026 (Day 7)</span>
       </div>
       
       <!-- Individuals Mission Telemetry Strip -->
@@ -538,7 +546,7 @@
         <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: rgba(99, 102, 241, 0.08); border-bottom: 1px solid var(--border-glass); border-radius: 12px 12px 0 0; flex-wrap: wrap; gap: 8px;">
           <div style="display: flex; align-items: center; gap: 8px;">
             <span style="font-size: 0.85rem; font-weight: 800; color: var(--text-primary);">?? Big Team 01 Master Roster (All 18 Sales Specialists)</span>
-            <span class="pill-badge pill-badge-emerald" style="font-size: 0.70rem; padding: 2px 8px; font-weight: 800;">18 Reps Active • 100% Balanced</span>
+            <span class="pill-badge pill-badge-emerald" style="font-size: 0.70rem; padding: 2px 8px; font-weight: 800;">18 Reps Active ï¿½ 100% Balanced</span>
           </div>
           <div style="font-size: 0.76rem; color: var(--text-secondary); font-weight: 600;">
             ?? Scroll down to view all 19 reps (#1 to #19) & Sector Totals
@@ -582,7 +590,7 @@
       <div class="section-header">
         <div>
           <h2 style="display: flex; align-items: center; gap: 10px;">
-            <span>??</span> Big Team 01 — Class Consumption Intelligence Hub
+            <span>??</span> Big Team 01 ï¿½ Class Consumption Intelligence Hub
             <span class="status-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); font-size: 0.75rem; padding: 2px 8px;">BENCHMARK TARGET: 82.0% OVERALL</span>
           </h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
@@ -674,7 +682,7 @@
             <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">Official Target</span>
           </div>
           <div class="kpi-value" style="font-family: var(--font-mono); font-size: 2rem; font-weight: 900; color: #c084fc; margin-top: 6px;" id="upgCardTarget">0</div>
-          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Target Pending (Base × 20%)</div>
+          <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 4px;">Target Pending (Base ï¿½ 20%)</div>
         </div>
         <!-- Card 4: Remaining to Target -->
         <div class="metric-tile-modern" style="border-top: 3px solid #f43f5e;">
@@ -748,7 +756,7 @@
             </div>
             <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.5;">
               <strong>Standard Benchmark:</strong> 20% conversion across assigned student base.<br>
-              <span style="color: #34d399; font-weight: 600;">Formula:</span> Goal = Ceil(Base × 0.20) will auto-activate upon allocation.
+              <span style="color: #34d399; font-weight: 600;">Formula:</span> Goal = Ceil(Base ï¿½ 0.20) will auto-activate upon allocation.
             </div>
           </div>
           <div class="metric-tile-modern" style="border-left: 3px solid #818cf8; padding: 16px;">
@@ -1207,7 +1215,7 @@
       <div class="section-header">
         <div>
           <h2 style="display: flex; align-items: center; gap: 10px;">
-            <span>???</span> Big Team 01 — English Club Strategic Adoption Hub
+            <span>???</span> Big Team 01 ï¿½ English Club Strategic Adoption Hub
             <span class="status-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); font-size: 0.75rem; padding: 2px 8px;">BENCHMARK TARGET: 45.0% OF BASE</span>
           </h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
@@ -1352,7 +1360,7 @@
     <section id="tab-operations" class="tab-content">
       <div class="section-header">
         <div>
-          <h2>Operations Master — Daily Task Execution & Student Rescue</h2>
+          <h2>Operations Master ï¿½ Daily Task Execution & Student Rescue</h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
             Cross-functional operational tasks from All in One Master (SS Pending SOP, Unfixed Teachers, Zero-Class Rescue, and English Club).
           </p>
@@ -1473,7 +1481,7 @@
               <span style="background: #f59e0b; color: #0f172a; font-size: 0.65rem; padding: 2px 8px; border-radius: 6px; font-weight: 900;">OFFICIAL RATE CARD</span>
             </div>
             <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 3px;">
-              Single &amp; Family (2 &amp; 3 Kids) • Upgrade &amp; Renewal • Approved prices with +10% markup &amp; Professional Program bonuses
+              Single &amp; Family (2 &amp; 3 Kids) ï¿½ Upgrade &amp; Renewal ï¿½ Approved prices with +10% markup &amp; Professional Program bonuses
             </div>
           </div>
         </div>
@@ -1578,7 +1586,7 @@
       </div>
 
       <!-- ============================================================ -->
-      <!-- 51 TALK PACKAGES CALCULATOR — Embedded Rate Card Tool        -->
+      <!-- 51 TALK PACKAGES CALCULATOR ï¿½ Embedded Rate Card Tool        -->
       <!-- ============================================================ -->
       <div id="pkg-calc-section" style="margin-top: 36px;">
 
@@ -1608,7 +1616,7 @@
                 <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; font-size: 0.65rem; padding: 2px 8px; border-radius: 6px; font-weight: 900; letter-spacing: 0.3px;">RATE CARD</span>
               </h3>
               <p style="font-size: 0.8rem; color: #94a3b8; margin: 3px 0 0 0;">
-                Official Upgrade &amp; Renewal pricing tool — Includes all package tiers, Professional Program discounts &amp; offer card generator
+                Official Upgrade &amp; Renewal pricing tool ï¿½ Includes all package tiers, Professional Program discounts &amp; offer card generator
               </p>
             </div>
           </div>
@@ -1680,7 +1688,7 @@
               ??????????? Family (3 Kids)
             </button>
             <div style="margin-left: auto; font-size: 0.72rem; color: #64748b;">
-              ?? All prices include +10% approved markup • Professional Program rates shown
+              ?? All prices include +10% approved markup ï¿½ Professional Program rates shown
             </div>
           </div>
 
@@ -1700,7 +1708,7 @@
                     border: 1px solid rgba(245,158,11,0.3);
                   ">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    Upgrade — Single Student
+                    Upgrade ï¿½ Single Student
                   </div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead>
@@ -1775,7 +1783,7 @@
                     border: 1px solid rgba(56,189,248,0.3);
                   ">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-                    Renewal — Single Student
+                    Renewal ï¿½ Single Student
                   </div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead>
@@ -1848,7 +1856,7 @@
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
                 <div>
                   <div style="font-size: 0.78rem; font-weight: 800; color: #fcd34d; padding: 6px 12px; background: rgba(245,158,11,0.12); border-radius: 6px; border: 1px solid rgba(245,158,11,0.3); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
-                    ? Upgrade — Family 2 Kids
+                    ? Upgrade ï¿½ Family 2 Kids
                   </div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead><tr style="background: rgba(15,23,42,0.98);">
@@ -1868,7 +1876,7 @@
                 </div>
                 <div>
                   <div style="font-size: 0.78rem; font-weight: 800; color: #7dd3fc; padding: 6px 12px; background: rgba(14,165,233,0.12); border-radius: 6px; border: 1px solid rgba(56,189,248,0.3); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
-                    ?? Renewal — Family 2 Kids
+                    ?? Renewal ï¿½ Family 2 Kids
                   </div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead><tr style="background: rgba(15,23,42,0.98);">
@@ -1893,7 +1901,7 @@
             <div id="pkg-pane-family3" style="display:none;">
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
                 <div>
-                  <div style="font-size: 0.78rem; font-weight: 800; color: #fcd34d; padding: 6px 12px; background: rgba(245,158,11,0.12); border-radius: 6px; border: 1px solid rgba(245,158,11,0.3); margin-bottom: 10px;">? Upgrade — Family 3 Kids</div>
+                  <div style="font-size: 0.78rem; font-weight: 800; color: #fcd34d; padding: 6px 12px; background: rgba(245,158,11,0.12); border-radius: 6px; border: 1px solid rgba(245,158,11,0.3); margin-bottom: 10px;">? Upgrade ï¿½ Family 3 Kids</div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead><tr style="background: rgba(15,23,42,0.98);">
                       <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(245,158,11,0.25);">Duration</th>
@@ -1911,7 +1919,7 @@
                   </table>
                 </div>
                 <div>
-                  <div style="font-size: 0.78rem; font-weight: 800; color: #7dd3fc; padding: 6px 12px; background: rgba(14,165,233,0.12); border-radius: 6px; border: 1px solid rgba(56,189,248,0.3); margin-bottom: 10px;">?? Renewal — Family 3 Kids</div>
+                  <div style="font-size: 0.78rem; font-weight: 800; color: #7dd3fc; padding: 6px 12px; background: rgba(14,165,233,0.12); border-radius: 6px; border: 1px solid rgba(56,189,248,0.3); margin-bottom: 10px;">?? Renewal ï¿½ Family 3 Kids</div>
                   <table style="width:100%; border-collapse: separate; border-spacing: 0; font-size: 0.76rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
                     <thead><tr style="background: rgba(15,23,42,0.98);">
                       <th style="padding: 9px 11px; text-align: left; color: #64748b; font-weight: 700; border-bottom: 1px solid rgba(56,189,248,0.2);">Duration</th>
@@ -1982,7 +1990,7 @@
     <section id="tab-comparison" class="tab-content">
       <div class="section-header">
         <div>
-          <h2>Performance Comparison — Yesterday vs Today</h2>
+          <h2>Performance Comparison ï¿½ Yesterday vs Today</h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
             Side-by-side comparison of every rep's Class Consumption, Upgrade Rate, and English Club across two snapshots.
           </p>
@@ -2028,7 +2036,7 @@
     <section id="tab-mtd" class="tab-content">
       <div class="section-header">
         <div>
-          <h2>MTD Performance Trajectory &amp; Daily Evolution (Day 3 — 31)</h2>
+          <h2>MTD Performance Trajectory &amp; Daily Evolution (Day 3 ï¿½ 31)</h2>
           <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
             Cumulative month-to-date tracking across all October operational days with interactive multi-metric charts and rep velocity.
           </p>
@@ -2087,7 +2095,7 @@
     <!-- Footer -->
     <footer class="dashboard-footer">
       <div class="footer-left">
-        <span>Big Team 01 — ME-EGSS01 | Senior Manager: <strong>Hussein El A'sar</strong></span>
+        <span>Big Team 01 ï¿½ ME-EGSS01 | Senior Manager: <strong>Hussein El A'sar</strong></span>
       </div>
       <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-dim);">
         <span id="dataTimestamp">Last Update: Nov 7, 2026</span>
@@ -2193,9 +2201,10 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=1794861581779" defer></script>
-  <script src="dashboard_ai_command_suite.js?v=1794861581779" defer></script>
-  <script src="dashboard_voice_assistant.js?v=1794861581779" defer></script>
+  <script src="dashboard.js?v=1794862479539" defer></script>
+  <script src="dashboard_ai_command_suite.js?v=1794862479539" defer></script>
+  <script src="dashboard_i18n.js?v=1794862479539" defer></script>
+  <script src="dashboard_voice_assistant.js?v=1794862479539" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link

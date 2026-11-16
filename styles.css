@@ -1,5 +1,5 @@
 /* ============================================
-   Big Team 01 Executive Dashboard — Styles v2.0
+   Big Team 01 Executive Dashboard ï¿½ Styles v2.0
    Design: Premium dark glassmorphism + micro-animations
    ============================================ */
 
@@ -2148,7 +2148,7 @@ body::after {
 }
 
 /* =========================================================
-   STARSHIP COMMAND BRIDGE — TAB BAR NAVIGATION
+   STARSHIP COMMAND BRIDGE ï¿½ TAB BAR NAVIGATION
    ========================================================= */
 .tab-bar {
   background: rgba(12, 18, 32, 0.95) !important;
@@ -2851,7 +2851,7 @@ strong[style*="239, 68, 68"] {
 
 /* =========================================================================
    v4.0 VISUAL HIERARCHY MASTER OVERRIDES
-   — Better Contrast / Font Size / Card Independence / Section Distinction
+   ï¿½ Better Contrast / Font Size / Card Independence / Section Distinction
    ========================================================================= */
 
 /* -- Body background: slightly lighter, richer navy (not pure black) */
@@ -3040,7 +3040,7 @@ html {
 
 
 /* =========================================================================
-   ROOT VARIABLE OVERRIDE — v4.0 Upgrade (overrides the original :root above)
+   ROOT VARIABLE OVERRIDE ï¿½ v4.0 Upgrade (overrides the original :root above)
    All variables redefined here for better readability and visual hierarchy
    ========================================================================= */
 :root {
@@ -4193,7 +4193,7 @@ html, body, *:not(input):not(textarea):not(select) {
 }
 
 /* --------------------------------------------------------------------------
-   ?? GENESIS REDESIGN — AURORA COMMAND THEME v3.0
+   ?? GENESIS REDESIGN ï¿½ AURORA COMMAND THEME v3.0
    Brilliant vibrant deep-space command center aesthetic
    Applied: 2026-11-15 | Override Priority: MAXIMUM
    -------------------------------------------------------------------------- */
@@ -4221,7 +4221,7 @@ html, body, *:not(input):not(textarea):not(select) {
   --shadow-glow-lg: 0 0 60px rgba(99,102,241,0.35) !important;
 }
 
-/* -- GENESIS BODY — LIVING AURORA CANVAS -- */
+/* -- GENESIS BODY ï¿½ LIVING AURORA CANVAS -- */
 html, body {
   background: #05080f !important;
 }
@@ -4231,7 +4231,7 @@ body {
   position: relative !important;
 }
 
-/* Remove old pseudo-element bg patterns — replaced below */
+/* Remove old pseudo-element bg patterns ï¿½ replaced below */
 body::before {
   content: '' !important;
   position: fixed !important;
@@ -4268,7 +4268,7 @@ body::after {
   opacity: 0.6 !important;
 }
 
-/* -- GENESIS AMBIENT GLOWS — STRONGER & MORE COLORFUL -- */
+/* -- GENESIS AMBIENT GLOWS ï¿½ STRONGER & MORE COLORFUL -- */
 .ambient-glow {
   opacity: 0.55 !important;
   filter: blur(120px) !important;
@@ -4310,7 +4310,7 @@ body::after {
   animation-duration: 22s !important;
 }
 
-/* -- TOP NAV — AURORA GLASS COMMAND BAR -- */
+/* -- TOP NAV ï¿½ AURORA GLASS COMMAND BAR -- */
 .top-nav {
   background: linear-gradient(135deg, rgba(8, 13, 26, 0.95) 0%, rgba(12, 20, 40, 0.98) 100%) !important;
   border-bottom: 1px solid rgba(99, 102, 241, 0.3) !important;
@@ -4336,7 +4336,7 @@ body::after {
   100% { background-position: 400% 0; }
 }
 
-/* -- TAB BAR — AURORA FLIGHT DECK -- */
+/* -- TAB BAR ï¿½ AURORA FLIGHT DECK -- */
 .tab-bar {
   background: rgba(6, 10, 20, 0.9) !important;
   border-bottom: 1px solid rgba(99, 102, 241, 0.2) !important;
@@ -4378,7 +4378,7 @@ body::after {
   border-radius: 2px !important;
 }
 
-/* -- KPI CARDS — GENESIS CRYSTAL PANELS -- */
+/* -- KPI CARDS ï¿½ GENESIS CRYSTAL PANELS -- */
 .kpi-card,
 .kpi-card.kpi-cash,
 .kpi-card.kpi-contracts,
@@ -4465,7 +4465,7 @@ body::after {
   border-radius: 2px !important;
 }
 
-/* -- DATA TABLE — AURORA GRID -- */
+/* -- DATA TABLE ï¿½ AURORA GRID -- */
 .table-wrapper,
 .data-table-wrapper {
   background: linear-gradient(145deg, rgba(10, 16, 32, 0.9) 0%, rgba(8, 13, 26, 0.95) 100%) !important;
@@ -4517,7 +4517,7 @@ table tfoot td {
   border-top: 2px solid rgba(99, 102, 241, 0.3) !important;
 }
 
-/* -- INDIVIDUAL REP CARDS (ind-card) — GENESIS CRYSTAL TILES -- */
+/* -- INDIVIDUAL REP CARDS (ind-card) ï¿½ GENESIS CRYSTAL TILES -- */
 .ind-card {
   background: linear-gradient(145deg, rgba(14, 22, 44, 0.85) 0%, rgba(10, 16, 32, 0.92) 100%) !important;
   border: 1px solid rgba(99, 102, 241, 0.2) !important;
@@ -4729,7 +4729,7 @@ footer, .footer {
 /* END GENESIS REDESIGN v3.0 */
 
 /* --------------------------------------------------------------
-   ?? GENESIS POLISH — Tab & Section Extra Vibrancy Patch
+   ?? GENESIS POLISH ï¿½ Tab & Section Extra Vibrancy Patch
    -------------------------------------------------------------- */
 
 /* Warmer, more vivid top gradient aura */
@@ -4752,13 +4752,13 @@ footer, .footer {
   padding-top: 4px !important;
 }
 
-/* Rep name in table — bright white */
+/* Rep name in table ï¿½ bright white */
 .rep-name-cell, td:first-child { 
   color: #e2e8f0 !important; 
   font-weight: 600 !important; 
 }
 
-/* Number cells — cool cyan */
+/* Number cells ï¿½ cool cyan */
 td.number-cell, td[class*="cash"], td[class*="revenue"] {
   color: #67e8f9 !important;
   font-family: 'JetBrains Mono', monospace !important;
@@ -4843,7 +4843,7 @@ tr[data-rank="1"] td:first-child, tr.rank-1 td:first-child {
 /* END GENESIS POLISH */
 
 /* --------------------------------------------------------------
-   ?? GENESIS INDIVIDUALS HUB — ULTRA-EXECUTIVE TEMPLATES v3.0
+   ?? GENESIS INDIVIDUALS HUB ï¿½ ULTRA-EXECUTIVE TEMPLATES v3.0
    -------------------------------------------------------------- */
 
 /* Mini-HUD Telemetry Strip */
@@ -6118,7 +6118,7 @@ body.light-theme .small-team-member-row.member-below-bm,
 }
 
 /* --------------------------------------------------------------------------
-   REPS BELOW BM — EXPLICIT NAME & ACH% FRAMING (ZERO DANGER MARKS)
+   REPS BELOW BM ï¿½ EXPLICIT NAME & ACH% FRAMING (ZERO DANGER MARKS)
    -------------------------------------------------------------------------- */
 .rep-name-below-bm,
 .st-name-below-bm,
@@ -6921,7 +6921,7 @@ body.light-theme .benchmark-matrix-card tr.matrix-sector-row td,
 
 
 /* =========================================================================
-   BIG TEAM 01 — AI COMMAND SUITE & LIGHT COCKPIT STYLES
+   BIG TEAM 01 ï¿½ AI COMMAND SUITE & LIGHT COCKPIT STYLES
    Native light theme styling. Strictly clean backgrounds, zero dark colors.
    ========================================================================= */
 
@@ -8099,4 +8099,37 @@ body.light-theme .ind-rep-name,
 
 .float-ai-mic {
   font-size: 1.2rem;
+}
+
+
+/* Tri-lingual Language Switcher (EN / AR / ZH) */
+.lang-toggle-group {
+  display: inline-flex;
+  align-items: center;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 3px;
+  gap: 2px;
+}
+.lang-btn {
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+.lang-btn:hover {
+  color: #0f172a;
+}
+.lang-btn.active {
+  background: #ffffff;
+  color: #059669;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  font-weight: 800;
 }
