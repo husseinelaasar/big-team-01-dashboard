@@ -1,7 +1,7 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-ibrahimismaiel | Generated: 2026-11-15 17:12
+# Representative: EGSS-ibrahimismaiel | Generated: 2026-11-16 12:51
 
-=== 1. SOP PENDING TASKS (128) ===
+=== 1. SOP PENDING TASKS (132) ===
 Student_ID,Task_Name,Expiration_Time
 58171805,"SS:Service warning - absence",20261116 18:55:00
 58565770,"English Club Booking",20261116 18:55:00
@@ -15,7 +15,6 @@ Student_ID,Task_Name,Expiration_Time
 63830991,"English Club Booking",20261116 18:55:00
 64057350,"English Club Booking",20261116 18:55:00
 64202439,"English Club Booking",20261116 18:55:00
-64409920,"English Club Booking",20261116 18:55:00
 59003788,"English Club Booking",20261117 18:55:00
 59011277,"English Club Booking",20261117 18:55:00
 59447319,"English Club Booking",20261117 18:55:00
@@ -28,22 +27,27 @@ Student_ID,Task_Name,Expiration_Time
 64524643,"English Club Booking",20261117 18:55:00
 64779795,"English Club Booking",20261117 18:55:00
 64864285,"Round 2  Trust Enhancement (First Class Follow-up)",20261117 18:55:00
+62403414,"SS:Service warning - absence",20261118 18:55:00
+62762259,"SS:Service warning - absence",20261118 18:55:00
 63500829,"Round 6 Premium Service(Duration Renewal Insidepool)",20261118 18:55:00
+62496545,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261119 18:55:00
+63039213,"Round 6 Premium Service(Outside Renewal Pool)",20261119 18:55:00
+63048881,"Round 6 Premium Service(Outside Renewal Pool)",20261119 18:55:00
+63155646,"English Club Booking",20261119 18:55:00
+63204135,"English Club Booking",20261119 18:55:00
+63531421,"Round 6 Premium Service(Duration Renewal Insidepool)",20261119 18:55:00
 58171805,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 58835674,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
-61541619,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 62513316,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64058785,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
-64180385,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64190241,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
-64211749,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64258469,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64313711,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
-64409920,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64436131,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 58969204,"SS：Service warning - class interruption",20261130 18:59:59
 58311958,"SS：Service warning - class interruption",20261130 23:59:59
 58519033,"SS：Service warning - class interruption",20261130 23:59:59
+58525638,"SS：Service warning - class interruption",20261130 23:59:59
 58537407,"SS：Service warning - class interruption",20261130 23:59:59
 58557964,"SS：Service warning - class interruption",20261130 23:59:59
 58623648,"SS：Service warning - class interruption",20261130 23:59:59
@@ -58,6 +62,7 @@ Student_ID,Task_Name,Expiration_Time
 59447319,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 59510090,"SS：Service warning - class interruption",20261130 23:59:59
 59519466,"SS：Service warning - class interruption",20261130 23:59:59
+59678817,"SS：Service warning - class interruption",20261130 23:59:59
 59873334,"SS：Service warning - class interruption",20261130 23:59:59
 60017177,"SS：Service warning - class interruption",20261130 23:59:59
 60022633,"SS：Service warning - class interruption",20261130 23:59:59
@@ -127,12 +132,11 @@ Student_ID,Task_Name,Expiration_Time
 64092603,"SS：Service warning - class interruption",20261130 23:59:59
 64202439,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64238521,"SS：Service warning - class interruption",20261130 23:59:59
-64373988,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64460754,"SS：Service warning - class interruption",20261130 23:59:59
 64497058,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64511148,"SS：Service warning - class interruption",20261130 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (82) ===
+=== 2. UNFIXED TEACHER BINDING (81) ===
 Student_ID,Pool_Cohort,Classes,Priority
 58311958,"M3+ Pool",0,"UNFIXED BINDING"
 58537407,"M3+ Pool",0,"UNFIXED BINDING"
@@ -215,9 +219,8 @@ Student_ID,Pool_Cohort,Classes,Priority
 64238521,"M2 Pool",0,"MEDIUM BINDING"
 64460754,"M2 Pool",0,"MEDIUM BINDING"
 64497058,"M2 Pool",0,"MEDIUM BINDING"
-64864285,"M0 Pool",0,"CRITICAL (0 Classes)"
 
-=== 3. CLASS CONSUMPTION RESCUE (277) ===
+=== 3. CLASS CONSUMPTION RESCUE (275) ===
 Student_ID,Pool_Cohort,Classes,Action
 58623648,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 58855123,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -258,13 +261,11 @@ Student_ID,Pool_Cohort,Classes,Action
 62668240,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 62711040,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 62712709,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-62780548,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 62833800,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 62834124,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 62834129,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 62836940,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 62896581,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
-62971892,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63217063,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63236524,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
 63390601,"M3+ Pool",0,"🚨 Zero Consumption — Urgent 1st Class Booking"
@@ -290,76 +291,69 @@ Student_ID,Pool_Cohort,Classes,Action
 61220263,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 61799961,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 62660217,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+62780548,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 62865141,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 62874196,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 62909377,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 62926535,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
+62971892,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63619317,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
-63638467,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63639867,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63712696,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 63914557,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 64092603,"M3+ Pool",1,"⚠️ Low CC — Book 3 classes to hit >=4% tier"
 58525638,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-59303525,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 61207161,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 61476731,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 62173645,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 62272345,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-62909719,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 62927488,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 63559893,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
+63638467,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 63827128,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
-63830353,"M3+ Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 64058785,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 64460754,"M2 Pool",2,"⚠️ Low CC — Book 2 classes to hit >=4% tier"
 58355926,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
-58519033,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 58954665,"M2 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 58963811,"M2 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 59031891,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 59138590,"M1 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
-59447319,"M2 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+59303525,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 59678817,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
-60017177,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 60321306,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 61076306,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 61756732,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
-61810048,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
-62272080,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 62705349,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+62909719,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 62963730,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 63500829,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 63661803,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
+63830353,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 64079488,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
 64166734,"M3+ Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
-64761192,"M1 Pool",3,"⚠️ Low CC — Book 1 classes to hit >=4% tier"
-58643987,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
+58519033,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 58736276,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 59005007,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 59369816,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
-60209771,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
+59447319,"M2 Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
+60017177,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 61211845,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
-61386398,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
-61437046,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 61621009,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 61638634,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
-61942736,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
-62137173,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
+61810048,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
+62272080,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 62762259,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 62811958,"M1 Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
-62825678,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 63000685,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 63379640,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 63466033,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
-63682602,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
-63691919,"M3+ Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 64180385,"M2 Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
+64761192,"M1 Pool",4,"📅 Mid CC — Book 4 classes to hit >=8% tier"
 58206801,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 58537407,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 58557699,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 58557964,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-58707806,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
+58643987,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 58828369,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 58835674,"M2 Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 58962376,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
@@ -368,136 +362,143 @@ Student_ID,Pool_Cohort,Classes,Action
 59073784,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 59110151,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 59137683,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-59443246,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 59690462,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 60208509,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-60361741,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
+60209771,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 60445910,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 61091856,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 61126692,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-61211706,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 61212008,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
+61386398,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 61425516,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-61662982,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
+61437046,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 61800168,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-62272810,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
+61942736,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
+62137173,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 62392431,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 62609267,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-62613547,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 62808028,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-62896723,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-62917349,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-62995820,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
+62825678,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 63155646,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-63204135,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 63464090,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 63568743,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 63616146,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
+63682602,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
+63691919,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 63755890,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-63774509,"M3+ Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-64313711,"M2 Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-64544855,"M1 Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
-64590229,"M1 Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 64788146,"M1 Pool",5,"📅 Mid CC — Book 3 classes to hit >=8% tier"
 58171805,"M2 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+58707806,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 58972757,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 59054491,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 59074088,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-59678753,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-59679375,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+59443246,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 60353164,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+60361741,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+61211706,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 61431869,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-61447559,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 61541619,"M2 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-61657961,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-62134700,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+61662982,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 62171229,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-62265791,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-62345795,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-62369437,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-62514168,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+62272810,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 62582214,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+62613547,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 62690171,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-62770528,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 62896689,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+62896723,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+62917349,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+62995820,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 63071514,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 63202685,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+63204135,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 63212081,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 63475670,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 63580262,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-63601904,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 63652616,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 63756157,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+63774509,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 63830991,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 63889531,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-63987423,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-64034894,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-64057350,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64097184,"M3+ Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64202439,"M2 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64258469,"M2 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+64313711,"M2 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64373988,"M2 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64436131,"M2 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64497058,"M2 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64524347,"M1 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64524643,"M1 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+64544855,"M1 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
+64590229,"M1 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 64653878,"M1 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
-64669331,"M1 Pool",6,"📅 Mid CC — Book 2 classes to hit >=8% tier"
 58855285,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 58969600,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 59003788,"M2 Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 59138108,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+59678753,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+59679375,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 59730624,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-59823718,"M1 Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-61431836,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-62513316,"M2 Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+61447559,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+61657961,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+62134700,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+62265791,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+62345795,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+62369437,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 62728815,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+62770528,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 62774064,"M1 Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 63109255,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-63155967,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-63201607,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-63244443,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-63445740,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-63531695,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-63532632,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+63601904,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+63987423,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+64034894,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 64052295,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
+64057350,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 64103704,"M3+ Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
-58548089,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-58565770,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-58704783,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
+64669331,"M1 Pool",7,"📅 Mid CC — Book 1 classes to hit >=8% tier"
 58748317,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-60587852,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
+59823718,"M1 Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
+61431836,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
 61940772,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-62015742,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
 62403414,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-62637668,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
+62513316,"M2 Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
+62514168,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
 62687645,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-62801070,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-62916400,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-63065117,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-63531421,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
+63201607,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
+63244443,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
+63445740,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
 63542523,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
 64111610,"M3+ Pool",8,"🎯 Good CC — Book 4 classes to hit >=12% tier"
-58211227,"M2 Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
-60181028,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+58548089,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+58565770,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+58704783,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+60587852,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+62637668,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+62801070,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+62916400,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
 63048881,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
-64069000,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
-58952055,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
+63531421,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+63531695,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+63532632,"M3+ Pool",9,"🎯 Good CC — Book 3 classes to hit >=12% tier"
+58211227,"M2 Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
 59627941,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
-59797661,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
-60678355,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
+60181028,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
+62015742,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
 63039213,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
-63406771,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
-63615767,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
-64190241,"M2 Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
-64211749,"M2 Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
-64409920,"M2 Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
+64069000,"M3+ Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
 64568038,"M1 Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
-64636374,"M1 Pool",10,"🎯 Good CC — Book 2 classes to hit >=12% tier"
-64779795,"M1 Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
-62878276,"M3+ Pool",12,"⚡ High CC — Book 3 classes to reach Top >=15% tier"
+58952055,"M3+ Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
+59797661,"M3+ Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
+60678355,"M3+ Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
+63406771,"M3+ Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
+63615767,"M3+ Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
+64190241,"M2 Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
+64211749,"M2 Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
+64409920,"M2 Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
+64636374,"M1 Pool",11,"🎯 Good CC — Book 1 classes to hit >=12% tier"
+64779795,"M1 Pool",12,"⚡ High CC — Book 3 classes to reach Top >=15% tier"
+62878276,"M3+ Pool",13,"⚡ High CC — Book 2 classes to reach Top >=15% tier"
 
-=== 4. ENGLISH CLUB LEADS (109) ===
+=== 4. ENGLISH CLUB LEADS (108) ===
 Student_ID,Level,Completed,Status
 58828369,"0",0,"Booking Required"
 63109255,"1",0,"Booking Required"
@@ -505,7 +506,6 @@ Student_ID,Level,Completed,Status
 58519033,"1",0,"Booking Required"
 63217063,"1",0,"Booking Required"
 63155646,"1",0,"Booking Required"
-63155967,"0",0,"Booking Required"
 63202685,"2",0,"Booking Required"
 63212081,"2",0,"Booking Required"
 62971892,"1",0,"Booking Required"
@@ -598,9 +598,9 @@ Student_ID,Level,Completed,Status
 58954665,"1",0,"Booked"
 64238521,"1",0,"Booking Required"
 62513316,"1",0,"Booking Required"
-64258469,"1",0,"Booking Required"
 64313711,"3",0,"Booking Required"
-64373988,"1",1,"Attended"
+64258469,"1",0,"Booking Required"
+64373988,"1",2,"Attended"
 64409920,"0",1,"Attended"
 59003788,"0",0,"Booking Required"
 58835674,"0",0,"Booking Required"

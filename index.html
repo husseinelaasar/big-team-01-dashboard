@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261115_200020">
+  <link rel="stylesheet" href="styles.css?v=20261116_164707">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -79,12 +79,30 @@
         <div>
           <h1 class="nav-title">Big Team 01 — <span class="gradient-text">Executive Dashboard</span></h1>
           <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
-            Senior Manager: <strong style="color: #f8fafc;">Hussein El A'sar</strong> | Month: <strong style="color: #38bdf8;">November 2026 (MTD Day 15/30)</strong>
+            Senior Manager: <strong style="color: #f8fafc;">Hussein El A'sar</strong> | Month: <strong style="color: #38bdf8;">November 2026 (MTD Day 16/30)</strong>
           </div>
         </div>
       </div>
 
       <div class="nav-right">
+        <!-- Dual Currency Switcher (USD $ ⇄ SAR ر.س) -->
+        <div class="currency-toggle-group" id="currencyToggleGroup" title="Switch between USD ($) and SAR (ر.س)">
+          <button type="button" class="currency-btn active" id="btnCurrUSD" onclick="setDashboardCurrency('USD')">$ USD</button>
+          <button type="button" class="currency-btn" id="btnCurrSAR" onclick="setDashboardCurrency('SAR')">ر.س SAR</button>
+        </div>
+
+        <!-- Ask Big Team 01 Command Palette Button (Ctrl + K) -->
+        <button type="button" class="nav-command-btn" id="navCommandBtn" onclick="openCommandPalette()" title="Ask Big Team 01 & Filter (Ctrl + K)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span class="cmd-text">Ask AI / Filter...</span>
+          <kbd class="cmd-kbd">Ctrl K</kbd>
+        </button>
+
+        <!-- Executive Voice Briefing Button -->
+        <button type="button" class="nav-voice-btn" id="masterVoiceBtn" onclick="toggleMasterVoice()" title="استمع للتحليل الصوتي التنفيذي المباشر (AI Voice Brief)">
+          <span class="voice-icon" id="masterVoiceIcon">🔊</span>
+          <span id="masterVoiceText">Voice Brief</span>
+        </button>
         <!-- Theme Toggle Button (Light/Dark) -->
         <button type="button" class="nav-theme-toggle-btn" id="themeToggleBtn" onclick="toggleDashboardTheme()" title="Switch between Light and Dark mode" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 10px; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.25s ease; border: 1px solid rgba(99, 102, 241, 0.35); background: rgba(99, 102, 241, 0.12); color: inherit;">
           <span id="themeToggleIcon">🌙</span>
@@ -105,7 +123,7 @@
         <!-- Live Data Badges -->
         <div class="data-freshness">
           <span class="pulse-dot"></span>
-          <span id="dataDate">Nov 1-15, 2026 (Day 15)</span>
+          <span id="dataDate">Nov 1-16, 2026 (Day 16)</span>
         </div>
         <div class="nav-source-badge" title="Verified against CRM Renewal Performance & POOL_Detail16">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -177,13 +195,18 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
         Executive Overview
       </button>
+      <button class="tab" data-tab="dailyplan" onclick="switchTab('dailyplan')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Daily Action Plan (خطة اليوم)
+        <span style="white-space: nowrap !important; flex-shrink: 0 !important; background: linear-gradient(135deg, #10b981, #06b6d4); color: #fff; font-size: 0.65rem; padding: 2px 7px; border-radius: 10px; margin-left: 6px; font-weight: 700;">AI TODAY</span>
+      </button>
       <button class="tab" data-tab="teams" onclick="switchTab('teams')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         Small Teams (5)
       </button>
       <button class="tab" data-tab="individuals" onclick="switchTab('individuals')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        Individual Reps (19)
+        Individual Reps (18)
       </button>
       <button class="tab" data-tab="consumption" onclick="switchTab('consumption')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -276,12 +299,45 @@
 
         <div class="sprint-velocity-metric">
           <div class="velocity-label">DAILY RUN RATE NEEDED</div>
-          <div class="velocity-value" id="hudDailyNeeded">$6,772 <span>/day</span></div>
+          <div class="velocity-value" id="hudDailyNeeded">$7,141 <span>/day</span></div>
           <div class="velocity-badge">ON TRACK ⚡</div>
         </div>
       </div>
 
       <!-- 4 Core Executive KPI Cards -->
+      <!-- Interactive Date Time-Travel Slider (Simulation Control) -->
+      <div class="simulation-time-slider-card">
+        <div class="slider-header">
+          <div class="slider-title-group">
+            <span class="slider-icon">⏳</span>
+            <div>
+              <div class="slider-title">DATE PACING SIMULATOR & TIMELINE TRACKER</div>
+              <div class="slider-subtitle">Simulate benchmark pacing and gap across any day of the month (Days 1–30)</div>
+            </div>
+          </div>
+          <div class="slider-badge-group">
+            <span class="slider-active-day-badge live" id="sliderDayLabel">🟢 Live Today: <strong>Day 16</strong> (41% BM)</span>
+            <button type="button" class="btn-reset-slider" onclick="resetDateSlider()" id="btnResetSlider" title="Snap back to today (Day 16)">
+              ↺ Today (Live)
+            </button>
+          </div>
+        </div>
+        <div class="slider-control-row">
+          <span class="slider-bound">Day 1</span>
+          <input type="range" min="1" max="30" value="16" id="datePacingSlider" class="timeline-slider" oninput="onDateSliderChange(this.value)">
+          <span class="slider-bound">Day 30</span>
+        </div>
+        <div class="slider-ticks-row">
+          <span>D1 (5%)</span>
+          <span>D5 (17%)</span>
+          <span>D10 (26%)</span>
+          <span class="active-tick">D16 (41%)</span>
+          <span>D20 (51%)</span>
+          <span>D25 (60%)</span>
+          <span>D30 (96%)</span>
+        </div>
+      </div>
+
       <div class="kpi-grid">
         <!-- 1. Total Cash MTD -->
         <div class="kpi-card kpi-cash">
@@ -289,10 +345,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <div class="kpi-label">Total Cash Revenue (MTD)</div>
-          <div class="kpi-value" id="totalCash">$71,966</div>
-          <div class="kpi-sub" id="cashTarget">Target: $173,541 | Projected: $143,932</div>
+          <div class="kpi-value" id="totalCash">$73,566</div>
+          <div class="kpi-sub" id="cashTarget">Target: $173,541 | Projected: $137,936</div>
           <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 0%;"></div></div>
-          <div class="kpi-pct" id="cashPct">41.47% Achieved</div>
+          <div class="kpi-pct" id="cashPct">42.39% Achieved</div>
         </div>
 
         <!-- 2. Total Contracts & Breakdown -->
@@ -301,8 +357,8 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
           <div class="kpi-label">Total Contracts (Orders)</div>
-          <div class="kpi-value" id="totalContracts">75</div>
-          <div class="kpi-sub" id="contractsSub">Normal: 131 | Upgrade M2: 15</div>
+          <div class="kpi-value" id="totalContracts">77</div>
+          <div class="kpi-sub" id="contractsSub">Normal: 133 | Upgrade M2: 15</div>
           <div class="kpi-progress"><div class="kpi-bar" id="contractsBar" style="width: 0%;"></div></div>
           <div class="kpi-pct" id="contractsPct">Avg: $1,093 / contract</div>
         </div>
@@ -312,11 +368,11 @@
           <div class="kpi-icon" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <div class="kpi-label">Day 15 Target Benchmark</div>
-          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">41.47%</div>
-          <div class="kpi-sub" id="achSub">Day 15 Benchmark: 40% | Target: $173,541</div>
+          <div class="kpi-label">Day 16 Target Benchmark</div>
+          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">42.39%</div>
+          <div class="kpi-sub" id="achSub">Day 16 Benchmark: 41% | Target: $173,541</div>
           <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 0%; background: linear-gradient(90deg, #6366f1, #38bdf8);"></div></div>
-          <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 15 of 30 | Expected Target Pace: 40% (15 Days Left)</div>
+          <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 16 of 30 | Expected Target Pace: 41% (14 Days Left)</div>
         </div>
 
         <!-- 4. Active Reps & Upgrade Conversion -->
@@ -352,13 +408,18 @@
     </section>
 
     <!-- ============================================== -->
-    <!-- TAB 2: SMALL TEAMS DEEP DIVE -->
+    <!-- TAB: Daily Action Plan (AI Operational Intelligence) -->
+    <!-- ============================================== -->
+    <section id="tab-dailyplan" class="tab-content"></section>
+
+    <!-- ============================================== -->
+    <!-- TAB 2: Small Teams DEEP DIVE -->
     <!-- ============================================== -->
     <section id="tab-teams" class="tab-content">
       <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
         <div>
           <h2>Small Team Performance Breakdown</h2>
-          <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1–15, 2026 (MTD Day 15/30)</span>
+          <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1–15, 2026 (MTD Day 16/30)</span>
         </div>
         <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
           <button type="button" class="btn-card-snap" onclick="copyCardImage('smallTeamCards', 'All 5 Small Teams')" title="نسخ صورة الـ 5 كروت معاً للصقها مباشرة في DingTalk Mega Group" style="cursor: pointer; background: linear-gradient(135deg, #4f46e5, #6366f1); border: 1.5px solid #818cf8; color: #ffffff; border-radius: 8px; padding: 6px 14px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35); transition: all 0.2s ease;">
@@ -373,18 +434,70 @@
     </section>
 
     <!-- ============================================== -->
-    <!-- TAB 3: Individual Reps (19) -->
+    <!-- TAB 3: Individual Reps (18) -->
     <!-- ============================================== -->
     <section id="tab-individuals" class="tab-content">
       <div class="section-header">
         <h2>Individual Performance Deep Dive</h2>
-        <span class="source-tag" id="individualRepsCountTag">19 Active Sales Specialists | Nov 1–7, 2026 (Day 7)</span>
+        <span class="source-tag" id="individualRepsCountTag">18 Active Sales Specialists | Nov 1–7, 2026 (Day 7)</span>
       </div>
       
       <!-- Individuals Mission Telemetry Strip -->
       <div id="indSummaryBar" class="ind-summary-strip"></div>
       
       <!-- Filter and Sort Controls -->
+      <!-- Tactical Action Filter Pills (OCTOPUS Style) -->
+      <div class="tactical-pills-bar">
+        <button type="button" class="tactical-pill active" data-filter="all" onclick="filterIndividualsByPill('all')">
+          <span>👥 All Reps</span>
+          <span class="pill-count">18</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="behind" onclick="filterIndividualsByPill('behind')">
+          <span>⚠️ Behind BM</span>
+          <span class="pill-count" id="pillCountBehind">7</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="zero" onclick="filterIndividualsByPill('zero')">
+          <span>🚨 Zero Cash</span>
+          <span class="pill-count" id="pillCountZero">0</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="nodeal" onclick="filterIndividualsByPill('nodeal')">
+          <span>📉 Low Deals (&le;2)</span>
+          <span class="pill-count" id="pillCountNoDeal">3</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="pending" onclick="filterIndividualsByPill('pending')">
+          <span>⏳ High Backlog</span>
+          <span class="pill-count" id="pillCountPending">5</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="calls" onclick="filterIndividualsByPill('calls')">
+          <span>📞 Cover &lt; 70%</span>
+          <span class="pill-count" id="pillCountCalls">6</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="ach100" onclick="filterIndividualsByPill('ach100')">
+          <span>🏆 100%+ Goal</span>
+          <span class="pill-count" id="pillCount100">0</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="pod-EGSS01" onclick="filterIndividualsByPill('pod-EGSS01')">
+          <span>ME-EGSS01</span>
+          <span class="pill-count">4</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="pod-EGSS05" onclick="filterIndividualsByPill('pod-EGSS05')">
+          <span>ME-EGSS05</span>
+          <span class="pill-count">6</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="pod-EGSS10" onclick="filterIndividualsByPill('pod-EGSS10')">
+          <span>ME-EGSS10</span>
+          <span class="pill-count">3</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="pod-EGSS13" onclick="filterIndividualsByPill('pod-EGSS13')">
+          <span>ME-EGSS13</span>
+          <span class="pill-count">3</span>
+        </button>
+        <button type="button" class="tactical-pill" data-filter="pod-EGSS30" onclick="filterIndividualsByPill('pod-EGSS30')">
+          <span>ME-EGSS30</span>
+          <span class="pill-count">2</span>
+        </button>
+      </div>
+
       <div class="filter-bar">
         <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
           <label style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">Filter Team:</label>
@@ -422,8 +535,8 @@
         <!-- Master Reps Count & Paging Health Banner -->
         <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: rgba(99, 102, 241, 0.08); border-bottom: 1px solid var(--border-glass); border-radius: 12px 12px 0 0; flex-wrap: wrap; gap: 8px;">
           <div style="display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 0.85rem; font-weight: 800; color: var(--text-primary);">👥 Big Team 01 Master Roster (All 19 Sales Specialists)</span>
-            <span class="pill-badge pill-badge-emerald" style="font-size: 0.70rem; padding: 2px 8px; font-weight: 800;">19 Reps Active • 100% Balanced</span>
+            <span style="font-size: 0.85rem; font-weight: 800; color: var(--text-primary);">👥 Big Team 01 Master Roster (All 18 Sales Specialists)</span>
+            <span class="pill-badge pill-badge-emerald" style="font-size: 0.70rem; padding: 2px 8px; font-weight: 800;">18 Reps Active • 100% Balanced</span>
           </div>
           <div style="font-size: 0.76rem; color: var(--text-secondary); font-weight: 600;">
             ⬇️ Scroll down to view all 19 reps (#1 to #19) & Sector Totals
@@ -1918,7 +2031,7 @@
             Cumulative month-to-date tracking across all October operational days with interactive multi-metric charts and rep velocity.
           </p>
         </div>
-        <span class="source-tag">Timeline: 1 Nov → 7 Nov (MTD Day 15/30)</span>
+        <span class="source-tag">Timeline: 1 Nov → 7 Nov (MTD Day 16/30)</span>
       </div>
 
       <!-- Controls & Filters -->
@@ -2004,7 +2117,7 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         <span>Teams</span>
       </button>
-      <button type="button" class="dock-btn" onclick="switchTab('individuals')" title="Individual Reps (19)">
+      <button type="button" class="dock-btn" onclick="switchTab('individuals')" title="Individual Reps (18)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         <span>Reps</span>
       </button>
@@ -2078,7 +2191,8 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261115_200020" defer></script>
+  <script src="dashboard.js?v=20261116_164707" defer></script>
+  <script src="dashboard_ai_command_suite.js?v=20261116_164707" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link
@@ -2176,6 +2290,10 @@
   </script>
 </body>
 </html>
+
+
+
+
 
 
 
