@@ -1349,11 +1349,13 @@
 
 
   function getTokiAnswer(query) {
-    return TokiUniversalEngine.answer(query, { activeLang: activeLang });
+    const engine = (typeof window !== 'undefined' && window.TokiUniversalEngine) || (typeof global !== 'undefined' && global.TokiUniversalEngine);
+    return engine.answer(query, { activeLang: activeLang });
   }
 
-  window.TokiUniversalEngine = TokiUniversalEngine;
-  window.getTokiAnswer = getTokiAnswer;
+  if (typeof window !== 'undefined') {
+    window.getTokiAnswer = getTokiAnswer;
+  }
 
   // Inject Styles
   function injectStyles() {
