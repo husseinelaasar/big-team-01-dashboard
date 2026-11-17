@@ -432,6 +432,7 @@
           <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1�15, 2026 (MTD Day 17/30)</span>
         </div>
         <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('smallTeamCards', 'Big Team 01 — بطاقات الفرق الـ 5')" title="إرسال بطاقات الفرق الـ 5 فوراً إلى مجموعة Mega في دنج توك">🚀 إرسال لـ Mega Group مباشر</button>
           <button type="button" class="btn-card-snap" onclick="copyCardImage('smallTeamCards', 'All 5 Small Teams')" title="Copy all 5 team cards to paste directly in DingTalk" style="cursor: pointer; background: linear-gradient(135deg, #4f46e5, #6366f1); border: 1.5px solid #818cf8; color: #ffffff; border-radius: 8px; padding: 6px 14px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35); transition: all 0.2s ease;">
             ?? Copy 5 Team Cards for DingTalk
           </button>
@@ -538,6 +539,16 @@
         <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
           <button id="viewToggleCards" class="view-btn active">Cards View</button>
           <button id="viewToggleTable" class="view-btn">Table View</button>
+          <div style="width: 1px; height: 24px; background: rgba(255,255,255,0.15); margin: 0 4px;"></div>
+          <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('individualTableView', 'Big Team 01 — جدول أداء المبيعات الشامل')" title="إرسال صورة الجدول فوراً إلى مجموعة Mega Group في دنج توك">
+            🚀 إرسال لـ Mega Group مباشر
+          </button>
+          <button type="button" class="btn-table-snap btn-snap-copy" onclick="copyElementImage('individualTableView', 'جدول أداء المبيعات الشامل')" title="نسخ صورة الجدول بدقة عالية للصقها في دنج توك (Ctrl+V)">
+            📋 نسخ صورة الجدول
+          </button>
+          <button type="button" class="btn-table-snap btn-snap-dl" onclick="downloadElementImage('individualTableView', 'Big_Team_01_Individual_Performance_Table')" title="تحميل صورة الجدول كملف PNG">
+            📷 PNG
+          </button>
         </div>
       </div>
 
@@ -550,8 +561,16 @@
             <span style="font-size: 0.85rem; font-weight: 800; color: var(--text-primary);">?? Big Team 01 Master Roster (All 18 Sales Specialists)</span>
             <span class="pill-badge pill-badge-emerald" style="font-size: 0.70rem; padding: 2px 8px; font-weight: 800;">18 Reps Active � 100% Balanced</span>
           </div>
-          <div style="font-size: 0.76rem; color: var(--text-secondary); font-weight: 600;">
-            ?? Scroll down to view all 19 reps (#1 to #19) & Sector Totals
+          <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+            <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('individualTableView', 'Big Team 01 — جدول أداء المبيعات الشامل')" title="إرسال صورة الجدول فوراً إلى مجموعة Mega Group في دنج توك" style="padding: 4px 10px; font-size: 0.74rem;">
+              🚀 إرسال لـ Mega Group
+            </button>
+            <button type="button" class="btn-table-snap btn-snap-copy" onclick="copyElementImage('individualTableView', 'جدول أداء المبيعات الشامل')" title="نسخ صورة الجدول بدقة عالية" style="padding: 4px 10px; font-size: 0.74rem;">
+              📋 نسخ صورة
+            </button>
+            <button type="button" class="btn-table-snap btn-snap-dl" onclick="downloadElementImage('individualTableView', 'Big_Team_01_Individual_Performance_Table')" title="تحميل PNG" style="padding: 4px 8px; font-size: 0.74rem;">
+              📷 PNG
+            </button>
           </div>
         </div>
         <table class="data-table" id="individualFullTable" style="width: 100%;">
@@ -807,7 +826,16 @@
           </select>
         </div>
         <div style="display: flex; align-items: center; gap: 8px;">
-          <input type="text" id="upgradeSearchInput" class="modern-input" placeholder="?? Search rep name..." style="width: 230px;">
+          <input type="text" id="upgradeSearchInput" class="modern-input" placeholder="🔍 Search rep name..." style="width: 180px;">
+          <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('masterUpgradeTable', 'Big Team 01 — جدول ترقية M2 (هدف 20%)')" title="إرسال صورة جدول الترقية فوراً إلى Mega Group في دنج توك">
+            🚀 إرسال لـ Mega Group
+          </button>
+          <button type="button" class="btn-table-snap btn-snap-copy" onclick="copyElementImage('masterUpgradeTable', 'جدول ترقية M2')" title="نسخ صورة جدول الترقية">
+            📋 نسخ صورة
+          </button>
+          <button type="button" class="btn-table-snap btn-snap-dl" onclick="downloadElementImage('masterUpgradeTable', 'Big_Team_01_Early_Upgrade_Table')" title="تحميل PNG">
+            📷 PNG
+          </button>
         </div>
       </div>
 
@@ -2204,10 +2232,10 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261117_151500" defer></script>
-  <script src="dashboard_ai_command_suite.js?v=1794909400000" defer></script>
+  <script src="dashboard.js?v=20261117134440" defer></script>
+  <script src="dashboard_ai_command_suite.js?v=20261117134440" defer></script>
   <script src="dashboard_i18n.js?v=1794910700063" defer></script>
-  <script src="dashboard_voice_assistant.js?v=20261117_151500" defer></script>
+  <script src="dashboard_voice_assistant.js?v=20261117_160500" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link

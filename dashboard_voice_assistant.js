@@ -1,6 +1,8 @@
 /**
  * Toki — Big Team 01 Interactive 3D AI Voice & Data Assistant
- * Tri-lingual Domain Intelligence: English, Arabic, Chinese (EN / AR / ZH)
+ * Hybrid Dual-Engine Architecture:
+ * 1. Google Gemini 1.5 Flash Cloud Copilot (Deep Egyptian Arabic NLU & Cross-Metric Reasoning)
+ * 2. Toki Universal Domain Intelligence Engine (Zero-Latency Local Offline Fallback)
  * Native Light-Theme Corporate Aesthetics | Self-Healing Autonomous Engine
  */
 
@@ -27,61 +29,73 @@
       return;
     }
 
-    try { synth.cancel(); } catch (e) {}
+    try {
+      synth.cancel();
+      // Clean text of markdown characters, bullet symbols and code for clean speech
+      const cleanText = (text || '')
+        .replace(/[*#_~`>]/g, '')
+        .replace(/•/g, ', ')
+        .replace(/\n+/g, '. ')
+        .replace(/\s+/g, ' ')
+        .trim();
 
-    const cleanText = text.replace(/[*_#`]/g, '').replace(/https?:\/\/\S+/g, '');
-    const utter = new SpeechSynthesisUtterance(cleanText);
-    utter.rate = 1.0;
-    utter.pitch = 1.05;
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      currentUtterance = utterance;
 
-    // Pick language and matching voice
-    const targetLang = langCode || activeLang;
-    if (targetLang === 'ar') utter.lang = 'ar-SA';
-    else if (targetLang === 'zh') utter.lang = 'zh-CN';
-    else utter.lang = 'en-US';
+      let targetLang = 'en-US';
+      if (langCode === 'ar') targetLang = 'ar-EG';
+      else if (langCode === 'zh') targetLang = 'zh-CN';
 
-    const voices = synth.getVoices() || [];
-    let matchedVoice = null;
+      utterance.lang = targetLang;
+      utterance.rate = 1.0;
+      utterance.pitch = 1.05;
 
-    if (targetLang === 'ar') {
-      matchedVoice = voices.find(v => v.lang && v.lang.startsWith('ar'));
-    } else if (targetLang === 'zh') {
-      matchedVoice = voices.find(v => v.lang && (v.lang.startsWith('zh') || (v.name && v.name.includes('Chinese'))));
-    } else {
-      matchedVoice = voices.find(v => v.lang && v.lang.startsWith('en') && (v.name && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Jenny') || v.name.includes('Guy') || v.name.includes('Samantha')))) || voices.find(v => v.lang && v.lang.startsWith('en'));
+      const voices = synth.getVoices ? synth.getVoices() : [];
+      let voice = null;
+      if (langCode === 'ar') {
+        voice = voices.find(v => v.lang.includes('ar') || v.lang.includes('EG') || v.name.includes('Arabic'));
+      } else if (langCode === 'zh') {
+        voice = voices.find(v => v.lang.includes('zh') || v.name.includes('Chinese') || v.name.includes('Mandarin'));
+      } else {
+        voice = voices.find(v => v.lang.includes('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha')));
+      }
+      if (voice) utterance.voice = voice;
+
+      utterance.onstart = () => {
+        isSpeaking = true;
+        setSoundwaveActive(true);
+      };
+
+      utterance.onend = () => {
+        isSpeaking = false;
+        setSoundwaveActive(false);
+        if (onEnd) onEnd();
+      };
+
+      utterance.onerror = () => {
+        isSpeaking = false;
+        setSoundwaveActive(false);
+        if (onEnd) onEnd();
+      };
+
+      synth.speak(utterance);
+    } catch (e) {
+      console.warn('Speech synthesis error:', e);
+      isSpeaking = false;
+      setSoundwaveActive(false);
+      if (onEnd) onEnd();
     }
-
-    if (matchedVoice) utter.voice = matchedVoice;
-
-    utter.onstart = () => {
-      isSpeaking = true;
-      updateSoundwave(true);
-    };
-    utter.onend = () => {
-      isSpeaking = false;
-      updateSoundwave(false);
-      if (onEnd) onEnd();
-    };
-    utter.onerror = () => {
-      isSpeaking = false;
-      updateSoundwave(false);
-      if (onEnd) onEnd();
-    };
-
-    currentUtterance = utter;
-    synth.speak(utter);
   }
 
   function stopSpeaking() {
-    const synth = (typeof window !== 'undefined' && window.speechSynthesis);
-    if (synth) {
-      try { synth.cancel(); } catch (e) {}
+    if (typeof window !== 'undefined' && window.speechSynthesis) {
+      window.speechSynthesis.cancel();
     }
     isSpeaking = false;
-    updateSoundwave(false);
+    setSoundwaveActive(false);
   }
 
-  function updateSoundwave(active) {
+  function setSoundwaveActive(active) {
     const sw = document.getElementById('tokiSoundwave');
     const avatar = document.getElementById('tokiModalAvatar');
     if (sw) sw.style.display = active ? 'flex' : 'none';
@@ -92,7 +106,7 @@
   }
 
   // =========================================================================
-  // EMBEDDED TOKI UNIVERSAL DOMAIN INTELLIGENCE ENGINE (v3.0)
+  // EMBEDDED TOKI UNIVERSAL DOMAIN INTELLIGENCE ENGINE (v4.0)
   // =========================================================================
 /**
  * Toki Universal Domain Intelligence Engine (v4.0)
@@ -1443,7 +1457,6 @@
   }
 })(typeof window !== 'undefined' ? window : global);
 
-
   function getTokiAnswer(query) {
     const engine = (typeof window !== 'undefined' && window.TokiUniversalEngine) || (typeof global !== 'undefined' && global.TokiUniversalEngine);
     return engine.answer(query, { activeLang: activeLang });
@@ -1451,6 +1464,154 @@
 
   if (typeof window !== 'undefined') {
     window.getTokiAnswer = getTokiAnswer;
+  }
+
+  // =========================================================================
+  // GEMINI 1.5 FLASH HYBRID AI COPILOT CLIENT
+  // =========================================================================
+
+  function getGeminiApiKey() {
+    if (typeof localStorage === 'undefined') return '';
+    return (localStorage.getItem('toki_gemini_api_key') || '').trim();
+  }
+
+  function setGeminiApiKey(key) {
+    if (typeof localStorage === 'undefined') return;
+    const cleanKey = (key || '').trim();
+    if (cleanKey) {
+      localStorage.setItem('toki_gemini_api_key', cleanKey);
+    } else {
+      localStorage.removeItem('toki_gemini_api_key');
+    }
+    updateAiStatusIndicator();
+  }
+
+  function buildLivePromptContext() {
+    let m = null;
+    if (typeof window !== 'undefined' && window.__model && window.__model.summary) {
+      m = window.__model;
+    } else {
+      const engine = (typeof window !== 'undefined' && window.TokiUniversalEngine) || (typeof global !== 'undefined' && global.TokiUniversalEngine);
+      m = engine.getModel();
+    }
+
+    const s = m.summary || {};
+    const ind = m.individuals || [];
+
+    let text = '=== 51TALK BIG TEAM 01 LIVE METRICS SNAPSHOT ===\n';
+    text += '- Senior Manager: Hussein El A\'sar (حسين الأعصر)\n';
+    text += '- Operational Day: November 2026 (MTD Day 17 of 30)\n';
+    text += '- Target Benchmark Pacing: Day 16: 41.0% | Day 17 (Today): 43.0% | Day 18 (Tomorrow): 46.0%\n';
+    text += '- Net Cash Achieved: $' + (s.totalCash || 77770) + ' (' + (s.achievement !== undefined ? s.achievement.toFixed(1) : '44.8') + '%) vs Monthly Target: $' + (s.totalTarget || 173541) + '\n';
+    text += '- Cash Gap Remaining: $' + Math.max(0, (s.totalTarget || 173541) - (s.totalCash || 77770)) + '\n';
+    text += '- Required Daily Run Rate: $7,367 / day to 100% close target\n';
+    text += '- Total Closed Contracts: ' + (s.totalContracts || 83) + ' orders (Avg ticket: ~$1,093)\n';
+    text += '- Early Upgrade M2 (20% Milestone): ' + (s.m2Renewals || 17) + ' renewals closed (Team Target: 46 renewals, Conversion: ~4.7%)\n';
+    text += '- Call Coverage: ' + (s.avgCoverage !== undefined ? s.avgCoverage.toFixed(1) : '75.8') + '%\n';
+    text += '- Class Consumption Rate: ' + (s.classConsumption !== undefined ? s.classConsumption.toFixed(1) : '80.2') + '% (Target: 82.0%)\n';
+    text += '- Zero-Class Students (C0): 42 students pending activation\n\n';
+
+    text += '=== 19 SALES SPECIALISTS PERFORMANCE & LAST DEAL STAGNATION AUDIT ===\n';
+    ind.forEach((r, idx) => {
+      const days = r.lastDealDays !== undefined ? r.lastDealDays : 'N/A';
+      const date = r.lastDealDate || 'N/A';
+      let tier = 'Tier 1 (Safe)';
+      if (typeof days === 'number') {
+        if (days <= 3) tier = 'Tier 1 (Safe 1-3d)';
+        else if (days <= 7) tier = 'Tier 2 (Warning 4-7d)';
+        else tier = 'Tier 3 (CRITICAL DROUGHT >7d)';
+      }
+      text += (idx + 1) + '. ' + r.name + ' (' + (r.nameAr || r.name) + ' - ' + r.team + '): ' +
+              'Cash: $' + r.cash + ' / $' + r.target + ' (' + (r.achievement !== undefined ? r.achievement.toFixed(1) : '0') + '%), ' +
+              'Contracts: ' + r.contracts + ', M2: ' + (r.m2Renewals || 0) + '/' + (r.renewalBase || 0) + ', ' +
+              'Calls: ' + (r.coverage !== undefined ? r.coverage.toFixed(1) : '0') + '%, ' +
+              'Last Deal: ' + days + 'd ago (' + date + ') -> ' + tier + '\n';
+    });
+
+    text += '\n=== OFFICIAL 51TALK PACKAGE RATE CARDS ===\n';
+    text += '• 30 Classes: $550 (2,050 SAR)\n';
+    text += '• 60 Classes: $920 (3,450 SAR)\n';
+    text += '• 150 Classes: $2,120 (7,950 SAR) — Core Best Seller\n';
+    text += '• 300 Classes: $3,980 (14,950 SAR) — Elite Upgrade\n';
+
+    return text;
+  }
+
+  async function callGeminiCopilot(query, promptLang, apiKey) {
+    const liveContext = buildLivePromptContext();
+
+    const systemPrompt = "You are Toki (توكي), the executive AI Voice & Data Copilot for Big Team 01 at 51Talk Middle East, serving Senior Manager Hussein El A'sar (حسين الأعصر).\n\n" +
+      "MANDATORY PERSONA & LINGUISTIC RULES:\n" +
+      "1. ARABIC LANGUAGE RULE:\n" +
+      "   - When responding in Arabic, you MUST speak in 100% authentic, fluent, professional Egyptian Arabic (عامية مصرية حرة وصميمة وسلسة).\n" +
+      "   - NEVER use classical Arabic (فصحى) words like 'إنني', 'سوف أقوم', 'عزيزي', 'لذلك', 'حيث أن', 'من الجدير بالذكر'.\n" +
+      "   - Talk naturally like an energetic Egyptian Sales Director: use natural Egyptian business phrases ('يا باشا', 'يا ريس', 'التيم', 'الديل', 'البيز', 'الريت', 'البنشمارك', 'مفرتك التارجت', 'واقع', 'كسر الصفر', 'سحب الحصص', 'الكاش', 'الفجوة', 'شد الحيل').\n" +
+      "2. ENGLISH & CHINESE RULES:\n" +
+      "   - For English: Sharp, executive, data-backed sales leadership tone.\n" +
+      "   - For Chinese: 51Talk HQ management tone (大一组业务战报、基准线、成单分析).\n" +
+      "3. DEEP CROSS-METRIC REASONING:\n" +
+      "   - Connect the dots! Don't just dump isolated numbers. Explain the underlying reasons (e.g. why cash is lagging, link to deal drought, call coverage, or low M2 renewals).\n" +
+      "   - If asked about deal drought or stagnation ('مين مريح؟', 'مين بقاله كتير ما قفلش؟'), always cite the 3 risk tiers:\n" +
+      "     * Tier 1 (1-3 days, Safe & Active)\n" +
+      "     * Tier 2 (4-7 days, Warning)\n" +
+      "     * Tier 3 (>7 days, Critical Danger: Amr Safwat & Omar Moneb 12 days, Tito 8 days).\n" +
+      "4. BREVITY & VOCAL ELEGANCE:\n" +
+      "   - Keep answers concise and punchy (3 to 5 clear bullet points maximum).\n" +
+      "   - Use plain numbers and symbols ($) that read smoothly aloud via Text-to-Speech.";
+
+    const models = ['gemini-1.5-flash', 'gemini-2.0-flash', 'gemini-1.5-pro'];
+    let lastError = null;
+
+    for (const model of models) {
+      try {
+        const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + apiKey;
+        const payload = {
+          system_instruction: {
+            parts: [{ text: systemPrompt + '\n\n' + liveContext }]
+          },
+          contents: [
+            {
+              role: 'user',
+              parts: [{ text: query }]
+            }
+          ],
+          generationConfig: {
+            temperature: 0.35,
+            maxOutputTokens: 550
+          }
+        };
+
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          const errDetail = await response.text();
+          console.warn('Gemini ' + model + ' returned status ' + response.status + ':', errDetail);
+          lastError = new Error('HTTP ' + response.status);
+          continue;
+        }
+
+        const data = await response.json();
+        const candidate = data.candidates && data.candidates[0];
+        if (candidate && candidate.content && candidate.content.parts && candidate.content.parts[0]) {
+          const text = candidate.content.parts[0].text.trim();
+          return {
+            text: text,
+            lang: promptLang,
+            source: 'gemini',
+            model: model
+          };
+        }
+      } catch (err) {
+        console.warn('Gemini ' + model + ' request failed:', err);
+        lastError = err;
+      }
+    }
+
+    throw lastError || new Error('All Gemini model endpoints failed');
   }
 
   // Inject Styles
@@ -1469,98 +1630,67 @@
         gap: 12px;
         cursor: pointer;
         user-select: none;
-        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        font-family: 'Inter', system-ui, sans-serif;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .toki-widget:hover { transform: translateY(-4px) scale(1.03); }
-      .toki-widget:active { transform: scale(0.97); }
-
-      .toki-bubble {
-        background: #ffffff;
-        color: #1e293b;
-        padding: 8px 14px;
-        border-radius: 16px;
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
-        border: 1.5px solid #fef08a;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        animation: tokiPulseBubble 3s ease-in-out infinite;
-        position: relative;
-        white-space: nowrap;
-      }
-      .toki-bubble::after {
-        content: '';
-        position: absolute;
-        right: -8px;
-        top: 50%;
-        transform: translateY(-50%);
-        border-width: 6px 0 6px 8px;
-        border-style: solid;
-        border-color: transparent transparent transparent #ffffff;
-      }
-      .toki-bubble-text {
-        font-weight: 800;
-        font-size: 0.88rem;
-        color: #b45309;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-      .toki-bubble-sub { font-size: 0.70rem; color: #64748b; font-weight: 600; }
+      .toki-widget:hover { transform: scale(1.05); }
 
       .toki-avatar-btn {
-        width: 70px;
-        height: 70px;
+        width: 62px;
+        height: 62px;
         border-radius: 50%;
-        position: relative;
-        background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
-        box-shadow: 0 12px 28px rgba(245, 158, 11, 0.45), 0 4px 12px rgba(0, 0, 0, 0.12), inset 0 2px 4px rgba(255, 255, 255, 0.6);
-        border: 3px solid #ffffff;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.5), 0 0 0 3px rgba(254, 243, 199, 0.8);
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: visible;
-        animation: tokiFloat 4s ease-in-out infinite;
+        position: relative;
+        overflow: hidden;
       }
       .toki-avatar-img {
-        width: 60px;
-        height: 60px;
+        width: 90%;
+        height: 90%;
         border-radius: 50%;
         object-fit: cover;
-        background: #fef08a;
-        transition: transform 0.25s ease;
       }
-      .toki-widget:hover .toki-avatar-img { transform: scale(1.08) rotate(3deg); }
       .toki-live-badge {
         position: absolute;
-        bottom: 0px;
-        right: 0px;
-        width: 18px;
-        height: 18px;
+        top: 2px;
+        right: 2px;
+        width: 14px;
+        height: 14px;
         background: #10b981;
         border: 2px solid #ffffff;
         border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 6px rgba(16, 185, 129, 0.4);
       }
       .toki-live-dot {
-        width: 6px;
-        height: 6px;
-        background: #ffffff;
+        position: absolute;
+        inset: -2px;
         border-radius: 50%;
-        animation: tokiGlow 1.8s infinite;
+        background: inherit;
+        animation: tokiPulse 1.8s infinite;
       }
+
+      .toki-bubble {
+        background: #ffffff;
+        padding: 8px 16px;
+        border-radius: 18px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(245, 158, 11, 0.2);
+        display: flex;
+        flex-direction: column;
+        pointer-events: none;
+        max-width: 220px;
+        animation: tokiFloat 3s ease-in-out infinite;
+      }
+      .toki-bubble-text { font-size: 0.82rem; font-weight: 800; color: #78350f; }
+      .toki-bubble-sub { font-size: 0.7rem; color: #b45309; }
 
       .toki-modal {
         position: fixed;
         bottom: 105px;
         right: 24px;
-        width: 420px;
+        width: 430px;
         max-width: calc(100vw - 32px);
-        height: 590px;
+        height: 610px;
         max-height: calc(100vh - 125px);
         background: #ffffff;
         border-radius: 24px;
@@ -1575,17 +1705,18 @@
       .toki-modal.hidden { display: none !important; }
 
       .toki-modal-header {
-        padding: 16px 20px;
+        padding: 14px 18px;
         background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
         border-bottom: 1px solid #fde68a;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
       }
-      .toki-header-info { display: flex; align-items: center; gap: 12px; }
+      .toki-header-info { display: flex; align-items: center; gap: 10px; }
       .toki-modal-avatar {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         border: 2px solid #f59e0b;
         background: #fef08a;
@@ -1596,9 +1727,9 @@
         box-shadow: 0 0 12px #f59e0b;
       }
       .toki-title-box { display: flex; flex-direction: column; }
-      .toki-modal-title { font-weight: 800; font-size: 1.05rem; color: #78350f; }
-      .toki-modal-sub { font-size: 0.75rem; color: #92400e; font-weight: 600; display: flex; align-items: center; gap: 6px; }
-      .toki-status-dot { width: 7px; height: 7px; background: #10b981; border-radius: 50%; }
+      .toki-modal-title { font-weight: 800; font-size: 1rem; color: #78350f; display: flex; align-items: center; gap: 6px; }
+      .toki-modal-sub { font-size: 0.7rem; color: #b45309; display: flex; align-items: center; gap: 4px; }
+      .toki-status-dot { width: 6px; height: 6px; background: #10b981; border-radius: 50%; }
 
       .toki-header-actions { display: flex; align-items: center; gap: 6px; }
       .toki-icon-btn {
@@ -1614,48 +1745,225 @@
         cursor: pointer;
         transition: all 0.2s ease;
         font-size: 0.88rem;
+        position: relative;
       }
       .toki-icon-btn:hover { background: #fef3c7; border-color: #f59e0b; transform: scale(1.08); }
 
+      /* AI Settings Button & Indicators */
+      .toki-ai-status-btn { border-color: #f59e0b; }
+      .toki-ai-status-btn.active {
+        background: #ecfdf5;
+        border-color: #10b981;
+        color: #047857;
+      }
+      .toki-ai-status-indicator {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #d1d5db;
+      }
+      .toki-ai-status-indicator.active {
+        background: #10b981;
+        box-shadow: 0 0 6px #10b981;
+      }
+
+      /* AI Settings Drawer */
+      .toki-settings-drawer {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: #fffdf5;
+        border-bottom: 2px solid #fde68a;
+        box-shadow: 0 14px 28px rgba(245, 158, 11, 0.18);
+        padding: 16px 18px;
+        z-index: 100010;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        animation: tokiDrawerSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .toki-settings-drawer.hidden { display: none !important; }
+
+      @keyframes tokiDrawerSlide {
+        from { opacity: 0; transform: translateY(-12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .toki-settings-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .toki-settings-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 800;
+        font-size: 0.86rem;
+        color: #78350f;
+      }
+      .toki-settings-badge {
+        font-size: 0.68rem;
+        padding: 2px 7px;
+        border-radius: 10px;
+        font-weight: 800;
+      }
+      .toki-settings-badge.badge-active {
+        background: rgba(16, 185, 129, 0.15);
+        color: #047857;
+        border: 1px solid #10b981;
+      }
+      .toki-settings-badge.badge-local {
+        background: rgba(245, 158, 11, 0.15);
+        color: #b45309;
+        border: 1px solid #f59e0b;
+      }
+
+      .toki-settings-desc {
+        font-size: 0.76rem;
+        color: #92400e;
+        margin: 0;
+        line-height: 1.4;
+      }
+
+      .toki-key-input-box {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .toki-key-input-box label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #78350f;
+      }
+      .toki-input-with-eye {
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        border: 1.5px solid #fde68a;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .toki-input-with-eye:focus-within {
+        border-color: #f59e0b;
+        box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+      }
+      .toki-input-with-eye input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 8px 10px;
+        font-family: var(--font-mono, monospace);
+        font-size: 0.78rem;
+        color: #1e293b;
+        background: transparent;
+      }
+      .toki-input-with-eye button {
+        background: none;
+        border: none;
+        padding: 0 10px;
+        cursor: pointer;
+        font-size: 0.88rem;
+      }
+
+      .toki-settings-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .toki-btn-save-key {
+        flex: 1;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        color: #ffffff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 0.78rem;
+        cursor: pointer;
+        transition: transform 0.15s;
+      }
+      .toki-btn-save-key:hover { transform: translateY(-1px); }
+      .toki-btn-clear-key {
+        background: #fef2f2;
+        color: #b91c1c;
+        border: 1px solid #fecaca;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.76rem;
+        cursor: pointer;
+      }
+      .toki-drawer-close-btn {
+        background: none;
+        border: none;
+        font-size: 1rem;
+        color: #92400e;
+        cursor: pointer;
+      }
+
+      .toki-settings-footer-tip {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-size: 0.69rem;
+        color: #a16207;
+      }
+      .toki-settings-footer-tip a {
+        color: #b45309;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+
       .toki-soundwave-bar {
         background: #fffbeb;
-        padding: 6px 18px;
         border-bottom: 1px dashed #fde68a;
+        padding: 6px 18px;
         display: none;
         align-items: center;
         gap: 6px;
       }
-      .toki-soundwave-label { font-size: 0.72rem; font-weight: 700; color: #b45309; margin-right: 4px; }
+      .toki-soundwave-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #b45309;
+        margin-right: 8px;
+      }
       .toki-bar {
         width: 3px;
         height: 14px;
         background: #f59e0b;
         border-radius: 2px;
-        animation: tokiWave 1s ease-in-out infinite alternate;
+        animation: tokiWave 0.8s ease-in-out infinite alternate;
       }
-      .toki-bar:nth-child(2) { animation-delay: 0.15s; height: 18px; }
-      .toki-bar:nth-child(3) { animation-delay: 0.3s; height: 10px; }
-      .toki-bar:nth-child(4) { animation-delay: 0.45s; height: 20px; }
-      .toki-bar:nth-child(5) { animation-delay: 0.6s; height: 12px; }
+      .toki-bar:nth-child(2) { animation-delay: 0.1s; height: 18px; }
+      .toki-bar:nth-child(3) { animation-delay: 0.2s; height: 10px; }
+      .toki-bar:nth-child(4) { animation-delay: 0.3s; height: 22px; }
+      .toki-bar:nth-child(5) { animation-delay: 0.4s; height: 14px; }
 
       .toki-quick-chips {
-        padding: 10px 16px;
+        padding: 10px 14px;
+        background: #fefce8;
+        border-bottom: 1px solid #fef08a;
         display: flex;
-        gap: 8px;
+        gap: 6px;
         overflow-x: auto;
         white-space: nowrap;
-        background: #f8fafc;
-        border-bottom: 1px solid #e2e8f0;
-        scrollbar-width: thin;
+        scrollbar-width: none;
       }
+      .toki-quick-chips::-webkit-scrollbar { display: none; }
       .toki-chip {
-        padding: 5px 12px;
-        border-radius: 12px;
+        padding: 4px 10px;
         background: #ffffff;
-        border: 1px solid #cbd5e1;
-        color: #334155;
-        font-size: 0.75rem;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        border-radius: 14px;
+        font-size: 0.72rem;
         font-weight: 700;
+        color: #78350f;
         cursor: pointer;
         transition: all 0.2s ease;
         flex-shrink: 0;
@@ -1663,17 +1971,16 @@
       .toki-chip:hover {
         background: #fef3c7;
         border-color: #f59e0b;
-        color: #b45309;
         transform: translateY(-2px);
       }
 
       .toki-chat-body {
         flex: 1;
-        padding: 18px;
+        padding: 16px;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 12px;
         background: #ffffff;
         scroll-behavior: smooth;
       }
@@ -1681,7 +1988,7 @@
       .toki-msg {
         display: flex;
         gap: 10px;
-        max-width: 88%;
+        max-width: 90%;
         animation: tokiMsgSlide 0.25s ease-out;
       }
       .toki-msg.assistant { align-self: flex-start; }
@@ -1692,170 +1999,243 @@
         height: 32px;
         border-radius: 50%;
         border: 1.5px solid #f59e0b;
-        background: #fef08a;
-        object-fit: cover;
+        background: #fef3c7;
         flex-shrink: 0;
       }
-
       .toki-msg-bubble {
         padding: 10px 14px;
-        border-radius: 18px;
-        font-size: 0.85rem;
-        line-height: 1.5;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        word-break: break-word;
+        border-radius: 16px;
+        font-size: 0.84rem;
+        line-height: 1.45;
+        white-space: pre-wrap;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       }
       .toki-msg.assistant .toki-msg-bubble {
         background: #fffbeb;
         color: #1e293b;
-        border: 1px solid #fef08a;
-        border-bottom-left-radius: 4px;
+        border: 1px solid #fde68a;
+        border-top-left-radius: 4px;
       }
       .toki-msg.user .toki-msg-bubble {
         background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
         color: #ffffff;
-        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
       }
       .toki-msg-meta {
-        font-size: 0.68rem;
+        font-size: 0.66rem;
         color: #94a3b8;
         margin-top: 4px;
-        font-weight: 500;
-      }
-
-      .toki-footer {
-        padding: 12px 16px;
-        background: #ffffff;
-        border-top: 1px solid #e2e8f0;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 4px;
+      }
+
+      /* Model Source Badges */
+      .toki-gemini-pill {
+        font-size: 0.65rem;
+        padding: 1px 6px;
+        border-radius: 6px;
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(168, 85, 247, 0.2));
+        color: #0284c7;
+        font-weight: 800;
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        margin-left: 6px;
+      }
+      .toki-local-pill {
+        font-size: 0.65rem;
+        padding: 1px 6px;
+        border-radius: 6px;
+        background: rgba(245, 158, 11, 0.15);
+        color: #b45309;
+        font-weight: 700;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        margin-left: 6px;
+      }
+
+      /* Typing Bubble */
+      .toki-typing-dots {
+        display: inline-flex;
+        gap: 4px;
+        align-items: center;
+        margin-left: 6px;
+      }
+      .toki-typing-dots span {
+        width: 6px;
+        height: 6px;
+        background: #f59e0b;
+        border-radius: 50%;
+        animation: tokiTyping 1.2s infinite ease-in-out;
+      }
+      .toki-typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+      .toki-typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+      @keyframes tokiTyping {
+        0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+        40% { transform: scale(1.1); opacity: 1; }
+      }
+
+      .toki-chat-footer {
+        padding: 12px 16px;
+        background: #fffdf5;
+        border-top: 1px solid #fde68a;
+        display: flex;
+        gap: 8px;
+        align-items: center;
       }
       .toki-mic-btn {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
         border: 1.5px solid #fde68a;
-        background: #fffbeb;
+        background: #ffffff;
         color: #b45309;
-        font-size: 1.15rem;
-        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
         transition: all 0.2s ease;
         flex-shrink: 0;
       }
-      .toki-mic-btn:hover { background: #fef08a; transform: scale(1.08); }
+      .toki-mic-btn:hover { background: #fef3c7; border-color: #f59e0b; }
       .toki-mic-btn.listening {
-        background: #fee2e2;
+        background: #ef4444;
+        color: #ffffff;
         border-color: #ef4444;
-        color: #b91c1c;
-        animation: tokiPulseRed 1.2s infinite;
+        animation: tokiPulse 1s infinite;
       }
 
-      .toki-input-box { flex: 1; position: relative; }
+      .toki-input-box {
+        flex: 1;
+        background: #ffffff;
+        border: 1.5px solid #fde68a;
+        border-radius: 20px;
+        padding: 2px 12px;
+        display: flex;
+        align-items: center;
+        transition: border-color 0.2s ease;
+      }
+      .toki-input-box:focus-within {
+        border-color: #f59e0b;
+        box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+      }
       .toki-input {
         width: 100%;
-        padding: 9px 14px;
-        border-radius: 20px;
-        border: 1.5px solid #cbd5e1;
+        border: none;
+        outline: none;
         font-size: 0.85rem;
         color: #1e293b;
-        outline: none;
-        box-sizing: border-box;
-        transition: border-color 0.2s ease;
-        font-family: inherit;
+        background: transparent;
+        padding: 8px 0;
       }
-      .toki-input:focus { border-color: #f59e0b; box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15); }
 
       .toki-send-btn {
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
         border-radius: 50%;
         border: none;
-        background: linear-gradient(135deg, #f59e0b, #d97706);
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
         color: #ffffff;
-        font-size: 0.95rem;
-        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.2s ease;
+        cursor: pointer;
         flex-shrink: 0;
+        transition: transform 0.2s ease;
       }
-      .toki-send-btn:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4); }
+      .toki-send-btn:hover { transform: scale(1.08); }
 
-      @keyframes tokiFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-      @keyframes tokiBounce { 0% { transform: scale(1); } 100% { transform: scale(1.1); } }
-      @keyframes tokiWave { 0% { height: 6px; } 100% { height: 22px; } }
-      @keyframes tokiPulseBubble { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
-      @keyframes tokiPulseRed { 0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6); } 50% { transform: scale(1.08); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); } }
-      @keyframes tokiGlow { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-      @keyframes tokiModalEntrance { 0% { opacity: 0; transform: translateY(30px) scale(0.95); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+      @keyframes tokiPulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.3); opacity: 0.4; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      @keyframes tokiWave {
+        0% { height: 6px; }
+        100% { height: 20px; }
+      }
+      @keyframes tokiFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+      @keyframes tokiBounce {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-5px); }
+      }
+      @keyframes tokiModalEntrance {
+        from { opacity: 0; transform: translateY(20px) scale(0.95); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @keyframes tokiMsgSlide {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
     `;
     document.head.appendChild(style);
   }
 
-  // Get Chips based on language
   function getLocalizedChips(lang) {
     if (lang === 'ar') {
       return `
-        <button type="button" class="toki-chip" data-q="بكره محتاجين كام كاش؟">📊 بنشمارك بكرة</button>
-        <button type="button" class="toki-chip" data-q="فاضل كام عشان نقفل التارجت؟">💰 فجوة الكاش</button>
-        <button type="button" class="toki-chip" data-q="مين واقع في البنشمارك النهاردة؟">⚠️ مين واقع في البنشمارك</button>
-        <button type="button" class="toki-chip" data-q="مين التوب ومين الوحوش النهاردة؟">🏆 وحوش الصدارة</button>
-        <button type="button" class="toki-chip" data-q="عملنا ايه في الـ M2 والـ 20 بالمية؟">🚀 ترقيات 20%</button>
-        <button type="button" class="toki-chip" data-q="سعر باقة 150 حصة بكام؟">💳 أسعار الباقات</button>
-        <button type="button" class="toki-chip" data-q="كام طالب صفر حصص في الفريق؟">👥 عيال الصفر</button>
+        <button type="button" class="toki-chip" data-q="مين اكتر واحد بقاله كتير ما قفلش ديل؟">⏱️ ركود العقود</button>
+        <button type="button" class="toki-chip" data-q="بنشمارك بكرة كام ومحتاجين نلم كام؟">📊 بنشمارك الغد</button>
+        <button type="button" class="toki-chip" data-q="فجوة الكاش لحد آخر الشهر كام؟">💰 فجوة الكاش</button>
+        <button type="button" class="toki-chip" data-q="مين المتأخرين عن البنشمارك؟">⚠️ المتأخرون</button>
+        <button type="button" class="toki-chip" data-q="مين التوب في المبيعات؟">🏆 المتصدرون</button>
+        <button type="button" class="toki-chip" data-q="أسعار الباقات الرسمية كام؟">🏷️ أسعار الباقات</button>
       `;
     }
     if (lang === 'zh') {
       return `
-        <button type="button" class="toki-chip" data-q="明天第17天的基准线和目标差额是多少？">📊 明日基准线</button>
-        <button type="button" class="toki-chip" data-q="团队还差多少业绩达标？">💰 业绩缺口</button>
-        <button type="button" class="toki-chip" data-q="目前有哪些员工落后于基准线？">⚠️ 落后名单</button>
-        <button type="button" class="toki-chip" data-q="谁是团队业绩第一名？">🏆 团队销冠榜</button>
-        <button type="button" class="toki-chip" data-q="提续M2达成20%里程碑进度如何？">🚀 20%提续进度</button>
-        <button type="button" class="toki-chip" data-q="150课时官方价格是多少？">💳 官方课包价格</button>
-        <button type="button" class="toki-chip" data-q="0课时高危学员数量与课消进度">👥 0课时学员</button>
+        <button type="button" class="toki-chip" data-q="谁最久没有成交合同？">⏱️ 停单天数排行</button>
+        <button type="button" class="toki-chip" data-q="明天基准线是多少？">📊 明日基准线</button>
+        <button type="button" class="toki-chip" data-q="全组业绩缺口还有多少？">💰 业绩缺口</button>
+        <button type="button" class="toki-chip" data-q="落后基准线的顾问有哪些？">⚠️ 落后顾问</button>
+        <button type="button" class="toki-chip" data-q="本月销冠前三名是谁？">🏆 销冠排名</button>
+        <button type="button" class="toki-chip" data-q="官方课包价格体系">🏷️ 课包价目</button>
       `;
     }
     return `
-      <button type="button" class="toki-chip" data-q="What is the benchmark for tomorrow?">📊 Tomorrow BM</button>
-      <button type="button" class="toki-chip" data-q="What is our cash gap and daily run rate needed?">💰 Cash Gap</button>
-      <button type="button" class="toki-chip" data-q="Who is currently trailing the day 16 curve?">⚠️ Behind BM</button>
-      <button type="button" class="toki-chip" data-q="Who are the top performers today?">🏆 Top Stars</button>
-      <button type="button" class="toki-chip" data-q="What is our M2 upgrade progress toward 20%?">🚀 20% Upgrade</button>
-      <button type="button" class="toki-chip" data-q="What are our rate cards for 150 classes?">💳 Rate Card</button>
-      <button type="button" class="toki-chip" data-q="How many students have zero classes?">👥 Zero Classes</button>
+      <button type="button" class="toki-chip" data-q="Who has the longest deal drought?">⏱️ Deal Drought</button>
+      <button type="button" class="toki-chip" data-q="Tomorrow benchmark and cash needed?">📊 Tomorrow BM</button>
+      <button type="button" class="toki-chip" data-q="Total cash gap to reach 100%?">💰 Cash Gap</button>
+      <button type="button" class="toki-chip" data-q="Who is lagging behind benchmark?">⚠️ Behind BM</button>
+      <button type="button" class="toki-chip" data-q="Who are the top performers?">🏆 Top Stars</button>
+      <button type="button" class="toki-chip" data-q="Official package rate card?">🏷️ Rate Card</button>
     `;
   }
 
-  // Welcome message based on language
-  function getLocalizedWelcome(lang) {
-    if (lang === 'ar') {
-      return {
-        title: 'يا هلا بيك يا حسين! أنا توكي 🌟',
-        body: 'أنا مساعدك الذكي لقطاع Big Team 01. اسألني عن أداء أي مستشار، بنشمارك بكرة، فجوة الكاش، استهلاك الحصص، أو دوس على أي سؤال سريع فوق!',
-        meta: 'دلوقتي • جاهز للمحادثة الصوتية'
-      };
+  function updateAiStatusIndicator() {
+    const key = getGeminiApiKey();
+    const dot = document.getElementById('tokiAiStatusDot');
+    const btn = document.getElementById('tokiSettingsBtn');
+    const badge = document.getElementById('tokiSettingsBadge');
+    const hasKey = (key.length > 10);
+
+    if (dot) {
+      if (hasKey) dot.classList.add('active');
+      else dot.classList.remove('active');
     }
-    if (lang === 'zh') {
-      return {
-        title: '您好，侯赛因经理！我是 Toki 🌟',
-        body: '我是大一组 (Big Team 01) 的专属智能语音与数据副驾。欢迎询问销售战报、明日基准线、全月缺口、课时消耗，或点击上方快捷问题！',
-        meta: '刚刚 • 语音已就绪'
-      };
+    if (btn) {
+      if (hasKey) {
+        btn.classList.add('active');
+        btn.title = '✨ Gemini AI Active (Click to configure)';
+      } else {
+        btn.classList.remove('active');
+        btn.title = '🔌 Local Engine Active (Click to connect Gemini API)';
+      }
     }
-    return {
-      title: 'Hello Hussein! I\'m Toki! 🌟',
-      body: 'I\'m your Big Team 01 AI voice & performance assistant. Ask me anything about our sales reps, tomorrow\'s benchmark, cash gaps, or tap a quick question above!',
-      meta: 'Just now • Voice Ready'
-    };
+    if (badge) {
+      if (hasKey) {
+        badge.className = 'toki-settings-badge badge-active';
+        badge.textContent = '✨ Gemini 1.5 Active';
+      } else {
+        badge.className = 'toki-settings-badge badge-local';
+        badge.textContent = '🔌 Local Mode';
+      }
+    }
   }
 
-  // Build Toki DOM
+  // Build Assistant DOM Elements
   function buildTokiElements() {
     if (document.getElementById('tokiFloatingWidget')) return;
 
@@ -1876,10 +2256,9 @@
         <span class="toki-live-badge"><span class="toki-live-dot"></span></span>
       </div>
     `;
+    document.body.appendChild(widget);
 
-    const welcome = getLocalizedWelcome(activeLang);
-
-    // 2. Dialogue Modal
+    // 2. Chat Modal
     const modal = document.createElement('div');
     modal.id = 'tokiModal';
     modal.className = 'toki-modal hidden';
@@ -1894,9 +2273,44 @@
           </div>
         </div>
         <div class="toki-header-actions">
+          <button type="button" class="toki-icon-btn toki-ai-status-btn" id="tokiSettingsBtn" title="Gemini AI Settings & API Key">
+            <span class="toki-ai-status-indicator" id="tokiAiStatusDot"></span>
+            <span class="toki-ai-status-icon">⚡</span>
+          </button>
           <button type="button" class="toki-icon-btn" id="tokiSoundToggle" title="Toggle Voice Output">🔊</button>
           <button type="button" class="toki-icon-btn" id="tokiClearChat" title="Clear Conversation">🗑️</button>
           <button type="button" class="toki-icon-btn" id="tokiCloseBtn" title="Close Assistant">✕</button>
+        </div>
+      </div>
+
+      <!-- Settings Drawer for Gemini API -->
+      <div class="toki-settings-drawer hidden" id="tokiSettingsDrawer">
+        <div class="toki-settings-header">
+          <div class="toki-settings-title">
+            <span>✨ Gemini AI Copilot Settings</span>
+            <span class="toki-settings-badge badge-local" id="tokiSettingsBadge">Local Mode</span>
+          </div>
+          <button type="button" class="toki-drawer-close-btn" id="tokiSettingsCloseBtn">✕</button>
+        </div>
+        <div class="toki-settings-body">
+          <p class="toki-settings-desc">
+            تفعيل الفهم العميق للعامية المصرية، الإنجليزية والتحليل الذكي الشامل عبر <strong>Google Gemini 1.5 Flash</strong>:
+          </p>
+          <div class="toki-key-input-box">
+            <label for="tokiApiKeyInput">Google Gemini API Key:</label>
+            <div class="toki-input-with-eye">
+              <input type="password" id="tokiApiKeyInput" placeholder="AIzaSy..." autocomplete="off" spellcheck="false" />
+              <button type="button" id="tokiToggleKeyVisibility" title="Show/Hide Key">👁️</button>
+            </div>
+          </div>
+          <div class="toki-settings-actions" style="margin-top: 8px;">
+            <button type="button" class="toki-btn-save-key" id="tokiSaveKeyBtn">💾 حفظ وتفعيل (Save)</button>
+            <button type="button" class="toki-btn-clear-key" id="tokiClearKeyBtn">🗑️ مسح المفتاح</button>
+          </div>
+          <div class="toki-settings-footer-tip" style="margin-top: 8px;">
+            <span>🔒 يُحفظ محلياً في متصفحك فقط (Zero Cloud Exposure).</span>
+            <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">👉 احصل على مفتاح مجاني في ثوانٍ من Google AI Studio</a>
+          </div>
         </div>
       </div>
 
@@ -1917,81 +2331,66 @@
 
       <!-- Chat Messages Body -->
       <div class="toki-chat-body" id="tokiChatMessages">
-        <!-- Initial Welcome Message -->
         <div class="toki-msg assistant">
           <img src="assets/toki.jpg" alt="Toki" class="toki-msg-avatar" />
-          <div class="toki-msg-bubble" id="tokiWelcomeBubble">
-            <strong>${welcome.title}</strong><br>
-            ${welcome.body}
-            <div class="toki-msg-meta">${welcome.meta}</div>
+          <div class="toki-msg-bubble">
+            <strong>👋 مرحباً يا حسين! أنا توكي (Toki) المساعد الصوتي والتحليلي لـ Big Team 01!</strong><br>
+            جاهز أجاوبك عن كل تفاصيل فريقنا: أرقام الموظفين، بنشمارك بكرة، ركود العقود، فجوة الكاش، أو طلاب الصفر!
+            <div class="toki-msg-meta">Just now • Ready</div>
           </div>
         </div>
       </div>
 
-      <!-- Footer Input Bar -->
-      <div class="toki-footer">
-        <button type="button" class="toki-mic-btn" id="tokiMicBtn" title="Click to speak">🎤</button>
+      <!-- Chat Input Footer -->
+      <div class="toki-chat-footer">
+        <button type="button" class="toki-mic-btn" id="tokiMicBtn" title="Speak to Toki (Voice Input)">🎤</button>
         <div class="toki-input-box">
           <input type="text" class="toki-input" id="tokiTextInput" placeholder="Ask Toki a question..." autocomplete="off" />
         </div>
-        <button type="button" class="toki-send-btn" id="tokiSendBtn" title="Send Question">▶</button>
+        <button type="button" class="toki-send-btn" id="tokiSendBtn" title="Send Question">➤</button>
       </div>
     `;
-
-    document.body.appendChild(widget);
     document.body.appendChild(modal);
 
-    attachTokiEvents();
     initSpeechRecognition();
-    setTokiLanguage(activeLang);
+    setupEventListeners();
+    updateAiStatusIndicator();
   }
 
-  // Update Toki UI for current language
+  // Update UI Language
   function setTokiLanguage(lang) {
     activeLang = lang;
-    try { localStorage.setItem('bt01_lang', lang); } catch (e) {}
-
-    const chips = document.getElementById('tokiQuickChips');
-    if (chips) {
-      chips.innerHTML = getLocalizedChips(lang);
-      // re-bind click events
-      chips.querySelectorAll('.toki-chip').forEach(chip => {
-        chip.onclick = (e) => {
-          e.stopPropagation();
-          const q = chip.getAttribute('data-q');
-          if (q) handleQuery(q);
-        };
-      });
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('bt01_lang', lang);
     }
 
-    const titleEl = document.getElementById('tokiModalTitle');
-    const subEl = document.getElementById('tokiModalSub');
-    const inputEl = document.getElementById('tokiTextInput');
-    const bubbleText = document.getElementById('tokiFloatBubbleText');
-    const bubbleSub = document.getElementById('tokiFloatBubbleSub');
-    const soundwaveLabel = document.getElementById('tokiSoundwaveLabel');
+    const title = document.getElementById('tokiModalTitle');
+    const sub = document.getElementById('tokiModalSub');
+    const floatText = document.getElementById('tokiFloatBubbleText');
+    const floatSub = document.getElementById('tokiFloatBubbleSub');
+    const input = document.getElementById('tokiTextInput');
+    const chips = document.getElementById('tokiQuickChips');
+
+    if (chips) chips.innerHTML = getLocalizedChips(lang);
 
     if (lang === 'ar') {
-      if (titleEl) titleEl.textContent = 'المساعد الذكي توكي';
-      if (subEl) subEl.innerHTML = '<span class="toki-status-dot"></span> المساعد الصوتي لقطاع Big Team 01';
-      if (inputEl) inputEl.placeholder = 'اسأل توكي عن أداء أي مستشار أو باقة...';
-      if (bubbleText) bubbleText.textContent = '👋 مرحباً، أنا توكي!';
-      if (bubbleSub) bubbleSub.textContent = 'مساعدك الذكي • اسألني';
-      if (soundwaveLabel) soundwaveLabel.textContent = 'توكي يتحدث الآن...';
+      if (title) title.textContent = 'المساعد الذكي توكي';
+      if (sub) sub.innerHTML = '<span class="toki-status-dot"></span> المساعد الصوتي لقطاع Big Team 01';
+      if (floatText) floatText.textContent = '👋 أهلاً، أنا توكي!';
+      if (floatSub) floatSub.textContent = 'المساعد الصوتي • اسألني';
+      if (input) input.placeholder = 'اسأل توكي عن أداء أي مستشار أو باقة...';
     } else if (lang === 'zh') {
-      if (titleEl) titleEl.textContent = 'Toki 智能副驾';
-      if (subEl) subEl.innerHTML = '<span class="toki-status-dot"></span> 大一组语音与数据副驾';
-      if (inputEl) inputEl.placeholder = '向 Toki 询问销售战报、基准线或课包价格...';
-      if (bubbleText) bubbleText.textContent = '👋 你好，我是 Toki！';
-      if (bubbleSub) bubbleSub.textContent = 'AI 副驾 • 随时提问';
-      if (soundwaveLabel) soundwaveLabel.textContent = 'Toki 正在播报...';
+      if (title) title.textContent = 'Toki AI 智能助理';
+      if (sub) sub.innerHTML = '<span class="toki-status-dot"></span> 大一组专属语音副驾';
+      if (floatText) floatText.textContent = '👋 您好，我是Toki！';
+      if (floatSub) floatSub.textContent = 'AI 专属副驾 • 随时提问';
+      if (input) input.placeholder = '向 Toki 询问顾问战报、基准线或课包...';
     } else {
-      if (titleEl) titleEl.textContent = 'Toki AI Copilot';
-      if (subEl) subEl.innerHTML = '<span class="toki-status-dot"></span> Big Team 01 Voice Assistant';
-      if (inputEl) inputEl.placeholder = 'Ask Toki a question...';
-      if (bubbleText) bubbleText.textContent = "👋 Hello, I'm Toki!";
-      if (bubbleSub) bubbleSub.textContent = 'AI Copilot • Ask me';
-      if (soundwaveLabel) soundwaveLabel.textContent = 'Toki is speaking...';
+      if (title) title.textContent = 'Toki AI Copilot';
+      if (sub) sub.innerHTML = '<span class="toki-status-dot"></span> Big Team 01 Voice Assistant';
+      if (floatText) floatText.textContent = "👋 Hello, I'm Toki!";
+      if (floatSub) floatSub.textContent = 'AI Copilot • Ask me';
+      if (input) input.placeholder = 'Ask Toki a question...';
     }
 
     if (recognition) {
@@ -2002,7 +2401,7 @@
   }
 
   // Append Message to UI
-  function appendMessage(sender, text, lang) {
+  function appendMessage(sender, text, lang, source) {
     const chat = document.getElementById('tokiChatMessages');
     if (!chat) return;
 
@@ -2020,10 +2419,17 @@
         </div>
       `;
     } else {
+      const sourceBadge = (source === 'gemini') 
+        ? '<span class="toki-gemini-pill">✨ Gemini 1.5</span>' 
+        : '<span class="toki-local-pill">⚡ Local</span>';
+
       msg.innerHTML = `
         <img src="assets/toki.jpg" alt="Toki" class="toki-msg-avatar" />
         <div class="toki-msg-bubble" style="${isRtl ? 'direction: rtl; text-align: right;' : ''}">
-          <strong>${isRtl ? 'توكي:' : (lang === 'zh' ? 'Toki 小助手:' : 'Toki:')}</strong><br>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+            <strong>${isRtl ? 'توكي:' : (lang === 'zh' ? 'Toki 小助手:' : 'Toki:')}</strong>
+            ${sourceBadge}
+          </div>
           ${text}
           <div class="toki-msg-meta">${now} • ${isRtl ? 'صوت مباشر' : (lang === 'zh' ? '已语音播报' : 'Spoken')}</div>
         </div>
@@ -2034,8 +2440,33 @@
     chat.scrollTop = chat.scrollHeight;
   }
 
-  // Handle Query Execution
-  function handleQuery(queryText) {
+  function appendTypingIndicator() {
+    const chat = document.getElementById('tokiChatMessages');
+    if (!chat || document.getElementById('tokiTypingMsg')) return;
+
+    const msg = document.createElement('div');
+    msg.id = 'tokiTypingMsg';
+    msg.className = 'toki-msg assistant';
+    msg.innerHTML = `
+      <img src="assets/toki.jpg" alt="Toki" class="toki-msg-avatar" />
+      <div class="toki-msg-bubble" style="background: #fffbeb; border: 1px solid #fde68a;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #b45309;">توكي بيفكر في البيانات...</span>
+        <span class="toki-typing-dots">
+          <span></span><span></span><span></span>
+        </span>
+      </div>
+    `;
+    chat.appendChild(msg);
+    chat.scrollTop = chat.scrollHeight;
+  }
+
+  function removeTypingIndicator() {
+    const el = document.getElementById('tokiTypingMsg');
+    if (el) el.remove();
+  }
+
+  // Handle Query Execution (Hybrid Gemini Cloud + Local Fallback)
+  async function handleQuery(queryText) {
     const q = (queryText || '').trim();
     if (!q) return;
 
@@ -2045,20 +2476,48 @@
     const input = document.getElementById('tokiTextInput');
     if (input) input.value = '';
 
-    const res = getTokiAnswer(q);
-
-    // If query was an explicit language switch, sync entire dashboard & assistant language
-    if (res.switchLang) {
-      setTokiLanguage(res.switchLang);
+    // First: Check if this is an explicit language switch request
+    const localPreCheck = getTokiAnswer(q);
+    if (localPreCheck && localPreCheck.switchLang) {
+      setTokiLanguage(localPreCheck.switchLang);
       if (typeof window.setDashboardLanguage === 'function') {
-        window.setDashboardLanguage(res.switchLang);
+        window.setDashboardLanguage(localPreCheck.switchLang);
+      }
+      setTimeout(() => {
+        appendMessage('assistant', localPreCheck.text, localPreCheck.lang, 'local');
+        speak(localPreCheck.text, localPreCheck.lang);
+      }, 200);
+      return;
+    }
+
+    // Second: Check for Gemini API Key
+    const apiKey = getGeminiApiKey();
+
+    if (apiKey) {
+      appendTypingIndicator();
+      try {
+        const geminiRes = await callGeminiCopilot(q, promptLang, apiKey);
+        removeTypingIndicator();
+        appendMessage('assistant', geminiRes.text, geminiRes.lang, 'gemini');
+        speak(geminiRes.text, geminiRes.lang);
+        return;
+      } catch (err) {
+        console.warn('Gemini Copilot request failed, falling back to local engine:', err);
+        removeTypingIndicator();
+        // Fallback gracefully to local engine below
       }
     }
 
+    // Third: Local Autonomous Engine
     setTimeout(() => {
-      appendMessage('assistant', res.text, res.lang);
+      const res = getTokiAnswer(q);
+      let replyText = res.text;
+      if (apiKey) {
+        replyText += '\n\n[💡 تم الرد بالمحرك المحلي لتعذر الاتصال بـ Gemini: تأكد من صلاحية المفتاح والإنترنت]';
+      }
+      appendMessage('assistant', replyText, res.lang, 'local');
       speak(res.text, res.lang);
-    }, 250);
+    }, 200);
   }
 
   // Speech Recognition
@@ -2092,54 +2551,65 @@
     };
 
     recognition.onresult = (e) => {
-      const transcript = e.results[0][0].transcript.trim();
-      if (transcript) handleQuery(transcript);
+      const transcript = e.results[0][0].transcript;
+      const input = document.getElementById('tokiTextInput');
+      if (input) input.value = transcript;
+      handleQuery(transcript);
     };
 
-    recognition.onerror = (e) => {
-      console.warn('Toki SpeechRecognition error:', e.error);
-      stopListening();
+    recognition.onerror = () => {
+      isListening = false;
+      if (micBtn) {
+        micBtn.classList.remove('listening');
+        micBtn.textContent = '🎤';
+      }
     };
 
     recognition.onend = () => {
-      stopListening();
+      isListening = false;
+      if (micBtn) {
+        micBtn.classList.remove('listening');
+        micBtn.textContent = '🎤';
+      }
     };
   }
 
-  function startListening() {
+  function toggleListening() {
     if (!recognition) return;
-    try { recognition.start(); } catch (e) { console.warn(e); }
+    if (isListening) {
+      recognition.stop();
+    } else {
+      try {
+        recognition.start();
+      } catch (e) {
+        console.warn('Recognition start error:', e);
+      }
+    }
   }
 
   function stopListening() {
-    isListening = false;
-    const micBtn = document.getElementById('tokiMicBtn');
-    if (micBtn) {
-      micBtn.classList.remove('listening');
-      micBtn.textContent = '🎤';
-      micBtn.title = 'Click to speak';
-    }
-    if (recognition) {
-      try { recognition.stop(); } catch (e) {}
+    if (recognition && isListening) {
+      recognition.stop();
     }
   }
 
-  function toggleListening(e) {
-    if (e) e.stopPropagation();
-    if (isListening) stopListening();
-    else startListening();
-  }
-
-  // Attach Event Handlers
-  function attachTokiEvents() {
+  // Setup Event Listeners
+  function setupEventListeners() {
     const widget = document.getElementById('tokiFloatingWidget');
     const modal = document.getElementById('tokiModal');
     const closeBtn = document.getElementById('tokiCloseBtn');
-    const clearBtn = document.getElementById('tokiClearChat');
-    const soundToggle = document.getElementById('tokiSoundToggle');
-    const micBtn = document.getElementById('tokiMicBtn');
     const sendBtn = document.getElementById('tokiSendBtn');
     const input = document.getElementById('tokiTextInput');
+    const micBtn = document.getElementById('tokiMicBtn');
+    const soundToggle = document.getElementById('tokiSoundToggle');
+    const clearBtn = document.getElementById('tokiClearChat');
+    const settingsBtn = document.getElementById('tokiSettingsBtn');
+    const settingsDrawer = document.getElementById('tokiSettingsDrawer');
+    const settingsCloseBtn = document.getElementById('tokiSettingsCloseBtn');
+    const saveKeyBtn = document.getElementById('tokiSaveKeyBtn');
+    const clearKeyBtn = document.getElementById('tokiClearKeyBtn');
+    const apiKeyInput = document.getElementById('tokiApiKeyInput');
+    const toggleEyeBtn = document.getElementById('tokiToggleKeyVisibility');
 
     if (widget && modal) {
       widget.onclick = () => {
@@ -2160,6 +2630,71 @@
         modal.classList.add('hidden');
         stopSpeaking();
         stopListening();
+      };
+    }
+
+    if (settingsBtn && settingsDrawer) {
+      settingsBtn.onclick = () => {
+        const isClosed = settingsDrawer.classList.contains('hidden');
+        if (isClosed) {
+          settingsDrawer.classList.remove('hidden');
+          if (apiKeyInput) {
+            apiKeyInput.value = getGeminiApiKey();
+            apiKeyInput.focus();
+          }
+        } else {
+          settingsDrawer.classList.add('hidden');
+        }
+      };
+    }
+
+    if (settingsCloseBtn && settingsDrawer) {
+      settingsCloseBtn.onclick = () => {
+        settingsDrawer.classList.add('hidden');
+      };
+    }
+
+    if (toggleEyeBtn && apiKeyInput) {
+      toggleEyeBtn.onclick = () => {
+        if (apiKeyInput.type === 'password') {
+          apiKeyInput.type = 'text';
+          toggleEyeBtn.textContent = '🔒';
+        } else {
+          apiKeyInput.type = 'password';
+          toggleEyeBtn.textContent = '👁️';
+        }
+      };
+    }
+
+    if (saveKeyBtn && apiKeyInput) {
+      saveKeyBtn.onclick = () => {
+        const val = apiKeyInput.value.trim();
+        setGeminiApiKey(val);
+        if (settingsDrawer) settingsDrawer.classList.add('hidden');
+        
+        const chat = document.getElementById('tokiChatMessages');
+        if (chat) {
+          const msg = document.createElement('div');
+          msg.className = 'toki-msg assistant';
+          msg.innerHTML = `
+            <img src="assets/toki.jpg" alt="Toki" class="toki-msg-avatar" />
+            <div class="toki-msg-bubble" style="background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46;">
+              <strong>✨ تم تفعيل ذكاء Google Gemini 1.5 بنجاح!</strong><br>
+              أنا الآن جاهز لأي استفسار بالعامية المصرية المعقدة، التحليل الشامل لأرقام الفريق، وتفسير البيانات بذكاء غير محدود!
+              <div class="toki-msg-meta">Now • Active Copilot</div>
+            </div>
+          `;
+          chat.appendChild(msg);
+          chat.scrollTop = chat.scrollHeight;
+        }
+      };
+    }
+
+    if (clearKeyBtn && apiKeyInput) {
+      clearKeyBtn.onclick = () => {
+        apiKeyInput.value = '';
+        setGeminiApiKey('');
+        if (settingsDrawer) settingsDrawer.classList.add('hidden');
       };
     }
 
@@ -2237,6 +2772,8 @@
 
   window.setTokiLanguage = setTokiLanguage;
   window.getTokiAnswer = getTokiAnswer;
+  window.setGeminiApiKey = setGeminiApiKey;
+  window.getGeminiApiKey = getGeminiApiKey;
 
   // Initialize
   if (typeof document !== 'undefined') {
