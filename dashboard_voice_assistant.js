@@ -2254,31 +2254,31 @@
   function getLocalizedChips(lang) {
     if (lang === 'ar') {
       return `
-        <button type="button" class="toki-chip" data-q="مين اكتر واحد بقاله كتير ما قفلش ديل؟">⏱️ مين مريح في البيع؟</button>
-        <button type="button" class="toki-chip" data-q="بنشمارك بكرة كام ومحتاجين نلم كام؟">📊 بنشمارك بكرة</button>
-        <button type="button" class="toki-chip" data-q="فجوة الكاش لحد آخر الشهر كام؟">💰 فاضلنا كام كاش؟</button>
-        <button type="button" class="toki-chip" data-q="مين المتأخرين عن البنشمارك؟">⚠️ مين واقع في التيم؟</button>
-        <button type="button" class="toki-chip" data-q="مين التوب في المبيعات؟">🏆 مين التوب والوحوش؟</button>
-        <button type="button" class="toki-chip" data-q="أسعار الباقات الرسمية كام؟">🏷️ أسعار الباقات</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="مين اكتر واحد بقاله كتير ما قفلش ديل؟">⏱️ مين مريح في البيع؟</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="بنشمارك بكرة كام ومحتاجين نلم كام؟">📊 بنشمارك بكرة</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="فجوة الكاش لحد آخر الشهر كام؟">💰 فاضلنا كام كاش؟</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="مين المتأخرين عن البنشمارك؟">⚠️ مين واقع في التيم؟</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="مين التوب في المبيعات؟">🏆 مين التوب والوحوش؟</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="أسعار الباقات الرسمية كام؟">🏷️ أسعار الباقات</button>
       `;
     }
     if (lang === 'zh') {
       return `
-        <button type="button" class="toki-chip" data-q="谁最久没有成交合同？">⏱️ 停单天数排行</button>
-        <button type="button" class="toki-chip" data-q="明天基准线是多少？">📊 明日基准线</button>
-        <button type="button" class="toki-chip" data-q="全组业绩缺口还有多少？">💰 业绩缺口</button>
-        <button type="button" class="toki-chip" data-q="落后基准线的顾问有哪些？">⚠️ 落后顾问</button>
-        <button type="button" class="toki-chip" data-q="本月销冠前三名是谁？">🏆 销冠排名</button>
-        <button type="button" class="toki-chip" data-q="官方课包价格体系">🏷️ 课包价目</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="谁最久没有成交合同？">⏱️ 停单天数排行</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="明天基准线是多少？">📊 明日基准线</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="全组业绩缺口还有多少？">💰 业绩缺口</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="落后基准线的顾问有哪些？">⚠️ 落后顾问</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="本月销冠前三名是谁？">🏆 销冠排名</button>
+        <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="官方课包价格体系">🏷️ 课包价目</button>
       `;
     }
     return `
-      <button type="button" class="toki-chip" data-q="Who has the longest deal drought?">⏱️ Deal Drought</button>
-      <button type="button" class="toki-chip" data-q="Tomorrow benchmark and cash needed?">📊 Tomorrow BM</button>
-      <button type="button" class="toki-chip" data-q="Total cash gap to reach 100%?">💰 Cash Gap</button>
-      <button type="button" class="toki-chip" data-q="Who is lagging behind benchmark?">⚠️ Behind BM</button>
-      <button type="button" class="toki-chip" data-q="Who are the top performers?">🏆 Top Stars</button>
-      <button type="button" class="toki-chip" data-q="Official package rate card?">🏷️ Rate Card</button>
+      <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="Who has the longest deal drought?">⏱️ Deal Drought</button>
+      <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="Tomorrow benchmark and cash needed?">📊 Tomorrow BM</button>
+      <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="Total cash gap to reach 100%?">💰 Cash Gap</button>
+      <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="Who is lagging behind benchmark?">⚠️ Behind BM</button>
+      <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="Who are the top performers?">🏆 Top Stars</button>
+      <button type="button" class="toki-chip" onclick="window.tokiAskQuestion && window.tokiAskQuestion(this.getAttribute('data-q'))" data-q="Official package rate card?">🏷️ Rate Card</button>
     `;
   }
 
@@ -2823,17 +2823,44 @@
       };
     }
 
-    // Quick chips
+    // Quick chips container event delegation (works regardless of innerHTML replacements)
+    const chipsContainer = document.getElementById('tokiQuickChips');
+    if (chipsContainer) {
+      chipsContainer.addEventListener('click', (e) => {
+        const chip = e.target.closest('.toki-chip');
+        if (!chip) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const q = chip.getAttribute('data-q') || chip.innerText.trim();
+        if (q) {
+          chip.style.transform = 'scale(0.95)';
+          setTimeout(() => { chip.style.transform = ''; }, 120);
+          handleQuery(q);
+        }
+      });
+    }
+
+    // Direct binding fallback for initial chips
     document.querySelectorAll('.toki-chip').forEach(chip => {
       chip.onclick = (e) => {
         e.stopPropagation();
-        const q = chip.getAttribute('data-q');
+        const q = chip.getAttribute('data-q') || chip.innerText.trim();
         if (q) handleQuery(q);
       };
     });
   }
 
   // Public Interface
+  window.tokiAskQuestion = function (query) {
+    if (!query) return;
+    buildTokiElements();
+    const modal = document.getElementById('tokiModal');
+    if (modal && modal.classList.contains('hidden')) {
+      modal.classList.remove('hidden');
+    }
+    handleQuery(query);
+  };
+
   window.openTokiAssistant = function () {
     buildTokiElements();
     const modal = document.getElementById('tokiModal');
@@ -2848,6 +2875,7 @@
     buildTokiElements();
   };
 
+  window.tokiAskQuestion = tokiAskQuestion;
   window.setTokiLanguage = setTokiLanguage;
   window.getTokiAnswer = getTokiAnswer;
   window.setGeminiApiKey = setGeminiApiKey;
