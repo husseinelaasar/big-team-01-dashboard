@@ -256,52 +256,24 @@
   // =========================================================================
   function askAiQuestion(query) {
     const input = document.getElementById('aiVoicePromptInput');
-    const promptText = (query || (input ? input.value : '')).trim().toLowerCase();
+    const promptText = (query || (input ? input.value : '')).trim();
     if (!promptText) return;
 
-    const m = window.__model;
-    if (!m) return;
-    const s = m.summary;
-    const currBM = OFFICIAL_PACING[activeSimulationDay] || 41;
-
     let responseText = '';
-    let categoryTitle = 'AI Answer';
+    let categoryTitle = 'Toki AI Intelligence';
 
-    if (promptText.includes('gap') || promptText.includes('needed') || promptText.includes('run rate') || promptText.includes('target')) {
-      categoryTitle = 'Cash Gap & Pacing Run-Rate';
-      responseText = `The total sector cash gap is ${formatMoney(s.totalGap)} against our ${formatMoney(s.totalTarget)} target. ` +
-        `To close 100% of the target, Big Team 01 requires a daily closing velocity of ${formatMoney(s.dailyNeeded)} per day over the remaining 14 days.`;
-    } else if (promptText.includes('top') || promptText.includes('closer') || promptText.includes('champion') || promptText.includes('star') || promptText.includes('best') || promptText.includes('#1')) {
-      categoryTitle = 'Top Performers Today';
-      const top3 = [...m.individuals].sort((a, b) => b.achievement - a.achievement).slice(0, 3);
-      responseText = `Our top 3 sales stars today are: ` +
-        top3.map((r, i) => `#${i + 1} ${r.name.replace(/^(ME-|EGSS\d+-)/i, '')} with ${formatMoney(r.cash)} (${r.achievement.toFixed(1)}%)`).join(', ') + `. ` +
-        `Mohamed Hamed leads the sector at 79.4% achievement with 6 closed deals.`;
-    } else if (promptText.includes('behind') || promptText.includes('slow') || promptText.includes('lagging') || promptText.includes('danger') || promptText.includes('risk')) {
-      categoryTitle = 'Reps Behind Benchmark';
-      const behindReps = m.individuals.filter(r => r.achievement < currBM);
-      responseText = `Currently, ${behindReps.length} specialists are pacing below today's ${currBM}% benchmark. ` +
-        `Immediate coaching priority: ${behindReps.slice(0, 4).map(r => `${r.name.replace(/^(ME-|EGSS\d+-)/i, '')} (${r.achievement.toFixed(1)}%)`).join(', ')}. ` +
-        `Morning renewal follow-ups must be audited with Small Team Leaders.`;
-    } else if (promptText.includes('upgrade') || promptText.includes('m2') || promptText.includes('20%')) {
-      categoryTitle = 'M2 Upgrade Health';
-      responseText = `Big Team 01 has closed ${s.totalUpgradeM2} Upgrade M2 renewals toward the 20% milestone of ${s.totalUpgrade20Target} renewals. ` +
-        `We need ${s.totalUpgrade20Needed} additional upgrades to unlock the full 20% tier incentive. Focus on high-base specialists in EGSS05 and EGSS10.`;
-    } else if (promptText.includes('move') || promptText.includes('moves') || promptText.includes('plan') || promptText.includes('strategy') || promptText.includes('today')) {
-      categoryTitle = "Today's 3 Strategic Moves";
-      responseText = `Today's 3 operational priorities are: ` +
-        `Move 1: Hit ${formatMoney(s.dailyNeeded)} daily cash closing to defend benchmark. ` +
-        `Move 2: Conduct 1-on-1 coaching sprints with the 7 reps pacing below 41%. ` +
-        `Move 3: Target renewal students with fewer than 10 remaining classes to accelerate M2 upgrade conversions.`;
-    } else if (promptText.includes('pod') || promptText.includes('teams') || promptText.includes('team')) {
-      categoryTitle = 'Pod Comparison';
-      const topTeam = Object.values(m.teams).sort((a, b) => b.achievement - a.achievement)[0];
-      responseText = `Across the 5 Small Teams, ${topTeam.label} leads with ${topTeam.achievement.toFixed(1)}% achievement. Total team targets are balanced across all pods.`;
+    if (typeof window.TokiUniversalEngine !== 'undefined' && typeof window.TokiUniversalEngine.answer === 'function') {
+      const ansObj = window.TokiUniversalEngine.answer(promptText);
+      responseText = ansObj.text || '';
+    } else if (typeof window.getTokiAnswer === 'function') {
+      const ansObj = window.getTokiAnswer(promptText);
+      responseText = ansObj.text || '';
     } else {
-      // General match
-      categoryTitle = 'Executive Operational Status';
-      responseText = `Big Team 01 has achieved ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), pacing +${(s.achievement - currBM).toFixed(1)}% ahead of the Day 16 benchmark. ` +
-        `Total gap is ${formatMoney(s.totalGap)}, with ${s.totalContracts} contracts closed MTD.`;
+      const m = window.__model;
+      if (!m) return;
+      const s = m.summary;
+      const currBM = OFFICIAL_PACING[activeSimulationDay] || 41;
+      responseText = `Big Team 01 has achieved ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), pacing +${(s.achievement - currBM).toFixed(1)}% ahead of Day 16 benchmark. Total gap is ${formatMoney(s.totalGap)}.`;
     }
 
     displayTranscript(responseText, categoryTitle);
