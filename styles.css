@@ -8304,3 +8304,90 @@ html[dir="rtl"] .toki-input {
   text-align: right;
   direction: rtl;
 }
+
+
+/* =========================================================================
+ * Individual Reps: Last Closed Deal Risk Badges
+ * Tiers: 1-3 Days (Safe / Light Green), 4-7 Days (Warning / Amber), >7 Days (Danger / Crimson)
+ * ========================================================================= */
+.last-deal-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 8px;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.74rem;
+  font-weight: 800;
+  white-space: nowrap;
+  letter-spacing: -0.2px;
+  box-sizing: border-box;
+  line-height: 1.25;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  cursor: default;
+}
+.last-deal-pill:hover {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Tier 1: 1 - 3 Days (Safe & Fresh: Light, Soft Green Frame) */
+.last-deal-tier-1 {
+  border: 1.5px solid #10b981 !important;
+  background: rgba(16, 185, 129, 0.09) !important;
+  color: #047857 !important;
+  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.12);
+}
+[data-theme="dark"] .last-deal-tier-1 {
+  border-color: #059669 !important;
+  background: rgba(16, 185, 129, 0.18) !important;
+  color: #34d399 !important;
+}
+
+/* Tier 2: 4 - 7 Days (Moderate Risk: Noticeably Darker Amber Frame) */
+.last-deal-tier-2 {
+  border: 1.5px solid #d97706 !important;
+  background: rgba(245, 158, 11, 0.14) !important;
+  color: #92400e !important;
+  box-shadow: 0 1px 4px rgba(217, 119, 6, 0.16);
+}
+[data-theme="dark"] .last-deal-tier-2 {
+  border-color: #f59e0b !important;
+  background: rgba(245, 158, 11, 0.22) !important;
+  color: #fbbf24 !important;
+}
+
+/* Tier 3: > 7 Days or No Deals (Critical Stagnation: Bold Crimson / Danger Red Frame & Glow) */
+.last-deal-tier-3 {
+  border: 2px solid #ef4444 !important;
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #991b1b !important;
+  font-weight: 900 !important;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.28) !important;
+}
+[data-theme="dark"] .last-deal-tier-3 {
+  border-color: #f87171 !important;
+  background: rgba(239, 68, 68, 0.26) !important;
+  color: #fecaca !important;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.38) !important;
+}
+
+.last-deal-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.last-deal-dot.dot-green {
+  background: #10b981;
+}
+.last-deal-dot.dot-amber {
+  background: #d97706;
+}
+.last-deal-dot.dot-red {
+  background: #ef4444;
+  animation: tokiGlow 1.8s infinite;
+}
+

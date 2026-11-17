@@ -370,25 +370,25 @@
       { code: 'EGSS30', name: 'ME-EGSS30', lead: 'Hussein El Aasar', cash: 12871, target: 21037, gap: 8166, achievement: 61.2, orders: 11, avgDeal: 1170, reps: ['Mahmoud Khamis', 'Ahmed Shoukry'] }
     ],
     individuals: [
-      { id: 'EGSS-ashraqatal', name: 'Ashraqat Al', team: 'ME-EGSS01', cash: 2040, target: 10998, achievement: 18.5, contracts: 2, m2Renewals: 0, renewalBase: 31, coverage: 92.5, refund: 0 },
-      { id: 'EGSS-juliamonir01', name: 'Julia Monir', team: 'ME-EGSS01', cash: 2480, target: 8486, achievement: 29.2, contracts: 3, m2Renewals: 0, renewalBase: 16, coverage: 80.0, refund: 0 },
-      { id: 'EGSS-nohayoussry', name: 'Noha Youssry', team: 'ME-EGSS01', cash: 1157, target: 8486, achievement: 13.6, contracts: 3, m2Renewals: 0, renewalBase: 26, coverage: 88.0, refund: 1383 },
-      { id: 'EGSS-mahmoud04', name: 'Mahmoud Tito', team: 'ME-EGSS01', cash: 6860, target: 10486, achievement: 65.4, contracts: 5, m2Renewals: 1, renewalBase: 20, coverage: 75.0, refund: 0 },
-      { id: 'EGSS-samira01', name: 'Samira', team: 'ME-EGSS05', cash: 5260, target: 8486, achievement: 62.0, contracts: 6, m2Renewals: 1, renewalBase: 16, coverage: 84.6, refund: 0 },
-      { id: 'EGSS-abdelrahmannasef', name: 'Abdelrahman Nasef', team: 'ME-EGSS05', cash: 4747, target: 8486, achievement: 55.9, contracts: 5, m2Renewals: 1, renewalBase: 18, coverage: 35.7, refund: 0 },
-      { id: 'EGSS-ibrahimismaiel', name: 'Ibrahim Ismaiel', team: 'ME-EGSS05', cash: 6656, target: 10996, achievement: 60.5, contracts: 8, m2Renewals: 3, renewalBase: 23, coverage: 38.5, refund: 0 },
-      { id: 'EGSS-khaledgonam', name: 'Khaled Gonam', team: 'ME-EGSS05', cash: 800, target: 8486, achievement: 9.4, contracts: 2, m2Renewals: 0, renewalBase: 14, coverage: 88.9, refund: 1020 },
-      { id: 'EGSS-omarmoneb', name: 'Omar Moneb', team: 'ME-EGSS05', cash: 2140, target: 8843, achievement: 24.2, contracts: 3, m2Renewals: 1, renewalBase: 19, coverage: 78.6, refund: 0 },
-      { id: 'EGSS-alihesham01', name: 'Ali Hesham', team: 'ME-EGSS05', cash: 2664, target: 5965, achievement: 44.7, contracts: 4, m2Renewals: 0, renewalBase: 18, coverage: 80.0, refund: 0 },
-      { id: 'EGSS-ehabzaky01', name: 'Ehab Zaky', team: 'ME-EGSS05', cash: 0, target: 8986, achievement: 0.0, contracts: 0, m2Renewals: 0, renewalBase: 107, coverage: 76.5, refund: 0 },
-      { id: 'EGSS-abdelrhmanshehata', name: 'Abdelrahman Shehata', team: 'ME-EGSS10', cash: 3772, target: 6686, achievement: 56.4, contracts: 5, m2Renewals: 3, renewalBase: 28, coverage: 90.0, refund: 0 },
-      { id: 'EGSS-hayamhassan', name: 'Hayam Hassan', team: 'ME-EGSS10', cash: 2734, target: 6111, achievement: 44.7, contracts: 3, m2Renewals: 2, renewalBase: 37, coverage: 85.0, refund: 0 },
-      { id: 'EGSS-titooooo', name: 'Tito', team: 'ME-EGSS10', cash: 4192, target: 9486, achievement: 44.2, contracts: 5, m2Renewals: 1, renewalBase: 31, coverage: 88.0, refund: 0 },
-      { id: 'EGSS-marwaahmed', name: 'Marwa Ahmed', team: 'ME-EGSS13', cash: 3570, target: 6271, achievement: 56.9, contracts: 4, m2Renewals: 0, renewalBase: 25, coverage: 86.0, refund: 0 },
-      { id: 'EGSS-amrsafwat', name: 'Amr Safwat', team: 'ME-EGSS13', cash: 3100, target: 12500, achievement: 24.8, contracts: 2, m2Renewals: 1, renewalBase: 18, coverage: 89.0, refund: 0 },
-      { id: 'EGSS-mohamedha', name: 'Mohamed Hamed', team: 'ME-EGSS13', cash: 10120, target: 12744, achievement: 79.4, contracts: 6, m2Renewals: 0, renewalBase: 20, coverage: 87.0, refund: 0 },
-      { id: 'EGSS-ahmedshoukry', name: 'Ahmed Shoukry', team: 'ME-EGSS30', cash: 5320, target: 8486, achievement: 62.7, contracts: 4, m2Renewals: 0, renewalBase: 26, coverage: 93.0, refund: 0 },
-      { id: 'EGSS-mahmoudkhamis', name: 'Mahmoud Khamis', team: 'ME-EGSS30', cash: 7551, target: 12550, achievement: 60.2, contracts: 7, m2Renewals: 1, renewalBase: 25, coverage: 88.0, refund: 0 }
+      { id: 'EGSS-ashraqatal', name: 'Ashraqat Al', team: 'ME-EGSS01', cash: 2040, target: 10998, achievement: 18.5, contracts: 2, m2Renewals: 0, renewalBase: 31, coverage: 92.5, refund: 0 , lastDealDays: 6, lastDealDate: '2026-11-11'},
+      { id: 'EGSS-juliamonir01', name: 'Julia Monir', team: 'ME-EGSS01', cash: 2480, target: 8486, achievement: 29.2, contracts: 3, m2Renewals: 0, renewalBase: 16, coverage: 80.0, refund: 0 , lastDealDays: 6, lastDealDate: '2026-11-11'},
+      { id: 'EGSS-nohayoussry', name: 'Noha Youssry', team: 'ME-EGSS01', cash: 1157, target: 8486, achievement: 13.6, contracts: 3, m2Renewals: 0, renewalBase: 26, coverage: 88.0, refund: 1383 , lastDealDays: 7, lastDealDate: '2026-11-10'},
+      { id: 'EGSS-mahmoud04', name: 'Mahmoud Tito', team: 'ME-EGSS01', cash: 6860, target: 10486, achievement: 65.4, contracts: 5, m2Renewals: 1, renewalBase: 20, coverage: 75.0, refund: 0 , lastDealDays: 6, lastDealDate: '2026-11-11'},
+      { id: 'EGSS-samira01', name: 'Samira', team: 'ME-EGSS05', cash: 5260, target: 8486, achievement: 62.0, contracts: 6, m2Renewals: 1, renewalBase: 16, coverage: 84.6, refund: 0 , lastDealDays: 2, lastDealDate: '2026-11-15'},
+      { id: 'EGSS-abdelrahmannasef', name: 'Abdelrahman Nasef', team: 'ME-EGSS05', cash: 4747, target: 8486, achievement: 55.9, contracts: 5, m2Renewals: 1, renewalBase: 18, coverage: 35.7, refund: 0 , lastDealDays: 5, lastDealDate: '2026-11-12'},
+      { id: 'EGSS-ibrahimismaiel', name: 'Ibrahim Ismaiel', team: 'ME-EGSS05', cash: 6656, target: 10996, achievement: 60.5, contracts: 8, m2Renewals: 3, renewalBase: 23, coverage: 38.5, refund: 0 , lastDealDays: 5, lastDealDate: '2026-11-12'},
+      { id: 'EGSS-khaledgonam', name: 'Khaled Gonam', team: 'ME-EGSS05', cash: 800, target: 8486, achievement: 9.4, contracts: 2, m2Renewals: 0, renewalBase: 14, coverage: 88.9, refund: 1020 , lastDealDays: 1, lastDealDate: '2026-11-16'},
+      { id: 'EGSS-omarmoneb', name: 'Omar Moneb', team: 'ME-EGSS05', cash: 2140, target: 8843, achievement: 24.2, contracts: 3, m2Renewals: 1, renewalBase: 19, coverage: 78.6, refund: 0 , lastDealDays: 12, lastDealDate: '2026-11-05'},
+      { id: 'EGSS-alihesham01', name: 'Ali Hesham', team: 'ME-EGSS05', cash: 2664, target: 5965, achievement: 44.7, contracts: 4, m2Renewals: 0, renewalBase: 18, coverage: 80.0, refund: 0 , lastDealDays: 5, lastDealDate: '2026-11-12'},
+      { id: 'EGSS-ehabzaky01', name: 'Ehab Zaky', team: 'ME-EGSS05', cash: 0, target: 8986, achievement: 0.0, contracts: 0, m2Renewals: 0, renewalBase: 107, coverage: 76.5, refund: 0 , lastDealDays: 1, lastDealDate: '2026-11-16'},
+      { id: 'EGSS-abdelrhmanshehata', name: 'Abdelrahman Shehata', team: 'ME-EGSS10', cash: 3772, target: 6686, achievement: 56.4, contracts: 5, m2Renewals: 3, renewalBase: 28, coverage: 90.0, refund: 0 , lastDealDays: 6, lastDealDate: '2026-11-11'},
+      { id: 'EGSS-hayamhassan', name: 'Hayam Hassan', team: 'ME-EGSS10', cash: 2734, target: 6111, achievement: 44.7, contracts: 3, m2Renewals: 2, renewalBase: 37, coverage: 85.0, refund: 0 , lastDealDays: 3, lastDealDate: '2026-11-14'},
+      { id: 'EGSS-titooooo', name: 'Tito', team: 'ME-EGSS10', cash: 4192, target: 9486, achievement: 44.2, contracts: 5, m2Renewals: 1, renewalBase: 31, coverage: 88.0, refund: 0 , lastDealDays: 8, lastDealDate: '2026-11-09'},
+      { id: 'EGSS-marwaahmed', name: 'Marwa Ahmed', team: 'ME-EGSS13', cash: 3570, target: 6271, achievement: 56.9, contracts: 4, m2Renewals: 0, renewalBase: 25, coverage: 86.0, refund: 0 , lastDealDays: 3, lastDealDate: '2026-11-14'},
+      { id: 'EGSS-amrsafwat', name: 'Amr Safwat', team: 'ME-EGSS13', cash: 3100, target: 12500, achievement: 24.8, contracts: 2, m2Renewals: 1, renewalBase: 18, coverage: 89.0, refund: 0 , lastDealDays: 12, lastDealDate: '2026-11-05'},
+      { id: 'EGSS-mohamedha', name: 'Mohamed Hamed', team: 'ME-EGSS13', cash: 10120, target: 12744, achievement: 79.4, contracts: 6, m2Renewals: 0, renewalBase: 20, coverage: 87.0, refund: 0 , lastDealDays: 3, lastDealDate: '2026-11-14'},
+      { id: 'EGSS-ahmedshoukry', name: 'Ahmed Shoukry', team: 'ME-EGSS30', cash: 5320, target: 8486, achievement: 62.7, contracts: 4, m2Renewals: 0, renewalBase: 26, coverage: 93.0, refund: 0 , lastDealDays: 2, lastDealDate: '2026-11-15'},
+      { id: 'EGSS-mahmoudkhamis', name: 'Mahmoud Khamis', team: 'ME-EGSS30', cash: 7551, target: 12550, achievement: 60.2, contracts: 7, m2Renewals: 1, renewalBase: 25, coverage: 88.0, refund: 0 , lastDealDays: 7, lastDealDate: '2026-11-10'}
     ],
     repsAch100: [],
     repsBehind: [
@@ -570,6 +570,8 @@
       const asksM2 = /m2|renewal|upgrade|تجديد|ترقية|ترقيه|قاعدة|بيز|ام تو|提续|续费/i.test(norm);
       const asksContracts = /deals?|contracts?|orders?|عقود|عقد|صفقات|صفقة|ديل|ديلات|成单|订单/i.test(norm);
       const asksCalls = /calls?|coverage|تغطية|مكالمات|اتصالات|تغطيه|通话|覆盖/i.test(norm);
+      const asksRepLastDeal = /(?:last\s*deal|deal\s*drought|days\s*since|drought|اخر\s*عقد|آخر\s*عقد|اخر\s*ديل|آخر\s*ديل|بقاله|بقالك|كام\s*يوم|كم\s*يوم|ركود|عقد|ديل|最久|没出单|没成单|未出单|未成单|最近成单|最后成单)/i.test(norm) &&
+                              /(?:last|days|since|when|hows*many|اخر|آخر|بقاله|بقالك|كام|كم|ايام|أيام|ركود|امتى|تاريخ|من امتى|متى|最近|几天|多久|最后|最久)/i.test(norm);
 
       if (asksRefund) {
         const refAmt = matchedRep.refund || 0;
@@ -625,6 +627,55 @@
         }
         return {
           text: `Specialist ${cleanNameEn} Early Upgrade (M2) Telemetry: Closed ${matchedRep.m2Renewals} renewals from an active base of ${matchedRep.renewalBase} students (Conversion: ${matchedRep.renewalBase > 0 ? ((matchedRep.m2Renewals / matchedRep.renewalBase) * 100).toFixed(1) : 0}%).`,
+          lang: 'en'
+        };
+      }
+
+      if (asksRepLastDeal) {
+        const dDays = matchedRep.lastDealDays !== undefined ? matchedRep.lastDealDays : 5;
+        const dDate = matchedRep.lastDealDate || '2026-11-12';
+        
+        let riskTierDescAr = '';
+        let riskTierDescZh = '';
+        let riskTierDescEn = '';
+        
+        if (dDays <= 3) {
+          riskTierDescAr = '🟢 المستوى الآمن (Tier 1 - إطار فاتح وخفيف): معدل إغلاقه نشط وسريع ومفيش ركود!';
+          riskTierDescZh = '🟢 正常活跃阶段 (Tier 1 - 浅色安全框): 成单节奏优良，处于安全期！';
+          riskTierDescEn = '🟢 Active & Fresh (Tier 1 - Soft light border): Good closing velocity, fully on track!';
+        } else if (dDays <= 7) {
+          riskTierDescAr = '⚠️ مستوى التحذير المتوسط (Tier 2 - إطار أغمق نسبياً): بقاله من 4 لـ 7 أيام بدون ديلات ومحتاج متابعة عشان ما يدخلش منطقة الخطر!';
+          riskTierDescZh = '⚠️ 跟进预警阶段 (Tier 2 - 较深警告框): 已连续 4-7 天未出单，需加快促单转化！';
+          riskTierDescEn = '⚠️ Warning Stage (Tier 2 - Moderately darker border): 4 to 7 days elapsed without closed contracts.';
+        } else {
+          riskTierDescAr = '🚨 مستوى الخطورة القصوى (Tier 3 - إطار أحمر حرج): عدى أكتر من 7 أيام بدون أي إغلاق لعقود جديدة ومحتاج تدخل فوري لكسر الركود!';
+          riskTierDescZh = '🚨 严重停单危机 (Tier 3 - 红色高危框): 超过 7 天未出单，需主管立即介入辅导破局！';
+          riskTierDescEn = '🚨 Critical Drought (Tier 3 - Critical red danger border): Over 7 days elapsed! Immediate coaching required.';
+        }
+
+        if (isArabic) {
+          return {
+            text: `بص يا باشا بالنسبة للمستشار ${cleanNameAr} (${repTeam}):\n` +
+                  `• آخر عقد تم إغلاقه: كان من ${dDays} يوم (بتاريخ ${dDate}).\n` +
+                  `• إجمالي عقود الشهر: ${matchedRep.contracts} عقود مقفولة بكاش ${formatMoney(matchedRep.cash, 'ar')}.\n` +
+                  `• تقييم مستوي الخطورة: ${riskTierDescAr}`,
+            lang: 'ar'
+          };
+        }
+        if (isChinese) {
+          return {
+            text: `销售顾问 ${cleanNameZh} (${repTeam}) 最近成单与停单审计：\n` +
+                  `• 最近成单时间: ${dDays} 天前 (${dDate})\n` +
+                  `• 本月累计成单: ${matchedRep.contracts} 单 (净业绩: ${formatMoney(matchedRep.cash, 'zh')})\n` +
+                  `• 停单风险评级: ${riskTierDescZh}`,
+            lang: 'zh'
+          };
+        }
+        return {
+          text: `Specialist ${cleanNameEn} (${repTeam}) Contract Velocity & Last Deal Audit:\n` +
+                `• Days Since Last Deal: ${dDays} day(s) elapsed (Closed on ${dDate})\n` +
+                `• Monthly Contracts: ${matchedRep.contracts} deals (Cash: ${formatMoney(matchedRep.cash)})\n` +
+                `• Risk Assessment: ${riskTierDescEn}`,
           lang: 'en'
         };
       }
@@ -943,10 +994,55 @@
     }
 
     // =========================================================================
-    // [INTENT 8]: ZERO CASH REPS
+    // [INTENT 8]: DAYS SINCE LAST DEAL & CONTRACT STAGNATION
     // =========================================================================
-    const asksZeroCash = /(?:zero\s*cash|0\s*cash|no\s*deal|صفر\s*كاش|زيرو\s*كاش|بدون\s*كاش|ما قفلش|ما قفلشى|ما باعش|كسر الصفر|0\s*业绩|未破单|零业绩|零入账)/i.test(norm) &&
-      !/(?:class|classes|consumption|c0|حصص|حصة|0\s*class)/i.test(norm);
+    const asksLastDeal = /(?:last\s*deal|deal\s*drought|stagnat|inactive|days\s*since|days\s*without|drought|اخر\s*عقد|آخر\s*عقد|اخر\s*ديل|آخر\s*ديل|ركود\s*العقود|ركود\s*عقود|ركود|بقالهم|بقاله\s*كتير|بقالها\s*كتير|كم\s*يوم\s*مضى|كام\s*يوم\s*مضى|كام\s*يوم|كم\s*يوم|ايام\s*الركود|أيام\s*الركود|عقود\s*موقفة|عقود\s*متوقفة|مستوى\s*الخطورة|مستويات\s*الخطورة|خطر\s*العقود|خطورة\s*العقود|خطر|خطورة|最久|没出单|没成单|没有成单|没有成交|未出单|未成单|断单|停单|停单天数|最近成单|最后成单|最后出单)/i.test(norm);
+
+    if (asksLastDeal) {
+      if (promptLang === 'ar') {
+        return {
+          text: 'تقرير أيام ركود العقود ومستويات الخطورة لمستشارينا الـ 19 يا ريس:\n' +
+            '🚨 المستوى الحرج (أكتر من 7 أيام بدون أي عقود ومحتاجين تدخل فوري):\n' +
+            '• عمرو صفوت وعمر منيب: بقالهم 12 يوم ما قفلوش ولا ديل (آخر عقد 5 نوفمبر)!\n' +
+            '• تيتو (ME-EGSS10): بقاله 8 أيام بدون عقود (آخر عقد 9 نوفمبر).\n\n' +
+            '⚠️ مستوى التحذير (من 4 لـ 7 أيام):\n' +
+            '• نهى يسري ومحمود خميس (7 أيام)، جوليا وإشراقت وتيتو 04 وعبدالرحمن شحاتة (6 أيام)، وناصف وعلي هشام وإبراهيم إسماعيل (5 أيام).\n\n' +
+            '🟢 المستوى الآمن والنشط (من يوم لـ 3 أيام):\n' +
+            '• محمد حامد ومروة أحمد وهيام حسن (3 أيام)، أحمد شكري وسميرة (يومين)، وخالد غنيم وإيهاب زكي قفلوا إمبارح (منذ يوم واحد)! عاش يا وحوش!',
+          lang: 'ar'
+        };
+      }
+      if (promptLang === 'zh') {
+        return {
+          text: '大一组19位销售顾问最近成单时间与停单风险分级：\n' +
+            '🚨 严重停单预警 (>7天未成单，需紧急介入)：\n' +
+            '• Amr Safwat & Omar Moneb: 已连续 12 天未出单 (最后成单: 11月5日)！\n' +
+            '• Tito (EGSS10): 已连续 8 天未出单 (最后成单: 11月9日)。\n\n' +
+            '⚠️ 跟进预警阶段 (4-7天)：\n' +
+            '• Noha Youssry & Mahmoud Khamis (7天)，Julia、Ashraqat、Mahmoud 04、Shehata (6天)，Nasef、Ali Hesham、Ibrahim (5天)。\n\n' +
+            '🟢 近期活跃正常 (1-3天出单)：\n' +
+            '• Mohamed Hamed、Marwa、Hayam (3天)，Ahmed Shoukry、Samira (2天)，Ehab Zaky、Khaled Gonam (昨日刚出单，1天前)！',
+          lang: 'zh'
+        };
+      }
+      return {
+        text: 'Big Team 01 Days Since Last Deal & Contract Velocity Audit (19 Specialists):\n' +
+          '🚨 Critical Drought (>7 days without closed contracts — Urgent intervention needed):\n' +
+          '• Amr Safwat & Omar Moneb: 12 days elapsed (last deal: Nov 5)!\n' +
+          '• Tito (ME-EGSS10): 8 days elapsed (last deal: Nov 9).\n\n' +
+          '⚠️ Warning Tier (4 to 7 days elapsed):\n' +
+          '• Noha Youssry & Mahmoud Khamis (7d), Julia Monir, Ashraqat Al, Mahmoud Tito, Abdelrahman Shehata (6d), Abdelrahman Nasef, Ali Hesham, Ibrahim Ismaiel (5d).\n\n' +
+          '🟢 Active & Fresh Tier (1 to 3 days elapsed):\n' +
+          '• Mohamed Hamed, Marwa Ahmed, Hayam Hassan (3d), Ahmed Shoukry, Samira (2d), Khaled Gonam & Ehab Zaky (1d ago on Nov 16)!',
+        lang: 'en'
+      };
+    }
+
+    // =========================================================================
+    // [INTENT 8B]: ZERO CASH REPS
+    // =========================================================================
+    const asksZeroCash = /(?:zero\s*cash|0\s*cash|no\s*deal|صفر\s*كاش|زيرو\s*كاش|بدون\s*كاش|كسر الصفر|0\s*业绩|未破单|零业绩|零入账)/i.test(norm) &&
+      !/(?:class|classes|consumption|c0|last\s*deal|drought|stagnat|days|ايام|أيام|مضى|حصص|حصة|0\s*class)/i.test(norm);
 
     if (asksZeroCash) {
       if (promptLang === 'ar') {
