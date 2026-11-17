@@ -591,8 +591,9 @@
         const refAmt = matchedRep.refund || 0;
         if (refAmt > 0) {
           if (isArabic) {
+            const isFemale = /جوليا|نهى|نهي|سميرة|سميره|إشراقت|اشراقت|إشراقة|اشراقة|مروة|مروه|هيام/i.test(cleanNameAr);
             return {
-              text: `بص يا باشا، المستشار ${cleanNameAr} مسجل عليه ريفند بمبلغ ${formatMoney(refAmt, 'ar')}. الكاش الصافي الفعلي بعد الخصم هو ${formatMoney(matchedRep.cash, 'ar')} (وكان عامل Gross مبيعات بـ ${formatMoney(matchedRep.cash + refAmt, 'ar')}).`,
+              text: `بص يا باشا، ${cleanNameAr} متسجل عليه${isFemale ? 'ها' : ''} ريفند بـ ${formatMoney(refAmt, 'ar')}. وصافي الكاش الفعلي في جيب التيم بعد الخصم هو ${formatMoney(matchedRep.cash, 'ar')} (وكان${isFemale ? 'ت عاملة' : ' عامل'} Gross مبيعات بـ ${formatMoney(matchedRep.cash + refAmt, 'ar')}).`,
               lang: 'ar'
             };
           }
@@ -608,8 +609,9 @@
           };
         } else {
           if (isArabic) {
+            const isFemale = /جوليا|نهى|نهي|سميرة|سميره|إشراقت|اشراقت|إشراقة|اشراقة|مروة|مروه|هيام/i.test(cleanNameAr);
             return {
-              text: `المستشار ${cleanNameAr} سجله أبيض ونظيف تماماً! مفيش عليه أي ريفند أو خصومات (Refund: $0). وصافي الكاش بتاعه ${formatMoney(matchedRep.cash, 'ar')}.`,
+              text: `سجل ${cleanNameAr} أبيض وفل 100%! مفيش عليه${isFemale ? 'ها' : ''} ولا مليم ريفند ولا خصومات (Refund: $0). وصافي الكاش بتاع${isFemale ? 'ها' : 'ه'} ${formatMoney(matchedRep.cash, 'ar')}، تسلم إيد${isFemale ? 'ها' : 'ه'}!`,
               lang: 'ar'
             };
           }
@@ -628,8 +630,9 @@
 
       if (asksM2) {
         if (isArabic) {
+          const isFemale = /جوليا|نهى|نهي|سميرة|سميره|إشراقت|اشراقت|إشراقة|اشراقة|مروة|مروه|هيام/i.test(cleanNameAr);
           return {
-            text: `موقف ترقيات الـ M2 والتجديد للمستشار ${cleanNameAr}: قفل ${matchedRep.m2Renewals} ديلات تجديد من إجمالي محفظة تجديد فيها ${matchedRep.renewalBase} طالب (نسبة التحويل: ${matchedRep.renewalBase > 0 ? ((matchedRep.m2Renewals / matchedRep.renewalBase) * 100).toFixed(1) : 0}%).`,
+            text: `أخبار ترقيات الـ M2 والتجديد لـ ${cleanNameAr} يا باشا: قفلـ${isFemale ? 'ت' : ''} ${matchedRep.m2Renewals} ديلات تجديد من أصل ${matchedRep.renewalBase} طالب في البيز بتاعـ${isFemale ? 'ها' : 'ه'} (نسبة التحويل: ${matchedRep.renewalBase > 0 ? ((matchedRep.m2Renewals / matchedRep.renewalBase) * 100).toFixed(1) : 0}%).`,
             lang: 'ar'
           };
         }
@@ -668,11 +671,12 @@
         }
 
         if (isArabic) {
+          const isFemale = /جوليا|نهى|نهي|سميرة|سميره|إشراقت|اشراقت|إشراقة|اشراقة|مروة|مروه|هيام/i.test(cleanNameAr);
           return {
-            text: `بص يا باشا بالنسبة للمستشار ${cleanNameAr} (${repTeam}):\n` +
-                  `• آخر عقد تم إغلاقه: كان من ${dDays} يوم (بتاريخ ${dDate}).\n` +
-                  `• إجمالي عقود الشهر: ${matchedRep.contracts} عقود مقفولة بكاش ${formatMoney(matchedRep.cash, 'ar')}.\n` +
-                  `• تقييم مستوي الخطورة: ${riskTierDescAr}`,
+            text: `بص يا باشا بالنسبة لـ ${cleanNameAr} في تيم ${repTeam}:\n` +
+                  `• آخر بيعة قفلـ${isFemale ? 'تها' : 'ها'}: كانت من ${dDays} يوم (يوم ${dDate}).\n` +
+                  `• إجمالي ديلات الشهر: ${matchedRep.contracts} ديلات بكاش ${formatMoney(matchedRep.cash, 'ar')}.\n` +
+                  `• الموقف من الركود: ${riskTierDescAr}`,
             lang: 'ar'
           };
         }
@@ -696,25 +700,43 @@
 
       // Default full profile for this Rep
       if (isArabic) {
+        const isFemale = /جوليا|نهى|نهي|سميرة|سميره|إشراقت|اشراقت|إشراقة|اشراقة|مروة|مروه|هيام/i.test(cleanNameAr);
+        const repDays = matchedRep.lastDealDays !== undefined ? matchedRep.lastDealDays : 5;
+        const repDate = matchedRep.lastDealDate || '2026-11-12';
+        const pVerb = isFemale ? 'جابته' : 'جابه';
+        const pLah = isFemale ? 'فاضل لها' : 'فاضل له';
+        const pAndah = isFemale ? 'عندها' : 'عنده';
+        const pBetaah = isFemale ? 'بتاعها' : 'بتاعه';
+        const pCalls = isFemale ? 'مكالماتها' : 'مكالماته';
+        const pAch = isFemale ? 'محققة' : 'محقق';
+        const pClosed = isFemale ? 'قفلت' : 'قفل';
+        const pLate = isFemale ? 'متأخرة' : 'متأخر';
+        const pTashid = isFemale ? 'ولازم تشد حيلها معانا!' : 'ولازم يشد حيله معانا!';
+
         if (matchedRep.cash === 0 && matchedRep.contracts === 0) {
           return {
-            text: `المستشار ${cleanNameAr} (${repTeam}) يا فندم أرقامه كالتالي:\n` +
-              `• الكاش: لسه زيرو كاش ($0) وما قفلش ولا ديل لحد دلوقتي (0 عقود)\n` +
-              `• التارجت المطلوب منه: ${formatMoney(matchedRep.target, 'ar')} (العجز 100%)\n` +
-              `• تغطية المكالمات: ${matchedRep.coverage.toFixed(1)}%\n` +
-              `• قاعدة التجديد: عنده ${matchedRep.renewalBase} طالب في البيز\n` +
-              `• الموقف: 🚨 ده المستشار الوحيد اللي زيرو كاش في الفريق، ومحتاج جلسة كوتشينج 1:1 فورية علشان يكسر الصفر ويقفل أول ديل!`,
+            text: `بص يا باشا، دي أرقام ${cleanNameAr} في تيم ${repTeam}:\n` +
+              `• الكاش: لسه زيرو كاش ($0) وما قفل${isFemale ? 'تش' : 'ش'} ولا ديل لحد دلوقتي (0 ديلات)\n` +
+              `• التارجت المطلوب: ${formatMoney(matchedRep.target, 'ar')} (${pLah} التارجت كله 100%)\n` +
+              `• ${pCalls} وتغطية البيز: ${matchedRep.coverage.toFixed(1)}%\n` +
+              `• قاعدة التجديد: ${pAndah} ${matchedRep.renewalBase} طالب في البيز ${pBetaah}\n` +
+              `• الموقف: 🚨 ده الوحيد اللي لسه زيرو كاش في التيم، ومحتاج جلسة كوتشينج 1:1 فورية علشان يفك الصفر ويقفل أول ديل!`,
             lang: 'ar'
           };
         }
+
+        const paceVerdict = isAhead 
+          ? `🚀 طاير ومعدي وتيرة اليوم بزيادة +${aheadDiff}%، الله ينور يا وحش!`
+          : `⚠️ ${pLate} عن وتيرة اليوم بفارق ${formatMoney(gap, 'ar')} ${pTashid}`;
+
         return {
-          text: `تقرير أداء المستشار ${cleanNameAr} (${repTeam}) يا باشا:\n` +
-            `• الكاش اللي جابه: ${formatMoney(matchedRep.cash, 'ar')} (نسبة إنجازه: ${repAch.toFixed(1)}%)\n` +
-            `• التارجت الشهري: ${formatMoney(matchedRep.target, 'ar')} (فاضل له عجز: ${formatMoney(gap, 'ar')})\n` +
-            `• عدد العقود: ${matchedRep.contracts} عقود مقفولة\n` +
-            `• ترقيات M2: قفل ${matchedRep.m2Renewals} عقود من محفظة فيها ${matchedRep.renewalBase} طالب\n` +
-            `• نسبة تغطية المكالمات: ${matchedRep.coverage.toFixed(1)}%\n` +
-            `• موقفه من وتيرة النهاردة (${todayBM}%): ` + (isAhead ? `🚀 متقدم على الوتيرة بزيادة +${aheadDiff}%، زي الفل!` : `⚠️ متأخر عن الوتيرة بفارق ${formatMoney(gap, 'ar')} ومحتاج يشد حيله!`),
+          text: `بص يا باشا، دي أرقام ${cleanNameAr} في تيم ${repTeam}:\n` +
+            `• الكاش اللي ${pVerb}: ${formatMoney(matchedRep.cash, 'ar')} (${pAch} ${repAch.toFixed(1)}% من التارجت)\n` +
+            `• التارجت الشهري: ${formatMoney(matchedRep.target, 'ar')} (${gap === 0 ? 'مفرتك التارجت ومقفل 100%!' : pLah + ' ' + formatMoney(gap, 'ar') + ' كاش'})\n` +
+            `• الديلات المقفولة: ${matchedRep.contracts} ديلات (آخر بيعة كانت من ${repDays} يوم بتاريخ ${repDate})\n` +
+            `• تجديدات M2: ${pClosed} ${matchedRep.m2Renewals} ديلات تجديد من أصل ${matchedRep.renewalBase} طالب في البيز ${pBetaah}\n` +
+            `• ${pCalls} وتغطية البيز: ${matchedRep.coverage.toFixed(1)}%\n` +
+            `• الموقف من وتيرة النهاردة (${todayBM}%): ${paceVerdict}`,
           lang: 'ar'
         };
       }
@@ -1010,19 +1032,19 @@
     // =========================================================================
     // [INTENT 8]: DAYS SINCE LAST DEAL & CONTRACT STAGNATION
     // =========================================================================
-    const asksLastDeal = /(?:last\s*deal|deal\s*drought|stagnat|inactive|days\s*since|days\s*without|drought|اخر\s*عقد|آخر\s*عقد|اخر\s*ديل|آخر\s*ديل|ركود\s*العقود|ركود\s*عقود|ركود|بقالهم|بقاله\s*كتير|بقالها\s*كتير|كم\s*يوم\s*مضى|كام\s*يوم\s*مضى|كام\s*يوم|كم\s*يوم|ايام\s*الركود|أيام\s*الركود|عقود\s*موقفة|عقود\s*متوقفة|مستوى\s*الخطورة|مستويات\s*الخطورة|خطر\s*العقود|خطورة\s*العقود|خطر|خطورة|最久|没出单|没成单|没有成单|没有成交|未出单|未成单|断单|停单|停单天数|最近成单|最后成单|最后出单)/i.test(norm);
+    const asksLastDeal = /(?:last\s*deal|deal\s*drought|stagnat|inactive|days\s*since|days\s*without|drought|اخر\s*عقد|آخر\s*عقد|اخر\s*ديل|آخر\s*ديل|ركود|مريح|مريحة|مريحين|نايم|نايمين|مش\s*بيبيع|مش\s*بيقفل|ما\s*بيبيعش|ما\s*بيقفلش|مفيش\s*ديل|مفيش\s*ديلات|مفيش\s*بيع|بقالهم|بقاله|بقالها|كم\s*يوم|كام\s*يوم|ايام\s*الركود|أيام\s*الركود|عقود\s*موقفة|عقود\s*متوقفة|مستوى\s*الخطورة|خطر|خطورة|最久|没出单|没成单|没有成单|没有成交|未出单|未成单|断单|停单|停单天数|最近成单|最后成单|最后出单)/i.test(norm);
 
     if (asksLastDeal) {
       if (promptLang === 'ar') {
         return {
-          text: 'تقرير أيام ركود العقود ومستويات الخطورة لمستشارينا الـ 19 يا ريس:\n' +
-            '🚨 المستوى الحرج (أكتر من 7 أيام بدون أي عقود ومحتاجين تدخل فوري):\n' +
-            '• عمرو صفوت وعمر منيب: بقالهم 12 يوم ما قفلوش ولا ديل (آخر عقد 5 نوفمبر)!\n' +
-            '• تيتو (ME-EGSS10): بقاله 8 أيام بدون عقود (آخر عقد 9 نوفمبر).\n\n' +
-            '⚠️ مستوى التحذير (من 4 لـ 7 أيام):\n' +
-            '• نهى يسري ومحمود خميس (7 أيام)، جوليا وإشراقت وتيتو 04 وعبدالرحمن شحاتة (6 أيام)، وناصف وعلي هشام وإبراهيم إسماعيل (5 أيام).\n\n' +
-            '🟢 المستوى الآمن والنشط (من يوم لـ 3 أيام):\n' +
-            '• محمد حامد ومروة أحمد وهيام حسن (3 أيام)، أحمد شكري وسميرة (يومين)، وخالد غنيم وإيهاب زكي قفلوا إمبارح (منذ يوم واحد)! عاش يا وحوش!',
+          text: 'بص يا باشا، دي خريطة الديلات ومين اللي مريح في التيم ومين اللي شغال بيقفل أول بأول:\n' +
+            '🚨 الناس اللي مريحة ومقفلتش بقالها أكتر من أسبوع (محتاجين زقة فورية):\n' +
+            '• عمرو صفوت وعمر منيب: بقالهم 12 يوم كاملين مقفلوش ولا ديل (آخر بيعة كانت يوم 5 نوفمبر)!\n' +
+            '• تيتو (ME-EGSS10): بقاله 8 أيام مفيش ديلات (آخر بيعة يوم 9 نوفمبر).\n\n' +
+            '⚠️ مرحلة التحذير والمتابعة (بقالهم من 4 لـ 7 أيام):\n' +
+            '• نهى يسري ومحمود خميس (7 أيام)، جوليا وإشراقت ومحمود تيتو وشحاتة (6 أيام)، وناصف وعلي هشام وإبراهيم (5 أيام).\n\n' +
+            '🟢 الوحوش اللي إيدهم شغالة وفريش (بقالهم من يوم لـ 3 أيام بس):\n' +
+            '• محمد حامد ومروة أحمد وهيام حسن (3 أيام)، شكري وسميرة (يومين)، وخالد غنيم وإيهاب زكي لسه قافلين إمبارح (منذ يوم واحد)! عاش يا أبطال!',
           lang: 'ar'
         };
       }
@@ -1396,7 +1418,7 @@
     if (isGreeting) {
       if (promptLang === 'ar') {
         return {
-          text: `يا هلا يا حسين يا بطل! 🌟 أنا توكي، مساعدك الذكي في Big Team 01! فريقنا النهاردة مجمع ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) ومعديين وتيرة اليوم بـ +${(s.achievement - todayBM).toFixed(1)}%. أؤمرني، تحب تراجع إيه النهاردة؟`,
+          text: `صباح الفل والنشاط يا ريس! 🌟 أنا توكي، معاك خطوة بخطوة في Big Team 01. التيم لحد النهاردة مجمع ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) ومعديين وتيرة اليوم بـ +${(s.achievement - todayBM).toFixed(1)}%. أؤمرني يا باشا، تحب نراجع أرقام مين أو نشوف إيه؟`,
           lang: 'ar'
         };
       }
@@ -1417,7 +1439,7 @@
     // =========================================================================
     if (promptLang === 'ar') {
       return {
-        text: `بص يا باشا، قطاع Big Team 01 جايب لحد النهاردة ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) بإجمالي ${s.totalContracts} ديل مقفول. وفاضل لنا فجوة كاش ${formatMoney(s.totalGap, 'ar')}.\n💡 أسئلة سريعة تقدر تسألهالي:\n1. "أرقام الموظف إيهاب" أو "كاش جوليا" أو "ديلات تيتو"\n2. "بنشمارك بكرة كام ومحتاجين نلم كام؟"\n3. "مين واقع ومين التوب في الفريق؟"\n4. "طلاب الصفر واستهلاك الحصص"\n5. "سعر باقة 150 حصة بكام؟"\n6. "Speak English" أو "说中文"`,
+        text: `بص يا باشا، رجالة Big Team 01 مجمعين لحد النهاردة ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) من أصل ${s.totalContracts} ديل مقفول. وفاضلنا كاش ${formatMoney(s.totalGap, 'ar')} ونقفل الـ 100%.\n💡 دي شوية حاجات سريعة تقدر تسألني عنها بالبلدي:\n1. "أرقام إيهاب" أو "كاش جوليا" أو "ديلات تيتو"\n2. "بنشمارك بكرة كام وعايزين نلم كام؟"\n3. "مين واقع ومين التوب في التيم؟"\n4. "مين مريح في البيع وبقاله كتير مقفلش؟"\n5. "سحب الحصص وعيال الصفر"\n6. "أسعار الباقات الرسمية كام؟"`,
         lang: 'ar'
       };
     }
@@ -1540,24 +1562,21 @@
   async function callGeminiCopilot(query, promptLang, apiKey) {
     const liveContext = buildLivePromptContext();
 
-    const systemPrompt = "You are Toki (توكي), the executive AI Voice & Data Copilot for Big Team 01 at 51Talk Middle East, serving Senior Manager Hussein El A'sar (حسين الأعصر).\n\n" +
-      "MANDATORY PERSONA & LINGUISTIC RULES:\n" +
-      "1. ARABIC LANGUAGE RULE:\n" +
-      "   - When responding in Arabic, you MUST speak in 100% authentic, fluent, professional Egyptian Arabic (عامية مصرية حرة وصميمة وسلسة).\n" +
-      "   - NEVER use classical Arabic (فصحى) words like 'إنني', 'سوف أقوم', 'عزيزي', 'لذلك', 'حيث أن', 'من الجدير بالذكر'.\n" +
-      "   - Talk naturally like an energetic Egyptian Sales Director: use natural Egyptian business phrases ('يا باشا', 'يا ريس', 'التيم', 'الديل', 'البيز', 'الريت', 'البنشمارك', 'مفرتك التارجت', 'واقع', 'كسر الصفر', 'سحب الحصص', 'الكاش', 'الفجوة', 'شد الحيل').\n" +
-      "2. ENGLISH & CHINESE RULES:\n" +
-      "   - For English: Sharp, executive, data-backed sales leadership tone.\n" +
-      "   - For Chinese: 51Talk HQ management tone (大一组业务战报、基准线、成单分析).\n" +
-      "3. DEEP CROSS-METRIC REASONING:\n" +
-      "   - Connect the dots! Don't just dump isolated numbers. Explain the underlying reasons (e.g. why cash is lagging, link to deal drought, call coverage, or low M2 renewals).\n" +
-      "   - If asked about deal drought or stagnation ('مين مريح؟', 'مين بقاله كتير ما قفلش؟'), always cite the 3 risk tiers:\n" +
-      "     * Tier 1 (1-3 days, Safe & Active)\n" +
-      "     * Tier 2 (4-7 days, Warning)\n" +
-      "     * Tier 3 (>7 days, Critical Danger: Amr Safwat & Omar Moneb 12 days, Tito 8 days).\n" +
-      "4. BREVITY & VOCAL ELEGANCE:\n" +
-      "   - Keep answers concise and punchy (3 to 5 clear bullet points maximum).\n" +
-      "   - Use plain numbers and symbols ($) that read smoothly aloud via Text-to-Speech.";
+    const systemPrompt = "أنت 'توكي' (Toki)، المساعد الذكي ونائب مدير المبيعات لقطاع Big Team 01 في 51Talk الشرق الأوسط، والمساعد المباشر للسينيور مانجر حسين الأعصر (Senior Manager: Hussein El A'sar).\n\n" +
+      "قواعد اللهجة والأسلوب الإلزامية (صارمة جداً):\n" +
+      "1. اللهجة المصرية الصميمة:\n" +
+      "   - لما ترد بالعربي، لازم تتكلم بعامية مصرية حرة وصميمة 100% زي مدير مبيعات مصري شاطر في وسط فريقه في القاهرة.\n" +
+      "   - ممنوع نهائياً ومحرم عليك استخدام أي لغة عربية فصحى! إياك تقول: (إنني، سوف، عزيزي، مرحباً، حيث أن، من الجدير بالذكر، يبلغ، تم إغلاق، هذا، هذه، لذلك، بشأن، حيال، قام بـ، بلغت).\n" +
+      "   - الكلمات الإلزامية: ناديني بـ (يا باشا، يا ريس، يا بطل، صباح الفل)، واستخدم مصطلحات السيلز المصرية: (التيم، الديل، الديلات، الكاش، التارجت، البيز، الريت، البنشمارك، فجوة الكاش، مفرتك التارجت، واقع ورا الوتيرة، كسر الصفر، فك الصفر، مريح في البيع، سحب الحصص، عيال الصفر).\n" +
+      "   - الكلمات الدارجة: (علشان، كده، ده، دي، إحنا، جاب، عمل، قفل، باقيلنا، شد حيلك، على طول).\n" +
+      "2. اللغات التانية:\n" +
+      "   - لو السؤال بالإنجليزي: رد بأسلوب إدارة مبيعات تنفيذي مختصر ودقيق.\n" +
+      "   - لو بالصيني: رد بأسلوب إدارة 51Talk المعتمد (大一组战报分析).\n" +
+      "3. الربط الذكي بين الأرقام:\n" +
+      "   - اربط الأرقام بالأسباب بذكاء (مثلاً: الكاش واقع ليه؟ عشان مكالماته قليلة أو بقاله كتير مقفلش ديلات).\n" +
+      "   - في ركود الديلات، اذكر المستويات الـ 3 (الآمن 1-3 أيام، التحذير 4-7 أيام، الخطر أكتر من 7 أيام: عمرو صفوت وعمر منيب 12 يوم، وتيتو 8 أيام).\n" +
+      "4. الإيجاز والصوت:\n" +
+      "   - جاوب في 3 لـ 5 نقط سريعة ومباشرة علشان قراءة الشاشة وسماع الصوت يكونوا زي الفل وبدون رغي.";
 
     const models = ['gemini-1.5-flash', 'gemini-2.0-flash', 'gemini-1.5-pro'];
     let lastError = null;
@@ -2176,11 +2195,11 @@
   function getLocalizedChips(lang) {
     if (lang === 'ar') {
       return `
-        <button type="button" class="toki-chip" data-q="مين اكتر واحد بقاله كتير ما قفلش ديل؟">⏱️ ركود العقود</button>
-        <button type="button" class="toki-chip" data-q="بنشمارك بكرة كام ومحتاجين نلم كام؟">📊 بنشمارك الغد</button>
-        <button type="button" class="toki-chip" data-q="فجوة الكاش لحد آخر الشهر كام؟">💰 فجوة الكاش</button>
-        <button type="button" class="toki-chip" data-q="مين المتأخرين عن البنشمارك؟">⚠️ المتأخرون</button>
-        <button type="button" class="toki-chip" data-q="مين التوب في المبيعات؟">🏆 المتصدرون</button>
+        <button type="button" class="toki-chip" data-q="مين اكتر واحد بقاله كتير ما قفلش ديل؟">⏱️ مين مريح في البيع؟</button>
+        <button type="button" class="toki-chip" data-q="بنشمارك بكرة كام ومحتاجين نلم كام؟">📊 بنشمارك بكرة</button>
+        <button type="button" class="toki-chip" data-q="فجوة الكاش لحد آخر الشهر كام؟">💰 فاضلنا كام كاش؟</button>
+        <button type="button" class="toki-chip" data-q="مين المتأخرين عن البنشمارك؟">⚠️ مين واقع في التيم؟</button>
+        <button type="button" class="toki-chip" data-q="مين التوب في المبيعات؟">🏆 مين التوب والوحوش؟</button>
         <button type="button" class="toki-chip" data-q="أسعار الباقات الرسمية كام؟">🏷️ أسعار الباقات</button>
       `;
     }
@@ -2334,8 +2353,8 @@
         <div class="toki-msg assistant">
           <img src="assets/toki.jpg" alt="Toki" class="toki-msg-avatar" />
           <div class="toki-msg-bubble">
-            <strong>👋 مرحباً يا حسين! أنا توكي (Toki) المساعد الصوتي والتحليلي لـ Big Team 01!</strong><br>
-            جاهز أجاوبك عن كل تفاصيل فريقنا: أرقام الموظفين، بنشمارك بكرة، ركود العقود، فجوة الكاش، أو طلاب الصفر!
+            <strong>👋 صباح الفل يا ريس! أنا توكي (Toki) المساعد بتاعك في Big Team 01!</strong><br>
+            معاك خطوة بخطوة في كل صغيرة وكبيرة: أرقام التيم، مين واقع ومين طاير، بنشمارك بكرة، ركود الديلات، أو أسعار الباقات!
             <div class="toki-msg-meta">Just now • Ready</div>
           </div>
         </div>
@@ -2735,8 +2754,8 @@
             <div class="toki-msg assistant">
               <img src="assets/toki.jpg" alt="Toki" class="toki-msg-avatar" />
               <div class="toki-msg-bubble">
-                <strong>${isRtl ? 'تمت إعادة ضبط المحادثة 🔄' : (activeLang === 'zh' ? '会话已重置 🔄' : 'Conversation Reset 🔄')}</strong><br>
-                ${isRtl ? 'ما الذي تود سؤالي عنه بعد ذلك، يا حسين؟' : (activeLang === 'zh' ? '侯赛因经理，接下来您想了解什么？' : 'What would you like to ask next, Hussein?')}
+                <strong>${isRtl ? 'المحادثة بدأت من جديد يا باشا 🔄' : (activeLang === 'zh' ? '会话已重置 🔄' : 'Conversation Reset 🔄')}</strong><br>
+                ${isRtl ? 'تحب تسألني عن إيه تاني يا ريس؟' : (activeLang === 'zh' ? '侯赛因经理，接下来您想了解什么？' : 'What would you like to ask next, Hussein?')}
                 <div class="toki-msg-meta">Just now • Ready</div>
               </div>
             </div>
