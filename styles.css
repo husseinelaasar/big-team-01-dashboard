@@ -8133,3 +8133,174 @@ body.light-theme .ind-rep-name,
   border: 1px solid rgba(16, 185, 129, 0.35);
   font-weight: 800;
 }
+
+/* ==========================================================================
+   /* TRI-LINGUAL (ARABIC RTL & CHINESE) ENTERPRISE STYLES */
+   Big Team 01 Executive Performance Dashboard
+   ========================================================================== */
+
+/* Arabic RTL Typography & Base Alignment */
+html[dir="rtl"],
+html[dir="rtl"] body {
+  font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Chinese Font Smoothing */
+html[lang="zh"],
+html[lang="zh"] body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif !important;
+}
+
+/* RTL Navbar Layout */
+html[dir="rtl"] .navbar {
+  direction: rtl;
+}
+html[dir="rtl"] .nav-left {
+  text-align: right;
+}
+html[dir="rtl"] .nav-title {
+  text-align: right;
+}
+html[dir="rtl"] .nav-source-badge svg {
+  margin-right: 0;
+  margin-left: 5px;
+}
+html[dir="rtl"] .nav-calc-btn svg,
+html[dir="rtl"] .nav-share-btn svg,
+html[dir="rtl"] .nav-command-btn svg {
+  margin-right: 0;
+  margin-left: 6px;
+}
+
+/* RTL Main Tabs & Filters */
+html[dir="rtl"] .tabs {
+  direction: rtl;
+}
+html[dir="rtl"] .tab svg {
+  margin-right: 0;
+  margin-left: 6px;
+}
+html[dir="rtl"] .tactical-pills-track {
+  direction: rtl;
+}
+html[dir="rtl"] .tactical-pill .pill-icon {
+  margin-right: 0;
+  margin-left: 5px;
+}
+html[dir="rtl"] .tactical-pill .pill-count {
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+/* RTL KPI Cards */
+html[dir="rtl"] .kpi-card {
+  text-align: right;
+  direction: rtl;
+}
+html[dir="rtl"] .kpi-header {
+  flex-direction: row;
+}
+html[dir="rtl"] .kpi-badge {
+  margin-left: 0;
+  margin-right: auto;
+}
+html[dir="rtl"] .kpi-icon-wrap {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* RTL Section Headers */
+html[dir="rtl"] .section-header {
+  text-align: right;
+}
+
+/* RTL Data Tables */
+html[dir="rtl"] .modern-table {
+  direction: rtl;
+}
+html[dir="rtl"] .modern-table th,
+html[dir="rtl"] .modern-table td {
+  text-align: right;
+}
+html[dir="rtl"] .modern-table th:first-child,
+html[dir="rtl"] .modern-table td:first-child {
+  text-align: center;
+}
+html[dir="rtl"] .modern-table td.num-col,
+html[dir="rtl"] .modern-table th.num-col {
+  text-align: left;
+  direction: ltr;
+}
+
+/* RTL Cyber Control Dock */
+html[dir="rtl"] .cyber-dock {
+  direction: rtl;
+}
+html[dir="rtl"] .dock-btn svg {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+/* RTL Toki Voice Assistant Widget & Modal */
+html[dir="rtl"] .toki-widget {
+  left: 24px !important;
+  right: auto !important;
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .toki-bubble {
+  text-align: right;
+}
+html[dir="rtl"] .toki-bubble::after {
+  right: auto;
+  left: -8px;
+  border-width: 6px 8px 6px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+html[dir="rtl"] .toki-modal {
+  left: 24px !important;
+  right: auto !important;
+  direction: rtl;
+  text-align: right;
+}
+html[dir="rtl"] .toki-modal-header {
+  direction: rtl;
+}
+html[dir="rtl"] .toki-header-info {
+  flex-direction: row;
+}
+html[dir="rtl"] .toki-title-box {
+  text-align: right;
+}
+html[dir="rtl"] .toki-quick-chips {
+  direction: rtl;
+}
+html[dir="rtl"] .toki-chat-body {
+  direction: rtl;
+}
+html[dir="rtl"] .toki-msg {
+  direction: rtl;
+}
+html[dir="rtl"] .toki-msg.user {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .toki-msg.user .toki-msg-bubble {
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 4px;
+  text-align: right;
+  direction: rtl;
+}
+html[dir="rtl"] .toki-msg.assistant .toki-msg-bubble {
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 4px;
+  text-align: right;
+  direction: rtl;
+}
+html[dir="rtl"] .toki-footer {
+  direction: rtl;
+}
+html[dir="rtl"] .toki-input {
+  text-align: right;
+  direction: rtl;
+}
