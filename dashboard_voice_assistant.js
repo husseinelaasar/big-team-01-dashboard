@@ -17,7 +17,50 @@
   let isSpeaking = false;
   let currentUtterance = null;
 
-  // Sound Engine
+  // Sound Engine & Speech Preprocessor
+  function prepareEgyptianSpeech(text) {
+    if (!text) return '';
+    let s = text;
+    // 1. Remove emojis and visual icons
+    s = s.replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F600}-\u{1F64F}\u{1F680}-\u{1F6FF}\u{FE00}-\u{FE0F}]/gu, ' ');
+    // 2. Remove team IDs in parentheses (e.g. ME-EGSS10)
+    s = s.replace(/\s*\([A-Za-z0-9_\-]+\)/g, ' ');
+    // 3. Remove markdown syntax
+    s = s.replace(/[*#_~`>]/g, ' ');
+    // 4. Transform bullet points and list indicators into natural conversation connectors
+    s = s.replace(/•\s*/g, ' ، وعندنا ');
+    // 5. Transform colons, brackets, slashes into gentle conversational pauses
+    s = s.replace(/[:：]/g, ' ، ');
+    s = s.replace(/[\/\\]/g, ' أو ');
+    s = s.replace(/[\-–—]/g, ' ');
+    s = s.replace(/[\(\)\[\]\{\}]/g, ' ، ');
+    // 6. Natural Egyptian pronunciation for sales & operational terms
+    s = s.replace(/\bBig\s*Team\s*0?1\b/gi, 'بيج تيم وان');
+    s = s.replace(/\bTier\s*1\b/gi, 'المستوى الآمن');
+    s = s.replace(/\bTier\s*2\b/gi, 'مرحلة التحذير');
+    s = s.replace(/\bTier\s*3\b/gi, 'مرحلة الخطر');
+    s = s.replace(/\bTL\b/g, 'تيم ليدر');
+    s = s.replace(/\bM2\b/gi, 'إم تو');
+    s = s.replace(/\bC0\b/gi, 'سي زيرو');
+    s = s.replace(/\bSOP\b/gi, 'إس أو بي');
+    s = s.replace(/\bRefund\b/gi, 'ريفند');
+    s = s.replace(/\bGross\b/gi, 'إجمالي الكاش');
+    s = s.replace(/\bTarget\b/gi, 'التارجت');
+    // 7. Currency and percentages
+    s = s.replace(/\$([0-9,]+)/g, function(match, p1) {
+      return p1.replace(/,/g, '') + ' دولار ';
+    });
+    s = s.replace(/([0-9.]+)\s*%/g, '$1 في المية ');
+    // 8. Clean punctuation, excessive commas, and spacing
+    s = s.replace(/[!؟?.]+/g, ' ، ');
+    s = s.replace(/\n+/g, ' ، ');
+    s = s.replace(/\s+/g, ' ');
+    s = s.replace(/(\s*،\s*)+/g, ' ، ');
+    s = s.replace(/^،\s*/, '');
+    s = s.replace(/،\s*$/, '');
+    return s.trim();
+  }
+
   function speak(text, langCode, onEnd) {
     if (!isSpeechEnabled) {
       if (onEnd) onEnd();
@@ -31,13 +74,18 @@
 
     try {
       synth.cancel();
-      // Clean text of markdown characters, bullet symbols and code for clean speech
-      const cleanText = (text || '')
-        .replace(/[*#_~`>]/g, '')
-        .replace(/•/g, ', ')
-        .replace(/\n+/g, '. ')
-        .replace(/\s+/g, ' ')
-        .trim();
+      // Prepare text specifically for natural human speech
+      let cleanText = (text || '').trim();
+      if (langCode === 'ar') {
+        cleanText = prepareEgyptianSpeech(cleanText);
+      } else {
+        cleanText = cleanText
+          .replace(/[*#_~`>]/g, '')
+          .replace(/•/g, ', ')
+          .replace(/\n+/g, '. ')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
 
       const utterance = new SpeechSynthesisUtterance(cleanText);
       currentUtterance = utterance;
@@ -47,17 +95,28 @@
       else if (langCode === 'zh') targetLang = 'zh-CN';
 
       utterance.lang = targetLang;
-      utterance.rate = 1.0;
-      utterance.pitch = 1.05;
+      utterance.rate = 1.02; // Natural conversational cadence
+      utterance.pitch = 1.0;
 
       const voices = synth.getVoices ? synth.getVoices() : [];
       let voice = null;
       if (langCode === 'ar') {
-        voice = voices.find(v => v.lang.includes('ar') || v.lang.includes('EG') || v.name.includes('Arabic'));
+        // Priority 1: High-Fidelity Natural Egyptian Voices (Edge Neural: Salma / Shakir)
+        voice = voices.find(v => (v.name.includes('Salma') || v.name.includes('Shakir')) && (v.name.includes('Natural') || v.name.includes('Online')));
+        // Priority 2: Any Egyptian Natural/Online voice
+        if (!voice) voice = voices.find(v => (v.lang === 'ar-EG' || v.lang.toLowerCase().replace('_', '-') === 'ar-eg') && (v.name.includes('Natural') || v.name.includes('Online') || v.name.includes('Neural')));
+        // Priority 3: Google Arabic Neural (Chrome)
+        if (!voice) voice = voices.find(v => (v.name.includes('Google') || v.name.includes('Chrome')) && (v.lang.startsWith('ar') || v.name.includes('Arabic') || v.name.includes('عربي')));
+        // Priority 4: Any Egyptian voice (ar-EG)
+        if (!voice) voice = voices.find(v => v.lang === 'ar-EG' || v.lang.toLowerCase().replace('_', '-') === 'ar-eg');
+        // Priority 5: Any Natural Arabic voice
+        if (!voice) voice = voices.find(v => v.lang.startsWith('ar') && (v.name.includes('Natural') || v.name.includes('Online') || v.name.includes('Neural')));
+        // Priority 6: Any Arabic voice
+        if (!voice) voice = voices.find(v => v.lang.startsWith('ar') || v.name.toLowerCase().includes('arabic'));
       } else if (langCode === 'zh') {
         voice = voices.find(v => v.lang.includes('zh') || v.name.includes('Chinese') || v.name.includes('Mandarin'));
       } else {
-        voice = voices.find(v => v.lang.includes('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha')));
+        voice = voices.find(v => v.lang.includes('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Jenny')));
       }
       if (voice) utterance.voice = voice;
 
