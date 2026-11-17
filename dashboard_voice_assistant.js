@@ -425,11 +425,13 @@
     return BASELINE_DATA;
   }
 
-  // 7. TEXT PRE-PROCESSOR & ENTITY EXTRACTOR
+  // 7. TEXT PRE-PROCESSOR & ENTITY EXTRACTOR (Universal Multi-Script Boundary Separation)
   function normalizeText(text) {
     if (!text) return '';
     return text
       .toLowerCase()
+      .replace(/([a-zA-Z0-9\u0600-\u06FF])([\u4E00-\u9FFF])/g, (m, p1, p2) => p1 + ' ' + p2)
+      .replace(/([\u4E00-\u9FFF])([a-zA-Z0-9\u0600-\u06FF])/g, (m, p1, p2) => p1 + ' ' + p2)
       .replace(/[\u064B-\u065F\u0670]/g, '') // remove tashkeel
       .replace(/[إأآا]/g, 'ا')
       .replace(/[ةه]/g, 'ه')
