@@ -1,0 +1,3343 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Team 01 — Allocation Rules & Lead Recovery Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1794862479539">
+  <style>
+    /* Executive Allocation Radar Premium Styling */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cairo', 'Inter', sans-serif !important;
+      direction: rtl;
+      text-align: right;
+      background-color: #060913 !important;
+      color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .ambient-glow-alloc-1 {
+      position: fixed;
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(59, 130, 246, 0) 70%);
+      top: -15%;
+      right: -10%;
+      filter: blur(140px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .ambient-glow-alloc-2 {
+      position: fixed;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(239, 68, 68, 0.16) 0%, rgba(239, 68, 68, 0) 70%);
+      bottom: -15%;
+      left: -10%;
+      filter: blur(160px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .app-container {
+      position: relative;
+      z-index: 1;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 8px 14px !important;
+    }
+
+    /* Navigation */
+    .top-nav {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 10px 16px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin: 0;
+      color: #fff;
+    }
+
+    .gradient-text-orange {
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: 9px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      color: #f8fafc;
+    }
+    .theme-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #38bdf8;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+    }
+
+    /* KPI Cards Deck */
+    .kpi-grid-deck {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .metric-card-exec {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 12px 14px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .metric-card-exec:hover {
+      transform: translateY(-2px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .metric-card-exec .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .metric-card-exec .top-row .title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+
+    .metric-card-exec .value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.65rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 3px;
+    }
+
+    .metric-card-exec .desc {
+      font-size: 0.72rem;
+      color: #64748b;
+      line-height: 1.25;
+    }
+
+    /* Tab Navigation */
+    .tab-nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      color: #94a3b8;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.86rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      background: rgba(30, 41, 59, 0.8);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .tab-btn.active.active-reclaim {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(59, 130, 246, 0.25));
+      border-color: #38bdf8;
+      color: #38bdf8;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+    }
+
+    .tab-btn.active.active-defense {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.25));
+      border-color: #ef4444;
+      color: #f87171;
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.25);
+    }
+
+    .tab-btn.active.active-family {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.25));
+      border-color: #10b981;
+      color: #34d399;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.25);
+    }
+
+    .pill-count-tag {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    /* Filter Cockpit */
+    .filter-cockpit {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+    }
+
+    .cockpit-row-1 {
+      display: grid;
+      grid-template-columns: 2.2fr 1.6fr 1.4fr auto auto;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 1280px) {
+      .cockpit-row-1 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .filter-group label {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .modern-input, .modern-select {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 7px 10px;
+      color: #fff;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.82rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .modern-input:focus, .modern-select:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+
+    /* Small Teams Quick Pills */
+    .small-team-pills {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .small-team-pill {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 7px;
+      padding: 4px 10px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #94a3b8;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .small-team-pill:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    .small-team-pill.active {
+      background: #0284c7;
+      border-color: #0284c7;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
+    }
+
+    /* Cockpit Risk Bar */
+    .cockpit-risk-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: rgba(10, 15, 30, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 9px;
+      padding: 6px 10px;
+      flex-wrap: wrap;
+    }
+
+    .risk-pills-cluster {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .risk-filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 9px;
+      border-radius: 7px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .risk-filter-pill:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .risk-filter-pill .count-tag {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1px 6px;
+      border-radius: 8px;
+      font-size: 0.7rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .risk-filter-pill.active.active-all {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+    .risk-filter-pill.active.active-critical {
+      background: rgba(239, 68, 68, 0.25);
+      border-color: #ef4444;
+      color: #f87171;
+    }
+    .risk-filter-pill.active.active-high {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: #f59e0b;
+      color: #fbbf24;
+    }
+    .risk-filter-pill.active.active-warning {
+      background: rgba(234, 179, 8, 0.2);
+      border-color: #eab308;
+      color: #fde047;
+    }
+    .risk-filter-pill.active.active-moderate {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: #3b82f6;
+      color: #60a5fa;
+    }
+    .risk-filter-pill.active.active-safe {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: #10b981;
+      color: #34d399;
+    }
+
+    /* Table Container & Scrollbar */
+    .table-card {
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+      margin-bottom: 20px;
+    }
+
+    .table-wrapper-exec {
+      width: 100% !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .table-wrapper-exec::-webkit-scrollbar {
+      height: 9px !important;
+    }
+    .table-wrapper-exec::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.7) !important;
+      border-radius: 5px;
+    }
+    .table-wrapper-exec::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, #38bdf8, #818cf8) !important;
+      border-radius: 5px;
+    }
+    .table-wrapper-exec::-webkit-scrollbar-thumb:hover {
+      background: #38bdf8 !important;
+    }
+
+    table.exec-table {
+      width: 100% !important;
+      min-width: 1550px !important;
+      border-collapse: collapse;
+      text-align: right;
+    }
+
+    table.exec-table th {
+      background: #0f172a;
+      padding: 9px 8px !important;
+      font-size: 0.77rem !important;
+      font-weight: 800;
+      color: #94a3b8;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      white-space: nowrap !important;
+      vertical-align: middle !important;
+    }
+
+    table.exec-table td {
+      padding: 6px 8px !important;
+      font-size: 0.8rem !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #e2e8f0;
+      vertical-align: middle !important;
+      line-height: 1.35;
+    }
+
+    table.exec-table tbody tr {
+      transition: background 0.12s ease;
+    }
+
+    table.exec-table tbody tr:hover {
+      background: rgba(30, 41, 59, 0.5);
+    }
+
+    /* Badges & Tags */
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 0.73rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .badge-reclaim-ready {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+    .badge-protected-renew {
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: #c084fc;
+    }
+    .badge-protected-contact {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fcd34d;
+    }
+    .badge-critical {
+      background: rgba(239, 68, 68, 0.18);
+      border: 1px solid rgba(239, 68, 68, 0.5);
+      color: #fca5a5;
+    }
+    .badge-high {
+      background: rgba(245, 158, 11, 0.18);
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      color: #fcd34d;
+    }
+    .badge-warning {
+      background: rgba(234, 179, 8, 0.15);
+      border: 1px solid rgba(234, 179, 8, 0.4);
+      color: #fef08a;
+    }
+    .badge-safe {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #6ee7b7;
+    }
+
+    /* Agent Roster & Outside Badge Styling */
+    .agent-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.77rem;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .agent-pill.team-external {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.16), rgba(185, 28, 28, 0.28)) !important;
+      border: 1.5px solid #ef4444 !important;
+      color: #fca5a5 !important;
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.25) !important;
+      font-weight: 800 !important;
+    }
+    .agent-pill.team-external:hover {
+      border-color: #f87171 !important;
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.45) !important;
+      transform: translateY(-1px);
+    }
+    .agent-pill.team-internal {
+      background: rgba(56, 189, 248, 0.08) !important;
+      border: 1px solid rgba(56, 189, 248, 0.35) !important;
+      color: #38bdf8 !important;
+      font-weight: 700 !important;
+    }
+    .tag-external {
+      background: #dc2626 !important;
+      color: #ffffff !important;
+      font-size: 0.62rem !important;
+      font-weight: 900 !important;
+      padding: 1px 5px !important;
+      border-radius: 4px !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+      margin-right: 2px;
+    }
+    .tag-internal {
+      background: rgba(56, 189, 248, 0.25) !important;
+      color: #bae6fd !important;
+      font-size: 0.62rem !important;
+      font-weight: 800 !important;
+      padding: 1px 4px !important;
+      border-radius: 4px !important;
+      margin-right: 2px;
+    }
+
+    /* Action Buttons in Table */
+    .btn-action-cluster {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .btn-ticket-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      cursor: pointer;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      transition: all 0.15s ease;
+    }
+    .btn-ticket-mini:hover {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: #38bdf8;
+      transform: translateY(-1px);
+    }
+
+    .btn-dossier-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      cursor: pointer;
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      background: rgba(168, 85, 247, 0.14);
+      color: #c084fc;
+      transition: all 0.15s ease;
+    }
+    .btn-dossier-mini:hover {
+      background: rgba(168, 85, 247, 0.25);
+      border-color: #a855f7;
+      transform: translateY(-1px);
+    }
+
+    .btn-dingtalk-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      cursor: pointer;
+      border: 1.5px solid #0284c7;
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
+      transition: all 0.15s ease;
+    }
+    .btn-dingtalk-mini:hover {
+      background: linear-gradient(135deg, #0369a1, #1d4ed8);
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.5);
+      transform: translateY(-1px);
+    }
+
+    /* Table Footer & Pagination */
+    .table-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      background: rgba(15, 23, 42, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pagination-bar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .page-btn {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 4px 10px;
+      color: #cbd5e1;
+      font-family: 'JetBrains Mono', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .page-btn:hover:not(.disabled) {
+      background: #0284c7;
+      color: #fff;
+      border-color: #0284c7;
+    }
+    .page-btn.active {
+      background: #38bdf8;
+      border-color: #38bdf8;
+      color: #0f172a;
+      font-weight: 900;
+    }
+    .page-btn.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* Executive Toast */
+    .exec-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1.5px solid #38bdf8;
+      border-radius: 10px;
+      padding: 12px 20px;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transform: translateY(120px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .exec-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ====================================================
+       PEARL LIGHT THEME (خلفية لؤلؤية فاخرة وخط عالي التباين)
+       ==================================================== */
+    body.theme-pearl {
+      background: radial-gradient(circle at 85% 15%, #ffffff 0%, #f8fafc 40%, #e2e8f0 100%) !important;
+      color: #0f172a !important;
+    }
+
+    body.theme-pearl .ambient-glow-alloc-1 {
+      background: radial-gradient(circle, rgba(186, 230, 253, 0.45) 0%, rgba(186, 230, 253, 0) 70%) !important;
+    }
+
+    body.theme-pearl .ambient-glow-alloc-2 {
+      background: radial-gradient(circle, rgba(254, 215, 170, 0.35) 0%, rgba(254, 215, 170, 0) 70%) !important;
+    }
+
+    /* Nav in Pearl Mode */
+    body.theme-pearl .top-nav {
+      background: rgba(255, 255, 255, 0.92) !important;
+      border-bottom: 1.5px solid #cbd5e1 !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+    body.theme-pearl .nav-title {
+      color: #0f172a !important;
+    }
+    body.theme-pearl .top-nav strong {
+      color: #0f172a !important;
+    }
+    body.theme-pearl .top-nav div {
+      color: #475569 !important;
+    }
+    body.theme-pearl .theme-toggle-btn {
+      background: #ffffff !important;
+      border: 1.5px solid #94a3b8 !important;
+      color: #0f172a !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+    }
+    body.theme-pearl .theme-toggle-btn:hover {
+      background: #f1f5f9 !important;
+      border-color: #0284c7 !important;
+      color: #0284c7 !important;
+    }
+
+    /* KPI Cards in Pearl Mode */
+    body.theme-pearl .metric-card-exec {
+      background: #ffffff !important;
+      border: 1.5px solid #e2e8f0 !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+    }
+    body.theme-pearl .metric-card-exec:hover {
+      background: #ffffff !important;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08) !important;
+      transform: translateY(-2px);
+    }
+    body.theme-pearl .metric-card-exec .top-row .title {
+      color: #334155 !important;
+      font-weight: 800 !important;
+    }
+    body.theme-pearl .metric-card-exec .desc {
+      color: #64748b !important;
+      font-weight: 600 !important;
+    }
+
+    /* Tabs in Pearl Mode */
+    body.theme-pearl .tab-btn {
+      background: #f1f5f9 !important;
+      border: 1.5px solid #cbd5e1 !important;
+      color: #334155 !important;
+    }
+    body.theme-pearl .tab-btn:hover {
+      background: #ffffff !important;
+      color: #0284c7 !important;
+    }
+    body.theme-pearl .tab-btn.active.active-reclaim {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.12), rgba(2, 132, 199, 0.24)) !important;
+      border-color: #0284c7 !important;
+      color: #0369a1 !important;
+    }
+    body.theme-pearl .tab-btn.active.active-defense {
+      background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.22)) !important;
+      border-color: #dc2626 !important;
+      color: #b91c1c !important;
+    }
+    body.theme-pearl .tab-btn.active.active-family {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.24)) !important;
+      border-color: #059669 !important;
+      color: #047857 !important;
+    }
+    body.theme-pearl .pill-count-tag {
+      background: rgba(0, 0, 0, 0.08) !important;
+      color: #0f172a !important;
+    }
+
+    /* Filter Cockpit in Pearl Mode */
+    body.theme-pearl .filter-cockpit {
+      background: #ffffff !important;
+      border: 1.5px solid #e2e8f0 !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
+    }
+    body.theme-pearl .filter-group label {
+      color: #0f172a !important;
+      font-weight: 800 !important;
+    }
+    body.theme-pearl .modern-input,
+    body.theme-pearl .modern-select {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      color: #0f172a !important;
+      font-weight: 600 !important;
+    }
+    body.theme-pearl .modern-input:focus,
+    body.theme-pearl .modern-select:focus {
+      border-color: #0284c7 !important;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+    }
+    body.theme-pearl .small-team-pill {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      color: #334155 !important;
+    }
+    body.theme-pearl .small-team-pill:hover {
+      background: #f1f5f9 !important;
+      border-color: #0284c7 !important;
+      color: #0284c7 !important;
+    }
+    body.theme-pearl .small-team-pill.active {
+      background: #0284c7 !important;
+      border-color: #0284c7 !important;
+      color: #ffffff !important;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35) !important;
+    }
+    body.theme-pearl .cockpit-risk-bar {
+      background: #f8fafc !important;
+      border: 1.5px solid #e2e8f0 !important;
+    }
+    body.theme-pearl .risk-filter-pill {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      color: #334155 !important;
+    }
+    body.theme-pearl .risk-filter-pill:hover {
+      background: #f1f5f9 !important;
+      border-color: #0284c7 !important;
+    }
+    body.theme-pearl .risk-filter-pill .count-tag {
+      background: #e2e8f0 !important;
+      color: #0f172a !important;
+    }
+    body.theme-pearl .risk-filter-pill.active.active-all {
+      background: #e0f2fe !important;
+      border-color: #0284c7 !important;
+      color: #0369a1 !important;
+    }
+    body.theme-pearl .risk-filter-pill.active.active-critical {
+      background: #fee2e2 !important;
+      border-color: #ef4444 !important;
+      color: #b91c1c !important;
+    }
+    body.theme-pearl .risk-filter-pill.active.active-high {
+      background: #fef3c7 !important;
+      border-color: #f59e0b !important;
+      color: #b45309 !important;
+    }
+    body.theme-pearl .risk-filter-pill.active.active-warning {
+      background: #fef9c3 !important;
+      border-color: #eab308 !important;
+      color: #a16207 !important;
+    }
+    body.theme-pearl .risk-filter-pill.active.active-moderate {
+      background: #dbeafe !important;
+      border-color: #3b82f6 !important;
+      color: #1d4ed8 !important;
+    }
+    body.theme-pearl .risk-filter-pill.active.active-safe {
+      background: #d1fae5 !important;
+      border-color: #10b981 !important;
+      color: #047857 !important;
+    }
+
+    /* Table in Pearl Mode */
+    body.theme-pearl .table-card {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05) !important;
+    }
+    body.theme-pearl table.exec-table th {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+      border-bottom: 2px solid #cbd5e1 !important;
+      font-weight: 900 !important;
+    }
+    body.theme-pearl table.exec-table td {
+      color: #0f172a !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+    body.theme-pearl table.exec-table tbody tr:nth-child(even) {
+      background: #f8fafc !important;
+    }
+    body.theme-pearl table.exec-table tbody tr:hover {
+      background: #e8edf5 !important;
+    }
+
+    body.theme-pearl .table-wrapper-exec::-webkit-scrollbar-track {
+      background: #e2e8f0 !important;
+    }
+    body.theme-pearl .table-wrapper-exec::-webkit-scrollbar-thumb {
+      background: #94a3b8 !important;
+    }
+    body.theme-pearl .table-wrapper-exec::-webkit-scrollbar-thumb:hover {
+      background: #64748b !important;
+    }
+
+    /* Badges in Pearl Mode */
+    body.theme-pearl .agent-pill.team-external {
+      background: #fef2f2 !important;
+      border: 1.5px solid #ef4444 !important;
+      color: #991b1b !important;
+      box-shadow: 0 1px 4px rgba(239, 68, 68, 0.15) !important;
+    }
+    body.theme-pearl .agent-pill.team-internal {
+      background: #f0fdf4 !important;
+      border: 1.5px solid #10b981 !important;
+      color: #065f46 !important;
+    }
+    body.theme-pearl .badge-critical {
+      background: #fef2f2 !important;
+      border-color: #ef4444 !important;
+      color: #991b1b !important;
+    }
+    body.theme-pearl .badge-high {
+      background: #fffbeb !important;
+      border-color: #f59e0b !important;
+      color: #92400e !important;
+    }
+    body.theme-pearl .badge-warning {
+      background: #fefce8 !important;
+      border-color: #eab308 !important;
+      color: #854d0e !important;
+    }
+    body.theme-pearl .badge-safe {
+      background: #f0fdf4 !important;
+      border-color: #22c55e !important;
+      color: #166534 !important;
+    }
+    body.theme-pearl .badge-reclaim-ready {
+      background: #eff6ff !important;
+      border-color: #3b82f6 !important;
+      color: #1e40af !important;
+    }
+    body.theme-pearl .badge-protected-renew {
+      background: #faf5ff !important;
+      border-color: #a855f7 !important;
+      color: #6b21a8 !important;
+    }
+    body.theme-pearl .badge-protected-contact {
+      background: #fffbeb !important;
+      border-color: #f59e0b !important;
+      color: #92400e !important;
+    }
+
+    /* Pagination in Pearl Mode */
+    body.theme-pearl .table-footer {
+      background: #f8fafc !important;
+      border-top: 1.5px solid #e2e8f0 !important;
+    }
+    body.theme-pearl .table-footer div,
+    body.theme-pearl .table-footer label {
+      color: #334155 !important;
+    }
+    body.theme-pearl .page-btn {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      color: #334155 !important;
+    }
+    body.theme-pearl .page-btn:hover {
+      background: #f1f5f9 !important;
+      border-color: #0284c7 !important;
+      color: #0284c7 !important;
+    }
+    body.theme-pearl .page-btn.active {
+      background: #0284c7 !important;
+      border-color: #0284c7 !important;
+      color: #ffffff !important;
+    }
+  
+    /* Copy Student ID Button Pill */
+    .btn-copy-id {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 6px;
+      padding: 2px 7px;
+      color: #38bdf8;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      white-space: nowrap;
+    }
+    .btn-copy-id:hover {
+      background: rgba(56, 189, 248, 0.22);
+      border-color: #38bdf8;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+      transform: translateY(-1px);
+    }
+    .btn-copy-id .copy-icon-tag {
+      font-size: 0.7rem;
+      opacity: 0.75;
+      transition: opacity 0.15s;
+    }
+    .btn-copy-id:hover .copy-icon-tag {
+      opacity: 1;
+    }
+    .btn-copy-id.copied {
+      background: rgba(16, 185, 129, 0.22) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.45) !important;
+    }
+
+    body.theme-pearl .btn-copy-id {
+      background: #f0fdf4 !important;
+      border: 1.5px solid #0284c7 !important;
+      color: #0369a1 !important;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04) !important;
+    }
+    body.theme-pearl .btn-copy-id:hover {
+      background: #e0f2fe !important;
+      border-color: #0284c7 !important;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25) !important;
+    }
+    body.theme-pearl .btn-copy-id.copied {
+      background: #dcfce7 !important;
+      border-color: #16a34a !important;
+      color: #15803d !important;
+    }
+
+    /* Modal Overlay & Box Styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      animation: fadeInModal 0.2s ease;
+    }
+    @keyframes fadeInModal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .modal-box {
+      background: #0f172a;
+      border: 1.5px solid rgba(56, 189, 248, 0.35);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 620px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      animation: scaleUpModal 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes scaleUpModal {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .modal-header {
+      padding: 14px 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .modal-close-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: all 0.15s;
+    }
+    .modal-close-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ef4444;
+    }
+    .modal-body {
+      padding: 20px;
+    }
+    body.theme-pearl .modal-box {
+      background: #ffffff !important;
+      border-color: #cbd5e1 !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+    }
+    body.theme-pearl .modal-header {
+      background: #f8fafc !important;
+      border-bottom-color: #e2e8f0 !important;
+    }
+    body.theme-pearl .modal-header h3 {
+      color: #0f172a !important;
+    }
+    body.theme-pearl .modal-body p {
+      color: #334155 !important;
+    }
+
+  
+    .due-date-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.68rem;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', 'Cairo', sans-serif;
+      font-weight: 700;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+    .due-date-pill.upcoming {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #7dd3fc;
+    }
+    .due-date-pill.overdue {
+      background: rgba(239, 68, 68, 0.18);
+      border: 1px solid rgba(239, 68, 68, 0.45);
+      color: #fca5a5;
+      font-weight: 800;
+    }
+    body.theme-pearl .due-date-pill.upcoming {
+      background: #f0f9ff !important;
+      border-color: #38bdf8 !important;
+      color: #0284c7 !important;
+    }
+    body.theme-pearl .due-date-pill.overdue {
+      background: #fef2f2 !important;
+      border-color: #ef4444 !important;
+      color: #b91c1c !important;
+    }
+
+    /* Language Selector Pill Group */
+    .lang-selector-pill-group {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 3px;
+      gap: 3px;
+    }
+    .lang-pill-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      padding: 4px 9px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .lang-pill-btn:hover {
+      color: #f8fafc;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .lang-pill-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4);
+    }
+    body.theme-pearl .lang-selector-pill-group {
+      background: #f1f5f9 !important;
+      border-color: #cbd5e1 !important;
+    }
+    body.theme-pearl .lang-pill-btn {
+      color: #64748b !important;
+    }
+    body.theme-pearl .lang-pill-btn:hover {
+      color: #0f172a !important;
+      background: rgba(0, 0, 0, 0.05) !important;
+    }
+    body.theme-pearl .lang-pill-btn.active {
+      background: #0284c7 !important;
+      color: #ffffff !important;
+    }
+
+    /* LTR Support for English & Chinese */
+    body.lang-ltr {
+      direction: ltr !important;
+      text-align: left !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+    }
+    body.lang-ltr .top-nav {
+      direction: ltr !important;
+    }
+    body.lang-ltr .nav-left {
+      flex-direction: row;
+    }
+    body.lang-ltr .filter-cockpit,
+    body.lang-ltr .cockpit-row-1,
+    body.lang-ltr .cockpit-risk-bar {
+      direction: ltr !important;
+    }
+    body.lang-ltr table.exec-table th,
+    body.lang-ltr table.exec-table td {
+      text-align: left;
+    }
+    body.lang-ltr table.exec-table th[style*="text-align: center"],
+    body.lang-ltr table.exec-table td[style*="text-align: center"] {
+      text-align: center !important;
+    }
+    body.lang-ltr .table-footer {
+      direction: ltr !important;
+    }
+    body.lang-ltr .modal-box {
+      direction: ltr !important;
+      text-align: left !important;
+    }
+    body.lang-ltr .modal-header {
+      direction: ltr !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Cosmic Atmosphere Background -->
+  <div class="ambient-glow-alloc-1"></div>
+  <div class="ambient-glow-alloc-2"></div>
+
+  <!-- Main Container -->
+  <div class="app-container">
+
+    <!-- Top Executive Navigation Bar -->
+    <nav class="top-nav">
+      <div class="nav-left">
+        <div class="logo-mark">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="url(#navGrad)" stroke-width="2.5"/>
+            <path d="M10 16L14 20L22 12" stroke="url(#navGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="navGrad" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#f59e0b"/>
+                <stop offset="0.5" stop-color="#3b82f6"/>
+                <stop offset="1" stop-color="#10b981"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <h1 class="nav-title"><span id="navTitlePrefix">Big Team 01 — </span><span class="gradient-text-orange" id="navTitleSuffix">Allocation & Lead Reclaim Hub</span></h1>
+          <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px;">
+            <span id="navSubtitleManager">Senior Manager: </span><strong style="color: #fff;">Hussein El A'sar</strong> | <span id="navSubtitleSector">قطاع الشرق الأوسط: </span><strong style="color: #38bdf8;" id="navSubtitleRadar">رادار الاسترداد الهجومي ودرع الحماية (SLA 14 Days)</strong>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <!-- Language Selector Pill Group (AR / EN / ZH) -->
+        <div class="lang-selector-pill-group" id="langSelectorGroup">
+          <button type="button" class="lang-pill-btn active" id="langBtnAr" onclick="setLanguage('ar')" title="اللغة العربية">🇸🇦 عربي</button>
+          <button type="button" class="lang-pill-btn" id="langBtnEn" onclick="setLanguage('en')" title="English">🇬🇧 EN</button>
+          <button type="button" class="lang-pill-btn" id="langBtnZh" onclick="setLanguage('zh')" title="中文 (简体)">🇨🇳 中文</button>
+        </div>
+
+        <!-- DingTalk Bot Settings -->
+        <button type="button" class="theme-toggle-btn" onclick="openDingTalkConfigModal()" title="إعدادات بوت دينغ توك للإرسال التلقائي المباشر">
+          <span style="font-size: 1rem;">🤖</span>
+          <span>DingTalk Bot</span>
+        </button>
+        <!-- Theme Toggle Button (New Theme) -->
+        <button type="button" id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" title="تبديل مظهر الواجهة (New Theme / Dark Theme)">
+          <span id="themeToggleIcon" style="font-size: 1rem;">🦪</span>
+          <span id="themeToggleText">New Theme</span>
+        </button>
+
+        <a href="index.html" class="tab-btn active" style="text-decoration: none; padding: 7px 14px; font-size: 0.82rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span id="navMainDashboardText">الداش بورد الرئيسي</span>
+        </a>
+        <a href="calculator.html" class="tab-btn" style="text-decoration: none; padding: 7px 14px; font-size: 0.82rem; background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #fcd34d;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/></svg>
+          <span id="navCalculatorText">حاسبة الباقات</span>
+        </a>
+        <div style="display: flex; align-items: center; gap: 7px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 5px 10px; border-radius: 8px; font-size: 0.76rem; font-weight: 700; color: #34d399;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981;"></span>
+          <span id="crmLiveSyncText">CRM Live Synchronized</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Executive KPI Deck -->
+    <div class="kpi-grid-deck">
+      <div class="metric-card-exec" style="border-top: 3px solid #38bdf8;" onclick="setPortalTab('reclaim'); filterReclaimStatus('ready');">
+        <div class="top-row">
+          <span class="title" id="kpiReadyTitle">جاهز للاسترداد الفوري</span>
+          <span class="badge-pill badge-reclaim-ready">Rule 1 & 6</span>
+        </div>
+        <div class="value" style="color: #38bdf8;" id="kpiReadyCount">23</div>
+        <div class="desc" id="kpiReadyDesc">طلاب خرجوا لفرق أخرى ولم يجددوا وبدون تواصل فعال (>14 يوم)</div>
+      </div>
+
+      <div class="metric-card-exec" style="border-top: 3px solid #ef4444;" onclick="setPortalTab('defense'); filterByRisk('critical');">
+        <div class="top-row">
+          <span class="title" id="kpiCriticalTitle">خطر حرج: كسر القاعدة 1</span>
+          <span class="badge-pill badge-critical">&ge; 14 Days</span>
+        </div>
+        <div class="value" style="color: #ef4444;" id="kpiCriticalCount">2,824</div>
+        <div class="desc" id="kpiCriticalDesc">تجاوزوا مهلة 14 يوماً بدون تواصل وملاحظة مسجلة في CRM</div>
+      </div>
+
+      <div class="metric-card-exec" style="border-top: 3px solid #f59e0b;" onclick="setPortalTab('defense'); filterByRisk('high_risk');">
+        <div class="top-row">
+          <span class="title" id="kpiHighRiskTitle">إنذار الخطر الداهم (48h)</span>
+          <span class="badge-pill badge-high">12 - 13 Days</span>
+        </div>
+        <div class="value" style="color: #f59e0b;" id="kpiHighRiskCount">43</div>
+        <div class="desc" id="kpiHighRiskDesc">متبقي 24 إلى 48 ساعة للاتصال لمنع سحب العميل قانونياً</div>
+      </div>
+
+      <div class="metric-card-exec" style="border-top: 3px solid #10b981;" onclick="setPortalTab('family');">
+        <div class="top-row">
+          <span class="title" id="kpiFamilyTitle">عائلات منقسمة بالشرق الأوسط</span>
+          <span class="badge-pill badge-safe">Rule 4 & 5</span>
+        </div>
+        <div class="value" style="color: #10b981;" id="kpiFamilyCount">42</div>
+        <div class="desc" id="kpiFamilyDesc">أفراد عائلة موزعين بين ممثلين (مؤهلة للتوحيد الفوري)</div>
+      </div>
+
+      <div class="metric-card-exec" style="border-top: 3px solid #a855f7;" onclick="setPortalTab('reclaim'); filterReclaimStatus('protected');">
+        <div class="top-row">
+          <span class="title" id="kpiProtectedTitle">محميون بالتجديد / التواصل</span>
+          <span class="badge-pill badge-protected-renew">Verified SLA</span>
+        </div>
+        <div class="value" style="color: #c084fc;" id="kpiProtectedCount">122</div>
+        <div class="desc" id="kpiProtectedDesc">طلاب تم تجديدهم أو لديهم تواصل فعال مسجل</div>
+      </div>
+    </div>
+
+    <!-- Main Tab Navigation -->
+    <div class="tab-nav-bar">
+      <button type="button" class="tab-btn active active-reclaim" id="tabBtnReclaim" onclick="setPortalTab('reclaim')">
+        <span style="font-size: 1.1rem;">🎯</span>
+        <span id="tabTextReclaim">رادار الاسترداد الهجومي (Offensive Reclaim Hub)</span>
+        <span class="pill-count-tag" id="tabBadgeReclaim">145</span>
+      </button>
+
+      <button type="button" class="tab-btn" id="tabBtnDefense" onclick="setPortalTab('defense')">
+        <span style="font-size: 1.1rem;">🛡️</span>
+        <span id="tabTextDefense">درع الحماية والإنذار المبكر (Defense Shield - 14 Days)</span>
+        <span class="pill-count-tag" id="tabBadgeDefense">3,990</span>
+      </button>
+
+      <button type="button" class="tab-btn" id="tabBtnFamily" onclick="setPortalTab('family')">
+        <span style="font-size: 1.1rem;">👨‍👩‍👧‍👦</span>
+        <span id="tabTextFamily">منظومة العائلات و Family Back (الشرق الأوسط بالكامل)</span>
+        <span class="pill-count-tag" id="tabBadgeFamily">195</span>
+      </button>
+    </div>
+
+    <!-- Executive Filter Cockpit -->
+    <div class="filter-cockpit">
+      <div class="cockpit-row-1">
+        <!-- Search Box -->
+        <div class="filter-group">
+          <label>
+            <span>🔍</span>
+            <span id="searchLabelText">البحث الفوري بالرقم أو الاسم:</span>
+          </label>
+          <input type="text" id="filterSearch" class="modern-input" placeholder="ادخل Student ID أو اسم الممثل (Current أو Old SS)..." onkeyup="triggerFilter()">
+        </div>
+
+        <!-- OLD SS Priority Filter -->
+        <div class="filter-group">
+          <label style="color: #fcd34d;">
+            <span>⭐</span>
+            <span id="repsLabelText">تصفية حسب ممثلي الفريق:</span>
+          </label>
+          <select id="selectOldSS" class="modern-select" onchange="triggerFilter()">
+            <option value="ALL">-- جميع ممثلي فريقي الـ 20 --</option>
+          </select>
+        </div>
+
+        <!-- Small Teams Filter -->
+        <div class="filter-group">
+          <label style="color: #38bdf8;">
+            <span>🏢</span>
+            <span id="teamsLabelText">الفرق الصغيرة (Small Teams):</span>
+          </label>
+          <select id="selectSmallTeam" class="modern-select" onchange="triggerFilter()">
+            <option value="ALL">-- جميع الفرق (01 إلى 30) --</option>
+          </select>
+        </div>
+
+        <!-- Full Team Escalation Report Button -->
+        <div class="filter-group" style="justify-content: flex-end;">
+          <label>&nbsp;</label>
+          <button type="button" class="btn-dossier-mini" style="padding: 8px 12px; font-size: 0.8rem; height: 38px; justify-content: center;" onclick="copyTeamEscalationReport()" title="نسخ تقرير تصعيد شامل لجميع أعضاء الفريق المختار بطلابهم ونقاطهم">
+            <span id="btnTeamReportText">📑 نسخ تقرير الفريق الشامل</span>
+          </button>
+        </div>
+
+        <!-- CSV Export Button -->
+        <div class="filter-group" style="justify-content: flex-end;">
+          <label>&nbsp;</label>
+          <button type="button" class="btn-ticket-mini" style="padding: 8px 14px; font-size: 0.8rem; height: 38px; justify-content: center; background: linear-gradient(135deg, #10b981, #06b6d4); color: #fff; border: none;" onclick="exportTableCSV()">
+            <span id="btnExportCsvText">📥 تصدير CSV</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Small Teams Pills Bar -->
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap;">
+        <span style="font-size: 0.75rem; font-weight: 800; color: #94a3b8;" id="quickTeamsLabelText">الوصول السريع لفرقنا:</span>
+        <div class="small-team-pills" id="quickTeamPills">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- Cockpit Row 2: Interactive Risk & Status Filters DIRECTLY ABOVE TABLE -->
+      <div class="cockpit-risk-bar">
+        <div id="dynamicFilterPillsCluster" class="risk-pills-cluster">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Sort & Rows Options -->
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 0.74rem; color: #94a3b8;" id="sortLabelText">الفرز:</span>
+          <button type="button" id="btnSortPoints" class="small-team-pill" onclick="toggleSorting('points')">💎 الرصيد</button>
+          <button type="button" id="btnSortDays" class="small-team-pill" onclick="toggleSorting('days')">⏳ أيام الانقطاع</button>
+
+          <span style="font-size: 0.74rem; color: #94a3b8; margin-right: 6px;" id="pageSizeLabelText">عرض في الصفحة:</span>
+          <select id="selectPageSize" class="modern-select" style="padding: 3px 8px; font-size: 0.76rem;" onchange="changePageSize(this.value)">
+            <option value="100" selected>100 طالب</option>
+            <option value="200">200 طالب</option>
+            <option value="500">500 طالب</option>
+            <option value="1000">1,000 طالب</option>
+            <option value="ALL">عرض الكل</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Card Component (Full Width & Generous Layout) -->
+    <div class="table-card">
+      <div class="table-wrapper-exec">
+        <table class="exec-table">
+          <thead>
+            <tr id="tableHeaderRow">
+              <!-- Injected Dynamically -->
+            </tr>
+          </thead>
+          <tbody id="tableBodyRow">
+            <!-- Injected Dynamically -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table Pagination Footer -->
+      <div class="table-footer">
+        <div style="font-size: 0.8rem; font-weight: 700;" id="recordCounterText">
+          عرض 0 - 0 من إجمالي 0 طالب
+        </div>
+        <div class="pagination-bar" id="paginationNav">
+          <!-- Injected Dynamically -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification Box -->
+  <div class="exec-toast" id="execToast">
+    <span style="font-size: 1.2rem;">⚡</span>
+    <span id="execToastText">تم نسخ التذكرة بنجاح!</span>
+  </div>
+
+  <script src="allocation_rules_data.js"></script>
+  <script>
+    // Universal Fix State Engine v2.2
+    let currentTab = 'reclaim';
+    let currentRiskFilter = 'ALL';
+    let currentReclaimStatus = 'ALL';
+    let currentOldSS = 'ALL';
+    let currentSmallTeam = 'ALL';
+    let searchQuery = '';
+    let sortField = 'points';
+    let sortAscending = false;
+    let currentPage = 1;
+    let pageSize = 100;
+
+    let masterList = [];
+    let filteredList = [];
+
+    // Official Work Team Roster (Big Team 01)
+    const TEAM_ROSTER = {
+      "ME-EGSS01": [
+        "EGSS-ashraqatal",
+        "EGSS-juliamonir01",
+        "EGSS-mahmoud04",
+        "EGSS-nohayoussry"
+      ],
+      "ME-EGSS05": [
+        "EGSS-abdelrahmannasef",
+        "EGSS-ahmedhalawa",
+        "EGSS-alihesham01",
+        "EGSS-ehabzaky01",
+        "EGSS-ibrahimismaiel",
+        "EGSS-khaledgonam",
+        "EGSS-omarmoneb",
+        "EGSS-samira01"
+      ],
+      "ME-EGSS10": [
+        "EGSS-abdelrhmanshehata",
+        "EGSS-ahmedshoukry",
+        "EGSS-hayamhassan",
+        "EGSS-titooooo"
+      ],
+      "ME-EGSS13": [
+        "EGSS-amrsafwat",
+        "EGSS-marwaahmed",
+        "EGSS-mohamedha"
+      ],
+      "ME-EGSS30": [
+        "EGSS-ahmedshoukry",
+        "EGSS-mahmoudkhamis"
+      ]
+    };
+
+    const TEAM_SUPERVISORS = {
+      "ME-EGSS01": "Ashraqatal",
+      "ME-EGSS05": "Ibrahim Abd El Shakour",
+      "ME-EGSS10": "Abdelrhman Shehata",
+      "ME-EGSS13": "Mohamed Hassan",
+      "ME-EGSS30": "Adhm GadAllah"
+    };
+
+    // Set of all 20 representatives in user's team
+    const MY_TEAM_REPS = new Set([
+      "EGSS-ashraqatal", "EGSS-juliamonir01", "EGSS-mahmoud04", "EGSS-nohayoussry",
+      "EGSS-abdelrahmannasef", "EGSS-ahmedhalawa", "EGSS-alihesham01", "EGSS-ehabzaky01",
+      "EGSS-ibrahimismaiel", "EGSS-khaledgonam", "EGSS-omarmoneb", "EGSS-samira01",
+      "EGSS-abdelrhmanshehata", "EGSS-ahmedshoukry", "EGSS-hayamhassan", "EGSS-titooooo",
+      "EGSS-amrsafwat", "EGSS-marwaahmed", "EGSS-mohamedha", "EGSS-mahmoudkhamis"
+    ]);
+
+    // Multi-Language Localization Engine (Arabic, English, Chinese)
+    let currentLang = localStorage.getItem('allocation_hub_lang') || 'ar';
+
+    const TRANSLATIONS = {
+      ar: {
+        nav_title_prefix: "Big Team 01 — ",
+        nav_title_suffix: "Allocation & Lead Reclaim Hub",
+        nav_subtitle_manager: "Senior Manager: ",
+        nav_subtitle_sector: "قطاع الشرق الأوسط: ",
+        nav_subtitle_radar: "رادار الاسترداد الهجومي ودرع الحماية (SLA 14 Days)",
+        btn_dingtalk_bot: "DingTalk Bot",
+        btn_theme_new: "New Theme",
+        btn_theme_dark: "Dark Theme",
+        nav_main_dashboard: "الداش بورد الرئيسي",
+        nav_calculator: "حاسبة الباقات",
+        crm_live_sync: "CRM Live Synchronized",
+        
+        kpi_ready_title: "جاهز للاسترداد الفوري",
+        kpi_ready_desc: "طلاب خرجوا لفرق أخرى ولم يجددوا وبدون تواصل فعال (>14 يوم)",
+        kpi_critical_title: "خطر حرج: كسر القاعدة 1",
+        kpi_critical_desc: "تجاوزوا مهلة 14 يوماً بدون تواصل وملاحظة مسجلة في CRM",
+        kpi_high_title: "إنذار الخطر الداهم (48h)",
+        kpi_high_desc: "متبقي 24 إلى 48 ساعة للاتصال لمنع سحب العميل قانونياً",
+        kpi_family_title: "عائلات منقسمة بالشرق الأوسط",
+        kpi_family_desc: "أفراد عائلة موزعين بين ممثلين (مؤهلة للتوحيد الفوري)",
+        kpi_protected_title: "محميون بالتجديد / التواصل",
+        kpi_protected_desc: "طلاب تم تجديدهم مع الممثل الجديد أو لديهم تواصل فعال مسجل",
+
+        tab_reclaim: "رادار الاسترداد الهجومي (Offensive Reclaim Hub)",
+        tab_defense: "درع الحماية والإنذار المبكر (Defense Shield - 14 Days)",
+        tab_family: "منظومة العائلات و Family Back (الشرق الأوسط بالكامل)",
+
+        search_label: "البحث الفوري بالرقم أو الاسم:",
+        search_placeholder: "ادخل Student ID أو اسم الممثل (Current أو Old SS)...",
+        filter_reps_label: "تصفية حسب ممثلي الفريق:",
+        filter_reps_all: "-- جميع ممثلي فريقي الـ 20 --",
+        filter_teams_label: "الفرق الصغيرة (Small Teams):",
+        filter_teams_all: "-- جميع الفرق (01 إلى 30) --",
+        btn_team_escalation: "📑 نسخ تقرير الفريق الشامل",
+        btn_export_csv: "📥 تصدير CSV",
+        quick_teams_label: "الوصول السريع لفرقنا:",
+        btn_all_teams: "كل الفرق",
+        sort_label: "الفرز:",
+        btn_sort_points: "💎 الرصيد",
+        btn_sort_days: "⏳ أيام الانقطاع",
+        page_size_label: "عرض في الصفحة:",
+        leads_unit: "طالب",
+        show_all: "عرض الكل",
+
+        reclaim_cluster_label: "حالة الاسترداد (SLA):",
+        pill_all: "الكل",
+        pill_due_now: "🚨 مستحق فوراً",
+        pill_due_1_3: "⏳ مستحق (1 - 3 أيام)",
+        pill_due_4_plus: "📅 أكثر من 4 أيام",
+        pill_expired_pool: "⌛ حوض منتهي (Rule 6)",
+
+        defense_cluster_label: "حالات خطورة SLA (14d):",
+        pill_critical_risk: "🚨 كسر 14d (حرج)",
+        pill_high_risk: "⚠️ خطر مرتفع (12-13d)",
+        pill_warning_risk: "🟡 إنذار مبكر (10-11d)",
+        pill_moderate_risk: "🔵 متابعة (7-9d)",
+        pill_safe_risk: "🟢 آمن (<7d)",
+
+        family_cluster_label: "منظومة العائلات:",
+        pill_split_families: "👨‍👩‍👧‍👦 عائلات منقسمة بالشرق الأوسط",
+
+        th_num: "#",
+        th_student_id: "Student ID",
+        th_rule: "القاعدة المطبقة",
+        th_old_rep: "المالك الأصلي (Old SS)",
+        th_current_rep: "المالك الحالي (Current EA)",
+        th_assigned_rep: "الممثل المسؤول (Rep)",
+        th_current_team: "الفريق الحالي",
+        th_small_team: "الفريق الصغير",
+        th_family_id: "Family ID",
+        th_family_members: "أعضاء العائلة",
+        th_split_with: "منقسم مع",
+        th_family_status: "حالة العائلة",
+        th_pool: "الحوض (Pool)",
+        th_points: "النقاط 💎",
+        th_last_month: "حضور ماضي 📅",
+        th_this_month: "حضور حالي ⚡",
+        th_reclaim_status: "حالة الاسترداد",
+        th_last_contact: "آخر تواصل",
+        th_inactive_days: "انقطاع",
+        th_risk_level: "مستوى الخطر",
+        th_action_reclaim: "الإجراء الموصى به",
+        th_action_defense: "الإجراء المطلوب فوراً",
+        th_sop_actions: "إجراءات SOP و DingTalk",
+
+        btn_ticket: "📋 تذكرة",
+        btn_alert: "⚠️ تنبيه",
+        btn_unify: "📋 توحيد",
+        btn_dossier: "📑 ملف شامل",
+        btn_dingtalk: "🚀 DingTalk",
+
+        badge_my_team: "فريقنا",
+        badge_external: "خارجي",
+        badge_reclaim_ready: "🎯 مؤهل للاسترداد",
+        badge_renewed_protected: "🔒 تم التجديد (محمي)",
+        badge_contact_protected: "⚠️ تواصل فعال (محمي)",
+        badge_outside_team: "خارج فريقنا (Middle East)",
+        badge_split_family: "عائلة منقسمة (فريقنا)",
+
+        no_records_title: "لا توجد سجلات مطابقة لمعايير البحث الحالية",
+        no_records_desc: "جرب تغيير خيارات الفلتر أو مسح نص البحث",
+        record_counter: "عرض {start} - {end} من إجمالي {total} طالب",
+        page_prev: "السابق",
+        page_next: "التالي",
+
+        grp_core_teams: "⭐ فرق قطاع Big Team 01 الخاص بنا",
+        grp_other_teams: "🌐 باقي فرق قطاع الشرق الأوسط (01 - 30)"
+      },
+      en: {
+        nav_title_prefix: "Big Team 01 — ",
+        nav_title_suffix: "Allocation & Lead Reclaim Hub",
+        nav_subtitle_manager: "Senior Manager: ",
+        nav_subtitle_sector: "Middle East Sector: ",
+        nav_subtitle_radar: "Offensive Reclaim Hub & Defense Shield (SLA 14 Days)",
+        btn_dingtalk_bot: "DingTalk Bot",
+        btn_theme_new: "New Theme",
+        btn_theme_dark: "Dark Theme",
+        nav_main_dashboard: "Main Dashboard",
+        nav_calculator: "Package Calculator",
+        crm_live_sync: "CRM Live Synchronized",
+        
+        kpi_ready_title: "Ready for Reclaim",
+        kpi_ready_desc: "Transferred to other teams, no renewal, no valid contact (>14d)",
+        kpi_critical_title: "Critical: Rule 1 Breach",
+        kpi_critical_desc: "Exceeded 14-day SLA without recorded contact in CRM",
+        kpi_high_title: "Imminent Risk Alert (48h)",
+        kpi_high_desc: "24-48 hours remaining to contact before policy reclaim",
+        kpi_family_title: "Split Families (Middle East)",
+        kpi_family_desc: "Family members split across reps (eligible for unification)",
+        kpi_protected_title: "Protected (Renewal/Contact)",
+        kpi_protected_desc: "Students renewed with new rep or have verified active contact",
+
+        tab_reclaim: "Offensive Reclaim Hub",
+        tab_defense: "Defense Shield & Early Warning (14 Days)",
+        tab_family: "Middle East Family Ecosystem & Family Back",
+
+        search_label: "Instant Search by ID or Name:",
+        search_placeholder: "Enter Student ID or Rep Name (Current or Old SS)...",
+        filter_reps_label: "Filter by Team Rep:",
+        filter_reps_all: "-- All 20 Team Reps --",
+        filter_teams_label: "Small Teams:",
+        filter_teams_all: "-- All Teams (01 to 30) --",
+        btn_team_escalation: "📑 Copy Full Team Report",
+        btn_export_csv: "📥 Export CSV",
+        quick_teams_label: "Quick Team Select:",
+        btn_all_teams: "All Teams",
+        sort_label: "Sort:",
+        btn_sort_points: "💎 Points",
+        btn_sort_days: "⏳ Days Inactive",
+        page_size_label: "Show per page:",
+        leads_unit: "Leads",
+        show_all: "Show All",
+
+        reclaim_cluster_label: "Reclaim Status (SLA):",
+        pill_all: "All",
+        pill_due_now: "🚨 Due Now",
+        pill_due_1_3: "⏳ Due (1 - 3 Days)",
+        pill_due_4_plus: "📅 4+ Days",
+        pill_expired_pool: "⌛ Expired Pool (Rule 6)",
+
+        defense_cluster_label: "SLA Risk Tiers (14d):",
+        pill_critical_risk: "🚨 Breach 14d (Critical)",
+        pill_high_risk: "⚠️ High Risk (12-13d)",
+        pill_warning_risk: "🟡 Early Warning (10-11d)",
+        pill_moderate_risk: "🔵 Follow-up (7-9d)",
+        pill_safe_risk: "🟢 Safe (<7d)",
+
+        family_cluster_label: "Family Ecosystem:",
+        pill_split_families: "👨‍👩‍👧‍👦 Split Families (Middle East)",
+
+        th_num: "#",
+        th_student_id: "Student ID",
+        th_rule: "Applied Rule",
+        th_old_rep: "Original Rep (Old SS)",
+        th_current_rep: "Current Rep (Current EA)",
+        th_assigned_rep: "Assigned Rep",
+        th_current_team: "Current Team",
+        th_small_team: "Small Team",
+        th_family_id: "Family ID",
+        th_family_members: "Family Members",
+        th_split_with: "Split With",
+        th_family_status: "Family Status",
+        th_pool: "Pool",
+        th_points: "Points 💎",
+        th_last_month: "Last M. 📅",
+        th_this_month: "This M. ⚡",
+        th_reclaim_status: "Reclaim Status",
+        th_last_contact: "Last Contact",
+        th_inactive_days: "Inactive",
+        th_risk_level: "Risk Level",
+        th_action_reclaim: "Recommended Action",
+        th_action_defense: "Immediate Action Required",
+        th_sop_actions: "SOP & DingTalk Actions",
+
+        btn_ticket: "📋 Ticket",
+        btn_alert: "⚠️ Alert",
+        btn_unify: "📋 Unify",
+        btn_dossier: "📑 Dossier",
+        btn_dingtalk: "🚀 DingTalk",
+
+        badge_my_team: "Our Team",
+        badge_external: "External",
+        badge_reclaim_ready: "🎯 Reclaim Ready",
+        badge_renewed_protected: "🔒 Renewed (Protected)",
+        badge_contact_protected: "⚠️ Contacted (Protected)",
+        badge_outside_team: "Outside Team (Middle East)",
+        badge_split_family: "Split Family (Our Team)",
+
+        no_records_title: "No records found matching current criteria",
+        no_records_desc: "Try adjusting filters or clearing the search box",
+        record_counter: "Showing {start} - {end} of {total} leads",
+        page_prev: "Previous",
+        page_next: "Next",
+
+        grp_core_teams: "⭐ Our Big Team 01 Sector Teams",
+        grp_other_teams: "🌐 Other Middle East Sector Teams (01 - 30)"
+      },
+      zh: {
+        nav_title_prefix: "大一组 (Big Team 01) — ",
+        nav_title_suffix: "资源分配与学员回收控制中心",
+        nav_subtitle_manager: "资深业务经理: ",
+        nav_subtitle_sector: "中东大区: ",
+        nav_subtitle_radar: "主动回收雷达与保护盾 (SLA 14天合规管控)",
+        btn_dingtalk_bot: "钉钉机器人 (Bot)",
+        btn_theme_new: "浅色主题 (New Theme)",
+        btn_theme_dark: "暗黑主题 (Dark)",
+        nav_main_dashboard: "主仪表盘",
+        nav_calculator: "课包计算器",
+        crm_live_sync: "CRM 实时同步中",
+        
+        kpi_ready_title: "立即回收就绪",
+        kpi_ready_desc: "已转出至其他组且未续费、超14天无有效跟进的学员",
+        kpi_critical_title: "极高风险：突破规则1",
+        kpi_critical_desc: "已超过14天SLA期限且CRM中无任何有效跟进记录",
+        kpi_high_title: "紧急预警 (48小时内)",
+        kpi_high_desc: "仅剩24-48小时需紧急联系以防被合规收回",
+        kpi_family_title: "中东跨组家庭学员",
+        kpi_family_desc: "同一家庭成员分布在不同顾问名下（符合即刻合并规则）",
+        kpi_protected_title: "已受保护（已续费/已联系）",
+        kpi_protected_desc: "新顾问已完成续费（如 60954175）或近期有有效联系记录",
+
+        tab_reclaim: "🎯 主动回收攻防雷达 (Offensive Reclaim Hub)",
+        tab_defense: "🛡️ 预警防护盾 (14天 SLA 保护)",
+        tab_family: "👨‍👩‍👧‍👦 中东家庭体系与家庭召回 (Family Back)",
+
+        search_label: "即时搜索（学员ID或顾问姓名）:",
+        search_placeholder: "输入学员ID或顾问英文名 (Current 或 Old SS)...",
+        filter_reps_label: "按组内顾问筛选:",
+        filter_reps_all: "-- 团队全部20名顾问 --",
+        filter_teams_label: "所属小组 (Small Teams):",
+        filter_teams_all: "-- 所有小组 (01 至 30) --",
+        btn_team_escalation: "📑 复制小组完整通报",
+        btn_export_csv: "📥 导出 CSV 表格",
+        quick_teams_label: "小组快速直达:",
+        btn_all_teams: "全部小组",
+        sort_label: "排序:",
+        btn_sort_points: "💎 剩余点数",
+        btn_sort_days: "⏳ 未跟进天数",
+        page_size_label: "每页显示:",
+        leads_unit: "条学员",
+        show_all: "显示全部",
+
+        reclaim_cluster_label: "回收状态 (SLA):",
+        pill_all: "全部",
+        pill_due_now: "🚨 立即到期",
+        pill_due_1_3: "⏳ 1-3天内到期",
+        pill_due_4_plus: "📅 4天以上",
+        pill_expired_pool: "⌛ 过期公海 (Rule 6)",
+
+        defense_cluster_label: "SLA 风险等级 (14天):",
+        pill_critical_risk: "🚨 破14天极危",
+        pill_high_risk: "⚠️ 高危预警 (12-13天)",
+        pill_warning_risk: "🟡 早期预警 (10-11天)",
+        pill_moderate_risk: "🔵 正常跟进 (7-9天)",
+        pill_safe_risk: "🟢 安全 (<7天)",
+
+        family_cluster_label: "家庭体系:",
+        pill_split_families: "👨‍👩‍👧‍👦 中东跨组分立家庭",
+
+        th_num: "#",
+        th_student_id: "学员 ID",
+        th_rule: "触发规则",
+        th_old_rep: "原责任顾问 (Old SS)",
+        th_current_rep: "当前顾问 (Current EA)",
+        th_assigned_rep: "责任顾问 (Rep)",
+        th_current_team: "当前小组",
+        th_small_team: "所属小组",
+        th_family_id: "家庭组 ID",
+        th_family_members: "家庭成员",
+        th_split_with: "分散至顾问",
+        th_family_status: "家庭状态",
+        th_pool: "公海/私海",
+        th_points: "剩余点数 💎",
+        th_last_month: "上月消耗 📅",
+        th_this_month: "本月消耗 ⚡",
+        th_reclaim_status: "回收状态",
+        th_last_contact: "最近联系",
+        th_inactive_days: "未跟进天数",
+        th_risk_level: "风险等级",
+        th_action_reclaim: "建议执行操作",
+        th_action_defense: "立即要求操作",
+        th_sop_actions: "SOP 操作与钉钉",
+
+        btn_ticket: "📋 工单",
+        btn_alert: "⚠️ 预警",
+        btn_unify: "📋 合并",
+        btn_dossier: "📑 档案",
+        btn_dingtalk: "🚀 钉钉推送",
+
+        badge_my_team: "我组",
+        badge_external: "组外",
+        badge_reclaim_ready: "🎯 符合回收条件",
+        badge_renewed_protected: "🔒 已续费 (受保护)",
+        badge_contact_protected: "⚠️ 有效跟进 (受保护)",
+        badge_outside_team: "组外成员 (中东大区)",
+        badge_split_family: "组内分立家庭",
+
+        no_records_title: "未找到符合当前搜索条件的学员记录",
+        no_records_desc: "请尝试更改筛选条件或清空搜索关键词",
+        record_counter: "显示第 {start} - {end} 条，共 {total} 名学员",
+        page_prev: "上一页",
+        page_next: "下一页",
+
+        grp_core_teams: "⭐ 我组大一组管辖小组 (Big Team 01)",
+        grp_other_teams: "🌐 中东大区其他小组 (01 - 30)"
+      }
+    };
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('allocation_hub_lang', lang);
+
+      const isRtl = (lang === 'ar');
+      document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
+      document.documentElement.lang = lang;
+      document.body.style.direction = isRtl ? 'rtl' : 'ltr';
+      document.body.style.textAlign = isRtl ? 'right' : 'left';
+      document.body.classList.toggle('lang-ltr', !isRtl);
+
+      ['ar', 'en', 'zh'].forEach(l => {
+        const btn = document.getElementById(`langBtn${l.charAt(0).toUpperCase() + l.slice(1)}`);
+        if (btn) btn.classList.toggle('active', l === lang);
+      });
+
+      updateStaticTranslations(lang);
+
+      if (currentTab === 'reclaim') renderReclaimFilters();
+      else if (currentTab === 'defense') renderDefenseRiskFilters();
+      else if (currentTab === 'family') renderFamilyFilters();
+
+      initSelectors();
+      renderTable();
+      renderPagination();
+
+      const toastMsg = {
+        ar: "🌐 تم تفعيل اللغة العربية",
+        en: "🌐 Language changed to English",
+        zh: "🌐 界面语言已切换为中文 (Chinese)"
+      }[lang];
+      showToast(toastMsg);
+    }
+
+    function updateStaticTranslations(lang) {
+      const t = TRANSLATIONS[lang] || TRANSLATIONS['ar'];
+
+      if (document.getElementById('navTitlePrefix')) document.getElementById('navTitlePrefix').textContent = t.nav_title_prefix;
+      if (document.getElementById('navTitleSuffix')) document.getElementById('navTitleSuffix').textContent = t.nav_title_suffix;
+      if (document.getElementById('navSubtitleManager')) document.getElementById('navSubtitleManager').textContent = t.nav_subtitle_manager;
+      if (document.getElementById('navSubtitleSector')) document.getElementById('navSubtitleSector').textContent = t.nav_subtitle_sector;
+      if (document.getElementById('navSubtitleRadar')) document.getElementById('navSubtitleRadar').textContent = t.nav_subtitle_radar;
+      if (document.getElementById('navMainDashboardText')) document.getElementById('navMainDashboardText').textContent = t.nav_main_dashboard;
+      if (document.getElementById('navCalculatorText')) document.getElementById('navCalculatorText').textContent = t.nav_calculator;
+      if (document.getElementById('crmLiveSyncText')) document.getElementById('crmLiveSyncText').textContent = t.crm_live_sync;
+
+      if (document.getElementById('kpiReadyTitle')) document.getElementById('kpiReadyTitle').textContent = t.kpi_ready_title;
+      if (document.getElementById('kpiReadyDesc')) document.getElementById('kpiReadyDesc').textContent = t.kpi_ready_desc;
+      if (document.getElementById('kpiCriticalTitle')) document.getElementById('kpiCriticalTitle').textContent = t.kpi_critical_title;
+      if (document.getElementById('kpiCriticalDesc')) document.getElementById('kpiCriticalDesc').textContent = t.kpi_critical_desc;
+      if (document.getElementById('kpiHighRiskTitle')) document.getElementById('kpiHighRiskTitle').textContent = t.kpi_high_title;
+      if (document.getElementById('kpiHighRiskDesc')) document.getElementById('kpiHighRiskDesc').textContent = t.kpi_high_desc;
+      if (document.getElementById('kpiFamilyTitle')) document.getElementById('kpiFamilyTitle').textContent = t.kpi_family_title;
+      if (document.getElementById('kpiFamilyDesc')) document.getElementById('kpiFamilyDesc').textContent = t.kpi_family_desc;
+      if (document.getElementById('kpiProtectedTitle')) document.getElementById('kpiProtectedTitle').textContent = t.kpi_protected_title;
+      if (document.getElementById('kpiProtectedDesc')) document.getElementById('kpiProtectedDesc').textContent = t.kpi_protected_desc;
+
+      if (document.getElementById('tabTextReclaim')) document.getElementById('tabTextReclaim').textContent = t.tab_reclaim;
+      if (document.getElementById('tabTextDefense')) document.getElementById('tabTextDefense').textContent = t.tab_defense;
+      if (document.getElementById('tabTextFamily')) document.getElementById('tabTextFamily').textContent = t.tab_family;
+
+      if (document.getElementById('searchLabelText')) document.getElementById('searchLabelText').textContent = t.search_label;
+      if (document.getElementById('filterSearch')) document.getElementById('filterSearch').placeholder = t.search_placeholder;
+      if (document.getElementById('repsLabelText')) document.getElementById('repsLabelText').textContent = t.filter_reps_label;
+      if (document.getElementById('teamsLabelText')) document.getElementById('teamsLabelText').textContent = t.filter_teams_label;
+      if (document.getElementById('btnTeamReportText')) document.getElementById('btnTeamReportText').textContent = t.btn_team_escalation;
+      if (document.getElementById('btnExportCsvText')) document.getElementById('btnExportCsvText').textContent = t.btn_export_csv;
+      if (document.getElementById('quickTeamsLabelText')) document.getElementById('quickTeamsLabelText').textContent = t.quick_teams_label;
+      if (document.getElementById('sortLabelText')) document.getElementById('sortLabelText').textContent = t.sort_label;
+      if (document.getElementById('btnSortPoints')) document.getElementById('btnSortPoints').textContent = t.btn_sort_points;
+      if (document.getElementById('btnSortDays')) document.getElementById('btnSortDays').textContent = t.btn_sort_days;
+      if (document.getElementById('pageSizeLabelText')) document.getElementById('pageSizeLabelText').textContent = t.page_size_label;
+
+      const pageSizeSelect = document.getElementById('selectPageSize');
+      if (pageSizeSelect) {
+        const val = pageSizeSelect.value;
+        if (pageSizeSelect.options[0]) pageSizeSelect.options[0].textContent = `100 ${t.leads_unit}`;
+        if (pageSizeSelect.options[1]) pageSizeSelect.options[1].textContent = `200 ${t.leads_unit}`;
+        if (pageSizeSelect.options[2]) pageSizeSelect.options[2].textContent = `500 ${t.leads_unit}`;
+        if (pageSizeSelect.options[3]) pageSizeSelect.options[3].textContent = `1,000 ${t.leads_unit}`;
+        if (pageSizeSelect.options[4]) pageSizeSelect.options[4].textContent = t.show_all;
+        pageSizeSelect.value = val;
+      }
+
+      const isPearl = document.body.classList.contains('theme-pearl');
+      updateThemeUI(isPearl);
+    }
+
+    // Theme Management Engine (New Theme vs Dark Theme)
+    function toggleTheme() {
+      const isPearl = document.body.classList.toggle('theme-pearl');
+      const theme = isPearl ? 'pearl' : 'dark';
+      localStorage.setItem('allocation_hub_theme', theme);
+      updateThemeUI(isPearl);
+      showToast(isPearl ? "🦪 تم تفعيل New Theme بنجاح" : "🌙 تم تفعيل Dark Theme بنجاح");
+    }
+
+    function updateThemeUI(isPearl) {
+      const icon = document.getElementById('themeToggleIcon');
+      const text = document.getElementById('themeToggleText');
+      if (icon && text) {
+        icon.textContent = isPearl ? '🌙' : '🦪';
+        text.textContent = isPearl ? 'Dark Theme' : 'New Theme';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      // Boot theme
+      const savedTheme = localStorage.getItem('allocation_hub_theme');
+      if (savedTheme === 'pearl') {
+        document.body.classList.add('theme-pearl');
+        updateThemeUI(true);
+      } else {
+        updateThemeUI(false);
+      }
+
+      if (!window.ALLOCATION_RULES_DATA) {
+        showToast("⚠️ لم يتم العثور على ملف البيانات (allocation_rules_data.js)");
+        return;
+      }
+      initSelectors();
+      initKPIValues();
+      setPortalTab('reclaim');
+
+      // Boot Language
+      const savedLang = localStorage.getItem('allocation_hub_lang') || 'ar';
+      setLanguage(savedLang);
+    });
+
+    // Helper: Render Agent Badge with Highlighting for External EAs
+    function renderAgentBadge(agentName) {
+      if (!agentName || agentName === '—' || agentName === 'None') return '—';
+      const isMyTeam = MY_TEAM_REPS.has(agentName);
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+      if (isMyTeam) {
+        return `<span class="agent-pill team-internal" title="${currentLang==='zh'?'大一组内部顾问':'Our Team Member'}">
+          <span style="font-size: 0.7rem;">👤</span>
+          <span>${agentName}</span>
+          <span class="tag-internal">${t.badge_my_team}</span>
+        </span>`;
+      } else {
+        return `<span class="agent-pill team-external" title="${currentLang==='zh'?'中东外部顾问':'External Representative'}">
+          <span style="font-size: 0.74rem; color: #f87171;">⚡</span>
+          <span>${agentName}</span>
+          <span class="tag-external">${t.badge_external}</span>
+        </span>`;
+      }
+    }
+
+    // Helper: Calculate Rep Comprehensive Profile from Dataset
+    function getRepProfile(repName) {
+      const data = window.ALLOCATION_RULES_DATA;
+      let totalLeads = 0;
+      let critical14d = 0;
+      let highRisk12_13d = 0;
+      let totalPts = 0;
+      let totalLastMonth = 0;
+      let totalThisMonth = 0;
+      let teamName = '';
+
+      (data.defense_uncovered || []).forEach(item => {
+        if (item.rep === repName) {
+          totalLeads++;
+          if (item.risk_badge === 'critical') critical14d++;
+          else if (item.risk_badge === 'high_risk') highRisk12_13d++;
+          totalPts += (item.current_points || 0);
+          totalLastMonth += (item.last_month_consumption || 0);
+          totalThisMonth += (item.this_month_consumption || 0);
+          if (!teamName) teamName = item.team;
+        }
+      });
+
+      // Find team roster & supervisor
+      let cleanTeam = '';
+      for (const [tCode, reps] of Object.entries(TEAM_ROSTER)) {
+        if (reps.includes(repName)) {
+          cleanTeam = tCode;
+          break;
+        }
+      }
+      if (!cleanTeam && teamName) cleanTeam = teamName;
+      const supervisor = TEAM_SUPERVISORS[cleanTeam] || "Big Team 01 Supervisor";
+      const teamMembers = TEAM_ROSTER[cleanTeam] || [repName];
+
+      return {
+        repName,
+        teamName: cleanTeam || "Big Team 01",
+        supervisor,
+        teamMembers,
+        totalLeads,
+        critical14d,
+        highRisk12_13d,
+        totalPts: Math.round(totalPts * 10) / 10,
+        totalLastMonth: Math.round(totalLastMonth * 10) / 10,
+        totalThisMonth: Math.round(totalThisMonth * 10) / 10
+      };
+    }
+
+    // Initialize KPI Header Counters
+    function initKPIValues() {
+      const stats = window.ALLOCATION_RULES_DATA.stats || {};
+      document.getElementById('kpiReadyCount').textContent = stats.reclaim_ready_immediate || 23;
+      document.getElementById('kpiCriticalCount').textContent = (stats.critical_defense_risk_14d || 2824).toLocaleString();
+      document.getElementById('kpiHighRiskCount').textContent = stats.high_defense_risk_12_13d || 43;
+      document.getElementById('kpiFamilyCount').textContent = stats.split_families_total || 42;
+      document.getElementById('kpiProtectedCount').textContent = (stats.reclaim_protected_renewed || 37) + (stats.reclaim_protected_contact || 85);
+
+      document.getElementById('tabBadgeReclaim').textContent = stats.reclaim_total_opportunities || 145;
+      document.getElementById('tabBadgeDefense').textContent = (stats.total_uncovered_leads || 3990).toLocaleString();
+      document.getElementById('tabBadgeFamily').textContent = stats.split_families_total || 42;
+    }
+
+    // Dynamic Rep Dropdown based on selected Team
+    function updateRepDropdown(selectedTeam) {
+      const oldSSSelect = document.getElementById('selectOldSS');
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+      oldSSSelect.innerHTML = '';
+
+      if (selectedTeam === 'ALL') {
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = 'ALL';
+        defaultOpt.textContent = t.filter_reps_all;
+        oldSSSelect.appendChild(defaultOpt);
+
+        for (const [tName, reps] of Object.entries(TEAM_ROSTER)) {
+          const grp = document.createElement('optgroup');
+          grp.label = currentLang === 'zh' ? `${tName} 组 (${reps.length} 人)` : currentLang === 'en' ? `${tName} (${reps.length} reps)` : `فريق ${tName} (${reps.length} ممثلين)`;
+          reps.forEach(rep => {
+            const opt = document.createElement('option');
+            opt.value = rep;
+            opt.textContent = `${rep}`;
+            grp.appendChild(opt);
+          });
+          oldSSSelect.appendChild(grp);
+        }
+      } else if (TEAM_ROSTER[selectedTeam]) {
+        const reps = TEAM_ROSTER[selectedTeam];
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = 'ALL';
+        defaultOpt.textContent = currentLang === 'zh' ? `-- ${selectedTeam} 全部顾问 (${reps.length} 人) --` : currentLang === 'en' ? `-- All ${selectedTeam} Reps (${reps.length}) --` : `-- كل أعضاء ${selectedTeam} (${reps.length} ممثلين) --`;
+        oldSSSelect.appendChild(defaultOpt);
+
+        reps.forEach(rep => {
+          const opt = document.createElement('option');
+          opt.value = rep;
+          opt.textContent = `${rep}`;
+          oldSSSelect.appendChild(opt);
+        });
+      } else {
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = 'ALL';
+        defaultOpt.textContent = currentLang === 'zh' ? `-- ${selectedTeam} 全部顾问 --` : currentLang === 'en' ? `-- All ${selectedTeam} Reps --` : `-- كل ممثلي ${selectedTeam} --`;
+        oldSSSelect.appendChild(defaultOpt);
+
+        const otherSet = new Set();
+        const data = window.ALLOCATION_RULES_DATA;
+        (data.reclaim_opportunities || []).forEach(i => {
+          if ((i.current_team && i.current_team.includes(selectedTeam)) || (i.old_team && i.old_team.includes(selectedTeam))) {
+            if (i.current_agent) otherSet.add(i.current_agent);
+          }
+        });
+        (data.defense_uncovered || []).forEach(i => {
+          if (i.team && i.team.includes(selectedTeam) && i.rep) otherSet.add(i.rep);
+        });
+        Array.from(otherSet).sort().forEach(r => {
+          const opt = document.createElement('option');
+          opt.value = r;
+          opt.textContent = r;
+          oldSSSelect.appendChild(opt);
+        });
+      }
+
+      const hasVal = Array.from(oldSSSelect.options).some(o => o.value === currentOldSS);
+      if (!hasVal) currentOldSS = 'ALL';
+      oldSSSelect.value = currentOldSS;
+    }
+
+    // Initialize Dropdowns and Quick Team Pills
+    function initSelectors() {
+      const teamSelect = document.getElementById('selectSmallTeam');
+      const quickPills = document.getElementById('quickTeamPills');
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+      const prevTeam = teamSelect ? teamSelect.value : 'ALL';
+
+      teamSelect.innerHTML = `<option value="ALL">${t.filter_teams_all}</option>`;
+
+      const coreTeams = [
+        { code: "ME-EGSS01", count: 4 },
+        { code: "ME-EGSS05", count: 8 },
+        { code: "ME-EGSS10", count: 4 },
+        { code: "ME-EGSS13", count: 3 },
+        { code: "ME-EGSS30", count: 2 }
+      ];
+
+      const grpCore = document.createElement('optgroup');
+      grpCore.label = t.grp_core_teams;
+      coreTeams.forEach(ct => {
+        const num = ct.code.replace('ME-EGSS', '');
+        const label = currentLang === 'zh' ? `${ct.code} (第${num}组 - ${ct.count}人)` : currentLang === 'en' ? `${ct.code} (Team ${num} - ${ct.count} reps)` : `${ct.code} — فريق ${num} (${ct.count} أعضاء)`;
+        const opt = document.createElement('option');
+        opt.value = ct.code;
+        opt.textContent = label;
+        grpCore.appendChild(opt);
+      });
+      teamSelect.appendChild(grpCore);
+
+      const grpAll = document.createElement('optgroup');
+      grpAll.label = t.grp_other_teams;
+      for (let i = 1; i <= 30; i++) {
+        const num = String(i).padStart(2, '0');
+        const code = `ME-EGSS${num}`;
+        if (!TEAM_ROSTER[code]) {
+          const opt = document.createElement('option');
+          opt.value = code;
+          opt.textContent = `${code} (Team ${num})`;
+          grpAll.appendChild(opt);
+        }
+      }
+      teamSelect.appendChild(grpAll);
+      if (Array.from(teamSelect.options).some(o => o.value === prevTeam)) {
+        teamSelect.value = prevTeam;
+      }
+
+      // Quick Team Buttons
+      quickPills.innerHTML = `<button type="button" class="small-team-pill ${currentSmallTeam==='ALL'?'active':''}" onclick="setQuickTeam('ALL', this)">${t.btn_all_teams}</button>`;
+      coreTeams.forEach(ct => {
+        const num = ct.code.replace('ME-EGSS', '');
+        const label = currentLang === 'zh' ? `${num}组 (${TEAM_ROSTER[ct.code].length})` : currentLang === 'en' ? `Team ${num} (${TEAM_ROSTER[ct.code].length})` : `فريق ${num} (${TEAM_ROSTER[ct.code].length})`;
+        quickPills.innerHTML += `<button type="button" class="small-team-pill ${currentSmallTeam===ct.code?'active':''}" onclick="setQuickTeam('${ct.code}', this)">${label}</button>`;
+      });
+
+      updateRepDropdown(currentSmallTeam || 'ALL');
+    }
+
+    function setQuickTeam(teamCode, btn) {
+      document.querySelectorAll('.small-team-pill').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      document.getElementById('selectSmallTeam').value = teamCode;
+      currentSmallTeam = teamCode;
+      updateRepDropdown(teamCode);
+      triggerFilter();
+    }
+
+    // Tab Switching Engine
+    function setPortalTab(tabName) {
+      currentTab = tabName;
+      currentPage = 1;
+
+      ['reclaim', 'defense', 'family'].forEach(t => {
+        const btn = document.getElementById(`tabBtn${t.charAt(0).toUpperCase() + t.slice(1)}`);
+        btn.classList.remove('active', 'active-reclaim', 'active-defense', 'active-family');
+      });
+
+      const activeBtn = document.getElementById(`tabBtn${tabName.charAt(0).toUpperCase() + tabName.slice(1)}`);
+      activeBtn.classList.add('active', `active-${tabName}`);
+
+      const data = window.ALLOCATION_RULES_DATA;
+      if (tabName === 'reclaim') {
+        masterList = data.reclaim_opportunities || [];
+        renderReclaimFilters();
+      } else if (tabName === 'defense') {
+        masterList = data.defense_uncovered || [];
+        renderDefenseRiskFilters();
+      } else if (tabName === 'family') {
+        masterList = data.split_families || [];
+        renderFamilyFilters();
+      }
+
+      applyFiltersAndRender();
+    }
+
+    // Dynamic Risk Filter Bar in Defense Tab
+    function renderDefenseRiskFilters() {
+      const container = document.getElementById('dynamicFilterPillsCluster');
+      const stats = window.ALLOCATION_RULES_DATA.stats || {};
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+
+      container.innerHTML = `
+        <span style="font-size: 0.75rem; font-weight: 800; color: #cbd5e1; margin-left: 6px;">${t.defense_cluster_label}</span>
+        <button type="button" class="risk-filter-pill ${currentRiskFilter === 'ALL' ? 'active active-all' : ''}" onclick="filterByRisk('ALL')">
+          <span>${t.pill_all}</span>
+          <span class="count-tag">${(stats.total_uncovered_leads || 3990).toLocaleString()}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentRiskFilter === 'critical' ? 'active active-critical' : ''}" onclick="filterByRisk('critical')">
+          <span>${t.pill_critical_risk}</span>
+          <span class="count-tag">${(stats.critical_defense_risk_14d || 2824).toLocaleString()}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentRiskFilter === 'high_risk' ? 'active active-high' : ''}" onclick="filterByRisk('high_risk')">
+          <span>${t.pill_high_risk}</span>
+          <span class="count-tag">${stats.high_defense_risk_12_13d || 43}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentRiskFilter === 'warning' ? 'active active-warning' : ''}" onclick="filterByRisk('warning')">
+          <span>${t.pill_warning_risk}</span>
+          <span class="count-tag">${stats.warning_defense_10_11d || 90}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentRiskFilter === 'moderate' ? 'active active-moderate' : ''}" onclick="filterByRisk('moderate')">
+          <span>${t.pill_moderate_risk}</span>
+          <span class="count-tag">${stats.moderate_defense_7_9d || 257}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentRiskFilter === 'safe' ? 'active active-safe' : ''}" onclick="filterByRisk('safe')">
+          <span>${t.pill_safe_risk}</span>
+          <span class="count-tag">${stats.safe_defense_7d || 776}</span>
+        </button>
+      `;
+    }
+
+    // Dynamic Filter Bar in Reclaim Tab
+    function renderReclaimFilters() {
+      const container = document.getElementById('dynamicFilterPillsCluster');
+      const stats = window.ALLOCATION_RULES_DATA.stats || {};
+      const master = window.ALLOCATION_RULES_DATA.reclaim_opportunities || [];
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+
+      const countAll = master.length;
+      const countOverdue = master.filter(x => x.days_remaining_sla !== undefined && x.days_remaining_sla !== null && x.days_remaining_sla <= 0).length;
+      const countDue1_3 = master.filter(x => x.days_remaining_sla !== undefined && x.days_remaining_sla !== null && x.days_remaining_sla >= 1 && x.days_remaining_sla <= 3).length;
+      const countDue4Plus = master.filter(x => x.days_remaining_sla !== undefined && x.days_remaining_sla !== null && x.days_remaining_sla >= 4).length;
+      const countExpired = master.filter(x => x.rule_type && x.rule_type.includes('Rule 6')).length;
+
+      container.innerHTML = `
+        <span style="font-size: 0.75rem; font-weight: 800; color: #cbd5e1; margin-left: 6px;">${t.reclaim_cluster_label}</span>
+        <button type="button" class="risk-filter-pill ${currentReclaimStatus === 'ALL' ? 'active active-all' : ''}" onclick="filterReclaimStatus('ALL')">
+          <span>${t.pill_all}</span>
+          <span class="count-tag">${countAll}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentReclaimStatus === 'overdue' ? 'active active-critical' : ''}" onclick="filterReclaimStatus('overdue')">
+          <span>${t.pill_due_now}</span>
+          <span class="count-tag">${countOverdue}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentReclaimStatus === 'due_1_3' ? 'active active-high' : ''}" onclick="filterReclaimStatus('due_1_3')">
+          <span>${t.pill_due_1_3}</span>
+          <span class="count-tag">${countDue1_3}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentReclaimStatus === 'due_4_plus' ? 'active active-moderate' : ''}" onclick="filterReclaimStatus('due_4_plus')">
+          <span>${t.pill_due_4_plus}</span>
+          <span class="count-tag">${countDue4Plus}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentReclaimStatus === 'expired' ? 'active active-warning' : ''}" onclick="filterReclaimStatus('expired')">
+          <span>${t.pill_expired_pool}</span>
+          <span class="count-tag">${countExpired}</span>
+        </button>
+      `;
+    }
+
+    function renderFamilyFilters() {
+      const container = document.getElementById('dynamicFilterPillsCluster');
+      const stats = window.ALLOCATION_RULES_DATA.stats || {};
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+
+      container.innerHTML = `
+        <span style="font-size: 0.75rem; font-weight: 800; color: #cbd5e1; margin-left: 6px;">${t.family_cluster_label}</span>
+        <button type="button" class="risk-filter-pill active active-all">
+          <span>${t.pill_split_families}</span>
+          <span class="count-tag">${stats.split_families_total || 195}</span>
+        </button>
+      `;
+    }
+
+    function filterByRisk(riskTier) {
+      currentRiskFilter = riskTier;
+      renderDefenseRiskFilters();
+      currentPage = 1;
+      applyFiltersAndRender();
+    }
+
+    function filterReclaimStatus(status) {
+      if (status === 'ready') status = 'ALL';
+      currentReclaimStatus = status;
+      renderReclaimFilters();
+      currentPage = 1;
+      applyFiltersAndRender();
+    }
+
+    function triggerFilter() {
+      searchQuery = (document.getElementById('filterSearch').value || '').trim().toLowerCase();
+      currentOldSS = document.getElementById('selectOldSS').value;
+      const teamVal = document.getElementById('selectSmallTeam').value;
+      if (teamVal !== currentSmallTeam) {
+        currentSmallTeam = teamVal;
+        updateRepDropdown(currentSmallTeam);
+      }
+      currentPage = 1;
+      applyFiltersAndRender();
+    }
+
+    // Main Filtering and Sorting Engine
+    function applyFiltersAndRender() {
+      filteredList = masterList.filter(item => {
+        // 1. Search Query
+        if (searchQuery) {
+          const sidMatch = String(item.student_id || '').includes(searchQuery);
+          const agMatch = String(item.current_agent || item.rep || '').toLowerCase().includes(searchQuery);
+          const oldSSMatch = String(item.old_ss || '').toLowerCase().includes(searchQuery);
+          const teamMatch = String(item.current_team || item.team || '').toLowerCase().includes(searchQuery);
+          if (!sidMatch && !agMatch && !oldSSMatch && !teamMatch) return false;
+        }
+
+        // 2. Old SS / Rep Filter
+        if (currentOldSS !== 'ALL') {
+          const matchOld = (item.old_ss === currentOldSS) || (item.rep === currentOldSS) || (item.current_agent === currentOldSS);
+          if (!matchOld) return false;
+        }
+
+        // 3. Small Team Filter
+        if (currentSmallTeam !== 'ALL') {
+          const roster = TEAM_ROSTER[currentSmallTeam];
+          const teamNum = currentSmallTeam.replace('ME-EGSS', '');
+
+          let matchTeam = false;
+          if (currentTab === 'defense') {
+            const r = item.rep || '';
+            const t = item.team || '';
+            const tc = item.team_clean || '';
+            if (roster && roster.includes(r)) matchTeam = true;
+            else if (t.includes(currentSmallTeam) || tc === teamNum) matchTeam = true;
+          } else if (currentTab === 'reclaim') {
+            const oldSS = item.old_ss || '';
+            const curAg = item.current_agent || '';
+            const oldT = item.old_team || '';
+            const curT = item.current_team || '';
+            if (roster && (roster.includes(oldSS) || roster.includes(curAg))) matchTeam = true;
+            else if (oldT.includes(currentSmallTeam) || oldT.includes(teamNum) || curT.includes(currentSmallTeam) || curT.includes(teamNum)) matchTeam = true;
+          } else if (currentTab === 'family') {
+            const oldSS = item.old_ss || '';
+            const curAg = item.current_agent || '';
+            const oldT = item.old_team || '';
+            const curT = item.current_team || '';
+            const splitWith = item.split_with || [];
+            if (roster && (roster.includes(oldSS) || roster.includes(curAg) || splitWith.some(sw => roster.includes(sw)))) matchTeam = true;
+            else if (oldT.includes(currentSmallTeam) || oldT.includes(teamNum) || curT.includes(currentSmallTeam) || curT.includes(teamNum)) matchTeam = true;
+          }
+
+          if (!matchTeam) return false;
+        }
+
+        // 4. Tab-Specific Filters
+        if (currentTab === 'defense') {
+          if (currentRiskFilter !== 'ALL' && item.risk_badge !== currentRiskFilter) return false;
+        } else if (currentTab === 'reclaim') {
+          if (currentReclaimStatus === 'overdue') {
+            if (!(item.days_remaining_sla !== undefined && item.days_remaining_sla !== null && item.days_remaining_sla <= 0)) return false;
+          } else if (currentReclaimStatus === 'due_1_3') {
+            if (!(item.days_remaining_sla !== undefined && item.days_remaining_sla !== null && item.days_remaining_sla >= 1 && item.days_remaining_sla <= 3)) return false;
+          } else if (currentReclaimStatus === 'due_4_plus') {
+            if (!(item.days_remaining_sla !== undefined && item.days_remaining_sla !== null && item.days_remaining_sla >= 4)) return false;
+          } else if (currentReclaimStatus === 'expired') {
+            if (!item.rule_type || !item.rule_type.includes('Rule 6')) return false;
+          } else if (currentReclaimStatus === 'transferred') {
+            if (!item.rule_type || !item.rule_type.includes('Rule 1')) return false;
+          }
+        }
+
+        return true;
+      });
+
+      // Sorting
+      filteredList.sort((a, b) => {
+        let valA = 0, valB = 0;
+        if (sortField === 'points') {
+          valA = a.current_points ?? 0;
+          valB = b.current_points ?? 0;
+        } else if (sortField === 'last_month') {
+          valA = a.last_month_consumption ?? a.consumption ?? 0;
+          valB = b.last_month_consumption ?? b.consumption ?? 0;
+        } else if (sortField === 'this_month') {
+          valA = a.this_month_consumption ?? 0;
+          valB = b.this_month_consumption ?? 0;
+        } else if (sortField === 'days') {
+          valA = a.days_inactive !== undefined ? a.days_inactive : 0;
+          valB = b.days_inactive !== undefined ? b.days_inactive : 0;
+        }
+        return sortAscending ? valA - valB : valB - valA;
+      });
+
+      renderTable();
+      renderPagination();
+    }
+
+    // Render Table Header and Body
+    function renderTable() {
+      const thead = document.getElementById('tableHeaderRow');
+      const tbody = document.getElementById('tableBodyRow');
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+
+      if (currentTab === 'reclaim') {
+        thead.innerHTML = `
+          <th style="width: 35px;">${t.th_num}</th>
+          <th style="width: 90px;">${t.th_student_id}</th>
+          <th style="width: 140px;">${t.th_rule}</th>
+          <th>${t.th_old_rep}</th>
+          <th>${t.th_current_rep}</th>
+          <th>${t.th_current_team}</th>
+          <th>${t.th_pool}</th>
+          <th style="cursor: pointer; color: #34d399; text-align: center; width: 75px;" onclick="toggleSorting('points')">${t.th_points} ${sortField==='points'?(sortAscending?'↑':'↓'):''}</th>
+          <th style="cursor: pointer; color: #cbd5e1; text-align: center; width: 80px;" onclick="toggleSorting('last_month')">${t.th_last_month} ${sortField==='last_month'?(sortAscending?'↑':'↓'):''}</th>
+          <th style="cursor: pointer; color: #38bdf8; text-align: center; width: 80px;" onclick="toggleSorting('this_month')">${t.th_this_month} ${sortField==='this_month'?(sortAscending?'↑':'↓'):''}</th>
+          <th>${t.th_reclaim_status}</th>
+          <th style="min-width: 240px;">${t.th_action_reclaim}</th>
+          <th style="text-align: center; min-width: 220px;">${t.th_sop_actions}</th>
+        `;
+      } else if (currentTab === 'defense') {
+        thead.innerHTML = `
+          <th style="width: 35px;">${t.th_num}</th>
+          <th style="width: 90px;">${t.th_student_id}</th>
+          <th>${t.th_assigned_rep}</th>
+          <th>${t.th_small_team}</th>
+          <th>${t.th_pool}</th>
+          <th style="cursor: pointer; color: #34d399; text-align: center; width: 75px;" onclick="toggleSorting('points')">${t.th_points} ${sortField==='points'?(sortAscending?'↑':'↓'):''}</th>
+          <th style="cursor: pointer; color: #cbd5e1; text-align: center; width: 80px;" onclick="toggleSorting('last_month')">${t.th_last_month} ${sortField==='last_month'?(sortAscending?'↑':'↓'):''}</th>
+          <th style="cursor: pointer; color: #38bdf8; text-align: center; width: 80px;" onclick="toggleSorting('this_month')">${t.th_this_month} ${sortField==='this_month'?(sortAscending?'↑':'↓'):''}</th>
+          <th>${t.th_last_contact}</th>
+          <th style="cursor: pointer; text-align: center; width: 75px;" onclick="toggleSorting('days')">${t.th_inactive_days} ${sortField==='days'?(sortAscending?'↑':'↓'):''}</th>
+          <th>${t.th_risk_level}</th>
+          <th style="min-width: 240px;">${t.th_action_defense}</th>
+          <th style="text-align: center; min-width: 220px;">${t.th_sop_actions}</th>
+        `;
+      } else if (currentTab === 'family') {
+        thead.innerHTML = `
+          <th style="width: 35px;">${t.th_num}</th>
+          <th style="width: 80px;">${t.th_family_id}</th>
+          <th style="width: 90px;">${t.th_student_id}</th>
+          <th>${t.th_old_rep}</th>
+          <th>${t.th_current_rep}</th>
+          <th>${t.th_current_team}</th>
+          <th>${t.th_family_members}</th>
+          <th>${t.th_split_with}</th>
+          <th style="cursor: pointer; color: #34d399; text-align: center; width: 75px;" onclick="toggleSorting('points')">${t.th_points} ${sortField==='points'?(sortAscending?'↑':'↓'):''}</th>
+          <th style="cursor: pointer; color: #cbd5e1; text-align: center; width: 80px;" onclick="toggleSorting('last_month')">${t.th_last_month} ${sortField==='last_month'?(sortAscending?'↑':'↓'):''}</th>
+          <th style="cursor: pointer; color: #38bdf8; text-align: center; width: 80px;" onclick="toggleSorting('this_month')">${t.th_this_month} ${sortField==='this_month'?(sortAscending?'↑':'↓'):''}</th>
+          <th>${t.th_family_status}</th>
+          <th style="text-align: center; min-width: 220px;">${t.th_sop_actions}</th>
+        `;
+      }
+
+      // Pagination slice
+      const startIdx = (currentPage - 1) * pageSize;
+      const endIdx = pageSize === 'ALL' ? filteredList.length : Math.min(startIdx + pageSize, filteredList.length);
+      const displayData = pageSize === 'ALL' ? filteredList : filteredList.slice(startIdx, endIdx);
+
+      if (displayData.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="13" style="text-align: center; padding: 40px; color: #94a3b8;">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
+              <div style="font-size: 1rem; font-weight: 800; color: #fff;">${t.no_records_title}</div>
+              <div style="font-size: 0.8rem; margin-top: 4px;">${t.no_records_desc}</div>
+            </td>
+          </tr>
+        `;
+        document.getElementById('recordCounterText').textContent = t.record_counter.replace('{start}', '0').replace('{end}', '0').replace('{total}', '0');
+        return;
+      }
+
+      let rowsHtml = '';
+      displayData.forEach((item, idx) => {
+        const rowNum = startIdx + idx + 1;
+
+        if (currentTab === 'reclaim') {
+          let badgeHtml = '';
+          if (item.badge === 'reclaim_ready') {
+            badgeHtml = `<span class="badge-pill badge-reclaim-ready">${t.badge_reclaim_ready}</span>`;
+          } else if (item.badge === 'renewed_protected') {
+            badgeHtml = `<span class="badge-pill badge-protected-renew" title="Renewed">${t.badge_renewed_protected}</span>`;
+          } else {
+            badgeHtml = `<span class="badge-pill badge-protected-contact" title="Contacted">${t.badge_contact_protected}</span>`;
+          }
+
+          let dueText = '';
+          if (item.days_remaining_sla !== undefined && item.days_remaining_sla !== null) {
+            if (item.days_remaining_sla <= 0) {
+              if (currentLang === 'en') dueText = `Due Now (Overdue ${Math.abs(item.days_remaining_sla)}d)`;
+              else if (currentLang === 'zh') dueText = `立即到期 (超期 ${Math.abs(item.days_remaining_sla)} 天)`;
+              else dueText = item.sla_due_ar || `مستحق فوراً (كسر الـ 14 يوم)`;
+            } else {
+              if (currentLang === 'en') dueText = `Due: ${item.sla_due_date || ''} (${item.days_remaining_sla}d left)`;
+              else if (currentLang === 'zh') dueText = `到期: ${item.sla_due_date || ''} (剩余 ${item.days_remaining_sla} 天)`;
+              else dueText = item.sla_due_ar;
+            }
+          }
+          const dueHtml = dueText ? `<div class="due-date-pill ${item.due_badge || 'upcoming'}">📅 ${dueText}</div>` : '';
+
+          let actionText = '';
+          if (currentLang === 'en') {
+            actionText = item.recommended_action || item.action_ar;
+          } else if (currentLang === 'zh') {
+            actionText = (item.days_remaining_sla <= 0) 
+              ? "提交立即回收申请，按规则1将学员取回至我组顾问名下" 
+              : `监控14天SLA期限 - 预计回收日期 ${item.sla_due_date || ''}`;
+          } else {
+            actionText = item.action_ar || item.recommended_action;
+          }
+
+          rowsHtml += `
+            <tr>
+              <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
+              <td style="white-space: nowrap;"><button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="Copy ID"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button></td>
+              <td style="white-space: nowrap;"><span style="font-size: 0.74rem; color: #cbd5e1;">${item.rule_type}</span></td>
+              <td style="white-space: nowrap;">${renderAgentBadge(item.old_ss)}</td>
+              <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
+              <td style="white-space: nowrap;"><span style="font-size: 0.75rem; color: #94a3b8;">${item.current_team || '—'}</span></td>
+              <td style="white-space: nowrap;"><span style="font-size: 0.73rem; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px;">${item.pool || '—'}</span></td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #34d399;">${item.current_points ?? 0}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #cbd5e1;">${item.last_month_consumption ?? item.consumption ?? 0}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #38bdf8;">${item.this_month_consumption ?? 0}</td>
+              <td style="white-space: nowrap;"><div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-start;">${badgeHtml}${dueHtml}</div></td>
+              <td><div style="max-width: 320px; min-width: 200px; white-space: normal; line-height: 1.35; font-size: 0.78rem;">${actionText}</div></td>
+              <td style="text-align: center;">
+                <div class="btn-action-cluster">
+                  <button type="button" class="btn-ticket-mini" onclick="copyReclaimTicket(${item.student_id}, '${escapeQuotes(item.old_ss)}', '${escapeQuotes(item.current_agent)}', '${escapeQuotes(item.current_team)}', '${escapeQuotes(item.status_ar)}', '${escapeQuotes(item.action_ar)}')" title="Ticket">
+                    ${t.btn_ticket}
+                  </button>
+                  <button type="button" class="btn-dossier-mini" onclick="copyComprehensiveDossier(${item.student_id}, '${escapeQuotes(item.old_ss)}', 'reclaim')" title="Dossier">
+                    ${t.btn_dossier}
+                  </button>
+                  <button type="button" class="btn-dingtalk-mini" onclick="sendDirectDingTalk(${item.student_id}, '${escapeQuotes(item.old_ss)}', 'reclaim')" title="DingTalk">
+                    ${t.btn_dingtalk}
+                  </button>
+                </div>
+              </td>
+            </tr>
+          `;
+        } else if (currentTab === 'defense') {
+          let riskBadgeHtml = '';
+          if (item.risk_badge === 'critical') riskBadgeHtml = `<span class="badge-pill badge-critical">${t.pill_critical_risk}</span>`;
+          else if (item.risk_badge === 'high_risk') riskBadgeHtml = `<span class="badge-pill badge-high">${t.pill_high_risk}</span>`;
+          else if (item.risk_badge === 'warning') riskBadgeHtml = `<span class="badge-pill badge-warning">${t.pill_warning_risk}</span>`;
+          else if (item.risk_badge === 'moderate') riskBadgeHtml = `<span class="badge-pill badge-moderate">${t.pill_moderate_risk}</span>`;
+          else riskBadgeHtml = `<span class="badge-pill badge-safe">${t.pill_safe_risk}</span>`;
+
+          let dueText = '';
+          if (item.days_remaining_sla !== undefined && item.days_remaining_sla !== null) {
+            if (item.days_remaining_sla <= 0) {
+              if (currentLang === 'en') dueText = `Due Now (Overdue ${Math.abs(item.days_remaining_sla)}d)`;
+              else if (currentLang === 'zh') dueText = `立即到期 (超期 ${Math.abs(item.days_remaining_sla)} 天)`;
+              else dueText = item.sla_due_ar || `مستحق فوراً`;
+            } else {
+              if (currentLang === 'en') dueText = `Due: ${item.sla_due_date || ''} (${item.days_remaining_sla}d left)`;
+              else if (currentLang === 'zh') dueText = `到期: ${item.sla_due_date || ''} (剩余 ${item.days_remaining_sla} 天)`;
+              else dueText = item.sla_due_ar;
+            }
+          }
+          const dueHtml = dueText ? `<div class="due-date-pill ${item.due_badge || 'upcoming'}">📅 ${dueText}</div>` : '';
+
+          let defenseActionText = '';
+          if (currentLang === 'en') {
+            defenseActionText = item.action_required || item.action_required_ar;
+          } else if (currentLang === 'zh') {
+            defenseActionText = item.days_inactive >= 14
+              ? "立即发起通话并于CRM登记跟进记录，避免客户被系统合规收回"
+              : `紧急联系客户进行有效沟通，剩余安全期限 ${Math.max(0, 14 - item.days_inactive)} 天`;
+          } else {
+            defenseActionText = item.action_required_ar || item.action_required;
+          }
+
+          rowsHtml += `
+            <tr>
+              <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
+              <td style="white-space: nowrap;"><button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="Copy ID"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button></td>
+              <td style="white-space: nowrap;">${renderAgentBadge(item.rep)}</td>
+              <td style="white-space: nowrap;"><span class="small-team-pill" style="padding: 2px 7px; font-size: 0.74rem;">${item.team || 'ME-EGSS' + item.team_clean}</span></td>
+              <td style="white-space: nowrap;"><span style="font-size: 0.73rem; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px;">${item.pool || '—'}</span></td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #34d399;">${item.current_points ?? 0}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #cbd5e1;">${item.last_month_consumption ?? item.attended_classes ?? 0}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #38bdf8;">${item.this_month_consumption ?? 0}</td>
+              <td style="white-space: nowrap; font-size: 0.76rem; font-family: 'JetBrains Mono', monospace; color: #94a3b8;">${item.last_connection}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: ${item.days_inactive >= 14 ? '#ef4444' : item.days_inactive >= 12 ? '#f59e0b' : '#34d399'};">${item.days_inactive}d</td>
+              <td style="white-space: nowrap;"><div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-start;">${riskBadgeHtml}${dueHtml}</div></td>
+              <td><div style="max-width: 320px; min-width: 200px; white-space: normal; line-height: 1.35; font-size: 0.78rem;">${defenseActionText}</div></td>
+              <td style="text-align: center;">
+                <div class="btn-action-cluster">
+                  <button type="button" class="btn-ticket-mini" onclick="copyDefenseAlertTicket(${item.student_id}, '${escapeQuotes(item.rep)}', '${escapeQuotes(item.team)}', '${escapeQuotes(item.days_inactive)}', '${escapeQuotes(item.action_required_ar)}')" title="Alert">
+                    ${t.btn_alert}
+                  </button>
+                  <button type="button" class="btn-dossier-mini" onclick="copyComprehensiveDossier(${item.student_id}, '${escapeQuotes(item.rep)}', 'defense')" title="Dossier">
+                    ${t.btn_dossier}
+                  </button>
+                  <button type="button" class="btn-dingtalk-mini" onclick="sendDirectDingTalk(${item.student_id}, '${escapeQuotes(item.rep)}', 'defense')" title="DingTalk">
+                    ${t.btn_dingtalk}
+                  </button>
+                </div>
+              </td>
+            </tr>
+          `;
+        } else if (currentTab === 'family') {
+          rowsHtml += `
+            <tr>
+              <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
+              <td style="white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #f59e0b;">${item.family_id}</td>
+              <td style="white-space: nowrap;"><button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="Copy ID"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button></td>
+              <td style="white-space: nowrap;">${renderAgentBadge(item.old_ss)}</td>
+              <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
+              <td style="white-space: nowrap;"><span style="font-size: 0.75rem; color: #94a3b8;">${item.current_team || '—'}</span></td>
+              <td style="white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: #cbd5e1;">[${(item.family_members || []).join(', ')}]</td>
+              <td style="white-space: nowrap;">${(item.split_with || []).map(sw => renderAgentBadge(sw)).join(' ')}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #34d399;">${item.current_points ?? 0}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #cbd5e1;">${item.last_month_consumption ?? item.consumption ?? 0}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #38bdf8;">${item.this_month_consumption ?? 0}</td>
+              <td style="white-space: nowrap;">${item.is_outside ? `<span class="badge-pill badge-critical" style="background:#dc2626; color:#fff; font-weight:800;">${t.badge_outside_team}</span>` : `<span class="badge-pill badge-warning">${t.badge_split_family}</span>`}</td>
+              <td style="text-align: center;">
+                <div class="btn-action-cluster">
+                  <button type="button" class="btn-ticket-mini" onclick="copyFamilyTicket(${item.family_id}, ${item.student_id}, '${escapeQuotes(item.current_agent)}', '${escapeQuotes((item.split_with || []).join(', '))}', '${escapeQuotes((item.family_members || []).join(', '))}')" title="Unify">
+                    ${t.btn_unify}
+                  </button>
+                  <button type="button" class="btn-dossier-mini" onclick="copyComprehensiveDossier(${item.student_id}, '${escapeQuotes(item.old_ss || item.current_agent)}', 'family')" title="Dossier">
+                    ${t.btn_dossier}
+                  </button>
+                  <button type="button" class="btn-dingtalk-mini" onclick="sendDirectDingTalk(${item.student_id}, '${escapeQuotes(item.old_ss || item.current_agent)}', 'family')" title="DingTalk">
+                    ${t.btn_dingtalk}
+                  </button>
+                </div>
+              </td>
+            </tr>
+          `;
+        }
+      });
+
+      tbody.innerHTML = rowsHtml;
+      document.getElementById('recordCounterText').textContent = t.record_counter
+        .replace('{start}', startIdx + 1)
+        .replace('{end}', endIdx)
+        .replace('{total}', filteredList.length.toLocaleString());
+    }
+
+    // Pagination Component
+    function renderPagination() {
+      const nav = document.getElementById('paginationNav');
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+      nav.innerHTML = '';
+
+      if (pageSize === 'ALL' || filteredList.length <= pageSize) return;
+
+      const totalPages = Math.ceil(filteredList.length / pageSize);
+
+      const prevBtn = document.createElement('button');
+      prevBtn.type = 'button';
+      prevBtn.className = `page-btn ${currentPage === 1 ? 'disabled' : ''}`;
+      prevBtn.textContent = t.page_prev;
+      prevBtn.onclick = () => { if (currentPage > 1) goToPage(currentPage - 1); };
+      nav.appendChild(prevBtn);
+
+      let startP = Math.max(1, currentPage - 2);
+      let endP = Math.min(totalPages, startP + 4);
+      if (endP - startP < 4) startP = Math.max(1, endP - 4);
+
+      if (startP > 1) {
+        const p1 = document.createElement('button');
+        p1.type = 'button';
+        p1.className = 'page-btn';
+        p1.textContent = '1';
+        p1.onclick = () => goToPage(1);
+        nav.appendChild(p1);
+        if (startP > 2) {
+          const dots = document.createElement('span');
+          dots.textContent = '...';
+          dots.style.color = '#64748b';
+          dots.style.padding = '0 3px';
+          nav.appendChild(dots);
+        }
+      }
+
+      for (let p = startP; p <= endP; p++) {
+        const pBtn = document.createElement('button');
+        pBtn.type = 'button';
+        pBtn.className = `page-btn ${currentPage === p ? 'active' : ''}`;
+        pBtn.textContent = p;
+        pBtn.onclick = () => goToPage(p);
+        nav.appendChild(pBtn);
+      }
+
+      if (endP < totalPages) {
+        if (endP < totalPages - 1) {
+          const dots = document.createElement('span');
+          dots.textContent = '...';
+          dots.style.color = '#64748b';
+          dots.style.padding = '0 3px';
+          nav.appendChild(dots);
+        }
+        const plast = document.createElement('button');
+        plast.type = 'button';
+        plast.className = 'page-btn';
+        plast.textContent = totalPages;
+        plast.onclick = () => goToPage(totalPages);
+        nav.appendChild(plast);
+      }
+
+      const nextBtn = document.createElement('button');
+      nextBtn.type = 'button';
+      nextBtn.className = `page-btn ${currentPage === totalPages ? 'disabled' : ''}`;
+      nextBtn.textContent = t.page_next;
+      nextBtn.onclick = () => { if (currentPage < totalPages) goToPage(currentPage + 1); };
+      nav.appendChild(nextBtn);
+    }
+
+    function goToPage(pageNum) {
+      currentPage = pageNum;
+      renderTable();
+      renderPagination();
+      window.scrollTo({ top: document.querySelector('.table-card').offsetTop - 90, behavior: 'smooth' });
+    }
+
+    function changePageSize(val) {
+      pageSize = val === 'ALL' ? 'ALL' : parseInt(val, 10);
+      currentPage = 1;
+      applyFiltersAndRender();
+    }
+
+    function toggleSorting(field) {
+      if (sortField === field) {
+        sortAscending = !sortAscending;
+      } else {
+        sortField = field;
+        sortAscending = false;
+      }
+      applyFiltersAndRender();
+    }
+
+    // Helper: Escape Quotes for Inline HTML Functions
+    function escapeQuotes(str) {
+      if (!str) return '';
+      return String(str).replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    }
+
+    // ========================================================
+    // TICKET ENGINES (Standard Student, Full Dossier, Team Dossier)
+    // ========================================================
+
+    // 1. Standard Reclaim Ticket
+    function copyReclaimTicket(sid, oldSS, currentEA, currentTeam, statusDesc, actionDesc) {
+      const now = new Date();
+      const timestamp = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+      
+      const ticket = `📢 【تذكرة استرداد عميل رسمية — Reclaim Radar】
+────────────────────────────────────────
+• رقم الطالب (Student ID): ${sid}
+• الممثل الأصلي المستحق (Old SS): ${oldSS}
+• الممثل الحالي (Current EA): ${currentEA} (${currentTeam})
+• السند القانوني: سياسة توزيع العملاء (قاعدة الـ 14 يوماً عدم تواصل / Expired Pool)
+• الحالة الفنية: ${statusDesc}
+• تاريخ التدقيق: ${timestamp}
+────────────────────────────────────────
+• الإجراء المطلوب: سحب وإعادة الطالب فوراً إلى كود الممثل ${oldSS} لتفعيل خطة المتابعة.
+────────────────────────────────────────
+صادر عبر Big Team 01 Allocation Hub — إشراف: Hussein El A'sar`;
+
+      navigator.clipboard.writeText(ticket).then(() => {
+        showToast(`📋 تم نسخ تذكرة استرداد الطالب ${sid} بنجاح!`);
+      });
+    }
+
+    // 2. Standard Defense Alert Ticket
+    function copyDefenseAlertTicket(sid, rep, team, daysInactive, actionRequired) {
+      const ticket = `🚨 【تنبيه درع الحماية — Defense SLA Alert】
+────────────────────────────────────────
+• رقم الطالب (Student ID): ${sid}
+• الممثل المسؤول: ${rep} (${team})
+• أيام الانقطاع عن التواصل: ${daysInactive} يوماً
+• مستوى الخطر: كسر وشيك لقاعدة الـ 14 يوماً (معرض للسحب لفرق أخرى)
+• الإجراء الفوري المطلوب: ${actionRequired}
+────────────────────────────────────────
+برجاء سرعة الاتصال وتسجيل الملاحظة على الـ CRM قبل نهاية دورة اليوم لتفادي سحب العميل!`;
+
+      navigator.clipboard.writeText(ticket).then(() => {
+        showToast(`⚠️ تم نسخ إنذار الحماية للطالب ${sid} بنجاح!`);
+      });
+    }
+
+    // 3. Standard Family Ticket
+    function copyFamilyTicket(famId, sid, curEA, splitWith, members) {
+      const ticket = `👨‍👩‍👧‍👦 【تذكرة توحيد حسابات عائلة — Family Back Ticket】
+────────────────────────────────────────
+• رقم العائلة (Family ID): ${famId}
+• رقم الطالب: ${sid}
+• الممثل الحالي: ${curEA}
+• منقسم مع ممثلين: ${splitWith}
+• أفراد العائلة المرتبطين: ${members}
+────────────────────────────────────────
+• السند القانوني: سياسة العائلات (قاعدة 4 ABC Family + قاعدة 5 Family Back)
+• الإجراء المطلوب: توحيد جميع أفراد العائلة تحت ممثل واحد تطبيقاً لقاعدة ABC Family و Family Back.
+────────────────────────────────────────
+صادر عبر منظومة العائلات — إشراف: Hussein El A'sar`;
+
+      navigator.clipboard.writeText(ticket).then(() => {
+        showToast(`👨‍👩‍👧‍👦 تم نسخ تذكرة توحيد العائلة ${famId} بنجاح!`);
+      });
+    }
+
+    // 4. COMPREHENSIVE DOSSIER TICKET (Student + Rep Profile + Team Roster + Big Team 01)
+    function buildComprehensiveDossierText(sid, repName, tabType) {
+      const now = new Date();
+      const timestamp = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+
+      const p = getRepProfile(repName);
+
+      // Find specific student item
+      const item = masterList.find(i => i.student_id === sid) || {};
+
+      let typeHeader = tabType === 'reclaim' ? 'تذكرة استرداد ومتابعة شاملة (Reclaim Dossier)' :
+                       tabType === 'family' ? 'تذكرة توحيد عائلة ومتابعة شاملة (Family Dossier)' :
+                       'تذكرة إنذار وتصعيد شاملة (Defense SLA Dossier)';
+
+      return `📢 【${typeHeader}】
+────────────────────────────────────────
+🏢 قطاع العمل: Big Team 01 (Senior Manager: Hussein El A'sar)
+👥 الفريق الصغير: ${p.teamName} (المشرف المسؤول: ${p.supervisor})
+👤 الممثل المعني: ${repName}
+📅 تاريخ وتوقيت التقرير: ${timestamp}
+────────────────────────────────────────
+📊 الملف الرقمي الإجمالي للموظف (Rep Performance Matrix):
+• إجمالي الطلاب المسجلين بالحوزة: ${p.totalLeads} طالب
+• عملاء تجاوزوا 14 يوماً بدون تواصل: ${p.critical14d} طالب (🚨 خطر كسر القاعدة 1)
+• عملاء في نطاق الخطر الداهم (12-13d): ${p.highRisk12_13d} طالب
+• إجمالي رصيد النقاط المحمية: ${p.totalPts.toLocaleString()} نقطة 💎
+• استهلاك حصص الشهر الماضي: ${p.totalLastMonth.toLocaleString()} حصة 📅
+• استهلاك حصص الشهر الحالي: ${p.totalThisMonth.toLocaleString()} حصة ⚡
+────────────────────────────────────────
+🎯 بيانات الطالب المستهدف:
+• رقم الطالب (Student ID): ${sid}
+• الرصيد المتبقي: ${item.current_points ?? 0} نقطة 💎
+• حضور الشهر الماضي: ${item.last_month_consumption ?? 0} | الشهر الحالي: ${item.this_month_consumption ?? 0}
+• أيام الانقطاع: ${item.days_inactive !== undefined ? item.days_inactive + ' يوم' : '—'}
+• الحالة الراهنة: ${item.status_ar || item.defense_rule_ar || item.defense_rule || 'تحت المتابعة'}
+• الإجراء الفوري المطلوب: ${item.action_ar || item.action_required_ar || item.action_required || 'إجراء مكالمة هاتفية وتسجيل ملاحظة CRM'}
+────────────────────────────────────────
+👥 أعضاء الفريق الصغير (${p.teamName}):
+[${p.teamMembers.join(' | ')}]
+────────────────────────────────────────
+⚖️ السند الإداري: سياسة توزيع العملاء وقواعد حماية واسترداد الطلاب (SLA 14 Days)
+🚀 توجيه الإدارة: سرعة اتخاذ الإجراء قبل نهاية دورة اليوم وتثبيت التحديث على الـ CRM.
+صادر عن منظومة Big Team 01 Allocation Hub`;
+    }
+
+    function copyComprehensiveDossier(sid, repName, tabType) {
+      const text = buildComprehensiveDossierText(sid, repName, tabType);
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`📑 تم نسخ الملف الشامل للطالب ${sid} والممثل ${repName} بنجاح!`);
+      });
+    }
+
+    // 5. DIRECT DINGTALK DISPATCH ENGINE
+        // Copy Student ID / Family ID Helper
+    function copyStudentID(id, btnElement, e) {
+      if (e) e.stopPropagation();
+      navigator.clipboard.writeText(String(id)).then(() => {
+        if (btnElement) {
+          const origHTML = btnElement.innerHTML;
+          btnElement.classList.add('copied');
+          btnElement.innerHTML = `<span class="id-val">${id}</span> <span style="color: #34d399; font-weight: 800;">✓</span>`;
+          setTimeout(() => {
+            btnElement.classList.remove('copied');
+            btnElement.innerHTML = origHTML;
+          }, 1500);
+        }
+        showToast(`📋 تم نسخ رقم العميل: ${id} بنجاح!`);
+      }).catch(() => {
+        showToast(`📋 رقم العميل: ${id}`);
+      });
+    }
+
+    // DingTalk Configuration & Smart Dispatch Engine
+    function openDingTalkConfigModal() {
+      const modal = document.getElementById('dingTalkConfigModal');
+      const input = document.getElementById('dingTalkWebhookInput');
+      if (input) {
+        input.value = localStorage.getItem('dingtalk_webhook_url') || '';
+      }
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function saveDingTalkConfig() {
+      const input = document.getElementById('dingTalkWebhookInput');
+      const val = input ? input.value.trim() : '';
+      if (val) {
+        localStorage.setItem('dingtalk_webhook_url', val);
+        showToast('💾 تم حفظ رابط DingTalk Webhook بنجاح!');
+      } else {
+        localStorage.removeItem('dingtalk_webhook_url');
+        showToast('⚠️ تم مسح رابط Webhook.');
+      }
+      closeModal('dingTalkConfigModal');
+    }
+
+    function testDingTalkWebhook() {
+      const input = document.getElementById('dingTalkWebhookInput');
+      const url = input ? input.value.trim() : '';
+      if (!url) {
+        showToast('⚠️ يرجى إدخال رابط Webhook أولاً');
+        return;
+      }
+      showToast('⏳ جاري إرسال إشعار تجريبي إلى DingTalk...');
+      fetch('/api/dingtalk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          webhook_url: url,
+          title: 'اختبار اتصال DingTalk - Big Team 01',
+          message: `### 🚀 اختبار ربط DingTalk بنجاح!
+- **القطاع:** Big Team 01 (Hussein El A'sar)
+- **الحالة:** تم الربط بنجاح مع لوحة التحكم.
+- **الهدف:** جاهز لإرسال تذاكر الاسترداد وملفات المتابعة آلياً.`
+        })
+      }).then(r => r.json()).then(data => {
+        if (data.errcode === 0) {
+          showToast('✅ نجح الاتصال! وصل الإشعار إلى جروب DingTalk بنجاح!');
+        } else {
+          showToast(`❌ خطأ من DingTalk: ${data.errmsg || 'تحقق من صحة الرابط'}`);
+        }
+      }).catch(err => {
+        showToast(`❌ تعذر الاتصال بالسيرفر: ${err.message}`);
+      });
+    }
+
+    let activeDingTalkTargetRep = '';
+    let activeDingTalkTargetSid = '';
+
+    function getApiBaseUrl() {
+      if (window.location.protocol === 'file:') {
+        return 'http://localhost:8080';
+      }
+      return '';
+    }
+
+    function openDingTalkDispatchModal(sid, repName, ticketText, deliveryStatus = 'ready', extraInfo = '') {
+      activeDingTalkTargetRep = repName;
+      activeDingTalkTargetSid = sid;
+      const rName = document.getElementById('modalRepName');
+      const sId = document.getElementById('modalStudentId');
+      const tText = document.getElementById('modalTicketText');
+      const statusBox = document.getElementById('modalDeliveryStatus');
+      const sendBtn = document.getElementById('btnModalDirectSend');
+
+      if (rName) rName.textContent = repName;
+      if (sId) sId.textContent = sid;
+      if (tText) tText.value = ticketText;
+
+      if (statusBox) {
+        if (deliveryStatus === 'success') {
+          statusBox.style.background = 'rgba(16, 185, 129, 0.15)';
+          statusBox.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+          statusBox.style.color = '#a7f3d0';
+          statusBox.innerHTML = `🚀 <strong>تم تسليم التذكرة بنجاح!</strong> وصلت الرسالة مباشرة إلى الشات الخاص (1-on-1) للموظف <strong>[${extraInfo || repName}]</strong> على تطبيق DingTalk عبر واجهة الإدارة المعتمدة.`;
+          if (sendBtn) {
+            sendBtn.innerHTML = '✅ تم الإرسال للموظف';
+            sendBtn.style.background = '#059669';
+          }
+        } else if (deliveryStatus === 'rep_not_found') {
+          statusBox.style.background = 'rgba(245, 158, 11, 0.15)';
+          statusBox.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+          statusBox.style.color = '#fde68a';
+          statusBox.innerHTML = `ℹ️ <strong>موظف خارجي:</strong> الموظف <strong>[${repName}]</strong> ليس مسجلاً ضمن ممثلي Big Team 01 (قد يتبع قطاعاً آخر). تم نسخ نص التذكرة بالكامل للحافظة لتوجيهها إليه يدوياً.`;
+          if (sendBtn) {
+            sendBtn.innerHTML = '🚀 إرسال عبر DingTalk';
+            sendBtn.style.background = 'linear-gradient(135deg, #0284c7, #2563eb)';
+          }
+        } else if (deliveryStatus === 'server_error') {
+          statusBox.style.background = 'rgba(239, 68, 68, 0.15)';
+          statusBox.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+          statusBox.style.color = '#fca5a5';
+          statusBox.innerHTML = `⚠️ <strong>تنبيه:</strong> تعذر الاتصال بسيرفر الإرسال المحلي (${extraInfo || 'تأكد من تشغيل الخيار 15 أو سيرفر 8080'}). تم نسخ نص التذكرة للحافظة ويمكنك لصقها في محادثة الموظف بـ (Ctrl + V).`;
+          if (sendBtn) {
+            sendBtn.innerHTML = '🔄 إعادة محاولة الإرسال';
+            sendBtn.style.background = '#dc2626';
+          }
+        } else {
+          statusBox.style.background = 'rgba(14, 165, 233, 0.12)';
+          statusBox.style.borderColor = 'rgba(14, 165, 233, 0.35)';
+          statusBox.style.color = '#bae6fd';
+          statusBox.innerHTML = `⚡ <strong>الربط المباشر نشط (Direct API):</strong> يتم إرسال التذكرة آلياً وبشكل فوري إلى الشات الشخصي الخاص للموظف على تطبيق DingTalk بمجرد الضغط على زر الإرسال بالأسفل.`;
+          if (sendBtn) {
+            sendBtn.innerHTML = '🚀 إرسال مباشر لشات الموظف على DingTalk';
+            sendBtn.style.background = 'linear-gradient(135deg, #0284c7, #2563eb)';
+          }
+        }
+      }
+
+      const modal = document.getElementById('dingTalkDispatchModal');
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function copyModalTicketText() {
+      const text = document.getElementById('modalTicketText').value;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('📋 تم نسخ نص التذكرة بالكامل للحافظة!');
+      });
+    }
+
+    function launchDingTalkApp() {
+      const cleanRep = activeDingTalkTargetRep.replace('EGSS-', '').trim();
+      const dingUrl = `dingtalk://dingtalkclient/action/sendmsg?name=${encodeURIComponent(cleanRep)}`;
+      window.location.href = dingUrl;
+      showToast('🚀 تم فتح تطبيق DingTalk! الصق التذكرة الآن بـ (Ctrl + V)');
+    }
+
+    function closeModal(id) {
+      const m = document.getElementById(id);
+      if (m) m.style.display = 'none';
+    }
+
+    function closeModalOnOverlay(e, id) {
+      if (e.target && e.target.id === id) {
+        closeModal(id);
+      }
+    }
+
+    // 5. DIRECT DINGTALK 1-ON-1 DISPATCH ENGINE (Integrated with dws.exe Backend)
+    function sendDirectDingTalk(sid, repName, tabType) {
+      const text = buildComprehensiveDossierText(sid, repName, tabType);
+
+      // 1. Copy formatted ticket to clipboard always as instant safeguard
+      navigator.clipboard.writeText(text).catch(() => {});
+
+      // 2. Immediate feedback
+      showToast(`⏳ جاري إرسال التذكرة مباشرة إلى شات الموظف [${repName}] على DingTalk...`);
+
+      const apiUrl = getApiBaseUrl() + '/api/send-dingtalk-rep';
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          rep: repName,
+          student_id: sid,
+          message: text
+        })
+      })
+      .then(async r => {
+        const data = await r.json().catch(() => ({ success: false, error: 'invalid_json' }));
+        if (r.ok && data.success) {
+          const targetName = data.repName || repName;
+          showToast(`🚀 تم تسليم التذكرة بنجاح إلى شات DingTalk الخاص بالموظف [${targetName}]!`);
+          openDingTalkDispatchModal(sid, repName, text, 'success', targetName);
+        } else if (r.status === 404 || data.error === 'rep_not_found') {
+          showToast(`ℹ️ الموظف خارج Big Team 01 - تم نسخ التذكرة للحافظة لفتح شاته.`);
+          openDingTalkDispatchModal(sid, repName, text, 'rep_not_found', data.message);
+        } else {
+          showToast(`⚠️ تعذر الإرسال المباشر (${data.message || data.error}) - تم فتح نافذة التذكرة`);
+          openDingTalkDispatchModal(sid, repName, text, 'server_error', data.message || data.error);
+        }
+      })
+      .catch(err => {
+        showToast(`⚠️ خطأ في الاتصال بسيرفر الإرسال - تم نسخ التذكرة للحافظة`);
+        openDingTalkDispatchModal(sid, repName, text, 'server_error', err.message);
+      });
+    }
+
+    function sendModalTicketDirect() {
+      const sid = activeDingTalkTargetSid;
+      const repName = activeDingTalkTargetRep;
+      const text = document.getElementById('modalTicketText').value;
+      const sendBtn = document.getElementById('btnModalDirectSend');
+
+      if (sendBtn) {
+        sendBtn.disabled = true;
+        sendBtn.innerHTML = '⏳ جاري الإرسال المباشر...';
+      }
+
+      const apiUrl = getApiBaseUrl() + '/api/send-dingtalk-rep';
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          rep: repName,
+          student_id: sid,
+          message: text
+        })
+      })
+      .then(async r => {
+        const data = await r.json().catch(() => ({ success: false, error: 'invalid_json' }));
+        if (sendBtn) sendBtn.disabled = false;
+        if (r.ok && data.success) {
+          const targetName = data.repName || repName;
+          showToast(`🚀 تم تسليم التذكرة بنجاح إلى شات DingTalk للموظف [${targetName}]!`);
+          openDingTalkDispatchModal(sid, repName, text, 'success', targetName);
+        } else if (r.status === 404 || data.error === 'rep_not_found') {
+          openDingTalkDispatchModal(sid, repName, text, 'rep_not_found', data.message);
+        } else {
+          openDingTalkDispatchModal(sid, repName, text, 'server_error', data.message || data.error);
+        }
+      })
+      .catch(err => {
+        if (sendBtn) sendBtn.disabled = false;
+        openDingTalkDispatchModal(sid, repName, text, 'server_error', err.message);
+      });
+    }
+
+    function copyTeamEscalationReport() {
+      const now = new Date();
+      const timestamp = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+
+      const targetTeam = currentSmallTeam === 'ALL' ? "Big Team 01 (جميع الفرق)" : currentSmallTeam;
+      const targetReps = currentSmallTeam === 'ALL' ? Array.from(MY_TEAM_REPS) : (TEAM_ROSTER[currentSmallTeam] || []);
+
+      let report = `📑 【تقرير تصعيد ومتابعة شامل لقطاع ${targetTeam}】
+────────────────────────────────────────
+🏢 Senior Manager: Hussein El A'sar | Big Team 01
+📅 تاريخ وتوقيت التصدير: ${timestamp}
+🎯 المرجع: درع الحماية ورادار الاسترداد (قواعد SLA 14 يوماً)
+────────────────────────────────────────
+📋 بيان موقف أعضاء الفريق تفصيلياً:
+`;
+
+      targetReps.forEach((rep, i) => {
+        const p = getRepProfile(rep);
+        report += `
+${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
+   • إجمالي العملاء: ${p.totalLeads} طالب
+   • عملاء تجاوزوا 14 يوماً (كسر القاعدة 1): ${p.critical14d} طالب 🚨
+   • إنذار الخطر الداهم (12-13d): ${p.highRisk12_13d} طالب ⚠️
+   • إجمالي رصيد النقاط: ${p.totalPts.toLocaleString()} 💎 | حضور الشهر الحالي: ${p.totalThisMonth.toLocaleString()} ⚡
+   ─────────────────────────────`;
+      });
+
+      report += `
+────────────────────────────────────────
+🚀 التوجيه التنفيذي: إلزام كل ممثل بسرعة مراجعة عملائه المعرضين للخطر وإجراء الاتصالات وتوثيق الملاحظات فوراً.
+صادر عن Big Team 01 Allocation Hub`;
+
+      navigator.clipboard.writeText(report).then(() => {
+        showToast(`📑 تم نسخ تقرير التصعيد الشامل لفريق ${targetTeam} بنجاح!`);
+      });
+    }
+
+    // CSV Export Engine
+    function exportTableCSV() {
+      if (!filteredList || filteredList.length === 0) {
+        showToast("⚠️ لا توجد بيانات لتصديرها!");
+        return;
+      }
+
+      let csv = "\uFEFF";
+      if (currentTab === 'reclaim') {
+        csv += "Student ID,Rule Type,Old SS,Current Agent,Is External Agent,Current Team,Pool,Remaining Points,Last Month Consumption,This Month Consumption,Status,Recommended Action\n";
+        filteredList.forEach(i => {
+          const isExt = !MY_TEAM_REPS.has(i.current_agent) ? "External (خارجي)" : "Internal (فريقنا)";
+          csv += `"${i.student_id}","${i.rule_type}","${i.old_ss}","${i.current_agent}","${isExt}","${i.current_team}","${i.pool}","${i.current_points ?? 0}","${i.last_month_consumption ?? 0}","${i.this_month_consumption ?? 0}","${i.status_ar || i.status}","${i.action_ar || i.recommended_action}"\n`;
+        });
+      } else if (currentTab === 'defense') {
+        csv += "Student ID,Rep,Team,Big Team,Pool,Remaining Points,Last Month Consumption,This Month Consumption,Last Connection,Days Inactive,Risk Tier,Action Required\n";
+        filteredList.forEach(i => {
+          csv += `"${i.student_id}","${i.rep}","${i.team}","${i.big_team}","${i.pool}","${i.current_points ?? 0}","${i.last_month_consumption ?? 0}","${i.this_month_consumption ?? 0}","${i.last_connection}","${i.days_inactive}","${i.risk_tier}","${i.action_required_ar || i.action_required}"\n`;
+        });
+      } else if (currentTab === 'family') {
+        csv += "Family ID,Student ID,Old SS,Current Agent,Is External Agent,Current Team,Family Members,Split With,Remaining Points,Last Month Consumption,This Month Consumption,Status,Action\n";
+        filteredList.forEach(i => {
+          const isExt = !MY_TEAM_REPS.has(i.current_agent) ? "External (خارجي)" : "Internal (فريقنا)";
+          csv += `"${i.family_id}","${i.student_id}","${i.old_ss}","${i.current_agent}","${isExt}","${i.current_team}","${(i.family_members||[]).join(';')}","${(i.split_with||[]).join(';')}","${i.current_points ?? 0}","${i.last_month_consumption ?? 0}","${i.this_month_consumption ?? 0}","${i.status_ar}","${i.action_ar}"\n`;
+        });
+      }
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `BigTeam01_${currentTab}_${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast("📥 تم تصدير ملف CSV بنجاح!");
+    }
+
+    // Toast Engine
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById('execToast');
+      const text = document.getElementById('execToastText');
+      text.textContent = msg;
+      toast.classList.add('show');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 4000);
+    }
+  </script>
+  <!-- Modal: DingTalk Config -->
+  <div id="dingTalkConfigModal" class="modal-overlay" style="display: none;" onclick="closeModalOnOverlay(event, 'dingTalkConfigModal')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.4rem;">🤖</span>
+          <h3 style="margin: 0; font-size: 1.05rem; color: #fff;">إعدادات ربط DingTalk Webhook Robot</h3>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="closeModal('dingTalkConfigModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; margin-top: 0;">
+          لإرسال التذاكر والإشعارات للموظفين <strong>تلقائياً ومباشرة بنقرة واحدة</strong> إلى جروب العمل على <strong>DingTalk</strong>، قم بإدخال رابط الـ <strong>Custom Robot Webhook</strong> الخاص بالمجموعة هنا:
+        </p>
+        <div style="margin-bottom: 14px;">
+          <label style="display: block; font-size: 0.78rem; font-weight: 800; color: #94a3b8; margin-bottom: 6px;">رابط DingTalk Webhook URL:</label>
+          <input type="text" id="dingTalkWebhookInput" class="modern-input" style="width: 100%; direction: ltr; font-family: monospace;" placeholder="https://oapi.dingtalk.com/robot/send?access_token=...">
+        </div>
+        <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px; padding: 10px 14px; font-size: 0.8rem; color: #93c5fd; margin-bottom: 16px; line-height: 1.5;">
+          💡 <strong>كيف تحصل على الرابط؟</strong> من تطبيق DingTalk المكتبي: افتح جروب الفريق ➔ إعدادات الجروب (Group Settings) ➔ Group Management ➔ Bot ➔ Add Custom Robot (Webhook) ➔ انسخ الرابط والصقه هنا.
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+          <button type="button" class="btn-ticket-mini" style="padding: 8px 16px; font-size: 0.82rem;" onclick="testDingTalkWebhook()">🧪 اختبار الإرسال (Test Ping)</button>
+          <button type="button" class="btn-dingtalk-mini" style="padding: 8px 18px; font-size: 0.84rem;" onclick="saveDingTalkConfig()">💾 حفظ الإعدادات</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: DingTalk Smart Dispatch -->
+  <div id="dingTalkDispatchModal" class="modal-overlay" style="display: none;" onclick="closeModalOnOverlay(event, 'dingTalkDispatchModal')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.4rem;">🚀</span>
+          <h3 style="margin: 0; font-size: 1.05rem; color: #fff;">إرسال وتوجيه تذكرة DingTalk</h3>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="closeModal('dingTalkDispatchModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap;">
+          <div style="background: rgba(255,255,255,0.05); padding: 7px 12px; border-radius: 6px; font-size: 0.8rem;">
+            👤 الموظف المستهدف: <strong id="modalRepName" style="color: #38bdf8;">—</strong>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 7px 12px; border-radius: 6px; font-size: 0.8rem;">
+            🎯 رقم الطالب: <strong id="modalStudentId" style="color: #34d399;">—</strong>
+          </div>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <label style="display: block; font-size: 0.78rem; font-weight: 800; color: #94a3b8; margin-bottom: 6px;">نص التذكرة الشاملة (تم نسخه للحافظة تلقائياً):</label>
+          <textarea id="modalTicketText" class="modern-input" style="width: 100%; height: 160px; font-size: 0.76rem; font-family: 'Cairo', sans-serif; resize: vertical;" readonly></textarea>
+        </div>
+        <div id="modalDeliveryStatus" style="background: rgba(14, 165, 233, 0.12); border: 1px solid rgba(14, 165, 233, 0.35); border-radius: 8px; padding: 10px 14px; font-size: 0.78rem; color: #bae6fd; margin-bottom: 14px; line-height: 1.5;">
+          ⚡ <strong>الربط المباشر نشط (Direct API):</strong> يتم إرسال التذكرة آلياً وبشكل فوري إلى الشات الشخصي الخاص للموظف (1-on-1) على تطبيق DingTalk مباشرة من حساب الإدارة.
+        </div>
+        <div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: center;">
+          <button type="button" class="btn-dossier-mini" style="padding: 7px 12px; font-size: 0.78rem;" onclick="launchDingTalkApp()">💬 فتح محادثة DingTalk</button>
+          <div style="display: flex; gap: 8px;">
+            <button type="button" class="btn-ticket-mini" style="padding: 7px 12px; font-size: 0.8rem;" onclick="copyModalTicketText()">📋 إعادة نسخ التذكرة</button>
+            <button type="button" id="btnModalDirectSend" class="btn-dingtalk-mini" style="padding: 7px 18px; font-size: 0.84rem; background: linear-gradient(135deg, #0284c7, #2563eb); font-weight: 800;" onclick="sendModalTicketDirect()">🚀 إرسال مباشر لشات الموظف على DingTalk</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
