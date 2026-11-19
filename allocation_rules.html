@@ -1245,6 +1245,182 @@
     body.lang-ltr .modal-header {
       direction: ltr !important;
     }
+
+    /* ========================================================
+       SECURITY AUTH GATE MODAL & USER BADGE
+       ======================================================== */
+    .auth-gate-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 9, 20, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .auth-gate-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .auth-modal-card {
+      background: linear-gradient(145deg, #0d1527 0%, #080c18 100%);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 45px rgba(14, 165, 233, 0.18);
+      max-width: 440px;
+      width: 100%;
+      padding: 32px 28px;
+      text-align: center;
+      animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    @keyframes modalSlideUp {
+      from { transform: translateY(30px) scale(0.96); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .auth-modal-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(59, 130, 246, 0.2));
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+    }
+    .auth-modal-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #f8fafc;
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+    .auth-modal-subtitle {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .auth-form-group {
+      text-align: right;
+      margin-bottom: 18px;
+    }
+    body.lang-ltr .auth-form-group {
+      text-align: left;
+    }
+    .auth-form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+    }
+    .auth-select, .auth-input {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.9rem;
+      color: #f8fafc;
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    .auth-select:focus, .auth-input:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+      background: rgba(15, 23, 42, 1);
+    }
+    .auth-pin-wrapper {
+      position: relative;
+    }
+    .auth-pin-wrapper input {
+      letter-spacing: 0.3em;
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-align: center;
+    }
+    .auth-btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 13px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+      margin-top: 10px;
+    }
+    .auth-btn-submit:hover {
+      background: linear-gradient(135deg, #0369a1, #1d4ed8);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+    }
+    .auth-btn-submit:active {
+      transform: translateY(1px);
+    }
+    .auth-error-msg {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      margin-top: 14px;
+      display: none;
+      line-height: 1.4;
+    }
+    .auth-shake {
+      animation: authShake 0.4s ease-in-out;
+    }
+    @keyframes authShake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+    .nav-user-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.38);
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #7dd3fc;
+      transition: all 0.2s ease;
+    }
+    .nav-user-logout-btn {
+      background: rgba(239, 68, 68, 0.22);
+      border: 1px solid rgba(239, 68, 68, 0.45);
+      color: #fca5a5;
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .nav-user-logout-btn:hover {
+      background: rgba(239, 68, 68, 0.35);
+      color: #fff;
+    }
+
   </style>
 </head>
 <body>
@@ -1307,7 +1483,14 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/></svg>
           <span id="navCalculatorText">حاسبة الباقات</span>
         </a>
-        <div style="display: flex; align-items: center; gap: 7px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 5px 10px; border-radius: 8px; font-size: 0.76rem; font-weight: 700; color: #34d399;">
+                <!-- Logged-in User Profile Pill & Logout -->
+        <div id="navUserBadge" class="nav-user-badge" style="display: none;">
+          <span id="navUserIcon">👤</span>
+          <span id="navUserName">...</span>
+          <button type="button" class="nav-user-logout-btn" onclick="logoutAuthUser()" title="تسجيل الخروج / تبديل الحساب">🚪 <span id="navLogoutText">خروج</span></button>
+        </div>
+
+<div style="display: flex; align-items: center; gap: 7px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 5px 10px; border-radius: 8px; font-size: 0.76rem; font-weight: 700; color: #34d399;">
           <span style="width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981;"></span>
           <span id="crmLiveSyncText">CRM Live Synchronized</span>
         </div>
@@ -2008,6 +2191,276 @@
       }
     }
 
+    
+    // ========================================================
+    // ROLE-BASED ACCESS CONTROL (RBAC) & PIN SECURITY ENGINE
+    // ========================================================
+    const AUTH_STORAGE_KEY = 'big_team_01_allocation_auth_v1';
+
+    const AUTH_USERS = {
+      // Senior Management (Super Admin)
+      "hussein": {
+        id: "hussein",
+        name: "Hussein El A'sar",
+        nameAr: "حسين الأعصر (مدير أول القطاع)",
+        nameZh: "Hussein El A'sar (资深业务总监)",
+        role: "ADMIN",
+        pin: "2026",
+        team: "ALL",
+        icon: "👑"
+      },
+      // ME-EGSS01 (Team Ashraqat)
+      "EGSS-ashraqatal": { id: "EGSS-ashraqatal", name: "Ashraqatal", nameAr: "إشراقت علي", nameZh: "Ashraqatal", role: "REP", pin: "1011", team: "ME-EGSS01", icon: "👤" },
+      "EGSS-juliamonir01": { id: "EGSS-juliamonir01", name: "Julia Monir", nameAr: "جوليا منير", nameZh: "Julia Monir", role: "REP", pin: "1012", team: "ME-EGSS01", icon: "👤" },
+      "EGSS-mahmoud04": { id: "EGSS-mahmoud04", name: "Mahmoud 04", nameAr: "محمود 04", nameZh: "Mahmoud 04", role: "REP", pin: "1013", team: "ME-EGSS01", icon: "👤" },
+      "EGSS-nohayoussry": { id: "EGSS-nohayoussry", name: "Noha Youssry", nameAr: "نهى يسري", nameZh: "Noha Youssry", role: "REP", pin: "1014", team: "ME-EGSS01", icon: "👤" },
+
+      // ME-EGSS05 (Team Ibrahim)
+      "EGSS-abdelrahmannasef": { id: "EGSS-abdelrahmannasef", name: "Abdelrahman Nassef", nameAr: "عبدالرحمن ناصف", nameZh: "Abdelrahman Nassef", role: "REP", pin: "1051", team: "ME-EGSS05", icon: "👤" },
+      "EGSS-ahmedhalawa": { id: "EGSS-ahmedhalawa", name: "Ahmed Halawa", nameAr: "أحمد حلاوة", nameZh: "Ahmed Halawa", role: "REP", pin: "1052", team: "ME-EGSS05", icon: "👤" },
+      "EGSS-alihesham01": { id: "EGSS-alihesham01", name: "Ali Hesham", nameAr: "علي هشام", nameZh: "Ali Hesham", role: "REP", pin: "1053", team: "ME-EGSS05", icon: "👤" },
+      "EGSS-ehabzaky01": { id: "EGSS-ehabzaky01", name: "Ehab Zaky", nameAr: "إيهاب زكي", nameZh: "Ehab Zaky", role: "REP", pin: "1054", team: "ME-EGSS05", icon: "👤" },
+      "EGSS-ibrahimismaiel": { id: "EGSS-ibrahimismaiel", name: "Ibrahim Ismaiel", nameAr: "إبراهيم إسماعيل", nameZh: "Ibrahim Ismaiel", role: "REP", pin: "1055", team: "ME-EGSS05", icon: "👤" },
+      "EGSS-khaledgonam": { id: "EGSS-khaledgonam", name: "Khaled Gonam", nameAr: "خالد غنيم", nameZh: "Khaled Gonam", role: "REP", pin: "1056", team: "ME-EGSS05", icon: "👤" },
+      "EGSS-omarmoneb": { id: "EGSS-omarmoneb", name: "Omar Monieb", nameAr: "عمر منيب", nameZh: "Omar Monieb", role: "REP", pin: "1057", team: "ME-EGSS05", icon: "👤" },
+      "EGSS-samira01": { id: "EGSS-samira01", name: "Samira Hussien", nameAr: "سميرة حسين", nameZh: "Samira Hussien", role: "REP", pin: "1058", team: "ME-EGSS05", icon: "👤" },
+
+      // ME-EGSS10 (Team Abdelrhman)
+      "EGSS-abdelrhmanshehata": { id: "EGSS-abdelrhmanshehata", name: "Abdelrhman Shehata", nameAr: "عبدالرحمن شحاتة", nameZh: "Abdelrhman Shehata", role: "REP", pin: "1101", team: "ME-EGSS10", icon: "👤" },
+      "EGSS-ahmedshoukry": { id: "EGSS-ahmedshoukry", name: "Ahmed Shoukry", nameAr: "أحمد شكري", nameZh: "Ahmed Shoukry", role: "REP", pin: "1102", team: "ME-EGSS10", icon: "👤" },
+      "EGSS-hayamhassan": { id: "EGSS-hayamhassan", name: "Hayam Hassan", nameAr: "هيام حسن", nameZh: "Hayam Hassan", role: "REP", pin: "1103", team: "ME-EGSS10", icon: "👤" },
+      "EGSS-titooooo": { id: "EGSS-titooooo", name: "Tito (Ahmed)", nameAr: "تيتو (أحمد)", nameZh: "Tito (Ahmed)", role: "REP", pin: "1104", team: "ME-EGSS10", icon: "👤" },
+
+      // ME-EGSS13 (Team Mohamed)
+      "EGSS-amrsafwat": { id: "EGSS-amrsafwat", name: "Amr Safwat", nameAr: "عمرو صفوت", nameZh: "Amr Safwat", role: "REP", pin: "1131", team: "ME-EGSS13", icon: "👤" },
+      "EGSS-marwaahmed": { id: "EGSS-marwaahmed", name: "Marwa Ahmed", nameAr: "مروة أحمد", nameZh: "Marwa Ahmed", role: "REP", pin: "1132", team: "ME-EGSS13", icon: "👤" },
+      "EGSS-mohamedha": { id: "EGSS-mohamedha", name: "Mohamed Hassan", nameAr: "محمد حسن", nameZh: "Mohamed Hassan", role: "REP", pin: "1133", team: "ME-EGSS13", icon: "👤" },
+
+      // ME-EGSS30 (Team Mahmoud)
+      "EGSS-mahmoudkhamis": { id: "EGSS-mahmoudkhamis", name: "Mahmoud Khamis", nameAr: "محمود خميس", nameZh: "Mahmoud Khamis", role: "REP", pin: "1301", team: "ME-EGSS30", icon: "👤" }
+    };
+
+    window.CURRENT_AUTH_USER = null;
+
+    function showAuthGateModal() {
+      const modal = document.getElementById('authGateModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        const pinInput = document.getElementById('authPinInput');
+        if (pinInput) {
+          pinInput.value = '';
+          setTimeout(() => pinInput.focus(), 200);
+        }
+        const err = document.getElementById('authErrorMsg');
+        if (err) err.style.display = 'none';
+      }
+    }
+
+    function hideAuthGateModal() {
+      const modal = document.getElementById('authGateModal');
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function handleAuthUserSelectChange() {
+      const sel = document.getElementById('authSelectUser');
+      const pin = document.getElementById('authPinInput');
+      const err = document.getElementById('authErrorMsg');
+      if (err) err.style.display = 'none';
+      if (pin) {
+        pin.value = '';
+        pin.focus();
+      }
+    }
+
+    function handleAuthSubmit(e) {
+      if (e) e.preventDefault();
+      const userSel = document.getElementById('authSelectUser');
+      const pinInput = document.getElementById('authPinInput');
+      const rememberCheckbox = document.getElementById('authRememberMe');
+      const errBox = document.getElementById('authErrorMsg');
+      const card = document.getElementById('authModalCard');
+
+      const userId = userSel ? userSel.value : '';
+      const pinVal = pinInput ? pinInput.value.trim() : '';
+
+      if (!userId || !AUTH_USERS[userId]) {
+        if (errBox) {
+          errBox.textContent = currentLang === 'ar' ? '⚠️ يرجى اختيار اسم الموظف أو المسؤول من القائمة.' : (currentLang === 'zh' ? '⚠️ 请从列表中选择您的顾问或管理身份。' : '⚠️ Please select a user profile from the list.');
+          errBox.style.display = 'block';
+        }
+        return false;
+      }
+
+      const targetUser = AUTH_USERS[userId];
+      if (pinVal !== targetUser.pin) {
+        if (errBox) {
+          errBox.textContent = currentLang === 'ar' ? '⚠️ الرمز السري (PIN) غير صحيح! يرجى إعادة المحاولة.' : (currentLang === 'zh' ? '⚠️ 安全PIN码错误，请重新输入。' : '⚠️ Incorrect PIN! Please try again.');
+          errBox.style.display = 'block';
+        }
+        if (card) {
+          card.classList.add('auth-shake');
+          setTimeout(() => card.classList.remove('auth-shake'), 450);
+        }
+        if (pinInput) {
+          pinInput.value = '';
+          pinInput.focus();
+        }
+        return false;
+      }
+
+      // Valid Authentication!
+      const sessionData = {
+        userId: targetUser.id,
+        role: targetUser.role,
+        authTime: Date.now()
+      };
+
+      if (rememberCheckbox && rememberCheckbox.checked) {
+        localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(sessionData));
+      }
+      sessionStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(sessionData));
+
+      // Apply Security and Reload Dashboard State
+      applyAuthSecurity();
+      initSelectors();
+      initKPIValues();
+      setPortalTab(currentTab || 'reclaim');
+      const savedLang = localStorage.getItem('allocation_hub_lang') || 'ar';
+      setLanguage(savedLang);
+
+      showToast(currentLang === 'ar' ? `🎉 مرحباً بك يا ${targetUser.name}! تم تسجيل الدخول بنجاح.` : (currentLang === 'zh' ? `🎉 欢迎 ${targetUser.name}！登录成功。` : `🎉 Welcome ${targetUser.name}! Access granted.`));
+      return false;
+    }
+
+    function logoutAuthUser() {
+      localStorage.removeItem(AUTH_STORAGE_KEY);
+      sessionStorage.removeItem(AUTH_STORAGE_KEY);
+      window.CURRENT_AUTH_USER = null;
+      
+      const badge = document.getElementById('navUserBadge');
+      if (badge) badge.style.display = 'none';
+
+      const userSel = document.getElementById('authSelectUser');
+      if (userSel) userSel.value = '';
+      const pin = document.getElementById('authPinInput');
+      if (pin) pin.value = '';
+
+      showAuthGateModal();
+      showToast(currentLang === 'ar' ? '🔒 تم تسجيل الخروج وإغلاق الجلسة بأمان.' : (currentLang === 'zh' ? '🔒 已安全退出系统。' : '🔒 Logged out securely.'));
+    }
+
+    function updateAuthNavbarUI(user) {
+      const badge = document.getElementById('navUserBadge');
+      const icon = document.getElementById('navUserIcon');
+      const name = document.getElementById('navUserName');
+      const logoutTxt = document.getElementById('navLogoutText');
+
+      if (!badge || !user) return;
+      badge.style.display = 'flex';
+      if (icon) icon.textContent = user.icon || (user.role === 'ADMIN' ? '👑' : '👤');
+
+      let displayName = user.name;
+      if (currentLang === 'ar') displayName = user.nameAr;
+      else if (currentLang === 'zh') displayName = user.nameZh || user.name;
+
+      if (user.role === 'ADMIN') {
+        badge.style.background = 'rgba(245, 158, 11, 0.16)';
+        badge.style.borderColor = 'rgba(245, 158, 11, 0.45)';
+        badge.style.color = '#fcd34d';
+      } else {
+        badge.style.background = 'rgba(56, 189, 248, 0.14)';
+        badge.style.borderColor = 'rgba(56, 189, 248, 0.38)';
+        badge.style.color = '#7dd3fc';
+      }
+
+      if (name) {
+        name.textContent = user.role === 'ADMIN' 
+          ? (currentLang === 'ar' ? '👑 الإدارة العليا: حسين الأعصر' : (currentLang === 'zh' ? '👑 资深总监: Hussein' : '👑 Senior Manager: Hussein')) 
+          : `${user.icon} ${user.name} (${user.team})`;
+      }
+      if (logoutTxt) {
+        logoutTxt.textContent = currentLang === 'ar' ? 'خروج' : (currentLang === 'zh' ? '退出' : 'Logout');
+      }
+    }
+
+    function applyAuthSecurity() {
+      let session = null;
+      try {
+        const raw = sessionStorage.getItem(AUTH_STORAGE_KEY) || localStorage.getItem(AUTH_STORAGE_KEY);
+        if (raw) session = JSON.parse(raw);
+      } catch(e) {}
+
+      if (!session || !session.userId || !AUTH_USERS[session.userId]) {
+        showAuthGateModal();
+        return false;
+      }
+
+      const user = AUTH_USERS[session.userId];
+      window.CURRENT_AUTH_USER = user;
+
+      // Preserve full master data in internal backup if not already preserved
+      if (!window._RAW_MASTER_DATA && window.ALLOCATION_RULES_DATA) {
+        window._RAW_MASTER_DATA = JSON.parse(JSON.stringify(window.ALLOCATION_RULES_DATA));
+      }
+
+      const master = window._RAW_MASTER_DATA;
+      if (!master) return false;
+
+      if (user.role === 'ADMIN') {
+        // Full unrestricted access
+        window.ALLOCATION_RULES_DATA = JSON.parse(JSON.stringify(master));
+      } else {
+        // STRICT DATA SLICING FOR REPRESENTATIVE
+        const repId = user.id;
+
+        const repReclaims = (master.reclaim_opportunities || []).filter(item => 
+          item.old_ss === repId || item.current_agent === repId
+        );
+
+        const repDefense = (master.defense_uncovered || []).filter(item => 
+          item.current_agent === repId
+        );
+
+        const repFamilies = (master.split_families || []).filter(item => {
+          if (item.current_agent === repId || item.old_ss === repId) return true;
+          if (item.family_members && Array.isArray(item.family_members)) {
+            return item.family_members.some(m => m === repId || (m.current_agent === repId));
+          }
+          return false;
+        });
+
+        const repStats = {
+          total_active_sector_leads: repDefense.length,
+          total_uncovered_leads: repDefense.length,
+          critical_defense_risk_14d: repDefense.filter(x => (x.days_inactive ?? 0) >= 14).length,
+          high_defense_risk_12_13d: repDefense.filter(x => (x.days_inactive ?? 0) >= 12 && (x.days_inactive ?? 0) < 14).length,
+          warning_defense_10_11d: repDefense.filter(x => (x.days_inactive ?? 0) >= 10 && (x.days_inactive ?? 0) < 12).length,
+          moderate_defense_7_9d: repDefense.filter(x => (x.days_inactive ?? 0) >= 7 && (x.days_inactive ?? 0) < 10).length,
+          safe_defense_7d: repDefense.filter(x => (x.days_inactive ?? 0) < 7).length,
+          reclaim_total_opportunities: repReclaims.length,
+          reclaim_ready_immediate: repReclaims.filter(x => x.sla_status === 'ready' || (x.days_inactive ?? 0) >= 14).length,
+          reclaim_protected_renewed: 0,
+          reclaim_protected_contact: 0,
+          split_families_total: repFamilies.length
+        };
+
+        window.ALLOCATION_RULES_DATA = {
+          generated_at: master.generated_at,
+          audit_date: master.audit_date,
+          stats: repStats,
+          reclaim_opportunities: repReclaims,
+          defense_uncovered: repDefense,
+          split_families: repFamilies
+        };
+      }
+
+      updateAuthNavbarUI(user);
+      hideAuthGateModal();
+      return true;
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
       // Boot theme
       const savedTheme = localStorage.getItem('allocation_hub_theme');
@@ -2022,6 +2475,14 @@
         showToast("⚠️ لم يتم العثور على ملف البيانات (allocation_rules_data.js)");
         return;
       }
+
+      // Enforce Role-Based Access Control (RBAC) Security Check
+      const isAuthenticated = applyAuthSecurity();
+      if (!isAuthenticated) {
+        // Stop initialization until user inputs valid PIN
+        return;
+      }
+
       initSelectors();
       initKPIValues();
       setPortalTab('reclaim');
@@ -2182,8 +2643,53 @@
     // Initialize Dropdowns and Quick Team Pills
     function initSelectors() {
       const teamSelect = document.getElementById('selectSmallTeam');
+      const repSelect = document.getElementById('selectTeamRep');
       const quickPills = document.getElementById('quickTeamPills');
       const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+
+      // If logged in as Representative: ENFORCE LOCK & ISOLATION
+      if (window.CURRENT_AUTH_USER && window.CURRENT_AUTH_USER.role === 'REP') {
+        const u = window.CURRENT_AUTH_USER;
+        currentRepFilter = u.id;
+        currentSmallTeam = u.team;
+
+        if (teamSelect) {
+          teamSelect.innerHTML = `<option value="${u.team}" selected>${u.team}</option>`;
+          teamSelect.disabled = true;
+          teamSelect.style.opacity = '0.85';
+          teamSelect.style.cursor = 'not-allowed';
+        }
+
+        if (repSelect) {
+          repSelect.innerHTML = `<option value="${u.id}" selected>${u.name} (${u.id})</option>`;
+          repSelect.disabled = true;
+          repSelect.style.opacity = '0.85';
+          repSelect.style.cursor = 'not-allowed';
+        }
+
+        if (quickPills) {
+          quickPills.innerHTML = `<button type="button" class="team-pill-btn active" style="pointer-events: none; background: #0284c7; border-color: #38bdf8;">${u.team}</button>`;
+        }
+
+        const reportBtn = document.getElementById('btnTeamReportText');
+        if (reportBtn) {
+          reportBtn.textContent = currentLang === 'ar' ? '📋 نسخ تقريري الخاص' : (currentLang === 'zh' ? '📋 复制我的专属报告' : '📋 Copy My Lead Report');
+        }
+        return;
+      }
+
+      // If logged in as Admin / Senior Manager: Ensure controls are enabled
+      if (teamSelect) {
+        teamSelect.disabled = false;
+        teamSelect.style.opacity = '1';
+        teamSelect.style.cursor = 'pointer';
+      }
+      if (repSelect) {
+        repSelect.disabled = false;
+        repSelect.style.opacity = '1';
+        repSelect.style.cursor = 'pointer';
+      }
+
       const prevTeam = teamSelect ? teamSelect.value : 'ALL';
 
       teamSelect.innerHTML = `<option value="ALL">${t.filter_teams_all}</option>`;
@@ -3186,6 +3692,28 @@
     }
 
     function copyTeamEscalationReport() {
+      // Rep-specific report copy
+      if (window.CURRENT_AUTH_USER && window.CURRENT_AUTH_USER.role === 'REP') {
+        const u = window.CURRENT_AUTH_USER;
+        const p = getRepProfile(u.id);
+        const now = new Date();
+        const timestamp = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+        let repReport = `📋 【تقرير المتابعة الفردي المعتمد — ${u.name} (${u.id})】
+────────────────────────────────────────
+🏢 الفريق: ${u.team} | المشرف المباشر: ${p.supervisor}
+📅 تاريخ ووقت السحب: ${timestamp}
+🎯 إجمالي العملاء المسندين: ${p.totalLeads} طالب
+🚨 عملاء تجاوزوا مهلة 14 يوماً (كسر القاعدة 1): ${p.critical14d} طالب
+⚠️ إنذار الخطر الداهم (12-13d): ${p.highRisk12_13d} طالب
+💎 إجمالي رصيد النقاط: ${p.totalPts.toLocaleString()} | ⚡ حضور الشهر: ${p.totalThisMonth.toLocaleString()}
+────────────────────────────────────────
+🚀 التوجيه: سرعة التواصل وتوثيق المكالمات والملاحظات على الـ CRM قبل نهاية دورة العمل اليومية.`;
+        navigator.clipboard.writeText(repReport).then(() => {
+          showToast(`📋 تم نسخ تقريرك الفردي بنجاح (${p.totalLeads} طالب)!`);
+        });
+        return;
+      }
+
       const now = new Date();
       const timestamp = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
 
@@ -3336,6 +3864,74 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Security Access Gate Modal (PIN Auth) -->
+  <div id="authGateModal" class="auth-gate-overlay">
+    <div class="auth-modal-card" id="authModalCard">
+      <div class="auth-modal-icon">🛡️</div>
+      <h2 class="auth-modal-title" id="authModalTitle">بوابة الدخول الآمن والصلاحيات</h2>
+      <p class="auth-modal-subtitle" id="authModalSubtitle">بيئة محمية بنظام التحقق الداخلي لقطاع Big Team 01.<br>يرجى اختيار هويتك وإدخال رمز الـ PIN المعتمد.</p>
+      
+      <form onsubmit="handleAuthSubmit(event)">
+        <div class="auth-form-group">
+          <label for="authSelectUser" id="authLabelUser">👤 اختيار الموظف / المسؤول:</label>
+          <select id="authSelectUser" class="auth-select" onchange="handleAuthUserSelectChange()">
+            <option value="">-- اضغط للاختيار من القائمة --</option>
+            <optgroup label="👑 الإدارة العليا (Senior Management)">
+              <option value="hussein">👑 حسين الأعصر — Hussein El A'sar (مدير أول القطاع)</option>
+            </optgroup>
+            <optgroup label="🏢 ME-EGSS01 (فريق إشراقت)">
+              <option value="EGSS-ashraqatal">EGSS-ashraqatal (إشراقت علي)</option>
+              <option value="EGSS-juliamonir01">EGSS-juliamonir01 (جوليا منير)</option>
+              <option value="EGSS-mahmoud04">EGSS-mahmoud04 (محمود 04)</option>
+              <option value="EGSS-nohayoussry">EGSS-nohayoussry (نهى يسري)</option>
+            </optgroup>
+            <optgroup label="🏢 ME-EGSS05 (فريق إبراهيم)">
+              <option value="EGSS-abdelrahmannasef">EGSS-abdelrahmannasef (عبدالرحمن ناصف)</option>
+              <option value="EGSS-ahmedhalawa">EGSS-ahmedhalawa (أحمد حلاوة)</option>
+              <option value="EGSS-alihesham01">EGSS-alihesham01 (علي هشام)</option>
+              <option value="EGSS-ehabzaky01">EGSS-ehabzaky01 (إيهاب زكي)</option>
+              <option value="EGSS-ibrahimismaiel">EGSS-ibrahimismaiel (إبراهيم إسماعيل)</option>
+              <option value="EGSS-khaledgonam">EGSS-khaledgonam (خالد غنيم)</option>
+              <option value="EGSS-omarmoneb">EGSS-omarmoneb (عمر منيب)</option>
+              <option value="EGSS-samira01">EGSS-samira01 (سميرة حسين)</option>
+            </optgroup>
+            <optgroup label="🏢 ME-EGSS10 (فريق عبدالرحمن)">
+              <option value="EGSS-abdelrhmanshehata">EGSS-abdelrhmanshehata (عبدالرحمن شحاتة)</option>
+              <option value="EGSS-ahmedshoukry">EGSS-ahmedshoukry (أحمد شكري)</option>
+              <option value="EGSS-hayamhassan">EGSS-hayamhassan (هيام حسن)</option>
+              <option value="EGSS-titooooo">EGSS-titooooo (تيتو - أحمد)</option>
+            </optgroup>
+            <optgroup label="🏢 ME-EGSS13 (فريق محمد حسن)">
+              <option value="EGSS-amrsafwat">EGSS-amrsafwat (عمرو صفوت)</option>
+              <option value="EGSS-marwaahmed">EGSS-marwaahmed (مروة أحمد)</option>
+              <option value="EGSS-mohamedha">EGSS-mohamedha (محمد حسن)</option>
+            </optgroup>
+            <optgroup label="🏢 ME-EGSS30 (فريق محمود خميس)">
+              <option value="EGSS-mahmoudkhamis">EGSS-mahmoudkhamis (محمود خميس)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="auth-form-group">
+          <label for="authPinInput" id="authLabelPin">🔑 الرمز السري (4-Digit PIN):</label>
+          <div class="auth-pin-wrapper">
+            <input type="password" id="authPinInput" class="auth-input" maxlength="12" placeholder="••••" autocomplete="current-password" required>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: 0.78rem; color: #94a3b8;">
+          <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+            <input type="checkbox" id="authRememberMe" checked style="accent-color: #38bdf8;">
+            <span id="authRememberText">تذكر دخولي على هذا الجهاز</span>
+          </label>
+        </div>
+
+        <button type="submit" id="authBtnSubmit" class="auth-btn-submit">🚀 تأكيد والدخول للوحة التحكم</button>
+        <div id="authErrorMsg" class="auth-error-msg">⚠️ الرمز السري غير صحيح لهذا الحساب، يرجى إعادة المحاولة.</div>
+      </form>
     </div>
   </div>
 
