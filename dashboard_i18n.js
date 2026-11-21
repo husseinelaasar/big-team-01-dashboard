@@ -96,6 +96,13 @@
         zeroClasses: "0-Classes",
         status: "Status"
       },
+      buttons: {
+        snapMega: "🚀 Send to Mega Group",
+        snapCopy: "📋 Copy Table Image",
+        snapDl: "📷 PNG",
+        sortLastDealDesc: "⚠️ Last Deal: Longest Inactive",
+        sortLastDealAsc: "⏱️ Last Deal: Most Recent First"
+      },
       toki: {
         bubbleText: "👋 Hello, I'm Toki!",
         bubbleSub: "AI Copilot • Ask me",
@@ -190,6 +197,13 @@
         zeroClasses: "صفر حصص",
         status: "الحالة"
       },
+      buttons: {
+        snapMega: "🚀 إرسال لـ Mega Group مباشر",
+        snapCopy: "📋 نسخ صورة الجدول",
+        snapDl: "📷 تحميل PNG",
+        sortLastDealDesc: "⚠️ أطول فترة ركود (حسب آخر صفقة)",
+        sortLastDealAsc: "⏱️ أحدث الصفقات أولاً"
+      },
       toki: {
         bubbleText: "👋 مرحباً، أنا توكي!",
         bubbleSub: "مساعدك الذكي • اسألني",
@@ -283,6 +297,13 @@
         calls: "通话覆盖率",
         zeroClasses: "0课时学员",
         status: "达标状态"
+      },
+      buttons: {
+        snapMega: "🚀 发送到大群",
+        snapCopy: "📋 复制表格图片",
+        snapDl: "📷 下载 PNG",
+        sortLastDealDesc: "⚠️ 最久未成交优先",
+        sortLastDealAsc: "⏱️ 最新成交优先"
       },
       toki: {
         bubbleText: "👋 您好，我是 Toki！",
@@ -447,6 +468,30 @@
 
     if (typeof window.setTokiLanguage === 'function') {
       window.setTokiLanguage(lang);
+    }
+
+    // 10. Update Snapshot Buttons & Sort Options
+    if (t.buttons) {
+      document.querySelectorAll('.btn-snap-mega').forEach(b => {
+        b.textContent = t.buttons.snapMega;
+        b.title = lang === 'ar' ? 'إرسال صورة الجدول مباشرة إلى Mega Group في دنج توك' : (lang === 'zh' ? '将表格直接发送至钉钉大群' : 'Send high-res table snapshot directly to DingTalk Mega Group');
+      });
+      document.querySelectorAll('.btn-snap-copy').forEach(b => {
+        b.textContent = t.buttons.snapCopy;
+        b.title = lang === 'ar' ? 'نسخ صورة الجدول بدقة عالية للصقها في دنج توك (Ctrl+V)' : (lang === 'zh' ? '复制表格高清截图到剪贴板' : 'Copy high-res table snapshot to clipboard (Ctrl+V)');
+      });
+      document.querySelectorAll('.btn-snap-dl').forEach(b => {
+        b.textContent = t.buttons.snapDl;
+      });
+      const optDesc = document.querySelector('#sortFilter option[value="last-deal-desc"]');
+      if (optDesc) optDesc.textContent = t.buttons.sortLastDealDesc;
+      const optAsc = document.querySelector('#sortFilter option[value="last-deal-asc"]');
+      if (optAsc) optAsc.textContent = t.buttons.sortLastDealAsc;
+    }
+
+    // 11. Re-render dynamic components if model is active
+    if (typeof window.renderAll === 'function' && window.__model) {
+      try { window.renderAll(window.__model); } catch (e) {}
     }
   }
 

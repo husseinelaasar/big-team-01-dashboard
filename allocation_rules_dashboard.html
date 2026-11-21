@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظومة رادار قواعد التوزيع والاسترداد | Big Team 01</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0B0F19;
+            --bg-card: rgba(17, 24, 39, 0.75);
+            --bg-card-hover: rgba(30, 41, 59, 0.85);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --primary: #3B82F6;
+            --primary-glow: rgba(59, 130, 246, 0.35);
+            --success: #10B981;
+            --success-glow: rgba(16, 185, 129, 0.3);
+            --warning: #F59E0B;
+            --warning-glow: rgba(245, 158, 11, 0.3);
+            --danger: #EF4444;
+            --danger-glow: rgba(239, 68, 68, 0.3);
+            --purple: #8B5CF6;
+            --text-main: #F3F4F6;
+            --text-muted: #9CA3AF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 24px 32px 60px 32px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 20px 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #1E40AF, #3B82F6);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .header-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .badge-sector {
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #93C5FD;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 18px 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 3px;
+        }
+
+        .stat-card.red::before { background: var(--danger); box-shadow: 0 0 12px var(--danger); }
+        .stat-card.orange::before { background: var(--warning); box-shadow: 0 0 12px var(--warning); }
+        .stat-card.green::before { background: var(--success); box-shadow: 0 0 12px var(--success); }
+        .stat-card.blue::before { background: var(--primary); box-shadow: 0 0 12px var(--primary); }
+        .stat-card.purple::before { background: var(--purple); box-shadow: 0 0 12px var(--purple); }
+
+        .stat-title {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .stat-value {
+            font-size: 26px;
+            font-weight: 900;
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .stat-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Tabs Navigation */
+        .tabs-nav {
+            display: flex;
+            gap: 10px;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            padding: 8px;
+            border-radius: 16px;
+            border: 1px solid var(--border-glass);
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-btn.active {
+            color: #fff;
+            background: linear-gradient(135deg, #1E40AF, #2563EB);
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+
+        .tab-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Filter Controls */
+        .filter-panel {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 180px;
+            flex: 1;
+        }
+
+        .filter-group.highlight-old-ss {
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            padding: 8px 12px;
+            border-radius: 12px;
+        }
+
+        .filter-label {
+            font-size: 11.5px;
+            color: var(--text-muted);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .filter-group.highlight-old-ss .filter-label {
+            color: #93C5FD;
+            font-weight: 800;
+        }
+
+        .filter-select, .search-input {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            padding: 9px 14px;
+            border-radius: 10px;
+            font-size: 13.5px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .filter-select:focus, .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .btn-action {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            padding: 9px 16px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            height: 40px;
+            margin-top: auto;
+        }
+
+        .btn-action:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Table Container */
+        .table-container {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+            font-size: 13.5px;
+        }
+
+        thead {
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        th {
+            padding: 14px 16px;
+            font-size: 12px;
+            font-weight: 800;
+            color: #94A3B8;
+            letter-spacing: 0.3px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        td {
+            padding: 13px 16px;
+            color: var(--text-main);
+            vertical-align: middle;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 11.5px;
+            font-weight: 700;
+        }
+
+        .badge-critical { background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .badge-high { background: rgba(245, 158, 11, 0.15); color: #FCD34D; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .badge-warning { background: rgba(234, 179, 8, 0.15); color: #FDE047; border: 1px solid rgba(234, 179, 8, 0.3); }
+        .badge-safe { background: rgba(16, 185, 129, 0.15); color: #6EE7B7; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .badge-blue { background: rgba(59, 130, 246, 0.15); color: #93C5FD; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .badge-purple { background: rgba(139, 92, 246, 0.15); color: #C4B5FD; border: 1px solid rgba(139, 92, 246, 0.3); }
+
+        /* Copy Button */
+        .btn-copy {
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #93C5FD;
+            padding: 4px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .btn-copy:hover {
+            background: #2563EB;
+            color: #fff;
+        }
+
+        /* Pagination & Footer */
+        .table-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            background: rgba(15, 23, 42, 0.85);
+            border-top: 1px solid var(--border-glass);
+            font-size: 12.5px;
+            color: var(--text-muted);
+        }
+
+        .pagination-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .page-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            padding: 5px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .page-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+
+        /* Rules Quick Reference Drawer */
+        .rules-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .rule-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            padding: 14px 16px;
+            font-size: 12.5px;
+        }
+
+        .rule-card-title {
+            font-weight: 800;
+            color: #93C5FD;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .rule-card-body {
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <div class="header-icon">🎯</div>
+            <div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <h1>منظومة رادار قواعد التوزيع والاسترداد الفوري</h1>
+                    <span class="badge-sector">Big Team 01 (Saber Hussien)</span>
+                </div>
+                <div class="header-subtitle">نظام رصد كسر قواعد الـ 14 يوماً • استرداد عملاء الـ Old SS • درع حماية وتنبيهات مبكرة</div>
+            </div>
+        </div>
+        <div style="text-align: left;">
+            <div style="font-size: 11.5px; color: var(--text-muted);">تاريخ التدقيق والتحديث</div>
+            <div class="mono" style="font-size: 14px; color: #60A5FA; font-weight: 700;" id="lastUpdateText">2026-11-16</div>
+        </div>
+    </header>
+
+    <!-- KPI Stats Grid -->
+    <div class="stats-grid">
+        <div class="stat-card blue">
+            <div class="stat-title">🎯 عملاء جاهزون للاسترداد اليوم (القاعدة 1)</div>
+            <div class="stat-value text-blue" id="kpiReclaimUnrenewed">68</div>
+            <div class="stat-desc">طلاب خرجوا من فريقنا وفشل المالك الجديد في تجديدهم</div>
+        </div>
+        <div class="stat-card purple">
+            <div class="stat-title">🌊 طلاب Open Sea & Expired (القاعدة 6)</div>
+            <div class="stat-value text-purple" id="kpiOpenSea">93</div>
+            <div class="stat-desc">23 في حوض Expired + 70 في قوائم Mina مسجلين باسمنا</div>
+        </div>
+        <div class="stat-card green">
+            <div class="stat-title">👨‍👩‍👧‍👦 عائلات مشتركة ومنقسمة (القاعدة 4 & 5)</div>
+            <div class="stat-value text-green" id="kpiSplitFamilies">40</div>
+            <div class="stat-desc">عائلات موزعة بين موظفين مؤهلة للدمج أو Family Back</div>
+        </div>
+        <div class="stat-card orange">
+            <div class="stat-title">🟠 إنذار برتقالي دقيق (خلال 48 ساعة)</div>
+            <div class="stat-value text-orange" id="kpiHighRisk">43</div>
+            <div class="stat-desc">متبقي 24-48 ساعة للاتصال بهم قبل سحبهم قانونياً</div>
+        </div>
+        <div class="stat-card red">
+            <div class="stat-title">🔴 منطقة كسر القاعدة 1 (خطر حرج $\ge$ 14d)</div>
+            <div class="stat-value text-red" id="kpiCriticalDefense">2,824</div>
+            <div class="stat-desc">طلاب تجاوزوا 14 يوماً بدون مكالمة أو ملاحظة مسجلة</div>
+        </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-nav">
+        <button class="tab-btn active" onclick="switchTab('reclaim')">
+            🎯 رادار الاسترداد الهجومي (Offensive Reclaim)
+            <span class="tab-badge" id="badgeReclaimCount">200</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('defense')">
+            🛡️ درع الحماية والإنذار المبكر (Defense Shield)
+            <span class="tab-badge" id="badgeDefenseCount">3,990</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('family')">
+            👨‍👩‍👧‍👦 منظومة العائلات (Family Intelligence)
+            <span class="tab-badge" id="badgeFamilyCount">40</span>
+        </button>
+    </div>
+
+    <!-- Filter Control Panel -->
+    <div class="filter-panel">
+        
+        <!-- Search -->
+        <div class="filter-group" style="flex: 1.2;">
+            <label class="filter-label">🔍 بحث بالـ Student ID</label>
+            <input type="text" id="searchInput" class="search-input" placeholder="ادخل رقم الطالب (Student ID)..." onkeyup="applyFilters()">
+        </div>
+
+        <!-- SPECIAL REQUESTED FILTER: OLD SS FROM OUR TEAM -->
+        <div class="filter-group highlight-old-ss" style="flex: 1.5;">
+            <label class="filter-label">⭐ تصفية حسب: OLD SS من فريقي</label>
+            <select id="filterOldSS" class="filter-select" onchange="applyFilters()">
+                <option value="ALL">-- كل ممثلي الـ Old SS في فريقي --</option>
+            </select>
+        </div>
+
+        <!-- Rule Type Filter -->
+        <div class="filter-group" id="ruleTypeFilterGroup">
+            <label class="filter-label">📜 نوع القاعدة القانونية</label>
+            <select id="filterRuleType" class="filter-select" onchange="applyFilters()">
+                <option value="ALL">كل القواعد</option>
+                <option value="Rule 1">Rule 1 (Old EA > 14d)</option>
+                <option value="Rule 6">Rule 6 (Open Sea / Expired Pool)</option>
+                <option value="Rule 4">Rule 4 & 5 (Family Back)</option>
+            </select>
+        </div>
+
+        <!-- Risk / Status Filter -->
+        <div class="filter-group" id="statusFilterGroup">
+            <label class="filter-label">⚡ الحالة / الأولوية</label>
+            <select id="filterStatus" class="filter-select" onchange="applyFilters()">
+                <option value="ALL">كل الحالات</option>
+                <option value="Ready to Reclaim">جاهز للاسترداد فوراً</option>
+                <option value="Critical">🔴 خطر حرج (>=14d)</option>
+                <option value="High Risk">🟠 خطر داهم (12-13d)</option>
+                <option value="Warning">🟡 إنذار مبكر (10-11d)</option>
+            </select>
+        </div>
+
+        <!-- Export Button -->
+        <button class="btn-action" onclick="exportCurrentTableToCSV()">
+            📥 تصدير الكشف (CSV)
+        </button>
+    </div>
+
+    <!-- Main Table Container -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr id="tableHeadRow">
+                    <!-- Populated dynamically via JS -->
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Populated dynamically via JS -->
+            </tbody>
+        </table>
+        <div class="table-footer">
+            <div id="tableRecordCount">عرض 0 من 0 طالب</div>
+            <div class="pagination-btns" id="paginationControls">
+                <!-- Pagination buttons -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal Allocation Rules Quick Reference -->
+    <div class="rules-bar">
+        <div class="rule-card">
+            <div class="rule-card-title">1. Old EA – Request Lead Back</div>
+            <div class="rule-card-body">يحق للـ Old EA سحب العميل إذا مر أكثر من 14 يوماً عند الـ EA الحالي بدون إجراء أي مكالمة ولم يسجل أي ملاحظة (Remark).</div>
+        </div>
+        <div class="rule-card">
+            <div class="rule-card-title">2. Data Balance (48 Hours)</div>
+            <div class="rule-card-body">إذا نُقل العميل من الـ Data Balance، يمكن سحبه خلال 48 ساعة فقط بشرط وجود مكالمات وملاحظات خلال آخر 14 يوماً.</div>
+        </div>
+        <div class="rule-card">
+            <div class="rule-card-title">4. ABC Family Unification</div>
+            <div class="rule-card-body">إذا كان الطالب مدمجاً في CRM ضمن عائلة، يحق لمن يملك أحد المعرفات طلب ضم باقي أفراد العائلة لاسمه.</div>
+        </div>
+        <div class="rule-card">
+            <div class="rule-card-title">5. Family Back (Counter-Strike)</div>
+            <div class="rule-card-body">إذا سحب EA آخر عائلتك ولم يسدد العميل في نفس اليوم، يحق لك استرداد العائلة بالكامل في صباح اليوم التالي!</div>
+        </div>
+        <div class="rule-card">
+            <div class="rule-card-title">6. Open Sea Leads</div>
+            <div class="rule-card-body">أي عميل سقط في الـ Open Sea وكان مسجلاً باسمك سابقاً، يحق لك وحدك كـ Old EA طلب استرداده فوراً.</div>
+        </div>
+    </div>
+
+    <!-- Data Import -->
+    <script src="allocation_rules_data.js"></script>
+    <script>
+        let currentTab = 'reclaim';
+        let currentPage = 1;
+        const pageSize = 25;
+        let filteredData = [];
+
+        // Initialize App
+        window.addEventListener('DOMContentLoaded', () => {
+            if (!window.ALLOCATION_RULES_DATA) {
+                alert("تعذر قراءة ملف البيانات allocation_rules_data.js!");
+                return;
+            }
+            populateOldSSDropdown();
+            updateKPICounters();
+            switchTab('reclaim');
+        });
+
+        // Populate Old SS Dropdown
+        function populateOldSSDropdown() {
+            const select = document.getElementById('filterOldSS');
+            const data = window.ALLOCATION_RULES_DATA;
+            const oldSSSet = new Set();
+
+            // From reclaim
+            data.reclaim_opportunities.forEach(item => {
+                if (item.old_ss && item.old_ss !== 'undefined') oldSSSet.add(item.old_ss);
+            });
+
+            // From defense (reps)
+            data.defense_uncovered.forEach(item => {
+                if (item.rep && item.rep !== 'undefined') oldSSSet.add(item.rep);
+            });
+
+            // From families
+            data.split_families.forEach(item => {
+                if (item.old_ss) oldSSSet.add(item.old_ss);
+            });
+
+            const sortedSS = Array.from(oldSSSet).sort();
+            sortedSS.forEach(ss => {
+                const opt = document.createElement('option');
+                opt.value = ss;
+                opt.textContent = `👤 ${ss}`;
+                select.appendChild(opt);
+            });
+        }
+
+        // Update KPIs
+        function updateKPICounters() {
+            const stats = window.ALLOCATION_RULES_DATA.stats;
+            document.getElementById('kpiReclaimUnrenewed').textContent = stats.reclaim_unrenewed_rule1 || 68;
+            document.getElementById('kpiOpenSea').textContent = (stats.reclaim_expired_rule6 || 8) + (stats.reclaim_opensea_rule6 || 70);
+            document.getElementById('kpiSplitFamilies').textContent = stats.reclaim_families_rule4_5 || 40;
+            document.getElementById('kpiHighRisk').textContent = stats.high_defense_risk_12_13d || 43;
+            document.getElementById('kpiCriticalDefense').textContent = (stats.critical_defense_risk_14d || 2824).toLocaleString();
+            
+            document.getElementById('badgeReclaimCount').textContent = window.ALLOCATION_RULES_DATA.reclaim_opportunities.length;
+            document.getElementById('badgeDefenseCount').textContent = window.ALLOCATION_RULES_DATA.defense_uncovered.length;
+            document.getElementById('badgeFamilyCount').textContent = window.ALLOCATION_RULES_DATA.split_families.length;
+        }
+
+        // Switch Tab
+        function switchTab(tab) {
+            currentTab = tab;
+            currentPage = 1;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event ? event.currentTarget.classList.add('active') : document.querySelectorAll('.tab-btn')[0].classList.add('active');
+
+            renderTableHeaders();
+            applyFilters();
+        }
+
+        // Render Table Headers
+        function renderTableHeaders() {
+            const tr = document.getElementById('tableHeadRow');
+            if (currentTab === 'reclaim') {
+                tr.innerHTML = `
+                    <th>#</th>
+                    <th>Student ID</th>
+                    <th>OLD SS من فريقي</th>
+                    <th>المالك الحالي (Current EA)</th>
+                    <th>القطاع الحالي</th>
+                    <th>نوع القاعدة</th>
+                    <th>رصيد النقاط</th>
+                    <th>الاستهلاك</th>
+                    <th>الحالة</th>
+                    <th>الإجراء التكتيكي</th>
+                    <th>نسخ الطلب</th>
+                `;
+            } else if (currentTab === 'defense') {
+                tr.innerHTML = `
+                    <th>#</th>
+                    <th>Student ID</th>
+                    <th>ممثل فريقي (Current Rep)</th>
+                    <th>المجموعة (Team)</th>
+                    <th>حوض العميل (Pool)</th>
+                    <th>الحصص المحضورة</th>
+                    <th>آخر تواصل مسجل</th>
+                    <th>أيام الانقطاع</th>
+                    <th>مستوى الخطر</th>
+                    <th>الإجراء الإلزامي</th>
+                `;
+            } else if (currentTab === 'family') {
+                tr.innerHTML = `
+                    <th>#</th>
+                    <th>Family ID</th>
+                    <th>Student ID</th>
+                    <th>الممثل الحالي</th>
+                    <th>المجموعة</th>
+                    <th>منقسم مع</th>
+                    <th>أفراد العائلة</th>
+                    <th>الرصيد الكلي</th>
+                    <th>القاعدة المطبقة</th>
+                    <th>الإجراء المطلوب</th>
+                `;
+            }
+        }
+
+        // Apply Filters
+        function applyFilters() {
+            const searchVal = document.getElementById('searchInput').value.trim();
+            const oldSSVal = document.getElementById('filterOldSS').value;
+            const ruleVal = document.getElementById('filterRuleType').value;
+            const statusVal = document.getElementById('filterStatus').value;
+
+            let source = [];
+            if (currentTab === 'reclaim') source = window.ALLOCATION_RULES_DATA.reclaim_opportunities;
+            else if (currentTab === 'defense') source = window.ALLOCATION_RULES_DATA.defense_uncovered;
+            else if (currentTab === 'family') source = window.ALLOCATION_RULES_DATA.split_families;
+
+            filteredData = source.filter(item => {
+                // Search
+                if (searchVal && !String(item.student_id).includes(searchVal)) return false;
+
+                // OLD SS FILTER (THE USER PRIORITY FILTER!)
+                if (oldSSVal !== 'ALL') {
+                    if (currentTab === 'reclaim' && item.old_ss !== oldSSVal) return false;
+                    if (currentTab === 'defense' && item.rep !== oldSSVal) return false;
+                    if (currentTab === 'family' && item.old_ss !== oldSSVal) return false;
+                }
+
+                // Rule filter
+                if (ruleVal !== 'ALL') {
+                    if (currentTab === 'reclaim' && !String(item.rule_type).includes(ruleVal)) return false;
+                }
+
+                // Status filter
+                if (statusVal !== 'ALL') {
+                    if (currentTab === 'reclaim' && !String(item.status).includes(statusVal)) return false;
+                    if (currentTab === 'defense' && !String(item.risk_tier).includes(statusVal)) return false;
+                }
+
+                return true;
+            });
+
+            renderTableBody();
+        }
+
+        // Render Table Body
+        function renderTableBody() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            const start = (currentPage - 1) * pageSize;
+            const end = start + pageSize;
+            const pageItems = filteredData.slice(start, end);
+
+            document.getElementById('tableRecordCount').textContent = `عرض ${pageItems.length} من إجمالي ${filteredData.length} طالب مؤهل`;
+
+            if (pageItems.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; padding: 40px; color: var(--text-muted);">لا توجد نتائج مطابقة لشروط البحث والتصفية المختارة.</td></tr>`;
+                renderPagination(0);
+                return;
+            }
+
+            pageItems.forEach((item, idx) => {
+                const tr = document.createElement('tr');
+                const rowNum = start + idx + 1;
+
+                if (currentTab === 'reclaim') {
+                    const badgeClass = item.renewed_with_new_ea ? 'badge-safe' : 'badge-critical';
+                    tr.innerHTML = `
+                        <td class="mono" style="color: var(--text-muted);">${rowNum}</td>
+                        <td class="mono" style="font-weight: 800; color: #60A5FA;">${item.student_id}</td>
+                        <td style="font-weight: 700; color: #FCD34D;">👤 ${item.old_ss || '-'}</td>
+                        <td>${item.current_agent || '-'}</td>
+                        <td style="font-size: 11.5px; color: var(--text-muted);">${item.current_big_team || '-'}</td>
+                        <td><span class="badge badge-purple">${item.rule_type}</span></td>
+                        <td class="mono" style="font-weight: 800; color: #10B981;">${item.current_points || 0}</td>
+                        <td class="mono">${item.consumption || 0}</td>
+                        <td><span class="badge ${badgeClass}">${item.status}</span></td>
+                        <td style="font-size: 12px; font-weight: 700; color: #93C5FD;">${item.recommended_action}</td>
+                        <td><button class="btn-copy" onclick="copyClaimTicket(${item.student_id}, '${item.old_ss}', '${item.rule_type}')">نسخ الطلب</button></td>
+                    `;
+                } else if (currentTab === 'defense') {
+                    let riskBadge = 'badge-safe';
+                    if (item.risk_badge === 'critical') riskBadge = 'badge-critical';
+                    else if (item.risk_badge === 'high_risk') riskBadge = 'badge-high';
+                    else if (item.risk_badge === 'warning') riskBadge = 'badge-warning';
+
+                    tr.innerHTML = `
+                        <td class="mono" style="color: var(--text-muted);">${rowNum}</td>
+                        <td class="mono" style="font-weight: 800; color: #60A5FA;">${item.student_id}</td>
+                        <td style="font-weight: 700;">👤 ${item.rep}</td>
+                        <td>${item.team}</td>
+                        <td><span class="badge badge-blue">${item.pool}</span></td>
+                        <td class="mono" style="font-weight: 700;">${item.attended_classes} cls</td>
+                        <td class="mono" style="font-size: 11.5px; color: var(--text-muted);">${item.last_connection}</td>
+                        <td class="mono" style="font-weight: 900; font-size: 14px; color: ${item.days_inactive >= 14 ? '#EF4444' : (item.days_inactive >= 12 ? '#F59E0B' : '#10B981')};">${item.days_inactive} يوم</td>
+                        <td><span class="badge ${riskBadge}">${item.risk_tier}</span></td>
+                        <td style="font-size: 12px; font-weight: 700; color: #FCA5A5;">${item.action_required}</td>
+                    `;
+                } else if (currentTab === 'family') {
+                    tr.innerHTML = `
+                        <td class="mono" style="color: var(--text-muted);">${rowNum}</td>
+                        <td class="mono" style="font-weight: 900; color: #A78BFA;">FAM-${item.family_id}</td>
+                        <td class="mono" style="font-weight: 800; color: #60A5FA;">${item.student_id}</td>
+                        <td style="font-weight: 700;">👤 ${item.old_ss}</td>
+                        <td>${item.old_team}</td>
+                        <td style="color: #F87171; font-weight: 700;">${item.split_with ? item.split_with.join(', ') : '-'}</td>
+                        <td class="mono" style="font-size: 11px;">${item.family_members ? item.family_members.join(' • ') : '-'}</td>
+                        <td class="mono" style="font-weight: 800; color: #10B981;">${item.current_points}</td>
+                        <td><span class="badge badge-purple">${item.rule_type}</span></td>
+                        <td style="font-size: 12px; font-weight: 700; color: #93C5FD;">${item.recommended_action}</td>
+                    `;
+                }
+
+                tbody.appendChild(tr);
+            });
+
+            renderPagination(filteredData.length);
+        }
+
+        // Render Pagination
+        function renderPagination(totalItems) {
+            const container = document.getElementById('paginationControls');
+            container.innerHTML = '';
+            const totalPages = Math.ceil(totalItems / pageSize);
+            if (totalPages <= 1) return;
+
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'page-btn';
+            prevBtn.textContent = 'السابق';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.onclick = () => { if (currentPage > 1) { currentPage--; renderTableBody(); } };
+            container.appendChild(prevBtn);
+
+            const info = document.createElement('span');
+            info.style.padding = '6px 12px';
+            info.style.color = '#94A3B8';
+            info.textContent = `صفحة ${currentPage} من ${totalPages}`;
+            container.appendChild(info);
+
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'page-btn';
+            nextBtn.textContent = 'التالي';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.onclick = () => { if (currentPage < totalPages) { currentPage++; renderTableBody(); } };
+            container.appendChild(nextBtn);
+        }
+
+        // Copy Claim Ticket
+        function copyClaimTicket(sid, oldSS, rule) {
+            const ticket = `طلب استرداد عميل (Lead Reclaim Ticket)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Student ID: ${sid}
+- Old EA (السابق): ${oldSS}
+- المستند القانوني: ${rule}
+- الحالة: مرت 14 يوماً دون نشاط / أو سقوط في الـ Open Sea
+- المطلوب: إعادة تعيين الطالب للمالك السابق (${oldSS}) فوراً طبقاً للائحة التوزيع.`;
+
+            navigator.clipboard.writeText(ticket).then(() => {
+                alert(`✅ تم نسخ بطاقة استرداد الطالب رقم (${sid}) بنجاح!\nجاهزة للإرسال للعمليات أو الـ CRM.`);
+            }).catch(() => {
+                prompt("انسخ نص الطلب أدناه:", ticket);
+            });
+        }
+
+        // Export Table to CSV
+        function exportCurrentTableToCSV() {
+            if (filteredData.length === 0) {
+                alert("لا توجد بيانات لتصديرها!");
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
+            const keys = Object.keys(filteredData[0]);
+            csvContent += keys.join(",") + "\r\n";
+
+            filteredData.forEach(row => {
+                const values = keys.map(k => `"${String(row[k] || '').replace(/"/g, '""')}"`);
+                csvContent += values.join(",") + "\r\n";
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `Allocation_Rules_${currentTab}_export.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

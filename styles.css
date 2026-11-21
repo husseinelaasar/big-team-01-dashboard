@@ -8391,3 +8391,45 @@ html[dir="rtl"] .toki-input {
   animation: tokiGlow 1.8s infinite;
 }
 
+
+
+/* Table & Card Snap & Direct DingTalk Broadcast Buttons */
+.btn-table-snap {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.btn-table-snap:hover {
+  transform: translateY(-1px) !important;
+  filter: brightness(1.12) !important;
+}
+.btn-table-snap:active {
+  transform: translateY(0) !important;
+}
+.btn-snap-mega {
+  background: linear-gradient(135deg, #059669, #10b981) !important;
+  border: 1.5px solid #34d399 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35) !important;
+}
+.btn-snap-mega:hover {
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.55) !important;
+}
+.btn-snap-copy {
+  background: linear-gradient(135deg, #4f46e5, #6366f1) !important;
+  border: 1.5px solid #818cf8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35) !important;
+}
+.btn-snap-dl {
+  background: rgba(99, 102, 241, 0.12) !important;
+  border: 1.5px solid rgba(99, 102, 241, 0.35) !important;
+  color: var(--text-primary, #ffffff) !important;
+}

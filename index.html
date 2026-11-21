@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261117_194211">
+  <link rel="stylesheet" href="styles.css?v=20261121_104223">
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -79,7 +79,7 @@
         <div>
           <h1 class="nav-title">Big Team 01 � <span class="gradient-text">Executive Dashboard</span></h1>
           <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">
-            Senior Manager: <strong style="color: #f8fafc;">Hussein El A'sar</strong> | Month: <strong style="color: #38bdf8;">November 2026 (MTD Day 17/30)</strong>
+            Senior Manager: <strong style="color: #f8fafc;">Hussein El A'sar</strong> | Month: <strong style="color: #38bdf8;">November 2026 (MTD Day 21/30)</strong>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
         <!-- Live Data Badges -->
         <div class="data-freshness">
           <span class="pulse-dot"></span>
-          <span id="dataDate">Nov 1-17, 2026 (Day 17)</span>
+          <span id="dataDate">Nov 1-21, 2026 (Day 21)</span>
         </div>
         <div class="nav-source-badge" title="Verified against CRM Renewal Performance & POOL_Detail16">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -309,7 +309,7 @@
 
         <div class="sprint-velocity-metric">
           <div class="velocity-label">DAILY RUN RATE NEEDED</div>
-          <div class="velocity-value" id="hudDailyNeeded">$6,885 <span>/day</span></div>
+          <div class="velocity-value" id="hudDailyNeeded">$8,777 <span>/day</span></div>
           <div class="velocity-badge">ON TRACK ?</div>
         </div>
       </div>
@@ -355,10 +355,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <div class="kpi-label">Total Cash Revenue (MTD)</div>
-          <div class="kpi-value" id="totalCash">$84,030</div>
-          <div class="kpi-sub" id="cashTarget">Target: $173,541 | Projected: $148,288</div>
+          <div class="kpi-value" id="totalCash">$94,545</div>
+          <div class="kpi-sub" id="cashTarget">Target: $173,541 | Projected: $135,064</div>
           <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 0%;"></div></div>
-          <div class="kpi-pct" id="cashPct">48.42% Achieved</div>
+          <div class="kpi-pct" id="cashPct">54.48% Achieved</div>
         </div>
 
         <!-- 2. Total Contracts & Breakdown -->
@@ -367,8 +367,8 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
           <div class="kpi-label">Total Contracts (Orders)</div>
-          <div class="kpi-value" id="totalContracts">88</div>
-          <div class="kpi-sub" id="contractsSub">Normal: 137 | Upgrade M2: 17</div>
+          <div class="kpi-value" id="totalContracts">98</div>
+          <div class="kpi-sub" id="contractsSub">Normal: 172 | Upgrade M2: 20</div>
           <div class="kpi-progress"><div class="kpi-bar" id="contractsBar" style="width: 0%;"></div></div>
           <div class="kpi-pct" id="contractsPct">Avg: $1,093 / contract</div>
         </div>
@@ -378,11 +378,11 @@
           <div class="kpi-icon" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <div class="kpi-label">Day 17 Target Benchmark</div>
-          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">48.42%</div>
-          <div class="kpi-sub" id="achSub">Day 17 Benchmark: 43% | Target: $173,541</div>
+          <div class="kpi-label">Day 21 Target Benchmark</div>
+          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">54.48%</div>
+          <div class="kpi-sub" id="achSub">Day 21 Benchmark: 59% | Target: $173,541</div>
           <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 0%; background: linear-gradient(90deg, #6366f1, #38bdf8);"></div></div>
-          <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 17 of 30 | Expected Target Pace: 43% (13 Days Left)</div>
+          <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 21 of 30 | Expected Target Pace: 59% (9 Days Left)</div>
         </div>
 
         <!-- 4. Active Reps & Upgrade Conversion -->
@@ -392,9 +392,9 @@
           </div>
           <div class="kpi-label">Active Reps & M2 Conversion</div>
           <div class="kpi-value" id="totalReps">19 Reps</div>
-          <div class="kpi-sub" id="baseLeads">17 M2 Upgrades / 438 Pool Base | 20% Goal: 88 (71 needed)</div>
+          <div class="kpi-sub" id="baseLeads">20 M2 Upgrades / 438 Pool Base | 20% Goal: 88 (68 needed)</div>
           <div class="kpi-progress"><div class="kpi-bar" id="repsBar" style="width: 0%;"></div></div>
-          <div class="kpi-pct" id="repsPct">3.9% M2 Upgrade Conversion (17/438)</div>
+          <div class="kpi-pct" id="repsPct">4.6% M2 Upgrade Conversion (20/438)</div>
         </div>
       </div>
 
@@ -429,10 +429,10 @@
       <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
         <div>
           <h2>Small Team Performance Breakdown</h2>
-          <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1�15, 2026 (MTD Day 17/30)</span>
+          <span class="source-tag">Teams 01, 05, 10, 13, 30 | Nov 1�15, 2026 (MTD Day 21/30)</span>
         </div>
         <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-          <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('smallTeamCards', 'Big Team 01 — بطاقات الفرق الـ 5')" title="إرسال بطاقات الفرق الـ 5 فوراً إلى مجموعة Mega في دنج توك">🚀 إرسال لـ Mega Group مباشر</button>
+          <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('smallTeamCards', 'Big Team 01 — Small Teams Performance Cards')" title="Send Small Teams performance cards directly to DingTalk Mega Group">🚀 Send to Mega Group</button>
           <button type="button" class="btn-card-snap" onclick="copyCardImage('smallTeamCards', 'All 5 Small Teams')" title="Copy all 5 team cards to paste directly in DingTalk" style="cursor: pointer; background: linear-gradient(135deg, #4f46e5, #6366f1); border: 1.5px solid #818cf8; color: #ffffff; border-radius: 8px; padding: 6px 14px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35); transition: all 0.2s ease;">
             ?? Copy 5 Team Cards for DingTalk
           </button>
@@ -524,8 +524,8 @@
           <label style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-left: 8px;">Sort By:</label>
           <select id="sortFilter" class="filter-select">
             <option value="ach-desc" selected>Cash Achievement % (High to Low)</option>
-            <option value="last-deal-desc">⚠️ Last Deal: Longest Inactive (أطول فترة ركود)</option>
-            <option value="last-deal-asc">⏱️ Last Deal: Most Recent First (أحدث الصفقات)</option>
+            <option value="last-deal-desc" data-i18n="sortLastDealDesc">⚠️ Last Deal: Longest Inactive</option>
+            <option value="last-deal-asc" data-i18n="sortLastDealAsc">⏱️ Last Deal: Most Recent First</option>
             <option value="comm-desc">?? Expected Commission (Highest Payout)</option>
             <option value="upg-rate-desc">Upgrade M2 Conversion % (High to Low)</option>
             <option value="cover-rate-desc">M2 Cover Rate % (High to Low)</option>
@@ -540,13 +540,13 @@
           <button id="viewToggleCards" class="view-btn active">Cards View</button>
           <button id="viewToggleTable" class="view-btn">Table View</button>
           <div style="width: 1px; height: 24px; background: rgba(255,255,255,0.15); margin: 0 4px;"></div>
-          <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('individualTableView', 'Big Team 01 — جدول أداء المبيعات الشامل')" title="إرسال صورة الجدول فوراً إلى مجموعة Mega Group في دنج توك">
-            🚀 إرسال لـ Mega Group مباشر
+          <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('individualTableView', 'Big Team 01 — Sales Specialist Performance Roster')" title="Send high-res table snapshot directly to DingTalk Mega Group">
+            🚀 Send to Mega Group
           </button>
-          <button type="button" class="btn-table-snap btn-snap-copy" onclick="copyElementImage('individualTableView', 'جدول أداء المبيعات الشامل')" title="نسخ صورة الجدول بدقة عالية للصقها في دنج توك (Ctrl+V)">
-            📋 نسخ صورة الجدول
+          <button type="button" class="btn-table-snap btn-snap-copy" onclick="copyElementImage('individualTableView', 'Sales Specialist Performance Roster')" title="Copy high-res table snapshot to clipboard (Ctrl+V to paste in DingTalk)">
+            📋 Copy Table Image
           </button>
-          <button type="button" class="btn-table-snap btn-snap-dl" onclick="downloadElementImage('individualTableView', 'Big_Team_01_Individual_Performance_Table')" title="تحميل صورة الجدول كملف PNG">
+          <button type="button" class="btn-table-snap btn-snap-dl" onclick="downloadElementImage('individualTableView', 'Big_Team_01_Individual_Performance_Table')" title="Download high-res table snapshot as PNG">
             📷 PNG
           </button>
         </div>
@@ -562,13 +562,13 @@
             <span class="pill-badge pill-badge-emerald" style="font-size: 0.70rem; padding: 2px 8px; font-weight: 800;">18 Reps Active � 100% Balanced</span>
           </div>
           <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
-            <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('individualTableView', 'Big Team 01 — جدول أداء المبيعات الشامل')" title="إرسال صورة الجدول فوراً إلى مجموعة Mega Group في دنج توك" style="padding: 4px 10px; font-size: 0.74rem;">
-              🚀 إرسال لـ Mega Group
+            <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('individualTableView', 'Big Team 01 — Sales Specialist Performance Roster')" title="Send high-res table snapshot directly to DingTalk Mega Group" style="padding: 4px 10px; font-size: 0.74rem;">
+              🚀 Send to Mega Group
             </button>
-            <button type="button" class="btn-table-snap btn-snap-copy" onclick="copyElementImage('individualTableView', 'جدول أداء المبيعات الشامل')" title="نسخ صورة الجدول بدقة عالية" style="padding: 4px 10px; font-size: 0.74rem;">
-              📋 نسخ صورة
+            <button type="button" class="btn-table-snap btn-snap-copy" onclick="copyElementImage('individualTableView', 'Sales Specialist Performance Roster')" title="Copy high-res table snapshot to clipboard (Ctrl+V)" style="padding: 4px 10px; font-size: 0.74rem;">
+              📋 Copy Table
             </button>
-            <button type="button" class="btn-table-snap btn-snap-dl" onclick="downloadElementImage('individualTableView', 'Big_Team_01_Individual_Performance_Table')" title="تحميل PNG" style="padding: 4px 8px; font-size: 0.74rem;">
+            <button type="button" class="btn-table-snap btn-snap-dl" onclick="downloadElementImage('individualTableView', 'Big_Team_01_Individual_Performance_Table')" title="Download high-res table snapshot as PNG" style="padding: 4px 8px; font-size: 0.74rem;">
               📷 PNG
             </button>
           </div>
@@ -579,19 +579,19 @@
               <th style="width: 24px; padding: 6px 3px;">#</th>
               <th style="text-align: left !important; min-width: 110px; padding: 6px 4px;">Rep Name</th>
               <th style="min-width: 65px; padding: 6px 3px;">Team</th>
-              <th style="min-width: 65px; padding: 6px 3px;">Cash ($)</th>
-              <th style="min-width: 65px; padding: 6px 3px;">Target ($)</th>
+              <th class="th-currency th-cash" style="min-width: 65px; padding: 6px 3px;">Cash <span class="curr-unit">($)</span></th>
+              <th class="th-currency th-target" style="min-width: 65px; padding: 6px 3px;">Target <span class="curr-unit">($)</span></th>
               <th style="min-width: 55px; padding: 6px 3px;">Ach %</th>
               <th style="min-width: 75px; color: #38bdf8; font-weight: 800; padding: 6px 3px;">Pace</th>
-              <th style="min-width: 115px; color: #8b5cf6; font-weight: 800; background: rgba(139, 92, 246, 0.08); border-left: 1.5px solid rgba(139, 92, 246, 0.3); border-right: 1.5px solid rgba(139, 92, 246, 0.3); padding: 6px 4px;" title="Next day benchmark target and cash needed per specialist">?? Next Day BM (D16: 41%)</th>
+              <th style="min-width: 115px; color: #8b5cf6; font-weight: 800; background: rgba(139, 92, 246, 0.08); border-left: 1.5px solid rgba(139, 92, 246, 0.3); border-right: 1.5px solid rgba(139, 92, 246, 0.3); padding: 6px 4px;" title="Next day benchmark target and cash needed per specialist">🚀 Next Day BM (D19: 53%)</th>
               <th style="min-width: 35px; padding: 6px 2px;">M2</th>
               <th style="min-width: 48px; padding: 6px 2px; color: #38bdf8; font-weight: 800;">Renewal</th>
               <th style="min-width: 35px; padding: 6px 2px;">Base</th>
               <th style="min-width: 95px; color: #c084fc; font-weight: 800; background: rgba(192, 132, 252, 0.08); border-left: 1px solid rgba(192, 132, 252, 0.25); border-right: 1px solid rgba(192, 132, 252, 0.25); padding: 6px 4px;">&#127919; 20% Goal (Needed)</th>
               <th style="min-width: 55px; padding: 6px 3px;">Conv %</th>
-              <th style="min-width: 80px; color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.25); padding: 6px 4px;">&#128176; Exp. Comm ($)</th>
-              <th style="min-width: 80px; color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.05); padding: 6px 4px;">&#128640; Next Band ($)</th>
-              <th style="min-width: 70px; color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.05); border-right: 1px solid rgba(250, 204, 21, 0.25); padding: 6px 4px;">&#127919; Gap ($)</th>
+              <th class="th-currency th-exp-comm" style="min-width: 80px; color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.05); border-left: 1px solid rgba(16, 185, 129, 0.25); padding: 6px 4px;">&#128176; Exp. Comm <span class="curr-unit">($)</span></th>
+              <th class="th-currency th-next-band" style="min-width: 80px; color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.05); padding: 6px 4px;">&#128640; Next Band <span class="curr-unit">($)</span></th>
+              <th class="th-currency th-gap" style="min-width: 70px; color: #facc15; font-weight: 800; background: rgba(250, 204, 21, 0.05); border-right: 1px solid rgba(250, 204, 21, 0.25); padding: 6px 4px;">&#127919; Gap <span class="curr-unit">($)</span></th>
               <th style="min-width: 50px; color: #facc15; font-weight: 800; padding: 6px 3px;">Touch</th>
               <th style="min-width: 45px; padding: 6px 3px;">Contr.</th>
               <th style="min-width: 105px; padding: 6px 4px; color: #f59e0b; font-weight: 800; background: rgba(245, 158, 11, 0.05); border-left: 1px solid rgba(245, 158, 11, 0.25); border-right: 1px solid rgba(245, 158, 11, 0.25);" title="Days elapsed since the specialist's last closed contract (Risk Level: 1-3d Green, 4-7d Amber, >7d Red)">⏱️ Last Deal</th>
@@ -827,13 +827,13 @@
         </div>
         <div style="display: flex; align-items: center; gap: 8px;">
           <input type="text" id="upgradeSearchInput" class="modern-input" placeholder="🔍 Search rep name..." style="width: 180px;">
-          <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('masterUpgradeTable', 'Big Team 01 — جدول ترقية M2 (هدف 20%)')" title="إرسال صورة جدول الترقية فوراً إلى Mega Group في دنج توك">
-            🚀 إرسال لـ Mega Group
+          <button type="button" class="btn-table-snap btn-snap-mega" onclick="sendElementToMegaGroup('masterUpgradeTable', 'Big Team 01 — M2 Upgrade Table (20% Target)')" title="Send Upgrade Table directly to DingTalk Mega Group">
+            🚀 Send to Mega Group
           </button>
-          <button type="button" class="btn-table-snap btn-snap-copy" onclick="copyElementImage('masterUpgradeTable', 'جدول ترقية M2')" title="نسخ صورة جدول الترقية">
-            📋 نسخ صورة
+          <button type="button" class="btn-table-snap btn-snap-copy" onclick="copyElementImage('masterUpgradeTable', 'M2 Upgrade Table')" title="Copy high-res Upgrade Table image to clipboard (Ctrl+V)">
+            📋 Copy Table
           </button>
-          <button type="button" class="btn-table-snap btn-snap-dl" onclick="downloadElementImage('masterUpgradeTable', 'Big_Team_01_Early_Upgrade_Table')" title="تحميل PNG">
+          <button type="button" class="btn-table-snap btn-snap-dl" onclick="downloadElementImage('masterUpgradeTable', 'Big_Team_01_Early_Upgrade_Table')" title="Download Upgrade Table image as PNG">
             📷 PNG
           </button>
         </div>
@@ -2072,7 +2072,7 @@
             Cumulative month-to-date tracking across all October operational days with interactive multi-metric charts and rep velocity.
           </p>
         </div>
-        <span class="source-tag">Timeline: 1 Nov ? 7 Nov (MTD Day 17/30)</span>
+        <span class="source-tag">Timeline: 1 Nov ? 7 Nov (MTD Day 21/30)</span>
       </div>
 
       <!-- Controls & Filters -->
@@ -2232,9 +2232,9 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js" defer></script>
-  <script src="dashboard.js?v=20261117_194211" defer></script>
-  <script src="dashboard_ai_command_suite.js?v=20261117134440" defer></script>
-  <script src="dashboard_i18n.js?v=1794910700063" defer></script>
+  <script src="dashboard.js?v=20261121_104223" defer></script>
+  <script src="dashboard_ai_command_suite.js?v=1795000568518" defer></script>
+  <script src="dashboard_i18n.js?v=1795000568518" defer></script>
   <script src="dashboard_voice_assistant.js?v=20261117_204500" defer></script>
 
   <script>
@@ -2333,6 +2333,25 @@
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -29,9 +29,9 @@
     1: 5,   2: 8,   3: 11,  4: 14,  5: 17,
     6: 20,  7: 23,  8: 24,  9: 25,  10: 26,
     11: 29, 12: 32, 13: 35, 14: 38, 15: 40,
-    16: 41, 17: 43, 18: 46, 19: 49, 20: 51,
-    21: 54, 22: 56, 23: 57, 24: 58, 25: 60,
-    26: 64, 27: 76, 28: 83, 29: 90, 30: 96,
+    16: 41, 17: 43, 18: 50, 19: 53, 20: 56,
+    21: 59, 22: 61, 23: 63, 24: 65, 25: 68,
+    26: 74, 27: 80, 28: 87, 29: 94, 30: 100,
     31: 102
   };
 
@@ -49,19 +49,40 @@
     return '$' + Math.round(amountUSD).toLocaleString('en-US');
   }
 
+  function updateCurrencyHeaders(curr) {
+    const isSAR = curr === 'SAR';
+    const symbol = isSAR ? '(SAR)' : '($)';
+    document.querySelectorAll('.curr-unit').forEach(el => {
+      el.textContent = symbol;
+    });
+    document.querySelectorAll('th').forEach(th => {
+      if (isSAR && th.textContent.includes('($)')) {
+        th.innerHTML = th.innerHTML.replace(/\(\$\)/g, '(SAR)');
+      } else if (!isSAR && th.textContent.includes('(SAR)')) {
+        th.innerHTML = th.innerHTML.replace(/\(SAR\)/g, '($)');
+      }
+    });
+  }
+
   function setDashboardCurrency(curr) {
     activeCurrency = curr;
     try { localStorage.setItem('bt01_currency', curr); } catch (e) {}
     updateCurrencyButtons();
     window.fmtCurr = formatMoney;
     window.__activeCurrency = curr;
+    updateCurrencyHeaders(curr);
 
     if (window.__model) {
-      if (typeof window.renderKPIs === 'function') window.renderKPIs(window.__model);
-      if (typeof window.renderOverviewTable === 'function') window.renderOverviewTable(window.__model);
-      if (typeof window.renderSmallTeamsTab === 'function') window.renderSmallTeamsTab(window.__model);
-      if (typeof window.renderIndividualsTab === 'function') window.renderIndividualsTab(window.__model);
-      if (typeof window.renderBigTeamSummary === 'function') window.renderBigTeamSummary(window.__model);
+      if (typeof window.renderAll === 'function') {
+        window.renderAll(window.__model);
+      } else {
+        if (typeof window.renderKPIs === 'function') window.renderKPIs(window.__model);
+        if (typeof window.renderOverviewTable === 'function') window.renderOverviewTable(window.__model);
+        if (typeof window.renderSmallTeamsTab === 'function') window.renderSmallTeamsTab(window.__model);
+        if (typeof window.renderIndividualsTab === 'function') window.renderIndividualsTab(window.__model);
+        if (typeof window.renderBigTeamSummary === 'function') window.renderBigTeamSummary(window.__model);
+        if (typeof window.renderUpgradeTab === 'function') window.renderUpgradeTab(window.__model);
+      }
     }
     renderDailyActionPlan();
   }
@@ -836,7 +857,10 @@ Let's maintain focus, accelerate momentum, and smash our targets!`;
   // 11. INITIALIZATION & DOM HOOKS
   // =========================================================================
   function initSuite() {
+    window.fmtCurr = formatMoney;
+    window.__activeCurrency = activeCurrency;
     updateCurrencyButtons();
+    updateCurrencyHeaders(activeCurrency);
     renderAiVoiceSimulatorCard();
     createFloatingAiWidget();
 
