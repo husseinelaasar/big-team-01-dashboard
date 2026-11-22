@@ -21,8 +21,22 @@
   // =========================================================================
   const SAR_EXCHANGE_RATE = 3.75;
   let activeCurrency = localStorage.getItem('bt01_currency') || 'USD';
-  let activeSimulationDay = 16;
-  const LIVE_MTD_DAY = 16;
+  function getSuiteCurrentDay() {
+    if (typeof window !== 'undefined' && window.__model && window.__model.summary && typeof window.__model.summary.daysPassed === 'number' && window.__model.summary.daysPassed > 0) {
+      return window.__model.summary.daysPassed;
+    }
+    if (typeof document !== 'undefined') {
+      const b = document.body ? document.body.innerText : '';
+      const m = b.match(/Day\s*(\d{1,2})/i);
+      if (m && parseInt(m[1], 10) > 0 && parseInt(m[1], 10) <= 31) {
+        return parseInt(m[1], 10);
+      }
+    }
+    const today = new Date().getDate();
+    return (today >= 1 && today <= 31) ? today : 22;
+  }
+  let activeSimulationDay = getSuiteCurrentDay();
+  const LIVE_MTD_DAY = getSuiteCurrentDay();
   let activeActionPill = 'all';
 
   const OFFICIAL_PACING = {
@@ -226,13 +240,17 @@
     const topRepName = topRep ? topRep.name.replace(/^(ME-|EGSS\d+-|EOSS\d+-|EGLP\d+-)/i, '') : '';
     const behindCount = m.individuals.filter(r => r.achievement < currBM).length;
 
+    const daysLeft = typeof s.daysLeft === 'number' ? s.daysLeft : Math.max(1, 30 - activeSimulationDay);
+    const target20 = Math.ceil((s.totalBase || 438) * 0.20);
+    const renewalsClosed = s.totalRenewals !== undefined ? s.totalRenewals : (s.m2Renewals || 0);
+
     const script = `Good day, Senior Management. Here is the operational command briefing for Big Team 01. ` +
-      `Today is MTD Day 16 of November. ` +
+      `Today is MTD Day ${activeSimulationDay} of November. ` +
       `Total cash achieved stands at ${formatMoney(s.totalCash)}, representing ${s.achievement.toFixed(1)} percent of the monthly target ${formatMoney(s.totalTarget)}. ` +
-      (isAhead ? `The sector is pacing +${aheadDelta} percentage points ahead of today's ${currBM} percent benchmark. ` : `The team is currently behind today's benchmark. `) +
-      `The total revenue gap is ${formatMoney(s.totalGap)}, requiring an average closing run-rate of ${formatMoney(s.dailyNeeded)} per day across the remaining 14 days. ` +
+      (isAhead ? `The sector is pacing +${aheadDelta} percentage points ahead of today's ${currBM} percent benchmark. ` : `The team is currently behind today's benchmark (${currBM} percent). `) +
+      `The total revenue gap is ${formatMoney(s.totalGap)}, requiring an average closing run-rate of ${formatMoney(s.dailyNeeded)} per day across the remaining ${daysLeft} days. ` +
       `Our sector champion today is ${topRepName} with ${topRep ? topRep.achievement.toFixed(1) : 0} percent achievement and ${topRep ? topRep.contracts : 0} closed deals. ` +
-      `Operational priorities for today: first, accelerate M2 upgrade conversions, where 15 of 88 target deals have closed. ` +
+      `Operational priorities for today: first, accelerate M2 upgrade conversions, where ${renewalsClosed} of ${target20} target deals have closed. ` +
       `Second, conduct targeted 1-on-1 coaching for the ${behindCount} sales specialists currently behind benchmark.`;
 
     displayTranscript(script, 'Executive Briefing');
@@ -293,8 +311,11 @@
       const m = window.__model;
       if (!m) return;
       const s = m.summary;
-      const currBM = OFFICIAL_PACING[activeSimulationDay] || 41;
-      responseText = `Big Team 01 has achieved ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), pacing +${(s.achievement - currBM).toFixed(1)}% ahead of Day 16 benchmark. Total gap is ${formatMoney(s.totalGap)}.`;
+      const currBM = OFFICIAL_PACING[activeSimulationDay] || 61;
+      const isAhead = s.achievement >= currBM;
+      const delta = (s.achievement - currBM).toFixed(1);
+      const paceTxt = isAhead ? `pacing +${delta}% ahead of Day ${activeSimulationDay} benchmark (${currBM}%)` : `pacing ${delta}% behind Day ${activeSimulationDay} benchmark (${currBM}%)`;
+      responseText = `Big Team 01 has achieved ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), ${paceTxt}. Total gap is ${formatMoney(s.totalGap)}.`;
     }
 
     displayTranscript(responseText, categoryTitle);
@@ -810,13 +831,20 @@
     const topReps = [...m.individuals].sort((a, b) => b.achievement - a.achievement).slice(0, 3);
     const behindCount = m.individuals.filter(r => r.achievement < currBM).length;
 
+    const curDay = activeSimulationDay || getSuiteCurrentDay();
+    const isAhead = s.achievement >= currBM;
+    const paceStr = isAhead ? `+${(s.achievement - currBM).toFixed(1)}% ahead` : `${(s.achievement - currBM).toFixed(1)}% behind`;
+    const target20 = Math.ceil((s.totalBase || 438) * 0.20);
+    const renewalsClosed = s.totalRenewals !== undefined ? s.totalRenewals : (s.m2Renewals || 0);
+    const m2Needed = Math.max(0, target20 - renewalsClosed);
+
     const text = `⚡ [51Talk] Daily Operational Action Plan — Big Team 01
-📅 Date: November 16, 2026 (MTD Day 16 of 30)
+📅 Date: November ${curDay}, 2026 (MTD Day ${curDay} of 30)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 💰 Financial Velocity & Pacing:
 • Cash Achieved: ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%)
 • Monthly Target: ${formatMoney(s.totalTarget)}
-• Day 16 Benchmark: ${currBM}% (+${(s.achievement - currBM).toFixed(1)}% ahead)
+• Day ${curDay} Benchmark: ${currBM}% (${paceStr})
 • Remaining Cash Gap: ${formatMoney(s.totalGap)}
 • Required Daily Run-Rate: ${formatMoney(s.dailyNeeded)}/day
 

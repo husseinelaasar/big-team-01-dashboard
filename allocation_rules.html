@@ -1585,15 +1585,26 @@
           <input type="text" id="filterSearch" class="modern-input" placeholder="ادخل Student ID أو اسم الممثل (Current أو Old SS)..." onkeyup="triggerFilter()">
         </div>
 
-        <!-- OLD SS Priority Filter -->
-        <div class="filter-group">
-          <label style="color: #fcd34d;">
-            <span>⭐</span>
-            <span id="repsLabelText">تصفية حسب ممثلي الفريق:</span>
+        <!-- Special SS Name & Reclaim Rights Filter -->
+        <div class="filter-group" style="flex: 1.35; min-width: 290px;">
+          <label style="color: #fcd34d; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 5px;">
+              <span>👤</span>
+              <span id="repsLabelText" style="font-weight: 800;">تصفية خاصة بمستشار المبيعات (Special SS):</span>
+            </div>
+            <span id="ssActiveBadge" style="display: none; font-size: 0.68rem; background: #38bdf8; color: #02132b; padding: 1px 6px; border-radius: 4px; font-weight: 800;">مفعل</span>
           </label>
-          <select id="selectOldSS" class="modern-select" onchange="triggerFilter()">
-            <option value="ALL">-- جميع ممثلي فريقي الـ 20 --</option>
-          </select>
+          <div style="display: flex; gap: 6px; align-items: center;">
+            <select id="selectOldSS" class="modern-select" style="flex: 1;" onchange="triggerFilter()">
+              <option value="ALL">-- جميع مستشاري المبيعات (All Reps) --</option>
+            </select>
+            <select id="selectSSFilterMode" class="modern-select" style="width: 140px; font-size: 0.74rem; background: #0f172a; border-color: rgba(251,191,36,0.4); color: #fcd34d;" onchange="triggerFilter()" title="نطاق تصفية السجلات للمستشار المختار">
+              <option value="ALL">🎯 كل السجلات</option>
+              <option value="RIGHT_TO_RECLAIM">⚡ له حق الاسترداد</option>
+              <option value="ASSIGNED">🛡️ مسند للحماية</option>
+              <option value="FAMILY">👨‍👩‍👧‍👦 عائلات مشتركة</option>
+            </select>
+          </div>
         </div>
 
         <!-- Small Teams Filter -->
@@ -1716,47 +1727,56 @@
         "EGSS-nohayoussry"
       ],
       "ME-EGSS05": [
-        "EGSS-abdelrahmannasef",
-        "EGSS-ahmedhalawa",
-        "EGSS-alihesham01",
-        "EGSS-ehabzaky01",
         "EGSS-ibrahimismaiel",
+        "EGSS-samira01",
+        "EGSS-abdelrahmannasef",
+        "EGSS-ehabzaky01",
         "EGSS-khaledgonam",
         "EGSS-omarmoneb",
-        "EGSS-samira01"
+        "EGSS-alihesham01",
+        "EGSS-ahmedhalawa"
       ],
       "ME-EGSS10": [
         "EGSS-abdelrhmanshehata",
-        "EGSS-ahmedshoukry",
         "EGSS-hayamhassan",
         "EGSS-titooooo"
       ],
       "ME-EGSS13": [
-        "EGSS-amrsafwat",
+        "EGSS-mohamedha",
         "EGSS-marwaahmed",
-        "EGSS-mohamedha"
+        "EGSS-amrsafwat"
       ],
       "ME-EGSS30": [
+        "EGSS-adhmgadallah",
         "EGSS-ahmedshoukry",
         "EGSS-mahmoudkhamis"
       ]
     };
 
     const TEAM_SUPERVISORS = {
-      "ME-EGSS01": "Ashraqatal",
-      "ME-EGSS05": "Ibrahim Abd El Shakour",
-      "ME-EGSS10": "Abdelrhman Shehata",
-      "ME-EGSS13": "Mohamed Hassan",
-      "ME-EGSS30": "Adhm GadAllah"
+      "ME-EGSS01": "Ashraqatal (إشراقت علي)",
+      "ME-EGSS05": "Ibrahim Abd El Shakour (إبراهيم إسماعيل)",
+      "ME-EGSS10": "Abdelrhman Shehata (عبدالرحمن شحاتة)",
+      "ME-EGSS13": "Mohamed Hassan (محمد حسن)",
+      "ME-EGSS30": "Adhm GadAllah (أدهم جاد الله)"
     };
 
-    // Set of all 20 representatives in user's team
+    const TEAM_LEADERS = {
+      "ME-EGSS01": "EGSS-ashraqatal",
+      "ME-EGSS05": "EGSS-ibrahimismaiel",
+      "ME-EGSS10": "EGSS-abdelrhmanshehata",
+      "ME-EGSS13": "EGSS-mohamedha",
+      "ME-EGSS30": "EGSS-adhmgadallah"
+    };
+
+    // Set of all 21 representatives & leaders in user's team
     const MY_TEAM_REPS = new Set([
       "EGSS-ashraqatal", "EGSS-juliamonir01", "EGSS-mahmoud04", "EGSS-nohayoussry",
-      "EGSS-abdelrahmannasef", "EGSS-ahmedhalawa", "EGSS-alihesham01", "EGSS-ehabzaky01",
-      "EGSS-ibrahimismaiel", "EGSS-khaledgonam", "EGSS-omarmoneb", "EGSS-samira01",
-      "EGSS-abdelrhmanshehata", "EGSS-ahmedshoukry", "EGSS-hayamhassan", "EGSS-titooooo",
-      "EGSS-amrsafwat", "EGSS-marwaahmed", "EGSS-mohamedha", "EGSS-mahmoudkhamis"
+      "EGSS-ibrahimismaiel", "EGSS-samira01", "EGSS-abdelrahmannasef", "EGSS-ahmedhalawa",
+      "EGSS-alihesham01", "EGSS-ehabzaky01", "EGSS-khaledgonam", "EGSS-omarmoneb",
+      "EGSS-abdelrhmanshehata", "EGSS-hayamhassan", "EGSS-titooooo",
+      "EGSS-mohamedha", "EGSS-marwaahmed", "EGSS-amrsafwat",
+      "EGSS-adhmgadallah", "EGSS-ahmedshoukry", "EGSS-mahmoudkhamis"
     ]);
 
     // Multi-Language Localization Engine (Arabic, English, Chinese)
@@ -1829,8 +1849,11 @@
         th_num: "#",
         th_student_id: "Student ID",
         th_rule: "القاعدة المطبقة",
-        th_old_rep: "المالك الأصلي (Old SS)",
+        th_old_rep: "من له حق الاسترداد (المستحقون)",
+        th_eligible_reclaim: "من له حق الاسترداد (المستحقون)",
+        th_family_claimants: "مستحقو توحيد العائلة (Family Claimants)",
         th_current_rep: "المالك الحالي (Current EA)",
+        filter_ss_special: "تصفية خاصة بمستشار المبيعات (Special SS Filter):",
         th_assigned_rep: "الممثل المسؤول (Rep)",
         th_current_team: "الفريق الحالي",
         th_small_team: "الفريق الصغير",
@@ -2220,34 +2243,35 @@
         team: "ALL",
         icon: "👑"
       },
-      // ME-EGSS01 (Team Ashraqat)
-      "EGSS-ashraqatal": { id: "EGSS-ashraqatal", name: "Ashraqatal", nameAr: "إشراقت علي", nameZh: "Ashraqatal", role: "REP", pin: "1011", team: "ME-EGSS01", icon: "👤" },
+      // ME-EGSS01 (Team Ashraqat) - Leader & Specialists
+      "EGSS-ashraqatal": { id: "EGSS-ashraqatal", name: "Ashraqatal", nameAr: "إشراقت علي (قائد الفريق)", nameZh: "Ashraqatal (组长)", role: "LEADER", pin: "1011", team: "ME-EGSS01", icon: "🎖️" },
       "EGSS-juliamonir01": { id: "EGSS-juliamonir01", name: "Julia Monir", nameAr: "جوليا منير", nameZh: "Julia Monir", role: "REP", pin: "1012", team: "ME-EGSS01", icon: "👤" },
       "EGSS-mahmoud04": { id: "EGSS-mahmoud04", name: "Mahmoud 04", nameAr: "محمود 04", nameZh: "Mahmoud 04", role: "REP", pin: "1013", team: "ME-EGSS01", icon: "👤" },
       "EGSS-nohayoussry": { id: "EGSS-nohayoussry", name: "Noha Youssry", nameAr: "نهى يسري", nameZh: "Noha Youssry", role: "REP", pin: "1014", team: "ME-EGSS01", icon: "👤" },
 
-      // ME-EGSS05 (Team Ibrahim)
+      // ME-EGSS05 (Team Ibrahim) - Leader & Specialists
+      "EGSS-ibrahimismaiel": { id: "EGSS-ibrahimismaiel", name: "Ibrahim Abd El Shakour", nameAr: "إبراهيم إسماعيل (قائد الفريق)", nameZh: "Ibrahim Ismaiel (组长)", role: "LEADER", pin: "1055", team: "ME-EGSS05", icon: "🎖️" },
+      "EGSS-samira01": { id: "EGSS-samira01", name: "Samira Hussien", nameAr: "سميرة حسين", nameZh: "Samira Hussien", role: "REP", pin: "1058", team: "ME-EGSS05", icon: "👤" },
       "EGSS-abdelrahmannasef": { id: "EGSS-abdelrahmannasef", name: "Abdelrahman Nassef", nameAr: "عبدالرحمن ناصف", nameZh: "Abdelrahman Nassef", role: "REP", pin: "1051", team: "ME-EGSS05", icon: "👤" },
-      "EGSS-ahmedhalawa": { id: "EGSS-ahmedhalawa", name: "Ahmed Halawa", nameAr: "أحمد حلاوة", nameZh: "Ahmed Halawa", role: "REP", pin: "1052", team: "ME-EGSS05", icon: "👤" },
-      "EGSS-alihesham01": { id: "EGSS-alihesham01", name: "Ali Hesham", nameAr: "علي هشام", nameZh: "Ali Hesham", role: "REP", pin: "1053", team: "ME-EGSS05", icon: "👤" },
       "EGSS-ehabzaky01": { id: "EGSS-ehabzaky01", name: "Ehab Zaky", nameAr: "إيهاب زكي", nameZh: "Ehab Zaky", role: "REP", pin: "1054", team: "ME-EGSS05", icon: "👤" },
-      "EGSS-ibrahimismaiel": { id: "EGSS-ibrahimismaiel", name: "Ibrahim Ismaiel", nameAr: "إبراهيم إسماعيل", nameZh: "Ibrahim Ismaiel", role: "REP", pin: "1055", team: "ME-EGSS05", icon: "👤" },
       "EGSS-khaledgonam": { id: "EGSS-khaledgonam", name: "Khaled Gonam", nameAr: "خالد غنيم", nameZh: "Khaled Gonam", role: "REP", pin: "1056", team: "ME-EGSS05", icon: "👤" },
       "EGSS-omarmoneb": { id: "EGSS-omarmoneb", name: "Omar Monieb", nameAr: "عمر منيب", nameZh: "Omar Monieb", role: "REP", pin: "1057", team: "ME-EGSS05", icon: "👤" },
-      "EGSS-samira01": { id: "EGSS-samira01", name: "Samira Hussien", nameAr: "سميرة حسين", nameZh: "Samira Hussien", role: "REP", pin: "1058", team: "ME-EGSS05", icon: "👤" },
+      "EGSS-alihesham01": { id: "EGSS-alihesham01", name: "Ali Hesham", nameAr: "علي هشام", nameZh: "Ali Hesham", role: "REP", pin: "1053", team: "ME-EGSS05", icon: "👤" },
+      "EGSS-ahmedhalawa": { id: "EGSS-ahmedhalawa", name: "Ahmed Halawa", nameAr: "أحمد حلاوة", nameZh: "Ahmed Halawa", role: "REP", pin: "1052", team: "ME-EGSS05", icon: "👤" },
 
-      // ME-EGSS10 (Team Abdelrhman)
-      "EGSS-abdelrhmanshehata": { id: "EGSS-abdelrhmanshehata", name: "Abdelrhman Shehata", nameAr: "عبدالرحمن شحاتة", nameZh: "Abdelrhman Shehata", role: "REP", pin: "1101", team: "ME-EGSS10", icon: "👤" },
-      "EGSS-ahmedshoukry": { id: "EGSS-ahmedshoukry", name: "Ahmed Shoukry", nameAr: "أحمد شكري", nameZh: "Ahmed Shoukry", role: "REP", pin: "1102", team: "ME-EGSS10", icon: "👤" },
+      // ME-EGSS10 (Team Abdelrhman) - Leader & Specialists
+      "EGSS-abdelrhmanshehata": { id: "EGSS-abdelrhmanshehata", name: "Abdelrhman Shehata", nameAr: "عبدالرحمن شحاتة (قائد الفريق)", nameZh: "Abdelrhman Shehata (组长)", role: "LEADER", pin: "1101", team: "ME-EGSS10", icon: "🎖️" },
       "EGSS-hayamhassan": { id: "EGSS-hayamhassan", name: "Hayam Hassan", nameAr: "هيام حسن", nameZh: "Hayam Hassan", role: "REP", pin: "1103", team: "ME-EGSS10", icon: "👤" },
       "EGSS-titooooo": { id: "EGSS-titooooo", name: "Tito (Ahmed)", nameAr: "تيتو (أحمد)", nameZh: "Tito (Ahmed)", role: "REP", pin: "1104", team: "ME-EGSS10", icon: "👤" },
 
-      // ME-EGSS13 (Team Mohamed)
-      "EGSS-amrsafwat": { id: "EGSS-amrsafwat", name: "Amr Safwat", nameAr: "عمرو صفوت", nameZh: "Amr Safwat", role: "REP", pin: "1131", team: "ME-EGSS13", icon: "👤" },
+      // ME-EGSS13 (Team Mohamed) - Leader & Specialists
+      "EGSS-mohamedha": { id: "EGSS-mohamedha", name: "Mohamed Hassan", nameAr: "محمد حسن (قائد الفريق)", nameZh: "Mohamed Hassan (组长)", role: "LEADER", pin: "1133", team: "ME-EGSS13", icon: "🎖️" },
       "EGSS-marwaahmed": { id: "EGSS-marwaahmed", name: "Marwa Ahmed", nameAr: "مروة أحمد", nameZh: "Marwa Ahmed", role: "REP", pin: "1132", team: "ME-EGSS13", icon: "👤" },
-      "EGSS-mohamedha": { id: "EGSS-mohamedha", name: "Mohamed Hassan", nameAr: "محمد حسن", nameZh: "Mohamed Hassan", role: "REP", pin: "1133", team: "ME-EGSS13", icon: "👤" },
+      "EGSS-amrsafwat": { id: "EGSS-amrsafwat", name: "Amr Safwat", nameAr: "عمرو صفوت", nameZh: "Amr Safwat", role: "REP", pin: "1131", team: "ME-EGSS13", icon: "👤" },
 
-      // ME-EGSS30 (Team Mahmoud)
+      // ME-EGSS30 (Team Adhm & Hussein) - Leader & Specialists
+      "EGSS-adhmgadallah": { id: "EGSS-adhmgadallah", name: "Adhm GadAllah", nameAr: "أدهم جاد الله (مشرف الفريق)", nameZh: "Adhm GadAllah (主管)", role: "LEADER", pin: "1300", team: "ME-EGSS30", icon: "🎖️" },
+      "EGSS-ahmedshoukry": { id: "EGSS-ahmedshoukry", name: "Ahmed Shoukry", nameAr: "أحمد شكري", nameZh: "Ahmed Shoukry", role: "REP", pin: "1102", team: "ME-EGSS30", icon: "👤" },
       "EGSS-mahmoudkhamis": { id: "EGSS-mahmoudkhamis", name: "Mahmoud Khamis", nameAr: "محمود خميس", nameZh: "Mahmoud Khamis", role: "REP", pin: "1301", team: "ME-EGSS30", icon: "👤" }
     };
 
@@ -2377,9 +2401,13 @@
       else if (currentLang === 'zh') displayName = user.nameZh || user.name;
 
       if (user.role === 'ADMIN') {
-        badge.style.background = 'rgba(245, 158, 11, 0.16)';
-        badge.style.borderColor = 'rgba(245, 158, 11, 0.45)';
+        badge.style.background = 'rgba(245, 158, 11, 0.18)';
+        badge.style.borderColor = 'rgba(245, 158, 11, 0.55)';
         badge.style.color = '#fcd34d';
+      } else if (user.role === 'LEADER') {
+        badge.style.background = 'rgba(16, 185, 129, 0.2)';
+        badge.style.borderColor = 'rgba(16, 185, 129, 0.55)';
+        badge.style.color = '#34d399';
       } else {
         badge.style.background = 'rgba(56, 189, 248, 0.14)';
         badge.style.borderColor = 'rgba(56, 189, 248, 0.38)';
@@ -2387,9 +2415,13 @@
       }
 
       if (name) {
-        name.textContent = user.role === 'ADMIN' 
-          ? (currentLang === 'ar' ? '👑 الإدارة العليا: حسين الأعصر' : (currentLang === 'zh' ? '👑 资深总监: Hussein' : '👑 Senior Manager: Hussein')) 
-          : `${user.icon} ${user.name} (${user.team})`;
+        if (user.role === 'ADMIN') {
+          name.textContent = currentLang === 'ar' ? '👑 الإدارة العليا: حسين الأعصر' : (currentLang === 'zh' ? '👑 资深总监: Hussein' : '👑 Senior Manager: Hussein');
+        } else if (user.role === 'LEADER') {
+          name.textContent = currentLang === 'ar' ? `🎖️ قائد فريق ${user.team}: ${displayName}` : (currentLang === 'zh' ? `🎖️ ${user.team} 组长: ${displayName}` : `🎖️ Team Leader ${user.team}: ${displayName}`);
+        } else {
+          name.textContent = `${user.icon} ${displayName} (${user.team})`;
+        }
       }
       if (logoutTxt) {
         logoutTxt.textContent = currentLang === 'ar' ? 'خروج' : (currentLang === 'zh' ? '退出' : 'Logout');
@@ -2420,15 +2452,79 @@
       if (!master) return false;
 
       if (user.role === 'ADMIN') {
-        // Full unrestricted access
+        // Full unrestricted access across all teams and all leads
         window.ALLOCATION_RULES_DATA = JSON.parse(JSON.stringify(master));
+      } else if (user.role === 'LEADER') {
+        // TEAM LEADER SCOPE: ACCESS TO DETAILED DATA FOR ALL TEAM MEMBERS
+        const leaderTeam = user.team; // e.g. "ME-EGSS01", "ME-EGSS05", etc.
+        const teamRoster = TEAM_ROSTER[leaderTeam] || [user.id];
+        const teamCode = leaderTeam.replace('ME-EGSS', '');
+
+        // 1. Reclaim Opportunities (Team members as eligible reclaimer, old SS, current agent, or team match)
+        const teamReclaims = (master.reclaim_opportunities || []).filter(item => {
+          if (teamRoster.includes(item.old_ss) || teamRoster.includes(item.current_agent) || teamRoster.includes(item.rep)) return true;
+          if (item.eligible_agents && item.eligible_agents.some(ag => teamRoster.includes(ag))) return true;
+          if (item.eligible_reclaimers && item.eligible_reclaimers.some(er => teamRoster.includes(er.agent || er))) return true;
+          if (item.old_team && (item.old_team.includes(leaderTeam) || item.old_team.includes(teamCode))) return true;
+          if (item.current_team && (item.current_team.includes(leaderTeam) || item.current_team.includes(teamCode))) return true;
+          if (leaderTeam === 'ME-EGSS30' && (item.old_ss === 'EGSS-adhmgadallah' || item.current_agent === 'EGSS-adhmgadallah')) return true;
+          return false;
+        });
+
+        // 2. Defense Uncovered Leads (All active leads assigned to any member of this team)
+        const teamDefense = (master.defense_uncovered || []).filter(item => {
+          if (teamRoster.includes(item.rep) || teamRoster.includes(item.current_agent)) return true;
+          if (item.team && (item.team.includes(leaderTeam) || item.team_clean === teamCode)) return true;
+          return false;
+        });
+
+        // 3. Split Families (All family accounts where any member belongs to this team)
+        const teamFamilyIds = new Set();
+        (master.split_families || []).forEach(item => {
+          if (teamRoster.includes(item.current_agent) || teamRoster.includes(item.old_ss)) {
+            teamFamilyIds.add(item.family_id);
+          }
+          if (item.split_with && item.split_with.some(sw => teamRoster.includes(sw))) {
+            teamFamilyIds.add(item.family_id);
+          }
+          if (item.eligible_agents && item.eligible_agents.some(ag => teamRoster.includes(ag))) {
+            teamFamilyIds.add(item.family_id);
+          }
+        });
+
+        const teamFamilies = (master.split_families || []).filter(item => teamFamilyIds.has(item.family_id));
+
+        const teamStats = {
+          total_active_sector_leads: teamDefense.length,
+          total_uncovered_leads: teamDefense.length,
+          critical_defense_risk_14d: teamDefense.filter(x => (x.days_inactive ?? 0) >= 14).length,
+          high_defense_risk_12_13d: teamDefense.filter(x => (x.days_inactive ?? 0) >= 12 && (x.days_inactive ?? 0) < 14).length,
+          warning_defense_10_11d: teamDefense.filter(x => (x.days_inactive ?? 0) >= 10 && (x.days_inactive ?? 0) < 12).length,
+          moderate_defense_7_9d: teamDefense.filter(x => (x.days_inactive ?? 0) >= 7 && (x.days_inactive ?? 0) < 10).length,
+          safe_defense_7d: teamDefense.filter(x => (x.days_inactive ?? 0) < 7).length,
+          reclaim_total_opportunities: teamReclaims.length,
+          reclaim_ready_immediate: teamReclaims.filter(x => x.is_reclaimable).length,
+          reclaim_protected_renewed: teamReclaims.filter(x => x.badge === 'renewed_protected').length,
+          reclaim_protected_contact: teamReclaims.filter(x => x.badge === 'contact_active').length,
+          split_families_total: teamFamilies.length
+        };
+
+        window.ALLOCATION_RULES_DATA = {
+          generated_at: master.generated_at,
+          audit_date: master.audit_date,
+          stats: teamStats,
+          reclaim_opportunities: teamReclaims,
+          defense_uncovered: teamDefense,
+          split_families: teamFamilies
+        };
       } else {
         // STRICT DATA SLICING FOR REPRESENTATIVE
         const repId = user.id;
 
-        // 1. Reclaim Opportunities (Transferred leads originally with this rep or currently assigned)
+        // 1. Reclaim Opportunities (Transferred leads originally with this rep, or rep has reclaim rights)
         const repReclaims = (master.reclaim_opportunities || []).filter(item => 
-          item.old_ss === repId || item.current_agent === repId || item.rep === repId
+          item.old_ss === repId || item.current_agent === repId || item.rep === repId ||
+          (item.eligible_agents && item.eligible_agents.includes(repId))
         );
 
         // 2. Defense Uncovered Leads (All active leads assigned to this rep to protect)
@@ -2442,9 +2538,11 @@
           if (item.current_agent === repId || item.old_ss === repId || (item.split_with && item.split_with.includes(repId))) {
             myFamilyIds.add(item.family_id);
           }
+          if (item.eligible_agents && item.eligible_agents.includes(repId)) {
+            myFamilyIds.add(item.family_id);
+          }
         });
 
-        // Include all sibling rows so rep can see both their student and the split sibling to reclaim
         const repFamilies = (master.split_families || []).filter(item => 
           myFamilyIds.has(item.family_id)
         );
@@ -2458,7 +2556,7 @@
           moderate_defense_7_9d: repDefense.filter(x => (x.days_inactive ?? 0) >= 7 && (x.days_inactive ?? 0) < 10).length,
           safe_defense_7d: repDefense.filter(x => (x.days_inactive ?? 0) < 7).length,
           reclaim_total_opportunities: repReclaims.length,
-          reclaim_ready_immediate: repReclaims.filter(x => x.sla_status === 'ready' || (x.days_inactive ?? 0) >= 14).length,
+          reclaim_ready_immediate: repReclaims.filter(x => x.is_reclaimable).length,
           reclaim_protected_renewed: 0,
           reclaim_protected_contact: 0,
           split_families_total: repFamilies.length
@@ -2511,7 +2609,66 @@
     });
 
     // Helper: Render Agent Badge with Highlighting for External EAs
-    function renderAgentBadge(agentName) {
+        // Helper: Render Eligible Reclaimers with Multi-Claimant Visual Cards
+    function renderEligibleReclaimersBadge(item) {
+      const eligible = item.eligible_reclaimers || [];
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+
+      if (!eligible || eligible.length === 0) {
+        return renderAgentBadge(item.old_ss || item.current_agent || '—');
+      }
+
+      if (eligible.length === 1) {
+        const c = eligible[0];
+        const agName = c.agent || c;
+        const isMyTeam = MY_TEAM_REPS.has(agName);
+        const roleTxt = (currentLang === 'ar' ? (c.role_ar || c.role) : (c.role || c.role_ar)) || '';
+        const pillClass = isMyTeam ? 'team-internal' : 'team-external';
+        const tagText = isMyTeam ? t.badge_my_team : t.badge_external;
+        const icon = isMyTeam ? '👤' : '⚡';
+
+        return `
+          <div style="display: flex; flex-direction: column; gap: 3px;">
+            <span class="agent-pill ${pillClass}">
+              <span style="font-size: 0.72rem;">${icon}</span>
+              <span>${agName}</span>
+              <span class="${isMyTeam ? 'tag-internal' : 'tag-external'}">${tagText}</span>
+            </span>
+            ${roleTxt ? `<span style="font-size: 0.70rem; color: #94a3b8; font-weight: 600;">⚖️ ${roleTxt}</span>` : ''}
+          </div>
+        `;
+      }
+
+      // MULTIPLE USERS HAVE THE RIGHT TO RECLAIM
+      return `
+        <div style="display: flex; flex-direction: column; gap: 4px; padding: 5px 8px; background: rgba(245, 158, 11, 0.08); border: 1px dashed rgba(245, 158, 11, 0.4); border-radius: 8px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 4px;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #fbbf24; background: rgba(245, 158, 11, 0.2); padding: 1px 6px; border-radius: 4px;">
+              👥 ${currentLang === 'ar' ? 'أحقية مشتركة' : 'Joint Rights'} (${eligible.length})
+            </span>
+            <span style="font-size: 0.68rem; color: #cbd5e1; font-weight: 600;">${currentLang === 'ar' ? 'أكثر من مستشار' : 'Multiple Users'}</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 3px;">
+            ${eligible.map(c => {
+              const agName = c.agent || c;
+              const isMyTeam = MY_TEAM_REPS.has(agName);
+              const roleTxt = (currentLang === 'ar' ? (c.role_ar || c.role) : (c.role || c.role_ar)) || '';
+              return `
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px;">
+                  <span class="agent-pill ${isMyTeam ? 'team-internal' : 'team-external'}" style="font-size: 0.72rem; padding: 2px 6px;">
+                    <span>👤</span>
+                    <span>${agName}</span>
+                  </span>
+                  ${roleTxt ? `<span style="font-size: 0.68rem; color: #cbd5e1; font-weight: 500; white-space: nowrap;">${roleTxt}</span>` : ''}
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+function renderAgentBadge(agentName) {
       if (!agentName || agentName === '—' || agentName === 'None') return '—';
       const isMyTeam = MY_TEAM_REPS.has(agentName);
       const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
@@ -2672,11 +2829,60 @@
 
       const oldSSSelect = document.getElementById('selectOldSS');
 
+      // If logged in as Team Leader: ENFORCE TEAM SCOPE BUT ALLOW DRILLDOWN INTO ALL TEAM MEMBERS!
+      if (window.CURRENT_AUTH_USER && window.CURRENT_AUTH_USER.role === 'LEADER') {
+        const u = window.CURRENT_AUTH_USER;
+        const leaderTeam = u.team;
+        const roster = TEAM_ROSTER[leaderTeam] || [];
+        currentSmallTeam = leaderTeam;
+
+        if (teamSelect) {
+          teamSelect.innerHTML = `<option value="${leaderTeam}" selected>👑 ${leaderTeam} (${u.name})</option>`;
+          teamSelect.disabled = true;
+          teamSelect.style.opacity = '0.9';
+          teamSelect.style.cursor = 'not-allowed';
+        }
+
+        if (oldSSSelect) {
+          oldSSSelect.disabled = false;
+          oldSSSelect.style.opacity = '1';
+          oldSSSelect.style.cursor = 'pointer';
+          oldSSSelect.innerHTML = '';
+
+          const defaultOpt = document.createElement('option');
+          defaultOpt.value = 'ALL';
+          defaultOpt.textContent = currentLang === 'ar' 
+            ? `👥 كل أعضاء فريقي (${roster.length} مستشارين)`
+            : (currentLang === 'zh' ? `👥 全组顾问 (${roster.length} 人)` : `👥 All Team Members (${roster.length} reps)`);
+          oldSSSelect.appendChild(defaultOpt);
+
+          roster.forEach(rep => {
+            const opt = document.createElement('option');
+            opt.value = rep;
+            const rName = (AUTH_USERS[rep] && AUTH_USERS[rep].name) || rep;
+            opt.textContent = `${rep === u.id ? '🎖️ ' : '👤 '}${rep} (${rName})`;
+            oldSSSelect.appendChild(opt);
+          });
+        }
+
+        if (quickPills) {
+          quickPills.innerHTML = `<button type="button" class="team-pill-btn active" style="pointer-events: none; background: #059669; border-color: #34d399;">👑 ${leaderTeam}</button>`;
+        }
+
+        const reportBtn = document.getElementById('btnTeamReportText');
+        if (reportBtn) {
+          reportBtn.textContent = currentLang === 'ar' 
+            ? `📑 نسخ تقرير فريق ${leaderTeam} الشامل`
+            : (currentLang === 'zh' ? `📑 复制 ${leaderTeam} 组全员报告` : `📑 Copy ${leaderTeam} Full Dossier`);
+        }
+        return;
+      }
+
       // If logged in as Representative: ENFORCE LOCK & ISOLATION
       if (window.CURRENT_AUTH_USER && window.CURRENT_AUTH_USER.role === 'REP') {
         const u = window.CURRENT_AUTH_USER;
         currentRepFilter = u.id;
-        currentOldSS = 'ALL';
+        currentOldSS = u.id;
         currentSmallTeam = 'ALL';
 
         if (teamSelect) {
@@ -2687,7 +2893,7 @@
         }
 
         if (oldSSSelect) {
-          oldSSSelect.innerHTML = `<option value="ALL" selected>${u.name} (${u.id})</option>`;
+          oldSSSelect.innerHTML = `<option value="${u.id}" selected>${u.name} (${u.id})</option>`;
           oldSSSelect.disabled = true;
           oldSSSelect.style.opacity = '0.85';
           oldSSSelect.style.cursor = 'not-allowed';
@@ -2907,11 +3113,23 @@
       applyFiltersAndRender();
     }
 
+    let currentSSFilterMode = 'ALL';
+
     function triggerFilter() {
       searchQuery = (document.getElementById('filterSearch').value || '').trim().toLowerCase();
-      currentOldSS = document.getElementById('selectOldSS').value;
+      const oldSSSelect = document.getElementById('selectOldSS');
+      currentOldSS = oldSSSelect ? oldSSSelect.value : 'ALL';
+      
+      const modeSelect = document.getElementById('selectSSFilterMode');
+      currentSSFilterMode = modeSelect ? modeSelect.value : 'ALL';
+
+      const badge = document.getElementById('ssActiveBadge');
+      if (badge) {
+        badge.style.display = currentOldSS !== 'ALL' ? 'inline-block' : 'none';
+      }
+
       const teamVal = document.getElementById('selectSmallTeam').value;
-      if (teamVal !== currentSmallTeam) {
+      if (teamVal !== currentSmallTeam && (!window.CURRENT_AUTH_USER || window.CURRENT_AUTH_USER.role === 'ADMIN')) {
         currentSmallTeam = teamVal;
         updateRepDropdown(currentSmallTeam);
       }
@@ -2931,10 +3149,31 @@
           if (!sidMatch && !agMatch && !oldSSMatch && !teamMatch) return false;
         }
 
-        // 2. Old SS / Rep Filter
+        // 2. Special SS Filter (with Reclaim Rights & Multi-role matching)
         if (currentOldSS !== 'ALL') {
-          const matchOld = (item.old_ss === currentOldSS) || (item.rep === currentOldSS) || (item.current_agent === currentOldSS);
-          if (!matchOld) return false;
+          const ss = currentOldSS;
+          const mode = currentSSFilterMode || 'ALL';
+
+          const hasReclaimRight = (item.eligible_agents && item.eligible_agents.includes(ss)) ||
+                                  (item.eligible_reclaimers && item.eligible_reclaimers.some(er => (er.agent || er) === ss)) ||
+                                  (item.old_ss === ss);
+
+          const isAssigned = (item.rep === ss) || (item.current_agent === ss);
+
+          const isInFamily = (item.current_agent === ss) || (item.old_ss === ss) ||
+                             (item.split_with && item.split_with.includes(ss)) ||
+                             (item.eligible_agents && item.eligible_agents.includes(ss));
+
+          if (mode === 'RIGHT_TO_RECLAIM') {
+            if (!hasReclaimRight) return false;
+          } else if (mode === 'ASSIGNED') {
+            if (!isAssigned) return false;
+          } else if (mode === 'FAMILY') {
+            if (!isInFamily) return false;
+          } else {
+            // mode === 'ALL'
+            if (!hasReclaimRight && !isAssigned && !isInFamily) return false;
+          }
         }
 
         // 3. Small Team Filter
@@ -3023,7 +3262,7 @@
           <th style="width: 35px;">${t.th_num}</th>
           <th style="width: 90px;">${t.th_student_id}</th>
           <th style="width: 140px;">${t.th_rule}</th>
-          <th>${t.th_old_rep}</th>
+          <th style="min-width: 220px;">${t.th_eligible_reclaim}</th>
           <th>${t.th_current_rep}</th>
           <th>${t.th_current_team}</th>
           <th>${t.th_pool}</th>
@@ -3055,7 +3294,7 @@
           <th style="width: 35px;">${t.th_num}</th>
           <th style="width: 80px;">${t.th_family_id}</th>
           <th style="width: 90px;">${t.th_student_id}</th>
-          <th>${t.th_old_rep}</th>
+          <th style="min-width: 200px;">${t.th_family_claimants}</th>
           <th>${t.th_current_rep}</th>
           <th>${t.th_current_team}</th>
           <th>${t.th_family_members}</th>
@@ -3068,8 +3307,8 @@
         `;
       }
 
-      // Pagination slice
-      const startIdx = (currentPage - 1) * pageSize;
+      // Pagination slice (Fix: prevent NaN when pageSize is 'ALL')
+      const startIdx = pageSize === 'ALL' ? 0 : (currentPage - 1) * pageSize;
       const endIdx = pageSize === 'ALL' ? filteredList.length : Math.min(startIdx + pageSize, filteredList.length);
       const displayData = pageSize === 'ALL' ? filteredList : filteredList.slice(startIdx, endIdx);
 
@@ -3131,7 +3370,7 @@
               <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
               <td style="white-space: nowrap;"><button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="Copy ID"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button></td>
               <td style="white-space: nowrap;"><span style="font-size: 0.74rem; color: #cbd5e1;">${item.rule_type}</span></td>
-              <td style="white-space: nowrap;">${renderAgentBadge(item.old_ss)}</td>
+              <td style="white-space: normal; min-width: 220px;">${renderEligibleReclaimersBadge(item)}</td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
               <td style="white-space: nowrap;"><span style="font-size: 0.75rem; color: #94a3b8;">${item.current_team || '—'}</span></td>
               <td style="white-space: nowrap;"><span style="font-size: 0.73rem; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px;">${item.pool || '—'}</span></td>
@@ -3223,7 +3462,7 @@
               <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
               <td style="white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #f59e0b;">${item.family_id}</td>
               <td style="white-space: nowrap;"><button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="Copy ID"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button></td>
-              <td style="white-space: nowrap;">${renderAgentBadge(item.old_ss)}</td>
+              <td style="white-space: normal; min-width: 200px;">${renderEligibleReclaimersBadge(item)}</td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
               <td style="white-space: nowrap;"><span style="font-size: 0.75rem; color: #94a3b8;">${item.current_team || '—'}</span></td>
               <td style="white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: #cbd5e1;">[${(item.family_members || []).join(', ')}]</td>
@@ -3365,16 +3604,29 @@
       const now = new Date();
       const timestamp = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
       
+      const item = (masterList || []).find(x => String(x.student_id) === String(sid));
+      let eligibleListStr = `• الممثل الأصلي المستحق (Old SS): ${oldSS}`;
+      
+      if (item && item.eligible_reclaimers && item.eligible_reclaimers.length > 0) {
+        if (item.eligible_reclaimers.length > 1) {
+          eligibleListStr = `• مستحقو المطالبة بالاسترداد (${item.eligible_reclaimers.length} مستشارين - أحقية مشتركة):\n` +
+            item.eligible_reclaimers.map((er, i) => `   ${i+1}. ${er.name || er.agent} (${er.team || ''}) — ${er.role_ar || er.role || er.claim_basis_ar || ''}`).join('\n');
+        } else {
+          const er = item.eligible_reclaimers[0];
+          eligibleListStr = `• الممثل المستحق للاسترداد: ${er.name || er.agent} (${er.team || ''}) — ${er.role_ar || er.role || er.claim_basis_ar || ''}`;
+        }
+      }
+
       const ticket = `📢 【تذكرة استرداد عميل رسمية — Reclaim Radar】
 ────────────────────────────────────────
 • رقم الطالب (Student ID): ${sid}
-• الممثل الأصلي المستحق (Old SS): ${oldSS}
+${eligibleListStr}
 • الممثل الحالي (Current EA): ${currentEA} (${currentTeam})
-• السند القانوني: سياسة توزيع العملاء (قاعدة الـ 14 يوماً عدم تواصل / Expired Pool)
+• السند القانوني: سياسة توزيع العملاء (قاعدة الـ 14 يوماً عدم تواصل / Family Back / Expired Pool)
 • الحالة الفنية: ${statusDesc}
 • تاريخ التدقيق: ${timestamp}
 ────────────────────────────────────────
-• الإجراء المطلوب: سحب وإعادة الطالب فوراً إلى كود الممثل ${oldSS} لتفعيل خطة المتابعة.
+• الإجراء المطلوب: سحب وإعادة الطالب فوراً لتفعيل خطة المتابعة وحماية العميل بالقطاع.
 ────────────────────────────────────────
 صادر عبر Big Team 01 Allocation Hub — إشراف: Hussein El A'sar`;
 
@@ -3908,34 +4160,37 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
             <optgroup label="👑 الإدارة العليا (Senior Management)">
               <option value="hussein">👑 حسين الأعصر — Hussein El A'sar (مدير أول القطاع)</option>
             </optgroup>
-            <optgroup label="🏢 ME-EGSS01 (فريق إشراقت)">
-              <option value="EGSS-ashraqatal">EGSS-ashraqatal (إشراقت علي)</option>
+            <optgroup label="🎖️ قادة الفرق (Team Leaders — وصول شامل لبيانات الفريق)">
+              <option value="EGSS-ashraqatal">🎖️ إشراقت علي — Ashraqatal (قائد فريق ME-EGSS01)</option>
+              <option value="EGSS-ibrahimismaiel">🎖️ إبراهيم إسماعيل — Ibrahim Abd El Shakour (قائد فريق ME-EGSS05)</option>
+              <option value="EGSS-abdelrhmanshehata">🎖️ عبدالرحمن شحاتة — Abdelrhman Shehata (قائد فريق ME-EGSS10)</option>
+              <option value="EGSS-mohamedha">🎖️ محمد حسن — Mohamed Hassan (قائد فريق ME-EGSS13)</option>
+              <option value="EGSS-adhmgadallah">🎖️ أدهم جاد الله — Adhm GadAllah (مشرف فريق ME-EGSS30)</option>
+            </optgroup>
+            <optgroup label="🏢 أعضاء ME-EGSS01 (Team Specialists)">
               <option value="EGSS-juliamonir01">EGSS-juliamonir01 (جوليا منير)</option>
               <option value="EGSS-mahmoud04">EGSS-mahmoud04 (محمود 04)</option>
               <option value="EGSS-nohayoussry">EGSS-nohayoussry (نهى يسري)</option>
             </optgroup>
-            <optgroup label="🏢 ME-EGSS05 (فريق إبراهيم)">
+            <optgroup label="🏢 أعضاء ME-EGSS05 (Team Specialists)">
+              <option value="EGSS-samira01">EGSS-samira01 (سميرة حسين)</option>
               <option value="EGSS-abdelrahmannasef">EGSS-abdelrahmannasef (عبدالرحمن ناصف)</option>
-              <option value="EGSS-ahmedhalawa">EGSS-ahmedhalawa (أحمد حلاوة)</option>
-              <option value="EGSS-alihesham01">EGSS-alihesham01 (علي هشام)</option>
               <option value="EGSS-ehabzaky01">EGSS-ehabzaky01 (إيهاب زكي)</option>
-              <option value="EGSS-ibrahimismaiel">EGSS-ibrahimismaiel (إبراهيم إسماعيل)</option>
               <option value="EGSS-khaledgonam">EGSS-khaledgonam (خالد غنيم)</option>
               <option value="EGSS-omarmoneb">EGSS-omarmoneb (عمر منيب)</option>
-              <option value="EGSS-samira01">EGSS-samira01 (سميرة حسين)</option>
+              <option value="EGSS-alihesham01">EGSS-alihesham01 (علي هشام)</option>
+              <option value="EGSS-ahmedhalawa">EGSS-ahmedhalawa (أحمد حلاوة)</option>
             </optgroup>
-            <optgroup label="🏢 ME-EGSS10 (فريق عبدالرحمن)">
-              <option value="EGSS-abdelrhmanshehata">EGSS-abdelrhmanshehata (عبدالرحمن شحاتة)</option>
-              <option value="EGSS-ahmedshoukry">EGSS-ahmedshoukry (أحمد شكري)</option>
+            <optgroup label="🏢 أعضاء ME-EGSS10 (Team Specialists)">
               <option value="EGSS-hayamhassan">EGSS-hayamhassan (هيام حسن)</option>
               <option value="EGSS-titooooo">EGSS-titooooo (تيتو - أحمد)</option>
             </optgroup>
-            <optgroup label="🏢 ME-EGSS13 (فريق محمد حسن)">
-              <option value="EGSS-amrsafwat">EGSS-amrsafwat (عمرو صفوت)</option>
+            <optgroup label="🏢 أعضاء ME-EGSS13 (Team Specialists)">
               <option value="EGSS-marwaahmed">EGSS-marwaahmed (مروة أحمد)</option>
-              <option value="EGSS-mohamedha">EGSS-mohamedha (محمد حسن)</option>
+              <option value="EGSS-amrsafwat">EGSS-amrsafwat (عمرو صفوت)</option>
             </optgroup>
-            <optgroup label="🏢 ME-EGSS30 (فريق محمود خميس)">
+            <optgroup label="🏢 أعضاء ME-EGSS30 (Team Specialists)">
+              <option value="EGSS-ahmedshoukry">EGSS-ahmedshoukry (أحمد شكري)</option>
               <option value="EGSS-mahmoudkhamis">EGSS-mahmoudkhamis (محمود خميس)</option>
             </optgroup>
           </select>

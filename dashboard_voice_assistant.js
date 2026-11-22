@@ -188,7 +188,21 @@
     31: 102
   };
 
-  const CURRENT_DAY = 18;
+  function getCurrentDay() {
+    if (typeof window !== 'undefined' && window.__model && window.__model.summary && typeof window.__model.summary.daysPassed === 'number' && window.__model.summary.daysPassed > 0) {
+      return window.__model.summary.daysPassed;
+    }
+    if (typeof document !== 'undefined') {
+      const b = document.body ? document.body.innerText : '';
+      const m = b.match(/Day\s*(\d{1,2})/i);
+      if (m && parseInt(m[1], 10) > 0 && parseInt(m[1], 10) <= 31) {
+        return parseInt(m[1], 10);
+      }
+    }
+    const today = new Date().getDate();
+    return (today >= 1 && today <= 31) ? today : 22;
+  }
+
   const SAR_RATE = 3.75;
 
   // 2. CURRENCY FORMATTER
@@ -544,11 +558,15 @@
     const norm = normalizeText(rawQuery);
     const m = getModel();
     const s = m.summary;
-    const todayBM = OFFICIAL_PACING[CURRENT_DAY] || 41;
-    const tomorrowBM = OFFICIAL_PACING[CURRENT_DAY + 1] || 43;
+    const curDay = getCurrentDay();
+    const nextDay = Math.min(31, curDay + 1);
+    const todayBM = OFFICIAL_PACING[curDay] || 61;
+    const tomorrowBM = OFFICIAL_PACING[nextDay] || 63;
     const todayExpCash = Math.round(s.totalTarget * (todayBM / 100));
     const tomorrowExpCash = Math.round(s.totalTarget * (tomorrowBM / 100));
     const tomorrowCashNeeded = Math.max(0, tomorrowExpCash - s.totalCash);
+    const isSectorAhead = (s.achievement >= todayBM);
+    const sectorPacingDiff = (s.achievement - todayBM).toFixed(1);
 
     // =========================================================================
     // [INTENT 0]: EXPLICIT LANGUAGE SWITCH (Egyptian Arabic, Chinese, English)
@@ -563,9 +581,12 @@
       (norm.includes('انجليزي') && (norm.includes('تكلم') || norm.includes('حول') || norm.includes('اتكلم')));
 
     if (wantsArabic && !wantsChinese && !wantsEnglish) {
+      const paceNoticeAr = isSectorAhead
+        ? `ومعديين بنشمارك النهاردة بـ +${sectorPacingDiff}%`
+        : `ومتأخرين عن بنشمارك النهاردة (${todayBM}%) بـ ${sectorPacingDiff}%`;
       return {
         text: 'من عينيا يا باشا! 🌟 أنا معاك بالعامية المصرية أهو وجاهز أساعدك في كل صغيرة وكبيرة في قطاع Big Team 01!\n' +
-          `• إحنا لحد النهاردة مجمعين: ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) ومعديين بنشمارك النهاردة بـ +${(s.achievement - todayBM).toFixed(1)}%.\n` +
+          `• إحنا لحد النهاردة (اليوم ${curDay}) مجمعين: ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) ${paceNoticeAr}.\n` +
           '• اسألني بقى براحتك عن: أرقام أي موظف أو مستشار، بنشمارك بكرة، فجوة الكاش لحد آخر الشهر، استهلاك الحصص وطلاب الصفر، أو أسعار الباقات المعتمدة!',
         lang: 'ar',
         switchLang: 'ar'
@@ -573,9 +594,12 @@
     }
 
     if (wantsChinese) {
+      const paceNoticeZh = isSectorAhead
+        ? `领先今日第${curDay}天基准线 +${sectorPacingDiff}%`
+        : `落后今日第${curDay}天基准线 (${todayBM}%) ${sectorPacingDiff}%`;
       return {
         text: '当然可以！🌟 我很高兴使用中文与您交流。大一组 (Big Team 01) 的专属智能语音与数据副驾随时为您服务！\n' +
-          `• 截至今天全组累计入账: ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，领先今日第16天基准线 +${(s.achievement - todayBM).toFixed(1)}%。\n` +
+          `• 截至今天第${curDay}天全组累计入账: ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，${paceNoticeZh}。\n` +
           '• 您可以随时向我询问：销售顾问战报、明日基准线、全月业绩缺口、课时消耗及官方课包价格！',
         lang: 'zh',
         switchLang: 'zh'
@@ -583,9 +607,12 @@
     }
 
     if (wantsEnglish && !wantsArabic && !wantsChinese) {
+      const paceNoticeEn = isSectorAhead
+        ? `pacing +${sectorPacingDiff}% ahead of Day ${curDay} benchmark (${todayBM}%)`
+        : `pacing ${sectorPacingDiff}% behind Day ${curDay} benchmark (${todayBM}%)`;
       return {
         text: 'Certainly! 🌟 I\'m glad to speak with you in English. Big Team 01 AI assistant is ready to support you with all live performance telemetry!\n' +
-          `• Sector Net Cash MTD: ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), pacing +${(s.achievement - todayBM).toFixed(1)}% ahead of Day 16 benchmark.\n` +
+          `• Sector Net Cash MTD: ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), ${paceNoticeEn}.\n` +
           '• Feel free to ask about any specialist, tomorrow\'s benchmark, cash gaps, class consumption, or official package rates!',
         lang: 'en',
         switchLang: 'en'
@@ -820,7 +847,7 @@
           `• Contracts Closed: ${matchedRep.contracts} deals\n` +
           `• Upgrade M2: ${matchedRep.m2Renewals} closed from base of ${matchedRep.renewalBase} accounts\n` +
           `• Call Coverage: ${matchedRep.coverage.toFixed(1)}%\n` +
-          `• Pacing Verdict: ` + (isAhead ? `🚀 Ahead of Day ${CURRENT_DAY} benchmark by +${aheadDiff}%` : `⚠️ Pacing behind Day ${CURRENT_DAY} benchmark by ${formatMoney(gap)}.`),
+          `• Pacing Verdict: ` + (isAhead ? `🚀 Ahead of Day ${curDay} benchmark by +${aheadDiff}%` : `⚠️ Behind Day ${curDay} benchmark (${todayBM}%) by ${aheadDiff}% (Gap to BM: ${formatMoney(gap)}).`),
         lang: 'en'
       };
     }
@@ -900,64 +927,82 @@
           `• Target: ${formatMoney(matchedTeam.target)} (Gap: ${formatMoney(matchedTeam.gap)})\n` +
           `• Deals Closed: ${matchedTeam.orders} orders (Avg Deal: ${formatMoney(matchedTeam.avgDeal)})\n` +
           `• Specialists: ${matchedTeam.reps.join(', ')}.\n` +
-          `• Pacing Verdict: ` + (isAhead ? `🚀 Ahead of Day ${CURRENT_DAY} benchmark by +${(matchedTeam.achievement - todayBM).toFixed(1)}%!` : `⚠️ Pacing behind by ${formatMoney(matchedTeam.gap)}.`),
+          `• Pacing Verdict: ` + (isAhead ? `🚀 Ahead of Day ${curDay} benchmark by +${(matchedTeam.achievement - todayBM).toFixed(1)}%!` : `⚠️ Behind Day ${curDay} benchmark (${todayBM}%) by ${(matchedTeam.achievement - todayBM).toFixed(1)}% (Gap to BM: ${formatMoney(matchedTeam.gap)}).`),
         lang: 'en'
       };
     }
 
     // =========================================================================
-    // [INTENT 3]: TOMORROW'S BENCHMARK (Exact & Day 17)
+    // [INTENT 3]: TOMORROW'S BENCHMARK (Dynamic & Day-Aware)
     // =========================================================================
-    const asksTomorrow = /(?:tomorrow|next\s*day|day\s*17|بكره|غدا|غداً|الغد|بكرة|اليوم\s*التالي|يوم\s*17|明天|次日|第17天)/i.test(norm) &&
+    const asksTomorrow = /(?:tomorrow|next\s*day|day\s*\d+|بكره|غدا|غداً|الغد|بكرة|اليوم\s*التالي|يوم\s*\d+|明天|次日|第\d+天)/i.test(norm) &&
       /(?:bm|benchmark|pacing|target|cash|needed|وتيرة|وتيره|بنشمارك|مطلوب|كاش|هدف|تارجت|عايزين|محتاجين|基准线|目标|业绩)/i.test(norm);
 
     if (asksTomorrow) {
       if (promptLang === 'ar') {
+        const paceStatusAr = isSectorAhead
+          ? `ومعديين وتيرة النهاردة بـ +${sectorPacingDiff}%. محتاجين بكرة نلم كاش جديد بـ ${formatMoney(tomorrowCashNeeded, 'ar')} علشان نفضل محافظين على مكاننا في الزون الأخضر ومعديين المنحنى!`
+          : `يعني متأخرين عن وتيرة النهاردة (${todayBM}%) بـ ${sectorPacingDiff}%. محتاجين نلم كاش جديد بـ ${formatMoney(tomorrowCashNeeded, 'ar')} بكرة علشان نلحق المنحنى الرسمي ونرجع للزون الأخضر!`;
         return {
-          text: `بص يا حسين يا بطل، بكرة هو اليوم 17 وبنشمارك بكرة في المنحنى الرسمي هو ${tomorrowBM}% (يعني المفروض نكون مجمعين ${formatMoney(tomorrowExpCash, 'ar')}).\n` +
-            `فريقنا Big Team 01 جايب لحد النهاردة ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%). يعني بكرة محتاجين نلم كاش جديد بـ ${formatMoney(tomorrowCashNeeded, 'ar')} بس علشان نفضل معديين الوتيرة وفي الزون الأخضر!`,
+          text: `بص يا حسين يا بطل، بكرة هو اليوم ${nextDay} وبنشمارك بكرة في المنحنى الرسمي هو ${tomorrowBM}% (يعني المفروض نكون مجمعين ${formatMoney(tomorrowExpCash, 'ar')}).\n` +
+            `فريقنا Big Team 01 جايب لحد النهاردة ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%)، ${paceStatusAr}`,
           lang: 'ar'
         };
       }
       if (promptLang === 'zh') {
+        const paceStatusZh = isSectorAhead
+          ? `领先今日基准线 +${sectorPacingDiff}%。明天仅需新增入账 ${formatMoney(tomorrowCashNeeded, 'zh')} 即可保持领先！`
+          : `落后今日基准线 (${todayBM}%) ${sectorPacingDiff}%。明天需新增入账 ${formatMoney(tomorrowCashNeeded, 'zh')} 才能追赶上第${nextDay}天官方基准线！`;
         return {
-          text: `明天是11月第17天，官方基准线为 ${tomorrowBM}% (${formatMoney(tomorrowExpCash, 'zh')})。 ` +
-            `大一组目前累计 ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，明天仅需新增入账 ${formatMoney(tomorrowCashNeeded, 'zh')} 即可保持领先！`,
+          text: `明天是11月第${nextDay}天，官方基准线为 ${tomorrowBM}% (${formatMoney(tomorrowExpCash, 'zh')})。 ` +
+            `大一组目前累计 ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，${paceStatusZh}`,
           lang: 'zh'
         };
       }
+      const paceStatusEn = isSectorAhead
+        ? `pacing +${sectorPacingDiff}% ahead of the curve. We need ${formatMoney(tomorrowCashNeeded)} in fresh cash tomorrow to maintain our green status ahead of the curve!`
+        : `pacing ${sectorPacingDiff}% behind the benchmark pace (${todayBM}%). We need ${formatMoney(tomorrowCashNeeded)} in fresh cash tomorrow to catch up with the official Day ${nextDay} benchmark!`;
       return {
-        text: `Tomorrow is Day 17 of November, and the official benchmark is ${tomorrowBM}% (${formatMoney(tomorrowExpCash)}). ` +
-          `Big Team 01 has currently achieved ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%). We need ${formatMoney(tomorrowCashNeeded)} in fresh cash tomorrow to maintain our green status ahead of the curve!`,
+        text: `Tomorrow is Day ${nextDay} of November, and the official benchmark is ${tomorrowBM}% (${formatMoney(tomorrowExpCash)}). ` +
+          `Big Team 01 has currently achieved ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), ${paceStatusEn}`,
         lang: 'en'
       };
     }
 
     // =========================================================================
-    // [INTENT 4]: TODAY'S BENCHMARK (Day 16)
+    // [INTENT 4]: TODAY'S BENCHMARK (Dynamic & Day-Aware)
     // =========================================================================
-    const asksTodayBM = /(?:today|day\s*16|اليوم|النهاردة|النهارده|يوم\s*16|今天|第16天)/i.test(norm) &&
+    const asksTodayBM = /(?:today|day\s*\d+|اليوم|النهاردة|النهارده|يوم\s*\d+|今天|第\d+天)/i.test(norm) &&
       /(?:bm|benchmark|pacing|target|وتيرة|وتيره|بنشمارك|تارجت|وضعنا|اخبارنا|基准线|目标)/i.test(norm) &&
       !/(?:behind|laggard|trailing|underperforming|late|struggling|low|متأخر|متاخر|متأخرين|متاخرين|واقع|واقعين|مين واقع|مين متأخر|مين مقصر|مين|落后|未达标)/i.test(norm);
 
     if (asksTodayBM) {
       if (promptLang === 'ar') {
+        const paceDescAr = isSectorAhead
+          ? `يعني متقدمين بزيادة +${sectorPacingDiff}% (فارق إيجابي +${formatMoney(s.totalCash - todayExpCash, 'ar')}) والوتيرة ماشية زي الفل!`
+          : `يعني متأخرين عن وتيرة اليوم بـ ${sectorPacingDiff}% (عجز كاش ${formatMoney(todayExpCash - s.totalCash, 'ar')}). محتاجين نسرع وتيرة التحصيل ونقفل الديلات المتعطلة!`;
         return {
-          text: `النهاردة اليوم 16 وبنشمارك النهاردة هو ${todayBM}% (${formatMoney(todayExpCash, 'ar')}).\n` +
-            `إحنا في قطاع Big Team 01 محققين ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%)، يعني متقدمين بزيادة +${(s.achievement - todayBM).toFixed(1)}% (فارق إيجابي +${formatMoney(s.totalCash - todayExpCash, 'ar')}) والوتيرة ماشية زي الفل!`,
+          text: `النهاردة اليوم ${curDay} وبنشمارك النهاردة هو ${todayBM}% (${formatMoney(todayExpCash, 'ar')}).\n` +
+            `إحنا في قطاع Big Team 01 محققين ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%)، ${paceDescAr}`,
           lang: 'ar'
         };
       }
       if (promptLang === 'zh') {
+        const paceDescZh = isSectorAhead
+          ? `领先基准线 +${sectorPacingDiff}% (+${formatMoney(s.totalCash - todayExpCash, 'zh')})！全组节奏保持健康。\n`
+          : `落后今日基准线 ${sectorPacingDiff}% (差距 ${formatMoney(todayExpCash - s.totalCash, 'zh')})。需加快催单入账，冲刺追平基准！\n`;
         return {
-          text: `今天是11月第16天，官方基准线为 ${todayBM}% (${formatMoney(todayExpCash, 'zh')})。\n` +
-            `大一组累计入账 ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，领先基准线 +${(s.achievement - todayBM).toFixed(1)}% (${formatMoney(s.totalCash - todayExpCash, 'zh')})！全组节奏保持健康。\n`,
+          text: `今天是11月第${curDay}天，官方基准线为 ${todayBM}% (${formatMoney(todayExpCash, 'zh')})。\n` +
+            `大一组累计入账 ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，${paceDescZh}`,
           lang: 'zh'
         };
       }
+      const paceDescEn = isSectorAhead
+        ? `pacing +${sectorPacingDiff}% (+${formatMoney(s.totalCash - todayExpCash)}) ahead of schedule!`
+        : `pacing ${sectorPacingDiff}% (-${formatMoney(todayExpCash - s.totalCash)}) behind schedule. Acceleration is needed to catch up!`;
       return {
-        text: `Today is Day 16 of November, and the official benchmark is ${todayBM}% (${formatMoney(todayExpCash)}).\n` +
-          `Big Team 01 has reached ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), pacing +${(s.achievement - todayBM).toFixed(1)}% (+${formatMoney(s.totalCash - todayExpCash)}) ahead of schedule!`,
+        text: `Today is Day ${curDay} of November, and the official benchmark is ${todayBM}% (${formatMoney(todayExpCash)}).\n` +
+          `Big Team 01 has reached ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), ${paceDescEn}`,
         lang: 'en'
       };
     }
@@ -969,14 +1014,16 @@
       !/(?:package|pricing|rate\s*card|class|consumption|c0|bonds|اسعار|باقات)/i.test(norm);
 
     if (asksGap) {
+      const daysLeft = typeof s.daysLeft === 'number' ? s.daysLeft : Math.max(1, 30 - curDay);
+      const dailyNeeded = s.dailyNeeded || Math.round(s.totalGap / daysLeft);
       if (promptLang === 'ar') {
         return {
           text: `تحليل فجوة الكاش وسرعة الفريق المطلوبة يا فندم:\n` +
             `• تارجت الشهر الكلي: ${formatMoney(s.totalTarget, 'ar')}\n` +
             `• الكاش اللي جمعناه لحد دلوقتي: ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%)\n` +
             `• الفجوة اللي باقية عشان نقفل 100%: ${formatMoney(s.totalGap, 'ar')}\n` +
-            `• الأيام الشغالة اللي باقية في الشهر: 14 يوم\n` +
-            `• الرن ريت اليومي المطلوب (Daily Run Rate): محتاجين نلم ${formatMoney(s.dailyNeeded, 'ar')} كل يوم علشان نقفل التارجت بالكامل!`,
+            `• الأيام الشغالة اللي باقية في الشهر: ${daysLeft} يوم\n` +
+            `• الرن ريت اليومي المطلوب (Daily Run Rate): محتاجين نلم ${formatMoney(dailyNeeded, 'ar')} كل يوم علشان نقفل التارجت بالكامل!`,
           lang: 'ar'
         };
       }
@@ -986,8 +1033,8 @@
             `• 全月总目标: ${formatMoney(s.totalTarget, 'zh')}\n` +
             `• 累计已入账: ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)\n` +
             `• 距离100%全月缺口: ${formatMoney(s.totalGap, 'zh')}\n` +
-            `• 剩余冲刺天数: 14 天\n` +
-            `• 每日需冲刺业绩 (Daily Run Rate): ${formatMoney(s.dailyNeeded, 'zh')}/天。\n`,
+            `• 剩余冲刺天数: ${daysLeft} 天\n` +
+            `• 每日需冲刺业绩 (Daily Run Rate): ${formatMoney(dailyNeeded, 'zh')}/天。\n`,
           lang: 'zh'
         };
       }
@@ -996,8 +1043,8 @@
           `• Total Target: ${formatMoney(s.totalTarget)}\n` +
           `• Cash Achieved: ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%)\n` +
           `• Cash Gap to 100%: ${formatMoney(s.totalGap)}\n` +
-          `• Operational Days Left: 14 days\n` +
-          `• Required Daily Run Rate: ${formatMoney(s.dailyNeeded)}/day.`,
+          `• Operational Days Left: ${daysLeft} days\n` +
+          `• Required Daily Run Rate: ${formatMoney(dailyNeeded)}/day.`,
         lang: 'en'
       };
     }
@@ -1009,34 +1056,41 @@
       !/(?:behind|gap|zero|laggard|متأخر|متاخر|صفر|واقع)/i.test(norm);
 
     if (asksTop) {
+      const allReps = (m.individuals && m.individuals.length > 0) ? [...m.individuals] : (BASELINE_DATA.individuals || []);
+      const sortedReps = [...allReps].sort((a, b) => (b.cash || 0) - (a.cash || 0));
+      const top1 = sortedReps[0];
+      const top2 = sortedReps[1];
+      const top3 = sortedReps[2];
+      const nextReps = sortedReps.slice(3, 6);
+
       if (promptLang === 'ar') {
-        return {
-          text: `وحوش الصدارة ونجوم Big Team 01 يا باشا:\n` +
-            `🥇 المركز الأول: محمد حامد (EGSS13) — $10,120 دولار (إنجاز خرافي 79.4%)\n` +
-            `🥈 المركز التاني: محمود خميس (EGSS30) — $7,551 دولار (إنجاز 60.2%)\n` +
-            `🥉 المركز التالت: محمود تيتو (EGSS01) — $6,860 دولار (إنجاز 65.4%)\n` +
-            `وبعدهم إبراهيم إسماعيل عامل $6,656 دولار، وأحمد شكري $5,320 دولار وسميرة $5,260 دولار! عاش يا رجالة!`,
-          lang: 'ar'
-        };
+        let msg = `وحوش الصدارة ونجوم Big Team 01 يا باشا:\n`;
+        if (top1) msg += `🥇 المركز الأول: ${top1.nameAr || top1.name} (${top1.team}) — ${formatMoney(top1.cash, 'ar')} (إنجاز ${top1.achievement.toFixed(1)}%)\n`;
+        if (top2) msg += `🥈 المركز التاني: ${top2.nameAr || top2.name} (${top2.team}) — ${formatMoney(top2.cash, 'ar')} (إنجاز ${top2.achievement.toFixed(1)}%)\n`;
+        if (top3) msg += `🥉 المركز التالت: ${top3.nameAr || top3.name} (${top3.team}) — ${formatMoney(top3.cash, 'ar')} (إنجاز ${top3.achievement.toFixed(1)}%)\n`;
+        if (nextReps.length > 0) {
+          msg += `وبعدهم ${nextReps.map(r => `${r.nameAr || r.name} (${formatMoney(r.cash, 'ar')})`).join('، و')}! عاش يا رجالة!`;
+        }
+        return { text: msg, lang: 'ar' };
       }
       if (promptLang === 'zh') {
-        return {
-          text: `大一组龙虎榜顶尖销冠 (Top Stars)：\n` +
-            `🥇 第一名: Mohamed Hamed (EGSS13) — $10,120 美元 (79.4%)\n` +
-            `🥈 第二名: Mahmoud Khamis (EGSS30) — $7,551 美元 (60.2%)\n` +
-            `🥉 第三名: Mahmoud Tito (EGSS01) — $6,860 美元 (65.4%)\n` +
-            `紧随其后: Ibrahim Ismaiel ($6,656 美元) 与 Ahmed Shoukry ($5,320 美元)！\n`,
-          lang: 'zh'
-        };
+        let msgZh = `大一组龙虎榜顶尖销冠 (Top Stars)：\n`;
+        if (top1) msgZh += `🥇 第一名: ${top1.name} (${top1.team}) — ${formatMoney(top1.cash, 'zh')} (${top1.achievement.toFixed(1)}%)\n`;
+        if (top2) msgZh += `🥈 第二名: ${top2.name} (${top2.team}) — ${formatMoney(top2.cash, 'zh')} (${top2.achievement.toFixed(1)}%)\n`;
+        if (top3) msgZh += `🥉 第三名: ${top3.name} (${top3.team}) — ${formatMoney(top3.cash, 'zh')} (${top3.achievement.toFixed(1)}%)\n`;
+        if (nextReps.length > 0) {
+          msgZh += `紧随其后: ${nextReps.map(r => `${r.name} (${formatMoney(r.cash, 'zh')})`).join(' 与 ')}！\n`;
+        }
+        return { text: msgZh, lang: 'zh' };
       }
-      return {
-        text: `Big Team 01 Top Performers Leaderboard:\n` +
-          `🥇 #1: Mohamed Hamed (EGSS13) — $10,120 (79.4%)\n` +
-          `🥈 #2: Mahmoud Khamis (EGSS30) — $7,551 (60.2%)\n` +
-          `🥉 #3: Mahmoud Tito (EGSS01) — $6,860 (65.4%)\n` +
-          `Followed by Ibrahim Ismaiel ($6,656) and Ahmed Shoukry ($5,320)! Outstanding work!`,
-        lang: 'en'
-      };
+      let msgEn = `Big Team 01 Top Performers Leaderboard:\n`;
+      if (top1) msgEn += `🥇 #1: ${top1.name} (${top1.team}) — ${formatMoney(top1.cash)} (${top1.achievement.toFixed(1)}%)\n`;
+      if (top2) msgEn += `🥈 #2: ${top2.name} (${top2.team}) — ${formatMoney(top2.cash)} (${top2.achievement.toFixed(1)}%)\n`;
+      if (top3) msgEn += `🥉 #3: ${top3.name} (${top3.team}) — ${formatMoney(top3.cash)} (${top3.achievement.toFixed(1)}%)\n`;
+      if (nextReps.length > 0) {
+        msgEn += `Followed by ${nextReps.map(r => `${r.name} (${formatMoney(r.cash)})`).join(', ')}! Outstanding work!`;
+      }
+      return { text: msgEn, lang: 'en' };
     }
 
     // =========================================================================
@@ -1046,44 +1100,49 @@
       !/(?:zero\s*cash|no\s*deal|صفر\s*كاش)/i.test(norm);
 
     if (asksBehind) {
+      const allReps = (m.individuals && m.individuals.length > 0) ? [...m.individuals] : (BASELINE_DATA.individuals || []);
+      const behindReps = allReps
+        .filter(r => (r.achievement !== undefined ? r.achievement : 0) < todayBM)
+        .sort((a, b) => (a.achievement || 0) - (b.achievement || 0));
+
+      if (behindReps.length === 0) {
+        if (promptLang === 'ar') return { text: `مبروك يا باشا! كل مستشاري القطاع الـ ${allReps.length} معديين بنشمارك اليوم ${curDay} (${todayBM}%) ومفيش أي مستشار واقع ورا الوتيرة!`, lang: 'ar' };
+        if (promptLang === 'zh') return { text: `太棒了！全组 ${allReps.length} 位顾问均已超过第${curDay}天基准线 (${todayBM}%)，无落后人员！`, lang: 'zh' };
+        return { text: `Outstanding! All ${allReps.length} specialists are pacing ahead of the Day ${curDay} benchmark (${todayBM}%)!`, lang: 'en' };
+      }
+
       if (promptLang === 'ar') {
+        const lines = behindReps.map(r => {
+          const icon = (r.cash === 0 || r.contracts === 0) ? '🚨' : '⚠️';
+          return `${icon} ${r.nameAr || r.name} (${r.achievement.toFixed(1)}% — كاش ${formatMoney(r.cash, 'ar')})`;
+        });
         return {
-          text: `المستشارين اللي واقعين ورا بنشمارك النهاردة (${todayBM}%) ومحتاجين زقة:\n` +
-            `🚨 إيهاب زكي (0% زيرو كاش وبدون عقود)\n` +
-            `⚠️ خالد غنيم (9.4% كاش $800)\n` +
-            `⚠️ نهى يسري (13.6% كاش $1,157)\n` +
-            `⚠️ إشراقت آل (18.5% كاش $2,040)\n` +
-            `⚠️ عمر منيب (24.2% كاش $2,140)\n` +
-            `⚠️ عمرو صفوت (24.8% كاش $3,100)\n` +
-            `⚠️ جوليا منير (29.2% كاش $2,480)\n` +
-            `الناس دي محتاجة مننا تركيز فوري على ليدات الـ Uncovered علشان يعوضوا الفارق قبل آخر الأسبوع!`,
+          text: `المستشارين اللي واقعين ورا بنشمارك اليوم ${curDay} (${todayBM}%) ومحتاجين زقة (${behindReps.length} مستشارين):\n` +
+            lines.join('\n') +
+            `\nالناس دي محتاجة مننا تركيز فوري على ليدات الـ Uncovered ومتابعة التجديدات علشان يعوضوا الفارق!`,
           lang: 'ar'
         };
       }
       if (promptLang === 'zh') {
+        const linesZh = behindReps.map(r => {
+          const icon = (r.cash === 0 || r.contracts === 0) ? '🚨' : '⚠️';
+          return `${icon} ${r.name} (${r.achievement.toFixed(1)}% — ${formatMoney(r.cash, 'zh')})`;
+        });
         return {
-          text: `当前落后今日第16天基准线 (${todayBM}%) 的重点跟进名单：\n` +
-            `🚨 Ehab Zaky (0% 零业绩)\n` +
-            `⚠️ Khaled Gonam (9.4%)\n` +
-            `⚠️ Noha Youssry (13.6%)\n` +
-            `⚠️ Ashraqat Al (18.5%)\n` +
-            `⚠️ Omar Moneb (24.2%)\n` +
-            `⚠️ Amr Safwat (24.8%)\n` +
-            `⚠️ Julia Monir (29.2%)\n` +
-            `建议主管针对未覆盖线索与在读学员池进行专项1对1辅导！\n`,
+          text: `当前落后第${curDay}天基准线 (${todayBM}%) 的重点跟进名单 (${behindReps.length}人)：\n` +
+            linesZh.join('\n') +
+            `\n建议主管针对未覆盖线索与在读学员池进行专项1对1辅导！\n`,
           lang: 'zh'
         };
       }
+      const linesEn = behindReps.map(r => {
+        const icon = (r.cash === 0 || r.contracts === 0) ? '🚨' : '⚠️';
+        return `${icon} ${r.name} (${r.achievement.toFixed(1)}% — Cash: ${formatMoney(r.cash)})`;
+      });
       return {
-        text: `Specialists currently pacing behind Day ${CURRENT_DAY} benchmark (${todayBM}%):\n` +
-          `🚨 Ehab Zaky (0% zero cash)\n` +
-          `⚠️ Khaled Gonam (9.4%)\n` +
-          `⚠️ Noha Youssry (13.6%)\n` +
-          `⚠️ Ashraqat Al (18.5%)\n` +
-          `⚠️ Omar Moneb (24.2%)\n` +
-          `⚠️ Amr Safwat (24.8%)\n` +
-          `⚠️ Julia Monir (29.2%)\n` +
-          `Targeted intervention recommended on uncontacted leads and renewals.`,
+        text: `Specialists currently pacing behind Day ${curDay} benchmark (${todayBM}%) [${behindReps.length} Reps]:\n` +
+          linesEn.join('\n') +
+          `\nTargeted intervention recommended on uncontacted leads and renewals.`,
         lang: 'en'
       };
     }
@@ -1140,26 +1199,38 @@
       !/(?:class|classes|consumption|c0|last\s*deal|drought|stagnat|days|ايام|أيام|مضى|حصص|حصة|0\s*class)/i.test(norm);
 
     if (asksZeroCash) {
+      const allReps = (m.individuals && m.individuals.length > 0) ? [...m.individuals] : (BASELINE_DATA.individuals || []);
+      const zeroReps = allReps.filter(r => (r.cash || 0) <= 0 || (r.contracts || 0) <= 0);
+
+      if (zeroReps.length === 0) {
+        if (promptLang === 'ar') return { text: `عاش يا أبطال! 🎉 كل مستشاري القطاع الـ ${allReps.length} كسروا الصفر وقفلوا كاش وعقود بنجاح ومفيش أي مستشار زيرو كاش النهاردة!`, lang: 'ar' };
+        if (promptLang === 'zh') return { text: `全员破单！🎉 全组 ${allReps.length} 位顾问均已成功成单入账，当前无零业绩顾问！`, lang: 'zh' };
+        return { text: `All Clear! 🎉 All ${allReps.length} specialists have successfully closed deals and broken zero cash!`, lang: 'en' };
+      }
+
       if (promptLang === 'ar') {
         return {
-          text: 'حصر زيرو كاش في الفريق يا ريس:\n' +
-            '🚨 المستشار الوحيد اللي لسه ما كسرش الصفر وما قفلش ولا ديل لحد النهاردة هو إيهاب زكي (Zero Cash = $0 و 0 عقود)!\n' +
-            'باقي الـ 17 مستشار كلهم عملوا مبيعات وقفلوا عقود الحمد لله. إيهاب محتاج مننا جلسة 1:1 عاجلة النهاردة علشان يفتح الحساب ويكسر الصفر!',
+          text: `حصر زيرو كاش في الفريق يا ريس:\n` +
+            `🚨 المستشارين اللي لسه ما كسرش الصفر وما قفلش ولا ديل لحد النهاردة:\n` +
+            zeroReps.map(r => `• ${r.nameAr || r.name} (Zero Cash = $0 و 0 عقود)`).join('\n') +
+            `\nباقي الـ ${allReps.length - zeroReps.length} مستشار كلهم عملوا مبيعات وقفلوا عقود. محتاجين جلسات 1:1 عاجلة معاهم علشان يفتحوا الحساب ويكسروا الصفر!`,
           lang: 'ar'
         };
       }
       if (promptLang === 'zh') {
         return {
-          text: '大一组零业绩人员排查：\n' +
-            '🚨 全组截至目前唯一尚未破单的顾问为：Ehab Zaky (业绩: $0, 0成单)！\n' +
-            '全组其余17位顾问均已成功出单。请主管今天务必对 Ehab 进行1对1专项带教，协助破单！\n',
+          text: `大一组零业绩人员排查：\n` +
+            `🚨 全组截至目前尚未破单的顾问为：\n` +
+            zeroReps.map(r => `• ${r.name} (业绩: $0, 0成单)`).join('\n') +
+            `\n其余 ${allReps.length - zeroReps.length} 位顾问均已成功出单。请主管今天务必对他们进行1对1带教！\n`,
           lang: 'zh'
         };
       }
       return {
-        text: 'Zero-Cash Audit Telemetry for Big Team 01:\n' +
-          '🚨 Currently, the only specialist who has not yet closed a deal is Ehab Zaky ($0 cash, 0 contracts)!\n' +
-          'All other 17 specialists have closed deals. Urgent 1-on-1 coaching is recommended for Ehab today to break zero!',
+        text: `Zero-Cash Audit Telemetry for Big Team 01:\n` +
+          `🚨 Specialists who have not yet closed a deal:\n` +
+          zeroReps.map(r => `• ${r.name} ($0 cash, 0 contracts)`).join('\n') +
+          `\nAll other ${allReps.length - zeroReps.length} specialists have closed deals. Urgent 1-on-1 coaching recommended!`,
         lang: 'en'
       };
     }
@@ -1366,12 +1437,18 @@
     const asksUpgrade = /(?:20%|upgrade|renewals?|m2|تجديد|ترقية|ترقيات|مبكر|20 بالمية|20 بالميه|20 في المية|ام تو|تجديدات|提续|续费|升级)/i.test(norm);
 
     if (asksUpgrade) {
+      const renewalBase = s.totalBase || 438;
+      const target20Count = Math.ceil(renewalBase * 0.20);
+      const renewalsClosed = s.totalRenewals !== undefined ? s.totalRenewals : (s.m2Renewals || 0);
+      const remainingNeeded = Math.max(0, target20Count - renewalsClosed);
+      const renewalRate = s.renewalRate !== undefined ? s.renewalRate : ((renewalsClosed / renewalBase) * 100);
+
       if (promptLang === 'ar') {
         return {
           text: `موقف مبادرة ترقيات الـ M2 وتارجت الـ 20% يا باشا:\n` +
-            `• نسبة التحويل الحالية: ${s.renewalRate.toFixed(1)}% (قفلنا ${s.totalRenewals} عقد من أصل ${s.totalBase} طالب في البيز)\n` +
-            `• عشان نحقق تارجت الـ 20%: المفروض نقفل 88 عقد تجديد في القطاع\n` +
-            `• اللي ناقصنا بالظبط: 73 عقد تجديد\n` +
+            `• نسبة التحويل الحالية: ${renewalRate.toFixed(1)}% (قفلنا ${renewalsClosed} عقد من أصل ${renewalBase} طالب في البيز)\n` +
+            `• عشان نحقق تارجت الـ 20%: المفروض نقفل ${target20Count} عقد تجديد في القطاع\n` +
+            `• اللي ناقصنا بالظبط: ${remainingNeeded} عقد تجديد\n` +
             `💡 الفرصة الذهبية: نركز اتصالاتنا على الطلاب اللي فاضل معاهم أقل من 10 حصص وندخل عليهم بعرض الـ 150 حصة السنوي!`,
           lang: 'ar'
         };
@@ -1379,18 +1456,18 @@
       if (promptLang === 'zh') {
         return {
           text: `20% 提续加速专项战报 (Early Upgrade Hub)：\n` +
-            `• 提续目标进度: ${s.renewalRate.toFixed(1)}% (已完成 ${s.totalRenewals} 单 / 目标在读池 ${s.totalBase} 人)\n` +
-            `• 达成20%全员指标需完成: 88 单续费\n` +
-            `• 剩余待转化缺口: 73 单\n` +
+            `• 提续目标进度: ${renewalRate.toFixed(1)}% (已完成 ${renewalsClosed} 单 / 目标在读池 ${renewalBase} 人)\n` +
+            `• 达成20%全员指标需完成: ${target20Count} 单续费\n` +
+            `• 剩余待转化缺口: ${remainingNeeded} 单\n` +
             `💡 请重点跟进在读课时 < 10 节的高意向学员，优先推介 150 课时高价值包！\n`,
           lang: 'zh'
         };
       }
       return {
         text: `Early Upgrade (M2) 20% Milestone Status:\n` +
-          `• Current Conversion: ${s.renewalRate.toFixed(1)}% (${s.totalRenewals} closed from base of ${s.totalBase} students)\n` +
-          `• Target 20% Volume: 88 renewal deals required\n` +
-          `• Remaining Needed: 73 deals to hit milestone\n` +
+          `• Current Conversion: ${renewalRate.toFixed(1)}% (${renewalsClosed} closed from base of ${renewalBase} students)\n` +
+          `• Target 20% Volume: ${target20Count} renewal deals required\n` +
+          `• Remaining Needed: ${remainingNeeded} deals to hit milestone\n` +
           `💡 Priority Action: Focus outreach on students with <10 classes remaining with the 150-class annual package!`,
         lang: 'en'
       };
@@ -1402,29 +1479,35 @@
     const asksStrategy = /(?:strategic|moves|priorities|action\s*plan|خطة|استراتيجية|اولويات|أولويات|3 خطوات|تحركات|الخطة|نعمل ايه النهاردة|ايه الخطة|战略|动作|优先级|重点)/i.test(norm);
 
     if (asksStrategy) {
+      const c0Count = (m.consumption && m.consumption.c0) || 242;
+      const renewalBase = s.totalBase || 438;
+      const target20Count = Math.ceil(renewalBase * 0.20);
+      const renewalsClosed = s.totalRenewals !== undefined ? s.totalRenewals : (s.m2Renewals || 0);
+      const remainingNeeded = Math.max(0, target20Count - renewalsClosed);
+
       if (promptLang === 'ar') {
         return {
           text: 'توجيهات مديرنا الأول حسين الأعصر — أهم 3 تحركات استراتيجية للنهاردة يا وحش:\n' +
-            '1. 👥 عيال الصفر (C0): نكلم فوراً الـ 242 طالب اللي ما حضروش ولا حصة ونحجز لهم أول كلاس علشان نحميهم من التسرب!\n' +
-            '2. 🚀 زقة الـ 20% M2: نستهدف الـ 73 عقد تجديد الباقيين، ونركز على باقة الـ 150 حصة السنوية كأفضل قيمة.\n' +
-            '3. 📞 نلحق المستشارين المتأخرين: جلسة كوتشينج 1:1 مع إيهاب زكي وخالد غنيم ونهى، ونوصل بنسبة تغطية المكالمات لـ 90%+!',
+            `1. 👥 عيال الصفر (C0): نكلم فوراً الـ ${c0Count} طالب اللي ما حضروش ولا حصة ونحجز لهم أول كلاس علشان نحميهم من التسرب!\n` +
+            `2. 🚀 زقة الـ 20% M2: نستهدف الـ ${remainingNeeded} عقد تجديد الباقيين، ونركز على باقة الـ 150 حصة السنوية كأفضل قيمة.\n` +
+            `3. 📞 نلحق المستشارين المتأخرين: جلسات كوتشينج 1:1 مع المتأخرين عن وتيرة اليوم (${todayBM}%)، ونوصل بنسبة تغطية المكالمات لـ 90%+!`,
           lang: 'ar'
         };
       }
       if (promptLang === 'zh') {
         return {
           text: '侯赛因高级经理战略部署 — 今日3大关键战役：\n' +
-            '1. 👥 激活 0 课时学员 (C0): 立即触达 242 名未上课学员，锁定首堂体验课，筑牢续费底座！\n' +
-            '2. 🚀 攻坚 20% 提续指标 (M2): 全力推进剩余 73 单提续转化，重点推广 150 课时高产值套餐。\n' +
-            '3. 📞 提升通话覆盖与帮扶落后: 全员通话覆盖率冲刺 90%+，主管1对1带教落后基准线的顾问。\n',
+            `1. 👥 激活 0 课时学员 (C0): 立即触达 ${c0Count} 名未上课学员，锁定首堂体验课，筑牢续费底座！\n` +
+            `2. 🚀 攻坚 20% 提续指标 (M2): 全力推进剩余 ${remainingNeeded} 单提续转化，重点推广 150 课时高产值套餐。\n` +
+            `3. 📞 提升通话覆盖与帮扶落后: 全员通话覆盖率冲刺 90%+，主管1对1带教落后今日基准线 (${todayBM}%) 的顾问。\n`,
           lang: 'zh'
         };
       }
       return {
         text: 'Senior Manager Hussein El A\'sar — Top 3 Strategic Moves for Today:\n' +
-          '1. 👥 Activate C0 Zero-Class Students: Immediate intervention for 242 inactive students to book lesson #1 and curb churn!\n' +
-          '2. 🚀 Accelerate Early Upgrade (M2): Secure 73 renewal orders focused on the flagship 150-class package.\n' +
-          '3. 📞 Call Coverage & Laggard Turnaround: Drive call coverage to 90%+ and provide 1-on-1 coaching for reps behind benchmark.',
+          `1. 👥 Activate C0 Zero-Class Students: Immediate intervention for ${c0Count} inactive students to book lesson #1 and curb churn!\n` +
+          `2. 🚀 Accelerate Early Upgrade (M2): Secure ${remainingNeeded} renewal orders focused on the flagship 150-class package.\n` +
+          `3. 📞 Call Coverage & Laggard Turnaround: Drive call coverage to 90%+ and provide 1-on-1 coaching for reps behind Day ${curDay} benchmark (${todayBM}%).`,
         lang: 'en'
       };
     }
@@ -1475,20 +1558,30 @@
       /^(?:hi\s*toki|hello\s*toki|مرحبا\s*توكي|اهلا\s*توكي|ازيك\s*توكي|你好\s*toki)$/i.test(norm);
 
     if (isGreeting) {
+      const paceGreetAr = isSectorAhead
+        ? `ومعديين وتيرة اليوم (${todayBM}%) بـ +${sectorPacingDiff}%`
+        : `ومتأخرين عن وتيرة اليوم (${todayBM}%) بـ ${sectorPacingDiff}% ومحتاجين زقة`;
+      const paceGreetZh = isSectorAhead
+        ? `领先今日第${curDay}天基准线 (${todayBM}%) +${sectorPacingDiff}%`
+        : `落后今日第${curDay}天基准线 (${todayBM}%) ${sectorPacingDiff}%`;
+      const paceGreetEn = isSectorAhead
+        ? `pacing +${sectorPacingDiff}% ahead of Day ${curDay} benchmark (${todayBM}%)`
+        : `pacing ${sectorPacingDiff}% behind Day ${curDay} benchmark (${todayBM}%)`;
+
       if (promptLang === 'ar') {
         return {
-          text: `صباح الفل والنشاط يا ريس! 🌟 أنا توكي، معاك خطوة بخطوة في Big Team 01. التيم لحد النهاردة مجمع ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) ومعديين وتيرة اليوم بـ +${(s.achievement - todayBM).toFixed(1)}%. أؤمرني يا باشا، تحب نراجع أرقام مين أو نشوف إيه؟`,
+          text: `صباح الفل والنشاط يا ريس! 🌟 أنا توكي، معاك خطوة بخطوة في Big Team 01. التيم لحد النهاردة (اليوم ${curDay}) مجمع ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) ${paceGreetAr}. أؤمرني يا باشا، تحب نراجع أرقام مين أو نشوف إيه؟`,
           lang: 'ar'
         };
       }
       if (promptLang === 'zh') {
         return {
-          text: `您好，侯赛因经理！🌟 我是 Toki，大一组的专属智能数据与语音副驾！截至今天全组累计入账 ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，领先今日第16天基准线 +${(s.achievement - todayBM).toFixed(1)}%。请问接下来您想了解什么？\n`,
+          text: `您好，侯赛因经理！🌟 我是 Toki，大一组的专属智能数据与语音副驾！截至今天第${curDay}天全组累计入账 ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，${paceGreetZh}。请问接下来您想了解什么？\n`,
           lang: 'zh'
         };
       }
       return {
-        text: `Hello Hussein! 🌟 I'm Toki, your Big Team 01 AI Assistant! Right now our team has achieved ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), pacing +${(s.achievement - todayBM).toFixed(1)}% ahead of Day ${CURRENT_DAY} benchmark. What would you like to check?`,
+        text: `Hello Hussein! 🌟 I'm Toki, your Big Team 01 AI Assistant! Right now our team has achieved ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%), ${paceGreetEn}. What would you like to check?`,
         lang: 'en'
       };
     }
@@ -1579,18 +1672,30 @@
     const s = m.summary || {};
     const ind = m.individuals || [];
 
+    const curDay = getCurrentDay();
+    const todayBM = OFFICIAL_PACING[curDay] || 61;
+    const tomorrowBM = OFFICIAL_PACING[curDay + 1] || 63;
+    const prevBM = OFFICIAL_PACING[curDay - 1] || 59;
+    const daysLeft = typeof s.daysLeft === 'number' ? s.daysLeft : Math.max(1, 30 - curDay);
+    const dailyRunRate = Math.round(Math.max(0, (s.totalTarget || 2597414) - (s.totalCash || 0)) / daysLeft);
+    const pacingDelta = (s.achievement !== undefined ? s.achievement - todayBM : 0).toFixed(1);
+    const pacingStatus = (s.achievement >= todayBM) ? `AHEAD of pace (+${pacingDelta}%)` : `BEHIND pace (${pacingDelta}%)`;
+    const target20Count = Math.ceil((s.totalBase || 438) * 0.20);
+    const renewalsClosed = s.totalRenewals !== undefined ? s.totalRenewals : (s.m2Renewals || 0);
+
     let text = '=== 51TALK BIG TEAM 01 LIVE METRICS SNAPSHOT ===\n';
     text += '- Senior Manager: Hussein El A\'sar (حسين الأعصر)\n';
-    text += '- Operational Day: November 2026 (MTD Day 17 of 30)\n';
-    text += '- Target Benchmark Pacing: Day 16: 41.0% | Day 17 (Today): 43.0% | Day 18 (Tomorrow): 46.0%\n';
-    text += '- Net Cash Achieved: $' + (s.totalCash || 77770) + ' (' + (s.achievement !== undefined ? s.achievement.toFixed(1) : '44.8') + '%) vs Monthly Target: $' + (s.totalTarget || 173541) + '\n';
-    text += '- Cash Gap Remaining: $' + Math.max(0, (s.totalTarget || 173541) - (s.totalCash || 77770)) + '\n';
-    text += '- Required Daily Run Rate: $7,367 / day to 100% close target\n';
-    text += '- Total Closed Contracts: ' + (s.totalContracts || 83) + ' orders (Avg ticket: ~$1,093)\n';
-    text += '- Early Upgrade M2 (20% Milestone): ' + (s.m2Renewals || 17) + ' renewals closed (Team Target: 46 renewals, Conversion: ~4.7%)\n';
-    text += '- Call Coverage: ' + (s.avgCoverage !== undefined ? s.avgCoverage.toFixed(1) : '75.8') + '%\n';
+    text += `- Operational Day: November 2026 (MTD Day ${curDay} of 30)\n`;
+    text += `- Target Benchmark Pacing: Day ${curDay - 1}: ${prevBM}% | Day ${curDay} (Today): ${todayBM}% | Day ${curDay + 1} (Tomorrow): ${tomorrowBM}%\n`;
+    text += `- Current Sector Status: ${pacingStatus}\n`;
+    text += '- Net Cash Achieved: $' + (s.totalCash || 0) + ' (' + (s.achievement !== undefined ? s.achievement.toFixed(1) : '0') + '%) vs Monthly Target: $' + (s.totalTarget || 0) + '\n';
+    text += '- Cash Gap Remaining: $' + Math.max(0, (s.totalTarget || 0) - (s.totalCash || 0)) + '\n';
+    text += `- Required Daily Run Rate: $${dailyRunRate.toLocaleString('en-US')} / day to 100% close target (${daysLeft} days left)\n`;
+    text += '- Total Closed Contracts: ' + (s.totalContracts || 0) + ' orders\n';
+    text += `- Early Upgrade M2 (20% Milestone): ${renewalsClosed} renewals closed (Team Target: ${target20Count} renewals, Conversion: ${s.renewalRate !== undefined ? s.renewalRate.toFixed(1) : '0'}%)\n`;
+    text += '- Call Coverage: ' + (s.avgCoverage !== undefined ? s.avgCoverage.toFixed(1) : '0') + '%\n';
     text += '- Class Consumption Rate: ' + (s.classConsumption !== undefined ? s.classConsumption.toFixed(1) : '80.2') + '% (Target: 82.0%)\n';
-    text += '- Zero-Class Students (C0): 42 students pending activation\n\n';
+    text += '- Zero-Class Students (C0): ' + ((m.consumption && m.consumption.c0) || 242) + ' students pending activation\n\n';
 
     text += '=== 19 SALES SPECIALISTS PERFORMANCE & LAST DEAL STAGNATION AUDIT ===\n';
     ind.forEach((r, idx) => {
@@ -2591,7 +2696,13 @@
       const res = getTokiAnswer(q);
       let replyText = res.text;
       if (apiKey) {
-        replyText += '\n\n[💡 تم الرد بالمحرك المحلي لتعذر الاتصال بـ Gemini: تأكد من صلاحية المفتاح والإنترنت]';
+        if (promptLang === 'ar') {
+          replyText += '\n\n[💡 تم الرد بالمحرك المحلي الذاتي لتعذر الاتصال بـ Gemini: تأكد من صلاحية المفتاح والإنترنت]';
+        } else if (promptLang === 'zh') {
+          replyText += '\n\n[💡 因云端 Gemini 连接异常，已自动切换为本地独立智能引擎极速解答]';
+        } else {
+          replyText += '\n\n[💡 Answered by Local Autonomous Engine (Cloud Gemini unreachable)]';
+        }
       }
       appendMessage('assistant', replyText, res.lang, 'local');
       speak(res.text, res.lang);
@@ -2851,7 +2962,7 @@
   }
 
   // Public Interface
-  window.tokiAskQuestion = function (query) {
+  function tokiAskQuestion(query) {
     if (!query) return;
     buildTokiElements();
     const modal = document.getElementById('tokiModal');
