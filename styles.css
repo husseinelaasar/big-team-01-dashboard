@@ -8433,3 +8433,151 @@ html[dir="rtl"] .toki-input {
   border: 1.5px solid rgba(99, 102, 241, 0.35) !important;
   color: var(--text-primary, #ffffff) !important;
 }
+
+/* ============================================================== */
+/* UNCOVERED LEADS POOL DISTRIBUTION MATRIX & VIEWS              */
+/* ============================================================== */
+#uncoveredPoolMatrixContainer {
+  transition: all 0.25s ease;
+}
+
+.pool-matrix-table th {
+  font-size: 0.76rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 10px 8px !important;
+  white-space: nowrap;
+}
+
+.pool-matrix-table td {
+  padding: 8px 8px !important;
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
+.pool-matrix-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+}
+
+.pool-matrix-num {
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.pool-matrix-pct {
+  font-size: 0.72rem;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.pct-outside {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.pct-exp {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.pct-foe {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.pct-upg {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.pct-period {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+body.light-theme .pct-outside {
+  background: #e0e7ff !important;
+  color: #3730a3 !important;
+  border-color: #c7d2fe !important;
+}
+
+body.light-theme .pct-exp {
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+}
+
+body.light-theme .pct-foe {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  border-color: #fecaca !important;
+}
+
+body.light-theme .pct-upg {
+  background: #d1fae5 !important;
+  color: #065f46 !important;
+  border-color: #a7f3d0 !important;
+}
+
+body.light-theme .pct-period {
+  background: #e0f2fe !important;
+  color: #075985 !important;
+  border-color: #bae6fd !important;
+}
+
+body.light-theme #uncoveredPoolMatrixContainer {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-theme #uncoveredPoolMatrixContainer h3 {
+  color: #0f172a !important;
+}
+
+body.light-theme #uncoveredPoolMatrixContainer tfoot tr td {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  border-top: 2px solid #cbd5e1 !important;
+}
+
+.btn-filter-pool-action {
+  cursor: pointer;
+  padding: 4px 9px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-filter-pool-action:hover {
+  background: rgba(56, 189, 248, 0.25);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+body.light-theme .btn-filter-pool-action {
+  background: #f0f9ff !important;
+  color: #0284c7 !important;
+  border-color: #bae6fd !important;
+}
+
+body.light-theme .btn-filter-pool-action:hover {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+}

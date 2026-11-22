@@ -1078,6 +1078,217 @@
         </div>
       </div>
 
+      <!-- ============================================================== -->
+      <!-- STRATEGIC POOL BREAKDOWN ANALYTICS MATRIX (SMALL TEAMS, BIG TEAM, INDIVIDUALS) -->
+      <!-- ============================================================== -->
+      <div id="uncoveredPoolMatrixContainer" class="glass-panel-executive modern-table-card" style="margin-bottom: 24px; padding: 22px; background: rgba(17, 24, 39, 0.9); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px;">
+        
+        <!-- Header & View Switcher Toolbar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: wrap; gap: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.06); padding-bottom: 14px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="pill-badge pill-badge-cyan" style="font-size: 0.72rem; font-weight: 800;">POOL ANALYTICS MATRIX</span>
+              <span class="status-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); font-size: 0.72rem; padding: 1px 7px;">2,009 ACTIVE LEADS</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin: 4px 0 2px 0; display: flex; align-items: center; gap: 8px;">
+              <span>📊</span> Uncovered Leads Distribution by Pool <span style="font-size: 0.88rem; font-weight: 600; color: #94a3b8;">(مصفوفة نسب وتوزيع الـ Pools)</span>
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+              Proportional distribution of 2,009 uncontacted accounts across all 5 Pools (Outside, Expired, FOE, Upgrade M2, In-Period) for Small Teams, Big Team 01 (Sector Total), and all 19 Individual Specialists.
+            </p>
+          </div>
+
+          <!-- View Switcher Tabs -->
+          <div style="display: flex; align-items: center; gap: 8px; background: rgba(30, 41, 59, 0.6); padding: 5px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.06);">
+            <button type="button" id="btnPoolViewTeams" class="pill-badge active" style="cursor: pointer; padding: 7px 14px; font-size: 0.8rem; font-weight: 700;">
+              🏢 Small Teams (5)
+            </button>
+            <button type="button" id="btnPoolViewSector" class="pill-badge" style="cursor: pointer; padding: 7px 14px; font-size: 0.8rem; font-weight: 700;">
+              🌐 Big Team 01 (Sector)
+            </button>
+            <button type="button" id="btnPoolViewReps" class="pill-badge" style="cursor: pointer; padding: 7px 14px; font-size: 0.8rem; font-weight: 700;">
+              👤 Individual Reps (19)
+            </button>
+          </div>
+        </div>
+
+        <!-- VIEW 1: SMALL TEAMS MATRIX -->
+        <div id="poolViewTeamsPanel" style="display: block;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+            <div style="font-size: 0.82rem; color: #94a3b8;">
+              Distribution breakdown for each of the 5 Small Teams. Percentages indicate the proportion within each team's total uncovered leads.
+            </div>
+            <div style="font-size: 0.75rem; color: #cbd5e1; font-family: var(--font-mono);">
+              Click any team button to filter the live roster below
+            </div>
+          </div>
+          <div class="table-wrapper" style="overflow-x: auto;">
+            <table class="data-table pool-matrix-table" id="poolSmallTeamsTable" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th style="min-width: 130px; text-align: left !important;">Small Team</th>
+                  <th style="min-width: 120px; text-align: center;">Total Uncovered</th>
+                  <th style="min-width: 110px; text-align: center;">% of Sector</th>
+                  <th style="min-width: 140px; text-align: center; color: #818cf8;">Outside Pool<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">围场外</span></th>
+                  <th style="min-width: 140px; text-align: center; color: #fbbf24;">Expired Pool<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">到期</span></th>
+                  <th style="min-width: 140px; text-align: center; color: #f87171;">FOE Pool<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">首单到期</span></th>
+                  <th style="min-width: 130px; text-align: center; color: #34d399;">Upgrade M2<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">升舱</span></th>
+                  <th style="min-width: 120px; text-align: center; color: #38bdf8;">In-Period<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">期间</span></th>
+                  <th style="min-width: 160px; text-align: left !important;">Urgency / Focus Profile</th>
+                  <th style="min-width: 100px; text-align: center;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="poolSmallTeamsTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+              <tfoot id="poolSmallTeamsTableFoot">
+                <!-- Dynamically populated Sector summary -->
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- VIEW 2: BIG TEAM 01 (SECTOR) PORTFOLIO -->
+        <div id="poolViewSectorPanel" style="display: none;">
+          <!-- Sector 5-Pool Cards Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 20px;">
+            <!-- Pool 1: Outside Pool -->
+            <div class="metric-tile-modern" style="border-top: 3px solid #6366f1; padding: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; font-weight: 800; color: #818cf8; text-transform: uppercase;">Outside Pool (围场外)</span>
+                <span class="pill-badge pill-badge-purple" style="font-size: 0.68rem;">52.5%</span>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 900; color: #818cf8; margin-top: 6px;">1,054</div>
+              <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 4px;">Primary outreach volume &bull; Unassigned pool</div>
+            </div>
+
+            <!-- Pool 2: Expired Pool -->
+            <div class="metric-tile-modern" style="border-top: 3px solid #f59e0b; padding: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; font-weight: 800; color: #fbbf24; text-transform: uppercase;">Expired (到期)</span>
+                <span class="pill-badge pill-badge-amber" style="font-size: 0.68rem;">27.7%</span>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 900; color: #fbbf24; margin-top: 6px;">556</div>
+              <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 4px;">High-value contract renewal pipeline</div>
+            </div>
+
+            <!-- Pool 3: FOE -->
+            <div class="metric-tile-modern" style="border-top: 3px solid #ef4444; padding: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; font-weight: 800; color: #f87171; text-transform: uppercase;">First Order Exp (首单到期)</span>
+                <span class="pill-badge pill-badge-rose" style="font-size: 0.68rem;">19.0%</span>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 900; color: #f87171; margin-top: 6px;">381</div>
+              <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 4px;">Critical 1st order retention &amp; conversion</div>
+            </div>
+
+            <!-- Pool 4: Upgrade M2 -->
+            <div class="metric-tile-modern" style="border-top: 3px solid #10b981; padding: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; font-weight: 800; color: #34d399; text-transform: uppercase;">Upgrade M2 (升舱)</span>
+                <span class="pill-badge pill-badge-emerald" style="font-size: 0.68rem;">0.5%</span>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 900; color: #34d399; margin-top: 6px;">11</div>
+              <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 4px;">VIP Early Upgrade candidates (High Priority)</div>
+            </div>
+
+            <!-- Pool 5: In-Period -->
+            <div class="metric-tile-modern" style="border-top: 3px solid #38bdf8; padding: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; font-weight: 800; color: #38bdf8; text-transform: uppercase;">In-Period (期间)</span>
+                <span class="pill-badge pill-badge-cyan" style="font-size: 0.68rem;">0.3%</span>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 900; color: #38bdf8; margin-top: 6px;">7</div>
+              <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 4px;">Active students requiring immediate care</div>
+            </div>
+          </div>
+
+          <!-- Stacked Visual Proportion Bar -->
+          <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 10px; padding: 16px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <span style="font-size: 0.78rem; font-weight: 800; color: #e2e8f0; text-transform: uppercase;">
+                Sector Pool Proportional Distribution Bar (100% = 2,009 Leads)
+              </span>
+              <span style="font-size: 0.74rem; color: #94a3b8; font-family: var(--font-mono);">Total: 2,009 Uncovered</span>
+            </div>
+            <!-- Multi-color Segmented Bar -->
+            <div style="height: 22px; width: 100%; border-radius: 6px; overflow: hidden; display: flex; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+              <div style="width: 52.46%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 800; color: #fff;" title="Outside Pool: 1,054 (52.5%)">52.5%</div>
+              <div style="width: 27.68%; background: #f59e0b; display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 800; color: #000;" title="Expired: 556 (27.7%)">27.7%</div>
+              <div style="width: 18.96%; background: #ef4444; display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 800; color: #fff;" title="FOE: 381 (19.0%)">19.0%</div>
+              <div style="width: 0.55%; min-width: 6px; background: #10b981;" title="Upgrade M2: 11 (0.5%)"></div>
+              <div style="width: 0.35%; min-width: 6px; background: #38bdf8;" title="In-Period: 7 (0.3%)"></div>
+            </div>
+            <!-- Bar Legend -->
+            <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: 0.75rem;">
+              <span style="display: flex; align-items: center; gap: 6px; color: #818cf8;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #6366f1;"></span> Outside Pool: 1,054 (52.5%)</span>
+              <span style="display: flex; align-items: center; gap: 6px; color: #fbbf24;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #f59e0b;"></span> Expired: 556 (27.7%)</span>
+              <span style="display: flex; align-items: center; gap: 6px; color: #f87171;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #ef4444;"></span> FOE: 381 (19.0%)</span>
+              <span style="display: flex; align-items: center; gap: 6px; color: #34d399;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #10b981;"></span> Upgrade M2: 11 (0.5%)</span>
+              <span style="display: flex; align-items: center; gap: 6px; color: #38bdf8;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #38bdf8;"></span> In-Period: 7 (0.3%)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW 3: INDIVIDUAL REPS MATRIX (19 REPS) -->
+        <div id="poolViewRepsPanel" style="display: none;">
+          <!-- Controls Toolbar for Reps Table -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <select id="poolRepTeamFilter" class="modern-select" style="padding: 6px 12px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; min-width: 160px;">
+                <option value="ALL">All Small Teams (19 Reps)</option>
+                <option value="ME-EGSS01">ME-EGSS01 (4 Reps)</option>
+                <option value="ME-EGSS05">ME-EGSS05 (7 Reps)</option>
+                <option value="ME-EGSS10">ME-EGSS10 (3 Reps)</option>
+                <option value="ME-EGSS13">ME-EGSS13 (3 Reps)</option>
+                <option value="ME-EGSS30">ME-EGSS30 (2 Reps)</option>
+              </select>
+              <input type="text" id="poolRepSearchInput" class="modern-input" placeholder="🔍 Search rep name..." style="width: 180px; font-size: 0.78rem; padding: 6px 10px;">
+              <select id="poolRepSortSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;">
+                <option value="total">Sort: Total Leads ↓</option>
+                <option value="outside">Sort: Outside Pool ↓</option>
+                <option value="exp">Sort: Expired ↓</option>
+                <option value="foe">Sort: FOE ↓</option>
+                <option value="name">Sort: Rep Name A-Z</option>
+              </select>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <button type="button" id="btnExportPoolRepsCsv" class="pill-badge pill-badge-cyan" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem; border: none;">
+                📥 Export Reps Breakdown (CSV)
+              </button>
+            </div>
+          </div>
+
+          <!-- Reps Table -->
+          <div class="table-wrapper" style="max-height: 480px; overflow-y: auto;">
+            <table class="data-table pool-matrix-table" id="poolIndividualRepsTable" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th style="width: 45px; text-align: center;">#</th>
+                  <th style="min-width: 150px; text-align: left !important;">Sales Specialist</th>
+                  <th style="min-width: 110px; text-align: center;">Team</th>
+                  <th style="min-width: 115px; text-align: center;">Total Uncovered</th>
+                  <th style="min-width: 95px; text-align: center;">% Sector</th>
+                  <th style="min-width: 125px; text-align: center; color: #818cf8;">Outside Pool<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">围场外</span></th>
+                  <th style="min-width: 125px; text-align: center; color: #fbbf24;">Expired<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">到期</span></th>
+                  <th style="min-width: 125px; text-align: center; color: #f87171;">FOE<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">首单到期</span></th>
+                  <th style="min-width: 110px; text-align: center; color: #34d399;">Upgrade<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">升舱</span></th>
+                  <th style="min-width: 105px; text-align: center; color: #38bdf8;">In-Period<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">期间</span></th>
+                  <th style="min-width: 110px; text-align: center;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="poolIndividualRepsTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+              <tfoot id="poolIndividualRepsTableFoot">
+                <!-- Dynamically populated -->
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
       <!-- Actionable Rep Downloads & Team Quick Access Toolbar -->
       <div class="glass-panel-executive" style="margin-bottom: 24px; padding: 20px; background: rgba(17, 24, 39, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
@@ -2238,10 +2449,10 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js?v=20261122_225500" defer></script>
-  <script src="dashboard.js?v=20261122_225500" defer></script>
-  <script src="dashboard_ai_command_suite.js?v=20261122_214000" defer></script>
-  <script src="dashboard_i18n.js?v=20261122_225500" defer></script>
-  <script src="dashboard_voice_assistant.js?v=20261122_214000" defer></script>
+  <script src="dashboard.js?v=20261122_235500" defer></script>
+  <script src="dashboard_ai_command_suite.js?v=20261122_235500" defer></script>
+  <script src="dashboard_i18n.js?v=20261122_235500" defer></script>
+  <script src="dashboard_voice_assistant.js?v=20261122_235500" defer></script>
 
   <script>
     // Copy Official Public Dashboard Link
