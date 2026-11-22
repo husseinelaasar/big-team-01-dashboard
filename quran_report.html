@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quran & Tahfeez Intelligence Report | Middle East Telephony</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 50% -10%, #0d2a22 0%, #040f0c 100%);
+      color: #f1f5f9;
+      min-height: 100vh;
+    }
+    .glass-card {
+      background: rgba(8, 28, 22, 0.82);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.6);
+    }
+    .glass-card:hover {
+      border-color: rgba(52, 211, 153, 0.45);
+    }
+    .arabic-text {
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8">
+
+  <!-- Header -->
+  <header class="max-w-7xl mx-auto mb-8">
+    <div class="glass-card rounded-2xl p-6 flex flex-col lg:flex-row justify-between items-center gap-6 border-b-2 border-emerald-500/50">
+      
+      <div class="flex items-center gap-4">
+        <div class="p-4 bg-gradient-to-tr from-emerald-600 to-teal-500 rounded-2xl text-white text-3xl shadow-lg shadow-emerald-500/25">
+          📖
+        </div>
+        <div>
+          <div class="flex items-center gap-3">
+            <h1 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+              Quran & Tahfeez Intelligence Report
+            </h1>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">
+              Dedicated Quran Portal
+            </span>
+          </div>
+          <p class="text-slate-400 text-xs md:text-sm mt-1">
+            Analyzing all 19 unique students and 29 calls related to Quran study, Tahfeez centers, and timing conflicts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Action & Switcher Links -->
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="annoyance_report.html" class="px-4 py-2 bg-gradient-to-r from-rose-700 to-red-600 hover:from-rose-600 hover:to-red-500 text-white text-xs font-bold rounded-xl transition shadow-lg shadow-red-700/30 flex items-center gap-2">
+          <span>🚨 Switch to Customer Annoyance Report</span>
+          <span>→</span>
+        </a>
+        <a href="call_keyword_radar.html" class="px-3.5 py-2 bg-slate-900/90 hover:bg-slate-800 text-cyan-300 text-xs font-semibold rounded-xl border border-cyan-800 transition">
+          📡 Keyword Radar
+        </a>
+        <a href="/" target="_blank" class="px-3.5 py-2 bg-blue-950/80 hover:bg-blue-900 text-cyan-300 text-xs font-semibold rounded-xl border border-cyan-700/50 transition">
+          🎧 JOCC Platform
+        </a>
+        <button onclick="exportQuranCSV()" class="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold rounded-xl transition flex items-center gap-1.5 border border-emerald-500/50">
+          <span>📥 Export Quran CSV</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Metric KPI Cards (100% Quran Specific) -->
+  <section class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+    <div class="glass-card rounded-2xl p-5 border-l-4 border-emerald-500">
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 block mb-1">Unique Students</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-extrabold text-white">19</span>
+        <span class="text-xs text-slate-400">Students</span>
+      </div>
+      <span class="text-[11px] text-emerald-300/90 block mt-2 pt-2 border-t border-slate-800">100% of Quran-focused cohort</span>
+    </div>
+
+    <div class="glass-card rounded-2xl p-5 border-l-4 border-teal-500">
+      <span class="text-xs font-bold uppercase tracking-wider text-teal-400 block mb-1">Recorded Calls</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-extrabold text-white">29</span>
+        <span class="text-xs text-slate-400">Calls</span>
+      </div>
+      <span class="text-[11px] text-teal-300/90 block mt-2 pt-2 border-t border-slate-800">Spoken Speech-to-Text Transcripts</span>
+    </div>
+
+    <div class="glass-card rounded-2xl p-5 border-l-4 border-amber-500">
+      <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-1">Evening Timing Clashes</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-extrabold text-amber-400">8</span>
+        <span class="text-xs text-slate-400">Calls (27.6%)</span>
+      </div>
+      <span class="text-[11px] text-amber-200/90 block mt-2 pt-2 border-t border-slate-800">Center attendance between Asr & Maghrib</span>
+    </div>
+
+    <div class="glass-card rounded-2xl p-5 border-l-4 border-cyan-500">
+      <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 block mb-1">Tahfeez Schools (KSA)</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-extrabold text-cyan-400">2</span>
+        <span class="text-xs text-slate-400">Students (6.9%)</span>
+      </div>
+      <span class="text-[11px] text-cyan-200/90 block mt-2 pt-2 border-t border-slate-800">Enrolled in official government Tahfeez</span>
+    </div>
+  </section>
+
+  <!-- Quran Analytics & Charts (100% Dedicated Breakdown) -->
+  <section class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+    
+    <!-- Bar Chart: Quran Topics Breakdown -->
+    <div class="glass-card rounded-2xl p-6 lg:col-span-2">
+      <div class="flex justify-between items-center mb-5 pb-3 border-b border-slate-800">
+        <div>
+          <h3 class="text-base font-bold text-white tracking-wide">
+            📊 Quran Topics & Mentions Breakdown (Total 29 Calls = 100.0%)
+          </h3>
+          <p class="text-xs text-slate-400 mt-0.5">Strictly reconciled distribution across all Quran inquiries</p>
+        </div>
+        <span class="text-xs px-2.5 py-1 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 font-mono font-bold">
+          N = 29
+        </span>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <div class="flex justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-200">1. Quran Mention (General / Recitation / Tasmee')</span>
+            <span class="font-bold text-emerald-400 font-mono">14 calls (48.28%)</span>
+          </div>
+          <div class="w-full bg-slate-900 h-6 rounded-lg overflow-hidden p-0.5 border border-slate-800">
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-500 h-full rounded flex items-center px-2 text-[11px] font-bold text-white" style="width: 48.28%;">
+              48.28%
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-200">2. Tahfeez Center Attendance & Schedule Clash</span>
+            <span class="font-bold text-teal-400 font-mono">8 calls (27.59%)</span>
+          </div>
+          <div class="w-full bg-slate-900 h-6 rounded-lg overflow-hidden p-0.5 border border-slate-800">
+            <div class="bg-gradient-to-r from-teal-600 to-emerald-500 h-full rounded flex items-center px-2 text-[11px] font-bold text-white" style="width: 27.59%;">
+              27.59%
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-200">3. Memorization (Hifz) & Tajweed Phonetics</span>
+            <span class="font-bold text-cyan-400 font-mono">4 calls (13.79%)</span>
+          </div>
+          <div class="w-full bg-slate-900 h-6 rounded-lg overflow-hidden p-0.5 border border-slate-800">
+            <div class="bg-gradient-to-r from-cyan-600 to-teal-500 h-full rounded flex items-center px-2 text-[11px] font-bold text-white" style="width: 13.79%;">
+              13.79%
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-200">4. Specialized Tahfeez Government Schools (KSA)</span>
+            <span class="font-bold text-emerald-400 font-mono">2 calls (6.90%)</span>
+          </div>
+          <div class="w-full bg-slate-900 h-6 rounded-lg overflow-hidden p-0.5 border border-slate-800">
+            <div class="bg-gradient-to-r from-emerald-700 to-teal-700 h-full rounded flex items-center px-2 text-[11px] font-bold text-white" style="width: 6.90%;">
+              6.90%
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-200">5. Administrative Context / Digital Wallet</span>
+            <span class="font-bold text-slate-400 font-mono">1 call (3.45%)</span>
+          </div>
+          <div class="w-full bg-slate-900 h-6 rounded-lg overflow-hidden p-0.5 border border-slate-800">
+            <div class="bg-slate-700 h-full rounded flex items-center px-2 text-[11px] font-bold text-white" style="width: 3.45%;">
+              3.45%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Donut Chart: Quran Subcategory Partition -->
+    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+      <div>
+        <h3 class="text-base font-bold text-white tracking-wide">
+          🎯 Quran Topics Share (100.0%)
+        </h3>
+        <p class="text-xs text-slate-400 mt-0.5">Strict percentage distribution across 29 calls</p>
+      </div>
+
+      <div class="py-4 flex items-center justify-center relative">
+        <svg viewBox="0 0 200 200" class="w-44 h-44 transform -rotate-90">
+          <circle cx="100" cy="100" r="70" fill="transparent" stroke="#0a231b" stroke-width="22" />
+          <!-- 1. Quran Mention (48.28% -> 212.35) -->
+          <circle cx="100" cy="100" r="70" fill="transparent" stroke="#10b981" stroke-width="22" stroke-dasharray="212.35 439.82" stroke-dashoffset="0" />
+          <!-- 2. Tahfeez Center (27.59% -> 121.35) -->
+          <circle cx="100" cy="100" r="70" fill="transparent" stroke="#14b8a6" stroke-width="22" stroke-dasharray="121.35 439.82" stroke-dashoffset="-212.35" />
+          <!-- 3. Hifz/Tajweed (13.79% -> 60.65) -->
+          <circle cx="100" cy="100" r="70" fill="transparent" stroke="#06b6d4" stroke-width="22" stroke-dasharray="60.65 439.82" stroke-dashoffset="-333.70" />
+          <!-- 4. Schools & Admin (10.34% -> 45.48) -->
+          <circle cx="100" cy="100" r="70" fill="transparent" stroke="#047857" stroke-width="22" stroke-dasharray="45.48 439.82" stroke-dashoffset="-394.35" />
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
+          <span class="text-2xl font-black text-white">29</span>
+          <span class="text-[10px] uppercase font-bold text-slate-400">Calls</span>
+          <span class="text-[10px] text-emerald-400 font-mono font-bold">100.0%</span>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-slate-800 space-y-1 text-xs">
+        <div class="flex justify-between items-center text-slate-300">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span> Quran Mention:</span>
+          <span class="font-bold text-emerald-400 font-mono">14 (48.3%)</span>
+        </div>
+        <div class="flex justify-between items-center text-slate-300">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-teal-500 inline-block"></span> Tahfeez Centers:</span>
+          <span class="font-bold text-teal-400 font-mono">8 (27.6%)</span>
+        </div>
+        <div class="flex justify-between items-center text-slate-300">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-cyan-500 inline-block"></span> Hifz & Tajweed:</span>
+          <span class="font-bold text-cyan-400 font-mono">4 (13.8%)</span>
+        </div>
+        <div class="flex justify-between items-center text-slate-300">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-700 inline-block"></span> Schools & Admin:</span>
+          <span class="font-bold text-emerald-300 font-mono">3 (10.3%)</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Filter & Data Directory -->
+  <section class="max-w-7xl mx-auto mb-10">
+    <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+      
+      <div class="p-5 border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-950/70">
+        <div>
+          <h2 class="text-base font-bold text-white flex items-center gap-2">
+            <span>📋 Quran & Tahfeez Students Directory</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-300 border border-emerald-800" id="quran-badge">
+              19 Students
+            </span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-0.5">Click any student to view the transcribed audio context and CRM link.</p>
+        </div>
+
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <!-- View Mode -->
+          <div class="bg-slate-900 p-1 rounded-xl border border-slate-800 flex items-center text-xs font-semibold">
+            <button id="btn-mode-students" onclick="setQMode('students')" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-bold transition">Students (19)</button>
+            <button id="btn-mode-calls" onclick="setQMode('calls')" class="px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Calls (29)</button>
+          </div>
+          <!-- Search -->
+          <div class="relative w-full sm:w-60">
+            <input 
+              type="text" 
+              id="qSearch" 
+              oninput="renderQTable()" 
+              placeholder="Search student, rep, text..." 
+              class="w-full bg-slate-900 border border-slate-700 focus:border-emerald-500 rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-500 focus:outline-none transition pr-8"
+            >
+            <span class="absolute right-3 top-2.5 text-slate-500 text-xs">🔍</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs">
+          <thead class="bg-slate-950 text-slate-400 font-semibold uppercase tracking-wider border-b border-slate-800">
+            <tr id="qHeadRow"></tr>
+          </thead>
+          <tbody id="qBody" class="divide-y divide-slate-800/60 text-slate-300"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Inspection Modal -->
+  <div id="qModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="glass-card rounded-2xl max-w-2xl w-full p-6 border border-emerald-500/50 shadow-2xl relative">
+      <button onclick="closeQModal()" class="absolute right-4 top-4 text-slate-400 hover:text-white text-lg font-bold p-1">✕</button>
+      
+      <div class="flex items-center gap-3 mb-5 border-b border-slate-800 pb-4">
+        <div class="p-2.5 bg-emerald-950 border border-emerald-600/40 rounded-xl text-xl">📖</div>
+        <div>
+          <h3 class="text-lg font-black text-white" id="qm-title">Quran Inquiry Details</h3>
+          <span class="text-xs text-slate-400" id="qm-sub">UID: -</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4 bg-slate-900/80 p-4 rounded-xl border border-slate-800 text-xs">
+        <div>
+          <span class="text-slate-400 block mb-0.5">Student Name</span>
+          <span class="text-white font-bold text-sm arabic-text" id="qm-name">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Student UID</span>
+          <span class="text-emerald-400 font-mono font-bold text-sm" id="qm-uid">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Parent Phone</span>
+          <span class="text-slate-200 font-mono text-xs" id="qm-phone">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Assigned Rep / Team</span>
+          <span class="text-slate-200 font-semibold" id="qm-rep">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Call Date</span>
+          <span class="text-slate-300 font-mono" id="qm-date">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Topic / Subcategory</span>
+          <span class="px-2 py-0.5 rounded font-bold bg-emerald-950 text-emerald-300 border border-emerald-800" id="qm-topic">-</span>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <div class="flex justify-between items-center mb-1.5">
+          <label class="text-xs font-semibold text-slate-300">Original Speech-to-Text Audio Excerpt:</label>
+          <span class="text-xs text-slate-500 font-mono">Recorded Arabic Turn</span>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-slate-200 text-sm leading-relaxed arabic-text" id="qm-snip">
+          -
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+        <a id="qm-crm" href="#" target="_blank" class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold rounded-xl transition flex items-center gap-2 shadow-lg shadow-emerald-600/20">
+          <span>🚀 Open Student on 51Talk CRM</span>
+          <span>↗</span>
+        </a>
+        <button onclick="closeQModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-xl transition">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const CLIENTS = [{"student_id": "59423405", "student_name": "Student (59423405)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-alihesham01", "team_name": "Middle East Big Team 01", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (59423405)(59423405)&uid=59423405&fill=0", "sub_categories": ["Quran Mention"], "matched_terms": ["قران"], "incidents_count": 1, "latest_call_date": "2026-11-08 20:54:13", "snippets": ["...قران..."]}, {"student_id": "64768700", "student_name": "Student (64768700)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-alihesham01", "team_name": "Middle East Big Team 01", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64768700)(64768700)&uid=64768700&fill=0", "sub_categories": ["Quran Memorization (Hifz)", "Quran Mention", "Quran Recitation (Tasmee')"], "matched_terms": ["يحفظ القران", "قران", "تسميع قران", "القران"], "incidents_count": 4, "latest_call_date": "2026-11-02 15:35:36", "snippets": ["...يعني هو يعني هم يعني هم محمد مش بيحفظ القران في الجامع بشكل مباشر صح كده فهمت وجهه نظرك ما هو الاستاذ...", "...يعني هو يعني هم يعني هم محمد مش بيحفظ القران في الجامع بشكل مباشر صح كده فهمت وجهه نظرك ما هو الاستاذ...", "...خلاص ان شاء الله انا عايز اعرف صح طموحك ايه رتيل تسميع قران متاسفه...", "...خلاص ان شاء الله انا عايز اعرف صح طموحك ايه رتيل تسميع قران متاسفه..."]}, {"student_id": "64781052", "student_name": "Student (64781052)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-abdelrhmanshehata", "team_name": "Middle East Big Team 01", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64781052)(64781052)&uid=64781052&fill=0", "sub_categories": ["Quran Mention"], "matched_terms": ["قران"], "incidents_count": 1, "latest_call_date": "2026-10-31 13:06:01", "snippets": ["...قران..."]}, {"student_id": "58700730", "student_name": "Sereen", "parent_phone": "966****5294", "country": "السعودية", "agent_name": "JOCC-dimaabudaye", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Sereen(58700730)&uid=58700730&fill=0", "sub_categories": ["Tahfeez Admin Context"], "matched_terms": ["محفظه"], "incidents_count": 1, "latest_call_date": "2026-10-17 17:05:06", "snippets": ["...مه حسابك المعلومات الشخصيه مضبوط بعديها اسالها مسح والدفع المحفظه وطرق الدفع..."]}, {"student_id": "61774351", "student_name": "محمد", "parent_phone": "966****6677", "country": "السعودية", "agent_name": "JOCC-bader01", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=محمد(61774351)&uid=61774351&fill=0", "sub_categories": ["Quran Mention"], "matched_terms": ["القران"], "incidents_count": 1, "latest_call_date": "2026-10-20 19:29:08", "snippets": ["...توى اربعه ام محمد يعني الطالب متاخر ثلاث مستويات تعليميه عن القران ولا شك انه فجوه تعليميه كبيره..."]}, {"student_id": "64588292", "student_name": "Eleen", "parent_phone": "966****6306", "country": "السعودية", "agent_name": "JOCC-dananassar01", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Eleen(64588292)&uid=64588292&fill=0", "sub_categories": ["Tajweed (Phonetics)"], "matched_terms": ["تجويد"], "incidents_count": 1, "latest_call_date": "2026-10-13 14:20:45", "snippets": ["...ريال سعودي تمام هذه 299 ريال سعودي لمده ثمانيه شهور في شهر تجويد يعني تسع شهور..."]}, {"student_id": "64598375", "student_name": "Layan", "parent_phone": "966****5572", "country": "السعودية", "agent_name": "JOCC-shoruqelayan", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Layan(64598375)&uid=64598375&fill=0", "sub_categories": ["Tahfeez Center Clash", "Tahfeez School (Madrasa)"], "matched_terms": ["مدرسه تحفيظ", "تحفيظ"], "incidents_count": 2, "latest_call_date": "2026-10-11 17:14:00", "snippets": ["...به ما شاء الله الولد تعلم وانا عندي شو اسمه ليان تدرس مدرسه تحفيظ ما شاء الله...", "...ول كتابه ما شاء الله الولد تعلم وانا عندي شو اسمه ليان تدرس مدرسه تحفيظ ما شاء الله..."]}, {"student_id": "64613680", "student_name": "دانا", "parent_phone": "966****9395", "country": "السعودية", "agent_name": "JOCC-zaidaldwairi", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=دانا(64613680)&uid=64613680&fill=0", "sub_categories": ["Tahfeez Center Clash"], "matched_terms": ["تحفيظ"], "incidents_count": 1, "latest_call_date": "2026-10-14 16:45:21", "snippets": ["...ب التدريسيه التي كانت تاخذها دانا تمام كانت عباره عن اساليب تحفيظ وتلقين اختي ام دانا ما كان فيها ممارسه يعني فصراحه بالاستما..."]}, {"student_id": "59726126", "student_name": "طالب (59726126)", "parent_phone": "N/A", "country": "المملكة العربية السعودية", "agent_name": "CC Closer", "team_name": "ME-EGSS05小组", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالب (59726126)(59726126)&uid=59726126&fill=0", "sub_categories": ["Tahfeez Center Clash"], "matched_terms": ["تحفيظ"], "incidents_count": 1, "latest_call_date": "Unknown", "snippets": ["...الساعه 4:00 لكن كان عندها تحفيظ فطلعت عندها مركز يعني الساعه 4:00 يعني الشريعه المقاطعه بس..."]}, {"student_id": "64553348", "student_name": "Omar", "parent_phone": "966****5825", "country": "السعودية", "agent_name": "JOCC-baderhu", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Omar(64553348)&uid=64553348&fill=0", "sub_categories": ["Tahfeez Center Clash", "Quran Mention"], "matched_terms": ["قران", "تحفيظ"], "incidents_count": 2, "latest_call_date": "2026-10-07 12:47:28", "snippets": ["...انت مدرسه اهليه ولا حكوميه ولا تحفيظ قران حكوميه حكوميه طب انت عمر عمرك انت اسمك عمر صح قلت لي عمر عب...", "...انت مدرسه اهليه ولا حكوميه ولا تحفيظ قران حكوميه حكوميه طب انت عمر عمرك انت اسمك عمر صح قلت لي ع..."]}, {"student_id": "62991370", "student_name": "Youssef", "parent_phone": "966****0972", "country": "السعودية", "agent_name": "JOCC-ismailahmad", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Youssef(62991370)&uid=62991370&fill=0", "sub_categories": ["Quran Memorization (Hifz)", "Quran Mention"], "matched_terms": ["حفظ القران", "القران"], "incidents_count": 2, "latest_call_date": "2026-10-01 15:44:56", "snippets": ["...للحروف من تعلمهم مهارات جديده حتى سبحان الله لو بدات مع حفظ القران في هذه الاعمار تجد نتائج جدا اسرع فدائما بعمر التاسيس لا...", "...قهم للحروف من تعلمهم مهارات جديده حتى سبحان الله لو بدات مع حفظ القران في هذه الاعمار تجد نتائج جدا اسرع فدائما بعمر التاسيس لا..."]}, {"student_id": "64394317", "student_name": "طالبين", "parent_phone": "966****3868", "country": "السعودية", "agent_name": "JOCC-Ruba", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالبين(64394317)&uid=64394317&fill=0", "sub_categories": ["Tajweed (Phonetics)"], "matched_terms": ["تجويد"], "incidents_count": 1, "latest_call_date": "2026-09-30 20:15:57", "snippets": ["...29 اكتوبر شهر تجويد او يمكن تبداوا مع يوسف دقيقه خليني بس احسب كم باقي للمعلمات..."]}, {"student_id": "64487969", "student_name": "Naser", "parent_phone": "966****5872", "country": "السعودية", "agent_name": "JOCC-Alhaijaa", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Naser(64487969)&uid=64487969&fill=0", "sub_categories": ["Tahfeez Center Clash", "Quran Mention"], "matched_terms": ["تحفيظ", "القران"], "incidents_count": 4, "latest_call_date": "2026-09-29 19:28:47", "snippets": ["...تحفيظ القران في العصريه تحفيظ القران بعد المغرب...", "...تحفيظ القران في العصريه تحفيظ القران بعد المغرب...", "...تحفيظ القران في العصريه تحفيظ القران بعد المغرب...", "...تحفيظ القران في العصريه تحفيظ القران بعد المغرب..."]}, {"student_id": "64487346", "student_name": "Loujin", "parent_phone": "966****3508", "country": "السعودية", "agent_name": "JOCC-yasminasad", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Loujin(64487346)&uid=64487346&fill=0", "sub_categories": ["Quran Mention"], "matched_terms": ["القران"], "incidents_count": 1, "latest_call_date": "2026-09-28 20:31:25", "snippets": ["...ام الحصص تكون مبنيه على التحاور والتفاعل بين المعلم والطالب القران شهريا في معدل ثلاثه حصص في الاسبوع مده الحصه تكون 25 دقيقه..."]}, {"student_id": "61453768", "student_name": "Student (61453768)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "CC Closer", "team_name": "Middle East Big Team 01", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (61453768)(61453768)&uid=61453768&fill=0", "sub_categories": ["Quran Mention"], "matched_terms": ["قران"], "incidents_count": 1, "latest_call_date": "Unknown", "snippets": ["...اختبار تقييم الطلاب اللي في نفس النوع في نفس اقرانها وعدت من تقييمات المدرسي تقييمات الذكاء الاصطناعي دلوقتي ه..."]}, {"student_id": "63763600", "student_name": "Student (63763600)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "JOCC-oudeh", "team_name": "Middle East Big Team 01", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (63763600)(63763600)&uid=63763600&fill=0", "sub_categories": ["Quran Mention"], "matched_terms": ["قران"], "incidents_count": 1, "latest_call_date": "2026-10-31 19:12:10", "snippets": ["...قران..."]}, {"student_id": "64764348", "student_name": "Student (64764348)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "JOCC-kholodaltal", "team_name": "Middle East Big Team 01", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64764348)(64764348)&uid=64764348&fill=0", "sub_categories": ["Quran Mention"], "matched_terms": ["قران"], "incidents_count": 1, "latest_call_date": "2026-10-30 18:32:17", "snippets": ["...مقارنه بعمر رزان رزان هي متقدمه عن الاقران اللي بعمرها عندك مثلا عند رغد عادي مستواها ط..."]}, {"student_id": "63542850", "student_name": "Salah", "parent_phone": "966****2769", "country": "السعودية", "agent_name": "JOCC-abdalluh", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Salah(63542850)&uid=63542850&fill=0", "sub_categories": ["Tahfeez Center Clash"], "matched_terms": ["تحفيظ"], "incidents_count": 1, "latest_call_date": "2026-11-05 17:54:20", "snippets": ["...ام اللي احنا نتبعه في المنصه ما بعتمد نظام التلقين احفظه بس تحفيظ لا انا بدي امارس اللغه في البيت في الشارع في المدرسه..."]}, {"student_id": "64904473", "student_name": "Shahd", "parent_phone": "966****7950", "country": "السعودية", "agent_name": "JOCC-ahmdabuzanon", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Shahd(64904473)&uid=64904473&fill=0", "sub_categories": ["Tahfeez Center Clash", "Quran Mention"], "matched_terms": ["تحفيظ", "القران"], "incidents_count": 2, "latest_call_date": "2026-11-14 11:32:44", "snippets": ["...مدارس اهليه تحفيظ القران الكريم ابغى ابغى فاهمين يعني ثقافه مشويه وتحافظ بسرعه انا س...", "...مدارس اهليه تحفيظ القران الكريم ابغى ابغى فاهمين يعني ثقافه مشويه وتحافظ بسرع..."]}];
+    const INCIDENTS = [{"id": 1, "student_id": "59423405", "student_name": "Student (59423405)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-alihesham01", "team_name": "Middle East Big Team 01", "sub_category_en": "Quran Mention", "matched_text": "قران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-11-08 20:54:13", "snippet": "...قران...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (59423405)(59423405)&uid=59423405&fill=0"}, {"id": 2, "student_id": "64768700", "student_name": "Student (64768700)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-alihesham01", "team_name": "Middle East Big Team 01", "sub_category_en": "Quran Mention", "matched_text": "القران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-11-02 15:35:36", "snippet": "...يعني هو يعني هم يعني هم محمد مش بيحفظ القران في الجامع بشكل مباشر صح كده فهمت وجهه نظرك ما هو الاستاذ...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64768700)(64768700)&uid=64768700&fill=0"}, {"id": 3, "student_id": "64768700", "student_name": "Student (64768700)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-alihesham01", "team_name": "Middle East Big Team 01", "sub_category_en": "Quran Memorization (Hifz)", "matched_text": "يحفظ القران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-11-02 15:35:36", "snippet": "...يعني هو يعني هم يعني هم محمد مش بيحفظ القران في الجامع بشكل مباشر صح كده فهمت وجهه نظرك ما هو الاستاذ...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64768700)(64768700)&uid=64768700&fill=0"}, {"id": 4, "student_id": "64768700", "student_name": "Student (64768700)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-alihesham01", "team_name": "Middle East Big Team 01", "sub_category_en": "Quran Mention", "matched_text": "قران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-11-02 15:35:36", "snippet": "...خلاص ان شاء الله انا عايز اعرف صح طموحك ايه رتيل تسميع قران متاسفه...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64768700)(64768700)&uid=64768700&fill=0"}, {"id": 5, "student_id": "64768700", "student_name": "Student (64768700)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-alihesham01", "team_name": "Middle East Big Team 01", "sub_category_en": "Quran Recitation (Tasmee')", "matched_text": "تسميع قران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-11-02 15:35:36", "snippet": "...خلاص ان شاء الله انا عايز اعرف صح طموحك ايه رتيل تسميع قران متاسفه...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64768700)(64768700)&uid=64768700&fill=0"}, {"id": 6, "student_id": "64781052", "student_name": "Student (64781052)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-abdelrhmanshehata", "team_name": "Middle East Big Team 01", "sub_category_en": "Quran Mention", "matched_text": "قران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-31 13:06:01", "snippet": "...قران...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64781052)(64781052)&uid=64781052&fill=0"}, {"id": 15, "student_id": "58700730", "student_name": "Sereen", "parent_phone": "966****5294", "country": "السعودية", "agent_name": "JOCC-dimaabudaye", "team_name": "JOCC", "sub_category_en": "Tahfeez Admin Context", "matched_text": "محفظه", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-17 17:05:06", "snippet": "...مه حسابك المعلومات الشخصيه مضبوط بعديها اسالها مسح والدفع المحفظه وطرق الدفع...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Sereen(58700730)&uid=58700730&fill=0"}, {"id": 16, "student_id": "61774351", "student_name": "محمد", "parent_phone": "966****6677", "country": "السعودية", "agent_name": "JOCC-bader01", "team_name": "JOCC", "sub_category_en": "Quran Mention", "matched_text": "القران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-20 19:29:08", "snippet": "...توى اربعه ام محمد يعني الطالب متاخر ثلاث مستويات تعليميه عن القران ولا شك انه فجوه تعليميه كبيره...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=محمد(61774351)&uid=61774351&fill=0"}, {"id": 19, "student_id": "64588292", "student_name": "Eleen", "parent_phone": "966****6306", "country": "السعودية", "agent_name": "JOCC-dananassar01", "team_name": "JOCC", "sub_category_en": "Tajweed (Phonetics)", "matched_text": "تجويد", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-13 14:20:45", "snippet": "...ريال سعودي تمام هذه 299 ريال سعودي لمده ثمانيه شهور في شهر تجويد يعني تسع شهور...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Eleen(64588292)&uid=64588292&fill=0"}, {"id": 21, "student_id": "64598375", "student_name": "Layan", "parent_phone": "966****5572", "country": "السعودية", "agent_name": "JOCC-shoruqelayan", "team_name": "JOCC", "sub_category_en": "Tahfeez Center Clash", "matched_text": "تحفيظ", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-11 17:14:00", "snippet": "...به ما شاء الله الولد تعلم وانا عندي شو اسمه ليان تدرس مدرسه تحفيظ ما شاء الله...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Layan(64598375)&uid=64598375&fill=0"}, {"id": 22, "student_id": "64598375", "student_name": "Layan", "parent_phone": "966****5572", "country": "السعودية", "agent_name": "JOCC-shoruqelayan", "team_name": "JOCC", "sub_category_en": "Tahfeez School (Madrasa)", "matched_text": "مدرسه تحفيظ", "dialect": "خليجي / سعودي", "severity_en": "Normal Context", "call_date": "2026-10-11 17:14:00", "snippet": "...ول كتابه ما شاء الله الولد تعلم وانا عندي شو اسمه ليان تدرس مدرسه تحفيظ ما شاء الله...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Layan(64598375)&uid=64598375&fill=0"}, {"id": 25, "student_id": "64613680", "student_name": "دانا", "parent_phone": "966****9395", "country": "السعودية", "agent_name": "JOCC-zaidaldwairi", "team_name": "JOCC", "sub_category_en": "Tahfeez Center Clash", "matched_text": "تحفيظ", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-14 16:45:21", "snippet": "...ب التدريسيه التي كانت تاخذها دانا تمام كانت عباره عن اساليب تحفيظ وتلقين اختي ام دانا ما كان فيها ممارسه يعني فصراحه بالاستما...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=دانا(64613680)&uid=64613680&fill=0"}, {"id": 33, "student_id": "59726126", "student_name": "طالب (59726126)", "parent_phone": "N/A", "country": "المملكة العربية السعودية", "agent_name": "CC Closer", "team_name": "ME-EGSS05小组", "sub_category_en": "Tahfeez Center Clash", "matched_text": "تحفيظ", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "Unknown", "snippet": "...الساعه 4:00 لكن كان عندها تحفيظ فطلعت عندها مركز يعني الساعه 4:00 يعني الشريعه المقاطعه بس...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالب (59726126)(59726126)&uid=59726126&fill=0"}, {"id": 36, "student_id": "64553348", "student_name": "Omar", "parent_phone": "966****5825", "country": "السعودية", "agent_name": "JOCC-baderhu", "team_name": "JOCC", "sub_category_en": "Quran Mention", "matched_text": "قران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-07 12:47:28", "snippet": "...انت مدرسه اهليه ولا حكوميه ولا تحفيظ قران حكوميه حكوميه طب انت عمر عمرك انت اسمك عمر صح قلت لي عمر عب...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Omar(64553348)&uid=64553348&fill=0"}, {"id": 37, "student_id": "64553348", "student_name": "Omar", "parent_phone": "966****5825", "country": "السعودية", "agent_name": "JOCC-baderhu", "team_name": "JOCC", "sub_category_en": "Tahfeez Center Clash", "matched_text": "تحفيظ", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-07 12:47:28", "snippet": "...انت مدرسه اهليه ولا حكوميه ولا تحفيظ قران حكوميه حكوميه طب انت عمر عمرك انت اسمك عمر صح قلت لي ع...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Omar(64553348)&uid=64553348&fill=0"}, {"id": 43, "student_id": "62991370", "student_name": "Youssef", "parent_phone": "966****0972", "country": "السعودية", "agent_name": "JOCC-ismailahmad", "team_name": "JOCC", "sub_category_en": "Quran Mention", "matched_text": "القران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-01 15:44:56", "snippet": "...للحروف من تعلمهم مهارات جديده حتى سبحان الله لو بدات مع حفظ القران في هذه الاعمار تجد نتائج جدا اسرع فدائما بعمر التاسيس لا...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Youssef(62991370)&uid=62991370&fill=0"}, {"id": 44, "student_id": "62991370", "student_name": "Youssef", "parent_phone": "966****0972", "country": "السعودية", "agent_name": "JOCC-ismailahmad", "team_name": "JOCC", "sub_category_en": "Quran Memorization (Hifz)", "matched_text": "حفظ القران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-01 15:44:56", "snippet": "...قهم للحروف من تعلمهم مهارات جديده حتى سبحان الله لو بدات مع حفظ القران في هذه الاعمار تجد نتائج جدا اسرع فدائما بعمر التاسيس لا...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Youssef(62991370)&uid=62991370&fill=0"}, {"id": 49, "student_id": "64394317", "student_name": "طالبين", "parent_phone": "966****3868", "country": "السعودية", "agent_name": "JOCC-Ruba", "team_name": "JOCC", "sub_category_en": "Tajweed (Phonetics)", "matched_text": "تجويد", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-09-30 20:15:57", "snippet": "...29 اكتوبر شهر تجويد او يمكن تبداوا مع يوسف دقيقه خليني بس احسب كم باقي للمعلمات...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالبين(64394317)&uid=64394317&fill=0"}, {"id": 50, "student_id": "64487969", "student_name": "Naser", "parent_phone": "966****5872", "country": "السعودية", "agent_name": "JOCC-Alhaijaa", "team_name": "JOCC", "sub_category_en": "Quran Mention", "matched_text": "القران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-09-29 19:28:47", "snippet": "...تحفيظ القران في العصريه تحفيظ القران بعد المغرب...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Naser(64487969)&uid=64487969&fill=0"}, {"id": 51, "student_id": "64487969", "student_name": "Naser", "parent_phone": "966****5872", "country": "السعودية", "agent_name": "JOCC-Alhaijaa", "team_name": "JOCC", "sub_category_en": "Quran Mention", "matched_text": "القران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-09-29 19:28:47", "snippet": "...تحفيظ القران في العصريه تحفيظ القران بعد المغرب...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Naser(64487969)&uid=64487969&fill=0"}, {"id": 52, "student_id": "64487969", "student_name": "Naser", "parent_phone": "966****5872", "country": "السعودية", "agent_name": "JOCC-Alhaijaa", "team_name": "JOCC", "sub_category_en": "Tahfeez Center Clash", "matched_text": "تحفيظ", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-09-29 19:28:47", "snippet": "...تحفيظ القران في العصريه تحفيظ القران بعد المغرب...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Naser(64487969)&uid=64487969&fill=0"}, {"id": 53, "student_id": "64487969", "student_name": "Naser", "parent_phone": "966****5872", "country": "السعودية", "agent_name": "JOCC-Alhaijaa", "team_name": "JOCC", "sub_category_en": "Tahfeez Center Clash", "matched_text": "تحفيظ", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-09-29 19:28:47", "snippet": "...تحفيظ القران في العصريه تحفيظ القران بعد المغرب...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Naser(64487969)&uid=64487969&fill=0"}, {"id": 54, "student_id": "64487346", "student_name": "Loujin", "parent_phone": "966****3508", "country": "السعودية", "agent_name": "JOCC-yasminasad", "team_name": "JOCC", "sub_category_en": "Quran Mention", "matched_text": "القران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-09-28 20:31:25", "snippet": "...ام الحصص تكون مبنيه على التحاور والتفاعل بين المعلم والطالب القران شهريا في معدل ثلاثه حصص في الاسبوع مده الحصه تكون 25 دقيقه...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Loujin(64487346)&uid=64487346&fill=0"}, {"id": 55, "student_id": "61453768", "student_name": "Student (61453768)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "CC Closer", "team_name": "Middle East Big Team 01", "sub_category_en": "Quran Mention", "matched_text": "قران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "Unknown", "snippet": "...اختبار تقييم الطلاب اللي في نفس النوع في نفس اقرانها وعدت من تقييمات المدرسي تقييمات الذكاء الاصطناعي دلوقتي ه...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (61453768)(61453768)&uid=61453768&fill=0"}, {"id": 56, "student_id": "63763600", "student_name": "Student (63763600)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "JOCC-oudeh", "team_name": "Middle East Big Team 01", "sub_category_en": "Quran Mention", "matched_text": "قران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-31 19:12:10", "snippet": "...قران...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (63763600)(63763600)&uid=63763600&fill=0"}, {"id": 58, "student_id": "64764348", "student_name": "Student (64764348)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "JOCC-kholodaltal", "team_name": "Middle East Big Team 01", "sub_category_en": "Quran Mention", "matched_text": "قران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-10-30 18:32:17", "snippet": "...مقارنه بعمر رزان رزان هي متقدمه عن الاقران اللي بعمرها عندك مثلا عند رغد عادي مستواها ط...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64764348)(64764348)&uid=64764348&fill=0"}, {"id": 61, "student_id": "63542850", "student_name": "Salah", "parent_phone": "966****2769", "country": "السعودية", "agent_name": "JOCC-abdalluh", "team_name": "JOCC", "sub_category_en": "Tahfeez Center Clash", "matched_text": "تحفيظ", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-11-05 17:54:20", "snippet": "...ام اللي احنا نتبعه في المنصه ما بعتمد نظام التلقين احفظه بس تحفيظ لا انا بدي امارس اللغه في البيت في الشارع في المدرسه...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Salah(63542850)&uid=63542850&fill=0"}, {"id": 63, "student_id": "64904473", "student_name": "Shahd", "parent_phone": "966****7950", "country": "السعودية", "agent_name": "JOCC-ahmdabuzanon", "team_name": "JOCC", "sub_category_en": "Quran Mention", "matched_text": "القران", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-11-14 11:32:44", "snippet": "...مدارس اهليه تحفيظ القران الكريم ابغى ابغى فاهمين يعني ثقافه مشويه وتحافظ بسرعه انا س...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Shahd(64904473)&uid=64904473&fill=0"}, {"id": 64, "student_id": "64904473", "student_name": "Shahd", "parent_phone": "966****7950", "country": "السعودية", "agent_name": "JOCC-ahmdabuzanon", "team_name": "JOCC", "sub_category_en": "Tahfeez Center Clash", "matched_text": "تحفيظ", "dialect": "فصحى / مشترك", "severity_en": "Normal Context", "call_date": "2026-11-14 11:32:44", "snippet": "...مدارس اهليه تحفيظ القران الكريم ابغى ابغى فاهمين يعني ثقافه مشويه وتحافظ بسرع...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Shahd(64904473)&uid=64904473&fill=0"}];
+    let qMode = 'students';
+
+    function init() {
+      renderQTable();
+    }
+
+    function setQMode(mode) {
+      qMode = mode;
+      document.getElementById('btn-mode-students').className = mode === 'students'
+        ? 'px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-bold transition'
+        : 'px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
+      document.getElementById('btn-mode-calls').className = mode === 'calls'
+        ? 'px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-bold transition'
+        : 'px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
+      renderQTable();
+    }
+
+    function getQFiltered() {
+      const query = (document.getElementById('qSearch').value || '').trim().toLowerCase();
+      if (qMode === 'students') {
+        return CLIENTS.filter(c => {
+          if (query) {
+            const str = (c.student_id + ' ' + c.student_name + ' ' + c.parent_phone + ' ' + c.agent_name + ' ' + c.sub_categories.join(' ') + ' ' + c.snippets.join(' ')).toLowerCase();
+            if (!str.includes(query)) return false;
+          }
+          return true;
+        });
+      } else {
+        return INCIDENTS.filter(i => {
+          if (query) {
+            const str = (i.student_id + ' ' + i.student_name + ' ' + i.agent_name + ' ' + i.sub_category_en + ' ' + i.snippet).toLowerCase();
+            if (!str.includes(query)) return false;
+          }
+          return true;
+        });
+      }
+    }
+
+    function renderQTable() {
+      const filtered = getQFiltered();
+      const tbody = document.getElementById('qBody');
+      const thead = document.getElementById('qHeadRow');
+      const badge = document.getElementById('quran-badge');
+
+      if (qMode === 'students') {
+        badge.textContent = `Showing ${filtered.length} of ${CLIENTS.length} Students`;
+        thead.innerHTML = `
+          <th class="py-3 px-4 text-center">#</th>
+          <th class="py-3 px-4">Student & UID</th>
+          <th class="py-3 px-4">Assigned Rep / Team</th>
+          <th class="py-3 px-4 text-center">Calls</th>
+          <th class="py-3 px-4">Matched Topics</th>
+          <th class="py-3 px-4 min-w-[320px]">Spoken Excerpt</th>
+          <th class="py-3 px-4 text-center">CRM</th>
+        `;
+
+        if (!filtered.length) {
+          tbody.innerHTML = `<tr><td colspan="7" class="text-center py-10 text-slate-500 font-semibold">No students match search.</td></tr>`;
+          return;
+        }
+
+        let html = '';
+        filtered.forEach((c, idx) => {
+          html += `
+            <tr class="hover:bg-slate-800/40 transition cursor-pointer" onclick="openClientModal('${c.student_id}')">
+              <td class="py-3 px-4 text-center text-slate-500 font-mono">${idx + 1}</td>
+              <td class="py-3 px-4">
+                <div class="font-bold text-white text-xs hover:text-emerald-400 transition arabic-text">${c.student_name}</div>
+                <div class="text-[11px] text-emerald-400 font-mono">${c.student_id}</div>
+              </td>
+              <td class="py-3 px-4">
+                <div class="font-semibold text-slate-200 text-xs">${c.agent_name}</div>
+                <div class="text-[10px] text-slate-500">${c.team_name}</div>
+              </td>
+              <td class="py-3 px-4 text-center font-mono font-bold text-emerald-400">${c.incidents_count}</td>
+              <td class="py-3 px-4">
+                <div class="flex flex-wrap gap-1">
+                  ${c.sub_categories.map(s => `<span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 text-[10px] font-semibold">${s}</span>`).join('')}
+                </div>
+              </td>
+              <td class="py-3 px-4 text-slate-300 text-xs leading-relaxed max-w-xs truncate arabic-text" title="${c.snippets[0].replace(/"/g, '&quot;')}">
+                ${c.snippets[0]}
+              </td>
+              <td class="py-3 px-4 text-center" onclick="event.stopPropagation()">
+                <a href="${c.crm_url}" target="_blank" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-950 hover:bg-emerald-800 text-emerald-300 border border-emerald-700/50 transition">
+                  ↗
+                </a>
+              </td>
+            </tr>
+          `;
+        });
+        tbody.innerHTML = html;
+      } else {
+        badge.textContent = `Showing ${filtered.length} of ${INCIDENTS.length} Calls`;
+        thead.innerHTML = `
+          <th class="py-3 px-4 text-center">#</th>
+          <th class="py-3 px-4">Student & UID</th>
+          <th class="py-3 px-4">Rep / Team</th>
+          <th class="py-3 px-4">Topic / Category</th>
+          <th class="py-3 px-4">Call Date</th>
+          <th class="py-3 px-4 min-w-[320px]">Spoken Transcript Excerpt</th>
+          <th class="py-3 px-4 text-center">CRM</th>
+        `;
+
+        if (!filtered.length) {
+          tbody.innerHTML = `<tr><td colspan="7" class="text-center py-10 text-slate-500 font-semibold">No calls match search.</td></tr>`;
+          return;
+        }
+
+        let html = '';
+        filtered.forEach((i, idx) => {
+          html += `
+            <tr class="hover:bg-slate-800/40 transition cursor-pointer" onclick="openIncModal(${i.id})">
+              <td class="py-3 px-4 text-center text-slate-500 font-mono">${idx + 1}</td>
+              <td class="py-3 px-4">
+                <div class="font-bold text-white text-xs hover:text-emerald-400 transition arabic-text">${i.student_name}</div>
+                <div class="text-[11px] text-emerald-400 font-mono">${i.student_id}</div>
+              </td>
+              <td class="py-3 px-4">
+                <div class="font-semibold text-slate-200 text-xs">${i.agent_name}</div>
+                <div class="text-[10px] text-slate-500">${i.team_name}</div>
+              </td>
+              <td class="py-3 px-4">
+                <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 text-[10px] font-semibold">${i.sub_category_en}</span>
+              </td>
+              <td class="py-3 px-4 font-mono text-[11px] text-slate-400">${i.call_date}</td>
+              <td class="py-3 px-4 text-slate-300 text-xs leading-relaxed max-w-xs truncate arabic-text" title="${i.snippet.replace(/"/g, '&quot;')}">
+                ${i.snippet}
+              </td>
+              <td class="py-3 px-4 text-center" onclick="event.stopPropagation()">
+                <a href="${i.crm_url}" target="_blank" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-950 hover:bg-emerald-800 text-emerald-300 border border-emerald-700/50 transition">
+                  ↗
+                </a>
+              </td>
+            </tr>
+          `;
+        });
+        tbody.innerHTML = html;
+      }
+    }
+
+    function openClientModal(sid) {
+      const c = CLIENTS.find(x => x.student_id === sid);
+      if (!c) return;
+      document.getElementById('qm-name').textContent = c.student_name;
+      document.getElementById('qm-uid').textContent = c.student_id;
+      document.getElementById('qm-phone').textContent = c.parent_phone;
+      document.getElementById('qm-rep').textContent = c.agent_name + ' (' + c.team_name + ')';
+      document.getElementById('qm-date').textContent = c.latest_call_date;
+      document.getElementById('qm-topic').textContent = c.sub_categories.join(', ');
+      document.getElementById('qm-crm').href = c.crm_url;
+      document.getElementById('qm-sub').textContent = `Total Calls Recorded: ${c.incidents_count}`;
+      
+      let snips = '';
+      c.snippets.forEach(s => { snips += `<div class="mb-2 pb-2 border-b border-slate-800/80 last:border-b-0">${s}</div>`; });
+      document.getElementById('qm-snip').innerHTML = snips;
+      document.getElementById('qModal').classList.remove('hidden');
+    }
+
+    function openIncModal(id) {
+      const i = INCIDENTS.find(x => x.id === id);
+      if (!i) return;
+      document.getElementById('qm-name').textContent = i.student_name;
+      document.getElementById('qm-uid').textContent = i.student_id;
+      document.getElementById('qm-phone').textContent = i.parent_phone;
+      document.getElementById('qm-rep').textContent = i.agent_name;
+      document.getElementById('qm-date').textContent = i.call_date;
+      document.getElementById('qm-topic').textContent = i.sub_category_en;
+      document.getElementById('qm-crm').href = i.crm_url;
+      document.getElementById('qm-snip').textContent = i.snippet;
+      document.getElementById('qm-sub').textContent = `Spoken Turn ID: ${i.id}`;
+      document.getElementById('qModal').classList.remove('hidden');
+    }
+
+    function closeQModal() {
+      document.getElementById('qModal').classList.add('hidden');
+    }
+
+    function exportQuranCSV() {
+      const filtered = getQFiltered();
+      if (!filtered.length) return;
+      let csv = "\uFEFFUID,Student Name,Phone,Rep,Topic,Calls,Snippet\n";
+      filtered.forEach(item => {
+        if (qMode === 'students') {
+          csv += `"${item.student_id}","${item.student_name.replace(/"/g, '""')}","${item.parent_phone}","${item.agent_name}","${item.sub_categories.join('+')}","${item.incidents_count}","${(item.snippets[0]||'').replace(/"/g, '""')}"\n`;
+        } else {
+          csv += `"${item.student_id}","${item.student_name.replace(/"/g, '""')}","${item.parent_phone}","${item.agent_name}","${item.sub_category_en}","1","${item.snippet.replace(/"/g, '""')}"\n`;
+        }
+      });
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Quran_Intelligence_Cohort_${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>

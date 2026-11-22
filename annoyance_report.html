@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Annoyance & Call Friction Risk Radar | Middle East</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 50% -10%, #310c12 0%, #080304 100%);
+      color: #f1f5f9;
+      min-height: 100vh;
+    }
+    .glass-card {
+      background: rgba(30, 8, 12, 0.82);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(239, 68, 68, 0.22);
+      box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.65);
+    }
+    .glass-card:hover {
+      border-color: rgba(248, 113, 113, 0.45);
+    }
+    .arabic-text {
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8">
+
+  <!-- Header -->
+  <header class="max-w-7xl mx-auto mb-8">
+    <div class="glass-card rounded-2xl p-6 flex flex-col lg:flex-row justify-between items-center gap-6 border-b-2 border-rose-500/50">
+      
+      <div class="flex items-center gap-4">
+        <div class="p-4 bg-gradient-to-tr from-rose-700 via-red-600 to-crimson-700 rounded-2xl text-white text-3xl shadow-lg shadow-rose-600/30">
+          🚨
+        </div>
+        <div>
+          <div class="flex items-center gap-3">
+            <h1 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+              Customer Annoyance & Call Friction Risk Radar
+            </h1>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-950 text-rose-300 border border-rose-800">
+              High-Alert Executive Risk
+            </span>
+          </div>
+          <p class="text-slate-400 text-xs md:text-sm mt-1">
+            Analyzing 27 unique clients and 35 call friction events (Rapid calling complaints, disturbance, and WhatsApp block threats).
+          </p>
+        </div>
+      </div>
+
+      <!-- Action & Switcher Links -->
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="quran_report.html" class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold rounded-xl transition shadow-lg shadow-emerald-600/20 flex items-center gap-2">
+          <span>📖 Switch to Quran & Tahfeez Report</span>
+          <span>→</span>
+        </a>
+        <a href="call_keyword_radar.html" class="px-3.5 py-2 bg-slate-900/90 hover:bg-slate-800 text-cyan-300 text-xs font-semibold rounded-xl border border-cyan-800 transition">
+          📡 Keyword Radar
+        </a>
+        <a href="/" target="_blank" class="px-3.5 py-2 bg-blue-950/80 hover:bg-blue-900 text-cyan-300 text-xs font-semibold rounded-xl border border-cyan-700/50 transition">
+          🎧 JOCC Platform
+        </a>
+        <button onclick="exportAnnoyCSV()" class="px-3.5 py-2 bg-rose-700 hover:bg-rose-600 text-white text-xs font-bold rounded-xl transition flex items-center gap-1.5 border border-rose-500/50">
+          <span>📥 Export Risk Watchlist</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Metric KPI Cards (100% Annoyance Specific) -->
+  <section class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+    <div class="glass-card rounded-2xl p-5 border-l-4 border-rose-500">
+      <span class="text-xs font-bold uppercase tracking-wider text-rose-400 block mb-1">Annoyed Clients</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-extrabold text-white">27</span>
+        <span class="text-xs text-slate-400">Students</span>
+      </div>
+      <span class="text-[11px] text-rose-300/90 block mt-2 pt-2 border-t border-slate-800">100.0% of friction-impacted cohort</span>
+    </div>
+
+    <div class="glass-card rounded-2xl p-5 border-l-4 border-red-600">
+      <span class="text-xs font-bold uppercase tracking-wider text-red-400 block mb-1">Critical Block Threats</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-extrabold text-red-500">10</span>
+        <span class="text-xs text-slate-400">Calls (28.6%)</span>
+      </div>
+      <span class="text-[11px] text-red-300/90 block mt-2 pt-2 border-t border-slate-800">WhatsApp / Phone number blocking alerts</span>
+    </div>
+
+    <div class="glass-card rounded-2xl p-5 border-l-4 border-amber-500">
+      <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-1">Inconvenient Time ("Ez'aag")</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-extrabold text-amber-400">20</span>
+        <span class="text-xs text-slate-400">Calls (57.1%)</span>
+      </div>
+      <span class="text-[11px] text-amber-200/90 block mt-2 pt-2 border-t border-slate-800">Called during meetings, family, or sleep</span>
+    </div>
+
+    <div class="glass-card rounded-2xl p-5 border-l-4 border-rose-400">
+      <span class="text-xs font-bold uppercase tracking-wider text-rose-300 block mb-1">Rapid Calls ("Kol Shewaya")</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-4xl font-extrabold text-white">4</span>
+        <span class="text-xs text-slate-400">Calls (11.4%)</span>
+      </div>
+      <span class="text-[11px] text-rose-300/90 block mt-2 pt-2 border-t border-slate-800">Calls spaced too closely without cooldown</span>
+    </div>
+  </section>
+
+  <!-- Friction Analytics & Severity Charts (100% Dedicated Breakdown) -->
+  <section class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+    
+    <!-- Bar Chart: Friction Topics Breakdown -->
+    <div class="glass-card rounded-2xl p-6 lg:col-span-2">
+      <div class="flex justify-between items-center mb-5 pb-3 border-b border-slate-800">
+        <div>
+          <h3 class="text-base font-bold text-white tracking-wide">
+            📊 Call Friction Distribution (Total 35 Calls = 100.0%)
+          </h3>
+          <p class="text-xs text-slate-400 mt-0.5">Strictly reconciled breakdown of all customer annoyance events</p>
+        </div>
+        <span class="text-xs px-2.5 py-1 rounded bg-rose-950 text-rose-300 border border-rose-800 font-mono font-bold">
+          N = 35
+        </span>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <div class="flex justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-200">1. Disturbance & Inconvenient Timing ("Ez'aag" / Bad Moment)</span>
+            <span class="font-bold text-rose-400 font-mono">20 calls (57.14%)</span>
+          </div>
+          <div class="w-full bg-slate-900 h-6 rounded-lg overflow-hidden p-0.5 border border-slate-800">
+            <div class="bg-gradient-to-r from-rose-600 to-red-500 h-full rounded flex items-center px-2 text-[11px] font-bold text-white" style="width: 57.14%;">
+              57.14%
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-200">2. WhatsApp Ban & Number Block Threats (Critical Risk)</span>
+            <span class="font-bold text-red-500 font-mono">10 calls (28.57%)</span>
+          </div>
+          <div class="w-full bg-slate-900 h-6 rounded-lg overflow-hidden p-0.5 border border-slate-800">
+            <div class="bg-gradient-to-r from-red-600 to-crimson-700 h-full rounded flex items-center px-2 text-[11px] font-bold text-white" style="width: 28.57%;">
+              28.57%
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-200">3. Rapid Repeat Ringing ("Kol Shewaya" / Every Minute)</span>
+            <span class="font-bold text-amber-400 font-mono">4 calls (11.43%)</span>
+          </div>
+          <div class="w-full bg-slate-900 h-6 rounded-lg overflow-hidden p-0.5 border border-slate-800">
+            <div class="bg-gradient-to-r from-amber-600 to-orange-500 h-full rounded flex items-center px-2 text-[11px] font-bold text-white" style="width: 11.43%;">
+              11.43%
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-200">4. Direct Refusal Demand ("Stop Calling Immediately")</span>
+            <span class="font-bold text-rose-300 font-mono">1 call (2.86%)</span>
+          </div>
+          <div class="w-full bg-slate-900 h-6 rounded-lg overflow-hidden p-0.5 border border-slate-800">
+            <div class="bg-gradient-to-r from-rose-700 to-red-900 h-full rounded flex items-center px-2 text-[11px] font-bold text-white" style="width: 2.86%;">
+              2.86%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Donut Chart: Severity Breakdown -->
+    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+      <div>
+        <h3 class="text-base font-bold text-white tracking-wide">
+          🎯 Severity Share (100.0%)
+        </h3>
+        <p class="text-xs text-slate-400 mt-0.5">Strict risk level distribution across 35 calls</p>
+      </div>
+
+      <div class="py-4 flex items-center justify-center relative">
+        <svg viewBox="0 0 200 200" class="w-44 h-44 transform -rotate-90">
+          <circle cx="100" cy="100" r="70" fill="transparent" stroke="#25090e" stroke-width="22" />
+          <!-- 1. Moderate Inconvenience (68.57% -> 301.58) -->
+          <circle cx="100" cy="100" r="70" fill="transparent" stroke="#f43f5e" stroke-width="22" stroke-dasharray="301.58 439.82" stroke-dashoffset="0" />
+          <!-- 2. Critical Block Risk (28.57% -> 125.66) -->
+          <circle cx="100" cy="100" r="70" fill="transparent" stroke="#b91c1c" stroke-width="22" stroke-dasharray="125.66 439.82" stroke-dashoffset="-301.58" />
+          <!-- 3. Direct Refusal (2.86% -> 12.58) -->
+          <circle cx="100" cy="100" r="70" fill="transparent" stroke="#450a0a" stroke-width="22" stroke-dasharray="12.58 439.82" stroke-dashoffset="-427.24" />
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
+          <span class="text-2xl font-black text-white">35</span>
+          <span class="text-[10px] uppercase font-bold text-slate-400">Calls</span>
+          <span class="text-[10px] text-rose-400 font-mono font-bold">100.0%</span>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-slate-800 space-y-1.5 text-xs">
+        <div class="flex justify-between items-center text-slate-300">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block"></span> Moderate Friction:</span>
+          <span class="font-bold text-rose-400 font-mono">24 (68.6%)</span>
+        </div>
+        <div class="flex justify-between items-center text-slate-300">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-700 inline-block"></span> Critical Block Threats:</span>
+          <span class="font-bold text-red-400 font-mono">10 (28.6%)</span>
+        </div>
+        <div class="flex justify-between items-center text-slate-300">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-950 inline-block"></span> Direct Refusal Demand:</span>
+          <span class="font-bold text-slate-400 font-mono">1 (2.9%)</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Filter & Data Directory -->
+  <section class="max-w-7xl mx-auto mb-10">
+    <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+      
+      <div class="p-5 border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-950/70">
+        <div>
+          <h2 class="text-base font-bold text-white flex items-center gap-2">
+            <span>📋 Customer Annoyance & Friction Directory</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-rose-950 text-rose-300 border border-rose-800" id="annoy-badge">
+              27 Students
+            </span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-0.5">Click any client to inspect spoken complaint audio quotes and direct CRM page.</p>
+        </div>
+
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <!-- Priority Filter -->
+          <div class="flex items-center gap-1.5">
+            <button id="btn-filter-all" onclick="setAnnoyFilter('all')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold bg-rose-600 text-white transition">All (27)</button>
+            <button id="btn-filter-block" onclick="setAnnoyFilter('block')" class="px-2.5 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-red-400 border border-red-800 hover:bg-red-950 transition">Block Threats (10)</button>
+          </div>
+          <!-- View Mode -->
+          <div class="bg-slate-900 p-1 rounded-xl border border-slate-800 flex items-center text-xs font-semibold">
+            <button id="btn-mode-astudents" onclick="setAMode('students')" class="px-3 py-1.5 rounded-lg bg-rose-600 text-white font-bold transition">Students (27)</button>
+            <button id="btn-mode-acalls" onclick="setAMode('calls')" class="px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Calls (35)</button>
+          </div>
+          <!-- Search -->
+          <div class="relative w-full sm:w-56">
+            <input 
+              type="text" 
+              id="aSearch" 
+              oninput="renderATable()" 
+              placeholder="Search student, rep, text..." 
+              class="w-full bg-slate-900 border border-slate-700 focus:border-rose-500 rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-500 focus:outline-none transition pr-8"
+            >
+            <span class="absolute right-3 top-2.5 text-slate-500 text-xs">🔍</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs">
+          <thead class="bg-slate-950 text-slate-400 font-semibold uppercase tracking-wider border-b border-slate-800">
+            <tr id="aHeadRow"></tr>
+          </thead>
+          <tbody id="aBody" class="divide-y divide-slate-800/60 text-slate-300"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Inspection Modal -->
+  <div id="aModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="glass-card rounded-2xl max-w-2xl w-full p-6 border border-rose-500/50 shadow-2xl relative">
+      <button onclick="closeAModal()" class="absolute right-4 top-4 text-slate-400 hover:text-white text-lg font-bold p-1">✕</button>
+      
+      <div class="flex items-center gap-3 mb-5 border-b border-slate-800 pb-4">
+        <div class="p-2.5 bg-rose-950 border border-rose-600/40 rounded-xl text-xl">🚨</div>
+        <div>
+          <h3 class="text-lg font-black text-white" id="am-title">Customer Friction Incident Details</h3>
+          <span class="text-xs text-slate-400" id="am-sub">UID: -</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4 bg-slate-900/80 p-4 rounded-xl border border-slate-800 text-xs">
+        <div>
+          <span class="text-slate-400 block mb-0.5">Student Name</span>
+          <span class="text-white font-bold text-sm arabic-text" id="am-name">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Student UID</span>
+          <span class="text-rose-400 font-mono font-bold text-sm" id="am-uid">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Parent Phone</span>
+          <span class="text-slate-200 font-mono text-xs" id="am-phone">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Assigned Rep / Team</span>
+          <span class="text-slate-200 font-semibold" id="am-rep">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Call Date</span>
+          <span class="text-slate-300 font-mono" id="am-date">-</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">Severity / Threat</span>
+          <span class="px-2 py-0.5 rounded font-bold" id="am-sev">-</span>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <div class="flex justify-between items-center mb-1.5">
+          <label class="text-xs font-semibold text-slate-300">Spoken Complaint Transcript Snippet:</label>
+          <span class="text-xs text-slate-500 font-mono">Recorded Arabic Audio</span>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-slate-200 text-sm leading-relaxed arabic-text" id="am-snip">
+          -
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+        <a id="am-crm" href="#" target="_blank" class="px-4 py-2 bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white text-xs font-bold rounded-xl transition flex items-center gap-2 shadow-lg shadow-rose-600/20">
+          <span>🚀 Open Student on 51Talk CRM</span>
+          <span>↗</span>
+        </a>
+        <button onclick="closeAModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-xl transition">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const CLIENTS = [{"student_id": "64772355", "student_name": "Atheer", "parent_phone": "966****7420", "country": "السعودية", "agent_name": "EGSS-ahmedshoukry", "team_name": "JOCC-Beta Team", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Atheer(64772355)&uid=64772355&fill=0", "sub_categories": ["Block / WhatsApp Ban Threat"], "matched_terms": ["بلوك"], "incidents_count": 1, "highest_severity": "Critical High Risk", "is_block_risk": true, "latest_call_date": "2026-11-08 20:48:48", "snippets": ["...يه رايك فيه تمام هو كان عامه الدرس كان اسمه نيو كيدز اون ذا بلوك يعني جار جديد في الحي السكني بتاعك ممتاز جدا م..."]}, {"student_id": "64832357", "student_name": "Student", "parent_phone": "966****3209", "country": "السعودية", "agent_name": "EGSS-hayamhassan", "team_name": "JOCC-Beta Team", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student(64832357)&uid=64832357&fill=0", "sub_categories": ["Rapid Ringing (\"Kol Shewaya\")"], "matched_terms": ["كل شويه"], "incidents_count": 1, "highest_severity": "Moderate Friction", "is_block_risk": false, "latest_call_date": "2026-11-08 19:18:41", "snippets": ["...ل دائما والله نختار لكم مدرسين على اعلى جوده ولذلك هتلاقينا كل شويه بنتواصل مستوى الاستفاده الاستيعاب كل الحاجات دي عشان كده ان..."]}, {"student_id": "64753001", "student_name": "Student (64753001)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-ashraqatal", "team_name": "Middle East Big Team 01", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64753001)(64753001)&uid=64753001&fill=0", "sub_categories": ["Block / WhatsApp Ban Threat"], "matched_terms": ["بلوك"], "incidents_count": 4, "highest_severity": "Critical High Risk", "is_block_risk": true, "latest_call_date": "2026-11-07 16:17:30", "snippets": ["...عدم الرد على الواتساب انا واخذه بلوك واتساب فانا مش عارفه ارد على الواتساب خالص خالص واخذ بلوك ل...", "...ه بلوك واتساب فانا مش عارفه ارد على الواتساب خالص خالص واخذ بلوك ليه على شان خاطر الواتساب ده هو برقم يعني رقمي انا وكل حاجه...", "...اكثر من حذف اخذ بلوك من كثر الارقام والمتابعات تتصلي بس لانه انا بتعرفي انه في ش...", "...فكنت شويه ممكن ما كنتش عارفه اتصل بس الواتساب اخذت بلوك فعشان كده ما عرفتش ارد على حضرتك ولكني اخذت الاكشن بتاع الح..."]}, {"student_id": "58652779", "student_name": "Saleh", "parent_phone": "966****8790", "country": "السعودية", "agent_name": "JOCC-Emadaldajah", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Saleh(58652779)&uid=58652779&fill=0", "sub_categories": ["Block / WhatsApp Ban Threat"], "matched_terms": ["بلوك"], "incidents_count": 2, "highest_severity": "Critical High Risk", "is_block_risk": true, "latest_call_date": "2026-10-21 14:19:38", "snippets": ["...بلوك بلوك بدي افصل خليك هنا هلا يا مرحبتين كيف الحال يا طويل الع...", "...بلوك بلوك بدي افصل خليك هنا هلا يا مرحبتين كيف الحال يا طويل العمر ال..."]}, {"student_id": "64113300", "student_name": "Lamar", "parent_phone": "966****8962", "country": "السعودية", "agent_name": "JOCC-ramialshanteer", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Lamar(64113300)&uid=64113300&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-08-24 21:18:44", "snippets": ["...يعني في عنا فجوه تعليميه مستويا معليش بس عشان الازعاج بس احنا في طلاب عندنا امتحانات..."]}, {"student_id": "64561537", "student_name": "Ghala", "parent_phone": "966****3587", "country": "السعودية", "agent_name": "JOCC-owaisomar", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Ghala(64561537)&uid=64561537&fill=0", "sub_categories": ["Block / WhatsApp Ban Threat"], "matched_terms": ["بلوك"], "incidents_count": 1, "highest_severity": "Critical High Risk", "is_block_risk": true, "latest_call_date": "2026-10-12 16:39:15", "snippets": ["...نفس الشيء احنا بدنا نركز على بلوك برضو نفس الاشياء احنا بدنا نركز على موضوع النطق بشكل كبير ج..."]}, {"student_id": "64597069", "student_name": "ريما", "parent_phone": "966****1411", "country": "السعودية", "agent_name": "51farraj01", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=ريما(64597069)&uid=64597069&fill=0", "sub_categories": ["Rapid Ringing (\"Kol Shewaya\")"], "matched_terms": ["كل شويه"], "incidents_count": 1, "highest_severity": "Moderate Friction", "is_block_risk": false, "latest_call_date": "2026-10-11 18:32:16", "snippets": ["...يعني الله يعطيكم العافيه مقدره اتصالكم علي وكذا بس ما يصير كل شويه اتصال يعني..."]}, {"student_id": "64598375", "student_name": "Layan", "parent_phone": "966****5572", "country": "السعودية", "agent_name": "JOCC-shoruqelayan", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Layan(64598375)&uid=64598375&fill=0", "sub_categories": ["Rapid Ringing (\"Kol Shewaya\")"], "matched_terms": ["كل شوي"], "incidents_count": 1, "highest_severity": "Moderate Friction", "is_block_risk": false, "latest_call_date": "2026-10-11 17:41:47", "snippets": ["...ب كم باقي لمده باقي اربع دقائق ما في مشاكل احنا نسوي عمليات كل شوي هذه على رقم جوالك شوف انا ارسلت على الجوال..."]}, {"student_id": "64600045", "student_name": "شيرين", "parent_phone": "966****8320", "country": "السعودية", "agent_name": "JOCC-shalabi01", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=شيرين(64600045)&uid=64600045&fill=0", "sub_categories": ["Rapid Ringing (\"Kol Shewaya\")"], "matched_terms": ["كل شوي"], "incidents_count": 1, "highest_severity": "Moderate Friction", "is_block_risk": false, "latest_call_date": "2026-10-23 17:51:47", "snippets": ["...عليك نفس الوقت خليك معي لحظات بدي اكون واشيك انا قلت لك انا كل شوي وين نقول مواعيدها فخليك معي لحظات المعلمه ديني كانت عندك اخ..."]}, {"student_id": "64664047", "student_name": "Saleh", "parent_phone": "966****9575", "country": "السعودية", "agent_name": "51alshmali", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Saleh(64664047)&uid=64664047&fill=0", "sub_categories": ["Direct Stop Calling Demand"], "matched_terms": ["ما تتصل"], "incidents_count": 1, "highest_severity": "Moderate Friction", "is_block_risk": false, "latest_call_date": "2026-10-18 18:24:19", "snippets": ["...بس اللي عليك تسويها خدمه العملاء في تمارا على التطبيق بدون ما تتصلي حتى كتاب فيعني ان موعد الدفعه راح يصير واحد نوفمبر لانه من..."]}, {"student_id": "64695288", "student_name": "Sarah", "parent_phone": "966****3232", "country": "السعودية", "agent_name": "JOCC-hebaalomari", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Sarah(64695288)&uid=64695288&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-10-22 21:08:49", "snippets": ["...الله باذن الله ان شاء الله الله يسعدك حبيبتي يلا بعتذر على ازعاجك مره ثانيه وفي امان الله بالتوفيق الله يسعدك الله يسعدك مع..."]}, {"student_id": "64700812", "student_name": "طالب (64700812)", "parent_phone": "N/A", "country": "المملكة العربية السعودية", "agent_name": "CC Closer", "team_name": "ME-EGSS30小组", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالب (64700812)(64700812)&uid=64700812&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "Unknown", "snippets": ["...ا هلا هلا هلا هلا ومرحبا الله يحفظك ويعزك يا رب نعتذر على الازعاج ولا يهمك الله يحفظك يا رب طيب حبيت اتابع معاك ان شاء الله ش..."]}, {"student_id": "64708507", "student_name": "Abdullah", "parent_phone": "966****8111", "country": "السعودية", "agent_name": "JOCC-Emadaldajah", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Abdullah(64708507)&uid=64708507&fill=0", "sub_categories": ["Block / WhatsApp Ban Threat"], "matched_terms": ["بلوك"], "incidents_count": 2, "highest_severity": "Critical High Risk", "is_block_risk": true, "latest_call_date": "2026-10-21 14:19:38", "snippets": ["...بلوك بلوك بدي افصل خليك هنا هلا يا مرحبتين كيف الحال يا طويل الع...", "...بلوك بلوك بدي افصل خليك هنا هلا يا مرحبتين كيف الحال يا طويل العمر ال..."]}, {"student_id": "63627368", "student_name": "Rozy", "parent_phone": "966****7620", "country": "السعودية", "agent_name": "JOCC-laithfrehat", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Rozy(63627368)&uid=63627368&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-10-09 16:15:57", "snippets": ["...السلام عليكم وعليكم السلام استاذ هزاع انا اسف على ازعاجك هي داخله برقم جوالها ولا برقم جوالك لا هي داخله برقم جوالي..."]}, {"student_id": "59278806", "student_name": "Mohamed", "parent_phone": "966****5587", "country": "السعودية", "agent_name": "JOCC-ismailalsheikh", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Mohamed(59278806)&uid=59278806&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "Moderate Friction", "is_block_risk": false, "latest_call_date": "2026-11-07 15:53:30", "snippets": ["...حظر الحصه ما نسبهم في شيء اجباري او ازعاجه بس بالنهايه اذا شافوا انه الوضع ممتاز وحضروا حصه حلو او كا..."]}, {"student_id": "64060583", "student_name": "Bayan alanezi", "parent_phone": "966****6225", "country": "السعودية", "agent_name": "JOCC-AmaniA", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Bayan alanezi(64060583)&uid=64060583&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 2, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-10-07 16:43:16", "snippets": ["...الانجليزيه ان شاء الله ما اكون ازعجتك لا حبيبتي شكرا ما في ازعاج يا اهلا وسهلا فيك عفوا انا اتواصل معكم بخصوص درس تقييمي تم...", "...الانجليزيه ان شاء الله ما اكون ازعجتك عزيزتي لا شكرا ما في ازعاج يا اهلا وسهلا فيك بشريني ام بيان عن احوال بيان كيف الامور ا..."]}, {"student_id": "61488650", "student_name": "Joud fahad", "parent_phone": "966****8749", "country": "السعودية", "agent_name": "JOCC-yaseenalosh", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Joud fahad(61488650)&uid=61488650&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-10-07 16:39:03", "snippets": ["...لسلام عليكم وعليكم السلام يعطيك العافيه خيتي والمعذره على الازعاج الاستاذ ياسين معك منصه الله يحييك يا رب الله يكرمك..."]}, {"student_id": "64446825", "student_name": "Layan", "parent_phone": "966****2575", "country": "السعودية", "agent_name": "JOCC-shaibimohd", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Layan(64446825)&uid=64446825&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["مزعج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-10-06 14:53:11", "snippets": ["...اعطيك اياها بالتساوي التسجيل بالنسبه في اون لاين معكم والله مزعج ليش من اي ناحيه افتح التطبيق اسجل يعني اشكاليه كبيره والله..."]}, {"student_id": "64532999", "student_name": "Ghaith", "parent_phone": "966****6271", "country": "السعودية", "agent_name": "JOCC-abdalluh", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Ghaith(64532999)&uid=64532999&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-11-08 18:15:39", "snippets": ["...التزام باذن الله يبارك فيك ويبيض وجهك اخوي ابو غيث واسف على ازعاجك وانا هي رقمي عندك الاستاذ عبد الله اي شيء تحتاجه مباشره تو..."]}, {"student_id": "64491737", "student_name": "Bander", "parent_phone": "966****8345", "country": "السعودية", "agent_name": "JOCC-ahmad07", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Bander(64491737)&uid=64491737&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-09-29 12:05:57", "snippets": ["...ن شاء الله انا العصر ان شاء الله ابشر يا اختي سامحيني على الازعاج..."]}, {"student_id": "62066279", "student_name": "طالب (62066279)", "parent_phone": "N/A", "country": "المملكة العربية السعودية", "agent_name": "CC Closer", "team_name": "ME-EGSS30小组", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالب (62066279)(62066279)&uid=62066279&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "Unknown", "snippets": ["...تحب اني احجز لك موعد اخر لا لا غلط تمام التمام نعتذر على الازعاج يا هلا..."]}, {"student_id": "64503001", "student_name": "Aljawhara", "parent_phone": "966****6649", "country": "السعودية", "agent_name": "JOCC-mohdsqour", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Aljawhara(64503001)&uid=64503001&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 2, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-11-10 17:13:00", "snippets": ["...اطلعك على تقييمهم طبعا طبعا اختي ام فهد وانا اسف جدا على الازعاج متى بتكون مناسبه لك ولا ترسلي لي عن طريق الواتساب...", "...ب حتى اتصل اطلعك على تقييمهم باذن الله تعالى اسفه جدا على الازعاج يعطيك العافيه يا هلا ومرحبا..."]}, {"student_id": "64394317", "student_name": "طالبين", "parent_phone": "966****3868", "country": "السعودية", "agent_name": "JOCC-Ruba", "team_name": "JOCC", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالبين(64394317)&uid=64394317&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 2, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-09-24 17:54:37", "snippets": ["...موجود بس مره ازعاج رقم ثاني للطالب الثاني...", "...انا مره في مكان ازعاج مو قادره اركز معاك ممكن تتصلي بعد المغرب بعد العشاء موعد عل..."]}, {"student_id": "64592041", "student_name": "Student (64592041)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "JOCC-alasoulitariq", "team_name": "Middle East Big Team 01", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64592041)(64592041)&uid=64592041&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-10-29 17:33:23", "snippets": ["...المعذره على الازعاج ابو اصيل للتاكيد اصيل قلنا يعرف الحروف ويعرف كلمات صح جمل و..."]}, {"student_id": "64768700", "student_name": "Student (64768700)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "JOCC-jafararmoush", "team_name": "Middle East Big Team 01", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64768700)(64768700)&uid=64768700&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-11-03 14:07:18", "snippets": ["...الاستاذ احمد الله ربي يكرمك يا رب يا اختي يزن اعذريني على الازعاج ولكن بدي اعطيك شيء جدا مناسب استفدت منه امبارح..."]}, {"student_id": "61400998", "student_name": "Student", "parent_phone": "966****2294", "country": "السعودية", "agent_name": "JOCC-alhammadrahaf", "team_name": "JOCC-Alpha Team", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student(61400998)&uid=61400998&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-11-08 16:40:09", "snippets": ["...الحال يا اهلا وسهلا حياك الله الله يحييك ويسعدك اعتذر على الازعاج بس للامانه كنت..."]}, {"student_id": "64805180", "student_name": "هتان", "parent_phone": "966****0126", "country": "السعودية", "agent_name": "JOCC-jafararmoush", "team_name": "JOCC-Alpha Team", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=هتان(64805180)&uid=64805180&fill=0", "sub_categories": ["Inconvenient Time / Disturbance"], "matched_terms": ["ازعاج"], "incidents_count": 1, "highest_severity": "High Risk", "is_block_risk": false, "latest_call_date": "2026-11-02 20:48:56", "snippets": ["...نصه تعليم اللغه الانجليزيه الله يكرمك اول شيء اعذريني على الازعاج في هذا الوقت ولكن انت اليوم حزين عندنا حصه تقييميه مجانيه ل..."]}];
+    const INCIDENTS = [{"id": 7, "student_id": "64772355", "student_name": "Atheer", "parent_phone": "966****7420", "country": "السعودية", "agent_name": "EGSS-ahmedshoukry", "team_name": "JOCC-Beta Team", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-11-08 20:48:48", "snippet": "...يه رايك فيه تمام هو كان عامه الدرس كان اسمه نيو كيدز اون ذا بلوك يعني جار جديد في الحي السكني بتاعك ممتاز جدا م...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Atheer(64772355)&uid=64772355&fill=0"}, {"id": 8, "student_id": "64832357", "student_name": "Student", "parent_phone": "966****3209", "country": "السعودية", "agent_name": "EGSS-hayamhassan", "team_name": "JOCC-Beta Team", "sub_category_en": "Rapid Ringing (\"Kol Shewaya\")", "matched_text": "كل شويه", "dialect": "مشترك", "severity_en": "Moderate Friction", "call_date": "2026-11-08 19:18:41", "snippet": "...ل دائما والله نختار لكم مدرسين على اعلى جوده ولذلك هتلاقينا كل شويه بنتواصل مستوى الاستفاده الاستيعاب كل الحاجات دي عشان كده ان...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student(64832357)&uid=64832357&fill=0"}, {"id": 9, "student_id": "64753001", "student_name": "Student (64753001)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-ashraqatal", "team_name": "Middle East Big Team 01", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-11-07 16:17:30", "snippet": "...عدم الرد على الواتساب انا واخذه بلوك واتساب فانا مش عارفه ارد على الواتساب خالص خالص واخذ بلوك ل...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64753001)(64753001)&uid=64753001&fill=0"}, {"id": 10, "student_id": "64753001", "student_name": "Student (64753001)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-ashraqatal", "team_name": "Middle East Big Team 01", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-11-07 16:17:30", "snippet": "...ه بلوك واتساب فانا مش عارفه ارد على الواتساب خالص خالص واخذ بلوك ليه على شان خاطر الواتساب ده هو برقم يعني رقمي انا وكل حاجه...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64753001)(64753001)&uid=64753001&fill=0"}, {"id": 11, "student_id": "64753001", "student_name": "Student (64753001)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-ashraqatal", "team_name": "Middle East Big Team 01", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-11-07 16:17:30", "snippet": "...اكثر من حذف اخذ بلوك من كثر الارقام والمتابعات تتصلي بس لانه انا بتعرفي انه في ش...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64753001)(64753001)&uid=64753001&fill=0"}, {"id": 12, "student_id": "64753001", "student_name": "Student (64753001)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "EGSS-ashraqatal", "team_name": "Middle East Big Team 01", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-11-07 16:17:30", "snippet": "...فكنت شويه ممكن ما كنتش عارفه اتصل بس الواتساب اخذت بلوك فعشان كده ما عرفتش ارد على حضرتك ولكني اخذت الاكشن بتاع الح...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64753001)(64753001)&uid=64753001&fill=0"}, {"id": 13, "student_id": "58652779", "student_name": "Saleh", "parent_phone": "966****8790", "country": "السعودية", "agent_name": "JOCC-Emadaldajah", "team_name": "JOCC", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-10-21 14:19:38", "snippet": "...بلوك بلوك بدي افصل خليك هنا هلا يا مرحبتين كيف الحال يا طويل الع...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Saleh(58652779)&uid=58652779&fill=0"}, {"id": 14, "student_id": "58652779", "student_name": "Saleh", "parent_phone": "966****8790", "country": "السعودية", "agent_name": "JOCC-Emadaldajah", "team_name": "JOCC", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-10-21 14:19:38", "snippet": "...بلوك بلوك بدي افصل خليك هنا هلا يا مرحبتين كيف الحال يا طويل العمر ال...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Saleh(58652779)&uid=58652779&fill=0"}, {"id": 17, "student_id": "64113300", "student_name": "Lamar", "parent_phone": "966****8962", "country": "السعودية", "agent_name": "JOCC-ramialshanteer", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-08-24 21:18:44", "snippet": "...يعني في عنا فجوه تعليميه مستويا معليش بس عشان الازعاج بس احنا في طلاب عندنا امتحانات...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Lamar(64113300)&uid=64113300&fill=0"}, {"id": 18, "student_id": "64561537", "student_name": "Ghala", "parent_phone": "966****3587", "country": "السعودية", "agent_name": "JOCC-owaisomar", "team_name": "JOCC", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-10-12 16:39:15", "snippet": "...نفس الشيء احنا بدنا نركز على بلوك برضو نفس الاشياء احنا بدنا نركز على موضوع النطق بشكل كبير ج...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Ghala(64561537)&uid=64561537&fill=0"}, {"id": 20, "student_id": "64597069", "student_name": "ريما", "parent_phone": "966****1411", "country": "السعودية", "agent_name": "51farraj01", "team_name": "JOCC", "sub_category_en": "Rapid Ringing (\"Kol Shewaya\")", "matched_text": "كل شويه", "dialect": "مشترك", "severity_en": "Moderate Friction", "call_date": "2026-10-11 18:32:16", "snippet": "...يعني الله يعطيكم العافيه مقدره اتصالكم علي وكذا بس ما يصير كل شويه اتصال يعني...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=ريما(64597069)&uid=64597069&fill=0"}, {"id": 23, "student_id": "64598375", "student_name": "Layan", "parent_phone": "966****5572", "country": "السعودية", "agent_name": "JOCC-shoruqelayan", "team_name": "JOCC", "sub_category_en": "Rapid Ringing (\"Kol Shewaya\")", "matched_text": "كل شوي", "dialect": "مشترك", "severity_en": "Moderate Friction", "call_date": "2026-10-11 17:41:47", "snippet": "...ب كم باقي لمده باقي اربع دقائق ما في مشاكل احنا نسوي عمليات كل شوي هذه على رقم جوالك شوف انا ارسلت على الجوال...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Layan(64598375)&uid=64598375&fill=0"}, {"id": 24, "student_id": "64600045", "student_name": "شيرين", "parent_phone": "966****8320", "country": "السعودية", "agent_name": "JOCC-shalabi01", "team_name": "JOCC", "sub_category_en": "Rapid Ringing (\"Kol Shewaya\")", "matched_text": "كل شوي", "dialect": "مشترك", "severity_en": "Moderate Friction", "call_date": "2026-10-23 17:51:47", "snippet": "...عليك نفس الوقت خليك معي لحظات بدي اكون واشيك انا قلت لك انا كل شوي وين نقول مواعيدها فخليك معي لحظات المعلمه ديني كانت عندك اخ...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=شيرين(64600045)&uid=64600045&fill=0"}, {"id": 26, "student_id": "64664047", "student_name": "Saleh", "parent_phone": "966****9575", "country": "السعودية", "agent_name": "51alshmali", "team_name": "JOCC", "sub_category_en": "Direct Stop Calling Demand", "matched_text": "ما تتصل", "dialect": "مشترك / مصري", "severity_en": "Moderate Friction", "call_date": "2026-10-18 18:24:19", "snippet": "...بس اللي عليك تسويها خدمه العملاء في تمارا على التطبيق بدون ما تتصلي حتى كتاب فيعني ان موعد الدفعه راح يصير واحد نوفمبر لانه من...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Saleh(64664047)&uid=64664047&fill=0"}, {"id": 27, "student_id": "64695288", "student_name": "Sarah", "parent_phone": "966****3232", "country": "السعودية", "agent_name": "JOCC-hebaalomari", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-10-22 21:08:49", "snippet": "...الله باذن الله ان شاء الله الله يسعدك حبيبتي يلا بعتذر على ازعاجك مره ثانيه وفي امان الله بالتوفيق الله يسعدك الله يسعدك مع...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Sarah(64695288)&uid=64695288&fill=0"}, {"id": 28, "student_id": "64700812", "student_name": "طالب (64700812)", "parent_phone": "N/A", "country": "المملكة العربية السعودية", "agent_name": "CC Closer", "team_name": "ME-EGSS30小组", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "Unknown", "snippet": "...ا هلا هلا هلا هلا ومرحبا الله يحفظك ويعزك يا رب نعتذر على الازعاج ولا يهمك الله يحفظك يا رب طيب حبيت اتابع معاك ان شاء الله ش...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالب (64700812)(64700812)&uid=64700812&fill=0"}, {"id": 29, "student_id": "64708507", "student_name": "Abdullah", "parent_phone": "966****8111", "country": "السعودية", "agent_name": "JOCC-Emadaldajah", "team_name": "JOCC", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-10-21 14:19:38", "snippet": "...بلوك بلوك بدي افصل خليك هنا هلا يا مرحبتين كيف الحال يا طويل الع...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Abdullah(64708507)&uid=64708507&fill=0"}, {"id": 30, "student_id": "64708507", "student_name": "Abdullah", "parent_phone": "966****8111", "country": "السعودية", "agent_name": "JOCC-Emadaldajah", "team_name": "JOCC", "sub_category_en": "Block / WhatsApp Ban Threat", "matched_text": "بلوك", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-10-21 14:19:38", "snippet": "...بلوك بلوك بدي افصل خليك هنا هلا يا مرحبتين كيف الحال يا طويل العمر ال...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Abdullah(64708507)&uid=64708507&fill=0"}, {"id": 31, "student_id": "63627368", "student_name": "Rozy", "parent_phone": "966****7620", "country": "السعودية", "agent_name": "JOCC-laithfrehat", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-10-09 16:15:57", "snippet": "...السلام عليكم وعليكم السلام استاذ هزاع انا اسف على ازعاجك هي داخله برقم جوالها ولا برقم جوالك لا هي داخله برقم جوالي...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Rozy(63627368)&uid=63627368&fill=0"}, {"id": 32, "student_id": "59278806", "student_name": "Mohamed", "parent_phone": "966****5587", "country": "السعودية", "agent_name": "JOCC-ismailalsheikh", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "Critical High Risk", "call_date": "2026-11-07 15:53:30", "snippet": "...حظر الحصه ما نسبهم في شيء اجباري او ازعاجه بس بالنهايه اذا شافوا انه الوضع ممتاز وحضروا حصه حلو او كا...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Mohamed(59278806)&uid=59278806&fill=0"}, {"id": 34, "student_id": "64060583", "student_name": "Bayan alanezi", "parent_phone": "966****6225", "country": "السعودية", "agent_name": "JOCC-AmaniA", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-10-07 16:43:16", "snippet": "...الانجليزيه ان شاء الله ما اكون ازعجتك لا حبيبتي شكرا ما في ازعاج يا اهلا وسهلا فيك عفوا انا اتواصل معكم بخصوص درس تقييمي تم...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Bayan alanezi(64060583)&uid=64060583&fill=0"}, {"id": 35, "student_id": "64060583", "student_name": "Bayan alanezi", "parent_phone": "966****6225", "country": "السعودية", "agent_name": "JOCC-AmaniA", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-10-17 18:16:30", "snippet": "...الانجليزيه ان شاء الله ما اكون ازعجتك عزيزتي لا شكرا ما في ازعاج يا اهلا وسهلا فيك بشريني ام بيان عن احوال بيان كيف الامور ا...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Bayan alanezi(64060583)&uid=64060583&fill=0"}, {"id": 38, "student_id": "61488650", "student_name": "Joud fahad", "parent_phone": "966****8749", "country": "السعودية", "agent_name": "JOCC-yaseenalosh", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-10-07 16:39:03", "snippet": "...لسلام عليكم وعليكم السلام يعطيك العافيه خيتي والمعذره على الازعاج الاستاذ ياسين معك منصه الله يحييك يا رب الله يكرمك...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Joud fahad(61488650)&uid=61488650&fill=0"}, {"id": 39, "student_id": "64446825", "student_name": "Layan", "parent_phone": "966****2575", "country": "السعودية", "agent_name": "JOCC-shaibimohd", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "مزعج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-10-06 14:53:11", "snippet": "...اعطيك اياها بالتساوي التسجيل بالنسبه في اون لاين معكم والله مزعج ليش من اي ناحيه افتح التطبيق اسجل يعني اشكاليه كبيره والله...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Layan(64446825)&uid=64446825&fill=0"}, {"id": 40, "student_id": "64532999", "student_name": "Ghaith", "parent_phone": "966****6271", "country": "السعودية", "agent_name": "JOCC-abdalluh", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-11-08 18:15:39", "snippet": "...التزام باذن الله يبارك فيك ويبيض وجهك اخوي ابو غيث واسف على ازعاجك وانا هي رقمي عندك الاستاذ عبد الله اي شيء تحتاجه مباشره تو...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Ghaith(64532999)&uid=64532999&fill=0"}, {"id": 41, "student_id": "64491737", "student_name": "Bander", "parent_phone": "966****8345", "country": "السعودية", "agent_name": "JOCC-ahmad07", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-09-29 12:05:57", "snippet": "...ن شاء الله انا العصر ان شاء الله ابشر يا اختي سامحيني على الازعاج...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Bander(64491737)&uid=64491737&fill=0"}, {"id": 42, "student_id": "62066279", "student_name": "طالب (62066279)", "parent_phone": "N/A", "country": "المملكة العربية السعودية", "agent_name": "CC Closer", "team_name": "ME-EGSS30小组", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "Unknown", "snippet": "...تحب اني احجز لك موعد اخر لا لا غلط تمام التمام نعتذر على الازعاج يا هلا...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالب (62066279)(62066279)&uid=62066279&fill=0"}, {"id": 45, "student_id": "64503001", "student_name": "Aljawhara", "parent_phone": "966****6649", "country": "السعودية", "agent_name": "JOCC-mohdsqour", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-11-10 17:13:00", "snippet": "...اطلعك على تقييمهم طبعا طبعا اختي ام فهد وانا اسف جدا على الازعاج متى بتكون مناسبه لك ولا ترسلي لي عن طريق الواتساب...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Aljawhara(64503001)&uid=64503001&fill=0"}, {"id": 46, "student_id": "64503001", "student_name": "Aljawhara", "parent_phone": "966****6649", "country": "السعودية", "agent_name": "JOCC-mohdsqour", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-11-10 17:13:00", "snippet": "...ب حتى اتصل اطلعك على تقييمهم باذن الله تعالى اسفه جدا على الازعاج يعطيك العافيه يا هلا ومرحبا...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Aljawhara(64503001)&uid=64503001&fill=0"}, {"id": 47, "student_id": "64394317", "student_name": "طالبين", "parent_phone": "966****3868", "country": "السعودية", "agent_name": "JOCC-Ruba", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-09-24 17:54:37", "snippet": "...موجود بس مره ازعاج رقم ثاني للطالب الثاني...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالبين(64394317)&uid=64394317&fill=0"}, {"id": 48, "student_id": "64394317", "student_name": "طالبين", "parent_phone": "966****3868", "country": "السعودية", "agent_name": "JOCC-Ruba", "team_name": "JOCC", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-09-24 17:59:35", "snippet": "...انا مره في مكان ازعاج مو قادره اركز معاك ممكن تتصلي بعد المغرب بعد العشاء موعد عل...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=طالبين(64394317)&uid=64394317&fill=0"}, {"id": 57, "student_id": "64592041", "student_name": "Student (64592041)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "JOCC-alasoulitariq", "team_name": "Middle East Big Team 01", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-10-29 17:33:23", "snippet": "...المعذره على الازعاج ابو اصيل للتاكيد اصيل قلنا يعرف الحروف ويعرف كلمات صح جمل و...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64592041)(64592041)&uid=64592041&fill=0"}, {"id": 59, "student_id": "64768700", "student_name": "Student (64768700)", "parent_phone": "N/A", "country": "Saudi Arabia / Middle East", "agent_name": "JOCC-jafararmoush", "team_name": "Middle East Big Team 01", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-11-03 14:07:18", "snippet": "...الاستاذ احمد الله ربي يكرمك يا رب يا اختي يزن اعذريني على الازعاج ولكن بدي اعطيك شيء جدا مناسب استفدت منه امبارح...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student (64768700)(64768700)&uid=64768700&fill=0"}, {"id": 60, "student_id": "61400998", "student_name": "Student", "parent_phone": "966****2294", "country": "السعودية", "agent_name": "JOCC-alhammadrahaf", "team_name": "JOCC-Alpha Team", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-11-08 16:40:09", "snippet": "...الحال يا اهلا وسهلا حياك الله الله يحييك ويسعدك اعتذر على الازعاج بس للامانه كنت...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=Student(61400998)&uid=61400998&fill=0"}, {"id": 62, "student_id": "64805180", "student_name": "هتان", "parent_phone": "966****0126", "country": "السعودية", "agent_name": "JOCC-jafararmoush", "team_name": "JOCC-Alpha Team", "sub_category_en": "Inconvenient Time / Disturbance", "matched_text": "ازعاج", "dialect": "مشترك", "severity_en": "High Risk", "call_date": "2026-11-02 20:48:56", "snippet": "...نصه تعليم اللغه الانجليزيه الله يكرمك اول شيء اعذريني على الازعاج في هذا الوقت ولكن انت اليوم حزين عندنا حصه تقييميه مجانيه ل...", "crm_url": "https://lp.51talkjr.com/#/user-profile?labelName=هتان(64805180)&uid=64805180&fill=0"}];
+    let aMode = 'students';
+    let aFilter = 'all';
+
+    function init() {
+      renderATable();
+    }
+
+    function setAMode(mode) {
+      aMode = mode;
+      document.getElementById('btn-mode-astudents').className = mode === 'students'
+        ? 'px-3 py-1.5 rounded-lg bg-rose-600 text-white font-bold transition'
+        : 'px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
+      document.getElementById('btn-mode-acalls').className = mode === 'calls'
+        ? 'px-3 py-1.5 rounded-lg bg-rose-600 text-white font-bold transition'
+        : 'px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
+      renderATable();
+    }
+
+    function setAnnoyFilter(f) {
+      aFilter = f;
+      document.getElementById('btn-filter-all').className = f === 'all'
+        ? 'px-2.5 py-1.5 rounded-lg text-xs font-bold bg-rose-600 text-white transition'
+        : 'px-2.5 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-slate-400 hover:bg-slate-800 transition';
+      document.getElementById('btn-filter-block').className = f === 'block'
+        ? 'px-2.5 py-1.5 rounded-lg text-xs font-bold bg-red-600 text-white transition'
+        : 'px-2.5 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-red-400 border border-red-800 hover:bg-red-950 transition';
+      renderATable();
+    }
+
+    function getAFiltered() {
+      const query = (document.getElementById('aSearch').value || '').trim().toLowerCase();
+      if (aMode === 'students') {
+        return CLIENTS.filter(c => {
+          if (aFilter === 'block' && !c.is_block_risk) return false;
+          if (query) {
+            const str = (c.student_id + ' ' + c.student_name + ' ' + c.parent_phone + ' ' + c.agent_name + ' ' + c.sub_categories.join(' ') + ' ' + c.snippets.join(' ')).toLowerCase();
+            if (!str.includes(query)) return false;
+          }
+          return true;
+        });
+      } else {
+        return INCIDENTS.filter(i => {
+          if (aFilter === 'block' && !i.sub_category_en.includes('Block')) return false;
+          if (query) {
+            const str = (i.student_id + ' ' + i.student_name + ' ' + i.agent_name + ' ' + i.sub_category_en + ' ' + i.snippet).toLowerCase();
+            if (!str.includes(query)) return false;
+          }
+          return true;
+        });
+      }
+    }
+
+    function renderATable() {
+      const filtered = getAFiltered();
+      const tbody = document.getElementById('aBody');
+      const thead = document.getElementById('aHeadRow');
+      const badge = document.getElementById('annoy-badge');
+
+      if (aMode === 'students') {
+        badge.textContent = `Showing ${filtered.length} of ${CLIENTS.length} Students`;
+        thead.innerHTML = `
+          <th class="py-3 px-4 text-center">#</th>
+          <th class="py-3 px-4">Student & UID</th>
+          <th class="py-3 px-4">Assigned Rep / Team</th>
+          <th class="py-3 px-4 text-center">Severity</th>
+          <th class="py-3 px-4 text-center">Block Alert?</th>
+          <th class="py-3 px-4 text-center">Calls</th>
+          <th class="py-3 px-4 min-w-[320px]">Spoken Complaint Excerpt</th>
+          <th class="py-3 px-4 text-center">CRM</th>
+        `;
+
+        if (!filtered.length) {
+          tbody.innerHTML = `<tr><td colspan="8" class="text-center py-10 text-slate-500 font-semibold">No students match search.</td></tr>`;
+          return;
+        }
+
+        let html = '';
+        filtered.forEach((c, idx) => {
+          let sevBadge = `<span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400">Moderate</span>`;
+          if (c.highest_severity.includes('Critical')) {
+            sevBadge = `<span class="px-2 py-0.5 rounded text-[10px] bg-red-950 text-red-400 border border-red-700 font-bold">Critical Block</span>`;
+          } else if (c.highest_severity.includes('High')) {
+            sevBadge = `<span class="px-2 py-0.5 rounded text-[10px] bg-rose-950 text-rose-300 border border-rose-800 font-semibold">High Friction</span>`;
+          }
+
+          const blockTag = c.is_block_risk 
+            ? `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-950 text-red-300 border border-red-700">⚠️ YES (BLOCK)</span>`
+            : `<span class="text-slate-500 text-[11px]">No</span>`;
+
+          html += `
+            <tr class="hover:bg-slate-800/40 transition cursor-pointer" onclick="openClientModal('${c.student_id}')">
+              <td class="py-3 px-4 text-center text-slate-500 font-mono">${idx + 1}</td>
+              <td class="py-3 px-4">
+                <div class="font-bold text-white text-xs hover:text-rose-400 transition arabic-text">${c.student_name}</div>
+                <div class="text-[11px] text-rose-400 font-mono">${c.student_id}</div>
+              </td>
+              <td class="py-3 px-4">
+                <div class="font-semibold text-slate-200 text-xs">${c.agent_name}</div>
+                <div class="text-[10px] text-slate-500">${c.team_name}</div>
+              </td>
+              <td class="py-3 px-4 text-center">${sevBadge}</td>
+              <td class="py-3 px-4 text-center">${blockTag}</td>
+              <td class="py-3 px-4 text-center font-mono font-bold text-rose-400">${c.incidents_count}</td>
+              <td class="py-3 px-4 text-slate-300 text-xs leading-relaxed max-w-xs truncate arabic-text" title="${c.snippets[0].replace(/"/g, '&quot;')}">
+                ${c.snippets[0]}
+              </td>
+              <td class="py-3 px-4 text-center" onclick="event.stopPropagation()">
+                <a href="${c.crm_url}" target="_blank" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-rose-950 hover:bg-rose-800 text-rose-300 border border-rose-700/50 transition">
+                  ↗
+                </a>
+              </td>
+            </tr>
+          `;
+        });
+        tbody.innerHTML = html;
+      } else {
+        badge.textContent = `Showing ${filtered.length} of ${INCIDENTS.length} Calls`;
+        thead.innerHTML = `
+          <th class="py-3 px-4 text-center">#</th>
+          <th class="py-3 px-4">Student & UID</th>
+          <th class="py-3 px-4">Rep / Team</th>
+          <th class="py-3 px-4 text-center">Friction Type</th>
+          <th class="py-3 px-4 text-center">Severity</th>
+          <th class="py-3 px-4">Call Date</th>
+          <th class="py-3 px-4 min-w-[320px]">Spoken Complaint Excerpt</th>
+          <th class="py-3 px-4 text-center">CRM</th>
+        `;
+
+        if (!filtered.length) {
+          tbody.innerHTML = `<tr><td colspan="8" class="text-center py-10 text-slate-500 font-semibold">No calls match search.</td></tr>`;
+          return;
+        }
+
+        let html = '';
+        filtered.forEach((i, idx) => {
+          let sevBadge = `<span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400">Moderate</span>`;
+          if (i.severity_en.includes('Critical')) {
+            sevBadge = `<span class="px-2 py-0.5 rounded text-[10px] bg-red-950 text-red-400 border border-red-700 font-bold">Critical</span>`;
+          } else if (i.severity_en.includes('High')) {
+            sevBadge = `<span class="px-2 py-0.5 rounded text-[10px] bg-rose-950 text-rose-300 border border-rose-800 font-semibold">High</span>`;
+          }
+
+          html += `
+            <tr class="hover:bg-slate-800/40 transition cursor-pointer" onclick="openIncModal(${i.id})">
+              <td class="py-3 px-4 text-center text-slate-500 font-mono">${idx + 1}</td>
+              <td class="py-3 px-4">
+                <div class="font-bold text-white text-xs hover:text-rose-400 transition arabic-text">${i.student_name}</div>
+                <div class="text-[11px] text-rose-400 font-mono">${i.student_id}</div>
+              </td>
+              <td class="py-3 px-4">
+                <div class="font-semibold text-slate-200 text-xs">${i.agent_name}</div>
+                <div class="text-[10px] text-slate-500">${i.team_name}</div>
+              </td>
+              <td class="py-3 px-4 text-center">
+                <span class="px-2 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800 text-[10px] font-semibold">${i.sub_category_en}</span>
+              </td>
+              <td class="py-3 px-4 text-center">${sevBadge}</td>
+              <td class="py-3 px-4 font-mono text-[11px] text-slate-400">${i.call_date}</td>
+              <td class="py-3 px-4 text-slate-300 text-xs leading-relaxed max-w-xs truncate arabic-text" title="${i.snippet.replace(/"/g, '&quot;')}">
+                ${i.snippet}
+              </td>
+              <td class="py-3 px-4 text-center" onclick="event.stopPropagation()">
+                <a href="${i.crm_url}" target="_blank" class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-rose-950 hover:bg-rose-800 text-rose-300 border border-rose-700/50 transition">
+                  ↗
+                </a>
+              </td>
+            </tr>
+          `;
+        });
+        tbody.innerHTML = html;
+      }
+    }
+
+    function openClientModal(sid) {
+      const c = CLIENTS.find(x => x.student_id === sid);
+      if (!c) return;
+      document.getElementById('am-name').textContent = c.student_name;
+      document.getElementById('am-uid').textContent = c.student_id;
+      document.getElementById('am-phone').textContent = c.parent_phone;
+      document.getElementById('am-rep').textContent = c.agent_name + ' (' + c.team_name + ')';
+      document.getElementById('am-date').textContent = c.latest_call_date;
+      document.getElementById('am-sev').textContent = c.highest_severity;
+      document.getElementById('am-crm').href = c.crm_url;
+      document.getElementById('am-sub').textContent = `Total Friction Calls: ${c.incidents_count} | Block Threat: ${c.is_block_risk ? 'YES' : 'No'}`;
+      
+      const sevEl = document.getElementById('am-sev');
+      if (c.highest_severity.includes('Critical')) {
+        sevEl.className = 'text-xs px-2.5 py-1 rounded font-bold bg-red-950 text-red-400 border border-red-700';
+      } else {
+        sevEl.className = 'text-xs px-2.5 py-1 rounded font-bold bg-amber-950 text-amber-300 border border-amber-800';
+      }
+
+      let snips = '';
+      c.snippets.forEach(s => { snips += `<div class="mb-2 pb-2 border-b border-slate-800/80 last:border-b-0">${s}</div>`; });
+      document.getElementById('am-snip').innerHTML = snips;
+      document.getElementById('aModal').classList.remove('hidden');
+    }
+
+    function openIncModal(id) {
+      const i = INCIDENTS.find(x => x.id === id);
+      if (!i) return;
+      document.getElementById('am-name').textContent = i.student_name;
+      document.getElementById('am-uid').textContent = i.student_id;
+      document.getElementById('am-phone').textContent = i.parent_phone;
+      document.getElementById('am-rep').textContent = i.agent_name;
+      document.getElementById('am-date').textContent = i.call_date;
+      document.getElementById('am-sev').textContent = i.severity_en;
+      document.getElementById('am-crm').href = i.crm_url;
+      document.getElementById('am-snip').textContent = i.snippet;
+      document.getElementById('am-sub').textContent = `Spoken Turn ID: ${i.id} • ${i.sub_category_en}`;
+      
+      const sevEl = document.getElementById('am-sev');
+      if (i.severity_en.includes('Critical')) {
+        sevEl.className = 'text-xs px-2.5 py-1 rounded font-bold bg-red-950 text-red-400 border border-red-700';
+      } else {
+        sevEl.className = 'text-xs px-2.5 py-1 rounded font-bold bg-amber-950 text-amber-300 border border-amber-800';
+      }
+
+      document.getElementById('aModal').classList.remove('hidden');
+    }
+
+    function closeAModal() {
+      document.getElementById('aModal').classList.add('hidden');
+    }
+
+    function exportAnnoyCSV() {
+      const filtered = getAFiltered();
+      if (!filtered.length) return;
+      let csv = "\uFEFFUID,Student Name,Phone,Rep,Severity,Block Threat,Calls,Snippet\n";
+      filtered.forEach(item => {
+        if (aMode === 'students') {
+          csv += `"${item.student_id}","${item.student_name.replace(/"/g, '""')}","${item.parent_phone}","${item.agent_name}","${item.highest_severity}","${item.is_block_risk ? 'YES' : 'NO'}","${item.incidents_count}","${(item.snippets[0]||'').replace(/"/g, '""')}"\n`;
+        } else {
+          csv += `"${item.student_id}","${item.student_name.replace(/"/g, '""')}","${item.parent_phone}","${item.agent_name}","${item.severity_en}","${item.sub_category_en.includes('Block') ? 'YES' : 'NO'}","1","${item.snippet.replace(/"/g, '""')}"\n`;
+        }
+      });
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Call_Annoyance_Risk_Cohort_${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>
