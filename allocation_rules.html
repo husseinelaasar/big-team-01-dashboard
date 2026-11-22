@@ -1421,6 +1421,118 @@
       color: #fff;
     }
 
+
+    /* Phase 1 Enhancements: CRM Deep Link & WhatsApp Button & Leader Cockpit */
+    .btn-crm-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-crm-link:hover {
+      background: rgba(56, 189, 248, 0.28);
+      border-color: #38bdf8;
+      color: #fff;
+      box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+    }
+
+    .btn-whatsapp-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 3px 7px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-size: 0.70rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .btn-whatsapp-mini:hover {
+      background: rgba(16, 185, 129, 0.28);
+      border-color: #10b981;
+      color: #fff;
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+      transform: translateY(-1px);
+    }
+
+    /* Team Leader Morning Standup Cockpit */
+    .leader-standup-card {
+      background: linear-gradient(135deg, rgba(30, 27, 75, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 0 20px rgba(99, 102, 241, 0.1);
+    }
+    .leader-standup-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #c7d2fe;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .leader-standup-metrics {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .leader-metric-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .leader-metric-pill strong {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+    }
+    .btn-briefing-copy {
+      background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .btn-briefing-copy:hover {
+      background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+    }
+
   </style>
 </head>
 <body>
@@ -1475,13 +1587,25 @@
           <span id="themeToggleText">New Theme</span>
         </button>
 
-        <a href="index.html" class="tab-btn active" style="text-decoration: none; padding: 7px 14px; font-size: 0.82rem;">
+        <a href="index.html" class="tab-btn" style="text-decoration: none; padding: 7px 12px; font-size: 0.80rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           <span id="navMainDashboardText">الداش بورد الرئيسي</span>
         </a>
-        <a href="calculator.html" class="tab-btn" style="text-decoration: none; padding: 7px 14px; font-size: 0.82rem; background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #fcd34d;">
+        <a href="allocation_rules.html" class="tab-btn active" style="text-decoration: none; padding: 7px 12px; font-size: 0.80rem; background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.3)); border-color: #f59e0b; color: #fcd34d;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>رادار الاسترداد</span>
+        </a>
+        <a href="calculator.html" class="tab-btn" style="text-decoration: none; padding: 7px 12px; font-size: 0.80rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/></svg>
           <span id="navCalculatorText">حاسبة الباقات</span>
+        </a>
+        <a href="call_keyword_radar.html" class="tab-btn" style="text-decoration: none; padding: 7px 12px; font-size: 0.80rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>رادار المكالمات</span>
+        </a>
+        <a href="annoyance_report.html" class="tab-btn" style="text-decoration: none; padding: 7px 12px; font-size: 0.80rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>رادار انزعاج العملاء</span>
         </a>
                 <!-- Logged-in User Profile Pill & Logout -->
         <div id="navUserBadge" class="nav-user-badge" style="display: none;">
@@ -3368,7 +3492,15 @@ function renderAgentBadge(agentName) {
           rowsHtml += `
             <tr>
               <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
-              <td style="white-space: nowrap;"><button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="Copy ID"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button></td>
+              <td style="white-space: nowrap;">
+                <div style="display: inline-flex; align-items: center; gap: 4px;">
+                  <button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="نسخ رقم الطالب"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button>
+                  <a href="https://crm.51talk.com/admin/main.php" target="_blank" class="btn-crm-link" onclick="copyStudentID('${item.student_id}', null, event)" title="نسخ ID وفتح صفحة الـ CRM مباشرة">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>CRM</span>
+                  </a>
+                </div>
+              </td>
               <td style="white-space: nowrap;"><span style="font-size: 0.74rem; color: #cbd5e1;">${item.rule_type}</span></td>
               <td style="white-space: normal; min-width: 220px;">${renderEligibleReclaimersBadge(item)}</td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
@@ -3389,6 +3521,9 @@ function renderAgentBadge(agentName) {
                   </button>
                   <button type="button" class="btn-dingtalk-mini" onclick="sendDirectDingTalk(${item.student_id}, '${escapeQuotes(item.old_ss)}', 'reclaim')" title="DingTalk">
                     ${t.btn_dingtalk}
+                  </button>
+                  <button type="button" class="btn-whatsapp-mini" onclick="copyWhatsAppPitch(${item.student_id}, '${escapeQuotes(item.old_ss)}', 'reclaim')" title="نسخ رسالة واتساب استرداد جاهزة للعميل">
+                    💬 واتساب
                   </button>
                 </div>
               </td>
@@ -3430,7 +3565,15 @@ function renderAgentBadge(agentName) {
           rowsHtml += `
             <tr>
               <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
-              <td style="white-space: nowrap;"><button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="Copy ID"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button></td>
+              <td style="white-space: nowrap;">
+                <div style="display: inline-flex; align-items: center; gap: 4px;">
+                  <button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="نسخ رقم الطالب"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button>
+                  <a href="https://crm.51talk.com/admin/main.php" target="_blank" class="btn-crm-link" onclick="copyStudentID('${item.student_id}', null, event)" title="نسخ ID وفتح صفحة الـ CRM مباشرة">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>CRM</span>
+                  </a>
+                </div>
+              </td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.rep)}</td>
               <td style="white-space: nowrap;"><span class="small-team-pill" style="padding: 2px 7px; font-size: 0.74rem;">${item.team || 'ME-EGSS' + item.team_clean}</span></td>
               <td style="white-space: nowrap;"><span style="font-size: 0.73rem; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px;">${item.pool || '—'}</span></td>
@@ -3452,6 +3595,9 @@ function renderAgentBadge(agentName) {
                   <button type="button" class="btn-dingtalk-mini" onclick="sendDirectDingTalk(${item.student_id}, '${escapeQuotes(item.rep)}', 'defense')" title="DingTalk">
                     ${t.btn_dingtalk}
                   </button>
+                  <button type="button" class="btn-whatsapp-mini" onclick="copyWhatsAppPitch(${item.student_id}, '${escapeQuotes(item.rep)}', 'defense')" title="نسخ رسالة واتساب دفاع وتثبيت حصص">
+                    💬 واتساب
+                  </button>
                 </div>
               </td>
             </tr>
@@ -3461,7 +3607,15 @@ function renderAgentBadge(agentName) {
             <tr>
               <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
               <td style="white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #f59e0b;">${item.family_id}</td>
-              <td style="white-space: nowrap;"><button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="Copy ID"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button></td>
+              <td style="white-space: nowrap;">
+                <div style="display: inline-flex; align-items: center; gap: 4px;">
+                  <button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="نسخ رقم الطالب"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button>
+                  <a href="https://crm.51talk.com/admin/main.php" target="_blank" class="btn-crm-link" onclick="copyStudentID('${item.student_id}', null, event)" title="نسخ ID وفتح صفحة الـ CRM مباشرة">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>CRM</span>
+                  </a>
+                </div>
+              </td>
               <td style="white-space: normal; min-width: 200px;">${renderEligibleReclaimersBadge(item)}</td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
               <td style="white-space: nowrap;"><span style="font-size: 0.75rem; color: #94a3b8;">${item.current_team || '—'}</span></td>
@@ -3721,6 +3875,124 @@ ${eligibleListStr}
       const text = buildComprehensiveDossierText(sid, repName, tabType);
       navigator.clipboard.writeText(text).then(() => {
         showToast(`📑 تم نسخ الملف الشامل للطالب ${sid} والممثل ${repName} بنجاح!`);
+      });
+    }
+
+
+    // ========================================================
+    // PHASE 1: WHATSAPP SMART PITCH & LEADER COCKPIT
+    // ========================================================
+    function copyWhatsAppPitch(sid, agentName, type) {
+      let msg = '';
+      if (type === 'defense') {
+        msg = `السلام عليكم ورحمة الله وبركاته، أهلاً بحضرتك أ/ ولي أمر الطالب الكريم.
+مع حضرتك مستشارك التعليمي من 51Talk.
+حابب أطمن على مستوى البطل وتجربته في الحصص الأخيرة، ونساعده في تثبيت جدول الحصص الأسبوعي للاستفادة الكاملة من الرصيد المتبقي.
+هل يناسب حضرتك نحدد موعد اليوم لتنسيق الحصص أو الإجابة عن أي استفسار؟`;
+      } else if (type === 'reclaim') {
+        msg = `السلام عليكم ورحمة الله وبركاته، أهلاً بحضرتك.
+مع حضرتك مستشارك التعليمي من 51Talk (حساب الطالب: ${sid}).
+متاح حالياً خطة تطوير مخصصة ومواعيد مميزة مع أفضل المعلمين، بالإضافة إلى عروض تجديد حصرية ومناسبة لجدول البطل.
+يسعدني جداً التنسيق مع حضرتك وتحديد الموعد الأنسب للبدء. هل وقت حضرتك يسمح بمحادثة سريعة؟`;
+      } else if (type === 'family') {
+        msg = `السلام عليكم ورحمة الله وبركاته، أهلاً بحضرتك.
+مع حضرتك مستشارك التعليمي من 51Talk.
+بخصوص اشتراكات الأبناء، يسعدنا إبلاغكم بتوفر عرض "باقة العائلة" الحصري الموحد للأخوة، والذي يمنحكم خصماً إضافياً ومزايا خاصة عند تجديد أو تنظيم الحصص معاً.
+يسعدني مشاركة تفاصيل العرض مع حضرتك لتوفير أكبر قدر من الخصم. هل يناسبك نراجع التفاصيل اليوم؟`;
+      }
+      
+      navigator.clipboard.writeText(msg).then(() => {
+        showToast(`💬 تم نسخ رسالة الواتساب للعميل (${sid}) بنجاح! جاهزة للإرسال.`);
+      }).catch(() => {
+        showToast(`⚠️ تعذر نسخ الرسالة تلقائياً.`);
+      });
+    }
+
+    function renderLeaderStandupCockpit() {
+      const container = document.getElementById('leaderStandupCockpitContainer');
+      if (!container) return;
+
+      if (!currentUserRole || (currentUserRole !== 'LEADER' && currentUserRole !== 'ADMIN')) {
+        container.innerHTML = '';
+        return;
+      }
+
+      const activeUser = AUTH_USERS[currentAuthUser] || {};
+      const teamLabel = activeUser.team ? (activeUser.team.startsWith('ME-') ? activeUser.team : 'ME-' + activeUser.team) : (currentUserRole === 'ADMIN' ? 'All Teams (Big Team 01)' : 'Team');
+      const leaderName = activeUser.name || (currentUserRole === 'ADMIN' ? "Hussein El A'sar" : currentAuthUser);
+
+      // Compute stats for current visible/filtered defense list
+      const defenseTotal = (defenseList || []).length;
+      const criticalCount = (defenseList || []).filter(x => (x.tier_en || '').toLowerCase().includes('critical') || (x.hours_left !== undefined && x.hours_left <= 48)).length;
+      const reclaimTotal = (masterList || []).length;
+      const familyTotal = (familyList || []).length;
+
+      container.innerHTML = `
+        <div class="leader-standup-card">
+          <div>
+            <div class="leader-standup-title">
+              <span>🌅</span>
+              <span>لوحة الاجتماع الصباحي لقادة الفرق — <strong>${teamLabel}</strong></span>
+              <span style="font-size: 0.76rem; background: rgba(99, 102, 241, 0.2); color: #818cf8; padding: 2px 8px; border-radius: 6px;">🎖️ ${leaderName}</span>
+            </div>
+            <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 3px;">
+              توجيهات العمل اليومية الميدانية لفريق العمل لحماية الطلاب واسترداد الفرص المتاحة
+            </div>
+          </div>
+
+          <div class="leader-standup-metrics">
+            <div class="leader-metric-pill" style="border-color: rgba(239, 68, 68, 0.4); background: rgba(239, 68, 68, 0.1);">
+              <span>🚨 حرج (&lt;48h):</span>
+              <strong style="color: #f87171;">${criticalCount}</strong>
+            </div>
+            <div class="leader-metric-pill" style="border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.1);">
+              <span>🛡️ إجمالي الدفاع:</span>
+              <strong style="color: #38bdf8;">${defenseTotal}</strong>
+            </div>
+            <div class="leader-metric-pill" style="border-color: rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.1);">
+              <span>⚡ فرص استرداد:</span>
+              <strong style="color: #fbbf24;">${reclaimTotal}</strong>
+            </div>
+            <div class="leader-metric-pill" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1);">
+              <span>👨‍👩‍👦 عائلات:</span>
+              <strong style="color: #34d399;">${familyTotal}</strong>
+            </div>
+          </div>
+
+          <div>
+            <button type="button" class="btn-briefing-copy" onclick="copyLeaderStandupBriefing('${teamLabel}', '${leaderName}', ${criticalCount}, ${defenseTotal}, ${reclaimTotal}, ${familyTotal})">
+              <span>📋</span>
+              <span>نسخ بريفينج اجتماع الصباح للواتساب ودينغ توك</span>
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function copyLeaderStandupBriefing(teamLabel, leaderName, critical, defense, reclaim, family) {
+      const now = new Date();
+      const dateStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+      const briefing = `🌅 صباح الخير فريق [${teamLabel}] — ملخص الأولويات اليومية:
+📅 تاريخ اليوم: ${dateStr}
+🎖️ قائد الفريق: ${leaderName}
+
+📊 الموقف الميداني لقواعد التوزيع:
+🚨 تنبيه حرج (مهدد بالسحب خلال أقل من 48 ساعة): ${critical} طالب
+🛡️ إجمالي قاعدة طلاب الدفاع النشط: ${defense} طالب
+⚡ فرص استرداد هجومي متاحة الآن: ${reclaim} طالب
+👨‍👩‍👦 عائلات مجزأة تحتاج لم شمل: ${family} عائلة
+
+🎯 الأولويات التنفيذية اليوم:
+1. إعطاء الأولوية القصوى للاتصال بالطلاب في القائمة الحرجة (<48h) وحمايتهم من السحب عبر تثبيت الحصص.
+2. تفعيل التواصل مع العائلات المشتركة لتقديم باقات التجديد الجماعية بخصم إضافي.
+3. استرداد الطلاب المؤهلين من القوائم الخاملة فوراً.
+
+💪 بالتوفيق للجميع وشدوا الهمة لتحقيق تارجت اليوم! 🚀`;
+
+      navigator.clipboard.writeText(briefing).then(() => {
+        showToast('📋 تم نسخ بريفينج اجتماع الصباح بنجاح! جاهز للصق في مجموعة الفريق على الواتساب أو دينغ توك.');
+      }).catch(() => {
+        showToast('⚠️ تعذر نسخ البريفينج تلقائياً.');
       });
     }
 
