@@ -1,91 +1,410 @@
 ﻿# 51TALK BIG TEAM 01 - SECTOR ACTIONABLE STUDENT LEADS
-# Sector: BIG_TEAM_01 (Saber Hussien) | Reps: 19 | Generated: 2026-11-22 14:04
+# Sector: BIG_TEAM_01 (Saber Hussien) | Reps: 19 | Generated: 2026-11-22 15:38
 
-=== 1. SOP PENDING TASKS (83) ===
+=== 1. SOP PENDING TASKS (402) ===
 Representative,Student_ID,Task_Name,Expiration_Time
-"EGSS-ashraqatal",59899606,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ashraqatal",59968100,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ashraqatal",60563749,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ashraqatal",61236165,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ashraqatal",63504490,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ashraqatal",63505775,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ashraqatal",64505919,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
-"EGSS-juliamonir01",61410131,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-juliamonir01",61875215,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-juliamonir01",63138030,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-juliamonir01",63213189,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-nohayoussry",58335632,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-nohayoussry",61093124,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-nohayoussry",61569347,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-nohayoussry",61728309,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-nohayoussry",62073923,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-nohayoussry",62984698,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",58343551,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",58663550,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",58692487,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",58825988,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",59011206,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",60144641,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",60345933,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",61438126,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",61523095,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",61836473,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",62630222,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",62909222,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoud04",63578890,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-samira01",58777029,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-samira01",62569844,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-samira01",62932732,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-samira01",63135227,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-samira01",63481413,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-samira01",64664644,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-abdelrahmannasef",60908447,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-abdelrahmannasef",62530242,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-abdelrahmannasef",63235992,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-abdelrahmannasef",63679507,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-abdelrahmannasef",63732129,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ehabzaky01",59884401,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ehabzaky01",63867656,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ehabzaky01",63968028,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ehabzaky01",63988100,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ibrahimismaiel",58525638,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ibrahimismaiel",59031891,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ibrahimismaiel",59678817,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ibrahimismaiel",61621009,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ibrahimismaiel",62874196,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ibrahimismaiel",62909719,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-khaledgonam",59171545,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-khaledgonam",60714252,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-khaledgonam",62499032,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-khaledgonam",62556702,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-khaledgonam",64634117,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-omarmoneb",60860252,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-omarmoneb",63016704,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-omarmoneb",63050765,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-titooooo",58564405,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-titooooo",58777035,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-titooooo",59027937,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-titooooo",59453856,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-titooooo",60140878,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-titooooo",60202162,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-titooooo",61259499,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-titooooo",64345799,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-titooooo",64772222,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",60144049,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",60620322,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",60797757,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",60862386,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",61195255,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",63064796,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",63086573,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mohamedha",59308147,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mohamedha",60619387,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mohamedha",60631009,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mohamedha",60962435,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mohamedha",61059859,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mohamedha",63670024,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ahmedshoukry",64102114,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-mahmoudkhamis",63803302,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ashraqatal",59912341,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ashraqatal",62533369,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ashraqatal",63282475,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ashraqatal",63692995,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ashraqatal",64125852,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ashraqatal",64189323,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ashraqatal",64327346,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ashraqatal",58926383,"English Club Booking",20261123 18:55:00
+"EGSS-ashraqatal",61285714,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261123 18:55:00
+"EGSS-ashraqatal",61321552,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ashraqatal",62589333,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ashraqatal",63143117,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ashraqatal",63143117,"English Club Booking",20261123 18:55:00
+"EGSS-ashraqatal",63857612,"English Club Booking",20261123 18:55:00
+"EGSS-ashraqatal",63864629,"English Club Booking",20261123 18:55:00
+"EGSS-ashraqatal",64179547,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ashraqatal",64385379,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ashraqatal",64396879,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ashraqatal",64477059,"Round 1  Awareness building (First call)",20261123 18:55:00
+"EGSS-ashraqatal",64492665,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ashraqatal",57946830,"English Club Booking",20261124 18:55:00
+"EGSS-ashraqatal",61598062,"English Club Booking",20261124 18:55:00
+"EGSS-ashraqatal",61868540,"English Club Booking",20261124 18:55:00
+"EGSS-ashraqatal",63555848,"Round 6 Premium Service(Duration Renewal Insidepool)",20261124 18:55:00
+"EGSS-ashraqatal",63555848,"English Club Booking",20261124 18:55:00
+"EGSS-ashraqatal",63556961,"Round 6 Premium Service(Duration Renewal Insidepool)",20261124 18:55:00
+"EGSS-ashraqatal",64150364,"English Club Booking",20261124 18:55:00
+"EGSS-ashraqatal",61804073,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ashraqatal",62034784,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ashraqatal",62404162,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ashraqatal",63955276,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ashraqatal",64131090,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ashraqatal",64587095,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ashraqatal",64737278,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-juliamonir01",58175999,"English Club Booking",20261123 18:55:00
+"EGSS-juliamonir01",58846157,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-juliamonir01",59535416,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-juliamonir01",59905413,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-juliamonir01",61704928,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-juliamonir01",62939504,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-juliamonir01",63701689,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-juliamonir01",64351095,"English Club Booking",20261123 18:55:00
+"EGSS-juliamonir01",64641700,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-juliamonir01",63572239,"English Club Booking",20261124 18:55:00
+"EGSS-juliamonir01",64135636,"English Club Booking",20261124 18:55:00
+"EGSS-juliamonir01",64703497,"English Club Booking",20261124 18:55:00
+"EGSS-juliamonir01",64704327,"English Club Booking",20261124 18:55:00
+"EGSS-juliamonir01",58709528,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-juliamonir01",63465315,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-juliamonir01",63567528,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-juliamonir01",64383966,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-nohayoussry",57728168,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-nohayoussry",58514632,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-nohayoussry",58636063,"English Club Booking",20261122 18:55:00
+"EGSS-nohayoussry",58846048,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-nohayoussry",58905299,"English Club Booking",20261122 18:55:00
+"EGSS-nohayoussry",59033582,"English Club Booking",20261122 18:55:00
+"EGSS-nohayoussry",63498717,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-nohayoussry",63664211,"Round 6 Premium Service(Outside Renewal Pool)",20261122 18:55:00
+"EGSS-nohayoussry",63679348,"Round 6 Premium Service(Outside Renewal Pool)",20261122 18:55:00
+"EGSS-nohayoussry",63736712,"English Club Booking",20261122 18:55:00
+"EGSS-nohayoussry",59089760,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-nohayoussry",59089760,"English Club Booking",20261123 18:55:00
+"EGSS-nohayoussry",59792544,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-nohayoussry",60568135,"English Club Booking",20261123 18:55:00
+"EGSS-nohayoussry",60639540,"Round 2  Trust Enhancement (First Class Follow-up)",20261123 18:55:00
+"EGSS-nohayoussry",60901866,"English Club Booking",20261123 18:55:00
+"EGSS-nohayoussry",61658176,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-nohayoussry",63129239,"English Club Booking",20261123 18:55:00
+"EGSS-nohayoussry",63734720,"Round 6 Premium Service(Outside Renewal Pool)",20261123 18:55:00
+"EGSS-nohayoussry",63923125,"Round 6 Premium Service(Outside Renewal Pool)",20261123 18:55:00
+"EGSS-nohayoussry",64551928,"English Club Booking",20261123 18:55:00
+"EGSS-nohayoussry",64561518,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-nohayoussry",64751014,"Round 3 Habit Cultivation (1st Unit Assessment)",20261123 18:55:00
+"EGSS-nohayoussry",61048101,"English Club Booking",20261124 18:55:00
+"EGSS-nohayoussry",61322654,"English Club Booking",20261124 18:55:00
+"EGSS-nohayoussry",63824479,"English Club Booking",20261124 18:55:00
+"EGSS-nohayoussry",64367825,"English Club Booking",20261124 18:55:00
+"EGSS-nohayoussry",64571326,"English Club Booking",20261124 18:55:00
+"EGSS-nohayoussry",64955914,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-nohayoussry",58516213,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-nohayoussry",63217435,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",57975891,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-mahmoud04",60398235,"English Club Booking",20261122 18:55:00
+"EGSS-mahmoud04",60613808,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-mahmoud04",61197401,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-mahmoud04",62713629,"Round 6 Premium Service(Duration Renewal Insidepool)",20261122 18:55:00
+"EGSS-mahmoud04",63163593,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261122 18:55:00
+"EGSS-mahmoud04",63489224,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-mahmoud04",63803791,"English Club Booking",20261122 18:55:00
+"EGSS-mahmoud04",64761095,"English Club Booking",20261122 18:55:00
+"EGSS-mahmoud04",64764130,"English Club Booking",20261122 18:55:00
+"EGSS-mahmoud04",64771768,"English Club Booking",20261122 18:55:00
+"EGSS-mahmoud04",64771770,"English Club Booking",20261122 18:55:00
+"EGSS-mahmoud04",64771841,"English Club Booking",20261122 18:55:00
+"EGSS-mahmoud04",60151685,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mahmoud04",62401080,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mahmoud04",63375771,"Round 6 Premium Service(Duration Renewal Insidepool)",20261123 18:55:00
+"EGSS-mahmoud04",63447965,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mahmoud04",63646074,"English Club Booking",20261123 18:55:00
+"EGSS-mahmoud04",64039636,"Round 6 Premium Service(Outside Renewal Pool)",20261123 18:55:00
+"EGSS-mahmoud04",58345767,"English Club Booking",20261124 18:55:00
+"EGSS-mahmoud04",63088488,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-mahmoud04",63409036,"Round 6 Premium Service(Duration Renewal Insidepool)",20261124 18:55:00
+"EGSS-mahmoud04",63451623,"Round 6 Premium Service(Duration Renewal Insidepool)",20261124 18:55:00
+"EGSS-mahmoud04",63879127,"English Club Booking",20261124 18:55:00
+"EGSS-mahmoud04",63904211,"English Club Booking",20261124 18:55:00
+"EGSS-mahmoud04",64592041,"English Club Booking",20261124 18:55:00
+"EGSS-mahmoud04",64849358,"Round 3 Habit Cultivation (1st Unit Assessment)",20261124 18:55:00
+"EGSS-mahmoud04",57975891,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",58872614,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",59450779,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",59615149,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",59899133,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",60613808,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",61197401,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",62091413,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",62179770,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",62350122,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",62409093,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",62955931,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",63489224,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",63574349,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoud04",63927579,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-samira01",63569328,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-samira01",63766927,"English Club Booking",20261124 18:55:00
+"EGSS-samira01",64723879,"English Club Booking",20261124 18:55:00
+"EGSS-samira01",63156753,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",58709356,"English Club Booking",20261123 18:55:00
+"EGSS-abdelrahmannasef",63562022,"Round 6 Premium Service(Duration Renewal Insidepool)",20261123 18:55:00
+"EGSS-abdelrahmannasef",63866511,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-abdelrahmannasef",64426805,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-abdelrahmannasef",64597056,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261123 18:55:00
+"EGSS-abdelrahmannasef",63617509,"English Club Booking",20261124 18:55:00
+"EGSS-abdelrahmannasef",64182044,"English Club Booking",20261124 18:55:00
+"EGSS-abdelrahmannasef",64805234,"English Club Booking",20261124 18:55:00
+"EGSS-abdelrahmannasef",64967067,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-abdelrahmannasef",60841323,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",61012273,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",61415682,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",62186520,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",62271612,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",62275678,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",62453515,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",62478921,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",62489530,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",62499838,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",63466318,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",63562022,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrahmannasef",63692985,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ehabzaky01",58569691,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ehabzaky01",59726126,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ehabzaky01",61978094,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ehabzaky01",62825627,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-ehabzaky01",63425527,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ehabzaky01",63479524,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-ehabzaky01",63538213,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-ehabzaky01",63652858,"Round 6 Premium Service(Outside Renewal Pool)",20261123 18:55:00
+"EGSS-ehabzaky01",64328120,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ehabzaky01",64476767,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261123 18:55:00
+"EGSS-ehabzaky01",64483707,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ehabzaky01",63425527,"English Club Booking",20261124 18:55:00
+"EGSS-ehabzaky01",63835952,"English Club Booking",20261124 18:55:00
+"EGSS-ehabzaky01",61210487,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ehabzaky01",63207123,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",58525638,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ibrahimismaiel",58748317,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ibrahimismaiel",59147310,"Round 2  Trust Enhancement (First Class Follow-up)",20261122 18:55:00
+"EGSS-ibrahimismaiel",61476731,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ibrahimismaiel",62369437,"English Club Booking",20261122 18:55:00
+"EGSS-ibrahimismaiel",62668240,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261122 18:55:00
+"EGSS-ibrahimismaiel",62774064,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ibrahimismaiel",62971892,"English Club Booking",20261122 18:55:00
+"EGSS-ibrahimismaiel",63212081,"English Club Booking",20261122 18:55:00
+"EGSS-ibrahimismaiel",63542523,"Round 6 Premium Service(Duration Renewal Insidepool)",20261122 18:55:00
+"EGSS-ibrahimismaiel",63601904,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ibrahimismaiel",63756157,"English Club Booking",20261122 18:55:00
+"EGSS-ibrahimismaiel",63987423,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ibrahimismaiel",64111610,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-ibrahimismaiel",64803797,"English Club Booking",20261122 18:55:00
+"EGSS-ibrahimismaiel",64805202,"English Club Booking",20261122 18:55:00
+"EGSS-ibrahimismaiel",64907279,"Round 2  Trust Enhancement (First Class Follow-up)",20261122 18:55:00
+"EGSS-ibrahimismaiel",58972757,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ibrahimismaiel",62690171,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-ibrahimismaiel",62712709,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-ibrahimismaiel",63580262,"Round 6 Premium Service(Duration Renewal Insidepool)",20261123 18:55:00
+"EGSS-ibrahimismaiel",63615767,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-ibrahimismaiel",64313711,"English Club Booking",20261123 18:55:00
+"EGSS-ibrahimismaiel",64734962,"Round 1  Awareness building (First call)",20261123 18:55:00
+"EGSS-ibrahimismaiel",64734962,"Round 2  Trust Enhancement (First Class Follow-up)",20261123 18:55:00
+"EGSS-ibrahimismaiel",62811958,"English Club Booking",20261124 18:55:00
+"EGSS-ibrahimismaiel",62927488,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261124 18:55:00
+"EGSS-ibrahimismaiel",62971892,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261124 18:55:00
+"EGSS-ibrahimismaiel",64034894,"English Club Booking",20261124 18:55:00
+"EGSS-ibrahimismaiel",64653878,"English Club Booking",20261124 18:55:00
+"EGSS-ibrahimismaiel",59138108,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",61935790,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",61940772,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",61943086,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",61944052,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",61944104,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",62065468,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",62167166,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",62394751,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",62400700,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",62455149,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",62514355,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",62705349,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",63542523,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",63580262,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",64166734,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",64436131,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ibrahimismaiel",64788146,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-khaledgonam",61147183,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-khaledgonam",61241416,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-khaledgonam",61942587,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-khaledgonam",59442986,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-khaledgonam",62472202,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-khaledgonam",63470055,"Round 6 Premium Service(Outside Renewal Pool)",20261123 18:55:00
+"EGSS-khaledgonam",64444839,"English Club Booking",20261123 18:55:00
+"EGSS-khaledgonam",59442652,"English Club Booking",20261124 18:55:00
+"EGSS-khaledgonam",63427860,"English Club Booking",20261124 18:55:00
+"EGSS-khaledgonam",63909984,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261124 18:55:00
+"EGSS-khaledgonam",64113784,"Round 6 Premium Service(Outside Renewal Pool)",20261124 18:55:00
+"EGSS-khaledgonam",64724621,"English Club Booking",20261124 18:55:00
+"EGSS-khaledgonam",60607450,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-khaledgonam",60856169,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-khaledgonam",61851052,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-khaledgonam",62423258,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-khaledgonam",62482269,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-khaledgonam",62487734,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-khaledgonam",63257138,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-omarmoneb",62213638,"Round 6 Premium Service(Outside Renewal Pool)",20261122 18:55:00
+"EGSS-omarmoneb",62794607,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-omarmoneb",63640942,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261122 18:55:00
+"EGSS-omarmoneb",64636811,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261122 18:55:00
+"EGSS-omarmoneb",62202503,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-omarmoneb",63546067,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-omarmoneb",63603792,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-omarmoneb",58750948,"English Club Booking",20261124 18:55:00
+"EGSS-omarmoneb",60792841,"English Club Booking",20261124 18:55:00
+"EGSS-omarmoneb",60824154,"English Club Booking",20261124 18:55:00
+"EGSS-omarmoneb",61115605,"English Club Booking",20261124 18:55:00
+"EGSS-omarmoneb",62777795,"Round 6 Premium Service(Outside Renewal Pool)",20261124 18:55:00
+"EGSS-omarmoneb",63400008,"English Club Booking",20261124 18:55:00
+"EGSS-omarmoneb",63583806,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261124 18:55:00
+"EGSS-omarmoneb",63975949,"English Club Booking",20261124 18:55:00
+"EGSS-omarmoneb",64975905,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-omarmoneb",64976297,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-alihesham01",64236834,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-alihesham01",64302346,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-alihesham01",64768700,"English Club Booking",20261123 18:55:00
+"EGSS-alihesham01",59423405,"English Club Booking",20261124 18:55:00
+"EGSS-alihesham01",59427157,"English Club Booking",20261124 18:55:00
+"EGSS-alihesham01",61065383,"English Club Booking",20261124 18:55:00
+"EGSS-alihesham01",63302060,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261124 18:55:00
+"EGSS-alihesham01",64770782,"English Club Booking",20261124 18:55:00
+"EGSS-alihesham01",64805180,"English Club Booking",20261124 18:55:00
+"EGSS-alihesham01",64839359,"English Club Booking",20261124 18:55:00
+"EGSS-alihesham01",60440096,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-alihesham01",61109800,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-abdelrhmanshehata",63137876,"Round 6 Premium Service(Outside Renewal Pool)",20261122 18:55:00
+"EGSS-abdelrhmanshehata",64708507,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261122 18:55:00
+"EGSS-abdelrhmanshehata",63196156,"Round 6 Premium Service(Outside Renewal Pool)",20261123 18:55:00
+"EGSS-abdelrhmanshehata",64957739,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-abdelrhmanshehata",64973841,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-titooooo",60202162,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-titooooo",62898694,"English Club Booking",20261122 18:55:00
+"EGSS-titooooo",63465449,"English Club Booking",20261122 18:55:00
+"EGSS-titooooo",63593927,"Round 6 Premium Service(Duration Renewal Insidepool)",20261122 18:55:00
+"EGSS-titooooo",63603973,"English Club Booking",20261122 18:55:00
+"EGSS-titooooo",64160373,"English Club Booking",20261122 18:55:00
+"EGSS-titooooo",64189608,"English Club Booking",20261122 18:55:00
+"EGSS-titooooo",64383851,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-titooooo",64673814,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-titooooo",64733918,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-titooooo",64894921,"Round 3 Habit Cultivation (1st Unit Assessment)",20261122 18:55:00
+"EGSS-titooooo",58163223,"English Club Booking",20261123 18:55:00
+"EGSS-titooooo",60445757,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-titooooo",61201980,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-titooooo",62237827,"English Club Booking",20261123 18:55:00
+"EGSS-titooooo",62596512,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-titooooo",63037456,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-titooooo",63463770,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-titooooo",63604049,"English Club Booking",20261123 18:55:00
+"EGSS-titooooo",63955741,"English Club Booking",20261123 18:55:00
+"EGSS-titooooo",64587731,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-titooooo",64802522,"English Club Booking",20261123 18:55:00
+"EGSS-titooooo",59338237,"English Club Booking",20261124 18:55:00
+"EGSS-titooooo",61587301,"English Club Booking",20261124 18:55:00
+"EGSS-titooooo",63232981,"English Club Booking",20261124 18:55:00
+"EGSS-titooooo",64383851,"English Club Booking",20261124 18:55:00
+"EGSS-titooooo",64395103,"English Club Booking",20261124 18:55:00
+"EGSS-titooooo",64823139,"English Club Booking",20261124 18:55:00
+"EGSS-titooooo",64957444,"Round 2  Trust Enhancement (First Class Follow-up)",20261124 18:55:00
+"EGSS-titooooo",60404880,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-titooooo",61907162,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-titooooo",64255483,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-titooooo",64496376,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-titooooo",64817614,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-marwaahmed",59166212,"English Club Booking",20261122 18:55:00
+"EGSS-marwaahmed",60988810,"English Club Booking",20261122 18:55:00
+"EGSS-marwaahmed",63267129,"English Club Booking",20261122 18:55:00
+"EGSS-marwaahmed",63583512,"English Club Booking",20261122 18:55:00
+"EGSS-marwaahmed",63757854,"English Club Booking",20261122 18:55:00
+"EGSS-marwaahmed",64492484,"English Club Booking",20261122 18:55:00
+"EGSS-marwaahmed",64754517,"English Club Booking",20261122 18:55:00
+"EGSS-marwaahmed",63509584,"English Club Booking",20261123 18:55:00
+"EGSS-marwaahmed",60540612,"English Club Booking",20261124 18:55:00
+"EGSS-marwaahmed",63522546,"English Club Booking",20261124 18:55:00
+"EGSS-marwaahmed",64833160,"English Club Booking",20261124 18:55:00
+"EGSS-marwaahmed",63561259,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-marwaahmed",64436458,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-marwaahmed",64685222,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-amrsafwat",60219237,"English Club Booking",20261122 18:55:00
+"EGSS-amrsafwat",62366953,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-amrsafwat",63079269,"Round 6 Premium Service(Outside Renewal Pool)",20261122 18:55:00
+"EGSS-amrsafwat",63448148,"Round 6 Premium Service(Duration Renewal Insidepool)",20261122 18:55:00
+"EGSS-amrsafwat",63855260,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-amrsafwat",64946938,"Round 1  Awareness building (First call)",20261122 18:55:00
+"EGSS-amrsafwat",58370337,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",58695668,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-amrsafwat",59029925,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",59420389,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-amrsafwat",61052441,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-amrsafwat",61857730,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-amrsafwat",62368678,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",62804474,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",63482115,"Round 6 Premium Service(Duration Renewal Insidepool)",20261123 18:55:00
+"EGSS-amrsafwat",63482115,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",63856096,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",63862909,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-amrsafwat",63997822,"Round 6 Premium Service(Outside Renewal Pool)",20261123 18:55:00
+"EGSS-amrsafwat",64259353,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",64259356,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",64259411,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",64553520,"English Club Booking",20261123 18:55:00
+"EGSS-amrsafwat",64946938,"Round 2  Trust Enhancement (First Class Follow-up)",20261123 18:55:00
+"EGSS-amrsafwat",62310826,"English Club Booking",20261124 18:55:00
+"EGSS-amrsafwat",63490119,"Round 6 Premium Service(Duration Renewal Insidepool)",20261124 18:55:00
+"EGSS-amrsafwat",63496014,"Round 6 Premium Service(Duration Renewal Insidepool)",20261124 18:55:00
+"EGSS-amrsafwat",63496014,"English Club Booking",20261124 18:55:00
+"EGSS-amrsafwat",63934709,"English Club Booking",20261124 18:55:00
+"EGSS-amrsafwat",64972864,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-amrsafwat",64973430,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-amrsafwat",58060911,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-amrsafwat",60429841,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-amrsafwat",63109854,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-amrsafwat",63112301,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-amrsafwat",63453453,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-amrsafwat",63656494,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-amrsafwat",64006501,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-amrsafwat",64111223,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mohamedha",59822126,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-mohamedha",61873801,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-mohamedha",62987832,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-mohamedha",63518521,"SS:Service warning - absence",20261122 18:55:00
+"EGSS-mohamedha",63582241,"English Club Booking",20261122 18:55:00
+"EGSS-mohamedha",64112684,"Round 3 Habit Cultivation (1st Unit Assessment)",20261122 18:55:00
+"EGSS-mohamedha",64804723,"English Club Booking",20261122 18:55:00
+"EGSS-mohamedha",58481383,"English Club Booking",20261123 18:55:00
+"EGSS-mohamedha",58678501,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mohamedha",58966365,"English Club Booking",20261123 18:55:00
+"EGSS-mohamedha",60687596,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mohamedha",62970379,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-mohamedha",63045669,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-mohamedha",63887212,"English Club Booking",20261123 18:55:00
+"EGSS-mohamedha",63028654,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261124 18:55:00
+"EGSS-mohamedha",63575382,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261124 18:55:00
+"EGSS-mohamedha",63590561,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261124 18:55:00
+"EGSS-mohamedha",64112684,"English Club Booking",20261124 18:55:00
+"EGSS-mohamedha",64674192,"Round 1  Awareness building (First call)",20261124 18:55:00
+"EGSS-mohamedha",64788891,"Round 3 Habit Cultivation (1st Unit Assessment)",20261124 18:55:00
+"EGSS-mohamedha",58573063,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mohamedha",61017286,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mohamedha",61521781,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mohamedha",61972795,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mohamedha",63446516,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mohamedha",63818833,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mohamedha",64350417,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ahmedshoukry",58362628,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ahmedshoukry",61419670,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ahmedshoukry",63032164,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ahmedshoukry",63453483,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-ahmedshoukry",63571611,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoudkhamis",61976092,"Round 6 Premium Service(Outside Renewal Pool)",20261122 18:55:00
+"EGSS-mahmoudkhamis",60652657,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mahmoudkhamis",61952195,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mahmoudkhamis",62682787,"Round 6 Premium Service(Expiring Renewal Insidepool )",20261123 18:55:00
+"EGSS-mahmoudkhamis",62887484,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mahmoudkhamis",63556897,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mahmoudkhamis",64759964,"English Club Booking",20261123 18:55:00
+"EGSS-mahmoudkhamis",64763240,"English Club Booking",20261123 18:55:00
+"EGSS-mahmoudkhamis",64770917,"SS:Service warning - absence",20261123 18:55:00
+"EGSS-mahmoudkhamis",63614200,"English Club Booking",20261124 18:55:00
+"EGSS-mahmoudkhamis",63763600,"English Club Booking",20261124 18:55:00
+"EGSS-mahmoudkhamis",64034449,"English Club Booking",20261124 18:55:00
+"EGSS-mahmoudkhamis",64050014,"English Club Booking",20261124 18:55:00
+"EGSS-mahmoudkhamis",58969957,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoudkhamis",61529193,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoudkhamis",63649872,"SS：Service warning - class interruption",20261130 23:59:59
+"EGSS-mahmoudkhamis",63803060,"SS：Service warning - class interruption",20261130 23:59:59
 
 === 2. UNFIXED TEACHER BINDING LEADS (0) ===
 Representative,Student_ID,Pool_Cohort,Classes_Attended,Call_Priority
