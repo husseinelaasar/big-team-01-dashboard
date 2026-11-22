@@ -29,7 +29,7 @@
         individuals: "Individual Reps (18)",
         consumption: "Class Consumption (82%)",
         upgrade: "Early Upgrade Hub (20%)",
-        leads: "Uncovered Leads (5,196)",
+        leads: "Uncovered Leads (2,009)",
         englishclub: "English Club (45%)",
         sop: "SOP Compliance",
         operations: "Operations Matrix"
@@ -130,7 +130,7 @@
         individuals: "المستشارين الأفراد (18)",
         consumption: "استهلاك الحصص (82%)",
         upgrade: "مركز التجديد المبكر (20%)",
-        leads: "العملاء غير المغطين (5,196)",
+        leads: "العملاء غير المغطين (2,009)",
         englishclub: "النادي الإنجليزي (45%)",
         sop: "الامتثال لـ SOP",
         operations: "مصفوفة العمليات"
@@ -231,7 +231,7 @@
         individuals: "销售个人龙虎榜 (18人)",
         consumption: "课时消耗达标率 (82%)",
         upgrade: "提续加速中心 (20%)",
-        leads: "未覆盖学员名单 (5,196人)",
+        leads: "未覆盖学员名单 (2,009人)",
         englishclub: "英语俱乐部 (45%)",
         sop: "SOP合规追踪",
         operations: "综合运营矩阵"
