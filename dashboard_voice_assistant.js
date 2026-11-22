@@ -192,11 +192,13 @@
     if (typeof window !== 'undefined' && window.__model && window.__model.summary && typeof window.__model.summary.daysPassed === 'number' && window.__model.summary.daysPassed > 0) {
       return window.__model.summary.daysPassed;
     }
-    if (typeof document !== 'undefined') {
-      const b = document.body ? document.body.innerText : '';
-      const m = b.match(/Day\s*(\d{1,2})/i);
-      if (m && parseInt(m[1], 10) > 0 && parseInt(m[1], 10) <= 31) {
-        return parseInt(m[1], 10);
+    if (typeof document !== 'undefined' && document.body) {
+      const b = (typeof document.body.innerText === 'string') ? document.body.innerText : '';
+      if (b) {
+        const m = b.match(/Day\s*(\d{1,2})/i);
+        if (m && parseInt(m[1], 10) > 0 && parseInt(m[1], 10) <= 31) {
+          return parseInt(m[1], 10);
+        }
       }
     }
     const today = new Date().getDate();
@@ -436,18 +438,18 @@
     { code: 'EGSS30', label: 'ME-EGSS30', tlNameEn: 'Hussein El Aasar', tlNameAr: 'حسين الأعصر', aliases: ['egss30', 'team 30', 'pod 30', 'hussein team', 'aasar team', 'فريق 30', 'فريق حسين', 'فريق الأعصر', 'فريق الاعصر', '30组', '三十组'] }
   ];
 
-  // 6. ROBUST LIVE BASELINE MODEL (100% Mirror of Official Lens CRM Sheet)
+  // 6. ROBUST LIVE BASELINE MODEL (100% Mirror of Official Lens CRM Sheet for Big Team 01)
   const BASELINE_DATA = {
     summary: {
-      totalCash: 73566,
-      totalTarget: 173541,
-      achievement: 42.4,
-      totalGap: 99975,
-      dailyNeeded: 7141,
-      totalContracts: 77,
+      totalCash: 98572,
+      totalTarget: 173538,
+      achievement: 56.8,
+      totalGap: 74966,
+      dailyNeeded: 9371,
+      totalContracts: 101,
       totalBase: 438,
-      totalRenewals: 15,
-      renewalRate: 3.4
+      totalRenewals: 20,
+      renewalRate: 4.6
     },
     teams: [
       { code: 'EGSS01', name: 'ME-EGSS01', lead: 'Ashraqat Al', cash: 12537, target: 38456, gap: 25919, achievement: 32.6, orders: 13, avgDeal: 964, reps: ['Julia Monir', 'Noha Youssry', 'Mahmoud Tito', 'Ashraqat Al'] },
@@ -518,8 +520,16 @@
   };
 
   function getModel() {
-    if (typeof window !== 'undefined' && window.__model && window.__model.summary && window.__model.individuals && window.__model.individuals.length > 0) {
-      return window.__model;
+    if (typeof window !== 'undefined') {
+      if (window.__model && window.__model.summary) {
+        return window.__model;
+      }
+      if (window.BIG_TEAM_MODEL && window.BIG_TEAM_MODEL.summary) {
+        return window.BIG_TEAM_MODEL;
+      }
+      if (window.DATA_MODEL && window.DATA_MODEL.summary) {
+        return window.DATA_MODEL;
+      }
     }
     return BASELINE_DATA;
   }
@@ -1589,22 +1599,23 @@
     // =========================================================================
     // [INTENT 18]: INTELLIGENT EXECUTIVE FALLBACK WITH SUGGESTIONS
     // =========================================================================
+    const cashGap = (s.totalGap !== undefined && s.totalGap > 0) ? s.totalGap : Math.max(0, (s.totalTarget || 173538) - (s.totalCash || 0));
     if (promptLang === 'ar') {
       return {
-        text: `بص يا باشا، رجالة Big Team 01 مجمعين لحد النهاردة ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) من أصل ${s.totalContracts} ديل مقفول. وفاضلنا كاش ${formatMoney(s.totalGap, 'ar')} ونقفل الـ 100%.\n💡 دي شوية حاجات سريعة تقدر تسألني عنها بالبلدي:\n1. "أرقام إيهاب" أو "كاش جوليا" أو "ديلات تيتو"\n2. "بنشمارك بكرة كام وعايزين نلم كام؟"\n3. "مين واقع ومين التوب في التيم؟"\n4. "مين مريح في البيع وبقاله كتير مقفلش؟"\n5. "سحب الحصص وعيال الصفر"\n6. "أسعار الباقات الرسمية كام؟"`,
+        text: `بص يا باشا، رجالة Big Team 01 مجمعين لحد النهاردة ${formatMoney(s.totalCash, 'ar')} (${s.achievement.toFixed(1)}%) من أصل ${s.totalContracts} ديل مقفول. وفاضلنا كاش ${formatMoney(cashGap, 'ar')} ونقفل الـ 100%.\n💡 دي شوية حاجات سريعة تقدر تسألني عنها بالبلدي:\n1. "أرقام إيهاب" أو "كاش جوليا" أو "ديلات تيتو"\n2. "بنشمارك بكرة كام وعايزين نلم كام؟"\n3. "مين واقع ومين التوب في التيم؟"\n4. "مين مريح في البيع وبقاله كتير مقفلش؟"\n5. "سحب الحصص وعيال الصفر"\n6. "أسعار الباقات الرسمية كام؟"`,
         lang: 'ar'
       };
     }
 
     if (promptLang === 'zh') {
       return {
-        text: `大一组截至第16天累计入账: ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，全月总成单 ${s.totalContracts} 单。全组业绩缺口为 ${formatMoney(s.totalGap, 'zh')}。\n💡 您可以向我提问：\n1. 查询顾问战报: "Julia业绩" 或 "Ehab战报" 或 "Mohamed Hamed入账"\n2. 基准线与进度: "明天基准线是多少？" 或 "落后顾问有哪些？"\n3. 运营与课消: "课消与0课化学员" 或 "提续进度"\n4. 价格与政策: "官方课包价格体系" 或 "今日3大战略动作"\n5. 语言切换: "speak English" 或 "تكلم عربي"\n`,
+        text: `大一组截至第${curDay}天累计入账: ${formatMoney(s.totalCash, 'zh')} (${s.achievement.toFixed(1)}%)，全月总成单 ${s.totalContracts} 单。全组业绩缺口为 ${formatMoney(cashGap, 'zh')}。\n💡 您可以向我提问：\n1. 查询顾问战报: "Julia业绩" 或 "Ehab战报" 或 "Mohamed Hamed入账"\n2. 基准线与进度: "明天基准线是多少？" 或 "落后顾问有哪些？"\n3. 运营与课消: "课消与0课化学员" 或 "提续进度"\n4. 价格与政策: "官方课包价格体系" 或 "今日3大战略动作"\n5. 语言切换: "speak English" 或 "تكلم عربي"\n`,
         lang: 'zh'
       };
     }
 
     return {
-      text: `Big Team 01 has reached ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%) MTD with ${s.totalContracts} total contracts. Sector cash gap is ${formatMoney(s.totalGap)}.\n💡 Quick questions you can ask me:\n1. "Performance for SCS Julia" or "Ehab Zaky numbers"\n2. "What is tomorrow's benchmark?"\n3. "Class consumption & zero classes"\n4. "Official package rate card"\n5. "Can you speak in Arabic" or "Speak Chinese"`,
+      text: `Big Team 01 has reached ${formatMoney(s.totalCash)} (${s.achievement.toFixed(1)}%) MTD with ${s.totalContracts} total contracts. Sector cash gap is ${formatMoney(cashGap)}.\n💡 Quick questions you can ask me:\n1. "Performance for SCS Julia" or "Ehab Zaky numbers"\n2. "What is tomorrow's benchmark?"\n3. "Class consumption & zero classes"\n4. "Official package rate card"\n5. "Can you speak in Arabic" or "Speak Chinese"`,
       lang: 'en'
     };
   }
@@ -1677,7 +1688,7 @@
     const tomorrowBM = OFFICIAL_PACING[curDay + 1] || 63;
     const prevBM = OFFICIAL_PACING[curDay - 1] || 59;
     const daysLeft = typeof s.daysLeft === 'number' ? s.daysLeft : Math.max(1, 30 - curDay);
-    const dailyRunRate = Math.round(Math.max(0, (s.totalTarget || 2597414) - (s.totalCash || 0)) / daysLeft);
+    const dailyRunRate = Math.round(Math.max(0, (s.totalTarget || 173538) - (s.totalCash || 0)) / daysLeft);
     const pacingDelta = (s.achievement !== undefined ? s.achievement - todayBM : 0).toFixed(1);
     const pacingStatus = (s.achievement >= todayBM) ? `AHEAD of pace (+${pacingDelta}%)` : `BEHIND pace (${pacingDelta}%)`;
     const target20Count = Math.ceil((s.totalBase || 438) * 0.20);
