@@ -1490,7 +1490,14 @@
           <button type="button" class="nav-user-logout-btn" onclick="logoutAuthUser()" title="تسجيل الخروج / تبديل الحساب">🚪 <span id="navLogoutText">خروج</span></button>
         </div>
 
-<div style="display: flex; align-items: center; gap: 7px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 5px 10px; border-radius: 8px; font-size: 0.76rem; font-weight: 700; color: #34d399;">
+        <!-- Live Data Last Updated Timestamp Badge -->
+        <div id="dataLastUpdatedBadge" style="display: flex; align-items: center; gap: 7px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); padding: 5px 12px; border-radius: 8px; font-size: 0.76rem; font-weight: 700; color: #bae6fd;">
+          <span style="font-size: 0.85rem;">🕒</span>
+          <span id="dataLastUpdatedLabel">آخر تحديث للبيانات:</span>
+          <strong id="dataLastUpdatedVal" style="color: #38bdf8; font-family: monospace; font-size: 0.82rem; direction: ltr; display: inline-block;">--</strong>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 7px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); padding: 5px 10px; border-radius: 8px; font-size: 0.76rem; font-weight: 700; color: #34d399;">
           <span style="width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981;"></span>
           <span id="crmLiveSyncText">CRM Live Synchronized</span>
         </div>
@@ -1768,6 +1775,7 @@
         nav_main_dashboard: "الداش بورد الرئيسي",
         nav_calculator: "حاسبة الباقات",
         crm_live_sync: "CRM Live Synchronized",
+        last_data_update: "آخر تحديث للبيانات:",
         
         kpi_ready_title: "جاهز للاسترداد الفوري",
         kpi_ready_desc: "طلاب خرجوا لفرق أخرى ولم يجددوا وبدون تواصل فعال (>14 يوم)",
@@ -1877,6 +1885,7 @@
         nav_main_dashboard: "Main Dashboard",
         nav_calculator: "Package Calculator",
         crm_live_sync: "CRM Live Synchronized",
+        last_data_update: "Last Data Sync:",
         
         kpi_ready_title: "Ready for Reclaim",
         kpi_ready_desc: "Transferred to other teams, no renewal, no valid contact (>14d)",
@@ -1986,6 +1995,7 @@
         nav_main_dashboard: "主仪表盘",
         nav_calculator: "课包计算器",
         crm_live_sync: "CRM 实时同步中",
+        last_data_update: "数据更新时间:",
         
         kpi_ready_title: "立即回收就绪",
         kpi_ready_desc: "已转出至其他组且未续费、超14天无有效跟进的学员",
@@ -2130,6 +2140,7 @@
       if (document.getElementById('navMainDashboardText')) document.getElementById('navMainDashboardText').textContent = t.nav_main_dashboard;
       if (document.getElementById('navCalculatorText')) document.getElementById('navCalculatorText').textContent = t.nav_calculator;
       if (document.getElementById('crmLiveSyncText')) document.getElementById('crmLiveSyncText').textContent = t.crm_live_sync;
+      if (document.getElementById('dataLastUpdatedLabel')) document.getElementById('dataLastUpdatedLabel').textContent = t.last_data_update;
 
       if (document.getElementById('kpiReadyTitle')) document.getElementById('kpiReadyTitle').textContent = t.kpi_ready_title;
       if (document.getElementById('kpiReadyDesc')) document.getElementById('kpiReadyDesc').textContent = t.kpi_ready_desc;
@@ -2415,21 +2426,28 @@
         // STRICT DATA SLICING FOR REPRESENTATIVE
         const repId = user.id;
 
+        // 1. Reclaim Opportunities (Transferred leads originally with this rep or currently assigned)
         const repReclaims = (master.reclaim_opportunities || []).filter(item => 
-          item.old_ss === repId || item.current_agent === repId
+          item.old_ss === repId || item.current_agent === repId || item.rep === repId
         );
 
+        // 2. Defense Uncovered Leads (All active leads assigned to this rep to protect)
         const repDefense = (master.defense_uncovered || []).filter(item => 
-          item.current_agent === repId
+          item.rep === repId || item.current_agent === repId
         );
 
-        const repFamilies = (master.split_families || []).filter(item => {
-          if (item.current_agent === repId || item.old_ss === repId) return true;
-          if (item.family_members && Array.isArray(item.family_members)) {
-            return item.family_members.some(m => m === repId || (m.current_agent === repId));
+        // 3. Split Families (All family accounts where at least one member belongs to this rep)
+        const myFamilyIds = new Set();
+        (master.split_families || []).forEach(item => {
+          if (item.current_agent === repId || item.old_ss === repId || (item.split_with && item.split_with.includes(repId))) {
+            myFamilyIds.add(item.family_id);
           }
-          return false;
         });
+
+        // Include all sibling rows so rep can see both their student and the split sibling to reclaim
+        const repFamilies = (master.split_families || []).filter(item => 
+          myFamilyIds.has(item.family_id)
+        );
 
         const repStats = {
           total_active_sector_leads: repDefense.length,
@@ -2564,6 +2582,11 @@
     // Initialize KPI Header Counters
     function initKPIValues() {
       const stats = window.ALLOCATION_RULES_DATA.stats || {};
+      const genAt = window.ALLOCATION_RULES_DATA.generated_at || window.ALLOCATION_RULES_DATA.audit_date || '';
+      const updateEl = document.getElementById('dataLastUpdatedVal');
+      if (updateEl && genAt) {
+        updateEl.textContent = genAt;
+      }
       document.getElementById('kpiReadyCount').textContent = stats.reclaim_ready_immediate || 23;
       document.getElementById('kpiCriticalCount').textContent = (stats.critical_defense_risk_14d || 2824).toLocaleString();
       document.getElementById('kpiHighRiskCount').textContent = stats.high_defense_risk_12_13d || 43;
@@ -2647,24 +2670,27 @@
       const quickPills = document.getElementById('quickTeamPills');
       const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
 
+      const oldSSSelect = document.getElementById('selectOldSS');
+
       // If logged in as Representative: ENFORCE LOCK & ISOLATION
       if (window.CURRENT_AUTH_USER && window.CURRENT_AUTH_USER.role === 'REP') {
         const u = window.CURRENT_AUTH_USER;
         currentRepFilter = u.id;
-        currentSmallTeam = u.team;
+        currentOldSS = 'ALL';
+        currentSmallTeam = 'ALL';
 
         if (teamSelect) {
-          teamSelect.innerHTML = `<option value="${u.team}" selected>${u.team}</option>`;
+          teamSelect.innerHTML = `<option value="ALL" selected>${u.team}</option>`;
           teamSelect.disabled = true;
           teamSelect.style.opacity = '0.85';
           teamSelect.style.cursor = 'not-allowed';
         }
 
-        if (repSelect) {
-          repSelect.innerHTML = `<option value="${u.id}" selected>${u.name} (${u.id})</option>`;
-          repSelect.disabled = true;
-          repSelect.style.opacity = '0.85';
-          repSelect.style.cursor = 'not-allowed';
+        if (oldSSSelect) {
+          oldSSSelect.innerHTML = `<option value="ALL" selected>${u.name} (${u.id})</option>`;
+          oldSSSelect.disabled = true;
+          oldSSSelect.style.opacity = '0.85';
+          oldSSSelect.style.cursor = 'not-allowed';
         }
 
         if (quickPills) {
@@ -2684,10 +2710,10 @@
         teamSelect.style.opacity = '1';
         teamSelect.style.cursor = 'pointer';
       }
-      if (repSelect) {
-        repSelect.disabled = false;
-        repSelect.style.opacity = '1';
-        repSelect.style.cursor = 'pointer';
+      if (oldSSSelect) {
+        oldSSSelect.disabled = false;
+        oldSSSelect.style.opacity = '1';
+        oldSSSelect.style.cursor = 'pointer';
       }
 
       const prevTeam = teamSelect ? teamSelect.value : 'ALL';

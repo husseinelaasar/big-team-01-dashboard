@@ -1,5 +1,5 @@
 window.ALLOCATION_RULES_DATA = {
-  "generated_at": "2026-11-22 16:42:10",
+  "generated_at": "2026-11-22 17:33:48",
   "audit_date": "2026-11-22",
   "stats": {
     "total_active_sector_leads": 9999,
@@ -3844,6 +3844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62018684,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -3868,6 +3869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60129136,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -3892,6 +3894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64277599,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -3916,6 +3919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64265636,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -3940,6 +3944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63997219,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -3964,6 +3969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64159161,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -3988,6 +3994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64732652,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4012,6 +4019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63605547,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -4036,6 +4044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58883465,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4060,6 +4069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62424568,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4084,6 +4094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62713091,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4108,6 +4119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62878276,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4132,6 +4144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63479524,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4156,6 +4169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63994130,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4180,6 +4194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58828419,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -4204,6 +4219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64726155,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -4228,6 +4244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64035460,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -4252,6 +4269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59766813,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4276,6 +4294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60840317,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -4300,6 +4319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64003195,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -4324,6 +4344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63802544,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4348,6 +4369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63994116,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4372,6 +4394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59924930,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4396,6 +4419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64736515,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -4420,6 +4444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63527736,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4444,6 +4469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63857212,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -4468,6 +4494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60211984,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -4492,6 +4519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60605944,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4516,6 +4544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60990539,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4540,6 +4569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64270527,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -4564,6 +4594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64477246,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -4588,6 +4619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61154173,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -4612,6 +4644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59373673,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4636,6 +4669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59792544,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4660,6 +4694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60704014,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4684,6 +4719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61487431,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4708,6 +4744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61582328,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4732,6 +4769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61800964,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4756,6 +4794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59412067,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -4780,6 +4819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62954769,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -4804,6 +4844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59884302,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4828,6 +4869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63812757,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -4852,6 +4894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63593084,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -4876,6 +4919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64141651,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -4900,6 +4944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64673885,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -4924,6 +4969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63875302,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -4948,6 +4994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64556935,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -4972,6 +5019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63822354,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -4996,6 +5044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62458960,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5020,6 +5069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64587731,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -5044,6 +5094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60540732,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -5068,6 +5119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59432593,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5092,6 +5144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64351360,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -5116,6 +5169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64231990,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5140,6 +5194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64231994,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5164,6 +5219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59797661,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5188,6 +5244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63207813,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5212,6 +5269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59358241,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -5236,6 +5294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63469723,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5260,6 +5319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63886277,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -5284,6 +5344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63615767,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5308,6 +5369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63145669,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5332,6 +5394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64524909,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -5356,6 +5419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60442057,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -5380,6 +5444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63920433,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -5404,6 +5469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63406771,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5428,6 +5494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62073679,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5452,6 +5519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58255618,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -5476,6 +5544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58557544,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -5500,6 +5569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59256846,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5524,6 +5594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59266442,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -5548,6 +5619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59615465,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5572,6 +5644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59900807,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5596,6 +5669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60180585,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -5620,6 +5694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59081546,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -5644,6 +5719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60561050,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5668,6 +5744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60719419,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -5692,6 +5769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61077929,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5716,6 +5794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58948874,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -5740,6 +5819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61773236,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5764,6 +5844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61802070,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5788,6 +5869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61922375,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -5812,6 +5894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62346000,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -5836,6 +5919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62367866,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5860,6 +5944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58261778,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -5884,6 +5969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62425371,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5908,6 +5994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62498634,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -5932,6 +6019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62533369,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5956,6 +6044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62653310,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -5980,6 +6069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58526954,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -6004,6 +6094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62866542,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -6028,6 +6119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62864994,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -6052,6 +6144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62823754,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6076,6 +6169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62951582,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6100,6 +6194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63018568,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6124,6 +6219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63387101,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -6148,6 +6244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63510284,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6172,6 +6269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63518038,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6196,6 +6294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63570646,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6220,6 +6319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60623669,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6244,6 +6344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64148527,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -6268,6 +6369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64248181,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -6292,6 +6394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58594437,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -6316,6 +6419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64382577,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6340,6 +6444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59551178,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6364,6 +6469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60788989,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6388,6 +6494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64152118,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -6412,6 +6519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63692995,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6436,6 +6544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63838029,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6460,6 +6569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64532447,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6484,6 +6594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63771646,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -6508,6 +6619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64473809,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -6532,6 +6644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63498550,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6556,6 +6669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64553600,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -6580,6 +6694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58193758,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -6604,6 +6719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64563102,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -6628,6 +6744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61859701,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -6652,6 +6769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64211749,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -6676,6 +6794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63508228,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -6700,6 +6819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60230347,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -6724,6 +6844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64199146,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -6748,6 +6869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58800297,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6772,6 +6894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59429388,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -6796,6 +6919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60326330,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -6820,6 +6944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60679066,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6844,6 +6969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60164906,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6868,6 +6994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60939361,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -6892,6 +7019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61329350,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6916,6 +7044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58511315,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -6940,6 +7069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58730859,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6964,6 +7094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61674974,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -6988,6 +7119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63855260,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7012,6 +7144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63920015,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7036,6 +7169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63961952,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -7060,6 +7194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64033294,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -7084,6 +7219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64046700,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7108,6 +7244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64080013,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7132,6 +7269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64149213,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7156,6 +7294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62468442,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7180,6 +7319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58513394,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7204,6 +7344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64398737,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7228,6 +7369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63162634,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7252,6 +7394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64115142,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7276,6 +7419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63929009,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7300,6 +7444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63651649,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7324,6 +7469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63632047,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -7348,6 +7494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64510632,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7372,6 +7519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62347744,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -7396,6 +7544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63155437,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7420,6 +7569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62576978,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -7444,6 +7594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59707248,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7468,6 +7619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63916552,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -7492,6 +7644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62933340,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -7516,6 +7669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64502924,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7540,6 +7694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63618863,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7564,6 +7719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57962078,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -7588,6 +7744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63510274,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7612,6 +7769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60557042,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7636,6 +7794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62668526,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7660,6 +7819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64133946,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7684,6 +7844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58623855,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7708,6 +7869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63533195,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7732,6 +7894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64680693,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7756,6 +7919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64692388,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7780,6 +7944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63821948,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7804,6 +7969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63771368,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -7828,6 +7994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57980631,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -7852,6 +8019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58114465,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7876,6 +8044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58592863,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7900,6 +8069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58724982,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7924,6 +8094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59219702,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -7948,6 +8119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59003762,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -7972,6 +8144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59615647,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -7996,6 +8169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59628216,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -8020,6 +8194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58478633,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -8044,6 +8219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60111062,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -8068,6 +8244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60181028,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8092,6 +8269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60201796,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -8116,6 +8294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60138948,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -8140,6 +8319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60370104,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8164,6 +8344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60369668,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8188,6 +8369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60587233,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8212,6 +8394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60687367,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8236,6 +8419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60536595,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -8260,6 +8444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60908447,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8284,6 +8469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60943596,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8308,6 +8494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59219350,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -8332,6 +8519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61260138,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8356,6 +8544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61354080,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8380,6 +8569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61646431,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -8404,6 +8594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61656702,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -8428,6 +8619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61656781,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -8452,6 +8644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58794556,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -8476,6 +8669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61724557,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -8500,6 +8694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59237242,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -8524,6 +8719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61809571,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -8548,6 +8744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59894144,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8572,6 +8769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59053550,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8596,6 +8794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61940854,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -8620,6 +8819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61959401,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -8644,6 +8844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61944715,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -8668,6 +8869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62186237,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -8692,6 +8894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62235256,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8716,6 +8919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62221309,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -8740,6 +8944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62222098,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8764,6 +8969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62233485,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -8788,6 +8994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61068213,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8812,6 +9019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62256973,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -8836,6 +9044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62242232,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -8860,6 +9069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60345381,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8884,6 +9094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61624655,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -8908,6 +9119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60775068,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8932,6 +9144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62291271,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8956,6 +9169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62430466,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -8980,6 +9194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62453265,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -9004,6 +9219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62496305,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9028,6 +9244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62514168,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9052,6 +9269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62511454,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -9076,6 +9294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62637668,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9100,6 +9319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62717961,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9124,6 +9344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62796032,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -9148,6 +9369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62810639,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -9172,6 +9394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62832996,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9196,6 +9419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62849409,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9220,6 +9444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62864928,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -9244,6 +9469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62920309,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -9268,6 +9494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62887633,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -9292,6 +9519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60472437,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -9316,6 +9544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63003676,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9340,6 +9569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63019221,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9364,6 +9594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63024861,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9388,6 +9619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61976030,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -9412,6 +9644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61428105,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9436,6 +9669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63154617,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -9460,6 +9694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63204215,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -9484,6 +9719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63232855,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9508,6 +9744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63400478,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -9532,6 +9769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63528703,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -9556,6 +9794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63531695,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9580,6 +9819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63742860,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9604,6 +9844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60671435,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -9628,6 +9869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63799176,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9652,6 +9894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63878734,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -9676,6 +9919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63415107,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -9700,6 +9944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59219512,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -9724,6 +9969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63919395,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9748,6 +9994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63617196,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9772,6 +10019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60709453,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9796,6 +10044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64050275,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -9820,6 +10069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62235446,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9844,6 +10094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64158995,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -9868,6 +10119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64395735,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9892,6 +10144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64446825,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -9916,6 +10169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63172027,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9940,6 +10194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63989520,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -9964,6 +10219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63532632,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -9988,6 +10244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63822902,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10012,6 +10269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64373840,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -10036,6 +10294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60311622,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -10060,6 +10319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63722447,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10084,6 +10344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64062200,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10108,6 +10369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64197518,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10132,6 +10394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63888032,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -10156,6 +10419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64541020,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10180,6 +10444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64673777,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10204,6 +10469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63087938,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10228,6 +10494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60151678,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10252,6 +10519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64181529,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10276,6 +10544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58348861,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10300,6 +10569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64180332,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -10324,6 +10594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64624838,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -10348,6 +10619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60907985,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -10372,6 +10644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64092259,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10396,6 +10669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62367832,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10420,6 +10694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64662624,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10444,6 +10719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62969023,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -10468,6 +10744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60620865,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -10492,6 +10769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64579419,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -10516,6 +10794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64673077,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10540,6 +10819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64708507,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10564,6 +10844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60793991,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -10588,6 +10869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60430565,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -10612,6 +10894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63680626,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -10636,6 +10919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64069000,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -10660,6 +10944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58952055,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -10684,6 +10969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63997297,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10708,6 +10994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63198055,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -10732,6 +11019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58704783,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -10756,6 +11044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63735152,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -10780,6 +11069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60947491,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10804,6 +11094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63358100,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10828,6 +11119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64177611,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -10852,6 +11144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63522890,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -10876,6 +11169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61956734,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10900,6 +11194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64476767,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -10924,6 +11219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63661133,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10948,6 +11244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59370864,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -10972,6 +11269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58522905,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -10996,6 +11294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58499893,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11020,6 +11319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64474504,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -11044,6 +11344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64502002,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -11068,6 +11369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59183528,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -11092,6 +11394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64199106,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11116,6 +11419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63721494,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -11140,6 +11444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64166730,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -11164,6 +11469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58349073,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -11188,6 +11494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57819228,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -11212,6 +11519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63551562,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11236,6 +11544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61625968,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11260,6 +11569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57940129,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -11284,6 +11594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64102669,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11308,6 +11619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64031289,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11332,6 +11644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63680370,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -11356,6 +11669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63980408,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -11380,6 +11694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62513316,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -11404,6 +11719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62857609,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -11428,6 +11744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58945042,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -11452,6 +11769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63977923,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11476,6 +11794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62029512,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -11500,6 +11819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64180740,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -11524,6 +11844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61985403,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -11548,6 +11869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61976943,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -11572,6 +11894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64420711,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -11596,6 +11919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64052903,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -11620,6 +11944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63380812,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -11644,6 +11969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64661305,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11668,6 +11994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59604996,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11692,6 +12019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60276790,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11716,6 +12044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63425289,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11740,6 +12069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64410225,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11764,6 +12094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64588234,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -11788,6 +12119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64492072,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -11812,6 +12144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61522528,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -11836,6 +12169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62547586,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -11860,6 +12194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61210589,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -11884,6 +12219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64406086,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -11908,6 +12244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62803943,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -11932,6 +12269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61924857,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -11956,6 +12294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62717361,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -11980,6 +12319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61891049,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -12004,6 +12344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61942453,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12028,6 +12369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59308517,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12052,6 +12394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64177872,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -12076,6 +12419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63636740,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12100,6 +12444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57862956,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -12124,6 +12469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58506031,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -12148,6 +12494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58307217,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12172,6 +12519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59417648,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12196,6 +12544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59169255,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12220,6 +12569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58115208,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12244,6 +12594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58613337,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12268,6 +12619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59656700,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -12292,6 +12644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59885276,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12316,6 +12669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58205983,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12340,6 +12694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60150335,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12364,6 +12719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60211462,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12388,6 +12744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60191103,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -12412,6 +12769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60307712,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12436,6 +12794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60307268,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12460,6 +12819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60386842,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12484,6 +12844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59724446,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12508,6 +12869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60532849,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -12532,6 +12894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60679404,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12556,6 +12919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60691216,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -12580,6 +12944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60650674,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12604,6 +12969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60743523,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -12628,6 +12994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60757009,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12652,6 +13019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60757003,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12676,6 +13044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58855318,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12700,6 +13069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58944508,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12724,6 +13094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57854386,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -12748,6 +13119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61356901,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -12772,6 +13144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61290918,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12796,6 +13169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61412097,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12820,6 +13194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61524572,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -12844,6 +13219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60848408,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -12868,6 +13244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61706413,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -12892,6 +13269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61566261,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12916,6 +13294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61799684,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -12940,6 +13319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61527899,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -12964,6 +13344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60663799,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -12988,6 +13369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61898761,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13012,6 +13394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61873801,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -13036,6 +13419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61246535,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13060,6 +13444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61952623,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -13084,6 +13469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62064619,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13108,6 +13494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62122383,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -13132,6 +13519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59007564,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13156,6 +13544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62243628,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13180,6 +13569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62248187,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13204,6 +13594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59055786,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -13228,6 +13619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61324797,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13252,6 +13644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62395119,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13276,6 +13669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62399447,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13300,6 +13694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62272757,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13324,6 +13719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62408379,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13348,6 +13744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58358436,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -13372,6 +13769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60421532,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13396,6 +13794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58452428,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -13420,6 +13819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62475389,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13444,6 +13844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58362628,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -13468,6 +13869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60218569,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -13492,6 +13894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58088837,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13516,6 +13919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62548225,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13540,6 +13944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58281589,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13564,6 +13969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62823540,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13588,6 +13994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62687645,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13612,6 +14019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62855291,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -13636,6 +14044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60539502,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -13660,6 +14069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62903039,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -13684,6 +14094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58251232,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -13708,6 +14119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62824343,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -13732,6 +14144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58548089,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13756,6 +14169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62801070,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13780,6 +14194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63025649,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13804,6 +14219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62927507,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -13828,6 +14244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62878887,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13852,6 +14269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63071903,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13876,6 +14294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63064431,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -13900,6 +14319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61337114,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13924,6 +14344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63181031,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -13948,6 +14369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63203406,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -13972,6 +14394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63572572,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -13996,6 +14419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63503087,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -14020,6 +14444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63664211,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14044,6 +14469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63711757,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14068,6 +14494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64005686,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14092,6 +14519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63651432,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -14116,6 +14544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63996370,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14140,6 +14569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63790869,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14164,6 +14594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64070305,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -14188,6 +14619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64092504,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -14212,6 +14644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61230404,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14236,6 +14669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59547592,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -14260,6 +14694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64113273,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -14284,6 +14719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64121257,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14308,6 +14744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63966889,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -14332,6 +14769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64150953,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14356,6 +14794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64150751,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14380,6 +14819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64063477,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14404,6 +14844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61607876,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -14428,6 +14869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64276121,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14452,6 +14894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64291010,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -14476,6 +14919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64430854,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -14500,6 +14944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64519442,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -14524,6 +14969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64525505,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -14548,6 +14994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58905392,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -14572,6 +15019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64613897,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -14596,6 +15044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63673032,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -14620,6 +15069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59823718,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -14644,6 +15094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63086322,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14668,6 +15119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64113613,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -14692,6 +15144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64105746,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -14716,6 +15169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64437117,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14740,6 +15194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61001561,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14764,6 +15219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63551032,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14788,6 +15244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64568256,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -14812,6 +15269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63792121,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14836,6 +15294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62994079,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -14860,6 +15319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64540903,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -14884,6 +15344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58553122,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14908,6 +15369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61957600,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14932,6 +15394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63572387,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -14956,6 +15419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64290907,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -14980,6 +15444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63833168,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -15004,6 +15469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63970406,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -15028,6 +15494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58678501,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -15052,6 +15519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63927869,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -15076,6 +15544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64328374,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -15100,6 +15569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63016615,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15124,6 +15594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60204833,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15148,6 +15619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63603792,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -15172,6 +15644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64157496,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15196,6 +15669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58575428,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -15220,6 +15694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64341723,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -15244,6 +15719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59416821,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15268,6 +15744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63719540,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -15292,6 +15769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60587852,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -15316,6 +15794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64501637,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15340,6 +15819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63670248,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15364,6 +15844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64691542,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15388,6 +15869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64286367,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15412,6 +15894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64314782,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15436,6 +15919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61186750,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -15460,6 +15944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64353806,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -15484,6 +15969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60534042,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -15508,6 +15994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62616120,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15532,6 +16019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63857049,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15556,6 +16044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64527807,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15580,6 +16069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62777795,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -15604,6 +16094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59566870,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -15628,6 +16119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63673145,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15652,6 +16144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64151224,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -15676,6 +16169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63369953,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -15700,6 +16194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63888653,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15724,6 +16219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58752604,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15748,6 +16244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63309400,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15772,6 +16269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64190504,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15796,6 +16294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63014584,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15820,6 +16319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63683296,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15844,6 +16344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63683903,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15868,6 +16369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64169094,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15892,6 +16394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64465984,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -15916,6 +16419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63331462,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -15940,6 +16444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63952488,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -15964,6 +16469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63657841,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -15988,6 +16494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63912482,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16012,6 +16519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62916400,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16036,6 +16544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62064194,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16060,6 +16569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60109275,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16084,6 +16594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63639042,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16108,6 +16619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60751244,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16132,6 +16644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62400935,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16156,6 +16669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60510024,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16180,6 +16694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63532074,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16204,6 +16719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58565770,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16228,6 +16744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63375686,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16252,6 +16769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63464299,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -16276,6 +16794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63789958,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16300,6 +16819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63491247,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16324,6 +16844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63785454,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16348,6 +16869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62988534,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16372,6 +16894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64244625,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -16396,6 +16919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64769308,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -16420,6 +16944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63799171,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16444,6 +16969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63661360,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -16468,6 +16994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64280463,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -16492,6 +17019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63389922,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16516,6 +17044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63562654,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16540,6 +17069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63885961,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16564,6 +17094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64751180,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16588,6 +17119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60728788,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16612,6 +17144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62403414,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16636,6 +17169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61282035,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16660,6 +17194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64540208,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16684,6 +17219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64126174,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16708,6 +17244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63039213,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16732,6 +17269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63048881,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -16756,6 +17294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62123750,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16780,6 +17319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63681020,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -16804,6 +17344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58221773,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16828,6 +17369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58439370,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16852,6 +17394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58679546,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16876,6 +17419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58962799,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16900,6 +17444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58970016,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -16924,6 +17469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58572235,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -16948,6 +17494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58970432,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -16972,6 +17519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59052074,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -16996,6 +17544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59910150,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -17020,6 +17569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59912382,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -17044,6 +17594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59927872,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -17068,6 +17619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60209927,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -17092,6 +17644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60207982,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -17116,6 +17669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60389256,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -17140,6 +17694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60433632,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17164,6 +17719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60513218,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17188,6 +17744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60603646,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17212,6 +17769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60724248,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17236,6 +17794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60789080,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17260,6 +17819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60697035,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -17284,6 +17844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61005269,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -17308,6 +17869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61054024,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -17332,6 +17894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61007375,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17356,6 +17919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61070327,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17380,6 +17944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61097084,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17404,6 +17969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61211038,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17428,6 +17994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61339789,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17452,6 +18019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61102780,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17476,6 +18044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59255310,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17500,6 +18069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59753562,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17524,6 +18094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61493296,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17548,6 +18119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58749214,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17572,6 +18144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60726994,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -17596,6 +18169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61542255,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17620,6 +18194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61674458,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17644,6 +18219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61720706,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17668,6 +18244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61795292,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17692,6 +18269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61831257,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -17716,6 +18294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61982724,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17740,6 +18319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62142442,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17764,6 +18344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62230879,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17788,6 +18369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62265791,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17812,6 +18394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58369570,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -17836,6 +18419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62296453,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17860,6 +18444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62367509,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -17884,6 +18469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62216907,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17908,6 +18494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61220328,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -17932,6 +18519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61775145,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -17956,6 +18544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62388070,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -17980,6 +18569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61774957,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18004,6 +18594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58748317,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18028,6 +18619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62146040,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18052,6 +18644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62457899,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -18076,6 +18669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62597360,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18100,6 +18694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62609412,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18124,6 +18719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59245594,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18148,6 +18744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62720104,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18172,6 +18769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62728815,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18196,6 +18794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62795820,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18220,6 +18819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58199771,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18244,6 +18844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62835094,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18268,6 +18869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62903133,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -18292,6 +18894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62946550,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18316,6 +18919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58937164,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18340,6 +18944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61283879,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18364,6 +18969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63119378,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18388,6 +18994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63181896,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18412,6 +19019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63226427,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18436,6 +19044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63329916,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -18460,6 +19069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59627941,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18484,6 +19094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63572711,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -18508,6 +19119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63605143,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -18532,6 +19144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63713610,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -18556,6 +19169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61439574,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -18580,6 +19194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63551330,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -18604,6 +19219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63730900,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -18628,6 +19244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60654725,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -18652,6 +19269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63970152,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18676,6 +19294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63803791,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18700,6 +19319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63711282,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -18724,6 +19344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64160373,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -18748,6 +19369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64157238,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18772,6 +19394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64175909,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -18796,6 +19419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63917079,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18820,6 +19444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59758773,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18844,6 +19469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64578595,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -18868,6 +19494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63875463,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18892,6 +19519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64542884,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18916,6 +19544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64703497,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -18940,6 +19569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64062532,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -18964,6 +19594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60193500,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -18988,6 +19619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63868002,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19012,6 +19644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63977600,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19036,6 +19669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59192323,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19060,6 +19694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63783086,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19084,6 +19719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64779180,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19108,6 +19744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63996839,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -19132,6 +19769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64695288,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -19156,6 +19794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63730843,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -19180,6 +19819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61010950,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -19204,6 +19844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64512937,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -19228,6 +19869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58232453,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19252,6 +19894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63639049,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -19276,6 +19919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61723596,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -19300,6 +19944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63605613,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -19324,6 +19969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63955491,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19348,6 +19994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63877766,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19372,6 +20019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64180190,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19396,6 +20044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61347653,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19420,6 +20069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60500285,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19444,6 +20094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60854816,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -19468,6 +20119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63497650,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19492,6 +20144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58579344,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19516,6 +20169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63887629,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19540,6 +20194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61811974,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -19564,6 +20219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63050198,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19588,6 +20244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64669331,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -19612,6 +20269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63473764,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -19636,6 +20294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63150155,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19660,6 +20319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59295477,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19684,6 +20344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64634087,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19708,6 +20369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59888789,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19732,6 +20394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59398696,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -19756,6 +20419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64570997,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19780,6 +20444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60480714,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19804,6 +20469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63556897,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19828,6 +20494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63711538,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19852,6 +20519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63838778,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19876,6 +20544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64044297,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19900,6 +20569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64353804,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19924,6 +20594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58653432,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19948,6 +20619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64202795,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -19972,6 +20644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59372421,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -19996,6 +20669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63630609,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -20020,6 +20694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64535091,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -20044,6 +20719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63613742,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20068,6 +20744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61068377,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20092,6 +20769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61782644,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20116,6 +20794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62614288,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20140,6 +20819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63370140,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -20164,6 +20844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60157040,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20188,6 +20869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63811222,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20212,6 +20894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60298576,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20236,6 +20919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64419797,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20260,6 +20944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62527872,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20284,6 +20969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63603950,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20308,6 +20994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64562987,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -20332,6 +21019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59364150,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20356,6 +21044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58344735,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -20380,6 +21069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59523203,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -20404,6 +21094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63508964,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20428,6 +21119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64126349,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20452,6 +21144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63164969,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -20476,6 +21169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60663878,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -20500,6 +21194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64087697,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20524,6 +21219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64313359,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20548,6 +21244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62543705,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -20572,6 +21269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58517743,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20596,6 +21294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62628560,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -20620,6 +21319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62992051,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20644,6 +21344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64694050,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20668,6 +21369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64624342,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20692,6 +21394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64597907,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20716,6 +21419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62217854,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20740,6 +21444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63489233,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20764,6 +21469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58830331,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -20788,6 +21494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64779296,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -20812,6 +21519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64736114,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -20836,6 +21544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63498819,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20860,6 +21569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63399017,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20884,6 +21594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64743717,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20908,6 +21619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61903072,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -20932,6 +21644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61881204,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20956,6 +21669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61881202,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -20980,6 +21694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58785135,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -21004,6 +21719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64411934,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -21028,6 +21744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62909011,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21052,6 +21769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63572496,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21076,6 +21794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63910753,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21100,6 +21819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63730359,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21124,6 +21844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63763270,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -21148,6 +21869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63764411,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21172,6 +21894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63735735,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -21196,6 +21919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58660080,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21220,6 +21944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58866417,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21244,6 +21969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58967610,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -21268,6 +21994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59217195,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21292,6 +22019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59234924,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21316,6 +22044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59284984,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -21340,6 +22069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59272115,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21364,6 +22094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59294549,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -21388,6 +22119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57968623,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21412,6 +22144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59359739,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21436,6 +22169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59567114,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21460,6 +22194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59578653,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21484,6 +22219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59590582,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -21508,6 +22244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59678753,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21532,6 +22269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59733918,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -21556,6 +22294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59895425,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -21580,6 +22319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58243864,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21604,6 +22344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59443246,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21628,6 +22369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60153790,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -21652,6 +22394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60269952,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -21676,6 +22419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60347437,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21700,6 +22444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60404973,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -21724,6 +22469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60408819,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -21748,6 +22494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60539865,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21772,6 +22519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60523183,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21796,6 +22544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60562333,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -21820,6 +22569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60621326,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21844,6 +22594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60646092,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21868,6 +22619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60688850,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21892,6 +22644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58850122,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -21916,6 +22669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60795850,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -21940,6 +22694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60841323,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -21964,6 +22719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59015287,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -21988,6 +22744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58351560,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22012,6 +22769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58659334,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22036,6 +22794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61060966,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22060,6 +22819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61088485,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -22084,6 +22844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61079684,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22108,6 +22869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60904055,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22132,6 +22894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61134036,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22156,6 +22919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61616116,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22180,6 +22944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59905413,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22204,6 +22969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61657961,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -22228,6 +22994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61681962,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -22252,6 +23019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61741665,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -22276,6 +23044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59337088,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -22300,6 +23069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61785131,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -22324,6 +23094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61798574,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22348,6 +23119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61875874,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22372,6 +23144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61866314,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22396,6 +23169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61891617,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22420,6 +23194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61925485,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22444,6 +23219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61900878,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22468,6 +23244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61580733,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -22492,6 +23269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61974075,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22516,6 +23294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62067481,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -22540,6 +23319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60850738,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -22564,6 +23344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62128101,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22588,6 +23369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60760718,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22612,6 +23394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58364771,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22636,6 +23419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60307802,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22660,6 +23444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62171229,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -22684,6 +23469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62287345,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -22708,6 +23494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58564575,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -22732,6 +23519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62392400,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -22756,6 +23544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62354886,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -22780,6 +23569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62402323,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -22804,6 +23594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62142587,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -22828,6 +23619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58413857,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -22852,6 +23644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62492714,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22876,6 +23669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62523142,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22900,6 +23694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62478046,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22924,6 +23719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58931999,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -22948,6 +23744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58850803,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -22972,6 +23769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58658722,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -22996,6 +23794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58395174,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23020,6 +23819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61501538,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -23044,6 +23844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60778381,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -23068,6 +23869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62771606,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23092,6 +23894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62815089,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -23116,6 +23919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61594539,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -23140,6 +23944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62840072,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -23164,6 +23969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62865488,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23188,6 +23994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62792151,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23212,6 +24019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62865091,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23236,6 +24044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62855814,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -23260,6 +24069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62809137,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -23284,6 +24094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62539815,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -23308,6 +24119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62904145,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -23332,6 +24144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62900796,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -23356,6 +24169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62902294,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23380,6 +24194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62890137,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23404,6 +24219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62972770,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23428,6 +24244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62972589,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23452,6 +24269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62726563,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23476,6 +24294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62906569,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23500,6 +24319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63058110,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23524,6 +24344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60655505,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -23548,6 +24369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62917243,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -23572,6 +24394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63110560,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -23596,6 +24419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63121344,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -23620,6 +24444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63129239,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -23644,6 +24469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63205732,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23668,6 +24494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63130715,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23692,6 +24519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60634799,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -23716,6 +24544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63240824,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23740,6 +24569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58554783,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23764,6 +24594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62550347,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23788,6 +24619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63489672,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23812,6 +24644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60444707,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23836,6 +24669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63548275,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23860,6 +24694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63532125,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23884,6 +24719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63510728,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23908,6 +24744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63693000,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23932,6 +24769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61637923,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -23956,6 +24794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63548423,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -23980,6 +24819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63821044,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24004,6 +24844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63855170,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -24028,6 +24869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63886251,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -24052,6 +24894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63679348,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24076,6 +24919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63910356,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -24100,6 +24944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63783496,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -24124,6 +24969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62940978,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -24148,6 +24994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59476116,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24172,6 +25019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63758878,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -24196,6 +25044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63679400,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24220,6 +25069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63812375,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -24244,6 +25094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62369437,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -24268,6 +25119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61048101,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24292,6 +25144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63859196,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24316,6 +25169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64151114,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -24340,6 +25194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64150481,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -24364,6 +25219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64170627,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -24388,6 +25244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62811033,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -24412,6 +25269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62540593,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -24436,6 +25294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63978979,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -24460,6 +25319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60855362,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -24484,6 +25344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62237827,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -24508,6 +25369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64259356,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -24532,6 +25394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64259411,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -24556,6 +25419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64259252,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -24580,6 +25444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64259353,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -24604,6 +25469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64254151,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -24628,6 +25494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64395204,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24652,6 +25519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64398185,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24676,6 +25544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64189608,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -24700,6 +25569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64485995,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -24724,6 +25594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64171736,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -24748,6 +25619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64636087,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -24772,6 +25644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59782331,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -24796,6 +25669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60568135,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24820,6 +25694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64761095,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24844,6 +25719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60413417,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24868,6 +25744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64176184,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -24892,6 +25769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64763240,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -24916,6 +25794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63143117,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24940,6 +25819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64103704,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -24964,6 +25844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64771768,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -24988,6 +25869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64771841,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25012,6 +25894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64771770,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25036,6 +25919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64653820,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25060,6 +25944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64370563,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -25084,6 +25969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63641114,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25108,6 +25994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64052295,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25132,6 +26019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63202685,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25156,6 +26044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64202682,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25180,6 +26069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58999806,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -25204,6 +26094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64388847,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25228,6 +26119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63119837,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -25252,6 +26144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64053357,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25276,6 +26169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64406971,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -25300,6 +26194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64244920,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25324,6 +26219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64536237,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25348,6 +26244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61392772,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -25372,6 +26269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62417102,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25396,6 +26294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63134462,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25420,6 +26319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59109688,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25444,6 +26344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58712129,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25468,6 +26369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58563517,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25492,6 +26394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58657728,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25516,6 +26419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59730624,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25540,6 +26444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64770782,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -25564,6 +26469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60757918,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25588,6 +26494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63875552,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -25612,6 +26519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63540402,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25636,6 +26544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64236778,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25660,6 +26569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64289180,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25684,6 +26594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64355638,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -25708,6 +26619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59565049,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25732,6 +26644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64152514,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25756,6 +26669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64301780,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25780,6 +26694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58590703,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25804,6 +26719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59915899,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25828,6 +26744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60328137,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25852,6 +26769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63889531,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25876,6 +26794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64558050,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -25900,6 +26819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64456946,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -25924,6 +26844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64122258,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25948,6 +26869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64260064,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -25972,6 +26894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61342786,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -25996,6 +26919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63780391,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -26020,6 +26944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63864149,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -26044,6 +26969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64254797,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26068,6 +26994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59517960,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26092,6 +27019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62825962,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26116,6 +27044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61035483,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26140,6 +27069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64095288,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -26164,6 +27094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61284442,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26188,6 +27119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64587701,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26212,6 +27144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64167392,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -26236,6 +27169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60992155,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26260,6 +27194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62134700,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26284,6 +27219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64129119,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26308,6 +27244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62156372,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -26332,6 +27269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64159793,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -26356,6 +27294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63735712,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26380,6 +27319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64328741,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26404,6 +27344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63646074,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26428,6 +27369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63987423,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26452,6 +27394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64111610,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26476,6 +27419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64125252,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26500,6 +27444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63248142,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26524,6 +27469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63453948,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -26548,6 +27494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63901943,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -26572,6 +27519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63595064,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26596,6 +27544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62156537,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -26620,6 +27569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60670333,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -26644,6 +27594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64373988,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26668,6 +27619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59536629,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -26692,6 +27644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63793970,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26716,6 +27669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63436748,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -26740,6 +27694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64725768,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26764,6 +27719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58846048,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26788,6 +27744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63593960,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26812,6 +27769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63736770,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26836,6 +27794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63830991,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -26860,6 +27819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64399270,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26884,6 +27844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63181496,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26908,6 +27869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64464479,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -26932,6 +27894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63509483,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -26956,6 +27919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62814557,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -26980,6 +27944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63723530,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -27004,6 +27969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64123579,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -27028,6 +27994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64258469,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27052,6 +28019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63036788,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -27076,6 +28044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64131292,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -27100,6 +28069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62789946,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27124,6 +28094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62788589,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27148,6 +28119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64615201,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27172,6 +28144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64245055,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -27196,6 +28169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64061782,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -27220,6 +28194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63518521,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -27244,6 +28219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64496139,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -27268,6 +28244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61505209,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -27292,6 +28269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64258779,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -27316,6 +28294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64506144,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -27340,6 +28319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61017228,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27364,6 +28344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64133977,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27388,6 +28369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64751053,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27412,6 +28394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63424046,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27436,6 +28419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64632868,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -27460,6 +28444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63571534,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -27484,6 +28469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64116568,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27508,6 +28494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64781052,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -27532,6 +28519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63997697,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -27556,6 +28544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62529687,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -27580,6 +28569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63693274,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -27604,6 +28594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61361768,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27628,6 +28619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61796086,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -27652,6 +28644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62539449,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -27676,6 +28669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59889537,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -27700,6 +28694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61848925,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -27724,6 +28719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63742653,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -27748,6 +28744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63615754,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -27772,6 +28769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63611786,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -27796,6 +28794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63593935,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -27820,6 +28819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63747393,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -27844,6 +28844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58557964,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27868,6 +28869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58610923,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -27892,6 +28894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59027943,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -27916,6 +28919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59204130,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -27940,6 +28944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59206925,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -27964,6 +28969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59178558,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -27988,6 +28994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59371832,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -28012,6 +29019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59454823,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -28036,6 +29044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59495001,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -28060,6 +29069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59679375,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28084,6 +29094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59742482,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -28108,6 +29119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59773319,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28132,6 +29144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58455098,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -28156,6 +29169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59922812,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -28180,6 +29194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59822639,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28204,6 +29219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59488544,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28228,6 +29244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60146320,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28252,6 +29269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59282524,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -28276,6 +29294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60152347,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28300,6 +29319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60194773,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28324,6 +29344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59613670,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -28348,6 +29369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60209771,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28372,6 +29394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60208509,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28396,6 +29419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60231454,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28420,6 +29444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60370915,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28444,6 +29469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58097418,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -28468,6 +29494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60472583,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -28492,6 +29519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60509916,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28516,6 +29544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60569598,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28540,6 +29569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60804026,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28564,6 +29594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60845893,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -28588,6 +29619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61000020,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -28612,6 +29644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61053496,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -28636,6 +29669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61088952,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -28660,6 +29694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61431869,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28684,6 +29719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61431858,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -28708,6 +29744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58973482,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28732,6 +29769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58858209,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28756,6 +29794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58371259,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -28780,6 +29819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61540462,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -28804,6 +29844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60546863,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -28828,6 +29869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61822218,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28852,6 +29894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61940430,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -28876,6 +29919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61940772,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -28900,6 +29944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60445594,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28924,6 +29969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62021527,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -28948,6 +29994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62048291,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -28972,6 +30019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61983513,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -28996,6 +30044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62121277,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29020,6 +30069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62158507,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29044,6 +30094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62171763,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29068,6 +30119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61838048,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -29092,6 +30144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59054491,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29116,6 +30169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58439076,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29140,6 +30194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60401029,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29164,6 +30219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62130938,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29188,6 +30244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59038707,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -29212,6 +30269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62325366,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29236,6 +30294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62345795,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29260,6 +30319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59625650,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29284,6 +30344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62248281,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29308,6 +30369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62311194,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29332,6 +30394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62337354,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29356,6 +30419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62378221,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29380,6 +30444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62400637,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29404,6 +30469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62392130,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -29428,6 +30494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62438044,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29452,6 +30519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59280943,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -29476,6 +30544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61954656,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29500,6 +30569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60353164,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29524,6 +30594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62582214,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29548,6 +30619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62682579,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29572,6 +30644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62697773,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29596,6 +30669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61070647,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29620,6 +30694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62770528,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29644,6 +30719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62772858,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -29668,6 +30744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62787242,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29692,6 +30769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62799796,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -29716,6 +30794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58217347,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29740,6 +30819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62690171,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29764,6 +30844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62870595,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29788,6 +30869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62861982,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -29812,6 +30894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62872871,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29836,6 +30919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62786987,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -29860,6 +30944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62874125,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29884,6 +30969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57709419,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -29908,6 +30994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61447559,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29932,6 +31019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62896689,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -29956,6 +31044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62864160,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -29980,6 +31069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59129700,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -30004,6 +31094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61097897,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30028,6 +31119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62917349,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -30052,6 +31144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62953641,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -30076,6 +31169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58608642,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30100,6 +31194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62976713,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30124,6 +31219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62987832,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30148,6 +31244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63015006,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30172,6 +31269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57950923,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -30196,6 +31294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63016184,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -30220,6 +31319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63050311,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -30244,6 +31344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62896505,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30268,6 +31369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63015805,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -30292,6 +31394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62164312,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -30316,6 +31419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58725854,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30340,6 +31444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63138030,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -30364,6 +31469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63207337,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30388,6 +31494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63241328,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30412,6 +31519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63213391,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30436,6 +31544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63309644,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -30460,6 +31569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63212081,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -30484,6 +31594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63423360,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -30508,6 +31619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63517197,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -30532,6 +31644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63514430,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30556,6 +31669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63531953,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -30580,6 +31694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63555848,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -30604,6 +31719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63571650,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30628,6 +31744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63404615,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -30652,6 +31769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63614200,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -30676,6 +31794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62938197,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30700,6 +31819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63604049,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -30724,6 +31844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63603973,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -30748,6 +31869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63707654,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -30772,6 +31894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63784851,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -30796,6 +31919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63603976,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -30820,6 +31944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63647555,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30844,6 +31969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58838709,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30868,6 +31994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63879127,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -30892,6 +32019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63934709,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30916,6 +32044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63801429,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30940,6 +32069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63996465,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -30964,6 +32094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63753234,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -30988,6 +32119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63876223,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -31012,6 +32144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58707806,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31036,6 +32169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63994975,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31060,6 +32194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58972757,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31084,6 +32219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63887212,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -31108,6 +32244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63470055,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31132,6 +32269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57946830,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31156,6 +32294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64051649,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31180,6 +32319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63965181,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -31204,6 +32344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59057440,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31228,6 +32369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64034894,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31252,6 +32394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63619617,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -31276,6 +32419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63499082,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -31300,6 +32444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63509584,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -31324,6 +32469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59442652,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31348,6 +32494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64005132,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31372,6 +32519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58531809,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -31396,6 +32544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64031248,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -31420,6 +32569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58417863,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -31444,6 +32594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64181054,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31468,6 +32619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64213375,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31492,6 +32644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64313711,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31516,6 +32669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58636063,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31540,6 +32694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64560496,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -31564,6 +32719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64553348,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31588,6 +32744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64569077,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -31612,6 +32769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64664920,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31636,6 +32794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64483552,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -31660,6 +32819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64733028,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -31684,6 +32844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62212647,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31708,6 +32869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63441858,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -31732,6 +32894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63640429,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -31756,6 +32919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62551662,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -31780,6 +32944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59427157,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -31804,6 +32969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61230031,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31828,6 +32994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64754751,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -31852,6 +33019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62919573,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31876,6 +33044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64182044,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -31900,6 +33069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63888425,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31924,6 +33094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64394878,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -31948,6 +33119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64788118,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -31972,6 +33144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63451699,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -31996,6 +33169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63878585,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32020,6 +33194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59742778,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -32044,6 +33219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63902700,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32068,6 +33244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63936026,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32092,6 +33269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64158044,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32116,6 +33294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61752362,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32140,6 +33319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63508429,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32164,6 +33344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61952970,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32188,6 +33369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63647805,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32212,6 +33394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63948152,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32236,6 +33419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60652657,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -32260,6 +33444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59106095,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -32284,6 +33469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57606647,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32308,6 +33494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63386291,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32332,6 +33519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63603993,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32356,6 +33544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63888130,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32380,6 +33569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64570995,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -32404,6 +33594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64113300,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32428,6 +33619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59786080,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32452,6 +33644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64601317,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32476,6 +33669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63829125,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32500,6 +33694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63783837,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32524,6 +33719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57968906,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32548,6 +33744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63160735,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32572,6 +33769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59014087,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32596,6 +33794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58788005,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32620,6 +33819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58777971,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32644,6 +33844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60626117,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32668,6 +33869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63868767,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -32692,6 +33894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60150008,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32716,6 +33919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63627944,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -32740,6 +33944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59467896,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -32764,6 +33969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63559957,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32788,6 +33994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58890502,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32812,6 +34019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62524015,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -32836,6 +34044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64233461,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -32860,6 +34069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59465262,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32884,6 +34094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58519254,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32908,6 +34119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61227536,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32932,6 +34144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61425516,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -32956,6 +34169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60899941,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -32980,6 +34194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63562543,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33004,6 +34219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62811052,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33028,6 +34244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62015729,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33052,6 +34269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63014561,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -33076,6 +34294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63585221,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33100,6 +34319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63585312,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33124,6 +34344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59114491,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -33148,6 +34369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63967196,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -33172,6 +34394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63732442,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33196,6 +34419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63925654,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -33220,6 +34444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61268297,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -33244,6 +34469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63561500,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33268,6 +34494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63509500,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33292,6 +34519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64542113,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -33316,6 +34544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58304605,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33340,6 +34569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63203514,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -33364,6 +34594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63522959,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33388,6 +34619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63453500,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -33412,6 +34644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60473340,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33436,6 +34669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59757119,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33460,6 +34694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61027834,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33484,6 +34719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63713707,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33508,6 +34744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63596137,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -33532,6 +34769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64244901,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33556,6 +34794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61386398,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33580,6 +34819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64528016,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -33604,6 +34844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63213188,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -33628,6 +34869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64231211,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33652,6 +34894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63490119,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33676,6 +34919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64436105,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -33700,6 +34944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61414952,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33724,6 +34969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63051212,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33748,6 +34994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63955741,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -33772,6 +35019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61288863,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -33796,6 +35044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63605673,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33820,6 +35069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63960732,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33844,6 +35094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58209332,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -33868,6 +35119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63578149,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -33892,6 +35144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61444453,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33916,6 +35169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60367602,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -33940,6 +35194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64171255,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -33964,6 +35219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63390626,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -33988,6 +35244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63432882,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -34012,6 +35269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64591355,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -34036,6 +35294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63339174,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34060,6 +35319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63746985,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34084,6 +35344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61293829,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -34108,6 +35369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58640202,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -34132,6 +35394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60901719,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -34156,6 +35419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63712577,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -34180,6 +35444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63813407,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -34204,6 +35469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64097184,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34228,6 +35494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59003788,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34252,6 +35519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64524643,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34276,6 +35544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63593854,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34300,6 +35569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63831853,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34324,6 +35594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58816399,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34348,6 +35619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63606324,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34372,6 +35644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64674091,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -34396,6 +35669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62728946,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34420,6 +35694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61396629,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -34444,6 +35719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63751934,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34468,6 +35744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63582241,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -34492,6 +35769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60687904,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34516,6 +35794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60697420,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34540,6 +35819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64248043,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34564,6 +35844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63442704,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -34588,6 +35869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60324916,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34612,6 +35894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63549742,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -34636,6 +35919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59679398,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34660,6 +35944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63462759,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -34684,6 +35969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63744048,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34708,6 +35994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61803848,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34732,6 +36019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62870608,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34756,6 +36044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62096189,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34780,6 +36069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64134737,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34804,6 +36094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64175450,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -34828,6 +36119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64395119,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -34852,6 +36144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63575627,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -34876,6 +36169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64457029,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34900,6 +36194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63858009,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34924,6 +36219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63618414,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34948,6 +36244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63849164,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -34972,6 +36269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63832603,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -34996,6 +36294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58537407,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35020,6 +36319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58562460,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -35044,6 +36344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58672346,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35068,6 +36369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58914007,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -35092,6 +36394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58962376,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35116,6 +36419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59073784,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35140,6 +36444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59074088,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35164,6 +36469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59197137,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35188,6 +36494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59153035,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35212,6 +36519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59237342,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35236,6 +36544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58969078,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35260,6 +36569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59293268,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35284,6 +36594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59359310,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35308,6 +36619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59353955,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -35332,6 +36644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58676812,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -35356,6 +36669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59494739,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -35380,6 +36694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59560437,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -35404,6 +36719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59766990,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35428,6 +36744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58622456,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -35452,6 +36769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59889850,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -35476,6 +36794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59912341,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35500,6 +36819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59908258,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -35524,6 +36844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59904633,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35548,6 +36869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59912819,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35572,6 +36894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59977035,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -35596,6 +36919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60202617,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35620,6 +36944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60422038,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -35644,6 +36969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60427829,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -35668,6 +36994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60439301,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -35692,6 +37019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60551502,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35716,6 +37044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60620322,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -35740,6 +37069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59364585,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35764,6 +37094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60736210,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35788,6 +37119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60751265,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35812,6 +37144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60800639,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35836,6 +37169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60802704,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35860,6 +37194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60795987,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35884,6 +37219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59794944,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -35908,6 +37244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59119266,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -35932,6 +37269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60361741,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -35956,6 +37294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61127805,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -35980,6 +37319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59239307,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36004,6 +37344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61195775,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36028,6 +37369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61201980,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -36052,6 +37394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61069758,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36076,6 +37419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61290572,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -36100,6 +37444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59267062,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36124,6 +37469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61472439,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36148,6 +37494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61514345,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36172,6 +37519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61447548,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36196,6 +37544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61662982,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36220,6 +37569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61635530,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36244,6 +37594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61770116,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -36268,6 +37619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58219735,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -36292,6 +37644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61784938,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36316,6 +37669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61875215,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36340,6 +37694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61885389,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -36364,6 +37719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61799812,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -36388,6 +37744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59907480,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36412,6 +37769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61942736,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36436,6 +37794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61872219,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -36460,6 +37819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59354432,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36484,6 +37844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59606187,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -36508,6 +37869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62137173,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36532,6 +37894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62199476,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -36556,6 +37919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62272810,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36580,6 +37944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59476463,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36604,6 +37969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62313671,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36628,6 +37994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62248178,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36652,6 +38019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62178177,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36676,6 +38044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62402533,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36700,6 +38069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62409267,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36724,6 +38094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62440525,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36748,6 +38119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62426349,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -36772,6 +38144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58454729,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -36796,6 +38169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62518776,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -36820,6 +38194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62519029,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -36844,6 +38219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62505624,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36868,6 +38244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60938883,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -36892,6 +38269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62382120,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36916,6 +38294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60445910,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36940,6 +38319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62629793,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36964,6 +38344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62627418,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -36988,6 +38369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62761236,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37012,6 +38394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62839343,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37036,6 +38419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62896723,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37060,6 +38444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62925667,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -37084,6 +38469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62941812,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -37108,6 +38494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62637869,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -37132,6 +38519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62939504,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37156,6 +38544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62976583,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37180,6 +38569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59591860,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -37204,6 +38594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59028225,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37228,6 +38619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63100796,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37252,6 +38644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63146065,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37276,6 +38669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63095173,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37300,6 +38694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63172955,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37324,6 +38719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63015340,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37348,6 +38744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63068206,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -37372,6 +38769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63213624,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37396,6 +38794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63267129,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -37420,6 +38819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63094497,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37444,6 +38844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58424026,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -37468,6 +38869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62609267,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37492,6 +38894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60653624,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37516,6 +38919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60988805,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37540,6 +38944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63562384,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37564,6 +38969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58751095,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37588,6 +38994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63451623,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37612,6 +39019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62316765,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -37636,6 +39044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63594195,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -37660,6 +39069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63617525,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37684,6 +39094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63282475,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37708,6 +39119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63626979,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -37732,6 +39144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63790262,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -37756,6 +39169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60607450,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37780,6 +39194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63818113,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37804,6 +39219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63647534,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -37828,6 +39244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61586385,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -37852,6 +39269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63923125,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37876,6 +39294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61911772,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -37900,6 +39319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63651640,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37924,6 +39344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63736712,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -37948,6 +39369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63774509,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37972,6 +39394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58383464,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -37996,6 +39419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58643987,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38020,6 +39444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64051636,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -38044,6 +39469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64077352,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38068,6 +39494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63830353,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38092,6 +39519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60478898,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38116,6 +39544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63556914,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -38140,6 +39569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59138108,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38164,6 +39594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62832527,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38188,6 +39619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63529325,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38212,6 +39644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63975618,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38236,6 +39669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64141621,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38260,6 +39694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64157453,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38284,6 +39719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60465073,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38308,6 +39744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61838572,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -38332,6 +39769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64167328,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38356,6 +39794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64213902,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -38380,6 +39819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64362689,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38404,6 +39844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64452352,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38428,6 +39869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58709724,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38452,6 +39894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64544855,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38476,6 +39919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64600045,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38500,6 +39944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64663995,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -38524,6 +39969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64112684,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -38548,6 +39994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62705924,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38572,6 +40019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64685283,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -38596,6 +40044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64477987,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38620,6 +40069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63343742,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38644,6 +40094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64751014,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -38668,6 +40119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64759964,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38692,6 +40144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64754517,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -38716,6 +40169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62959730,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38740,6 +40194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63878394,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38764,6 +40219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64590229,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38788,6 +40244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63688695,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38812,6 +40269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64164227,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -38836,6 +40294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58835674,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38860,6 +40319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64179841,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -38884,6 +40344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63507436,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -38908,6 +40369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64472730,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -38932,6 +40394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64761945,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -38956,6 +40419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63094744,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -38980,6 +40444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63604147,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39004,6 +40469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63708788,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39028,6 +40494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64642918,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39052,6 +40519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63874897,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -39076,6 +40544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64671116,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -39100,6 +40569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64202346,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -39124,6 +40594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63436031,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -39148,6 +40619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63510627,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -39172,6 +40644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58709356,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39196,6 +40669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58557699,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39220,6 +40694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63647512,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -39244,6 +40719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63857926,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39268,6 +40744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63433917,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -39292,6 +40769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59108593,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39316,6 +40794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62995820,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39340,6 +40819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63635991,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39364,6 +40844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60444722,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -39388,6 +40869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59137683,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39412,6 +40894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61091856,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39436,6 +40919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59822126,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -39460,6 +40944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58620350,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -39484,6 +40969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58664726,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -39508,6 +40994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64634066,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -39532,6 +41019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62375258,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39556,6 +41044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63980171,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -39580,6 +41069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63562022,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39604,6 +41094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62787299,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39628,6 +41119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64248432,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -39652,6 +41144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58355751,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39676,6 +41169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60718623,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39700,6 +41194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61809926,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -39724,6 +41219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59166212,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -39748,6 +41244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64192279,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -39772,6 +41269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64260120,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -39796,6 +41294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62870326,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -39820,6 +41319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64711946,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -39844,6 +41344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61237127,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -39868,6 +41369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59654030,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39892,6 +41394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59282939,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39916,6 +41419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63719929,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39940,6 +41444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63147817,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -39964,6 +41469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64532999,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -39988,6 +41494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63682352,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -40012,6 +41519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63793087,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -40036,6 +41544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64033994,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -40060,6 +41569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63333356,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -40084,6 +41594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62811234,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40108,6 +41619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60166887,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -40132,6 +41644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63357196,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40156,6 +41669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61973943,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -40180,6 +41694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63783829,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40204,6 +41719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61673615,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40228,6 +41744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63864717,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40252,6 +41769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61195267,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40276,6 +41794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60147951,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40300,6 +41819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63581051,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -40324,6 +41844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58171805,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -40348,6 +41869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62425364,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -40372,6 +41894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60370920,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -40396,6 +41919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63496014,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -40420,6 +41944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61432393,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -40444,6 +41969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63904509,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -40468,6 +41994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63529343,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -40492,6 +42019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58344108,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40516,6 +42044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63325811,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -40540,6 +42069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63605612,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -40564,6 +42094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58237522,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -40588,6 +42119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63196156,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -40612,6 +42144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63766722,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40636,6 +42169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63571486,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -40660,6 +42194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59633007,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40684,6 +42219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61702203,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40708,6 +42244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64593586,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40732,6 +42269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63055927,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40756,6 +42294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64191173,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40780,6 +42319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63241103,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -40804,6 +42344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63519744,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -40828,6 +42369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64247864,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -40852,6 +42394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59541167,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -40876,6 +42419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63485816,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -40900,6 +42444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62839868,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40924,6 +42469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63485592,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -40948,6 +42494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64135636,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40972,6 +42519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64551928,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -40996,6 +42544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63424521,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41020,6 +42569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58938872,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41044,6 +42594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63530101,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41068,6 +42619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61848808,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -41092,6 +42644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64464755,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -41116,6 +42669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63755890,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41140,6 +42694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63705740,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41164,6 +42719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63679560,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41188,6 +42744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58170683,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -41212,6 +42769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58267408,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -41236,6 +42794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58923183,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -41260,6 +42819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59140925,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41284,6 +42844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59739842,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -41308,6 +42869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59761751,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41332,6 +42894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60109556,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -41356,6 +42919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60206865,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -41380,6 +42944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59038874,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -41404,6 +42969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60602952,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41428,6 +42994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60538073,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41452,6 +43019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60994191,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41476,6 +43044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59809637,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -41500,6 +43069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61126692,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41524,6 +43094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61241416,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41548,6 +43119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61305208,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41572,6 +43144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61437046,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41596,6 +43169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59968100,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41620,6 +43194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60105228,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41644,6 +43219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61810712,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41668,6 +43244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61889732,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -41692,6 +43269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61867901,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41716,6 +43294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61917599,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -41740,6 +43319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59217908,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -41764,6 +43344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61924299,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -41788,6 +43369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61977127,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41812,6 +43394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62199103,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41836,6 +43419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62174621,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -41860,6 +43444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60091629,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -41884,6 +43469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62392322,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -41908,6 +43494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62423258,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41932,6 +43519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62566994,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41956,6 +43544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62688540,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -41980,6 +43569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62600215,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42004,6 +43594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62801800,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42028,6 +43619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61621009,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42052,6 +43644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62825678,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42076,6 +43669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61660021,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42100,6 +43694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62662427,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42124,6 +43719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62837160,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42148,6 +43744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61171971,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -42172,6 +43769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62843184,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -42196,6 +43794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59630907,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42220,6 +43819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62975844,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42244,6 +43844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62968140,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42268,6 +43869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58569242,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42292,6 +43894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58709528,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -42316,6 +43919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58437717,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42340,6 +43944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63094888,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42364,6 +43969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63121563,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -42388,6 +43994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58519033,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42412,6 +44019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63213014,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42436,6 +44044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61427478,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -42460,6 +44069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61436945,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -42484,6 +44094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63482115,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42508,6 +44119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63518083,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -42532,6 +44144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63572592,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -42556,6 +44169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61948489,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42580,6 +44194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63630333,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -42604,6 +44219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63682602,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42628,6 +44244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64050014,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -42652,6 +44269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63640942,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42676,6 +44294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58447100,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -42700,6 +44319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63691919,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42724,6 +44344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63607314,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42748,6 +44369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58966365,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42772,6 +44394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63600990,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42796,6 +44419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64150364,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -42820,6 +44444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64249103,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42844,6 +44469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64302017,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -42868,6 +44494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64383851,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -42892,6 +44519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64492665,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -42916,6 +44544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61715515,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42940,6 +44569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64590717,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -42964,6 +44594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64588292,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -42988,6 +44619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64034449,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43012,6 +44644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60708375,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43036,6 +44669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64625751,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43060,6 +44694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60669304,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43084,6 +44719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62811958,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43108,6 +44744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62483587,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43132,6 +44769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63738919,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43156,6 +44794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63152139,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43180,6 +44819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63884854,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43204,6 +44844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60205923,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43228,6 +44869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63026323,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43252,6 +44894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62343944,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43276,6 +44919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57785962,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43300,6 +44944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58742815,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43324,6 +44969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63802832,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43348,6 +44994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63148730,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43372,6 +45019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60567264,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43396,6 +45044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58573105,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43420,6 +45069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59338237,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -43444,6 +45094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61800168,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43468,6 +45119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63490270,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43492,6 +45144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62352340,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43516,6 +45169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64476288,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43540,6 +45194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59535416,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43564,6 +45219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60475775,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43588,6 +45244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64464858,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -43612,6 +45269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58562134,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -43636,6 +45294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63490766,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43660,6 +45319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60901866,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43684,6 +45344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63734720,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43708,6 +45369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64436131,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43732,6 +45394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61926182,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -43756,6 +45419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61144039,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43780,6 +45444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58630573,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -43804,6 +45469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64329863,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -43828,6 +45494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60264496,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -43852,6 +45519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63866511,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43876,6 +45544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59897787,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43900,6 +45569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64050265,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -43924,6 +45594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61976092,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43948,6 +45619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64208589,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -43972,6 +45644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63018166,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -43996,6 +45669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61715215,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44020,6 +45694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63721414,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44044,6 +45719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58824521,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44068,6 +45744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64708857,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44092,6 +45769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62263419,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44116,6 +45794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62263353,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44140,6 +45819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63572239,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44164,6 +45844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58857798,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44188,6 +45869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63799740,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44212,6 +45894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62660169,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44236,6 +45919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63722199,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44260,6 +45944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62815934,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44284,6 +45969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60286556,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -44308,6 +45994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62354088,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44332,6 +46019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64772222,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -44356,6 +46044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60845897,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -44380,6 +46069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61293590,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -44404,6 +46094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58522544,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -44428,6 +46119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63495843,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44452,6 +46144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63556961,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44476,6 +46169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61196918,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -44500,6 +46194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63134263,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44524,6 +46219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60282759,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44548,6 +46244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63756546,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44572,6 +46269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63661803,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44596,6 +46294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63157493,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -44620,6 +46319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58740513,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -44644,6 +46344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63155646,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44668,6 +46369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63495185,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44692,6 +46394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64044191,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44716,6 +46419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64088026,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44740,6 +46444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62163665,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -44764,6 +46469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61923679,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44788,6 +46494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63721907,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -44812,6 +46519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58925465,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44836,6 +46544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64179547,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44860,6 +46569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63464090,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -44884,6 +46594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63818833,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -44908,6 +46619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61899245,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -44932,6 +46644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63904211,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -44956,6 +46669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63583512,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -44980,6 +46694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62538008,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45004,6 +46719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61138934,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45028,6 +46744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63400008,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45052,6 +46769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61210487,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45076,6 +46794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61504844,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45100,6 +46819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62431083,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45124,6 +46844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62204897,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45148,6 +46869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62368678,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45172,6 +46894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58156938,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45196,6 +46919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63789772,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45220,6 +46944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62944560,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45244,6 +46969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63538212,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45268,6 +46994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63590359,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45292,6 +47019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58573063,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45316,6 +47044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58621460,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45340,6 +47069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59117570,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45364,6 +47094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59485525,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -45388,6 +47119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59559209,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45412,6 +47144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59566893,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45436,6 +47169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60110447,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45460,6 +47194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60147230,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45484,6 +47219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60193052,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45508,6 +47244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60425992,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45532,6 +47269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60444784,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45556,6 +47294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60619387,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45580,6 +47319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60613808,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45604,6 +47344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60679208,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45628,6 +47369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60860252,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45652,6 +47394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60852065,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45676,6 +47419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57663444,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45700,6 +47444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60440096,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -45724,6 +47469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61769453,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45748,6 +47494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58355926,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45772,6 +47519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61840825,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45796,6 +47544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61836473,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45820,6 +47569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61859344,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45844,6 +47594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59420389,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45868,6 +47619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62213843,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -45892,6 +47644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61347510,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45916,6 +47669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62403095,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45940,6 +47694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62404162,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -45964,6 +47719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62402470,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -45988,6 +47744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62391377,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -46012,6 +47769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62410175,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -46036,6 +47794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58369349,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46060,6 +47819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62449261,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46084,6 +47844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62507015,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46108,6 +47869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62472202,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46132,6 +47894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62609385,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46156,6 +47919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62794607,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46180,6 +47944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62840609,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -46204,6 +47969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62847691,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46228,6 +47994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59171545,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46252,6 +48019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62895044,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46276,6 +48044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62968031,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46300,6 +48069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62955931,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46324,6 +48094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58807079,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46348,6 +48119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63045215,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -46372,6 +48144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63037456,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -46396,6 +48169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63079269,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -46420,6 +48194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63109854,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -46444,6 +48219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63213189,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46468,6 +48244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63395811,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46492,6 +48269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63437256,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46516,6 +48294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60298117,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46540,6 +48319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62295502,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -46564,6 +48344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63701039,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -46588,6 +48369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63274254,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -46612,6 +48394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63812711,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46636,6 +48419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63824479,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46660,6 +48444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60398235,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46684,6 +48469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63605182,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46708,6 +48494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63590256,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46732,6 +48519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63651375,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46756,6 +48544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63528382,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -46780,6 +48569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63679507,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46804,6 +48594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62424275,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46828,6 +48619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63585133,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46852,6 +48644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64113463,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46876,6 +48669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62521442,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -46900,6 +48694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64378434,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46924,6 +48719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64431547,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -46948,6 +48744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64436458,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -46972,6 +48769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63447286,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -46996,6 +48794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62514351,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47020,6 +48819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64710768,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -47044,6 +48844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59522854,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47068,6 +48869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63892927,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47092,6 +48894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64562454,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -47116,6 +48919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63559882,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -47140,6 +48944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64562460,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -47164,6 +48969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64428686,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47188,6 +48994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63325854,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -47212,6 +49019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62272080,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -47236,6 +49044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63946511,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -47260,6 +49069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63946512,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -47284,6 +49094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62165484,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -47308,6 +49119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62857023,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47332,6 +49144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62857027,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47356,6 +49169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63662298,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47380,6 +49194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58783940,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47404,6 +49219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64167246,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47428,6 +49244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63782728,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47452,6 +49269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59143569,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47476,6 +49294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58516213,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47500,6 +49319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58825988,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47524,6 +49344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59208506,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -47548,6 +49369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63313849,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -47572,6 +49394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63306991,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -47596,6 +49419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58788648,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47620,6 +49444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58863573,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -47644,6 +49469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62352341,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -47668,6 +49494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61851052,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -47692,6 +49519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62850640,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -47716,6 +49544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63135227,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -47740,6 +49569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58311756,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -47764,6 +49594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61524054,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -47788,6 +49619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62932732,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -47812,6 +49644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61017286,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -47836,6 +49669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58393067,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -47860,6 +49694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63920539,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -47884,6 +49719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62788773,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -47908,6 +49744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63560264,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -47932,6 +49769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63198804,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -47956,6 +49794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62609387,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -47980,6 +49819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63267107,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48004,6 +49844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64752768,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -48028,6 +49869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63812725,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48052,6 +49894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63522546,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48076,6 +49919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61664150,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -48100,6 +49944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58777035,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -48124,6 +49969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63409036,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48148,6 +49994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63557963,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48172,6 +50019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62805492,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48196,6 +50044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63656494,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48220,6 +50069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62871974,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -48244,6 +50094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63891622,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48268,6 +50119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61109800,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -48292,6 +50144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62688314,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -48316,6 +50169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59892214,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48340,6 +50194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62887483,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -48364,6 +50219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59938060,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48388,6 +50244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64634634,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -48412,6 +50269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60692153,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48436,6 +50294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64191318,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48460,6 +50319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59447319,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48484,6 +50344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61413839,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48508,6 +50369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63229030,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48532,6 +50394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63162117,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48556,6 +50419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59218891,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48580,6 +50444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63462195,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48604,6 +50469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63892561,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48628,6 +50494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64614526,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48652,6 +50519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63814281,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -48676,6 +50544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62824824,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48700,6 +50569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64487346,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48724,6 +50594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60184122,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48748,6 +50619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63988100,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48772,6 +50644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61999383,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -48796,6 +50669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64188982,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48820,6 +50694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63084920,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -48844,6 +50719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61210551,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48868,6 +50744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63970734,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -48892,6 +50769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63425527,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48916,6 +50794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64280947,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48940,6 +50819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63487484,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -48964,6 +50844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58367131,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -48988,6 +50869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61923413,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -49012,6 +50894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64285760,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -49036,6 +50919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63884677,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -49060,6 +50944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58692487,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49084,6 +50969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59083695,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49108,6 +50994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59131977,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49132,6 +51019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59303525,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49156,6 +51044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59605742,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -49180,6 +51069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59899606,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49204,6 +51094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60149948,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49228,6 +51119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60189696,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49252,6 +51144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60433288,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -49276,6 +51169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59051883,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -49300,6 +51194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58905364,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49324,6 +51219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60909052,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49348,6 +51244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60932541,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -49372,6 +51269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60512996,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -49396,6 +51294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61415682,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49420,6 +51319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61386574,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49444,6 +51344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61420185,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49468,6 +51369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61476731,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49492,6 +51394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61638634,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49516,6 +51419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61810048,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49540,6 +51444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61891954,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49564,6 +51469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58932549,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49588,6 +51494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62223284,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49612,6 +51519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62335591,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -49636,6 +51544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58272907,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -49660,6 +51569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58527364,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -49684,6 +51594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59984357,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -49708,6 +51619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62499838,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49732,6 +51644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62594461,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49756,6 +51669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62637283,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49780,6 +51694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62786997,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49804,6 +51719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62786978,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49828,6 +51744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58971660,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49852,6 +51769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63050765,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49876,6 +51794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63349836,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49900,6 +51819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59536205,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -49924,6 +51844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63523188,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -49948,6 +51869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63682568,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -49972,6 +51894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63756449,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -49996,6 +51919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60176247,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50020,6 +51944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63956684,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50044,6 +51969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63812631,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50068,6 +51994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63481413,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50092,6 +52019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63539174,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50116,6 +52044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62969723,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50140,6 +52069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64115210,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50164,6 +52094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64111223,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -50188,6 +52119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64350417,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -50212,6 +52144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59138590,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50236,6 +52169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61617671,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -50260,6 +52194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63583806,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50284,6 +52219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61419670,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -50308,6 +52244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60708625,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50332,6 +52269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63577262,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50356,6 +52294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63681943,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50380,6 +52319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64131090,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50404,6 +52344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63349728,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -50428,6 +52369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63700187,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50452,6 +52394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58452292,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50476,6 +52419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62850073,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50500,6 +52444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61952715,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50524,6 +52469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63692985,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50548,6 +52494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64429829,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -50572,6 +52519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61354270,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50596,6 +52544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62499896,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50620,6 +52569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59202463,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50644,6 +52594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60692406,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -50668,6 +52619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60856169,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50692,6 +52644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63876873,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50716,6 +52669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62589932,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50740,6 +52694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61907162,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -50764,6 +52719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60307536,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50788,6 +52744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60926256,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -50812,6 +52769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60131952,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50836,6 +52794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63424787,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -50860,6 +52819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63581283,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50884,6 +52844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60700894,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50908,6 +52869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63217435,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50932,6 +52894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63584121,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -50956,6 +52919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61973058,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -50980,6 +52944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64345799,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -51004,6 +52969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61059859,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -51028,6 +52994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63895787,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51052,6 +53019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63722545,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -51076,6 +53044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62173645,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -51100,6 +53069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63498516,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51124,6 +53094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61446765,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -51148,6 +53119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63032164,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51172,6 +53144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59927480,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51196,6 +53169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62897769,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -51220,6 +53194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64482494,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -51244,6 +53219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58266025,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -51268,6 +53244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61838388,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51292,6 +53269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62835040,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51316,6 +53294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61948879,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51340,6 +53319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62887484,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51364,6 +53344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61756732,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -51388,6 +53369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64255483,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -51412,6 +53394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63927579,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51436,6 +53419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58151985,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51460,6 +53444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63344044,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51484,6 +53469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58969957,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51508,6 +53494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63557088,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51532,6 +53519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63464175,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51556,6 +53544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64123114,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -51580,6 +53569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59884401,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -51604,6 +53594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61425823,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -51628,6 +53619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63574954,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51652,6 +53644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63480205,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51676,6 +53669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61658176,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51700,6 +53694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64326682,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -51724,6 +53719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58846157,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51748,6 +53744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60791316,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -51772,6 +53769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63574349,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51796,6 +53794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62794510,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51820,6 +53819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62762259,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -51844,6 +53844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63511055,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -51868,6 +53869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59366415,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -51892,6 +53894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64406443,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -51916,6 +53919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58060911,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -51940,6 +53944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63649872,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -51964,6 +53969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63463770,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -51988,6 +53994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58571370,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52012,6 +54019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58300787,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52036,6 +54044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59158841,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52060,6 +54069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60171652,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52084,6 +54094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60433678,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52108,6 +54119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60425439,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -52132,6 +54144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60842935,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52156,6 +54169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60985574,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52180,6 +54194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60429841,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -52204,6 +54219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61438126,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52228,6 +54244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61804073,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52252,6 +54269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61723879,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52276,6 +54294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61953314,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -52300,6 +54319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60915663,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52324,6 +54344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61966428,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52348,6 +54369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61281337,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52372,6 +54394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60836432,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52396,6 +54419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58969223,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52420,6 +54444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62705349,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52444,6 +54469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62728531,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52468,6 +54494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59509105,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52492,6 +54519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62774043,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52516,6 +54544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63086573,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -52540,6 +54569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63151573,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -52564,6 +54594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63163593,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52588,6 +54619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63335001,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52612,6 +54644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63447965,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52636,6 +54669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63523714,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -52660,6 +54694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58508723,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52684,6 +54719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63845947,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -52708,6 +54744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63877816,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52732,6 +54769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59089760,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52756,6 +54794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60321306,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52780,6 +54819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63567528,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -52804,6 +54844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59031891,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52828,6 +54869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63875600,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -52852,6 +54894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64006501,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -52876,6 +54919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64166734,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52900,6 +54944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64191206,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52924,6 +54969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58954665,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -52948,6 +54994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64324541,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -52972,6 +55019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64496376,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -52996,6 +55044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63080032,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -53020,6 +55069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63466318,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53044,6 +55094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63708853,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53068,6 +55119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63683509,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -53092,6 +55144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58814692,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53116,6 +55169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62275678,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53140,6 +55194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59873334,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53164,6 +55219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63390312,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -53188,6 +55244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59718612,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -53212,6 +55269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60820761,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -53236,6 +55294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63909984,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53260,6 +55319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60534277,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -53284,6 +55344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64123333,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53308,6 +55369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58745679,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53332,6 +55394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63692582,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -53356,6 +55419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59450779,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -53380,6 +55444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61952450,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -53404,6 +55469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60426522,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -53428,6 +55494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61953557,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -53452,6 +55519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58311400,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -53476,6 +55544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62048486,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -53500,6 +55569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63961477,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -53524,6 +55594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59750382,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -53548,6 +55619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63453453,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -53572,6 +55644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57632033,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -53596,6 +55669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58616692,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -53620,6 +55694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59937792,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -53644,6 +55719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63732129,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53668,6 +55744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60144049,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -53692,6 +55769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60714252,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53716,6 +55794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60862386,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -53740,6 +55819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62388331,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -53764,6 +55844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63273724,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53788,6 +55869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59468858,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53812,6 +55894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61236165,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -53836,6 +55919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62528446,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53860,6 +55944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59470001,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53884,6 +55969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61523095,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -53908,6 +55994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60585470,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -53932,6 +56019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63016704,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -53956,6 +56044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58335632,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -53980,6 +56069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64079488,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54004,6 +56094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62453515,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54028,6 +56119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62850046,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -54052,6 +56144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64383966,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54076,6 +56169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60254388,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -54100,6 +56194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62840843,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -54124,6 +56219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62453792,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54148,6 +56244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61952195,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -54172,6 +56269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60735433,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -54196,6 +56294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62818000,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54220,6 +56319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61272828,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54244,6 +56344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62091413,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54268,6 +56369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62437596,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54292,6 +56394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62016583,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54316,6 +56419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62909222,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54340,6 +56444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60920256,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54364,6 +56469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60397499,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54388,6 +56494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63086574,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -54412,6 +56519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58564405,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -54436,6 +56544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63673173,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54460,6 +56569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63868841,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -54484,6 +56594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61018792,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -54508,6 +56619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63827128,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54532,6 +56644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63878108,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54556,6 +56669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63877879,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54580,6 +56694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63670024,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -54604,6 +56719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58514163,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -54628,6 +56744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58707366,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54652,6 +56769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58787949,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -54676,6 +56794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59519466,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54700,6 +56819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60202162,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -54724,6 +56844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59936587,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -54748,6 +56869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61420090,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -54772,6 +56894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59678666,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -54796,6 +56919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61774161,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -54820,6 +56944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62283849,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54844,6 +56969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62423069,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54868,6 +56994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62556702,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54892,6 +57019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62589677,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54916,6 +57044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62668060,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54940,6 +57069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62778286,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -54964,6 +57094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62897496,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -54988,6 +57119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62918353,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55012,6 +57144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62940136,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55036,6 +57169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58486308,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55060,6 +57194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62927488,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55084,6 +57219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62840642,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -55108,6 +57244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63156753,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55132,6 +57269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63452831,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55156,6 +57294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63446817,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -55180,6 +57319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63523117,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -55204,6 +57344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63559893,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55228,6 +57369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63446516,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55252,6 +57394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62629798,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55276,6 +57419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63722873,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55300,6 +57444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62630024,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55324,6 +57469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63773871,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55348,6 +57494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63640909,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55372,6 +57519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63847466,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55396,6 +57544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58663550,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -55420,6 +57569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62186520,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55444,6 +57594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64062744,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55468,6 +57619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64192018,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -55492,6 +57644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64229448,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55516,6 +57669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64634117,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55540,6 +57694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63867656,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55564,6 +57719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61086267,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55588,6 +57744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64460754,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55612,6 +57769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64562612,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55636,6 +57794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62010884,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -55660,6 +57819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63324423,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55684,6 +57844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63195069,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55708,6 +57869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61059857,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55732,6 +57894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60586858,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -55756,6 +57919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61975775,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -55780,6 +57944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59269204,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55804,6 +57969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63317050,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55828,6 +57994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59472042,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55852,6 +58019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61837241,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -55876,6 +58044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61569347,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -55900,6 +58069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61716048,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -55924,6 +58094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61207161,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -55948,6 +58119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63862909,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -55972,6 +58144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59615149,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -55996,6 +58169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61068144,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -56020,6 +58194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64102114,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -56044,6 +58219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59899133,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56068,6 +58244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62272345,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56092,6 +58269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59775420,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -56116,6 +58294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63035084,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -56140,6 +58319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61144114,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56164,6 +58344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61511084,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56188,6 +58369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58807177,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -56212,6 +58394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60530856,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56236,6 +58419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60299565,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -56260,6 +58444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64466473,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -56284,6 +58469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60144641,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56308,6 +58494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60066702,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56332,6 +58519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62514355,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56356,6 +58544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64144285,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56380,6 +58569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59849952,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56404,6 +58594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63968028,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56428,6 +58619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64512436,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -56452,6 +58644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63572765,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56476,6 +58669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63241480,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56500,6 +58694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61561058,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56524,6 +58719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59198723,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -56548,6 +58744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61348293,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -56572,6 +58769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60195445,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56596,6 +58794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60412988,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -56620,6 +58819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61195450,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56644,6 +58844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63416804,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56668,6 +58869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62366953,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -56692,6 +58894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59288154,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -56716,6 +58919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58553322,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -56740,6 +58944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58271422,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -56764,6 +58969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60016396,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56788,6 +58994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63878111,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56812,6 +59019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62874196,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56836,6 +59044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63887738,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56860,6 +59069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58904709,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56884,6 +59094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58432337,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56908,6 +59119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59088179,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56932,6 +59144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59140501,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -56956,6 +59169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58311958,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -56980,6 +59194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59379324,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57004,6 +59219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58352918,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -57028,6 +59244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59216168,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -57052,6 +59269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60563749,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57076,6 +59294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61012546,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57100,6 +59319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61122649,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57124,6 +59344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61371473,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57148,6 +59369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58620761,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57172,6 +59394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61464697,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57196,6 +59419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62834124,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57220,6 +59444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62833800,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57244,6 +59469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62926535,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57268,6 +59494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62909377,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57292,6 +59519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61883506,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -57316,6 +59544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63144961,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -57340,6 +59569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63235992,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57364,6 +59594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59812488,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -57388,6 +59619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62916642,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57412,6 +59644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63505775,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57436,6 +59669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63504490,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57460,6 +59694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63584275,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57484,6 +59719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63712696,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57508,6 +59744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63619317,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57532,6 +59769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63997466,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -57556,6 +59794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63876872,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57580,6 +59819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63876397,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -57604,6 +59844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64112159,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57628,6 +59869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63892943,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57652,6 +59894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64236164,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -57676,6 +59919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59623438,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57700,6 +59944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63606446,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57724,6 +59969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63639867,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57748,6 +59994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64131603,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57772,6 +60019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64301357,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -57796,6 +60044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61440303,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57820,6 +60069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61396633,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -57844,6 +60094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60433142,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -57868,6 +60119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63453181,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57892,6 +60144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62223485,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -57916,6 +60169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58825613,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -57940,6 +60194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61799961,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57964,6 +60219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63389237,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -57988,6 +60244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63914557,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -58012,6 +60269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64092603,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -58036,6 +60294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60474847,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58060,6 +60319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61919234,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58084,6 +60344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64466569,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -58108,6 +60369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62802056,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58132,6 +60394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58149274,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -58156,6 +60419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64512385,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -58180,6 +60444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64143642,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58204,6 +60469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58784231,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58228,6 +60494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63985681,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -58252,6 +60519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62167166,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -58276,6 +60544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63051040,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58300,6 +60569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59892703,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58324,6 +60594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62802950,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -58348,6 +60619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64297277,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58372,6 +60644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63368136,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58396,6 +60669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61879176,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58420,6 +60694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60606673,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58444,6 +60719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63481231,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -58468,6 +60744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63368572,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58492,6 +60769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59112689,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -58516,6 +60794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58374386,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -58540,6 +60819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63837785,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -58564,6 +60844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63578890,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58588,6 +60869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61419951,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -58612,6 +60894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63001390,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58636,6 +60919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63682169,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58660,6 +60944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59068598,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58684,6 +60969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63734706,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58708,6 +60994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63866571,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -58732,6 +61019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63682349,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -58756,6 +61044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63876385,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -58780,6 +61069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63316283,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58804,6 +61094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63719265,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58828,6 +61119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63793823,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58852,6 +61144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63719901,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -58876,6 +61169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63661343,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58900,6 +61194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63780989,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58924,6 +61219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63811089,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58948,6 +61244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58065282,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -58972,6 +61269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58214580,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -58996,6 +61294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58312189,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -59020,6 +61319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58356471,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59044,6 +61344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58412788,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59068,6 +61369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58441649,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59092,6 +61394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58456102,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59116,6 +61419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58493822,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59140,6 +61444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58459845,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59164,6 +61469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58553254,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59188,6 +61494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58556871,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59212,6 +61519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58561345,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -59236,6 +61544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58555602,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59260,6 +61569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58594870,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59284,6 +61594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58556911,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59308,6 +61619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58623438,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59332,6 +61644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58628129,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59356,6 +61669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58705482,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59380,6 +61694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58088833,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -59404,6 +61719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58782859,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59428,6 +61744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58749284,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59452,6 +61769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58785738,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59476,6 +61794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58841081,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -59500,6 +61819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58858175,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59524,6 +61844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58773703,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59548,6 +61869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58913488,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59572,6 +61894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58823360,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59596,6 +61919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58940671,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59620,6 +61944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58949231,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59644,6 +61969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58957875,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59668,6 +61994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58958253,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59692,6 +62019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58962064,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -59716,6 +62044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58963032,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59740,6 +62069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58219973,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -59764,6 +62094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58951988,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59788,6 +62119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58970106,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59812,6 +62144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58964400,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59836,6 +62169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58979371,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59860,6 +62194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58970938,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -59884,6 +62219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58982075,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59908,6 +62244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59031980,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -59932,6 +62269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59057056,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -59956,6 +62294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59105294,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -59980,6 +62319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59119508,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60004,6 +62344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59120063,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60028,6 +62369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59188574,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60052,6 +62394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59175621,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -60076,6 +62419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59059005,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -60100,6 +62444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58785197,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -60124,6 +62469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59281176,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60148,6 +62494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59303257,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60172,6 +62519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59255040,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60196,6 +62544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59327162,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -60220,6 +62569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59251129,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -60244,6 +62594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59345381,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -60268,6 +62619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59245049,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60292,6 +62644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59365668,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -60316,6 +62669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59380163,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -60340,6 +62694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59113476,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60364,6 +62719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59449122,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60388,6 +62744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59446029,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60412,6 +62769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59522660,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60436,6 +62794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59557598,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -60460,6 +62819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59573155,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60484,6 +62844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59574090,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -60508,6 +62869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58981273,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60532,6 +62894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59573242,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60556,6 +62919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59615056,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60580,6 +62944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59669317,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -60604,6 +62969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59669428,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -60628,6 +62994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59667015,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -60652,6 +63019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59637130,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60676,6 +63044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59703805,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60700,6 +63069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59703905,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -60724,6 +63094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59756785,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -60748,6 +63119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58361199,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -60772,6 +63144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59755664,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -60796,6 +63169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59795039,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -60820,6 +63194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59855931,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -60844,6 +63219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59874556,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60868,6 +63244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59911900,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -60892,6 +63269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59690706,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -60916,6 +63294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59909955,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -60940,6 +63319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59938427,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -60964,6 +63344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59938506,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -60988,6 +63369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59932656,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61012,6 +63394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59927786,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -61036,6 +63419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59938893,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -61060,6 +63444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59962733,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61084,6 +63469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59975219,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -61108,6 +63494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59991866,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61132,6 +63519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59991930,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61156,6 +63544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60098344,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61180,6 +63569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59806149,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61204,6 +63594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60140692,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61228,6 +63619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60149892,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -61252,6 +63644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59895806,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61276,6 +63669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60160880,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61300,6 +63694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60201379,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -61324,6 +63719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60152701,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -61348,6 +63744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60201716,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61372,6 +63769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60203789,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61396,6 +63794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60230572,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61420,6 +63819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60264745,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -61444,6 +63844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60264813,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -61468,6 +63869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59687173,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61492,6 +63894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60264927,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -61516,6 +63919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60283236,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61540,6 +63944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60324593,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61564,6 +63969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60331662,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -61588,6 +63994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60327199,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61612,6 +64019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60327613,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61636,6 +64044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59287810,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -61660,6 +64069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60364819,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61684,6 +64094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59375751,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61708,6 +64119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60243681,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -61732,6 +64144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60341885,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61756,6 +64169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60341886,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61780,6 +64194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60422971,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61804,6 +64219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60431383,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61828,6 +64244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60432266,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61852,6 +64269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60427187,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61876,6 +64294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60540033,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61900,6 +64319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60531198,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61924,6 +64344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60516620,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -61948,6 +64369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60515921,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -61972,6 +64394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60559355,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -61996,6 +64419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59718096,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -62020,6 +64444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60596360,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62044,6 +64469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60606319,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62068,6 +64494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60562065,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -62092,6 +64519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60433056,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62116,6 +64544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60444063,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62140,6 +64569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58174187,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62164,6 +64594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60604761,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62188,6 +64619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60604718,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62212,6 +64644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60645130,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62236,6 +64669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58405609,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62260,6 +64694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60671311,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62284,6 +64719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60679121,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -62308,6 +64744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59818242,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62332,6 +64769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58867446,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -62356,6 +64794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60696469,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62380,6 +64819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60724424,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62404,6 +64844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59689461,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -62428,6 +64869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60728217,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62452,6 +64894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60726980,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62476,6 +64919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60622190,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62500,6 +64944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58852196,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62524,6 +64969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60753039,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -62548,6 +64994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60612920,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -62572,6 +65019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60765146,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62596,6 +65044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60612578,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -62620,6 +65069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60808742,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62644,6 +65094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60811351,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62668,6 +65119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59173294,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -62692,6 +65144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60725018,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62716,6 +65169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60820942,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62740,6 +65194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60712068,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62764,6 +65219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58681030,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62788,6 +65244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60827058,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -62812,6 +65269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60845684,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62836,6 +65294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60305849,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62860,6 +65319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60818234,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -62884,6 +65344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60821631,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -62908,6 +65369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59500272,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -62932,6 +65394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60847530,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -62956,6 +65419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60853044,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -62980,6 +65444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58069481,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63004,6 +65469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60852844,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63028,6 +65494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59680006,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -63052,6 +65519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60874222,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -63076,6 +65544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60704139,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -63100,6 +65569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60852440,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63124,6 +65594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60898214,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -63148,6 +65619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58295890,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63172,6 +65644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58778166,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63196,6 +65669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60910057,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63220,6 +65694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60852357,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63244,6 +65719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60923057,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -63268,6 +65744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59851866,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63292,6 +65769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60898609,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63316,6 +65794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58611952,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63340,6 +65819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60925886,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -63364,6 +65844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60937426,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63388,6 +65869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60926601,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63412,6 +65894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60925243,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -63436,6 +65919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60932503,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63460,6 +65944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60928200,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63484,6 +65969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59774125,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63508,6 +65994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60950961,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63532,6 +66019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60943876,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63556,6 +66044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60918496,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63580,6 +66069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60958697,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -63604,6 +66094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60978074,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -63628,6 +66119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58908469,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63652,6 +66144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60926660,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -63676,6 +66169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61001485,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -63700,6 +66194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61003964,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63724,6 +66219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61012962,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63748,6 +66244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61036110,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -63772,6 +66269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61021464,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63796,6 +66294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61050446,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -63820,6 +66319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61039818,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -63844,6 +66344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61053715,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63868,6 +66369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61019591,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63892,6 +66394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58286172,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -63916,6 +66419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61052395,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63940,6 +66444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61052542,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -63964,6 +66469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61073628,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -63988,6 +66494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61078248,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -64012,6 +66519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61042085,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -64036,6 +66544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61073362,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64060,6 +66569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60954036,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64084,6 +66594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61089003,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -64108,6 +66619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60968948,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64132,6 +66644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60345586,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64156,6 +66669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61107057,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -64180,6 +66694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61090118,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64204,6 +66719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61127600,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64228,6 +66744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61092226,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64252,6 +66769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61127882,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64276,6 +66794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61136053,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64300,6 +66819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61116277,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64324,6 +66844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61137239,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -64348,6 +66869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61116532,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64372,6 +66894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61082254,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64396,6 +66919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61169701,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64420,6 +66944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58969204,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64444,6 +66969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60527691,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -64468,6 +66994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61163386,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -64492,6 +67019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61186622,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -64516,6 +67044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59282415,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -64540,6 +67069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61164207,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64564,6 +67094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61137809,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64588,6 +67119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61199529,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64612,6 +67144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61210498,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64636,6 +67169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60910862,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64660,6 +67194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58614114,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64684,6 +67219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61236838,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64708,6 +67244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61141245,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64732,6 +67269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61186676,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64756,6 +67294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61251519,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -64780,6 +67319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61282040,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64804,6 +67344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59443882,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -64828,6 +67369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58792423,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64852,6 +67394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61285200,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64876,6 +67419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61302951,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -64900,6 +67444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61165568,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64924,6 +67469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59793405,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -64948,6 +67494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61312990,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64972,6 +67519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61249041,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -64996,6 +67544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61338197,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -65020,6 +67569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61356020,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65044,6 +67594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61356442,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65068,6 +67619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61320402,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -65092,6 +67644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61309925,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -65116,6 +67669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61329257,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65140,6 +67694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61331666,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -65164,6 +67719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61348741,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -65188,6 +67744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61364252,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65212,6 +67769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61285650,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65236,6 +67794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61361394,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -65260,6 +67819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61271617,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -65284,6 +67844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61384121,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65308,6 +67869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59402536,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -65332,6 +67894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61159896,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65356,6 +67919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60325978,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65380,6 +67944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61074099,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65404,6 +67969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61335385,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65428,6 +67994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61408491,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -65452,6 +68019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58782960,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65476,6 +68044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61420391,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -65500,6 +68069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61420896,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -65524,6 +68094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61415045,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65548,6 +68119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61437453,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65572,6 +68144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61437298,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65596,6 +68169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61422182,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65620,6 +68194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58239531,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65644,6 +68219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61427436,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -65668,6 +68244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61462322,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65692,6 +68269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61463281,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -65716,6 +68294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61472250,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -65740,6 +68319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61479793,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65764,6 +68344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61212122,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65788,6 +68369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61466910,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65812,6 +68394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60423071,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65836,6 +68419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61512169,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -65860,6 +68444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61501321,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -65884,6 +68469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61513662,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -65908,6 +68494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61485865,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -65932,6 +68519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61511082,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -65956,6 +68544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61524554,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -65980,6 +68569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61519066,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66004,6 +68594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61528989,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66028,6 +68619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61529728,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66052,6 +68644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61532856,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66076,6 +68669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61246544,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -66100,6 +68694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61565510,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66124,6 +68719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59392237,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66148,6 +68744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61603209,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66172,6 +68769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61618855,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -66196,6 +68794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61620177,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -66220,6 +68819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59266519,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -66244,6 +68844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61549827,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -66268,6 +68869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61557782,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -66292,6 +68894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61567143,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66316,6 +68919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61488860,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -66340,6 +68944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58831441,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -66364,6 +68969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61628567,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -66388,6 +68994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61583701,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66412,6 +69019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60669582,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66436,6 +69044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61583539,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66460,6 +69069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61602868,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -66484,6 +69094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61645825,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -66508,6 +69119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61658449,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -66532,6 +69144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61637292,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66556,6 +69169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58345768,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66580,6 +69194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61243263,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -66604,6 +69219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61666257,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66628,6 +69244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61658191,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -66652,6 +69269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58929289,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66676,6 +69294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61662534,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -66700,6 +69319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61260771,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -66724,6 +69344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61260568,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -66748,6 +69369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61681929,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -66772,6 +69394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61351240,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66796,6 +69419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61706503,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66820,6 +69444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60221212,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66844,6 +69469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61694435,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66868,6 +69494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61722582,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66892,6 +69519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61702983,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66916,6 +69544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61725580,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66940,6 +69569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61732716,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -66964,6 +69594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61753414,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -66988,6 +69619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61737271,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67012,6 +69644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61747952,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67036,6 +69669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61657891,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67060,6 +69694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61746543,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67084,6 +69719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61717334,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67108,6 +69744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61766174,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67132,6 +69769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61782695,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67156,6 +69794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61768195,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67180,6 +69819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61773065,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67204,6 +69844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60388275,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67228,6 +69869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61803753,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67252,6 +69894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61799962,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67276,6 +69919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60412782,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67300,6 +69944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61786175,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67324,6 +69969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61796164,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67348,6 +69994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61803185,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67372,6 +70019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61755444,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67396,6 +70044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61799688,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67420,6 +70069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61826886,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67444,6 +70094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61795039,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67468,6 +70119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61828562,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67492,6 +70144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61829388,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67516,6 +70169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61841354,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67540,6 +70194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61795231,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67564,6 +70219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61823872,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67588,6 +70244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61857826,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67612,6 +70269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58997018,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67636,6 +70294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61745778,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67660,6 +70319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60092612,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67684,6 +70344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61851362,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67708,6 +70369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61855576,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67732,6 +70394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61866459,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67756,6 +70419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61875601,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67780,6 +70444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61869896,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67804,6 +70469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61883811,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67828,6 +70494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61875263,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67852,6 +70519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61800134,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67876,6 +70544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61859841,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -67900,6 +70569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61909279,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67924,6 +70594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61909682,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -67948,6 +70619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60868504,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -67972,6 +70644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61910132,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -67996,6 +70669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61908751,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68020,6 +70694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61919223,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68044,6 +70719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61874301,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68068,6 +70744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59514548,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68092,6 +70769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61919143,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68116,6 +70794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61919318,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68140,6 +70819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58727687,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -68164,6 +70844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59188442,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68188,6 +70869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59823261,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68212,6 +70894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61935790,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68236,6 +70919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61909273,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68260,6 +70944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61087026,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68284,6 +70969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61941368,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68308,6 +70994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60870383,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -68332,6 +71019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61909921,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68356,6 +71044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61952397,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68380,6 +71069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61941826,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68404,6 +71094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61905804,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68428,6 +71119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61949079,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68452,6 +71144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61941732,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68476,6 +71169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61946327,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68500,6 +71194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61512675,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68524,6 +71219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61923410,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68548,6 +71244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58637491,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68572,6 +71269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61744638,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68596,6 +71294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61809983,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68620,6 +71319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61867056,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68644,6 +71344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61943021,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68668,6 +71369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61909432,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68692,6 +71394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60733795,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68716,6 +71419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61775939,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68740,6 +71444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61959924,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68764,6 +71469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62000864,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -68788,6 +71494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62002878,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68812,6 +71519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60151460,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68836,6 +71544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61972795,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68860,6 +71569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62018238,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68884,6 +71594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58523338,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -68908,6 +71619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60517434,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -68932,6 +71644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62033402,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -68956,6 +71669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62042835,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -68980,6 +71694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62037972,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -69004,6 +71719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62045627,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -69028,6 +71744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62057146,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -69052,6 +71769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59063867,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -69076,6 +71794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59082657,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -69100,6 +71819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62064876,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69124,6 +71844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62006900,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -69148,6 +71869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62059135,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69172,6 +71894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62051629,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -69196,6 +71919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59362697,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -69220,6 +71944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62070479,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -69244,6 +71969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62073061,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69268,6 +71994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59822193,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69292,6 +72019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62106060,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69316,6 +72044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62106312,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69340,6 +72069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61496724,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -69364,6 +72094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62121263,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -69388,6 +72119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62108203,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -69412,6 +72144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62124135,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -69436,6 +72169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62119838,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -69460,6 +72194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62114553,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -69484,6 +72219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59859192,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69508,6 +72244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62064770,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -69532,6 +72269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60043794,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -69556,6 +72294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61769962,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -69580,6 +72319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61874579,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -69604,6 +72344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62149627,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -69628,6 +72369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60389714,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -69652,6 +72394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60517230,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69676,6 +72419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59326389,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -69700,6 +72444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61166034,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69724,6 +72469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58524120,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -69748,6 +72494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62149731,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -69772,6 +72519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59973588,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -69796,6 +72544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62159902,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -69820,6 +72569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62094645,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69844,6 +72594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62164923,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -69868,6 +72619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62160583,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -69892,6 +72644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62160804,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -69916,6 +72669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61170607,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69940,6 +72694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62115315,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -69964,6 +72719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58421979,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -69988,6 +72744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62199258,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70012,6 +72769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62202773,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -70036,6 +72794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62224449,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70060,6 +72819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62217331,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70084,6 +72844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62217647,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70108,6 +72869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62217342,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70132,6 +72894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62225517,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70156,6 +72919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62225165,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -70180,6 +72944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62225354,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -70204,6 +72969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62222441,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -70228,6 +72994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62226282,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -70252,6 +73019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61733259,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -70276,6 +73044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58837161,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -70300,6 +73069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61733518,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -70324,6 +73094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62196861,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70348,6 +73119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58347148,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70372,6 +73144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62241245,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70396,6 +73169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62258060,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70420,6 +73194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62254758,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70444,6 +73219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62240684,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70468,6 +73244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62256213,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70492,6 +73269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62255621,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -70516,6 +73294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62248787,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -70540,6 +73319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62254617,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -70564,6 +73344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58617882,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70588,6 +73369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62279076,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -70612,6 +73394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62279423,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -70636,6 +73419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62130853,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70660,6 +73444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58440976,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -70684,6 +73469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60539639,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70708,6 +73494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60539585,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70732,6 +73519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62294846,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70756,6 +73544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62280223,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70780,6 +73569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60987924,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70804,6 +73594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62310412,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70828,6 +73619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62274010,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -70852,6 +73644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62283637,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -70876,6 +73669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60404247,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70900,6 +73694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62289732,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -70924,6 +73719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60640398,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -70948,6 +73744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62279806,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -70972,6 +73769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61118513,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -70996,6 +73794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59197885,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71020,6 +73819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62325162,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71044,6 +73844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62266846,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71068,6 +73869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62317368,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -71092,6 +73894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61666370,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71116,6 +73919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62330126,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71140,6 +73944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62330437,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71164,6 +73969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62324380,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71188,6 +73994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62317224,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71212,6 +74019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61138786,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -71236,6 +74044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62330830,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71260,6 +74069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60840824,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -71284,6 +74094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62335244,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -71308,6 +74119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62315501,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71332,6 +74144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58153999,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71356,6 +74169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62345722,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -71380,6 +74194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62351077,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -71404,6 +74219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60165310,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71428,6 +74244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62338705,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -71452,6 +74269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62335863,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71476,6 +74294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62321855,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71500,6 +74319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61783011,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -71524,6 +74344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62350122,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -71548,6 +74369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61961814,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71572,6 +74394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62325094,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71596,6 +74419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59415103,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71620,6 +74444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62253307,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71644,6 +74469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62369571,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71668,6 +74494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60311123,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -71692,6 +74519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58525586,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71716,6 +74544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62337672,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -71740,6 +74569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62319898,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -71764,6 +74594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62395795,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71788,6 +74619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62396463,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71812,6 +74644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62388029,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71836,6 +74669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62377343,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71860,6 +74694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62384854,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71884,6 +74719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62215851,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -71908,6 +74744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62344325,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -71932,6 +74769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62392157,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -71956,6 +74794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62048781,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -71980,6 +74819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58653943,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72004,6 +74844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59611665,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72028,6 +74869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62396042,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72052,6 +74894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62377884,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -72076,6 +74919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62400824,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72100,6 +74944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62400700,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72124,6 +74969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60318805,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -72148,6 +74994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62392112,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72172,6 +75019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62387246,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72196,6 +75044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62368626,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -72220,6 +75069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58623648,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72244,6 +75094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61885311,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -72268,6 +75119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62340463,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -72292,6 +75144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62394751,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72316,6 +75169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62400635,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72340,6 +75194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62403101,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72364,6 +75219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62401002,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -72388,6 +75244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59130758,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -72412,6 +75269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61464984,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72436,6 +75294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58574840,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72460,6 +75319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62416496,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72484,6 +75344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62238385,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72508,6 +75369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62241615,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72532,6 +75394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58279083,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -72556,6 +75419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62418149,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -72580,6 +75444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62414668,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -72604,6 +75469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61428208,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72628,6 +75494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62425391,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72652,6 +75519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60433387,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -72676,6 +75544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62423080,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -72700,6 +75569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61773295,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72724,6 +75594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62425853,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -72748,6 +75619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62422388,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72772,6 +75644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62336779,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -72796,6 +75669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62422679,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72820,6 +75694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62423141,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72844,6 +75719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62401932,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -72868,6 +75744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62417104,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -72892,6 +75769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61450150,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72916,6 +75794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61944445,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -72940,6 +75819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62445853,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -72964,6 +75844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62448856,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -72988,6 +75869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62327856,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73012,6 +75894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62448268,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73036,6 +75919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62448743,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -73060,6 +75944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58698547,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -73084,6 +75969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62448520,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73108,6 +75994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62431650,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73132,6 +76019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62451194,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73156,6 +76044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62426891,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -73180,6 +76069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62441728,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73204,6 +76094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62440731,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -73228,6 +76119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62441214,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -73252,6 +76144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62475632,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -73276,6 +76169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62478533,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73300,6 +76194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58217509,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -73324,6 +76219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62455149,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73348,6 +76244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59555669,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -73372,6 +76269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62491239,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73396,6 +76294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62490847,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73420,6 +76319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62487734,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73444,6 +76344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61031468,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73468,6 +76369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62447268,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -73492,6 +76394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62440410,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73516,6 +76419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62498434,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73540,6 +76444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62496645,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73564,6 +76469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62495085,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73588,6 +76494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62507096,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -73612,6 +76519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60823170,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -73636,6 +76544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62496791,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73660,6 +76569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62378475,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73684,6 +76594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62505997,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73708,6 +76619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62492651,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73732,6 +76644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62506795,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73756,6 +76669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62456727,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73780,6 +76694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62506516,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73804,6 +76719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61842021,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73828,6 +76744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62482105,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73852,6 +76769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62174278,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73876,6 +76794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62481887,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -73900,6 +76819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62512594,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -73924,6 +76844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58293763,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -73948,6 +76869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62522595,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73972,6 +76894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60200699,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -73996,6 +76919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62476586,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74020,6 +76944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58236992,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -74044,6 +76969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60562909,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74068,6 +76994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62474819,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74092,6 +77019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59567169,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74116,6 +77044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62498773,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -74140,6 +77069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59673597,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -74164,6 +77094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62527362,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74188,6 +77119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62530025,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74212,6 +77144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62065468,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74236,6 +77169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62535770,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -74260,6 +77194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62499657,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74284,6 +77219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60977885,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74308,6 +77244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61569373,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74332,6 +77269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62540030,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74356,6 +77294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62539473,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -74380,6 +77319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62482269,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74404,6 +77344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62541452,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74428,6 +77369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62549791,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74452,6 +77394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62549935,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74476,6 +77419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60439303,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -74500,6 +77444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62228686,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -74524,6 +77469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59283386,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74548,6 +77494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62545134,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -74572,6 +77519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62465376,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74596,6 +77544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62290266,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74620,6 +77569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59448817,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74644,6 +77594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62556018,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74668,6 +77619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62556612,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74692,6 +77644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62482260,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74716,6 +77669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62556379,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74740,6 +77694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62549721,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74764,6 +77719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62565081,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74788,6 +77744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62504972,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74812,6 +77769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62554820,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74836,6 +77794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62561849,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74860,6 +77819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61760856,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -74884,6 +77844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62168998,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -74908,6 +77869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62580901,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -74932,6 +77894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60710495,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -74956,6 +77919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58631084,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -74980,6 +77944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59618942,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75004,6 +77969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62594037,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75028,6 +77994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58549740,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75052,6 +78019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62546162,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -75076,6 +78044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62555694,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75100,6 +78069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62594782,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75124,6 +78094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62575442,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75148,6 +78119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62596323,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -75172,6 +78144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62575176,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75196,6 +78169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62603095,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75220,6 +78194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60445901,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75244,6 +78219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62601306,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75268,6 +78244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62596340,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75292,6 +78269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62596506,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75316,6 +78294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62603624,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75340,6 +78319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62378470,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75364,6 +78344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61784962,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75388,6 +78369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62596738,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -75412,6 +78394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61663865,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -75436,6 +78419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62615885,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -75460,6 +78444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62615466,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -75484,6 +78469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62609100,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75508,6 +78494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62609217,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75532,6 +78519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61912016,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -75556,6 +78544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62603217,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75580,6 +78569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62620467,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75604,6 +78594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62609737,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75628,6 +78619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58352421,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -75652,6 +78644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62620704,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75676,6 +78669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62627870,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75700,6 +78694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62623189,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -75724,6 +78719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62603328,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75748,6 +78744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60977757,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75772,6 +78769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62629969,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75796,6 +78794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62630400,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -75820,6 +78819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62638075,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -75844,6 +78844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62623253,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -75868,6 +78869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61968524,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -75892,6 +78894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60792943,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -75916,6 +78919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62630638,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75940,6 +78944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62630645,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75964,6 +78969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62652479,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -75988,6 +78994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58579758,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76012,6 +79019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62668240,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76036,6 +79044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62674764,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -76060,6 +79069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62675610,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -76084,6 +79094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62683071,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76108,6 +79119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59569537,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -76132,6 +79144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62712931,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76156,6 +79169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62712709,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76180,6 +79194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62728395,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76204,6 +79219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62788417,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76228,6 +79244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62788331,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -76252,6 +79269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62779575,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76276,6 +79294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62753049,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -76300,6 +79319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62711973,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -76324,6 +79344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62788151,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -76348,6 +79369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62788019,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76372,6 +79394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60986615,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -76396,6 +79419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62513484,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76420,6 +79444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62711040,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76444,6 +79469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62800589,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76468,6 +79494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62796312,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -76492,6 +79519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60121985,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76516,6 +79544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62803685,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -76540,6 +79569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62806268,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76564,6 +79594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62816673,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -76588,6 +79619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62818188,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76612,6 +79644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62812918,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -76636,6 +79669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62810883,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76660,6 +79694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62809547,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -76684,6 +79719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60115463,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76708,6 +79744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62834950,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -76732,6 +79769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62834129,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76756,6 +79794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62825723,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -76780,6 +79819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62788694,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76804,6 +79844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62839156,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -76828,6 +79869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62836771,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -76852,6 +79894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62834852,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -76876,6 +79919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62841165,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -76900,6 +79944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62843453,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -76924,6 +79969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62851062,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -76948,6 +79994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62850957,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -76972,6 +80019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61662663,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -76996,6 +80044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62855523,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -77020,6 +80069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62836940,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77044,6 +80094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62112685,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -77068,6 +80119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62849328,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -77092,6 +80144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62853417,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -77116,6 +80169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62818577,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77140,6 +80194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62865688,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77164,6 +80219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62871565,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77188,6 +80244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62869718,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77212,6 +80269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62834798,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -77236,6 +80294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62870929,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -77260,6 +80319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62869751,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77284,6 +80344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58855945,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77308,6 +80369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62878381,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77332,6 +80394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59800903,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77356,6 +80419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62821613,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77380,6 +80444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62894854,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -77404,6 +80469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62902953,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77428,6 +80494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58706508,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -77452,6 +80519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62896189,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -77476,6 +80544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62815648,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -77500,6 +80569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62902447,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -77524,6 +80594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62903014,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77548,6 +80619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58611587,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77572,6 +80644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62861782,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77596,6 +80669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62859309,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77620,6 +80694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62912426,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77644,6 +80719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62912078,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -77668,6 +80744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59148585,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -77692,6 +80769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61060913,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77716,6 +80794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62636041,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77740,6 +80819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61383560,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -77764,6 +80844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62865459,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -77788,6 +80869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62894830,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -77812,6 +80894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62919526,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77836,6 +80919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62918477,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77860,6 +80944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62919610,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77884,6 +80969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62933922,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -77908,6 +80994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62941297,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -77932,6 +81019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62925947,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -77956,6 +81044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62945591,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -77980,6 +81069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60581443,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78004,6 +81094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62961966,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -78028,6 +81119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62962806,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78052,6 +81144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62962211,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78076,6 +81169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62963216,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78100,6 +81194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59490351,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78124,6 +81219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62970379,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78148,6 +81244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58859808,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78172,6 +81269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62979499,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78196,6 +81294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58551111,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78220,6 +81319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62970395,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78244,6 +81344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62815632,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -78268,6 +81369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58790313,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78292,6 +81394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62999150,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -78316,6 +81419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61839671,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -78340,6 +81444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63008633,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78364,6 +81469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61811619,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -78388,6 +81494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63024935,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78412,6 +81519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62984003,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -78436,6 +81544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62979338,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78460,6 +81569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63024428,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78484,6 +81594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62265886,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78508,6 +81619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63024776,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78532,6 +81644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63038082,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78556,6 +81669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58226875,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78580,6 +81694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62840178,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -78604,6 +81719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58608485,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78628,6 +81744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58605582,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78652,6 +81769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62887214,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78676,6 +81794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62852331,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78700,6 +81819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63035220,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -78724,6 +81844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63021589,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -78748,6 +81869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61001058,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78772,6 +81894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63028654,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78796,6 +81919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63055479,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -78820,6 +81944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61894104,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -78844,6 +81969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61842035,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78868,6 +81994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63055664,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -78892,6 +82019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63050319,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -78916,6 +82044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62688692,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -78940,6 +82069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58441892,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78964,6 +82094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58118471,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -78988,6 +82119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63037631,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -79012,6 +82144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59938767,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79036,6 +82169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63078108,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -79060,6 +82194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63060331,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79084,6 +82219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63077884,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -79108,6 +82244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63091926,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -79132,6 +82269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63102368,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79156,6 +82294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59579205,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79180,6 +82319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63101102,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -79204,6 +82344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60909710,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -79228,6 +82369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63111860,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79252,6 +82394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61242346,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -79276,6 +82419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63109296,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79300,6 +82444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62132899,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79324,6 +82469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59947861,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -79348,6 +82494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61338670,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -79372,6 +82519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63107211,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -79396,6 +82544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63121743,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -79420,6 +82569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63121807,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -79444,6 +82594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63113452,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -79468,6 +82619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62534065,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79492,6 +82644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63111555,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79516,6 +82669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63145355,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79540,6 +82694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63161445,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79564,6 +82719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58986389,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79588,6 +82744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63162939,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79612,6 +82769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63142644,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79636,6 +82794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63147500,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79660,6 +82819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63151548,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -79684,6 +82844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63164251,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -79708,6 +82869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63174104,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -79732,6 +82894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63180951,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -79756,6 +82919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63166484,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -79780,6 +82944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63178391,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -79804,6 +82969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63193429,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79828,6 +82994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63178748,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79852,6 +83019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63174147,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79876,6 +83044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63216527,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -79900,6 +83069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63198701,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79924,6 +83094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62627344,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -79948,6 +83119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62547011,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -79972,6 +83144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63217063,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -79996,6 +83169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63225332,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -80020,6 +83194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63227437,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -80044,6 +83219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63236917,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80068,6 +83244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63141504,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80092,6 +83269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63244601,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80116,6 +83294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63252630,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80140,6 +83319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58335651,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80164,6 +83344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63265311,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80188,6 +83369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61197624,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80212,6 +83394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63236216,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80236,6 +83419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63325725,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80260,6 +83444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63323551,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80284,6 +83469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63321567,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80308,6 +83494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63333787,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80332,6 +83519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63324438,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80356,6 +83544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63164709,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -80380,6 +83569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63302060,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -80404,6 +83594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58742600,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -80428,6 +83619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63241481,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -80452,6 +83644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58257620,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80476,6 +83669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58456891,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -80500,6 +83694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63436162,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80524,6 +83719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58356773,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -80548,6 +83744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63435590,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -80572,6 +83769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58620248,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80596,6 +83794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59231327,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -80620,6 +83819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60675749,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80644,6 +83844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59275037,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80668,6 +83869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63447145,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80692,6 +83894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63466099,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80716,6 +83919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60790453,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80740,6 +83944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58784585,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80764,6 +83969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63387936,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -80788,6 +83994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63464281,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80812,6 +84019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61079616,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80836,6 +84044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63498189,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80860,6 +84069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63490509,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80884,6 +84094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63489028,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80908,6 +84119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58457679,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80932,6 +84144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63490937,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -80956,6 +84169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63507740,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -80980,6 +84194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63508592,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81004,6 +84219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63438813,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81028,6 +84244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61943086,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81052,6 +84269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63509698,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81076,6 +84294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63465341,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -81100,6 +84319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63466014,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -81124,6 +84344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63522159,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81148,6 +84369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63500057,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81172,6 +84394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63435215,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81196,6 +84419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58334316,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81220,6 +84444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63499717,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -81244,6 +84469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63510075,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -81268,6 +84494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58708520,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81292,6 +84519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62954800,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -81316,6 +84544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63505581,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -81340,6 +84569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63522668,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -81364,6 +84594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63518867,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81388,6 +84619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61820811,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81412,6 +84644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63583370,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81436,6 +84669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63590561,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81460,6 +84694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63575382,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81484,6 +84719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63583008,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81508,6 +84744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63613489,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -81532,6 +84769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63602621,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81556,6 +84794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63682785,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81580,6 +84819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63710428,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -81604,6 +84844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60914297,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81628,6 +84869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62034784,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -81652,6 +84894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63731475,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81676,6 +84919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63648653,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81700,6 +84944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60547370,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -81724,6 +84969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63609206,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81748,6 +84994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63658207,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -81772,6 +85019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63606266,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81796,6 +85044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63734285,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81820,6 +85069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63850836,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81844,6 +85094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61968742,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -81868,6 +85119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60262488,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -81892,6 +85144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63603329,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81916,6 +85169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62274364,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -81940,6 +85194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63573261,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -81964,6 +85219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63932910,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -81988,6 +85244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58907377,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82012,6 +85269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63662189,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -82036,6 +85294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63712877,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82060,6 +85319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63794001,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82084,6 +85344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63651617,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82108,6 +85369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63969673,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82132,6 +85394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63969199,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82156,6 +85419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63969297,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82180,6 +85444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63236524,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82204,6 +85469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63614908,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -82228,6 +85494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63514953,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -82252,6 +85519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63798500,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82276,6 +85544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63824247,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82300,6 +85569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63726273,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82324,6 +85594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64007794,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82348,6 +85619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63566644,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82372,6 +85644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63024592,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82396,6 +85669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63998840,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82420,6 +85694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63914231,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82444,6 +85719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64043541,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82468,6 +85744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63868653,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82492,6 +85769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63995025,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82516,6 +85794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63988309,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82540,6 +85819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63389062,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82564,6 +85844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64328730,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82588,6 +85869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64328643,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82612,6 +85894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63911214,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82636,6 +85919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59323048,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82660,6 +85944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64793809,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82684,6 +85969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62795565,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82708,6 +85994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60332773,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82732,6 +86019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64796094,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -82756,6 +86044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64789923,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82780,6 +86069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64823456,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82804,6 +86094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61078348,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82828,6 +86119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61572545,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82852,6 +86144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62269669,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82876,6 +86169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62940181,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82900,6 +86194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60177401,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82924,6 +86219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60276667,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -82948,6 +86244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63521991,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -82972,6 +86269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58841379,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -82996,6 +86294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62378896,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83020,6 +86319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62493653,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83044,6 +86344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62967968,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83068,6 +86369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63056829,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83092,6 +86394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63000154,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -83116,6 +86419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63444130,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -83140,6 +86444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60022633,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83164,6 +86469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58814728,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83188,6 +86494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61593728,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83212,6 +86519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62544267,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83236,6 +86544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62137031,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -83260,6 +86569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60553880,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83284,6 +86594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62630577,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83308,6 +86619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62630490,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83332,6 +86644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63702549,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83356,6 +86669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59765021,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83380,6 +86694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62076679,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -83404,6 +86719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59938576,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -83428,6 +86744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64830890,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -83452,6 +86769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62864654,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83476,6 +86794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62513206,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83500,6 +86819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64833024,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83524,6 +86844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63811896,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -83548,6 +86869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59088156,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83572,6 +86894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60444555,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83596,6 +86919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58095475,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -83620,6 +86944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63735125,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83644,6 +86969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59949963,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -83668,6 +86994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61003902,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83692,6 +87019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63213185,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -83716,6 +87044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 57842666,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -83740,6 +87069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60669029,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83764,6 +87094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62622751,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -83788,6 +87119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63426050,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83812,6 +87144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63395838,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83836,6 +87169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64511148,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -83860,6 +87194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64072294,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -83884,6 +87219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63783362,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83908,6 +87244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60707245,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83932,6 +87269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62600038,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83956,6 +87294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61962604,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -83980,6 +87319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59763735,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84004,6 +87344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62044650,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84028,6 +87369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64833388,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -84052,6 +87394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58664684,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -84076,6 +87419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59743184,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -84100,6 +87444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60431356,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -84124,6 +87469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59731674,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -84148,6 +87494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63725083,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -84172,6 +87519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63581947,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -84196,6 +87544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63045669,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -84220,6 +87569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60563297,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -84244,6 +87594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60106614,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84268,6 +87619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60834357,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84292,6 +87644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61186208,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84316,6 +87669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61186304,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84340,6 +87694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64057444,
       "rep": "EGSS-hayamhassan",
+      "current_agent": "EGSS-hayamhassan",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -84364,6 +87719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63569328,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84388,6 +87744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62978645,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84412,6 +87769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64851762,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -84436,6 +87794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61210583,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84460,6 +87819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59350814,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -84484,6 +87844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61959498,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -84508,6 +87869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64862536,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84532,6 +87894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64862293,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84556,6 +87919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64862814,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84580,6 +87944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61938509,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -84604,6 +87969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59907033,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -84628,6 +87994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60912344,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -84652,6 +88019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64810283,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84676,6 +88044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60646412,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -84700,6 +88069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61944104,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84724,6 +88094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61944052,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84748,6 +88119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59411988,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -84772,6 +88144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62318061,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84796,6 +88169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63863286,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84820,6 +88194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59039354,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -84844,6 +88219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60159079,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -84868,6 +88244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58855123,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -84892,6 +88269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59079366,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84916,6 +88294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60453176,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84940,6 +88319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60207423,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -84964,6 +88344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60458717,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -84988,6 +88369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58737034,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -85012,6 +88394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59740880,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -85036,6 +88419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60206320,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85060,6 +88444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60737407,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85084,6 +88469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64870900,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85108,6 +88494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60146292,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85132,6 +88519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64831740,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -85156,6 +88544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58622914,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85180,6 +88569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63035917,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85204,6 +88594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61169631,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85228,6 +88619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58505359,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -85252,6 +88644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59402945,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85276,6 +88669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58644380,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85300,6 +88694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63138002,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -85324,6 +88719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64850267,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -85348,6 +88744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64849358,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -85372,6 +88769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64823731,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -85396,6 +88794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64804723,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85420,6 +88819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61057241,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85444,6 +88844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61122278,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85468,6 +88869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64735466,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -85492,6 +88894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61030890,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85516,6 +88919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61459896,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -85540,6 +88944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61976838,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -85564,6 +88969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64821232,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85588,6 +88994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64881480,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85612,6 +89019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64881481,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85636,6 +89044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64833517,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -85660,6 +89069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59818649,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -85684,6 +89094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63390601,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85708,6 +89119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61545861,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85732,6 +89144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62313175,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85756,6 +89169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62272582,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85780,6 +89194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61826640,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85804,6 +89219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63137174,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -85828,6 +89244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62159995,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85852,6 +89269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59907687,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85876,6 +89294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61674923,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85900,6 +89319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62179770,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -85924,6 +89344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64913241,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85948,6 +89369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62401179,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -85972,6 +89394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61857814,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -85996,6 +89419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62017108,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86020,6 +89444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59579268,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86044,6 +89469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63807426,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86068,6 +89494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59244604,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -86092,6 +89519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60922910,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -86116,6 +89544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63693463,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -86140,6 +89569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60619785,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -86164,6 +89594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60998589,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -86188,6 +89619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64878833,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86212,6 +89644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62375542,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86236,6 +89669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60515788,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86260,6 +89694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61277256,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86284,6 +89719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61831001,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86308,6 +89744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61893224,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86332,6 +89769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62116241,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86356,6 +89794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62675771,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86380,6 +89819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62682787,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86404,6 +89844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60622198,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86428,6 +89869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61507435,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86452,6 +89894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63321399,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86476,6 +89919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64026066,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86500,6 +89944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64042581,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86524,6 +89969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61452288,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86548,6 +89994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61480934,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86572,6 +90019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64864041,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -86596,6 +90044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64916450,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -86620,6 +90069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61940673,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86644,6 +90094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62808146,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -86668,6 +90119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64890193,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86692,6 +90144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60954780,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -86716,6 +90169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60408714,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -86740,6 +90194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 58525226,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86764,6 +90219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64925190,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86788,6 +90244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64925352,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -86812,6 +90269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61957342,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -86836,6 +90294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61927637,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -86860,6 +90319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64878860,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -86884,6 +90344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64879029,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -86908,6 +90369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59937761,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -86932,6 +90394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64940305,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -86956,6 +90419,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64942159,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -86980,6 +90444,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64804904,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -87004,6 +90469,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64946938,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -87028,6 +90494,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64881328,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87052,6 +90519,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64890244,
       "rep": "EGSS-omarmoneb",
+      "current_agent": "EGSS-omarmoneb",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87076,6 +90544,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64898727,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87100,6 +90569,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62403669,
       "rep": "EGSS-marwaahmed",
+      "current_agent": "EGSS-marwaahmed",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -87124,6 +90594,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 63498717,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87148,6 +90619,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62489530,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87172,6 +90644,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62478921,
       "rep": "EGSS-abdelrahmannasef",
+      "current_agent": "EGSS-abdelrahmannasef",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87196,6 +90669,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62454870,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -87220,6 +90694,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64898776,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -87244,6 +90719,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64898357,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -87268,6 +90744,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62017039,
       "rep": "EGSS-ehabzaky01",
+      "current_agent": "EGSS-ehabzaky01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87292,6 +90769,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62317564,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87316,6 +90794,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59890588,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87340,6 +90819,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62317418,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87364,6 +90844,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61446853,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -87388,6 +90869,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62483376,
       "rep": "EGSS-ahmedshoukry",
+      "current_agent": "EGSS-ahmedshoukry",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -87412,6 +90894,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62960075,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87436,6 +90919,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64762788,
       "rep": "EGSS-nohayoussry",
+      "current_agent": "EGSS-nohayoussry",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87460,6 +90944,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64942217,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87484,6 +90969,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62771862,
       "rep": "EGSS-juliamonir01",
+      "current_agent": "EGSS-juliamonir01",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87508,6 +90994,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62609058,
       "rep": "EGSS-mahmoud04",
+      "current_agent": "EGSS-mahmoud04",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87532,6 +91019,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62491936,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87556,6 +91044,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 61705238,
       "rep": "EGSS-samira01",
+      "current_agent": "EGSS-samira01",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87580,6 +91069,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 60114925,
       "rep": "EGSS-mahmoudkhamis",
+      "current_agent": "EGSS-mahmoudkhamis",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -87604,6 +91094,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64851766,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -87628,6 +91119,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64891193,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -87652,6 +91144,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64891194,
       "rep": "EGSS-abdelrhmanshehata",
+      "current_agent": "EGSS-abdelrhmanshehata",
       "team": "ME-EGSS10",
       "team_clean": "10",
       "big_team": "MEKSA-EGSS01",
@@ -87676,6 +91169,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62496545,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87700,6 +91194,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 62520955,
       "rep": "EGSS-amrsafwat",
+      "current_agent": "EGSS-amrsafwat",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -87724,6 +91219,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64785917,
       "rep": "EGSS-mohamedha",
+      "current_agent": "EGSS-mohamedha",
       "team": "ME-EGSS13",
       "team_clean": "13",
       "big_team": "MEKSA-EGSS01",
@@ -87748,6 +91244,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 59147310,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87772,6 +91269,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64803116,
       "rep": "EGSS-alihesham01",
+      "current_agent": "EGSS-alihesham01",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -87796,6 +91294,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64957444,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -87820,6 +91319,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64717691,
       "rep": "EGSS-titooooo",
+      "current_agent": "EGSS-titooooo",
       "team": "ME-EGSS30",
       "team_clean": "30",
       "big_team": "MEKSA-EGSS01",
@@ -87844,6 +91344,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64477059,
       "rep": "EGSS-ashraqatal",
+      "current_agent": "EGSS-ashraqatal",
       "team": "ME-EGSS01",
       "team_clean": "01",
       "big_team": "MEKSA-EGSS01",
@@ -87868,6 +91369,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64734962,
       "rep": "EGSS-ibrahimismaiel",
+      "current_agent": "EGSS-ibrahimismaiel",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
@@ -87892,6 +91394,7 @@ window.ALLOCATION_RULES_DATA = {
     {
       "student_id": 64945778,
       "rep": "EGSS-khaledgonam",
+      "current_agent": "EGSS-khaledgonam",
       "team": "ME-EGSS05",
       "team_clean": "05",
       "big_team": "MEKSA-EGSS01",
