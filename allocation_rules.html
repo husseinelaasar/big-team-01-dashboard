@@ -4016,6 +4016,17 @@ function renderAgentBadge(agentName) {
       return String(str).replace(/'/g, "\\'").replace(/"/g, '&quot;');
     }
 
+    // Helper: Escape HTML to Prevent Injection and Template Literal Breakage
+    function escapeHtml(str) {
+      if (str === null || str === undefined) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
     // ========================================================
     // TICKET ENGINES (Standard Student, Full Dossier, Team Dossier)
     // ========================================================
@@ -4697,16 +4708,18 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       const count = notes.length;
       const datePart = (latest.timestamp || '').split(' ')[0] || '';
       const authorShort = latest.author_name ? latest.author_name.split(' ')[0] : (latest.author_id || 'Rep');
+      const cleanSnippet = (latest.text || '').replace(/[\r\n]+/g, ' ');
 
       return `
         <td style="text-align: center; white-space: nowrap;" onmouseenter="showNoteHoverPopup(event, '${studentId}', '${escapeQuotes(repHint || '')}')" onmouseleave="hideNoteHoverPopup()">
           <button type="button" class="btn-note-filled" onclick="openStudentNotesModal('${studentId}', '${escapeQuotes(repHint || '')}')" title="${t.view_notes_title}">
             <div class="note-pill-top">
               <span class="note-count-badge">💬 ${count}</span>
-              <span class="note-author-pill">👤 ${escapeHtml(authorShort)}</span>
-              <span class="note-time-pill">${datePart}</span>
+              <span class="note-author-pill" title="${escapeQuotes(latest.author_name || latest.author_id)}">👤 ${escapeHtml(authorShort)}</span>
+              <span class="note-time-pill">${escapeHtml(datePart)}</span>
+              <span style="color: #38bdf8; font-weight: 900; font-size: 0.8rem; margin-right: 2px;" title="إضافة ملاحظة أخرى">+</span>
             </div>
-            <div class="note-snippet" title="${escapeQuotes(latest.text)}">${escapeHtml(latest.text)}</div>
+            <div class="note-snippet" title="${escapeQuotes(cleanSnippet)}">${escapeHtml(cleanSnippet)}</div>
           </button>
         </td>
       `;
@@ -4734,7 +4747,10 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
         authorNameEl.textContent = `${authUser.name} (${authUser.team || 'ME-EGSS'})`;
       }
 
-      if (inputEl) inputEl.value = '';
+      if (inputEl) {
+        inputEl.value = '';
+        setTimeout(() => inputEl.focus(), 120);
+      }
 
       renderNotesTimeline(currentNoteModalStudentId);
 
@@ -4852,7 +4868,10 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
         }).catch(err => console.warn('Could not post note to server API:', err));
       }
 
-      if (input) input.value = '';
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
 
       renderNotesTimeline(currentNoteModalStudentId);
       updateGlobalNotesCount();
@@ -4926,19 +4945,16 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
         popup = document.createElement('div');
         popup.id = 'globalNoteHoverCard';
         popup.className = 'global-note-hover-card';
-        popup.style.display = 'none';
-        popup.style.position = 'fixed';
-        popup.style.zIndex = '9999999';
-        popup.onmouseenter = () => clearTimeout(noteHoverTimer);
-        popup.onmouseleave = () => hideNoteHoverPopup(100);
-        popup.onclick = () => {
-          if (currentHoveredStudentId) {
-            openStudentNotesModal(currentHoveredStudentId, '');
-            hideNoteHoverPopup(0);
-          }
-        };
         document.body.appendChild(popup);
       }
+      popup.onmouseenter = () => clearTimeout(noteHoverTimer);
+      popup.onmouseleave = () => hideNoteHoverPopup(120);
+      popup.onclick = () => {
+        if (currentHoveredStudentId) {
+          openStudentNotesModal(currentHoveredStudentId, repHint || '');
+          hideNoteHoverPopup(0);
+        }
+      };
 
       const notes = getStudentNotes(studentId);
       const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
@@ -4968,9 +4984,9 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
 
         let prevNotesHtml = '';
         if (totalCount > 1) {
-          const prevNotes = notes.slice(0, -1).slice(-2).reverse();
+          const prevNotes = notes.slice(0, -1).slice(-3).reverse();
           prevNotesHtml = `
-            <div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(255,255,255,0.1);">
+            <div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(255,255,255,0.12);">
               <div style="font-size: 0.68rem; color: #94a3b8; margin-bottom: 4px; font-weight: 700;">🕒 ${t.notes_prev_history} (${totalCount - 1}):</div>
               ${prevNotes.map(pn => `
                 <div style="font-size: 0.68rem; color: #94a3b8; background: rgba(0,0,0,0.3); padding: 4px 6px; border-radius: 4px; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
@@ -4982,7 +4998,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
         }
 
         contentHtml = `
-          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 6px; margin-bottom: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px; margin-bottom: 8px;">
             <div style="font-weight: 800; font-size: 0.85rem; color: #38bdf8; display: flex; align-items: center; gap: 5px;">
               <span>📌</span> <span>Student #${studentId}</span>
             </div>
@@ -4998,7 +5014,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
             </div>
             <div style="color: #94a3b8; font-size: 0.68rem; font-family: monospace;">${dateFormatted}</div>
           </div>
-          <div style="background: rgba(2, 132, 199, 0.08); border-right: 3px solid #38bdf8; border-radius: 4px; padding: 8px 10px; font-size: 0.78rem; color: #f8fafc; line-height: 1.45; max-height: 130px; overflow-y: auto; word-break: break-word;">
+          <div style="background: rgba(2, 132, 199, 0.12); border-right: 3px solid #38bdf8; border-radius: 4px; padding: 8px 10px; font-size: 0.78rem; color: #f8fafc; line-height: 1.5; max-height: 140px; overflow-y: auto; word-break: break-word;">
             ${escapeHtml(latest.text)}
           </div>
           ${prevNotesHtml}
@@ -5010,11 +5026,11 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       }
 
       popup.innerHTML = contentHtml;
+      popup.style.display = 'block';
 
       const rect = targetEl.getBoundingClientRect();
       const popupWidth = 340;
       popup.style.width = popupWidth + 'px';
-      popup.style.display = 'block';
 
       let left = rect.left + (rect.width / 2) - (popupWidth / 2);
       if (left < 10) left = 10;
@@ -5025,15 +5041,21 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       if (top < 10) {
         top = rect.bottom + 10;
       }
+      if (top + popupHeight > window.innerHeight - 10) {
+        top = window.innerHeight - popupHeight - 10;
+      }
+      if (top < 10) top = 10;
 
       popup.style.left = left + 'px';
       popup.style.top = top + 'px';
       popup.style.opacity = '1';
       popup.style.visibility = 'visible';
       popup.style.transform = 'translateY(0)';
+      popup.style.pointerEvents = 'auto';
     }
 
-    function hideNoteHoverPopup(delay = 150) {
+    function hideNoteHoverPopup(delay = 180) {
+      clearTimeout(noteHoverTimer);
       noteHoverTimer = setTimeout(() => {
         const popup = document.getElementById('globalNoteHoverCard');
         if (popup) {
