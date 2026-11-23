@@ -639,6 +639,175 @@
       transform: translateY(-1px);
     }
 
+    /* Employee Notes Component Styling */
+    .btn-note-empty {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px dashed rgba(255, 255, 255, 0.22);
+      color: #94a3b8;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .btn-note-empty:hover {
+      background: rgba(56, 189, 248, 0.14);
+      border-color: #38bdf8;
+      color: #38bdf8;
+      transform: translateY(-1px);
+    }
+    .btn-note-filled {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      text-align: right;
+      max-width: 220px;
+      min-width: 145px;
+      padding: 5px 8px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: 'Cairo', sans-serif;
+    }
+    .btn-note-filled:hover {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: #38bdf8;
+      box-shadow: 0 2px 10px rgba(56, 189, 248, 0.25);
+      transform: translateY(-1px);
+    }
+    .note-pill-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .note-count-badge {
+      background: #0284c7;
+      color: #fff;
+      padding: 1px 5px;
+      border-radius: 10px;
+      font-size: 0.65rem;
+      font-weight: 800;
+    }
+    .note-author-pill {
+      color: #bae6fd;
+      font-weight: 800;
+      max-width: 85px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .note-time-pill {
+      color: #94a3b8;
+      font-size: 0.64rem;
+      font-family: monospace;
+    }
+    .note-snippet {
+      font-size: 0.72rem;
+      color: #e2e8f0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.25;
+      text-align: right;
+    }
+    .timeline-note-card {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 3px solid #38bdf8;
+      border-radius: 8px;
+      padding: 10px 12px;
+      transition: all 0.15s ease;
+    }
+    .timeline-note-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      background: rgba(30, 41, 59, 0.9);
+    }
+    .timeline-note-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 0.74rem;
+    }
+    .timeline-author {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+    .timeline-time {
+      color: #94a3b8;
+      font-family: monospace;
+      font-size: 0.72rem;
+      direction: ltr;
+    }
+    .timeline-text {
+      font-size: 0.82rem;
+      color: #f1f5f9;
+      line-height: 1.5;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+    .tag-pill-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 0.7rem;
+      font-family: 'Cairo', sans-serif;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    .tag-pill-btn:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+    .btn-save-note {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 7px 16px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      font-family: 'Cairo', sans-serif;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-save-note:hover {
+      background: linear-gradient(135deg, #0369a1, #1d4ed8);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    }
+    .btn-cancel-note {
+      background: transparent;
+      color: #94a3b8;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 7px 14px;
+      font-size: 0.78rem;
+      font-family: 'Cairo', sans-serif;
+      cursor: pointer;
+    }
+    .btn-cancel-note:hover {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+    }
+
     /* Table Footer & Pagination */
     .table-footer {
       display: flex;
@@ -1757,6 +1926,14 @@
             <span id="btnExportCsvText">📥 تصدير CSV</span>
           </button>
         </div>
+
+        <!-- Employee Notes Export Button -->
+        <div class="filter-group" style="justify-content: flex-end;">
+          <label>&nbsp;</label>
+          <button type="button" class="btn-ticket-mini" style="padding: 8px 14px; font-size: 0.8rem; height: 38px; justify-content: center; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8;" onclick="exportEmployeeNotesCSV()" title="تصدير تقرير شامل بجميع ملاحظات ومتابعات الموظفين">
+            <span id="btnExportNotesText">📝 تقرير الملاحظات</span>
+          </button>
+        </div>
       </div>
 
       <!-- Quick Small Teams Pills Bar -->
@@ -1995,6 +2172,17 @@
         th_risk_level: "مستوى الخطر",
         th_action_reclaim: "الإجراء الموصى به",
         th_action_defense: "الإجراء المطلوب فوراً",
+        th_rep_notes: "ملاحظات الموظف",
+        btn_add_note: "إضافة ملاحظة",
+        add_note_title: "تدوين ملاحظة متابعة جديدة للطالب",
+        view_notes_title: "عرض سجل ملاحظات ومتابعات الطالب",
+        notes_modal_title: "سجل ملاحظات ومتابعة الطالب",
+        notes_author_label: "الملاحظة ستسجل رسمياً باسم:",
+        notes_placeholder: "اكتب ملاحظتك وتفاصيل المتابعة مع العميل هنا (مثال: تم التواصل واتساب، العميل طلب مهلة للتجديد يوم الخميس)...",
+        notes_save_btn: "💾 حفظ وتوثيق الملاحظة",
+        notes_empty_state: "لا توجد ملاحظات مسجلة لهذا الطالب حتى الآن. كن أول من يدون ملاحظة متابعة.",
+        notes_saved_success: "✅ تم توثيق وحفظ ملاحظة الموظف بنجاح!",
+        btn_export_notes: "📝 تقرير الملاحظات",
         th_sop_actions: "إجراءات SOP و DingTalk",
 
         btn_ticket: "📋 تذكرة",
@@ -2105,6 +2293,17 @@
         th_risk_level: "Risk Level",
         th_action_reclaim: "Recommended Action",
         th_action_defense: "Immediate Action Required",
+        th_rep_notes: "Employee Notes",
+        btn_add_note: "+ Add Note",
+        add_note_title: "Log a new follow-up note for this student",
+        view_notes_title: "View student follow-up notes history",
+        notes_modal_title: "Student Follow-up & Notes History",
+        notes_author_label: "Note will be officially recorded under your name:",
+        notes_placeholder: "Type your follow-up note here (e.g., Contacted on WhatsApp, parent requested 2 days extension)...",
+        notes_save_btn: "💾 Save & Timestamp Note",
+        notes_empty_state: "No notes logged for this student yet. Be the first to record a note.",
+        notes_saved_success: "✅ Employee note saved and timestamped successfully!",
+        btn_export_notes: "📝 Notes Report",
         th_sop_actions: "SOP & DingTalk Actions",
 
         btn_ticket: "📋 Ticket",
@@ -2215,6 +2414,17 @@
         th_risk_level: "风险等级",
         th_action_reclaim: "建议执行操作",
         th_action_defense: "立即要求操作",
+        th_rep_notes: "顾问跟进备注",
+        btn_add_note: "+ 添加备注",
+        add_note_title: "为该学员记录新的跟进备注",
+        view_notes_title: "查看学员历史跟进记录",
+        notes_modal_title: "学员跟进记录与备注历史",
+        notes_author_label: "备注将实名记录在您的工号名下:",
+        notes_placeholder: "在此输入跟进详情（例如：已微信沟通，家长承诺周四续费）...",
+        notes_save_btn: "💾 实名保存备注",
+        notes_empty_state: "暂无历史跟进记录。点击下方输入框添加第一条跟进记录。",
+        notes_saved_success: "✅ 顾问跟进备注已成功实名保存！",
+        btn_export_notes: "📝 导出跟进记录",
         th_sop_actions: "SOP 操作与钉钉",
 
         btn_ticket: "📋 工单",
@@ -2288,6 +2498,7 @@
       if (document.getElementById('navCalculatorText')) document.getElementById('navCalculatorText').textContent = t.nav_calculator;
       if (document.getElementById('crmLiveSyncText')) document.getElementById('crmLiveSyncText').textContent = t.crm_live_sync;
       if (document.getElementById('dataLastUpdatedLabel')) document.getElementById('dataLastUpdatedLabel').textContent = t.last_data_update;
+      if (document.getElementById('btnExportNotesText')) document.getElementById('btnExportNotesText').textContent = t.btn_export_notes;
 
       if (document.getElementById('kpiReadyTitle')) document.getElementById('kpiReadyTitle').textContent = t.kpi_ready_title;
       if (document.getElementById('kpiReadyDesc')) document.getElementById('kpiReadyDesc').textContent = t.kpi_ready_desc;
@@ -2862,6 +3073,7 @@ function renderAgentBadge(agentName) {
 
     // Initialize KPI Header Counters
     function initKPIValues() {
+      initStudentNotes();
       const stats = window.ALLOCATION_RULES_DATA.stats || {};
       const genAt = window.ALLOCATION_RULES_DATA.generated_at || window.ALLOCATION_RULES_DATA.audit_date || '';
       const updateEl = document.getElementById('dataLastUpdatedVal');
@@ -3385,6 +3597,7 @@ function renderAgentBadge(agentName) {
         thead.innerHTML = `
           <th style="width: 35px;">${t.th_num}</th>
           <th style="width: 90px;">${t.th_student_id}</th>
+          <th style="min-width: 150px; text-align: center;">${t.th_rep_notes}</th>
           <th style="width: 140px;">${t.th_rule}</th>
           <th style="min-width: 220px;">${t.th_eligible_reclaim}</th>
           <th>${t.th_current_rep}</th>
@@ -3401,6 +3614,7 @@ function renderAgentBadge(agentName) {
         thead.innerHTML = `
           <th style="width: 35px;">${t.th_num}</th>
           <th style="width: 90px;">${t.th_student_id}</th>
+          <th style="min-width: 150px; text-align: center;">${t.th_rep_notes}</th>
           <th>${t.th_assigned_rep}</th>
           <th>${t.th_small_team}</th>
           <th>${t.th_pool}</th>
@@ -3418,6 +3632,7 @@ function renderAgentBadge(agentName) {
           <th style="width: 35px;">${t.th_num}</th>
           <th style="width: 80px;">${t.th_family_id}</th>
           <th style="width: 90px;">${t.th_student_id}</th>
+          <th style="min-width: 150px; text-align: center;">${t.th_rep_notes}</th>
           <th style="min-width: 200px;">${t.th_family_claimants}</th>
           <th>${t.th_current_rep}</th>
           <th>${t.th_current_team}</th>
@@ -3439,7 +3654,7 @@ function renderAgentBadge(agentName) {
       if (displayData.length === 0) {
         tbody.innerHTML = `
           <tr>
-            <td colspan="13" style="text-align: center; padding: 40px; color: #94a3b8;">
+            <td colspan="14" style="text-align: center; padding: 40px; color: #94a3b8;">
               <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
               <div style="font-size: 1rem; font-weight: 800; color: #fff;">${t.no_records_title}</div>
               <div style="font-size: 0.8rem; margin-top: 4px;">${t.no_records_desc}</div>
@@ -3501,6 +3716,7 @@ function renderAgentBadge(agentName) {
                   </a>
                 </div>
               </td>
+              ${renderStudentNotesCell(item.student_id, item.old_ss || item.current_agent)}
               <td style="white-space: nowrap;"><span style="font-size: 0.74rem; color: #cbd5e1;">${item.rule_type}</span></td>
               <td style="white-space: normal; min-width: 220px;">${renderEligibleReclaimersBadge(item)}</td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
@@ -3574,6 +3790,7 @@ function renderAgentBadge(agentName) {
                   </a>
                 </div>
               </td>
+              ${renderStudentNotesCell(item.student_id, item.rep)}
               <td style="white-space: nowrap;">${renderAgentBadge(item.rep)}</td>
               <td style="white-space: nowrap;"><span class="small-team-pill" style="padding: 2px 7px; font-size: 0.74rem;">${item.team || 'ME-EGSS' + item.team_clean}</span></td>
               <td style="white-space: nowrap;"><span style="font-size: 0.73rem; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px;">${item.pool || '—'}</span></td>
@@ -3616,6 +3833,7 @@ function renderAgentBadge(agentName) {
                   </a>
                 </div>
               </td>
+              ${renderStudentNotesCell(item.student_id, item.current_agent || item.old_ss)}
               <td style="white-space: normal; min-width: 200px;">${renderEligibleReclaimersBadge(item)}</td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
               <td style="white-space: nowrap;"><span style="font-size: 0.75rem; color: #94a3b8;">${item.current_team || '—'}</span></td>
@@ -4151,12 +4369,15 @@ ${eligibleListStr}
     }
 
     function closeModal(id) {
-      const m = document.getElementById(id);
+      let m = document.getElementById(id);
+      if (!m && (id === 'notesModal' || id === 'studentNotesModal')) {
+        m = document.getElementById('studentNotesModal') || document.getElementById('notesModal');
+      }
       if (m) m.style.display = 'none';
     }
 
     function closeModalOnOverlay(e, id) {
-      if (e.target && e.target.id === id) {
+      if (e.target && (e.target.id === id || e.target.id === 'studentNotesModal' || e.target.id === 'notesModal')) {
         closeModal(id);
       }
     }
@@ -4309,21 +4530,21 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
 
       let csv = "\uFEFF";
       if (currentTab === 'reclaim') {
-        csv += "Student ID,Rule Type,Old SS,Current Agent,Is External Agent,Current Team,Pool,Remaining Points,Last Month Consumption,This Month Consumption,Status,Recommended Action\n";
+        csv += "Student ID,Rule Type,Old SS,Current Agent,Is External Agent,Current Team,Pool,Remaining Points,Last Month Consumption,This Month Consumption,Status,Recommended Action,Latest Employee Note\n";
         filteredList.forEach(i => {
           const isExt = !MY_TEAM_REPS.has(i.current_agent) ? "External (خارجي)" : "Internal (فريقنا)";
-          csv += `"${i.student_id}","${i.rule_type}","${i.old_ss}","${i.current_agent}","${isExt}","${i.current_team}","${i.pool}","${i.current_points ?? 0}","${i.last_month_consumption ?? 0}","${i.this_month_consumption ?? 0}","${i.status_ar || i.status}","${i.action_ar || i.recommended_action}"\n`;
+          csv += `"${i.student_id}","${i.rule_type}","${i.old_ss}","${i.current_agent}","${isExt}","${i.current_team}","${i.pool}","${i.current_points ?? 0}","${i.last_month_consumption ?? 0}","${i.this_month_consumption ?? 0}","${i.status_ar || i.status}","${i.action_ar || i.recommended_action}","${getLatestNoteSnippet(i.student_id)}"\n`;
         });
       } else if (currentTab === 'defense') {
-        csv += "Student ID,Rep,Team,Big Team,Pool,Remaining Points,Last Month Consumption,This Month Consumption,Last Connection,Days Inactive,Risk Tier,Action Required\n";
+        csv += "Student ID,Rep,Team,Big Team,Pool,Remaining Points,Last Month Consumption,This Month Consumption,Last Connection,Days Inactive,Risk Tier,Action Required,Latest Employee Note\n";
         filteredList.forEach(i => {
-          csv += `"${i.student_id}","${i.rep}","${i.team}","${i.big_team}","${i.pool}","${i.current_points ?? 0}","${i.last_month_consumption ?? 0}","${i.this_month_consumption ?? 0}","${i.last_connection}","${i.days_inactive}","${i.risk_tier}","${i.action_required_ar || i.action_required}"\n`;
+          csv += `"${i.student_id}","${i.rep}","${i.team}","${i.big_team}","${i.pool}","${i.current_points ?? 0}","${i.last_month_consumption ?? 0}","${i.this_month_consumption ?? 0}","${i.last_connection}","${i.days_inactive}","${i.risk_tier}","${i.action_required_ar || i.action_required}","${getLatestNoteSnippet(i.student_id)}"\n`;
         });
       } else if (currentTab === 'family') {
-        csv += "Family ID,Student ID,Old SS,Current Agent,Is External Agent,Current Team,Family Members,Split With,Remaining Points,Last Month Consumption,This Month Consumption,Status,Action\n";
+        csv += "Family ID,Student ID,Old SS,Current Agent,Is External Agent,Current Team,Family Members,Split With,Remaining Points,Last Month Consumption,This Month Consumption,Status,Action,Latest Employee Note\n";
         filteredList.forEach(i => {
           const isExt = !MY_TEAM_REPS.has(i.current_agent) ? "External (خارجي)" : "Internal (فريقنا)";
-          csv += `"${i.family_id}","${i.student_id}","${i.old_ss}","${i.current_agent}","${isExt}","${i.current_team}","${(i.family_members||[]).join(';')}","${(i.split_with||[]).join(';')}","${i.current_points ?? 0}","${i.last_month_consumption ?? 0}","${i.this_month_consumption ?? 0}","${i.status_ar}","${i.action_ar}"\n`;
+          csv += `"${i.family_id}","${i.student_id}","${i.old_ss}","${i.current_agent}","${isExt}","${i.current_team}","${(i.family_members||[]).join(';')}","${(i.split_with||[]).join(';')}","${i.current_points ?? 0}","${i.last_month_consumption ?? 0}","${i.this_month_consumption ?? 0}","${i.status_ar}","${i.action_ar}","${getLatestNoteSnippet(i.student_id)}"\n`;
         });
       }
 
@@ -4336,6 +4557,289 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       a.click();
       document.body.removeChild(a);
       showToast("📥 تم تصدير ملف CSV بنجاح!");
+    }
+
+
+    // ==========================================
+    // EMPLOYEE NOTES & FOLLOW-UP ENGINE
+    // ==========================================
+    const NOTES_STORAGE_KEY = 'bt01_allocation_rep_notes';
+    let ALL_STUDENT_NOTES = {};
+    let currentNoteModalStudentId = null;
+
+    function initStudentNotes() {
+      try {
+        // 1. Load baked-in notes from ALLOCATION_RULES_DATA
+        if (window.ALLOCATION_RULES_DATA && window.ALLOCATION_RULES_DATA.employee_notes) {
+          ALL_STUDENT_NOTES = Object.assign({}, window.ALLOCATION_RULES_DATA.employee_notes);
+        }
+        // 2. Merge local storage notes
+        const localRaw = localStorage.getItem(NOTES_STORAGE_KEY);
+        if (localRaw) {
+          const localData = JSON.parse(localRaw);
+          for (const [sId, nList] of Object.entries(localData)) {
+            if (!ALL_STUDENT_NOTES[sId]) ALL_STUDENT_NOTES[sId] = [];
+            const existingIds = new Set(ALL_STUDENT_NOTES[sId].map(n => n.id));
+            for (const n of nList) {
+              if (!existingIds.has(n.id)) {
+                ALL_STUDENT_NOTES[sId].push(n);
+              }
+            }
+          }
+        }
+      } catch (e) {
+        console.error('Error loading notes:', e);
+      }
+
+      // 3. Sync from backend API if reachable
+      if (window.location.protocol.startsWith('http')) {
+        fetch('/api/notes')
+          .then(r => r.json())
+          .then(res => {
+            if (res && res.success && res.notes) {
+              for (const [sId, nList] of Object.entries(res.notes)) {
+                if (!ALL_STUDENT_NOTES[sId]) ALL_STUDENT_NOTES[sId] = [];
+                const existingIds = new Set(ALL_STUDENT_NOTES[sId].map(n => n.id));
+                for (const n of nList) {
+                  if (!existingIds.has(n.id)) {
+                    ALL_STUDENT_NOTES[sId].push(n);
+                  }
+                }
+              }
+              try {
+                localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(ALL_STUDENT_NOTES));
+              } catch(e) {}
+              renderTable();
+            }
+          })
+          .catch(() => {});
+      }
+    }
+
+    function getStudentNotes(studentId) {
+      const sId = String(studentId).trim();
+      return ALL_STUDENT_NOTES[sId] || [];
+    }
+
+    function getLatestNoteSnippet(studentId) {
+      const notes = getStudentNotes(studentId);
+      if (!notes || notes.length === 0) return "";
+      const last = notes[notes.length - 1];
+      return `[${last.author_name} - ${last.timestamp}]: ${last.text.replace(/"/g, '""')}`;
+    }
+
+    function renderStudentNotesCell(studentId, repHint) {
+      const notes = getStudentNotes(studentId);
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+
+      if (!notes || notes.length === 0) {
+        return `
+          <td style="text-align: center; white-space: nowrap;">
+            <button type="button" class="btn-note-empty" onclick="openStudentNotesModal('${studentId}', '${escapeQuotes(repHint || '')}')" title="${t.add_note_title}">
+              <span>✏️</span> <span>${t.btn_add_note}</span>
+            </button>
+          </td>
+        `;
+      }
+
+      const latest = notes[notes.length - 1];
+      const count = notes.length;
+      const datePart = (latest.timestamp || '').split(' ')[0] || '';
+      const authorShort = latest.author_name ? latest.author_name.split(' ')[0] : (latest.author_id || 'Rep');
+
+      return `
+        <td style="text-align: center; white-space: nowrap;">
+          <button type="button" class="btn-note-filled" onclick="openStudentNotesModal('${studentId}', '${escapeQuotes(repHint || '')}')" title="${t.view_notes_title}">
+            <div class="note-pill-top">
+              <span class="note-count-badge">💬 ${count}</span>
+              <span class="note-author-pill">👤 ${escapeHtml(authorShort)}</span>
+              <span class="note-time-pill">${datePart}</span>
+            </div>
+            <div class="note-snippet" title="${escapeQuotes(latest.text)}">${escapeHtml(latest.text)}</div>
+          </button>
+        </td>
+      `;
+    }
+
+    function openStudentNotesModal(studentId, repHint) {
+      currentNoteModalStudentId = String(studentId).trim();
+      const modal = document.getElementById('studentNotesModal') || document.getElementById('notesModal');
+      const sIdEl = document.getElementById('notesModalStudentId');
+      const repEl = document.getElementById('notesModalRepHint');
+      const authorNameEl = document.getElementById('notesCurrentAuthorName');
+      const inputEl = document.getElementById('studentNoteInput');
+
+      if (sIdEl) sIdEl.textContent = currentNoteModalStudentId;
+      if (repEl) repEl.textContent = repHint || '—';
+
+      const authUser = window.CURRENT_AUTH_USER || {
+        id: 'ADMIN',
+        name: "حسين الأعصر — Hussein El A'sar",
+        team: 'MANAGEMENT',
+        role: 'ADMIN'
+      };
+
+      if (authorNameEl) {
+        authorNameEl.textContent = `${authUser.name} (${authUser.team || 'ME-EGSS'})`;
+      }
+
+      if (inputEl) inputEl.value = '';
+
+      renderNotesTimeline(currentNoteModalStudentId);
+
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function renderNotesTimeline(studentId) {
+      const container = document.getElementById('notesHistoryList');
+      const countBadge = document.getElementById('notesCountBadgeModal');
+      if (!container) return;
+
+      const notes = getStudentNotes(studentId);
+      if (countBadge) {
+        countBadge.textContent = `${notes.length} ${notes.length === 1 ? 'ملاحظة' : 'ملاحظات'}`;
+      }
+
+      if (notes.length === 0) {
+        const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+        container.innerHTML = `
+          <div style="text-align: center; padding: 25px 15px; color: #94a3b8; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.1);">
+            <div style="font-size: 1.5rem; margin-bottom: 6px;">📝</div>
+            <div style="font-size: 0.82rem;">${t.notes_empty_state}</div>
+          </div>
+        `;
+        return;
+      }
+
+      let html = '';
+      const sortedNotes = notes.slice().reverse();
+      sortedNotes.forEach(n => {
+        const teamBadge = n.author_team ? `<span style="font-size: 0.68rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 1px 6px; border-radius: 4px;">${escapeHtml(n.author_team)}</span>` : '';
+        html += `
+          <div class="timeline-note-card">
+            <div class="timeline-note-header">
+              <div class="timeline-author">
+                <span style="font-size: 0.9rem;">👤</span>
+                <span style="font-size: 0.8rem; font-weight: 800; color: #bae6fd;">${escapeHtml(n.author_name || n.author_id)}</span>
+                ${teamBadge}
+                <span style="font-size: 0.68rem; color: #34d399; display: inline-flex; align-items: center; gap: 2px;">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>موثق</span>
+                </span>
+              </div>
+              <div class="timeline-time">${escapeHtml(n.timestamp || '')}</div>
+            </div>
+            <div class="timeline-text">${escapeHtml(n.text || '')}</div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function insertNoteTag(tagText) {
+      const input = document.getElementById('studentNoteInput');
+      if (!input) return;
+      if (!input.value.includes(tagText)) {
+        input.value = tagText + input.value;
+      }
+      input.focus();
+    }
+
+    function submitCurrentStudentNote() {
+      if (!currentNoteModalStudentId) return;
+      const input = document.getElementById('studentNoteInput');
+      const text = (input ? input.value : '').trim();
+      if (!text) {
+        showToast(currentLang === 'zh' ? '请输入备注内容' : currentLang === 'en' ? 'Please enter note text' : 'يرجى كتابة نص الملاحظة');
+        return;
+      }
+
+      const authUser = window.CURRENT_AUTH_USER || {
+        id: 'ADMIN',
+        name: "حسين الأعصر — Hussein El A'sar",
+        team: 'MANAGEMENT',
+        role: 'ADMIN'
+      };
+
+      const now = new Date();
+      const yyyy = now.getFullYear();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const dd = String(now.getDate()).padStart(2, '0');
+      const hh = String(now.getHours()).padStart(2, '0');
+      const min = String(now.getMinutes()).padStart(2, '0');
+      const ss = String(now.getSeconds()).padStart(2, '0');
+      const timestampStr = `${yyyy}-${mm}-${dd} ${hh}:${min}:${ss}`;
+
+      const newNote = {
+        id: 'note_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
+        student_id: currentNoteModalStudentId,
+        author_id: authUser.id,
+        author_name: authUser.name,
+        author_team: authUser.team,
+        author_role: authUser.role,
+        text: text,
+        timestamp: timestampStr
+      };
+
+      if (!ALL_STUDENT_NOTES[currentNoteModalStudentId]) ALL_STUDENT_NOTES[currentNoteModalStudentId] = [];
+      ALL_STUDENT_NOTES[currentNoteModalStudentId].push(newNote);
+
+      // Save to localStorage
+      try {
+        localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(ALL_STUDENT_NOTES));
+      } catch (e) {
+        console.error('Failed to save to localStorage:', e);
+      }
+
+      // Sync to /api/notes
+      if (window.location.protocol.startsWith('http')) {
+        fetch('/api/notes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(newNote)
+        }).catch(err => console.warn('Could not post note to server API:', err));
+      }
+
+      if (input) input.value = '';
+
+      renderNotesTimeline(currentNoteModalStudentId);
+      renderTable();
+
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+      showToast(t.notes_saved_success || '✅ تم توثيق وحفظ ملاحظة الموظف بنجاح!');
+    }
+
+    function exportEmployeeNotesCSV() {
+      const allStudentIds = Object.keys(ALL_STUDENT_NOTES);
+      let totalNotesCount = 0;
+      allStudentIds.forEach(id => { totalNotesCount += (ALL_STUDENT_NOTES[id] || []).length; });
+
+      if (totalNotesCount === 0) {
+        showToast("⚠️ لا توجد أي ملاحظات مسجلة للموظفين حتى الآن لتصديرها!");
+        return;
+      }
+
+      let csv = "\uFEFF";
+      csv += "Student ID,Author ID,Author Name,Author Team,Author Role,Timestamp,Note Content\n";
+
+      allStudentIds.forEach(sId => {
+        const list = ALL_STUDENT_NOTES[sId] || [];
+        list.forEach(n => {
+          const cleanText = (n.text || '').replace(/"/g, '""');
+          csv += `"${sId}","${n.author_id || ''}","${n.author_name || ''}","${n.author_team || ''}","${n.author_role || ''}","${n.timestamp || ''}","${cleanText}"\n`;
+        });
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `BigTeam01_All_Employee_Notes_${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast(`📥 تم تصدير تقرير شامل بـ ${totalNotesCount} ملاحظة للموظفين بنجاح!`);
     }
 
     // Toast Engine
@@ -4413,6 +4917,77 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
             <button type="button" id="btnModalDirectSend" class="btn-dingtalk-mini" style="padding: 7px 18px; font-size: 0.84rem; background: linear-gradient(135deg, #0284c7, #2563eb); font-weight: 800;" onclick="sendModalTicketDirect()">🚀 إرسال مباشر لشات الموظف على DingTalk</button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Student Follow-up & Employee Notes -->
+  <div id="studentNotesModal" class="modal-overlay" style="display: none;" onclick="closeModalOnOverlay(event, 'studentNotesModal')">
+    <div class="modal-box" style="max-width: 650px;" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.5rem;">📝</span>
+          <div>
+            <h3 style="margin: 0; font-size: 1.05rem; color: #fff;" id="notesModalTitle">سجل ملاحظات ومتابعة الطالب</h3>
+            <div style="font-size: 0.76rem; color: #94a3b8; margin-top: 2px;">
+              <span>Student ID: <strong id="notesModalStudentId" style="color: #38bdf8; font-family: monospace;">—</strong></span>
+              <span style="margin: 0 6px;">•</span>
+              <span>الممثل المسؤول: <strong id="notesModalRepHint" style="color: #34d399;">—</strong></span>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="closeModal('studentNotesModal')">✕</button>
+      </div>
+
+      <div class="modal-body" style="padding: 16px 20px;">
+        <!-- Notes History Section -->
+        <div style="margin-bottom: 14px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <label style="font-size: 0.8rem; font-weight: 800; color: #cbd5e1; display: flex; align-items: center; gap: 6px;">
+              <span>📜</span> <span id="notesHistoryHeader">سجل الملاحظات التاريخي (موثق بأسماء الموظفين):</span>
+            </label>
+            <span id="notesCountBadgeModal" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 2px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 700;">0 ملاحظات</span>
+          </div>
+
+          <div id="notesHistoryList" style="max-height: 250px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px;">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- Add Note Section -->
+        <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
+            <span style="font-size: 0.78rem; font-weight: 700; color: #94a3b8;">
+              <span id="notesAuthorLabel">الملاحظة ستسجل رسمياً باسم:</span>
+              <strong id="notesCurrentAuthorName" style="color: #38bdf8; margin-right: 4px;">...</strong>
+            </span>
+            <span style="font-size: 0.7rem; color: #10b981; background: rgba(16, 185, 129, 0.12); padding: 2px 7px; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.25);">
+              🔒 توثيق رسمي غير قابل للتعديل
+            </span>
+          </div>
+
+          <!-- Quick Tags -->
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px;">
+            <button type="button" class="tag-pill-btn" onclick="insertNoteTag('📞 تم الاتصال بولي الأمر: ')">📞 تم الاتصال</button>
+            <button type="button" class="tag-pill-btn" onclick="insertNoteTag('💬 تواصل واتساب: ')">💬 تواصل واتساب</button>
+            <button type="button" class="tag-pill-btn" onclick="insertNoteTag('⏳ طلب مهلة للتجديد حتى: ')">⏳ طلب مهلة</button>
+            <button type="button" class="tag-pill-btn" onclick="insertNoteTag('🎯 وعد مؤكد بالتجديد على باقة: ')">🎯 وعد بالتجديد</button>
+            <button type="button" class="tag-pill-btn" onclick="insertNoteTag('🚫 رقم مغلق / لم يرد: ')">🚫 لم يرد</button>
+          </div>
+
+          <textarea id="studentNoteInput" class="modern-input" style="width: 100%; height: 85px; font-size: 0.8rem; font-family: 'Cairo', sans-serif; resize: vertical; margin-bottom: 10px; padding: 10px;" placeholder="اكتب ملاحظتك وتفاصيل المتابعة مع العميل هنا..."></textarea>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+            <span style="font-size: 0.72rem; color: #64748b;">🕒 يُحفظ التاريخ والوقت تلقائياً بالثانية</span>
+            <div style="display: flex; gap: 8px;">
+              <button type="button" class="btn-cancel-note" onclick="closeModal('studentNotesModal')">إلغاء</button>
+              <button type="button" class="btn-save-note" onclick="submitCurrentStudentNote()">
+                <span id="notesSaveBtnText">💾 حفظ وتوثيق الملاحظة</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

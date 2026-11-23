@@ -336,6 +336,63 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // API 4: Employee Notes Storage (GET /api/notes, POST /api/notes)
+  if (reqPath === '/api/notes') {
+    const notesFilePath = path.join(__dirname, 'leads', 'employee_notes.json');
+    if (req.method === 'GET') {
+      let notes = {};
+      if (fs.existsSync(notesFilePath)) {
+        try {
+          notes = JSON.parse(fs.readFileSync(notesFilePath, 'utf8'));
+        } catch (e) {
+          notes = {};
+        }
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ success: true, notes: notes }));
+      return;
+    }
+
+    if (req.method === 'POST') {
+      let chunks = [];
+      req.on('data', chunk => chunks.push(chunk));
+      req.on('end', () => {
+        try {
+          const raw = Buffer.concat(chunks).toString('utf8');
+          const noteObj = JSON.parse(raw);
+          const sId = String(noteObj.student_id).trim();
+
+          let notes = {};
+          if (fs.existsSync(notesFilePath)) {
+            try {
+              notes = JSON.parse(fs.readFileSync(notesFilePath, 'utf8'));
+            } catch (e) {
+              notes = {};
+            }
+          }
+
+          if (!notes[sId]) notes[sId] = [];
+          if (!notes[sId].some(n => n.id === noteObj.id)) {
+            notes[sId].push(noteObj);
+          }
+
+          const leadsDir = path.dirname(notesFilePath);
+          if (!fs.existsSync(leadsDir)) fs.mkdirSync(leadsDir, { recursive: true });
+          fs.writeFileSync(notesFilePath, JSON.stringify(notes, null, 2), 'utf8');
+
+          console.log(`[Notes API] 📝 New note saved for student #${sId} by ${noteObj.author_name} (${noteObj.author_id})`);
+          res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: true, note: noteObj }));
+        } catch (err) {
+          console.error('[Notes API ERROR]:', err);
+          res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+      });
+      return;
+    }
+  }
+
   // Static File Serving
   if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
 
