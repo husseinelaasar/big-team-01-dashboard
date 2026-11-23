@@ -1,1 +1,1 @@
-window.UNCOVERED_LEADS_DATA = {"meta": {"generatedAt": "2026-11-23 14:42:02", "auditDate": "2026-11-22", "totalUncovered": 0, "highTierCount": 0, "mediumTierCount": 0, "lowTierCount": 0, "dormantCount": 0, "uncontactedCount": 0, "teamBreakdown": {}, "repBreakdown": {}}, "leads": []};
+window.UNCOVERED_LEADS_DATA = {"meta": {"generatedAt": "2026-11-23 20:23:18", "auditDate": "2026-11-22", "totalUncovered": 0, "highTierCount": 0, "mediumTierCount": 0, "lowTierCount": 0, "dormantCount": 0, "uncontactedCount": 0, "teamBreakdown": {}, "repBreakdown": {}}, "leads": []};

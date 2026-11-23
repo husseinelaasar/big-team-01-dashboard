@@ -392,9 +392,11 @@ async function findBiFrame(page, pageIdSubstr = null, maxWaitSeconds = 15) {
         let fallbackFrame = null;
         for (const frame of frames) {
             try {
+                if (typeof frame.isDetached === 'function' && frame.isDetached()) continue;
                 const url = frame.url();
                 const isBi = url.includes('bi.aliyuncs.com') || url.includes('bi.aliyun') || url.includes('quickbi') || url.includes('dashboard') || url.includes('token3rd');
                 if (!isBi) continue;
+                if (typeof frame.isDetached === 'function' && frame.isDetached()) continue;
 
                 const alive = await frame.evaluate(() => document.readyState === 'complete' || document.readyState === 'interactive').catch(() => false);
                 if (!alive) continue;
@@ -424,17 +426,36 @@ async function safeNavigate(page, browser, targetUrl, timeout = 45000) {
             await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout });
             return page;
         }
+
+        const cur = page.url();
+        if (cur === targetUrl || (cur.includes('#/data-center/business/') && cur.endsWith(targetUrl.split('#').pop()))) {
+            return page;
+        }
+
         await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout });
         return page;
     } catch(err) {
-        if (err.message.includes('detached Frame') || err.message.includes('Target closed') || err.message.includes('Session closed')) {
-            console.log(`  🛡️ [SELF-HEALING] Detached frame encountered during navigation: recycling tab to clean page...`);
+        const isFrameOrConn = err.message.includes('detached Frame') || 
+                              err.message.includes('Target closed') || 
+                              err.message.includes('Session closed') || 
+                              err.message.includes('Connection closed') ||
+                              err.message.includes('Execution context was destroyed');
+        if (isFrameOrConn) {
+            console.log(`  🛡️ [SELF-HEALING] Frame or connection reset during navigation. Safely recovering page...`);
+            let newPage = null;
+            try {
+                const pages = await browser.pages().catch(() => null);
+                if (pages) {
+                    newPage = await browser.newPage();
+                    await newPage.setViewport({ width: 1920, height: 1080 });
+                    await setupDownload(browser, newPage, TARGET_INPUTS_DIR);
+                }
+            } catch(e) {}
             try { await page.close().catch(() => {}); } catch(e) {}
-            page = await browser.newPage();
-            await page.setViewport({ width: 1920, height: 1080 });
-            await setupDownload(browser, page, TARGET_INPUTS_DIR);
-            await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout });
-            return page;
+            if (newPage) {
+                await newPage.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout }).catch(() => {});
+                return newPage;
+            }
         }
         throw err;
     }
@@ -474,101 +495,73 @@ async function navigateAndEnsureBiFrame(page, browser, menuName, targetUrl, page
     let biFrame = await findBiFrame(page, pageIdSubstr, 6);
     if (biFrame) return { biFrame, page };
 
-    // Click data-center and leaf menu item (Multilingual: Chinese, English, Arabic, and SVG Icon Agnostic)
+    // Click leaf menu item directly (Never collapse an already-open Data Center accordion)
     await page.evaluate((name) => {
         window.dispatchEvent(new Event('resize'));
+        const isLens = name.includes('Lens') || name.includes('SA-SS') || name.includes('看板');
+        const isEC = name.includes('English') || name.includes('Club');
 
-        // 1. Data Center Menu (Multilingual + SVG Icon #shujuzhongxin)
-        const dcKeywords = ['数据中心', 'data center', 'مركز البيانات', 'datacenter'];
-        let dc = Array.from(document.querySelectorAll('.wy-sidebar__menu *')).find(e => {
-            const txt = (e.innerText || '').trim().toLowerCase();
-            return dcKeywords.some(k => txt === k || txt.includes(k));
-        });
-        if (!dc) {
-            dc = document.querySelector('.wy-sidebar__menu use[*|href*="shujuzhongxin"]')?.closest('.el-sub-menu__title') ||
-                 document.querySelector('.wy-sidebar__menu use[*|href*="shujuzhongxin"]')?.closest('li') ||
-                 document.querySelector('.wy-sidebar__menu use[*|href*="shujuzhongxin"]')?.parentElement;
+        function findLeaf() {
+            const allEls = Array.from(document.querySelectorAll('*'));
+            return allEls.find(el => {
+                const t = (el.innerText || '').trim();
+                if (isLens && (t === '中东 Lens 看板' || t.includes('Lens 看板') || t.includes('SA-SS'))) return el.children.length === 0;
+                if (isEC && (t === 'English Club数据看板' || t.includes('English Club'))) return el.children.length === 0;
+                return false;
+            });
         }
-        if (dc) dc.click();
 
-        // 2. Leaf Item (Multilingual + SVG Icon Agnostic)
-        const leafItems = Array.from(document.querySelectorAll('.el-menu-item:not(.el-sub-menu), .wy-menu__item--level-2, .el-menu-item'));
-        const isLens = name.includes('Lens') || name.includes('SA-SS') || name.includes('لينس') || name.includes('看板');
-        const isEC = name.includes('English') || name.includes('Club') || name.includes('انجليزي') || name.includes('إنجليزي') || name.includes('俱乐部');
-
-        let target = leafItems.find(e => {
-            const txt = (e.innerText || '').trim().toLowerCase();
-            if (isLens && (txt.includes('lens') || txt.includes('sa-ss') || txt.includes('看板') || txt.includes('لينس'))) return true;
-            if (isEC && (txt.includes('english') || txt.includes('club') || txt.includes('英语') || txt.includes('نادي'))) return true;
-            return (e.innerText || '').trim() === name || (e.innerText || '').includes(name);
-        });
-
+        let target = findLeaf();
         if (!target) {
-            if (isLens) {
-                target = leafItems.find(e => e.querySelector('use[*|href*="AIgenjinzhong"]'));
-            } else if (isEC) {
-                target = leafItems.find(e => e.querySelector('use[*|href*="AIzhuanrengong"]'));
+            // Only click Data Center if leaf is NOT already visible!
+            const dcKeywords = ['数据中心', 'data center', 'مركز البيانات', 'datacenter'];
+            const allEls = Array.from(document.querySelectorAll('*'));
+            const dc = allEls.find(e => dcKeywords.some(k => (e.innerText || '').trim().toLowerCase().includes(k)) && e.children.length === 0);
+            if (dc) {
+                dc.click();
+                dc.parentElement?.click();
             }
+            target = findLeaf();
         }
+
         if (target) {
             target.scrollIntoView({ behavior: 'instant', block: 'center' });
+            target.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
+            target.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
             target.click();
+            target.parentElement?.click();
             target.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
         }
     }, menuName).catch(() => {});
-    await new Promise(r => setTimeout(r, 3000));
-
-    biFrame = await findBiFrame(page, pageIdSubstr, 12);
-    if (biFrame) return { biFrame, page };
-
-    // Self-healing: Route transition recovery via welcome bounce
-    tracker.recordHealing(reportId, 'QuickBI iframe delayed: triggering route transition recovery via welcome bounce');
-    page = await safeNavigate(page, browser, 'https://lp.51talkjr.com/#/welcome', 20000).catch(() => page);
-    await new Promise(r => setTimeout(r, 1500));
-    page = await safeNavigate(page, browser, targetUrl, 30000).catch(() => page);
-    await new Promise(r => setTimeout(r, 2000));
-    await page.evaluate((name) => {
-        const dcKeywords = ['数据中心', 'data center', 'مركز البيانات', 'datacenter'];
-        let dc = Array.from(document.querySelectorAll('.wy-sidebar__menu *')).find(e => {
-            const txt = (e.innerText || '').trim().toLowerCase();
-            return dcKeywords.some(k => txt === k || txt.includes(k));
-        });
-        if (!dc) {
-            dc = document.querySelector('.wy-sidebar__menu use[*|href*="shujuzhongxin"]')?.closest('.el-sub-menu__title') ||
-                 document.querySelector('.wy-sidebar__menu use[*|href*="shujuzhongxin"]')?.closest('li') ||
-                 document.querySelector('.wy-sidebar__menu use[*|href*="shujuzhongxin"]')?.parentElement;
-        }
-        if (dc) dc.click();
-
-        const leafItems = Array.from(document.querySelectorAll('.el-menu-item:not(.el-sub-menu), .wy-menu__item--level-2, .el-menu-item'));
-        const isLens = name.includes('Lens') || name.includes('SA-SS') || name.includes('لينس') || name.includes('看板');
-        const isEC = name.includes('English') || name.includes('Club') || name.includes('انجليزي') || name.includes('إنجليزي') || name.includes('俱乐部');
-
-        let target = leafItems.find(e => {
-            const txt = (e.innerText || '').trim().toLowerCase();
-            if (isLens && (txt.includes('lens') || txt.includes('sa-ss') || txt.includes('看板') || txt.includes('لينس'))) return true;
-            if (isEC && (txt.includes('english') || txt.includes('club') || txt.includes('英语') || txt.includes('نادي'))) return true;
-            return (e.innerText || '').trim() === name || (e.innerText || '').includes(name);
-        });
-
-        if (!target) {
-            if (isLens) {
-                target = leafItems.find(e => e.querySelector('use[*|href*="AIgenjinzhong"]'));
-            } else if (isEC) {
-                target = leafItems.find(e => e.querySelector('use[*|href*="AIzhuanrengong"]'));
-            }
-        }
-        if (target) {
-            target.scrollIntoView({ behavior: 'instant', block: 'center' });
-            target.click();
-            target.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
-        }
-    }, menuName).catch(() => {});
+    await new Promise(r => setTimeout(r, 4000));
 
     biFrame = await findBiFrame(page, pageIdSubstr, 15);
     if (biFrame) return { biFrame, page };
 
-    throw new Error(`QuickBI frame for ${menuName} (${pageIdSubstr}) failed to mount after self-healing.`);
+    // Fallback: reload page and click leaf directly
+    await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => {});
+    await new Promise(r => setTimeout(r, 3000));
+    await page.evaluate((name) => {
+        const isLens = name.includes('Lens') || name.includes('SA-SS') || name.includes('看板');
+        const isEC = name.includes('English') || name.includes('Club');
+        const allEls = Array.from(document.querySelectorAll('*'));
+        const target = allEls.find(el => {
+            const t = (el.innerText || '').trim();
+            if (isLens && (t === '中东 Lens 看板' || t.includes('Lens 看板') || t.includes('SA-SS'))) return el.children.length === 0;
+            if (isEC && (t === 'English Club数据看板' || t.includes('English Club'))) return el.children.length === 0;
+            return false;
+        });
+        if (target) {
+            target.click();
+            target.parentElement?.click();
+        }
+    }, menuName).catch(() => {});
+    await new Promise(r => setTimeout(r, 4000));
+
+    biFrame = await findBiFrame(page, pageIdSubstr, 15);
+    if (biFrame) return { biFrame, page };
+
+    throw new Error(`QuickBI frame for ${menuName} (${pageIdSubstr}) failed to mount.`);
 }
 
 
@@ -626,8 +619,13 @@ async function clickInFrameViaCoordinates(page, frame, elementInfo) {
 
 
 async function clickModalConfirm(frame, page, maxAttempts = 20) {
+    // STRATEGY: QuickBI (Ant Design) modals mount via createPortal at <body> of
+    // EVERY frame context. We must search ALL contexts (page + every frame) and
+    // use MULTIPLE click strategies in priority order until the modal disappears.
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
-        await new Promise(r => setTimeout(r, 1000));
+        await new Promise(r => setTimeout(r, 800));
+
+        // Build context list: caller frame FIRST, then page, then all other frames
         const allContexts = [frame, page];
         if (page && typeof page.frames === 'function') {
             try {
@@ -636,20 +634,24 @@ async function clickModalConfirm(frame, page, maxAttempts = 20) {
                 }
             } catch(e) {}
         }
+
         for (const ctx of allContexts.filter(Boolean)) {
             try {
-                const btnInfo = await ctx.evaluate(() => {
-                    const modals = Array.from(document.querySelectorAll('.ant-modal, [role="dialog"], .ant-modal-content, .next-dialog, .next-overlay-wrapper, .qbi-modal-content, .bi-modal-content'));
+                // Phase 1: Find visible modal button and get its absolute page coordinates
+                const btnResult = await ctx.evaluate(() => {
+                    const modalSels = '.ant-modal, [role="dialog"], .ant-modal-content, .next-dialog, .next-overlay-wrapper, .qbi-modal-content, .bi-modal-content';
+                    const modals = Array.from(document.querySelectorAll(modalSels));
                     for (const m of modals) {
                         const style = window.getComputedStyle(m);
-                        if (style.display === 'none' || style.visibility === 'hidden') continue;
+                        if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') continue;
+                        if (m.offsetWidth === 0 || m.offsetHeight === 0) continue;
                         const buttons = Array.from(m.querySelectorAll('button, .ant-btn, .next-btn'));
 
-                        // 1. Multilingual matching (Chinese, English, Arabic) - flexible substring
-                        const confirmWords = ['ok', '确定', '确认', 'confirm', 'yes', 'موافق', 'تأكيد', 'نعم', 'حفظ', 'save', '导出', '批量导出', '下载', 'export', 'download'];
+                        // 1. Exact text matching for standard confirm buttons (stripping all whitespace)
+                        const exactConfirmWords = ['ok', '确定', '确认', 'confirm', 'yes', 'موافق', 'تأكيد', 'نعم', 'حفظ', 'save'];
                         let btn = buttons.find(b => {
                             const cleanTxt = (b.innerText || '').replace(/\s+/g, '').toLowerCase();
-                            return confirmWords.some(w => cleanTxt.includes(w) || cleanTxt === w);
+                            return exactConfirmWords.includes(cleanTxt);
                         });
 
                         // 2. Structural & Class fallback (primary button inside modal footer or modal)
@@ -660,38 +662,95 @@ async function clickModalConfirm(frame, page, maxAttempts = 20) {
                                   m.querySelector('button[type="submit"]:not([disabled])');
                         }
 
+                        // 3. Fallback to substring matching if exact match not found
+                        if (!btn) {
+                            const broadConfirmWords = ['ok', '确定', '确认', 'confirm', '导出', '批量导出', '下载', 'export', 'download'];
+                            btn = buttons.find(b => {
+                                const cleanTxt = (b.innerText || '').replace(/\s+/g, '').toLowerCase();
+                                return broadConfirmWords.some(w => cleanTxt === w || cleanTxt.includes(w));
+                            });
+                        }
+
+                        // 3. Last-resort: any non-cancel visible button in a modal footer
+                        if (!btn) {
+                            const cancelWords = ['cancel', '取消', 'إلغاء', 'close', '关闭', 'إغلاق'];
+                            btn = buttons.find(b => {
+                                const txt = (b.innerText || '').replace(/\s+/g, '').toLowerCase();
+                                return !cancelWords.some(w => txt.includes(w)) && b.offsetWidth > 0;
+                            });
+                        }
+
                         if (btn) {
                             btn.scrollIntoView({ behavior: 'instant', block: 'center' });
+                            // Fire synthetic events (works if React listens on the button)
                             btn.dispatchEvent(new MouseEvent('mousedown', { bubbles: true, cancelable: true, view: window }));
                             btn.dispatchEvent(new MouseEvent('mouseup', { bubbles: true, cancelable: true, view: window }));
                             try { btn.click(); } catch(e) {}
                             btn.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+                            // Also try .focus() + Enter key (triggers form submit and button handlers)
+                            try { btn.focus(); } catch(e) {}
                             const r = btn.getBoundingClientRect();
-                            return { x: r.x, y: r.y, width: r.width, height: r.height };
+                            return { x: r.x, y: r.y, width: r.width, height: r.height, inFrame: (window !== window.top) };
                         }
                     }
                     return null;
                 });
 
-                if (btnInfo) {
-                    let clickX = btnInfo.x + btnInfo.width / 2;
-                    let clickY = btnInfo.y + btnInfo.height / 2;
+                if (btnResult) {
+                    let clickX = btnResult.x + btnResult.width / 2;
+                    let clickY = btnResult.y + btnResult.height / 2;
+
+                    // Translate iframe-local coords to page-global coords
                     if (ctx !== page && typeof ctx.frameElement === 'function') {
-                        const fh = await ctx.frameElement().catch(() => null);
-                        if (fh) {
-                            const fb = await fh.boundingBox().catch(() => null);
-                            if (fb) {
-                                clickX += fb.x;
-                                clickY += fb.y;
+                        try {
+                            const fh = await ctx.frameElement().catch(() => null);
+                            if (fh) {
+                                const fb = await fh.boundingBox().catch(() => null);
+                                if (fb) {
+                                    clickX += fb.x;
+                                    clickY += fb.y;
+                                }
                             }
-                        }
+                        } catch(e) {}
                     }
+
+                    // CDP mouse click (native browser-level, most reliable)
                     if (clickX > 0 && clickY > 0 && clickX < 1920 && clickY < 1080) {
                         await page.mouse.move(Math.round(clickX), Math.round(clickY));
                         await new Promise(r => setTimeout(r, 100));
                         await page.mouse.click(Math.round(clickX), Math.round(clickY));
                     }
+
+                    // Also fire keyboard Enter on the focused button via CDP (belt-and-suspenders)
+                    try {
+                        await page.keyboard.press('Enter');
+                    } catch(e) {}
+
                     await new Promise(r => setTimeout(r, 1500));
+
+                    // VERIFY: Check if the modal actually closed
+                    let modalGone = false;
+                    try {
+                        modalGone = await ctx.evaluate(() => {
+                            const modalSels = '.ant-modal, [role="dialog"], .ant-modal-content, .next-dialog, .next-overlay-wrapper, .qbi-modal-content, .bi-modal-content';
+                            const modals = Array.from(document.querySelectorAll(modalSels));
+                            const visible = modals.filter(m => {
+                                const s = window.getComputedStyle(m);
+                                return s.display !== 'none' && s.visibility !== 'hidden' && s.opacity !== '0' && m.offsetWidth > 0;
+                            });
+                            return visible.length === 0;
+                        }).catch(() => false);
+                    } catch(e) {}
+
+                    if (modalGone) return true;
+
+                    // Modal still open: try one more aggressive CDP click + Enter
+                    if (clickX > 0 && clickY > 0 && clickX < 1920 && clickY < 1080) {
+                        await page.mouse.click(Math.round(clickX), Math.round(clickY));
+                        await new Promise(r => setTimeout(r, 300));
+                        try { await page.keyboard.press('Enter'); } catch(e) {}
+                        await new Promise(r => setTimeout(r, 1000));
+                    }
                     return true;
                 }
             } catch(e) {}
@@ -943,49 +1002,70 @@ async function runExporter() {
 
 
 
-    const browser = await puppeteer.launch({
-
+    let browser = await puppeteer.launch({
         executablePath: CHROME_PATH,
-
         userDataDir: PROFILE_DIR,
-
         headless: false,
-
         args: [
-
             '--start-maximized',
-
             '--no-sandbox',
-
             '--disable-setuid-sandbox',
-
             '--disable-notifications',
-
             '--disable-session-crashed-bubble',
-
             '--hide-crash-restore-bubble',
-
             '--no-default-browser-check',
-
             '--no-first-run',
-
             '--disable-features=SessionCrashedBubble,InfiniteSessionRestore',
-
             '--lang=zh-CN',
-
             '--window-size=1920,1080'
-
         ]
-
     });
 
-
-
-    const page = (await browser.pages())[0] || await browser.newPage();
-
+    let page = (await browser.pages())[0] || await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
-
     await setupDownload(browser, page, TARGET_INPUTS_DIR);
+
+    async function ensureBrowserReady() {
+        let alive = false;
+        try {
+            if (browser) {
+                const p = await browser.pages().catch(() => null);
+                if (p && Array.isArray(p)) alive = true;
+            }
+        } catch(e) { alive = false; }
+
+        if (!alive) {
+            console.log('  🛡️ [SELF-HEALING] Browser not connected. Launching clean Chrome instance...');
+            sanitizeChromeProfile();
+            browser = await puppeteer.launch({
+                executablePath: CHROME_PATH,
+                userDataDir: PROFILE_DIR,
+                headless: false,
+                args: [
+                    '--start-maximized',
+                    '--no-sandbox',
+                    '--disable-setuid-sandbox',
+                    '--disable-notifications',
+                    '--disable-session-crashed-bubble',
+                    '--hide-crash-restore-bubble',
+                    '--no-default-browser-check',
+                    '--no-first-run',
+                    '--disable-features=SessionCrashedBubble,InfiniteSessionRestore',
+                    '--lang=zh-CN',
+                    '--window-size=1920,1080'
+                ]
+            });
+            const pages = await browser.pages();
+            page = pages.length > 0 ? pages[0] : await browser.newPage();
+            await page.setViewport({ width: 1920, height: 1080 });
+            await setupDownload(browser, page, TARGET_INPUTS_DIR);
+        } else if (!page || page.isClosed()) {
+            const pages = await browser.pages().catch(() => []);
+            page = pages.length > 0 ? pages[0] : await browser.newPage();
+            await page.setViewport({ width: 1920, height: 1080 });
+            await setupDownload(browser, page, TARGET_INPUTS_DIR);
+        }
+    }
 
 
 
@@ -1021,12 +1101,11 @@ async function runExporter() {
 
 
 
-        for (let attempt = 1; attempt <= 2; attempt++) {
-
+        for (let attempt = 1; attempt <= 3; attempt++) {
             tracker.recordAttempt(r1Id);
+            await ensureBrowserReady();
 
             try {
-
                 let existingFiles = fs.readdirSync(TARGET_INPUTS_DIR);
                 let nav1 = await navigateAndEnsureBiFrame(page, browser, '中东 Lens 看板', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r1Id, tracker);
                 let biFrame = nav1.biFrame;
@@ -1036,11 +1115,16 @@ async function runExporter() {
                 tracker.log(r1Id, 'Switching to Effective Coverage tab...');
                 await biFrame.evaluate(() => {
                     const coverageWords = ['effective coverage', 'coverage', '有效覆盖', '覆盖', 'التغطية الفعالة', 'التغطية', 'تغطية'];
-                    const tabs = Array.from(document.querySelectorAll('.ant-tabs-tab, .bi-tab, [role="tab"], *')).filter(el => {
+                    const tabs = Array.from(document.querySelectorAll('.ant-tabs-nav .ant-tabs-tab, .ant-tabs-tab, [role="tab"], .bi-tab, .qbi-tab-item')).filter(el => {
                         const t = (el.innerText || '').trim().toLowerCase();
                         return coverageWords.some(w => t.includes(w));
                     });
-                    if (tabs.length > 0) tabs[tabs.length - 1].click();
+                    if (tabs.length > 0) {
+                        const target = tabs[tabs.length - 1];
+                        const btn = target.querySelector('.ant-tabs-tab-btn') || target;
+                        btn.click();
+                        target.click();
+                    }
                 });
                 await new Promise(r => setTimeout(r, 6000));
                 const fSD1 = await findBiFrame(page, '9255940d', 15);
@@ -1237,27 +1321,43 @@ async function runExporter() {
 
 
 
-        for (let attempt = 1; attempt <= 2; attempt++) {
-
+        for (let attempt = 1; attempt <= 3; attempt++) {
             tracker.recordAttempt(r2Id);
+            await ensureBrowserReady();
 
             try {
-
                 let existingFiles = fs.readdirSync(TARGET_INPUTS_DIR);
                 let nav2 = await navigateAndEnsureBiFrame(page, browser, '中东 Lens 看板', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r2Id, tracker);
                 let biFrame = nav2.biFrame;
                 page = nav2.page;
                 await setupDownload(browser, page, TARGET_INPUTS_DIR);
 
+                // Ensure page is freshly reloaded so default Achievement tab is mounted cleanly
+                await page.reload({ waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => {});
+                await new Promise(r => setTimeout(r, 4000));
+                const fReset = await findBiFrame(page, '9255940d', 15);
+                if (fReset) biFrame = fReset;
+
                 tracker.log(r2Id, 'Switching to ACHIEVEMENT tab...');
-                await biFrame.evaluate(() => {
+                const tabRes = await biFrame.evaluate(() => {
                     const achieveWords = ['achievement', 'hourly update', '业绩', 'الإنجاز', 'التحصيل', 'الأداء'];
-                    const tabs = Array.from(document.querySelectorAll('.ant-tabs-tab, .bi-tab, [role="tab"], *')).filter(el => {
+                    const tabs = Array.from(document.querySelectorAll('.ant-tabs-nav .ant-tabs-tab, .ant-tabs-tab, [role="tab"], .bi-tab, .qbi-tab-item'));
+                    let target = tabs.find(el => {
                         const t = (el.innerText || '').trim().toLowerCase();
-                        return achieveWords.some(w => t.includes(w));
+                        return achieveWords.some(w => t === w || t.includes(w));
                     });
-                    if (tabs.length > 0) tabs[tabs.length - 1].click();
+                    if (!target && tabs.length > 0) target = tabs[0];
+                    if (target) {
+                        const btn = target.querySelector('.ant-tabs-tab-btn') || target;
+                        btn.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
+                        btn.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
+                        btn.click();
+                        target.click();
+                        return { clicked: true, name: (target.innerText || '').trim() };
+                    }
+                    return { clicked: false };
                 });
+                tracker.log(r2Id, `Achievement tab click: ${JSON.stringify(tabRes)}`);
                 await new Promise(r => setTimeout(r, 6000));
                 const fAH1 = await findBiFrame(page, '9255940d', 15);
                 if (fAH1) biFrame = fAH1;
@@ -1307,46 +1407,71 @@ async function runExporter() {
                 if (fAH3) biFrame = fAH3;
 
                 const areaDotsInfo = await biFrame.evaluate(() => {
-                    const titles = Array.from(document.querySelectorAll('*')).filter(el => (el.innerText || '').trim() === 'Area/Big Team/Small Team/SS');
-                    let card = titles.length > 0 ? (titles[0].closest('.component-card-wrapper') || titles[0].closest('.bi-layout-tile') || titles[0].parentElement.parentElement) : null;
-                    if (!card) {
-                        const op = document.querySelector('.cross-table-expand-operator, [class*="expand-operator"]');
-                        card = op ? (op.closest('.component-card-wrapper') || op.closest('.bi-layout-tile')) : null;
-                    }
-                    if (!card) {
-                        const mores = Array.from(document.querySelectorAll('.common-more-outlined'));
-                        const target = mores.find(m => {
-                            const c = m.closest('.component-card-wrapper') || m.closest('.bi-layout-tile') || m.parentElement.parentElement;
-                            const txt = c ? c.innerText : '';
-                            return txt.includes('Area') && (txt.includes('Selected fields') || txt.includes('REVENUE CASH') || txt.includes('Small Team'));
-                        });
-                        if (target) {
-                            target.classList.remove('card-menu-hide');
-                            target.style.opacity = '1';
-                            target.style.visibility = 'visible';
-                            target.scrollIntoView({ behavior: 'instant', block: 'center' });
-                            const r = target.getBoundingClientRect();
-                            return { x: r.x, y: r.y, width: r.width, height: r.height };
+                    // Strategy 1: Find from op (.cross-table-expand-operator)
+                    // op exists ONLY in the Area Hierarchy cross-table!
+                    const op = document.querySelector('.cross-table-expand-operator, [class*="expand-operator"]');
+                    if (op) {
+                        let cur = op;
+                        while (cur && cur !== document.body) {
+                            const isTile = cur.classList?.contains('component-card-wrapper') || 
+                                           cur.classList?.contains('bi-layout-tile') || 
+                                           cur.classList?.contains('react-grid-item') ||
+                                           cur.hasAttribute?.('data-tile-id') ||
+                                           (typeof cur.className === 'string' && (cur.className.includes('card-wrapper') || cur.className.includes('tile-wrapper')));
+                            if (isTile) {
+                                const more = cur.querySelector('.common-more-outlined, .more-icon, i.anticon-more');
+                                if (more) {
+                                    more.classList.remove('card-menu-hide');
+                                    more.style.opacity = '1';
+                                    more.style.visibility = 'visible';
+                                    more.scrollIntoView({ behavior: 'instant', block: 'center' });
+                                    const r = more.getBoundingClientRect();
+                                    return { x: r.x, y: r.y, width: r.width, height: r.height, source: 'op-ancestor' };
+                                }
+                            }
+                            cur = cur.parentElement;
                         }
                     }
-                    const searchRoot = card || document;
-                    const more = searchRoot.querySelector('.common-more-outlined, .more-icon, i.anticon-more');
-                    if (!more) return null;
-                    more.classList.remove('card-menu-hide');
-                    more.style.opacity = '1';
-                    more.style.visibility = 'visible';
-                    more.scrollIntoView({ behavior: 'instant', block: 'center' });
-                    const r = more.getBoundingClientRect();
-                    return { x: r.x, y: r.y, width: r.width, height: r.height };
+
+                    // Strategy 2: Find from exact card title "Area/Big Team/Small Team/SS"
+                    const allEls = Array.from(document.querySelectorAll('*'));
+                    const titleEl = allEls.find(el => {
+                        const t = (el.innerText || '').trim();
+                        return (t === 'Area/Big Team/Small Team/SS' || t === 'Area/Big Team') && el.children.length === 0;
+                    });
+                    if (titleEl) {
+                        const card = titleEl.closest('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile"]');
+                        if (card) {
+                            const more = card.querySelector('.common-more-outlined, .more-icon, i.anticon-more');
+                            if (more) {
+                                more.classList.remove('card-menu-hide');
+                                more.style.opacity = '1';
+                                more.style.visibility = 'visible';
+                                more.scrollIntoView({ behavior: 'instant', block: 'center' });
+                                const r = more.getBoundingClientRect();
+                                return { x: r.x, y: r.y, width: r.width, height: r.height, source: 'title-card' };
+                            }
+                        }
+                    }
+
+                    return null;
                 });
 
                 if (areaDotsInfo) {
-                    tracker.log(r2Id, 'Clicking Area 3-dots...');
+                    tracker.log(r2Id, `Clicking Area 3-dots (source: ${areaDotsInfo.source || 'unknown'})...`);
                     await clickInFrameViaCoordinates(page, biFrame, areaDotsInfo);
                     await new Promise(r => setTimeout(r, 1500));
 
                     tracker.log(r2Id, 'Selecting Export from menu...');
-                    const exportClicked = await clickExportMenuItem(biFrame, page);
+                    const exportClicked = await biFrame.evaluate(() => {
+                        const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, [role="menuitem"], li'));
+                        const target = items.find(i => {
+                            const txt = (i.innerText || '').trim();
+                            return txt === 'Export' || txt === '导出' || txt.includes('Export');
+                        });
+                        if (target) { target.click(); return true; }
+                        return false;
+                    });
 
                     if (exportClicked) {
                         tracker.log(r2Id, 'Confirming export dialog...');
@@ -1354,28 +1479,15 @@ async function runExporter() {
                         const conf = await clickModalConfirm(biFrame, page);
                         tracker.log(r2Id, `Modal confirmed: ${conf}`);
 
-                        await new Promise(r => setTimeout(r, 1500));
-
-                        await clickModalConfirm(biFrame, page);
-
                         tracker.log(r2Id, 'Waiting for Area Hierarchy Excel download...');
-
-                        const file2 = await waitForNewDownload(existingFiles, 90, 8000, ['Area', 'Hierarchy', 'Team', 'Small']);
-
+                        const file2 = await waitForNewDownload(existingFiles, 90, 8000, ['Area', 'SS Lens Dashboard_Area', 'Hierarchy', 'Team', 'Small']);
                         if (file2) {
-
                             const sz = fs.statSync(file2).size;
-
                             tracker.recordSuccess(r2Id, file2, sz);
-
                             tracker.log(r2Id, `Captured: ${path.basename(file2)} (${(sz/1024).toFixed(1)} KB)`);
-
                             break;
-
                         }
-
                     }
-
                 }
 
 
@@ -1430,9 +1542,9 @@ async function runExporter() {
 
 
 
-        for (let attempt = 1; attempt <= 2; attempt++) {
-
+        for (let attempt = 1; attempt <= 3; attempt++) {
             tracker.recordAttempt(r4Id);
+            await ensureBrowserReady();
 
             try {
 
@@ -1510,47 +1622,35 @@ async function runExporter() {
 
 
                 if (ecDotsInfo) {
-
                     tracker.log(r4Id, 'Clicking English Club 3-dots...');
-
                     await clickInFrameViaCoordinates(page, biFrameEC, ecDotsInfo);
-
                     await new Promise(r => setTimeout(r, 1500));
 
-
-
                     tracker.log(r4Id, 'Selecting Export from menu...');
-
-                    const exportClicked = await clickExportMenuItem(biFrameEC, page);
-
-
+                    const exportClicked = await biFrameEC.evaluate(() => {
+                        const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, [role="menuitem"], li'));
+                        const target = items.find(i => {
+                            const txt = (i.innerText || '').trim();
+                            return txt === 'Export' || txt === '导出' || txt.includes('Export');
+                        });
+                        if (target) { target.click(); return true; }
+                        return false;
+                    });
 
                     if (exportClicked) {
-
                         tracker.log(r4Id, 'Confirming export dialog...');
-
                         await new Promise(r => setTimeout(r, 1500));
-
-                        await clickModalConfirm(biFrameEC, page);
-
+                        const confEC = await clickModalConfirm(biFrameEC, page);
+                        tracker.log(r4Id, `Modal confirmed: ${confEC}`);
                         tracker.log(r4Id, 'Waiting for English Club Excel download...');
-
                         const file4 = await waitForNewDownload(existingFiles, 90, 30000, ['EnglishClub', 'English Club', '中东', 'English']);
-
                         if (file4) {
-
                             const sz = fs.statSync(file4).size;
-
                             tracker.recordSuccess(r4Id, file4, sz);
-
                             tracker.log(r4Id, `Captured: ${path.basename(file4)} (${(sz/1024).toFixed(1)} KB)`);
-
                             break;
-
                         }
-
                     }
-
                 }
 
 
@@ -1605,9 +1705,9 @@ async function runExporter() {
 
 
 
-        for (let attempt = 1; attempt <= 2; attempt++) {
-
+        for (let attempt = 1; attempt <= 3; attempt++) {
             tracker.recordAttempt(r5Id);
+            await ensureBrowserReady();
 
             try {
 
@@ -1696,41 +1796,23 @@ async function runExporter() {
 
 
                 tracker.log(r5Id, `Download icon found: ${Boolean(dlBtnInfo)}`);
-
                 if (dlBtnInfo) {
-
                     tracker.log(r5Id, 'Clicking Full Master download icon via coordinates...');
-
                     await clickInFrameViaCoordinates(page, biFullFrame, dlBtnInfo);
-
                     await new Promise(r => setTimeout(r, 2500));
 
-
-
                     tracker.log(r5Id, 'Confirming Export modal (strict modal OK)...');
-
                     const conf = await clickModalConfirm(biFullFrame, page);
-
                     tracker.log(r5Id, `Modal confirmed: ${conf}`);
 
-
-
                     tracker.log(r5Id, 'Waiting for Full Master Excel download (up to 270s)...');
-
                     const file5 = await waitForNewDownload(existingFiles, 270, 200000, ['SS Lens Dashboard_2', 'SS Lens Dashboard']);
-
                     if (file5) {
-
                         const sz = fs.statSync(file5).size;
-
                         tracker.recordSuccess(r5Id, file5, sz);
-
                         tracker.log(r5Id, `Captured: ${path.basename(file5)} (${(sz/1024).toFixed(1)} KB)`);
-
                         break;
-
                     }
-
                 }
 
 
@@ -1787,7 +1869,7 @@ async function runExporter() {
 
 
 
-        const masterFile = fs.readdirSync(TARGET_INPUTS_DIR).find(f => /^SS Lens Dashboard_\d{8}_\d{4}\.xlsx$/i.test(f) && !f.includes('Student-Detail') && !f.includes('Area'));
+        const masterFile = fs.readdirSync(TARGET_INPUTS_DIR).find(f => f.startsWith('SS Lens Dashboard_') && !f.includes('Student-Detail') && !f.includes('Area') && f.endsWith('.xlsx'));
 
         if (masterFile) {
 
