@@ -1,5 +1,5 @@
 window.ALLOCATION_RULES_DATA = {
-  "generated_at": "2026-11-23 16:16:21",
+  "generated_at": "2026-11-23 18:03:33",
   "audit_date": "2026-11-23",
   "stats": {
     "total_active_sector_leads": 4567,

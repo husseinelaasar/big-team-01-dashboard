@@ -722,6 +722,21 @@
       line-height: 1.25;
       text-align: right;
     }
+    /* Global Floating Note Hover Pop-up */
+    .global-note-hover-card {
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid #38bdf8;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.85), 0 0 25px rgba(56, 189, 248, 0.25);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: #f1f5f9;
+      font-family: 'Cairo', sans-serif;
+      text-align: right;
+      direction: rtl;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      backdrop-filter: blur(12px);
+      cursor: pointer;
+    }
     .timeline-note-card {
       background: rgba(30, 41, 59, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1927,12 +1942,18 @@
           </button>
         </div>
 
-        <!-- Employee Notes Export Button -->
+        <!-- Employee Notes Live Feed & Export Buttons -->
         <div class="filter-group" style="justify-content: flex-end;">
           <label>&nbsp;</label>
-          <button type="button" class="btn-ticket-mini" style="padding: 8px 14px; font-size: 0.8rem; height: 38px; justify-content: center; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8;" onclick="exportEmployeeNotesCSV()" title="تصدير تقرير شامل بجميع ملاحظات ومتابعات الموظفين">
-            <span id="btnExportNotesText">📝 تقرير الملاحظات</span>
-          </button>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <button type="button" class="btn-ticket-mini" style="padding: 8px 14px; font-size: 0.8rem; height: 38px; justify-content: center; background: rgba(14, 165, 233, 0.18); border: 1px solid #0284c7; color: #38bdf8; gap: 6px;" onclick="openLiveNotesFeedModal()" title="استعراض سجل الملاحظات الحية المدونة من الموظفين مباشرة على الصفحة">
+              <span id="btnLiveNotesFeedText">💬 أحدث الملاحظات</span>
+              <span id="globalNotesCountBadge" style="background: #0284c7; color: #fff; font-size: 0.7rem; font-weight: 800; padding: 1px 7px; border-radius: 10px;">0</span>
+            </button>
+            <button type="button" class="btn-ticket-mini" style="padding: 8px 14px; font-size: 0.8rem; height: 38px; justify-content: center; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8;" onclick="exportEmployeeNotesCSV()" title="تصدير تقرير شامل بجميع ملاحظات ومتابعات الموظفين">
+              <span id="btnExportNotesText">📝 تقرير الملاحظات</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -2183,6 +2204,13 @@
         notes_empty_state: "لا توجد ملاحظات مسجلة لهذا الطالب حتى الآن. كن أول من يدون ملاحظة متابعة.",
         notes_saved_success: "✅ تم توثيق وحفظ ملاحظة الموظف بنجاح!",
         btn_export_notes: "📝 تقرير الملاحظات",
+        btn_live_notes_feed: "💬 أحدث الملاحظات",
+        live_notes_feed_title: "سجل الملاحظات الحية عبر المنظومة",
+        live_notes_feed_desc: "استعراض جميع الملاحظات والمتابعات المدونة من قبل الموظفين ومستشاري المبيعات لحظة بلحظة",
+        notes_empty_badge: "لا توجد ملاحظات",
+        notes_hover_empty_prompt: "لم يتم تسجيل أي ملاحظات لهذا الطالب بعد. اضغط هنا لتدوين ملاحظة متابعة رسمية موثقة باسمك وفريقك.",
+        notes_hover_click_to_add: "اضغط هنا لفتح نافذة التدوين",
+        notes_prev_history: "ملاحظات سابقة:",
         th_sop_actions: "إجراءات SOP و DingTalk",
 
         btn_ticket: "📋 تذكرة",
@@ -2275,6 +2303,8 @@
         th_student_id: "Student ID",
         th_rule: "Applied Rule",
         th_old_rep: "Original Rep (Old SS)",
+        th_eligible_reclaim: "Eligible Reclaimers (Rights)",
+        th_family_claimants: "Family Claimants (Unification)",
         th_current_rep: "Current Rep (Current EA)",
         th_assigned_rep: "Assigned Rep",
         th_current_team: "Current Team",
@@ -2304,6 +2334,13 @@
         notes_empty_state: "No notes logged for this student yet. Be the first to record a note.",
         notes_saved_success: "✅ Employee note saved and timestamped successfully!",
         btn_export_notes: "📝 Notes Report",
+        btn_live_notes_feed: "💬 Live Notes Feed",
+        live_notes_feed_title: "System-wide Live Notes Feed",
+        live_notes_feed_desc: "Real-time stream of all customer follow-up notes logged by team reps",
+        notes_empty_badge: "No Notes Yet",
+        notes_hover_empty_prompt: "No notes logged for this student yet. Click here to record an official follow-up note under your name.",
+        notes_hover_click_to_add: "Click here to add a note",
+        notes_prev_history: "Previous Notes:",
         th_sop_actions: "SOP & DingTalk Actions",
 
         btn_ticket: "📋 Ticket",
@@ -2396,6 +2433,8 @@
         th_student_id: "学员 ID",
         th_rule: "触发规则",
         th_old_rep: "原责任顾问 (Old SS)",
+        th_eligible_reclaim: "有权回收顾问 (Eligible)",
+        th_family_claimants: "有权合并顾问 (Family Claimants)",
         th_current_rep: "当前顾问 (Current EA)",
         th_assigned_rep: "责任顾问 (Rep)",
         th_current_team: "当前小组",
@@ -2425,6 +2464,13 @@
         notes_empty_state: "暂无历史跟进记录。点击下方输入框添加第一条跟进记录。",
         notes_saved_success: "✅ 顾问跟进备注已成功实名保存！",
         btn_export_notes: "📝 导出跟进记录",
+        btn_live_notes_feed: "💬 实时跟进动态",
+        live_notes_feed_title: "全组实时跟进动态",
+        live_notes_feed_desc: "按时间顺序实时查看各顾问记录的学员最新跟进记录与跟进状态",
+        notes_empty_badge: "暂无跟进",
+        notes_hover_empty_prompt: "该学员暂无跟进记录。点击此处立即以您的实名添加首条跟进记录。",
+        notes_hover_click_to_add: "点击此处添加跟进备注",
+        notes_prev_history: "历史备注:",
         th_sop_actions: "SOP 操作与钉钉",
 
         btn_ticket: "📋 工单",
@@ -2499,6 +2545,9 @@
       if (document.getElementById('crmLiveSyncText')) document.getElementById('crmLiveSyncText').textContent = t.crm_live_sync;
       if (document.getElementById('dataLastUpdatedLabel')) document.getElementById('dataLastUpdatedLabel').textContent = t.last_data_update;
       if (document.getElementById('btnExportNotesText')) document.getElementById('btnExportNotesText').textContent = t.btn_export_notes;
+      if (document.getElementById('btnLiveNotesFeedText')) document.getElementById('btnLiveNotesFeedText').textContent = t.btn_live_notes_feed;
+      if (document.getElementById('liveNotesFeedModalTitle')) document.getElementById('liveNotesFeedModalTitle').textContent = t.live_notes_feed_title;
+      if (document.getElementById('liveNotesFeedModalDesc')) document.getElementById('liveNotesFeedModalDesc').textContent = t.live_notes_feed_desc;
 
       if (document.getElementById('kpiReadyTitle')) document.getElementById('kpiReadyTitle').textContent = t.kpi_ready_title;
       if (document.getElementById('kpiReadyDesc')) document.getElementById('kpiReadyDesc').textContent = t.kpi_ready_desc;
@@ -3705,7 +3754,7 @@ function renderAgentBadge(agentName) {
           }
 
           rowsHtml += `
-            <tr>
+            <tr data-student-id="${item.student_id}">
               <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
               <td style="white-space: nowrap;">
                 <div style="display: inline-flex; align-items: center; gap: 4px;">
@@ -3779,7 +3828,7 @@ function renderAgentBadge(agentName) {
           }
 
           rowsHtml += `
-            <tr>
+            <tr data-student-id="${item.student_id}">
               <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
               <td style="white-space: nowrap;">
                 <div style="display: inline-flex; align-items: center; gap: 4px;">
@@ -3821,7 +3870,7 @@ function renderAgentBadge(agentName) {
           `;
         } else if (currentTab === 'family') {
           rowsHtml += `
-            <tr>
+            <tr data-student-id="${item.student_id}">
               <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
               <td style="white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #f59e0b;">${item.family_id}</td>
               <td style="white-space: nowrap;">
@@ -4590,6 +4639,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       } catch (e) {
         console.error('Error loading notes:', e);
       }
+      updateGlobalNotesCount();
 
       // 3. Sync from backend API if reachable
       if (window.location.protocol.startsWith('http')) {
@@ -4609,6 +4659,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
               try {
                 localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(ALL_STUDENT_NOTES));
               } catch(e) {}
+              updateGlobalNotesCount();
               renderTable();
             }
           })
@@ -4634,7 +4685,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
 
       if (!notes || notes.length === 0) {
         return `
-          <td style="text-align: center; white-space: nowrap;">
+          <td style="text-align: center; white-space: nowrap;" onmouseenter="showNoteHoverPopup(event, '${studentId}', '${escapeQuotes(repHint || '')}')" onmouseleave="hideNoteHoverPopup()">
             <button type="button" class="btn-note-empty" onclick="openStudentNotesModal('${studentId}', '${escapeQuotes(repHint || '')}')" title="${t.add_note_title}">
               <span>✏️</span> <span>${t.btn_add_note}</span>
             </button>
@@ -4648,7 +4699,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       const authorShort = latest.author_name ? latest.author_name.split(' ')[0] : (latest.author_id || 'Rep');
 
       return `
-        <td style="text-align: center; white-space: nowrap;">
+        <td style="text-align: center; white-space: nowrap;" onmouseenter="showNoteHoverPopup(event, '${studentId}', '${escapeQuotes(repHint || '')}')" onmouseleave="hideNoteHoverPopup()">
           <button type="button" class="btn-note-filled" onclick="openStudentNotesModal('${studentId}', '${escapeQuotes(repHint || '')}')" title="${t.view_notes_title}">
             <div class="note-pill-top">
               <span class="note-count-badge">💬 ${count}</span>
@@ -4804,6 +4855,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       if (input) input.value = '';
 
       renderNotesTimeline(currentNoteModalStudentId);
+      updateGlobalNotesCount();
       renderTable();
 
       const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
@@ -4840,6 +4892,271 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       a.click();
       document.body.removeChild(a);
       showToast(`📥 تم تصدير تقرير شامل بـ ${totalNotesCount} ملاحظة للموظفين بنجاح!`);
+    }
+
+    // ==========================================
+    // INTERACTIVE NOTE HOVER POP-UP & LIVE FEED ENGINE
+    // ==========================================
+    let noteHoverTimer = null;
+    let currentHoveredStudentId = null;
+
+    function updateGlobalNotesCount() {
+      let totalNotes = 0;
+      let studentsCount = 0;
+      for (const [sId, list] of Object.entries(ALL_STUDENT_NOTES)) {
+        if (list && list.length > 0) {
+          totalNotes += list.length;
+          studentsCount++;
+        }
+      }
+      const badge = document.getElementById('globalNotesCountBadge');
+      if (badge) badge.textContent = totalNotes;
+      const feedTotal = document.getElementById('feedTotalNotesCount');
+      if (feedTotal) feedTotal.textContent = totalNotes;
+      const feedStudents = document.getElementById('feedTotalStudentsCount');
+      if (feedStudents) feedStudents.textContent = studentsCount;
+    }
+
+    function showNoteHoverPopup(event, studentId, repHint) {
+      clearTimeout(noteHoverTimer);
+      currentHoveredStudentId = String(studentId).trim();
+      const targetEl = event.currentTarget;
+      let popup = document.getElementById('globalNoteHoverCard');
+      if (!popup) {
+        popup = document.createElement('div');
+        popup.id = 'globalNoteHoverCard';
+        popup.className = 'global-note-hover-card';
+        popup.style.display = 'none';
+        popup.style.position = 'fixed';
+        popup.style.zIndex = '9999999';
+        popup.onmouseenter = () => clearTimeout(noteHoverTimer);
+        popup.onmouseleave = () => hideNoteHoverPopup(100);
+        popup.onclick = () => {
+          if (currentHoveredStudentId) {
+            openStudentNotesModal(currentHoveredStudentId, '');
+            hideNoteHoverPopup(0);
+          }
+        };
+        document.body.appendChild(popup);
+      }
+
+      const notes = getStudentNotes(studentId);
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+
+      let contentHtml = '';
+      if (!notes || notes.length === 0) {
+        contentHtml = `
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 6px; margin-bottom: 8px;">
+            <div style="font-weight: 800; font-size: 0.82rem; color: #38bdf8; display: flex; align-items: center; gap: 5px;">
+              <span>📌</span> <span>Student #${studentId}</span>
+            </div>
+            <span style="font-size: 0.68rem; color: #94a3b8; background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 4px;">${t.notes_empty_badge}</span>
+          </div>
+          <div style="font-size: 0.76rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 10px;">
+            ${t.notes_hover_empty_prompt}
+          </div>
+          <div style="font-size: 0.72rem; color: #38bdf8; font-weight: 700; display: flex; align-items: center; gap: 4px;">
+            <span>✏️</span> <span>${t.notes_hover_click_to_add}</span>
+          </div>
+        `;
+      } else {
+        const latest = notes[notes.length - 1];
+        const totalCount = notes.length;
+        const authorName = latest.author_name || latest.author_id || 'Rep';
+        const authorTeam = latest.author_team ? `<span style="font-size: 0.65rem; background: rgba(56,189,248,0.15); color: #38bdf8; padding: 1px 5px; border-radius: 4px; font-weight: 700;">${escapeHtml(latest.author_team)}</span>` : '';
+        const dateFormatted = latest.timestamp || '';
+
+        let prevNotesHtml = '';
+        if (totalCount > 1) {
+          const prevNotes = notes.slice(0, -1).slice(-2).reverse();
+          prevNotesHtml = `
+            <div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(255,255,255,0.1);">
+              <div style="font-size: 0.68rem; color: #94a3b8; margin-bottom: 4px; font-weight: 700;">🕒 ${t.notes_prev_history} (${totalCount - 1}):</div>
+              ${prevNotes.map(pn => `
+                <div style="font-size: 0.68rem; color: #94a3b8; background: rgba(0,0,0,0.3); padding: 4px 6px; border-radius: 4px; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  <strong style="color: #cbd5e1;">${escapeHtml((pn.author_name || pn.author_id || '').split(' ')[0])}</strong> <span style="font-size:0.62rem; color:#64748b;">(${(pn.timestamp||'').split(' ')[0]})</span>: ${escapeHtml(pn.text || '')}
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        contentHtml = `
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 6px; margin-bottom: 8px;">
+            <div style="font-weight: 800; font-size: 0.85rem; color: #38bdf8; display: flex; align-items: center; gap: 5px;">
+              <span>📌</span> <span>Student #${studentId}</span>
+            </div>
+            <span style="font-size: 0.68rem; font-weight: 800; background: #0284c7; color: #fff; padding: 2px 8px; border-radius: 10px;">
+              💬 ${totalCount} ${totalCount === 1 ? 'ملاحظة' : 'ملاحظات'}
+            </span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; font-size: 0.72rem;">
+            <div style="display: flex; align-items: center; gap: 5px; font-weight: 800; color: #bae6fd;">
+              <span>👤 ${escapeHtml(authorName)}</span>
+              ${authorTeam}
+              <span style="font-size: 0.65rem; color: #34d399; font-weight: 700;">🛡️ موثق</span>
+            </div>
+            <div style="color: #94a3b8; font-size: 0.68rem; font-family: monospace;">${dateFormatted}</div>
+          </div>
+          <div style="background: rgba(2, 132, 199, 0.08); border-right: 3px solid #38bdf8; border-radius: 4px; padding: 8px 10px; font-size: 0.78rem; color: #f8fafc; line-height: 1.45; max-height: 130px; overflow-y: auto; word-break: break-word;">
+            ${escapeHtml(latest.text)}
+          </div>
+          ${prevNotesHtml}
+          <div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; font-size: 0.68rem; color: #38bdf8;">
+            <span>🔍 اضغط لفتح السجل الكامل أو تدوين ملاحظة جديدة</span>
+            <span>⚡</span>
+          </div>
+        `;
+      }
+
+      popup.innerHTML = contentHtml;
+
+      const rect = targetEl.getBoundingClientRect();
+      const popupWidth = 340;
+      popup.style.width = popupWidth + 'px';
+      popup.style.display = 'block';
+
+      let left = rect.left + (rect.width / 2) - (popupWidth / 2);
+      if (left < 10) left = 10;
+      if (left + popupWidth > window.innerWidth - 10) left = window.innerWidth - popupWidth - 10;
+
+      const popupHeight = popup.offsetHeight || 160;
+      let top = rect.top - popupHeight - 10;
+      if (top < 10) {
+        top = rect.bottom + 10;
+      }
+
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+      popup.style.opacity = '1';
+      popup.style.visibility = 'visible';
+      popup.style.transform = 'translateY(0)';
+    }
+
+    function hideNoteHoverPopup(delay = 150) {
+      noteHoverTimer = setTimeout(() => {
+        const popup = document.getElementById('globalNoteHoverCard');
+        if (popup) {
+          popup.style.opacity = '0';
+          popup.style.visibility = 'hidden';
+          popup.style.transform = 'translateY(6px)';
+          setTimeout(() => {
+            if (popup.style.visibility === 'hidden') popup.style.display = 'none';
+          }, 180);
+        }
+      }, delay);
+    }
+
+    function openLiveNotesFeedModal() {
+      const modal = document.getElementById('liveNotesFeedModal');
+      if (!modal) return;
+      const searchInput = document.getElementById('liveNotesSearchInput');
+      if (searchInput) searchInput.value = '';
+      renderLiveNotesFeedList();
+      modal.style.display = 'flex';
+    }
+
+    function closeLiveNotesFeedModal() {
+      const modal = document.getElementById('liveNotesFeedModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function renderLiveNotesFeedList() {
+      const listContainer = document.getElementById('liveNotesFeedList');
+      if (!listContainer) return;
+
+      const q = ((document.getElementById('liveNotesSearchInput') || {}).value || '').trim().toLowerCase();
+
+      const allNotes = [];
+      for (const [sId, nList] of Object.entries(ALL_STUDENT_NOTES)) {
+        if (!Array.isArray(nList)) continue;
+        nList.forEach(n => {
+          allNotes.push(Object.assign({ student_id: sId }, n));
+        });
+      }
+
+      allNotes.sort((a, b) => (b.timestamp || '').localeCompare(a.timestamp || ''));
+
+      const filtered = allNotes.filter(n => {
+        if (!q) return true;
+        const text = (n.text || '').toLowerCase();
+        const author = (n.author_name || n.author_id || '').toLowerCase();
+        const team = (n.author_team || '').toLowerCase();
+        const sId = String(n.student_id || '').toLowerCase();
+        return text.includes(q) || author.includes(q) || team.includes(q) || sId.includes(q);
+      });
+
+      const totalBadge = document.getElementById('feedTotalNotesCount');
+      if (totalBadge) totalBadge.textContent = allNotes.length;
+      const studentsSet = new Set(allNotes.map(n => n.student_id));
+      const studentsBadge = document.getElementById('feedTotalStudentsCount');
+      if (studentsBadge) studentsBadge.textContent = studentsSet.size;
+
+      if (filtered.length === 0) {
+        listContainer.innerHTML = `
+          <div style="text-align: center; padding: 40px 20px; color: #94a3b8; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.1);">
+            <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
+            <div style="font-size: 0.9rem; font-weight: 700; color: #cbd5e1; margin-bottom: 4px;">لا توجد ملاحظات تطابق البحث</div>
+            <div style="font-size: 0.78rem;">جرّب البحث برقم طالب آخر، اسم ممثل مختلف، أو امسح شريط البحث.</div>
+          </div>
+        `;
+        return;
+      }
+
+      let html = '';
+      filtered.forEach(n => {
+        const teamBadge = n.author_team ? `<span style="font-size: 0.7rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 2px 7px; border-radius: 4px; font-weight: 700;">${escapeHtml(n.author_team)}</span>` : '';
+        html += `
+          <div class="timeline-note-card" style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.2); border-right: 4px solid #38bdf8; border-radius: 8px; padding: 12px 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-weight: 800; color: #bae6fd; font-size: 0.85rem;">👤 ${escapeHtml(n.author_name || n.author_id)}</span>
+                ${teamBadge}
+                <span style="font-size: 0.7rem; color: #34d399; font-weight: 700; display: inline-flex; align-items: center; gap: 3px;">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>موثق بالنظام</span>
+                </span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 0.74rem; color: #94a3b8; font-family: monospace;">${escapeHtml(n.timestamp || '')}</span>
+                <button type="button" class="btn-ticket-mini" onclick="locateStudentInTable('${n.student_id}')" style="padding: 4px 10px; font-size: 0.72rem; background: rgba(14, 165, 233, 0.2); border: 1px solid #0284c7; color: #38bdf8; gap: 4px;">
+                  <span>🎯 انتقال للطالب #${escapeHtml(n.student_id)}</span>
+                </button>
+              </div>
+            </div>
+            <div style="font-size: 0.82rem; color: #f8fafc; line-height: 1.5; background: rgba(0,0,0,0.25); padding: 10px 12px; border-radius: 6px; word-break: break-word;">
+              ${escapeHtml(n.text || '')}
+            </div>
+          </div>
+        `;
+      });
+
+      listContainer.innerHTML = html;
+    }
+
+    function locateStudentInTable(studentId) {
+      closeLiveNotesFeedModal();
+      const searchBox = document.getElementById('searchInput');
+      if (searchBox) {
+        searchBox.value = studentId;
+        applyFilters();
+      }
+      setTimeout(() => {
+        const table = document.getElementById('tableBody');
+        if (table) {
+          table.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        const row = document.querySelector(`tr[data-student-id="${studentId}"]`) || document.querySelector('#tableBody tr:first-child');
+        if (row) {
+          row.style.transition = 'all 0.3s ease';
+          row.style.outline = '2px solid #38bdf8';
+          row.style.background = 'rgba(56, 189, 248, 0.2)';
+          setTimeout(() => {
+            row.style.outline = 'none';
+            row.style.background = '';
+          }, 3000);
+        }
+      }, 200);
     }
 
     // Toast Engine
@@ -4991,6 +5308,47 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       </div>
     </div>
   </div>
+
+  <!-- Modal: Live Notes Feed (سجل الملاحظات الحية عبر المنظومة) -->
+  <div id="liveNotesFeedModal" class="modal-overlay" style="display: none;" onclick="closeModalOnOverlay(event, 'liveNotesFeedModal')">
+    <div class="modal-box" style="max-width: 820px; max-height: 85vh; display: flex; flex-direction: column;" onclick="event.stopPropagation()">
+      <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 14px 20px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.4rem;">💬</span>
+          <div>
+            <h3 style="margin: 0; font-size: 1.1rem; color: #fff;" id="liveNotesFeedModalTitle">سجل الملاحظات الحية عبر المنظومة</h3>
+            <div style="font-size: 0.76rem; color: #94a3b8; margin-top: 2px;" id="liveNotesFeedModalDesc">استعراض أحدث الملاحظات والأنشطة المدونة من الموظفين لحظة بلحظة</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button type="button" class="btn-ticket-mini" onclick="exportEmployeeNotesCSV()" style="padding: 6px 12px; font-size: 0.75rem; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8;">
+            <span>📥 تصدير CSV</span>
+          </button>
+          <button type="button" class="modal-close-btn" onclick="closeModal('liveNotesFeedModal')">✕</button>
+        </div>
+      </div>
+
+      <!-- Feed Search & Stats Toolbar -->
+      <div style="padding: 12px 20px; background: rgba(0,0,0,0.25); border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; gap: 15px; align-items: center; flex-wrap: wrap; justify-content: space-between;">
+        <div style="flex: 1; min-width: 250px; position: relative;">
+          <input type="text" id="liveNotesSearchInput" oninput="renderLiveNotesFeedList()" placeholder="🔍 ابحث برقم الطالب أو اسم الموظف أو كلمة في الملاحظة..." style="width: 100%; padding: 8px 12px; border-radius: 6px; background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.15); color: #f8fafc; font-size: 0.8rem; font-family: 'Cairo', sans-serif;">
+        </div>
+        <div style="display: flex; gap: 14px; align-items: center; font-size: 0.78rem; color: #94a3b8;">
+          <div>إجمالي الملاحظات: <strong style="color: #38bdf8; font-weight: 800;" id="feedTotalNotesCount">0</strong></div>
+          <div>•</div>
+          <div>الطلاب المتابعون: <strong style="color: #34d399; font-weight: 800;" id="feedTotalStudentsCount">0</strong></div>
+        </div>
+      </div>
+
+      <!-- Feed Items List -->
+      <div id="liveNotesFeedList" style="flex: 1; overflow-y: auto; padding: 16px 20px; display: flex; flex-direction: column; gap: 12px;">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Floating Note Hover Pop-up Card -->
+  <div id="globalNoteHoverCard" class="global-note-hover-card" style="display: none; position: fixed; z-index: 9999999;"></div>
 
   <!-- Security Access Gate Modal (PIN Auth) -->
   <div id="authGateModal" class="auth-gate-overlay">
