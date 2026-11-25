@@ -106,55 +106,113 @@ if os.path.exists(crm_json_path):
     except Exception as e:
         print("  Notice reading CRM calls JSON:", e)
 
-# 1C. SOP Completed Touchpoints in November
-sop_files = glob.glob(r"D:\Lens\Dashboard\Data Center\**\*SOP*.xlsx", recursive=True) + glob.glob(r"D:\Lens\Dashboard\Data Center\**\*Lens*.xlsx", recursive=True)
-for sf in sop_files:
-    if "Archived" in sf or "node_modules" in sf: continue
-    try:
-        wb_s = openpyxl.load_workbook(sf, read_only=True)
-        for sname in ["明细表", "Unnamed_7uwaifkp"]:
-            if sname in wb_s.sheetnames:
-                ws_s = wb_s[sname]
-                for i, row in enumerate(ws_s.iter_rows(values_only=True)):
-                    if i == 0 or len(row) < 9: continue
-                    sid = str(row[2]).strip() if row[2] else ""
-                    status = str(row[5]) if row[5] else ""
-                    done_t = str(row[8]) if row[8] else ""
-                    if "完成" in status or "completed" in status.lower():
-                        if done_t.startswith("202611") or done_t.startswith("2026-11"):
-                            if sid and sid not in nov_call_connected_students:
-                                nov_call_connected_students[sid] = {
-                                    'source': 'SOP Touchpoint Completed',
-                                    'time': done_t
-                                }
-    except Exception as e:
-        pass
+# 1C. SOP Completed Touchpoints in November (Search recent folders to stay fast)
+recent_sop_dirs = [
+    os.path.join(dash_dir, "Dashboard_Input_Files"),
+    os.path.join(dash_dir, "Data Center", f"{datetime.now().day}Nov"),
+    os.path.join(dash_dir, "Data Center", f"{max(1, datetime.now().day - 1)}Nov"),
+    os.path.join(dash_dir, "Data Center")
+]
+seen_sop_files = set()
+for sdir in recent_sop_dirs:
+    if not os.path.exists(sdir): continue
+    for pattern in ["*SOP*.xlsx", "*NEW_SOP*.xlsx", "*Lens*.xlsx"]:
+        for sf in glob.glob(os.path.join(sdir, pattern)):
+            if sf in seen_sop_files or "Archived" in sf: continue
+            seen_sop_files.add(sf)
+            try:
+                wb_s = openpyxl.load_workbook(sf, read_only=True)
+                for sname in ["明细表", "Unnamed_7uwaifkp"]:
+                    if sname in wb_s.sheetnames:
+                        ws_s = wb_s[sname]
+                        for i, row in enumerate(ws_s.iter_rows(values_only=True)):
+                            if i == 0 or len(row) < 9: continue
+                            sid = str(row[2]).strip() if row[2] else ""
+                            status = str(row[5]) if row[5] else ""
+                            done_t = str(row[8]) if row[8] else ""
+                            if "完成" in status or "completed" in status.lower():
+                                if done_t.startswith("202611") or done_t.startswith("2026-11"):
+                                    if sid and sid not in nov_call_connected_students:
+                                        nov_call_connected_students[sid] = {
+                                            'source': 'SOP Touchpoint Completed',
+                                            'time': done_t
+                                        }
+            except Exception:
+                pass
 
 print(f"[STEP 1] Harvested {len(nov_call_connected_students)} students with verified Nov 2026 call connections / completed touches.")
 
 # -------------------------------------------------------------------------
-# STEP 2: Find and Read Latest Student-Detail File
+# STEP 2: Find and Read the Effective Coverage Sheet (Sheet 19)
 # -------------------------------------------------------------------------
-candidate_files = glob.glob(r"D:\Lens\Dashboard\Data Center\**\*Student-Detail*.xlsx", recursive=True)
-if not candidate_files:
-    candidate_files = glob.glob(r"D:\Lens\**\*Student-Detail*.xlsx", recursive=True)
+# Candidate search: look for files with Student_Detail19 or standalone Student-Detail files with 14 columns
+candidate_files = []
+search_dirs = [
+    os.path.join(dash_dir, "Dashboard_Input_Files"),
+    os.path.join(dash_dir, "Data Center", f"{datetime.now().day}Nov"),
+    os.path.join(dash_dir, "Data Center", f"{max(1, datetime.now().day - 1)}Nov"),
+    os.path.join(dash_dir, "Data Center"),
+    dash_dir,
+    r"D:\Lens"
+]
 
+for sdir in search_dirs:
+    if not os.path.exists(sdir): continue
+    for pat in ["*SS Lens Dashboard*.xlsx", "*Student-Detail*.xlsx", "*Student_Detail*.xlsx"]:
+        for f in glob.glob(os.path.join(sdir, pat)):
+            if os.path.isfile(f) and f not in candidate_files and "Archived" not in f and "backup" not in f:
+                candidate_files.append(f)
+
+# Sort candidates by mtime descending
 candidate_files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
-student_detail_path = candidate_files[0] if candidate_files else None
 
-if not student_detail_path or not os.path.exists(student_detail_path):
-    print("FATAL: Student-Detail file not found!")
+target_wb = None
+target_ws = None
+target_file_path = None
+target_sheet_name = None
+
+for cf in candidate_files:
+    try:
+        wb = openpyxl.load_workbook(cf, read_only=True)
+        # Check sheet priorities: Student_Detail19, then Student_Detail
+        candidate_sheets = []
+        if 'Student_Detail19' in wb.sheetnames:
+            candidate_sheets.append('Student_Detail19')
+        if 'Student_Detail' in wb.sheetnames:
+            candidate_sheets.append('Student_Detail')
+        for sn in wb.sheetnames:
+            if 'student_detail' in sn.lower() and sn not in candidate_sheets:
+                candidate_sheets.append(sn)
+
+        for sn in candidate_sheets:
+            ws = wb[sn]
+            first_rows = list(ws.iter_rows(values_only=True, max_row=2))
+            if not first_rows: continue
+            header = [str(col).lower() for col in first_rows[0] if col is not None]
+            header_str = " ".join(header)
+            # Must be the Effective Coverage sheet (has 'pool', 'covered', and >= 14 columns)
+            if ('covered' in header_str or 'pool' in header_str) and len(first_rows[0]) >= 14:
+                target_wb = wb
+                target_ws = ws
+                target_file_path = cf
+                target_sheet_name = sn
+                break
+        if target_ws is not None:
+            break
+    except Exception as ex:
+        continue
+
+if target_ws is None:
+    print("FATAL: Could not find valid 14-column Effective Coverage (Student_Detail) sheet!")
     exit(1)
 
-print(f"[STEP 2] Using latest Student-Detail: {student_detail_path}")
-wb_detail = openpyxl.load_workbook(student_detail_path, read_only=True)
-ws_detail = wb_detail['Student_Detail'] if 'Student_Detail' in wb_detail.sheetnames else wb_detail.worksheets[0]
+print(f"[STEP 2] Using: {target_file_path} -> Sheet: [{target_sheet_name}]")
 
 uncovered_leads = []
 purged_count = 0
 total_lens_uncovered = 0
 
-for i, row in enumerate(ws_detail.iter_rows(values_only=True)):
+for i, row in enumerate(target_ws.iter_rows(values_only=True)):
     if i == 0 or row[0] == 'Total' or len(row) < 14: continue
     
     agent_raw = str(row[2]).strip() if row[2] else ""
@@ -162,7 +220,7 @@ for i, row in enumerate(ws_detail.iter_rows(values_only=True)):
     if rep_key not in active_reps_map:
         continue
         
-    cov = str(row[8]).strip()
+    cov = str(row[8]).strip() if row[8] is not None else ""
     if cov != '0':
         continue # already covered in Lens
         
@@ -173,7 +231,7 @@ for i, row in enumerate(ws_detail.iter_rows(values_only=True)):
     total_lens_uncovered += 1
     
     # CRITICAL USER RULE:
-    # "اريد منك ان تمسح تمام اي عميل من هذه القائمه في حاله وجود call connection خلال هذا،الشهر"
+    # Purge completely if call connection / touchpoint happened in November
     if sid in nov_call_connected_students:
         purged_count += 1
         continue # PURGED COMPLETELY!
@@ -278,7 +336,7 @@ dormant = len([l for l in uncovered_leads if l['AttendedClasses'] == 0])
 
 summary_stats = {
     "generatedAt": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-    "auditDate": "2026-11-22",
+    "auditDate": datetime.now().strftime("%Y-%m-%d"),
     "totalUncovered": len(uncovered_leads),
     "highTierCount": high_tier,
     "mediumTierCount": med_tier,
