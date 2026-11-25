@@ -22,6 +22,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261125_131500">
+  <style>
+    /* Golden Active Filter & Interactive Sort Styling */
+    .filter-active-gold {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.32), rgba(217, 119, 6, 0.48)) !important;
+      border: 2px solid #fbbf24 !important;
+      color: #fbbf24 !important;
+      font-weight: 800 !important;
+      box-shadow: 0 0 16px rgba(251, 191, 36, 0.55), inset 0 0 8px rgba(251, 191, 36, 0.3) !important;
+      transform: translateY(-1px);
+    }
+    select.filter-active-gold option {
+      background: #0f172a !important;
+      color: #fff !important;
+    }
+    .filter-label-gold {
+      color: #fbbf24 !important;
+      font-weight: 800 !important;
+      text-shadow: 0 0 10px rgba(251, 191, 36, 0.6) !important;
+    }
+    .sortable-th {
+      cursor: pointer !important;
+      user-select: none !important;
+      transition: all 0.2s ease !important;
+    }
+    .sortable-th:hover {
+      background: rgba(251, 191, 36, 0.2) !important;
+      color: #fbbf24 !important;
+    }
+    .sortable-th.sorted-active {
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.32), rgba(245, 158, 11, 0.14)) !important;
+      border-bottom: 3px solid #fbbf24 !important;
+      color: #fbbf24 !important;
+    }
+    .sortable-th.sorted-active .sort-icon {
+      color: #fbbf24 !important;
+      opacity: 1 !important;
+      font-weight: 900 !important;
+      font-size: 0.85rem !important;
+    }
+  </style>
+
   <script src="assets/chart.umd.min.js"></script>
   <script>
     if (typeof Chart === 'undefined') {
@@ -1541,40 +1582,40 @@
           <table class="data-table" id="uncoveredStudentsLiveTable" style="width: 100%;">
             <thead>
               <tr id="uncovTableHeaderRow">
-                <th data-sort-col="rank" class="sortable-th" style="width: 55px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Rank">
+                <th data-sort-col="rank" class="sortable-th" onclick="sortUncoveredTableByCol('rank')" style="width: 55px; text-align: center;" title="Click to sort by Rank">
                   Rank <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="id" class="sortable-th" style="min-width: 105px; text-align: left !important; cursor: pointer; user-select: none;" title="Click to sort by Student ID">
+                <th data-sort-col="id" class="sortable-th" onclick="sortUncoveredTableByCol('id')" style="min-width: 105px; text-align: left !important;" title="Click to sort by Student ID">
                   Student ID <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="rep" class="sortable-th" style="min-width: 150px; text-align: left !important; cursor: pointer; user-select: none;" title="Click to sort by Sales Specialist">
+                <th data-sort-col="rep" class="sortable-th" onclick="sortUncoveredTableByCol('rep')" style="min-width: 150px; text-align: left !important;" title="Click to sort by Sales Specialist">
                   Sales Specialist <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="team" class="sortable-th" style="min-width: 100px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Team">
+                <th data-sort-col="team" class="sortable-th" onclick="sortUncoveredTableByCol('team')" style="min-width: 100px; text-align: center;" title="Click to sort by Team">
                   Team <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="pool" class="sortable-th" style="min-width: 100px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Pool">
+                <th data-sort-col="pool" class="sortable-th" onclick="sortUncoveredTableByCol('pool')" style="min-width: 100px; text-align: center;" title="Click to sort by Pool">
                   Pool <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="points" class="sortable-th" style="min-width: 110px; text-align: center; color: #38bdf8; cursor: pointer; user-select: none;" title="Click to sort by Points Balance">
+                <th data-sort-col="points" class="sortable-th" onclick="sortUncoveredTableByCol('points')" style="min-width: 110px; text-align: center; color: #38bdf8;" title="Click to sort by Points Balance">
                   رصيد الحصص<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Pts Balance</span> <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="lastMonth" class="sortable-th" style="min-width: 115px; text-align: center; color: #fbbf24; cursor: pointer; user-select: none;" title="Click to sort by Last Month Classes">
+                <th data-sort-col="lastMonth" class="sortable-th" onclick="sortUncoveredTableByCol('lastMonth')" style="min-width: 115px; text-align: center; color: #fbbf24;" title="Click to sort by Last Month Classes">
                   الشهر الماضي<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Last Mo Cls</span> <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="thisMonth" class="sortable-th" style="min-width: 115px; text-align: center; color: #34d399; cursor: pointer; user-select: none;" title="Click to sort by This Month Classes">
+                <th data-sort-col="thisMonth" class="sortable-th" onclick="sortUncoveredTableByCol('thisMonth')" style="min-width: 115px; text-align: center; color: #34d399;" title="Click to sort by This Month Classes">
                   الشهر الحالي<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">This Mo Cls</span> <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="lastCall" class="sortable-th" style="min-width: 140px; text-align: center; color: #a78bfa; cursor: pointer; user-select: none;" title="Click to sort by Last Connection Time">
+                <th data-sort-col="lastCall" class="sortable-th" onclick="sortUncoveredTableByCol('lastCall')" style="min-width: 140px; text-align: center; color: #a78bfa;" title="Click to sort by Last Connection Time">
                   آخر مكالمة<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Last Call Time</span> <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="source" class="sortable-th" style="min-width: 130px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Connection Source">
+                <th data-sort-col="source" class="sortable-th" onclick="sortUncoveredTableByCol('source')" style="min-width: 130px; text-align: center;" title="Click to sort by Connection Source">
                   Connection Source <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="lastPaid" class="sortable-th" style="min-width: 95px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Last Paid Date">
+                <th data-sort-col="lastPaid" class="sortable-th" onclick="sortUncoveredTableByCol('lastPaid')" style="min-width: 95px; text-align: center;" title="Click to sort by Last Paid Date">
                   Last Paid Date <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
-                <th data-sort-col="action" class="sortable-th" style="min-width: 175px; text-align: left !important; cursor: pointer; user-select: none;" title="Click to sort by Directive">
+                <th data-sort-col="action" class="sortable-th" onclick="sortUncoveredTableByCol('action')" style="min-width: 175px; text-align: left !important;" title="Click to sort by Directive">
                   Outreach Priority &amp; Directive <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
                 </th>
                 <th style="min-width: 85px; text-align: center;">Rep CSV</th>
@@ -2595,8 +2636,8 @@
       }
     });
   </script>
-  <script src="leads/uncovered_leads_data.js?v=20261125_182000" defer></script>
-  <script src="dashboard.js?v=20261125_182000" defer></script>
+  <script src="leads/uncovered_leads_data.js?v=20261125_184500" defer></script>
+  <script src="dashboard.js?v=20261125_184500" defer></script>
   <script src="dashboard_ai_command_suite.js?v=20261122_235500" defer></script>
   <script src="dashboard_i18n.js?v=20261122_235500" defer></script>
   <script src="dashboard_voice_assistant.js?v=20261122_235500" defer></script>
