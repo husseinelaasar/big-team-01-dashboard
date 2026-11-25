@@ -19,8 +19,16 @@ target_key = sys.argv[1].lower() if len(sys.argv) > 1 else "mega"
 target_chat_id = CHAT_GROUPS.get(target_key, CHAT_GROUPS["mega"])
 
 # Resolve Paths
+current_month = datetime.now().strftime("%B")
+daily_excel_name = f"{current_month} Daily Tasks.xlsx"
 json_path = r"D:\Lens\Dashboard\scratch\unified_master_records.json"
-excel_path = r"D:\Lens\Dashboard\October Daily Tasks.xlsx"
+excel_candidates = [
+    os.path.join(r"C:\Users\husse\Desktop", daily_excel_name),
+    os.path.join(r"D:\Lens\Dashboard", daily_excel_name),
+    os.path.join(r"C:\Users\husse\Desktop", "October Daily Tasks.xlsx"),
+    os.path.join(r"D:\Lens\Dashboard", "October Daily Tasks.xlsx")
+]
+excel_path = next((p for p in excel_candidates if os.path.exists(p)), os.path.join(r"D:\Lens\Dashboard", daily_excel_name))
 online_url = "https://alidocs.dingtalk.com/i/nodes/7dx2rn0JbYKPbR97sNa40jbqVMGjLRb3"
 
 url_file = r"D:\Lens\Dashboard\latest_online_sheet_url.txt"
@@ -98,7 +106,7 @@ markdown_text = f"""### 🚀 **51Talk Big Team 01 - Operations Action Leads (ا�
 ---
 
 ### 🌐 **النسخة الأونلاين المباشرة على دينج توك:**
-👉 [**اضغط هنا لفتح ومتابعة شيت مهام اليوم: October Daily Tasks - {today_str}**]({online_url})
+👉 [**اضغط هنا لفتح ومتابعة شيت مهام اليوم: {current_month} Daily Tasks - {today_str}**]({online_url})
 *(يمكنك العمل ومتابعة التحديثات مباشرة أونلاين من الموبايل أو الكمبيوتر)*
 
 ---

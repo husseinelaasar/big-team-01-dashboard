@@ -2,12 +2,13 @@ import openpyxl
 import json
 import csv
 import os
+import re
 import glob
 from datetime import datetime
 
 print("=========================================================================")
-print(" 51Talk Big Team 01 — Uncovered Leads Data Engine")
-print(" Strict November Call Connection & Completed Touch Purge Protocol")
+print(" 51Talk Big Team 01 — Uncovered Leads Data Engine v3.0")
+print(" Full Operational Intelligence: Points, Attendance History & Call Logs")
 print("=========================================================================")
 
 dash_dir = r"D:\Lens\Dashboard"
@@ -17,13 +18,13 @@ os.makedirs(uncovered_sub_dir, exist_ok=True)
 
 # 19 Active Reps Mapping
 active_reps_map = {
-    # ME-EGSS01 (4 Reps)
+    # ME-EGSS01 (4 Reps) - Leader: Ashraqatal
     "egss-ashraqatal": "ME-EGSS01",
     "egss-juliamonir01": "ME-EGSS01",
     "egss-nohayoussry": "ME-EGSS01",
     "egss-mahmoud04": "ME-EGSS01",
     
-    # ME-EGSS05 (7 Reps)
+    # ME-EGSS05 (7 Reps) - Leader: Ibrahim Abd El Shakour
     "egss-samira01": "ME-EGSS05",
     "egss-abdelrahmannasef": "ME-EGSS05",
     "egss-ehabzaky01": "ME-EGSS05",
@@ -32,20 +33,39 @@ active_reps_map = {
     "egss-omarmoneb": "ME-EGSS05",
     "egss-alihesham01": "ME-EGSS05",
     
-    # ME-EGSS10 (3 Reps)
+    # ME-EGSS10 (3 Reps) - Leader: Abdelrhman Shehata
     "egss-abdelrhmanshehata": "ME-EGSS10",
     "egss-hayamhassan": "ME-EGSS10",
     "egss-titooooo": "ME-EGSS10",
     
-    # ME-EGSS13 (3 Reps)
+    # ME-EGSS13 (3 Reps) - Leader: Mohamedha
     "egss-marwaahmed": "ME-EGSS13",
     "egss-amrsafwat": "ME-EGSS13",
     "egss-mohamedha": "ME-EGSS13",
     
-    # ME-EGSS30 (2 Reps)
+    # ME-EGSS30 (2 Reps) - Leader: Hussein El A'sar
     "egss-ahmedshoukry": "ME-EGSS30",
     "egss-mahmoudkhamis": "ME-EGSS30"
 }
+
+# -------------------------------------------------------------------------
+# STEP 0: Load Rich Lead Attributes from Allocation Rules Dataset
+# -------------------------------------------------------------------------
+alloc_map = {}
+alloc_path = os.path.join(dash_dir, "allocation_rules_data.js")
+if os.path.exists(alloc_path):
+    try:
+        with open(alloc_path, 'r', encoding='utf-8') as f:
+            alloc_raw = f.read()
+        alloc_raw = re.sub(r'^window\.ALLOCATION_RULES_DATA\s*=\s*', '', alloc_raw).rstrip(';\n ')
+        alloc_json = json.loads(alloc_raw)
+        for d in alloc_json.get('defense_uncovered', []):
+            sid = str(d.get('student_id', '')).strip()
+            if sid:
+                alloc_map[sid] = d
+        print(f"[STEP 0] Loaded {len(alloc_map)} lead records from allocation_rules_data.js")
+    except Exception as e:
+        print("  Notice loading allocation_rules_data.js:", e)
 
 # -------------------------------------------------------------------------
 # STEP 1: Harvest ALL November 2026 Call Connections across all sources
@@ -82,13 +102,18 @@ for crf in cr_files:
 
 # 1B. CRM Latest Calls JSON
 crm_json_path = os.path.join(leads_dir, "crm_latest_calls.json")
+crm_calls_map = {}
 if os.path.exists(crm_json_path):
     try:
         with open(crm_json_path, 'r', encoding='utf-8') as f:
             crm_calls = json.load(f)
         for sid, d in crm_calls.items():
             if not isinstance(d, dict): continue
-            for c in d.get('all_calls', []):
+            sid_str = str(sid).strip()
+            calls = d.get('all_calls', [])
+            if calls:
+                crm_calls_map[sid_str] = calls[0].get('time', '')
+            for c in calls:
                 t = (c.get('time') or '')
                 dur = (c.get('duration') or '')
                 if t.startswith('2026/11') or t.startswith('2026-11'):
@@ -97,7 +122,6 @@ if os.path.exists(crm_json_path):
                     if len(parts) == 2 and parts[1].strip() in ["00:00", "0:00"]:
                         connected = False
                     if connected:
-                        sid_str = str(sid).strip()
                         if sid_str not in nov_call_connected_students:
                             nov_call_connected_students[sid_str] = {
                                 'source': 'CRM Live Calls (Connected)',
@@ -106,7 +130,7 @@ if os.path.exists(crm_json_path):
     except Exception as e:
         print("  Notice reading CRM calls JSON:", e)
 
-# 1C. SOP Completed Touchpoints in November (Search recent folders to stay fast)
+# 1C. SOP Completed Touchpoints in November (Recent files only)
 recent_sop_dirs = [
     os.path.join(dash_dir, "Dashboard_Input_Files"),
     os.path.join(dash_dir, "Data Center", f"{datetime.now().day}Nov"),
@@ -145,7 +169,6 @@ print(f"[STEP 1] Harvested {len(nov_call_connected_students)} students with veri
 # -------------------------------------------------------------------------
 # STEP 2: Find and Read the Effective Coverage Sheet (Sheet 19)
 # -------------------------------------------------------------------------
-# Candidate search: look for files with Student_Detail19 or standalone Student-Detail files with 14 columns
 candidate_files = []
 search_dirs = [
     os.path.join(dash_dir, "Dashboard_Input_Files"),
@@ -163,7 +186,6 @@ for sdir in search_dirs:
             if os.path.isfile(f) and f not in candidate_files and "Archived" not in f and "backup" not in f:
                 candidate_files.append(f)
 
-# Sort candidates by mtime descending
 candidate_files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
 
 target_wb = None
@@ -174,7 +196,6 @@ target_sheet_name = None
 for cf in candidate_files:
     try:
         wb = openpyxl.load_workbook(cf, read_only=True)
-        # Check sheet priorities: Student_Detail19, then Student_Detail
         candidate_sheets = []
         if 'Student_Detail19' in wb.sheetnames:
             candidate_sheets.append('Student_Detail19')
@@ -190,7 +211,6 @@ for cf in candidate_files:
             if not first_rows: continue
             header = [str(col).lower() for col in first_rows[0] if col is not None]
             header_str = " ".join(header)
-            # Must be the Effective Coverage sheet (has 'pool', 'covered', and >= 14 columns)
             if ('covered' in header_str or 'pool' in header_str) and len(first_rows[0]) >= 14:
                 target_wb = wb
                 target_ws = ws
@@ -199,7 +219,7 @@ for cf in candidate_files:
                 break
         if target_ws is not None:
             break
-    except Exception as ex:
+    except Exception:
         continue
 
 if target_ws is None:
@@ -230,21 +250,49 @@ for i, row in enumerate(target_ws.iter_rows(values_only=True)):
         
     total_lens_uncovered += 1
     
-    # CRITICAL USER RULE:
-    # Purge completely if call connection / touchpoint happened in November
+    # Check if student had a verified call connection / completed touch in November
     if sid in nov_call_connected_students:
         purged_count += 1
-        continue # PURGED COMPLETELY!
+        continue
         
     team_name = active_reps_map[rep_key]
     pool_name = str(row[4]).strip() if row[4] else "Unknown"
     pool_detail = str(row[5]).strip() if row[5] else "Unknown"
     first_pay = str(row[6]).strip() if row[6] else "-"
     
-    last_cls = float(row[12]) if row[12] is not None else 0.0
-    this_cls = float(row[13]) if row[13] is not None else 0.0
+    # Attendance & Points from Lens Sheet 19 (fallback to alloc_map if None)
+    alloc_item = alloc_map.get(sid, {})
+    
+    try:
+        cur_pts = float(row[11]) if row[11] is not None else float(alloc_item.get('current_points', 0.0))
+    except:
+        cur_pts = 0.0
+
+    try:
+        last_cls = float(row[12]) if row[12] is not None else float(alloc_item.get('last_month_consumption', 0.0))
+    except:
+        last_cls = 0.0
+
+    try:
+        this_cls = float(row[13]) if row[13] is not None else float(alloc_item.get('this_month_consumption', 0.0))
+    except:
+        this_cls = 0.0
+
     attended_classes = max(last_cls, this_cls)
     
+    # Last Call Date & Connection Source
+    last_call_time = alloc_item.get('last_connection', '') or crm_calls_map.get(sid, '')
+    days_inactive = alloc_item.get('days_inactive', 999)
+    risk_tier = alloc_item.get('risk_tier', 'Uncontacted')
+    
+    if last_call_time and last_call_time != "1970-01-01 00:00:00":
+        conn_display = last_call_time[:16]
+        conn_source = "CRM History"
+    else:
+        conn_display = "No Connection This Month"
+        conn_source = "Zero Nov Call Connections"
+        last_call_time = "1970-01-01 00:00:00"
+
     tier = "0 Classes (Dormant)"
     if attended_classes >= 15: tier = ">=15 Classes (VIP)"
     elif attended_classes >= 12: tier = ">=12 Classes (High)"
@@ -266,11 +314,16 @@ for i, row in enumerate(target_ws.iter_rows(values_only=True)):
         'Pool': pool_name,
         'PoolDetail': pool_detail,
         'AttendedClasses': attended_classes,
+        'LastMonthClasses': last_cls,
+        'ThisMonthClasses': this_cls,
+        'CurrentPoints': cur_pts,
         'BookedUnattended': 0.0,
         'AttendanceTier': tier,
-        'LastConnectionTime': "1970-01-01 00:00:00",
-        'ConnectionDisplay': "No Connection This Month",
-        'ConnectionSource': "Zero Nov Call Connections",
+        'LastConnectionTime': last_call_time,
+        'DaysInactive': days_inactive,
+        'RiskTier': risk_tier,
+        'ConnectionDisplay': conn_display,
+        'ConnectionSource': conn_source,
         'LastPaidDate': first_pay,
         'RecommendedAction': action,
         'IsCovered': 0
@@ -283,7 +336,7 @@ print(f"  FINAL TRUE UNCOVERED LEADS: {len(uncovered_leads)}")
 # -------------------------------------------------------------------------
 # STEP 3: Priority Ranking and Sorting
 # -------------------------------------------------------------------------
-uncovered_leads.sort(key=lambda x: (-x['AttendedClasses'], x['StudentId']))
+uncovered_leads.sort(key=lambda x: (-x['AttendedClasses'], -x['CurrentPoints'], x['StudentId']))
 
 for idx, item in enumerate(uncovered_leads):
     item['PriorityRank'] = idx + 1
@@ -293,7 +346,8 @@ for idx, item in enumerate(uncovered_leads):
 # -------------------------------------------------------------------------
 fieldnames = [
     "PriorityRank", "StudentId", "Rep", "Team", "BigTeam", "Pool", "PoolDetail",
-    "AttendedClasses", "BookedUnattended", "AttendanceTier", "LastConnectionTime",
+    "CurrentPoints", "LastMonthClasses", "ThisMonthClasses", "AttendedClasses",
+    "AttendanceTier", "LastConnectionTime", "DaysInactive", "RiskTier",
     "ConnectionDisplay", "ConnectionSource", "LastPaidDate", "RecommendedAction", "IsCovered"
 ]
 
@@ -302,7 +356,8 @@ def write_csv(filepath, rows):
         writer = csv.DictWriter(f, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
         writer.writeheader()
         for r in rows:
-            writer.writerow(r)
+            clean_r = {k: r.get(k, '') for k in fieldnames}
+            writer.writerow(clean_r)
 
 # Master CSV
 write_csv(os.path.join(leads_dir, "Master_Uncovered_Leads.csv"), uncovered_leads)
@@ -327,12 +382,60 @@ for rep_name, rows in rep_groups.items():
     write_csv(os.path.join(uncovered_sub_dir, f"{rep_name}_Uncovered_Leads.csv"), rows)
 
 # -------------------------------------------------------------------------
-# STEP 5: Generate Web JSON & JS Datasets
+# STEP 5: Generate Web JSON & JS Datasets with Full Group Details
 # -------------------------------------------------------------------------
 high_tier = len([l for l in uncovered_leads if l['AttendedClasses'] >= 8])
 med_tier = len([l for l in uncovered_leads if 4 <= l['AttendedClasses'] < 8])
 low_tier = len([l for l in uncovered_leads if 0 < l['AttendedClasses'] < 4])
 dormant = len([l for l in uncovered_leads if l['AttendedClasses'] == 0])
+
+# Team Leaders Configuration
+team_leaders = {
+    "ME-EGSS01": {"leader": "Ashraqatal", "color": "#6366f1", "reps": ["egss-ashraqatal", "egss-juliamonir01", "egss-nohayoussry", "egss-mahmoud04"]},
+    "ME-EGSS05": {"leader": "Ibrahim Abd El Shakour", "color": "#06b6d4", "reps": ["egss-samira01", "egss-abdelrahmannasef", "egss-ehabzaky01", "egss-ibrahimismaiel", "egss-khaledgonam", "egss-omarmoneb", "egss-alihesham01"]},
+    "ME-EGSS10": {"leader": "Abdelrhman Shehata", "color": "#10b981", "reps": ["egss-abdelrhmanshehata", "egss-hayamhassan", "egss-titooooo"]},
+    "ME-EGSS13": {"leader": "Mohamedha", "color": "#f59e0b", "reps": ["egss-marwaahmed", "egss-amrsafwat", "egss-mohamedha"]},
+    "ME-EGSS30": {"leader": "Hussein El A'sar", "color": "#ff3b57", "reps": ["egss-ahmedshoukry", "egss-mahmoudkhamis"]}
+}
+
+team_breakdown = {}
+for team_code, tinfo in team_leaders.items():
+    rows = team_groups.get(team_code, [])
+    # Pool breakdown for this team
+    pools_count = {}
+    for r in rows:
+        p = r.get('PoolDetail') or r.get('Pool') or 'Unknown'
+        pools_count[p] = pools_count.get(p, 0) + 1
+        
+    team_breakdown[team_code] = {
+        "team": team_code,
+        "leader": tinfo["leader"],
+        "color": tinfo["color"],
+        "total": len(rows),
+        "high": len([r for r in rows if r['AttendedClasses'] >= 8]),
+        "med": len([r for r in rows if 4 <= r['AttendedClasses'] < 8]),
+        "low": len([r for r in rows if 0 < r['AttendedClasses'] < 4]),
+        "dormant": len([r for r in rows if r['AttendedClasses'] == 0]),
+        "uncontacted": len(rows),
+        "pools": pools_count,
+        "reps": []
+    }
+    
+    # Specialists in this team
+    for rname in tinfo["reps"]:
+        rep_rows = [r for r in rows if r['Rep'].lower() == rname.lower()]
+        rep_pools = {}
+        for r in rep_rows:
+            p = r.get('PoolDetail') or r.get('Pool') or 'Unknown'
+            rep_pools[p] = rep_pools.get(p, 0) + 1
+            
+        team_breakdown[team_code]["reps"].append({
+            "name": rname,
+            "total": len(rep_rows),
+            "high": len([r for r in rep_rows if r['AttendedClasses'] >= 8]),
+            "med": len([r for r in rep_rows if 4 <= r['AttendedClasses'] < 8]),
+            "pools": rep_pools
+        })
 
 summary_stats = {
     "generatedAt": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -343,26 +446,9 @@ summary_stats = {
     "lowTierCount": low_tier,
     "dormantCount": dormant,
     "uncontactedCount": len(uncovered_leads),
-    "teamBreakdown": {},
-    "repBreakdown": {}
+    "teamBreakdown": team_breakdown,
+    "repBreakdown": {rname: {"team": rows[0]['Team'], "total": len(rows), "high": len([r for r in rows if r['AttendedClasses'] >= 8]), "med": len([r for r in rows if 4 <= r['AttendedClasses'] < 8])} for rname, rows in rep_groups.items()}
 }
-
-for team_name, rows in team_groups.items():
-    summary_stats["teamBreakdown"][team_name] = {
-        "total": len(rows),
-        "high": len([r for r in rows if r['AttendedClasses'] >= 8]),
-        "med": len([r for r in rows if 4 <= r['AttendedClasses'] < 8]),
-        "uncontacted": len(rows)
-    }
-
-for rep_name, rows in rep_groups.items():
-    summary_stats["repBreakdown"][rep_name] = {
-        "team": rows[0]['Team'],
-        "total": len(rows),
-        "high": len([r for r in rows if r['AttendedClasses'] >= 8]),
-        "med": len([r for r in rows if 4 <= r['AttendedClasses'] < 8]),
-        "uncontacted": len(rows)
-    }
 
 web_payload = {
     "meta": summary_stats,

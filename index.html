@@ -1079,6 +1079,39 @@
       </div>
 
       <!-- ============================================================== -->
+      <!-- SMALL TEAMS UNCOVERED PERFORMANCE BREAKDOWN CARDS              -->
+      <!-- ============================================================== -->
+      <div id="uncoveredTeamsBreakdownSection" style="margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="pill-badge pill-badge-rose" style="font-size: 0.72rem; font-weight: 800;">SMALL TEAMS BREAKDOWN</span>
+              <span class="status-badge" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); font-size: 0.72rem; padding: 1px 7px;">5 OPERATIONAL SQUADS</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin: 4px 0 2px 0; display: flex; align-items: center; gap: 8px;">
+              <span>🏢</span> Small Teams Uncovered Performance Breakdown <span style="font-size: 0.88rem; font-weight: 600; color: #94a3b8;">(تفاصيل المجموعات الخمس وقوائم الموظفين)</span>
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+              Operational distribution cards for each small team: Leader, total uncontacted accounts, high-value retention opportunities, pool allocation, and individual specialist assignments. Click any team or specialist to filter the live roster below.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <button type="button" class="btn-card-snap" onclick="copyElementImage('uncoveredSmallTeamCards', 'Small Teams Uncovered Breakdown')" style="cursor: pointer; background: rgba(99, 102, 241, 0.15); border: 1.5px solid rgba(99, 102, 241, 0.35); color: #818cf8; border-radius: 8px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">
+              📸 Copy All Cards
+            </button>
+            <button type="button" class="btn-card-snap" onclick="downloadElementImage('uncoveredSmallTeamCards', 'Small_Teams_Uncovered_Breakdown')" style="cursor: pointer; background: rgba(16, 185, 129, 0.15); border: 1.5px solid rgba(16, 185, 129, 0.35); color: #34d399; border-radius: 8px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">
+              📥 Download PNG
+            </button>
+          </div>
+        </div>
+
+        <!-- 5 Small Team Uncovered Cards Grid -->
+        <div id="uncoveredSmallTeamCards" class="team-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 16px;">
+          <!-- Populated dynamically by renderUncoveredTeamCards(dataset) -->
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
       <!-- STRATEGIC POOL BREAKDOWN ANALYTICS MATRIX (SMALL TEAMS, BIG TEAM, INDIVIDUALS) -->
       <!-- ============================================================== -->
       <div id="uncoveredPoolMatrixContainer" class="glass-panel-executive modern-table-card" style="margin-bottom: 24px; padding: 22px; background: rgba(17, 24, 39, 0.9); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px;">
@@ -1422,19 +1455,21 @@
               <tr>
                 <th style="width: 45px; text-align: center;">Rank #</th>
                 <th style="min-width: 105px; text-align: left !important;">Student ID</th>
-                <th style="min-width: 155px; text-align: left !important;">Sales Specialist</th>
-                <th style="min-width: 110px; text-align: center;">Team</th>
-                <th style="min-width: 105px; text-align: center;">Pool</th>
-                <th style="min-width: 115px; text-align: center;">Attended Classes</th>
-                <th style="min-width: 145px; text-align: center;">Last Connection Time</th>
-                <th style="min-width: 140px; text-align: center;">Connection Source</th>
-                <th style="min-width: 100px; text-align: center;">Last Paid Date</th>
-                <th style="min-width: 180px; text-align: left !important;">Outreach Priority &amp; Directive</th>
-                <th style="min-width: 90px; text-align: center;">Rep CSV</th>
+                <th style="min-width: 150px; text-align: left !important;">Sales Specialist</th>
+                <th style="min-width: 100px; text-align: center;">Team</th>
+                <th style="min-width: 100px; text-align: center;">Pool</th>
+                <th style="min-width: 110px; text-align: center; color: #38bdf8;">رصيد الحصص<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Pts Balance</span></th>
+                <th style="min-width: 115px; text-align: center; color: #fbbf24;">الشهر الماضي<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Last Mo Cls</span></th>
+                <th style="min-width: 115px; text-align: center; color: #34d399;">الشهر الحالي<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">This Mo Cls</span></th>
+                <th style="min-width: 140px; text-align: center; color: #a78bfa;">آخر مكالمة<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Last Call Time</span></th>
+                <th style="min-width: 130px; text-align: center;">Connection Source</th>
+                <th style="min-width: 95px; text-align: center;">Last Paid Date</th>
+                <th style="min-width: 175px; text-align: left !important;">Outreach Priority &amp; Directive</th>
+                <th style="min-width: 85px; text-align: center;">Rep CSV</th>
               </tr>
             </thead>
             <tbody id="uncoveredStudentsLiveTableBody">
-              <tr><td colspan="11" style="text-align: center; padding: 30px; color: var(--text-muted);">Loading uncovered leads data...</td></tr>
+              <tr><td colspan="13" style="text-align: center; padding: 30px; color: var(--text-muted);">Loading uncovered leads data...</td></tr>
             </tbody>
           </table>
         </div>
@@ -2448,8 +2483,8 @@
       }
     });
   </script>
-  <script src="leads/uncovered_leads_data.js?v=20261125_142500" defer></script>
-  <script src="dashboard.js?v=20261125_142500" defer></script>
+  <script src="leads/uncovered_leads_data.js?v=20261125_150000" defer></script>
+  <script src="dashboard.js?v=20261125_150000" defer></script>
   <script src="dashboard_ai_command_suite.js?v=20261122_235500" defer></script>
   <script src="dashboard_i18n.js?v=20261122_235500" defer></script>
   <script src="dashboard_voice_assistant.js?v=20261122_235500" defer></script>
