@@ -1382,39 +1382,39 @@
 
       <!-- Interactive Data Sheet Table Viewer -->
       <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px;">
-        <!-- Controls Header: Sorting Modes & Filter Tabs -->
-        <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px;">
-          <!-- Row 1: Sorting Mode Selector -->
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: rgba(30, 41, 59, 0.5); padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05);">
-            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-              <span style="font-size: 0.78rem; font-weight: 800; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 6px;">
-                ? Sorting Priority:
+        <!-- ADVANCED MULTI-FILTER & SORTING COMMAND CONSOLE -->
+        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 14px 18px; margin-bottom: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);">
+          <!-- Line 1: Quick Preset Sorting & Active Sort Indicator -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+            <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+              <span style="font-size: 0.72rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 4px;">
+                ⚡ Quick Presets:
               </span>
-              <button type="button" class="pill-badge active" id="btnSortPriority" data-sort="priority" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                ?? Composite Priority (High Classes First + Oldest Connection First)
+              <button type="button" class="pill-badge active" id="btnSortPriority" data-sort="priority" style="cursor: pointer; padding: 4px 11px; font-size: 0.74rem;">
+                🔥 Composite Priority
               </button>
-              <button type="button" class="pill-badge" id="btnSortClasses" data-sort="classes" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                ?? Highest Classes Attended First
+              <button type="button" class="pill-badge" id="btnSortClasses" data-sort="classes" style="cursor: pointer; padding: 4px 11px; font-size: 0.74rem;">
+                📚 Highest Classes Attended
               </button>
-              <button type="button" class="pill-badge" id="btnSortOldestConn" data-sort="oldest" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                ? Longest Uncontacted First (Oldest &rarr; Newest)
+              <button type="button" class="pill-badge" id="btnSortOldestConn" data-sort="oldest" style="cursor: pointer; padding: 4px 11px; font-size: 0.74rem;">
+                ⏳ Longest Uncontacted First
               </button>
-              <button type="button" class="pill-badge" id="btnSortNewestConn" data-sort="newest" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                ?? Recently Contacted First (Newest &rarr; Oldest)
+              <button type="button" class="pill-badge" id="btnSortNewestConn" data-sort="newest" style="cursor: pointer; padding: 4px 11px; font-size: 0.74rem;">
+                📞 Recently Contacted First
               </button>
-              <button type="button" class="pill-badge" id="btnSortStuId" data-sort="id" style="cursor: pointer; padding: 5px 12px; font-size: 0.76rem;">
-                ?? Student ID
+              <button type="button" class="pill-badge" id="btnSortStuId" data-sort="id" style="cursor: pointer; padding: 4px 11px; font-size: 0.74rem;">
+                🆔 Student ID
               </button>
             </div>
-            <div style="font-size: 0.72rem; color: #94a3b8; font-family: var(--font-mono);">
-              Default: Classes &darr; &bull; Connection Time &uarr;
+            <!-- Active Sort Indicator -->
+            <div id="uncovCurrentSortIndicator" style="font-size: 0.72rem; color: #38bdf8; font-family: var(--font-mono); font-weight: 700; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 6px; padding: 3px 9px;">
+              Sorted: Composite Priority (Classes ↓ • Call Time ↑)
             </div>
           </div>
 
-          <!-- Row 2: Filter Tabs & Search Bar -->
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-            <!-- Team & Tier Filter Pills -->
-            <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;" id="uncovTableFilterTabs">
+          <!-- Line 2: Team Tabs & Tier Filter Badges & Reset Button -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.06); padding-bottom: 10px;">
+            <div style="display: flex; align-items: center; gap: 5px; flex-wrap: wrap;" id="uncovTableFilterTabs">
               <button type="button" class="pill-badge active" data-team="ALL" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">All Teams (1,878)</button>
               <button type="button" class="pill-badge" data-team="ME-EGSS01" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 01 (428)</button>
               <button type="button" class="pill-badge" data-team="ME-EGSS05" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 05 (620)</button>
@@ -1422,49 +1422,161 @@
               <button type="button" class="pill-badge" data-team="ME-EGSS13" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 13 (387)</button>
               <button type="button" class="pill-badge" data-team="ME-EGSS30" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">Team 30 (263)</button>
               <span style="color: rgba(255,255,255,0.2); margin: 0 4px;">|</span>
-              <button type="button" class="pill-badge pill-badge-amber" data-tier="HIGH" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">?? High (&ge;8 cls)</button>
-              <button type="button" class="pill-badge pill-badge-emerald" data-tier="MED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">? Regular (&ge;4 cls)</button>
-              <button type="button" class="pill-badge pill-badge-purple" data-tier="UNCONTACTED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;">? Uncontacted (1,878)</button>
+              <button type="button" class="pill-badge pill-badge-amber" data-tier="HIGH" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;" title="Filter attended classes >= 8">🔥 High (≥8 cls)</button>
+              <button type="button" class="pill-badge pill-badge-emerald" data-tier="MED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;" title="Filter attended classes 4-7">⚡ Regular (≥4 cls)</button>
+              <button type="button" class="pill-badge pill-badge-purple" data-tier="UNCONTACTED" style="cursor: pointer; padding: 5px 10px; font-size: 0.75rem;" title="Filter uncontacted accounts">🟣 Uncontacted</button>
             </div>
+            <div>
+              <button type="button" id="btnResetUncovFilters" class="pill-badge" style="cursor: pointer; padding: 5px 12px; font-size: 0.74rem; background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.35); font-weight: 700; display: inline-flex; align-items: center; gap: 4px;">
+                🔄 Reset All Filters
+              </button>
+            </div>
+          </div>
 
-            <!-- Rep Dropdown, Search & Export View -->
-            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-              <select id="uncovFilterRepSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 150px;">
+          <!-- Line 3: Multi-Filter Dropdown Suite (جميع الأبعاد والمحتويات) -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 8px; margin-bottom: 12px;">
+            <!-- Rep Filter -->
+            <div>
+              <label style="display: block; font-size: 0.68rem; color: #94a3b8; font-weight: 700; margin-bottom: 3px;">👤 Specialist (الموظف)</label>
+              <select id="uncovFilterRepSelect" class="modern-select" style="width: 100%; padding: 5px 8px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: rgba(17, 24, 39, 0.9); color: #fff;">
                 <option value="ALL">All 19 Reps</option>
               </select>
-              <select id="uncovFilterPoolSelect" class="modern-select" style="padding: 6px 10px; font-size: 0.78rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 130px;">
-                <option value="ALL">All Pools</option>
-                <option value="outside pool">outside pool</option>
-                <option value="Upgrade M2">Upgrade M2</option>
-                <option value="Exp Non-0">Exp Non-0</option>
-                <option value="FOE Non-0">FOE Non-0</option>
-                <option value="period">period</option>
+            </div>
+
+            <!-- Pool Filter -->
+            <div>
+              <label style="display: block; font-size: 0.68rem; color: #94a3b8; font-weight: 700; margin-bottom: 3px;">📦 Pool (الحظيرة بالتفصيل)</label>
+              <select id="uncovFilterPoolSelect" class="modern-select" style="width: 100%; padding: 5px 8px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: rgba(17, 24, 39, 0.9); color: #fff;">
+                <option value="ALL">All Pools (الكل)</option>
+                <option value="outside pool">Outside Pool (围场外)</option>
+                <option value="Exp Non-0">Expired Non-0 (到期 برصيد)</option>
+                <option value="Exp 0-cr">Expired 0-cr (到期 رصيد 0)</option>
+                <option value="FOE Non-0">FOE Non-0 (首单到期 برصيد)</option>
+                <option value="FOE 0-cr">FOE 0-cr (首单到期 رصيد 0)</option>
+                <option value="Upgrade M2">Upgrade M2 (升舱)</option>
+                <option value="period">In-Period (期间)</option>
               </select>
-              <input type="text" id="uncovStudentSearchInput" class="modern-input" placeholder="?? Search Student ID, Rep, Source..." style="width: 220px; font-size: 0.8rem; padding: 6px 12px;">
-              <button type="button" id="btnExportFilteredUncov" class="pill-badge pill-badge-cyan" style="cursor: pointer; padding: 6px 12px; font-size: 0.76rem; border: none; white-space: nowrap;">
-                ?? Export Filtered View (CSV)
+            </div>
+
+            <!-- Points Balance Filter -->
+            <div>
+              <label style="display: block; font-size: 0.68rem; color: #38bdf8; font-weight: 700; margin-bottom: 3px;">💎 Pts Balance (رصيد الحصص)</label>
+              <select id="uncovFilterPointsSelect" class="modern-select" style="width: 100%; padding: 5px 8px; font-size: 0.75rem; border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 6px; background: rgba(17, 24, 39, 0.9); color: #38bdf8; font-weight: 600;">
+                <option value="ALL">All Balances (الكل)</option>
+                <option value="has_points">💎 Has Points (> 0 pts)</option>
+                <option value="high_points">👑 VIP Balance (≥ 30 pts)</option>
+                <option value="med_points">🔹 Moderate (1 - 29 pts)</option>
+                <option value="zero_points">⚠️ Zero Points (0 pts)</option>
+              </select>
+            </div>
+
+            <!-- Last Month Classes Filter -->
+            <div>
+              <label style="display: block; font-size: 0.68rem; color: #fbbf24; font-weight: 700; margin-bottom: 3px;">📚 Last Mo Cls (الشهر الماضي)</label>
+              <select id="uncovFilterLastMoSelect" class="modern-select" style="width: 100%; padding: 5px 8px; font-size: 0.75rem; border: 1px solid rgba(251, 191, 36, 0.35); border-radius: 6px; background: rgba(17, 24, 39, 0.9); color: #fbbf24; font-weight: 600;">
+                <option value="ALL">All Attendance (الكل)</option>
+                <option value="vip">👑 VIP Learners (≥ 15 cls)</option>
+                <option value="high">🔥 High Attendees (8 - 14 cls)</option>
+                <option value="med">⭐ Regular Learners (4 - 7 cls)</option>
+                <option value="low">🔹 Low Attendance (1 - 3 cls)</option>
+                <option value="zero">💤 Zero Attendance (0 cls)</option>
+              </select>
+            </div>
+
+            <!-- This Month Classes Filter -->
+            <div>
+              <label style="display: block; font-size: 0.68rem; color: #34d399; font-weight: 700; margin-bottom: 3px;">⚡ This Mo Cls (الشهر الحالي)</label>
+              <select id="uncovFilterThisMoSelect" class="modern-select" style="width: 100%; padding: 5px 8px; font-size: 0.75rem; border: 1px solid rgba(52, 211, 153, 0.35); border-radius: 6px; background: rgba(17, 24, 39, 0.9); color: #34d399; font-weight: 600;">
+                <option value="ALL">All Current Month (الكل)</option>
+                <option value="active">⚡ Active Learners (> 0 cls)</option>
+                <option value="high_active">🔥 Highly Active (≥ 5 cls)</option>
+                <option value="zero">⭕ Zero Classes (0 cls)</option>
+              </select>
+            </div>
+
+            <!-- Call / Contact Status Filter -->
+            <div>
+              <label style="display: block; font-size: 0.68rem; color: #a78bfa; font-weight: 700; margin-bottom: 3px;">📞 Call Status (حالة الاتصال)</label>
+              <select id="uncovFilterCallStatusSelect" class="modern-select" style="width: 100%; padding: 5px 8px; font-size: 0.75rem; border: 1px solid rgba(167, 139, 250, 0.35); border-radius: 6px; background: rgba(17, 24, 39, 0.9); color: #a78bfa; font-weight: 600;">
+                <option value="ALL">All Call Status (الكل)</option>
+                <option value="uncontacted">⚠️ Uncontacted (لم يتصل)</option>
+                <option value="contacted">📞 Has Past Call (سجل اتصال سابق)</option>
+                <option value="recent">📅 Recent Call (≤ 60 days)</option>
+                <option value="inactive_long">⏳ Inactive Long (≥ 90 days)</option>
+              </select>
+            </div>
+
+            <!-- Outreach Directive / Action Filter -->
+            <div>
+              <label style="display: block; font-size: 0.68rem; color: #94a3b8; font-weight: 700; margin-bottom: 3px;">🎯 Directive (التوجيه والإجراء)</label>
+              <select id="uncovFilterActionSelect" class="modern-select" style="width: 100%; padding: 5px 8px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: rgba(17, 24, 39, 0.9); color: #fff;">
+                <option value="ALL">All Directives (الكل)</option>
+                <option value="churn_risk">🚨 High Churn Risk (خطر الفقد)</option>
+                <option value="upgrade">⭐ Upgrade Pitch (ترقية)</option>
+                <option value="reconnect">⏳ Urgent Reconnection (إعادة وصل)</option>
+                <option value="winback">💤 Dormant Win-Back (استعادة خامل)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Line 4: Search Box + Active Filter Counter + Export Button -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding-top: 4px;">
+            <div style="display: flex; align-items: center; gap: 8px; flex-grow: 1; max-width: 480px;">
+              <input type="text" id="uncovStudentSearchInput" class="modern-input" placeholder="🔍 Search Student ID, Rep, Team, Pool, Directive..." style="width: 100%; font-size: 0.8rem; padding: 7px 12px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; color: #fff;">
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <!-- Active Filters Summary Badge -->
+              <span id="uncovActiveFiltersBadge" class="pill-badge" style="font-size: 0.74rem; font-family: var(--font-mono); background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.35); padding: 5px 10px;">
+                Showing 1,878 / 1,878 Leads
+              </span>
+              <button type="button" id="btnExportFilteredUncov" class="pill-badge pill-badge-cyan" style="cursor: pointer; padding: 6px 14px; font-size: 0.78rem; font-weight: 700; border: none; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px;">
+                <span>📥</span> Export Filtered View (CSV)
               </button>
             </div>
           </div>
         </div>
 
         <!-- Table Container -->
-        <div class="table-wrapper modern-table-card" style="max-height: 520px; overflow-y: auto;">
+        <div class="table-wrapper modern-table-card" style="max-height: 540px; overflow-y: auto;">
           <table class="data-table" id="uncoveredStudentsLiveTable" style="width: 100%;">
             <thead>
-              <tr>
-                <th style="width: 45px; text-align: center;">Rank #</th>
-                <th style="min-width: 105px; text-align: left !important;">Student ID</th>
-                <th style="min-width: 150px; text-align: left !important;">Sales Specialist</th>
-                <th style="min-width: 100px; text-align: center;">Team</th>
-                <th style="min-width: 100px; text-align: center;">Pool</th>
-                <th style="min-width: 110px; text-align: center; color: #38bdf8;">رصيد الحصص<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Pts Balance</span></th>
-                <th style="min-width: 115px; text-align: center; color: #fbbf24;">الشهر الماضي<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Last Mo Cls</span></th>
-                <th style="min-width: 115px; text-align: center; color: #34d399;">الشهر الحالي<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">This Mo Cls</span></th>
-                <th style="min-width: 140px; text-align: center; color: #a78bfa;">آخر مكالمة<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Last Call Time</span></th>
-                <th style="min-width: 130px; text-align: center;">Connection Source</th>
-                <th style="min-width: 95px; text-align: center;">Last Paid Date</th>
-                <th style="min-width: 175px; text-align: left !important;">Outreach Priority &amp; Directive</th>
+              <tr id="uncovTableHeaderRow">
+                <th data-sort-col="rank" class="sortable-th" style="width: 55px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Rank">
+                  Rank <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="id" class="sortable-th" style="min-width: 105px; text-align: left !important; cursor: pointer; user-select: none;" title="Click to sort by Student ID">
+                  Student ID <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="rep" class="sortable-th" style="min-width: 150px; text-align: left !important; cursor: pointer; user-select: none;" title="Click to sort by Sales Specialist">
+                  Sales Specialist <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="team" class="sortable-th" style="min-width: 100px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Team">
+                  Team <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="pool" class="sortable-th" style="min-width: 100px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Pool">
+                  Pool <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="points" class="sortable-th" style="min-width: 110px; text-align: center; color: #38bdf8; cursor: pointer; user-select: none;" title="Click to sort by Points Balance">
+                  رصيد الحصص<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Pts Balance</span> <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="lastMonth" class="sortable-th" style="min-width: 115px; text-align: center; color: #fbbf24; cursor: pointer; user-select: none;" title="Click to sort by Last Month Classes">
+                  الشهر الماضي<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Last Mo Cls</span> <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="thisMonth" class="sortable-th" style="min-width: 115px; text-align: center; color: #34d399; cursor: pointer; user-select: none;" title="Click to sort by This Month Classes">
+                  الشهر الحالي<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">This Mo Cls</span> <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="lastCall" class="sortable-th" style="min-width: 140px; text-align: center; color: #a78bfa; cursor: pointer; user-select: none;" title="Click to sort by Last Connection Time">
+                  آخر مكالمة<br><span style="font-size: 0.68rem; font-weight: normal; color: #94a3b8;">Last Call Time</span> <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="source" class="sortable-th" style="min-width: 130px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Connection Source">
+                  Connection Source <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="lastPaid" class="sortable-th" style="min-width: 95px; text-align: center; cursor: pointer; user-select: none;" title="Click to sort by Last Paid Date">
+                  Last Paid Date <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
+                <th data-sort-col="action" class="sortable-th" style="min-width: 175px; text-align: left !important; cursor: pointer; user-select: none;" title="Click to sort by Directive">
+                  Outreach Priority &amp; Directive <span class="sort-icon" style="font-size: 0.72rem; opacity: 0.7; margin-left: 2px;">↕</span>
+                </th>
                 <th style="min-width: 85px; text-align: center;">Rep CSV</th>
               </tr>
             </thead>
@@ -2483,8 +2595,8 @@
       }
     });
   </script>
-  <script src="leads/uncovered_leads_data.js?v=20261125_150000" defer></script>
-  <script src="dashboard.js?v=20261125_150000" defer></script>
+  <script src="leads/uncovered_leads_data.js?v=20261125_182000" defer></script>
+  <script src="dashboard.js?v=20261125_182000" defer></script>
   <script src="dashboard_ai_command_suite.js?v=20261122_235500" defer></script>
   <script src="dashboard_i18n.js?v=20261122_235500" defer></script>
   <script src="dashboard_voice_assistant.js?v=20261122_235500" defer></script>
