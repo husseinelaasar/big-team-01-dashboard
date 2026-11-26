@@ -1,42 +1,34 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-nohayoussry | Generated: 2026-11-25 12:55
+# Representative: EGSS-nohayoussry | Generated: 2026-11-26 10:40
 
-=== 1. SOP PENDING TASKS (83) ===
+=== 1. SOP PENDING TASKS (73) ===
 Student_ID,Task_Name,Expiration_Time
-62772858,"SS:Service warning - absence",20261125 18:55:00
-62799796,"SS:Service warning - absence",20261125 18:55:00
-63160735,"SS:Service warning - absence",20261125 18:55:00
-64597907,"SS:Service warning - absence",20261125 18:55:00
-64762788,"Round 2  Trust Enhancement (First Class Follow-up)",20261125 18:55:00
 59201573,"English Club Booking",20261126 18:55:00
 60043292,"SS:Service warning - absence",20261126 18:55:00
 63572592,"SS:Service warning - absence",20261126 18:55:00
 63596137,"SS:Service warning - absence",20261126 18:55:00
 63747711,"SS:Service warning - absence",20261126 18:55:00
-64313065,"SS:Service warning - absence",20261126 18:55:00
-64985896,"Round 1  Awareness building (First call)",20261126 18:55:00
 62137031,"SS:Service warning - absence",20261127 18:55:00
 62811234,"SS:Service warning - absence",20261127 18:55:00
 63746985,"SS:Service warning - absence",20261127 18:55:00
-64562390,"Round 1  Awareness building (First call)",20261127 18:55:00
-64985896,"Round 2  Trust Enhancement (First Class Follow-up)",20261127 18:55:00
 58636063,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
+59028213,"SS:Service warning - absence",20261128 18:55:00
 59215311,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 59633007,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
+60567264,"SS:Service warning - absence",20261128 18:55:00
+61144039,"SS:Service warning - absence",20261128 18:55:00
 64144079,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64248432,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64276121,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64277741,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64287444,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
-64313065,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64328449,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64340626,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
-64366587,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64367825,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64395204,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64399270,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64428686,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
-57728168,"SS：Service warning - class interruption",20261130 23:59:59
+64985601,"Round 1  Awareness building (First call)",20261128 18:55:00
 58095475,"SS：Service warning - class interruption",20261130 23:59:59
 58335632,"SS：Service warning - class interruption",20261130 23:59:59
 58346858,"SS：Service warning - class interruption",20261130 23:59:59
@@ -48,7 +40,6 @@ Student_ID,Task_Name,Expiration_Time
 58707366,"SS：Service warning - class interruption",20261130 23:59:59
 58739679,"SS：Service warning - class interruption",20261130 23:59:59
 58769809,"SS：Service warning - class interruption",20261130 23:59:59
-58846048,"SS：Service warning - class interruption",20261130 23:59:59
 59033582,"SS：Service warning - class interruption",20261130 23:59:59
 59089760,"SS：Service warning - class interruption",20261130 23:59:59
 59158841,"SS：Service warning - class interruption",20261130 23:59:59
@@ -62,7 +53,6 @@ Student_ID,Task_Name,Expiration_Time
 60646412,"SS：Service warning - class interruption",20261130 23:59:59
 60757478,"SS：Service warning - class interruption",20261130 23:59:59
 60901866,"SS：Service warning - class interruption",20261130 23:59:59
-61093124,"SS：Service warning - class interruption",20261130 23:59:59
 61272828,"SS：Service warning - class interruption",20261130 23:59:59
 61569347,"SS：Service warning - class interruption",20261130 23:59:59
 61612369,"SS：Service warning - class interruption",20261130 23:59:59
@@ -87,7 +77,7 @@ Student_ID,Task_Name,Expiration_Time
 64476657,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64725203,"SS：Service warning - class interruption",20261130 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (36) ===
+=== 2. UNFIXED TEACHER BINDING (35) ===
 Student_ID,Pool_Cohort,Classes,Priority
 58095475,"M3+ Pool",0,"UNFIXED BINDING"
 58707366,"M3+ Pool",0,"UNFIXED BINDING"
@@ -122,9 +112,8 @@ Student_ID,Pool_Cohort,Classes,Priority
 63736712,"M3+ Pool",0,"UNFIXED BINDING"
 63793823,"M3+ Pool",0,"UNFIXED BINDING"
 64053357,"M3+ Pool",0,"UNFIXED BINDING"
-64562390,"M0 Pool",0,"CRITICAL (0 Classes)"
 64955914,"M0 Pool",0,"CRITICAL (0 Classes)"
-64985896,"M0 Pool",0,"CRITICAL (0 Classes)"
+64985601,"M0 Pool",0,"CRITICAL (0 Classes)"
 
 === 3. CLASS CONSUMPTION RESCUE (262) ===
 Student_ID,Pool_Cohort,Classes,Action

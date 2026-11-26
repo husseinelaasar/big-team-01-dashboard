@@ -1,16 +1,16 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-titooooo | Generated: 2026-11-25 12:55
+# Representative: EGSS-titooooo | Generated: 2026-11-26 10:40
 
-=== 1. SOP PENDING TASKS (34) ===
+=== 1. SOP PENDING TASKS (35) ===
 Student_ID,Task_Name,Expiration_Time
-64761945,"English Club Booking",20261125 18:55:00
 58163223,"SS:Service warning - absence",20261126 18:55:00
 62539449,"SS:Service warning - absence",20261126 18:55:00
-63682568,"English Club Booking",20261126 18:55:00
 61607876,"SS:Service warning - absence",20261127 18:55:00
 64160373,"SS:Service warning - absence",20261127 18:55:00
+64813319,"Round 3 Habit Cultivation (1st Unit Assessment)",20261127 18:55:00
+64898776,"Round 3 Habit Cultivation (1st Unit Assessment)",20261127 18:55:00
+58594437,"SS:Service warning - absence",20261128 18:55:00
 58739251,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
-61366783,"English Club Booking",20261128 18:55:00
 61433726,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 61724299,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 62237827,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
@@ -33,18 +33,21 @@ Student_ID,Task_Name,Expiration_Time
 64438768,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64485995,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64501464,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
+64772222,"English Club Booking",20261129 18:55:00
 61607876,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 62898694,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64345799,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64496376,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (38) ===
+=== 2. UNFIXED TEACHER BINDING (40) ===
 Student_ID,Pool_Cohort,Classes,Priority
 58149274,"M3+ Pool",0,"UNFIXED BINDING"
 58828419,"M3+ Pool",0,"UNFIXED BINDING"
 59027937,"M3+ Pool",0,"UNFIXED BINDING"
 59079366,"M3+ Pool",0,"UNFIXED BINDING"
 59338237,"M3+ Pool",0,"UNFIXED BINDING"
+59494739,"M3+ Pool",0,"UNFIXED BINDING"
+59555669,"M3+ Pool",0,"UNFIXED BINDING"
 59557598,"M3+ Pool",0,"UNFIXED BINDING"
 59740880,"M3+ Pool",0,"UNFIXED BINDING"
 59818649,"M3+ Pool",0,"UNFIXED BINDING"
@@ -381,7 +384,7 @@ Student_ID,Level,Completed,Status
 64190088,"3",0,"Booking Required"
 64202346,"1",0,"Booking Required"
 64255483,"2",0,"Booking Required"
-61433726,"1",0,"Booking Required"
+61433726,"2",0,"Booking Required"
 64246550,"1",1,"Attended"
 64248181,"3",0,"Booking Required"
 64248852,"2",0,"Booking Required"
@@ -390,24 +393,24 @@ Student_ID,Level,Completed,Status
 62898694,"2",0,"Booking Required"
 64395103,"0",0,"Booking Required"
 64345799,"0",0,"Booking Required"
-64383851,"0",0,"Booking Required"
-64189608,"2",0,"Booking Required"
-64438768,"1",0,"Booking Required"
-64395119,"2",0,"Booking Required"
-64429859,"0",0,"Booked"
-64430854,"2",0,"Booking Required"
+64383851,"0",1,"Attended"
+64189608,"2",1,"Attended"
+64438768,"1",1,"Attended"
+64395119,"2",1,"Attended"
+64429859,"0",1,"Attended"
+64430854,"2",1,"Attended"
 63360889,"0",1,"Attended"
 64485995,"2",1,"Attended"
 61724299,"0",2,"Attended"
 61366783,"2",0,"Booking Required"
 64501464,"0",0,"Booking Required"
-64512286,"3",0,"Booking Required"
-58560078,"1",0,"Booking Required"
+64512286,"3",1,"Attended"
+58560078,"1",1,"Attended"
 64587731,"1",0,"Booking Required"
 64634634,"0",0,"Booking Required"
-64673814,"1",0,"Booking Required"
+64673814,"1",1,"Attended"
 64664865,"0",0,"Booking Required"
-64733028,"1",0,"Booking Required"
+64733028,"1",1,"Attended"
 64733918,"1",1,"Attended"
 59932026,"2",0,"Booking Required"
 64752768,"0",0,"Booking Required"

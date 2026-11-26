@@ -1,11 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-juliamonir01 | Generated: 2026-11-25 12:55
+# Representative: EGSS-juliamonir01 | Generated: 2026-11-26 10:40
 
-=== 1. SOP PENDING TASKS (73) ===
+=== 1. SOP PENDING TASKS (71) ===
 Student_ID,Task_Name,Expiration_Time
-62591307,"SS:Service warning - absence",20261125 18:55:00
-62923409,"SS:Service warning - absence",20261125 18:55:00
-63555908,"SS:Service warning - absence",20261125 18:55:00
 62242232,"SS:Service warning - absence",20261126 18:55:00
 64365096,"SS:Service warning - absence",20261126 18:55:00
 64643604,"Round 2  Trust Enhancement (First Class Follow-up)",20261126 18:55:00
@@ -18,6 +15,7 @@ Student_ID,Task_Name,Expiration_Time
 64542884,"SS:Service warning - absence",20261127 18:55:00
 64542884,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261127 18:55:00
 59000117,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
+60421532,"SS:Service warning - absence",20261128 18:55:00
 63523117,"English Club Booking",20261128 18:55:00
 64327731,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64351095,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
@@ -548,7 +546,7 @@ Student_ID,Level,Completed,Status
 64736677,"1",0,"Booking Required"
 64711117,"0",1,"Attended"
 64751180,"3",0,"Booking Required"
-64704327,"2",0,"Booked"
-64703497,"1",0,"Booked"
+64704327,"2",1,"Attended"
+64703497,"1",1,"Attended"
 64770422,"3",0,"Booked"
 64764558,"1",1,"Attended"

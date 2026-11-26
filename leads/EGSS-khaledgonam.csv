@@ -1,17 +1,15 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-khaledgonam | Generated: 2026-11-25 12:55
+# Representative: EGSS-khaledgonam | Generated: 2026-11-26 10:40
 
-=== 1. SOP PENDING TASKS (75) ===
+=== 1. SOP PENDING TASKS (63) ===
 Student_ID,Task_Name,Expiration_Time
-59841842,"SS:Service warning - absence",20261126 18:55:00
-60789080,"SS:Service warning - absence",20261126 18:55:00
-64366089,"SS:Service warning - absence",20261126 18:55:00
 60868504,"SS:Service warning - absence",20261127 18:55:00
-63519744,"SS:Service warning - absence",20261127 18:55:00
-64723886,"SS:Service warning - absence",20261127 18:55:00
-60478898,"English Club Booking",20261128 18:55:00
-63357957,"English Club Booking",20261128 18:55:00
-63562384,"English Club Booking",20261128 18:55:00
+59171545,"SS:Service warning - absence",20261128 18:55:00
+59409320,"SS:Service warning - absence",20261128 18:55:00
+60144653,"Round 1  Awareness building (First call)",20261128 18:55:00
+60433632,"SS:Service warning - absence",20261128 18:55:00
+60535581,"SS:Service warning - absence",20261128 18:55:00
+64890297,"English Club Booking",20261129 18:55:00
 58367131,"SS：Service warning - class interruption",20261130 23:59:59
 58745679,"SS：Service warning - class interruption",20261130 23:59:59
 59171545,"SS：Service warning - class interruption",20261130 23:59:59
@@ -19,7 +17,6 @@ Student_ID,Task_Name,Expiration_Time
 59352874,"SS：Service warning - class interruption",20261130 23:59:59
 59472042,"SS：Service warning - class interruption",20261130 23:59:59
 59695639,"SS：Service warning - class interruption",20261130 23:59:59
-59758773,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 59822639,"SS：Service warning - class interruption",20261130 23:59:59
 59911386,"SS：Service warning - class interruption",20261130 23:59:59
 59912253,"SS：Service warning - class interruption",20261130 23:59:59
@@ -30,14 +27,9 @@ Student_ID,Task_Name,Expiration_Time
 60842935,"SS：Service warning - class interruption",20261130 23:59:59
 60852065,"SS：Service warning - class interruption",20261130 23:59:59
 60856169,"SS：Service warning - class interruption",20261130 23:59:59
-60868504,"SS：Service warning - class interruption",20261130 23:59:59
 60909052,"SS：Service warning - class interruption",20261130 23:59:59
 60985574,"SS：Service warning - class interruption",20261130 23:59:59
 61003902,"SS：Service warning - class interruption",20261130 23:59:59
-61168320,"SS：Service warning - class interruption",20261130 23:59:59
-61169701,"SS：Service warning - class interruption",20261130 23:59:59
-61593728,"SS：Service warning - class interruption",20261130 23:59:59
-61605442,"SS：Service warning - class interruption",20261130 23:59:59
 61851052,"SS：Service warning - class interruption",20261130 23:59:59
 61952513,"SS：Service warning - class interruption",20261130 23:59:59
 61966428,"SS：Service warning - class interruption",20261130 23:59:59
@@ -53,7 +45,6 @@ Student_ID,Task_Name,Expiration_Time
 62637283,"SS：Service warning - class interruption",20261130 23:59:59
 62806268,"SS：Service warning - class interruption",20261130 23:59:59
 62840122,"SS：Service warning - class interruption",20261130 23:59:59
-62940181,"SS：Service warning - class interruption",20261130 23:59:59
 63046356,"SS：Service warning - class interruption",20261130 23:59:59
 63195069,"SS：Service warning - class interruption",20261130 23:59:59
 63257138,"SS：Service warning - class interruption",20261130 23:59:59
@@ -61,7 +52,6 @@ Student_ID,Task_Name,Expiration_Time
 63317050,"SS：Service warning - class interruption",20261130 23:59:59
 63324423,"SS：Service warning - class interruption",20261130 23:59:59
 63349836,"SS：Service warning - class interruption",20261130 23:59:59
-63357957,"SS：Service warning - class interruption",20261130 23:59:59
 63389237,"SS：Service warning - class interruption",20261130 23:59:59
 63426050,"SS：Service warning - class interruption",20261130 23:59:59
 63437657,"SS：Service warning - class interruption",20261130 23:59:59
@@ -74,18 +64,17 @@ Student_ID,Task_Name,Expiration_Time
 64113463,"SS：Service warning - class interruption",20261130 23:59:59
 64113784,"SS：Service warning - class interruption",20261130 23:59:59
 64115210,"SS：Service warning - class interruption",20261130 23:59:59
-64529288,"SS：Service warning - class interruption",20261130 23:59:59
 64541334,"SS：Service warning - class interruption",20261130 23:59:59
 64634117,"SS：Service warning - class interruption",20261130 23:59:59
-64723886,"SS：Service warning - class interruption",20261130 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (33) ===
+=== 2. UNFIXED TEACHER BINDING (34) ===
 Student_ID,Pool_Cohort,Classes,Priority
 58274196,"M3+ Pool",0,"UNFIXED BINDING"
 58745679,"M3+ Pool",0,"UNFIXED BINDING"
 58811857,"M3+ Pool",0,"UNFIXED BINDING"
 59352874,"M3+ Pool",0,"UNFIXED BINDING"
 59402945,"M3+ Pool",0,"UNFIXED BINDING"
+60144653,"M0 Pool",0,"CRITICAL (0 Classes)"
 60152691,"M3+ Pool",0,"UNFIXED BINDING"
 60193052,"M3+ Pool",0,"UNFIXED BINDING"
 60206320,"M3+ Pool",0,"UNFIXED BINDING"
@@ -370,7 +359,7 @@ Student_ID,Level,Completed,Status
 63490270,"1",0,"Booked"
 63454440,"0",0,"Booking Required"
 63519744,"2",0,"Booking Required"
-63562384,"1",0,"Booking Required"
+63562384,"1",1,"Attended"
 59409320,"1",0,"Booking Required"
 63570142,"0",1,"Attended"
 58347739,"0",0,"Booking Required"

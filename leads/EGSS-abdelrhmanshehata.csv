@@ -1,19 +1,15 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-abdelrhmanshehata | Generated: 2026-11-25 12:55
+# Representative: EGSS-abdelrhmanshehata | Generated: 2026-11-26 10:40
 
-=== 1. SOP PENDING TASKS (9) ===
+=== 1. SOP PENDING TASKS (5) ===
 Student_ID,Task_Name,Expiration_Time
-59474391,"SS:Service warning - absence",20261127 18:55:00
 61232248,"SS:Service warning - absence",20261127 18:55:00
 61410343,"SS:Service warning - absence",20261127 18:55:00
-61842956,"SS:Service warning - absence",20261127 18:55:00
 62513206,"SS:Service warning - absence",20261127 18:55:00
-63711757,"SS:Service warning - absence",20261127 18:55:00
 63756172,"SS:Service warning - absence",20261127 18:55:00
-58328397,"English Club Booking",20261128 18:55:00
-63887629,"English Club Booking",20261128 18:55:00
+59768567,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261128 18:55:00
 
-=== 2. UNFIXED TEACHER BINDING (26) ===
+=== 2. UNFIXED TEACHER BINDING (29) ===
 Student_ID,Pool_Cohort,Classes,Priority
 58267408,"M3+ Pool",0,"UNFIXED BINDING"
 58311400,"M3+ Pool",0,"UNFIXED BINDING"
@@ -22,6 +18,7 @@ Student_ID,Pool_Cohort,Classes,Priority
 59038874,"M3+ Pool",0,"UNFIXED BINDING"
 59169936,"M3+ Pool",0,"UNFIXED BINDING"
 59350814,"M3+ Pool",0,"UNFIXED BINDING"
+60412988,"M3+ Pool",0,"UNFIXED BINDING"
 60474847,"M3+ Pool",0,"UNFIXED BINDING"
 60654725,"M3+ Pool",0,"UNFIXED BINDING"
 60707245,"M3+ Pool",0,"UNFIXED BINDING"
@@ -31,16 +28,18 @@ Student_ID,Pool_Cohort,Classes,Priority
 61957342,"M3+ Pool",0,"UNFIXED BINDING"
 61959498,"M3+ Pool",0,"UNFIXED BINDING"
 62186237,"M3+ Pool",0,"UNFIXED BINDING"
-62660251,"M0 Pool",0,"CRITICAL (0 Classes)"
 62802056,"M3+ Pool",0,"UNFIXED BINDING"
 62861782,"M3+ Pool",0,"UNFIXED BINDING"
 63058549,"M3+ Pool",0,"UNFIXED BINDING"
+63163676,"M3+ Pool",0,"UNFIXED BINDING"
 63868841,"M3+ Pool",0,"UNFIXED BINDING"
 63875552,"M3+ Pool",0,"UNFIXED BINDING"
 64202115,"M2 Pool",0,"MEDIUM BINDING"
 64297277,"M1 Pool",0,"HIGH BINDING"
 64501637,"M2 Pool",0,"MEDIUM BINDING"
 64762337,"M1 Pool",0,"HIGH BINDING"
+64957739,"M0 Pool",0,"CRITICAL (0 Classes)"
+64973841,"M0 Pool",0,"CRITICAL (0 Classes)"
 
 === 3. CLASS CONSUMPTION RESCUE (161) ===
 Student_ID,Pool_Cohort,Classes,Action
@@ -214,14 +213,14 @@ Student_ID,Level,Completed,Status
 63137876,"0",0,"Booking Required"
 63196156,"2",1,"Attended"
 63198804,"0",0,"Booked"
-63203514,"2",0,"Booking Required"
+63203514,"2",0,"Booked"
 63227437,"1",0,"Booking Required"
 63306991,"0",0,"Booking Required"
 57962078,"1",0,"Booking Required"
 63424787,"0",0,"Booking Required"
 63433917,"0",0,"Booking Required"
 63426901,"1",0,"Booking Required"
-61216239,"3",0,"Booking Required"
+61216239,"3",1,"Attended"
 61410343,"2",0,"Booking Required"
 61809926,"1",0,"Booking Required"
 60540732,"1",0,"Booking Required"
@@ -233,9 +232,9 @@ Student_ID,Level,Completed,Status
 63868841,"2",0,"Booking Required"
 63887629,"2",0,"Booking Required"
 63952488,"0",0,"Booking Required"
-58854637,"3",0,"Booking Required"
-63955491,"2",0,"Booking Required"
-63961952,"0",0,"Booked"
+58854637,"3",1,"Attended"
+63955491,"2",0,"Booked"
+63961952,"1",0,"Booked"
 64003195,"1",1,"Attended"
 64032455,"3",0,"Booking Required"
 63997697,"0",0,"Booking Required"

@@ -2,9 +2,9 @@
     "EGSS-juliamonir01":  {
                               "ccCount":  262,
                               "ftCount":  91,
-                              "sopCount":  73,
+                              "sopCount":  71,
                               "ecCount":  114,
-                              "totalLeads":  540
+                              "totalLeads":  538
                           },
     "EGSS-marwaahmed":  {
                             "ccCount":  192,
@@ -15,121 +15,121 @@
                         },
     "EGSS-mahmoudkhamis":  {
                                "ccCount":  292,
-                               "ftCount":  43,
-                               "sopCount":  16,
-                               "ecCount":  152,
-                               "totalLeads":  503
+                               "ftCount":  45,
+                               "sopCount":  2,
+                               "ecCount":  151,
+                               "totalLeads":  490
                            },
     "EGSS-titooooo":  {
                           "ccCount":  220,
-                          "ftCount":  38,
-                          "sopCount":  34,
+                          "ftCount":  40,
+                          "sopCount":  35,
                           "ecCount":  112,
-                          "totalLeads":  404
+                          "totalLeads":  407
                       },
     "EGSS-nohayoussry":  {
                              "ccCount":  262,
-                             "ftCount":  36,
-                             "sopCount":  83,
+                             "ftCount":  35,
+                             "sopCount":  73,
                              "ecCount":  157,
-                             "totalLeads":  538
+                             "totalLeads":  527
                          },
     "EGSS-amrsafwat":  {
                            "ccCount":  263,
-                           "ftCount":  53,
-                           "sopCount":  24,
-                           "ecCount":  116,
-                           "totalLeads":  456
+                           "ftCount":  54,
+                           "sopCount":  4,
+                           "ecCount":  117,
+                           "totalLeads":  438
                        },
     "EGSS-mohamedha":  {
                            "ccCount":  234,
-                           "ftCount":  64,
-                           "sopCount":  99,
+                           "ftCount":  62,
+                           "sopCount":  95,
                            "ecCount":  104,
-                           "totalLeads":  501
+                           "totalLeads":  495
                        },
     "EGSS-abdelrahmannasef":  {
                                   "ccCount":  203,
-                                  "ftCount":  32,
-                                  "sopCount":  68,
+                                  "ftCount":  33,
+                                  "sopCount":  61,
                                   "ecCount":  99,
-                                  "totalLeads":  402
+                                  "totalLeads":  396
                               },
     "EGSS-samira01":  {
                           "ccCount":  217,
-                          "ftCount":  35,
-                          "sopCount":  37,
-                          "ecCount":  89,
-                          "totalLeads":  378
+                          "ftCount":  36,
+                          "sopCount":  32,
+                          "ecCount":  90,
+                          "totalLeads":  375
                       },
     "EGSS-alihesham01":  {
                              "ccCount":  132,
-                             "ftCount":  31,
-                             "sopCount":  16,
-                             "ecCount":  67,
-                             "totalLeads":  246
+                             "ftCount":  30,
+                             "sopCount":  8,
+                             "ecCount":  66,
+                             "totalLeads":  236
                          },
     "EGSS-mahmoud04":  {
                            "ccCount":  283,
-                           "ftCount":  48,
-                           "sopCount":  122,
-                           "ecCount":  127,
-                           "totalLeads":  580
+                           "ftCount":  49,
+                           "sopCount":  114,
+                           "ecCount":  126,
+                           "totalLeads":  572
                        },
     "EGSS-hayamhassan":  {
                              "ccCount":  194,
-                             "ftCount":  33,
-                             "sopCount":  18,
+                             "ftCount":  31,
+                             "sopCount":  11,
                              "ecCount":  128,
-                             "totalLeads":  373
+                             "totalLeads":  364
                          },
     "EGSS-ashraqatal":  {
                             "ccCount":  269,
-                            "ftCount":  69,
-                            "sopCount":  57,
+                            "ftCount":  70,
+                            "sopCount":  47,
                             "ecCount":  139,
-                            "totalLeads":  534
+                            "totalLeads":  525
                         },
     "EGSS-abdelrhmanshehata":  {
                                    "ccCount":  161,
-                                   "ftCount":  26,
-                                   "sopCount":  9,
+                                   "ftCount":  29,
+                                   "sopCount":  5,
                                    "ecCount":  79,
-                                   "totalLeads":  275
+                                   "totalLeads":  274
                                },
     "EGSS-ibrahimismaiel":  {
                                 "ccCount":  275,
-                                "ftCount":  86,
-                                "sopCount":  121,
-                                "ecCount":  119,
-                                "totalLeads":  601
+                                "ftCount":  85,
+                                "sopCount":  120,
+                                "ecCount":  118,
+                                "totalLeads":  598
                             },
     "EGSS-omarmoneb":  {
                            "ccCount":  203,
-                           "ftCount":  61,
-                           "sopCount":  28,
+                           "ftCount":  60,
+                           "sopCount":  25,
                            "ecCount":  96,
-                           "totalLeads":  388
+                           "totalLeads":  384
                        },
     "EGSS-ehabzaky01":  {
                             "ccCount":  250,
-                            "ftCount":  42,
-                            "sopCount":  65,
+                            "ftCount":  41,
+                            "sopCount":  63,
                             "ecCount":  131,
-                            "totalLeads":  488
+                            "totalLeads":  485
                         },
     "EGSS-khaledgonam":  {
                              "ccCount":  217,
-                             "ftCount":  33,
-                             "sopCount":  75,
+                             "ftCount":  34,
+                             "sopCount":  63,
                              "ecCount":  100,
-                             "totalLeads":  425
+                             "totalLeads":  414
                          },
     "EGSS-ahmedshoukry":  {
                               "ccCount":  225,
                               "ftCount":  29,
-                              "sopCount":  21,
+                              "sopCount":  11,
                               "ecCount":  117,
-                              "totalLeads":  392
+                              "totalLeads":  382
                           }
 }

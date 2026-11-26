@@ -1,16 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-abdelrahmannasef | Generated: 2026-11-25 12:55
+# Representative: EGSS-abdelrahmannasef | Generated: 2026-11-26 10:40
 
-=== 1. SOP PENDING TASKS (68) ===
+=== 1. SOP PENDING TASKS (61) ===
 Student_ID,Task_Name,Expiration_Time
-59265472,"SS:Service warning - absence",20261125 18:55:00
-62142442,"SS:Service warning - absence",20261125 18:55:00
-62919573,"SS:Service warning - absence",20261125 18:55:00
-63119378,"SS:Service warning - absence",20261125 18:55:00
-64420711,"SS:Service warning - absence",20261125 18:55:00
-64664437,"English Club Booking",20261125 18:55:00
-64822272,"English Club Booking",20261125 18:55:00
-64874201,"Round 3 Habit Cultivation (1st Unit Assessment)",20261125 18:55:00
 58856237,"SS:Service warning - absence",20261126 18:55:00
 60105228,"SS:Service warning - absence",20261126 18:55:00
 63673529,"SS:Service warning - absence",20261126 18:55:00
@@ -19,6 +11,7 @@ Student_ID,Task_Name,Expiration_Time
 63226655,"SS:Service warning - absence",20261127 18:55:00
 59180047,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 59345785,"English Club Booking",20261128 18:55:00
+60579947,"Round 1  Awareness building (First call)",20261128 18:55:00
 63692985,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 63917079,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 64116568,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
@@ -72,7 +65,7 @@ Student_ID,Task_Name,Expiration_Time
 64426805,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64664920,"SS：Service warning - class interruption",20261130 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (32) ===
+=== 2. UNFIXED TEACHER BINDING (33) ===
 Student_ID,Pool_Cohort,Classes,Priority
 58340155,"M3+ Pool",0,"UNFIXED BINDING"
 58421979,"M3+ Pool",0,"UNFIXED BINDING"
@@ -85,6 +78,7 @@ Student_ID,Pool_Cohort,Classes,Priority
 60160880,"M3+ Pool",0,"UNFIXED BINDING"
 60669029,"M3+ Pool",0,"UNFIXED BINDING"
 60710495,"M3+ Pool",0,"UNFIXED BINDING"
+60841323,"M3+ Pool",0,"UNFIXED BINDING"
 61068377,"M3+ Pool",0,"UNFIXED BINDING"
 61413839,"M3+ Pool",0,"UNFIXED BINDING"
 61601902,"M3+ Pool",0,"UNFIXED BINDING"

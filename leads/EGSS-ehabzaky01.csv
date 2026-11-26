@@ -1,9 +1,8 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-ehabzaky01 | Generated: 2026-11-25 12:55
+# Representative: EGSS-ehabzaky01 | Generated: 2026-11-26 10:40
 
-=== 1. SOP PENDING TASKS (65) ===
+=== 1. SOP PENDING TASKS (63) ===
 Student_ID,Task_Name,Expiration_Time
-63688784,"SS:Service warning - absence",20261125 18:55:00
 63481231,"SS:Service warning - absence",20261126 18:55:00
 63681587,"SS:Service warning - absence",20261126 18:55:00
 63892943,"SS:Service warning - absence",20261126 18:55:00
@@ -11,8 +10,8 @@ Student_ID,Task_Name,Expiration_Time
 63605613,"SS:Service warning - absence",20261127 18:55:00
 64232141,"SS:Service warning - absence",20261127 18:55:00
 64247864,"SS:Service warning - absence",20261127 18:55:00
-64886396,"Round 1  Awareness building (First call)",20261127 18:55:00
 63688695,"English Club Booking",20261128 18:55:00
+64701475,"Round 4 Learning Progress Feedback (2nd Unit Follow-up)",20261128 18:55:00
 58557704,"SS：Service warning - class interruption",20261130 18:59:59
 58660017,"SS：Service warning - class interruption",20261130 18:59:59
 58963032,"SS：Service warning - class interruption",20261130 18:59:59
@@ -60,7 +59,6 @@ Student_ID,Task_Name,Expiration_Time
 59884401,"SS：Service warning - class interruption",20261130 23:59:59
 60131952,"SS：Service warning - class interruption",20261130 23:59:59
 61210487,"SS：Service warning - class interruption",20261130 23:59:59
-62959233,"SS：Service warning - class interruption",20261130 23:59:59
 62967556,"SS：Service warning - class interruption",20261130 23:59:59
 62968031,"SS：Service warning - class interruption",20261130 23:59:59
 63207123,"SS：Service warning - class interruption",20261130 23:59:59
@@ -69,7 +67,7 @@ Student_ID,Task_Name,Expiration_Time
 63988100,"SS：Service warning - class interruption",20261130 23:59:59
 64562454,"SS：Service warning - class interruption",20261130 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (42) ===
+=== 2. UNFIXED TEACHER BINDING (41) ===
 Student_ID,Pool_Cohort,Classes,Priority
 58243864,"M3+ Pool",0,"UNFIXED BINDING"
 58457675,"M3+ Pool",0,"UNFIXED BINDING"
@@ -112,7 +110,6 @@ Student_ID,Pool_Cohort,Classes,Priority
 64534887,"M1 Pool",0,"HIGH BINDING"
 64590717,"M1 Pool",0,"HIGH BINDING"
 64763756,"M1 Pool",0,"HIGH BINDING"
-64886396,"M0 Pool",0,"CRITICAL (0 Classes)"
 
 === 3. CLASS CONSUMPTION RESCUE (250) ===
 Student_ID,Pool_Cohort,Classes,Action
@@ -489,8 +486,8 @@ Student_ID,Level,Completed,Status
 64613897,"1",0,"Booked"
 64636323,"1",1,"Attended"
 64642918,"0",0,"Booking Required"
-64672768,"1",0,"Booking Required"
-64161558,"2",1,"Attended"
+64672768,"1",1,"Attended"
+64161558,"2",2,"Attended"
 64653820,"0",0,"Booking Required"
 59047874,"2",0,"Booking Required"
 61361768,"3",1,"Attended"

@@ -1,28 +1,24 @@
 ﻿# 51TALK BIG TEAM 01 - DAILY ACTIONABLE STUDENT LEADS
-# Representative: EGSS-ashraqatal | Generated: 2026-11-25 12:55
+# Representative: EGSS-ashraqatal | Generated: 2026-11-26 10:40
 
-=== 1. SOP PENDING TASKS (57) ===
+=== 1. SOP PENDING TASKS (47) ===
 Student_ID,Task_Name,Expiration_Time
 62016583,"SS:Service warning - absence",20261126 18:55:00
-63181896,"SS:Service warning - absence",20261126 18:55:00
 63204610,"SS:Service warning - absence",20261126 18:55:00
 63857612,"Round 6 Premium Service(Outside Renewal Pool)",20261126 18:55:00
 64197792,"SS:Service warning - absence",20261126 18:55:00
-64229396,"SS:Service warning - absence",20261126 18:55:00
-63651640,"SS:Service warning - absence",20261127 18:55:00
 63783829,"SS:Service warning - absence",20261127 18:55:00
+63955276,"Round 3 Habit Cultivation (1st Unit Assessment)",20261127 18:55:00
 64061782,"SS:Service warning - absence",20261127 18:55:00
 64673077,"SS:Service warning - absence",20261127 18:55:00
-59116146,"English Club Booking",20261128 18:55:00
-60298117,"English Club Booking",20261128 18:55:00
 64113072,"Round 6 Premium Service(Outside Renewal Pool)",20261128 18:55:00
-64213902,"English Club Booking",20261128 18:55:00
+65009197,"Round 1  Awareness building (First call)",20261128 18:55:00
+64778384,"English Club Booking",20261129 18:55:00
 58905364,"SS：Service warning - class interruption",20261130 23:59:59
 59068598,"SS：Service warning - class interruption",20261130 23:59:59
 59129234,"SS：Service warning - class interruption",20261130 23:59:59
 59774125,"SS：Service warning - class interruption",20261130 23:59:59
 59890588,"SS：Service warning - class interruption",20261130 23:59:59
-59899606,"SS：Service warning - class interruption",20261130 23:59:59
 59968100,"SS：Service warning - class interruption",20261130 23:59:59
 60563749,"SS：Service warning - class interruption",20261130 23:59:59
 60802704,"SS：Service warning - class interruption",20261130 23:59:59
@@ -42,7 +38,6 @@ Student_ID,Task_Name,Expiration_Time
 62596738,"SS：Service warning - class interruption",20261130 23:59:59
 63001390,"SS：Service warning - class interruption",20261130 23:59:59
 63111555,"SS：Service warning - class interruption",20261130 23:59:59
-63178981,"SS：Service warning - class interruption",20261130 23:59:59
 63316283,"SS：Service warning - class interruption",20261130 23:59:59
 63556961,"SS：Service warning - class interruption",20261130 23:59:59
 63577262,"SS：Service warning - class interruption",20261130 23:59:59
@@ -50,18 +45,13 @@ Student_ID,Task_Name,Expiration_Time
 63606446,"SS：Service warning - class interruption",20261130 23:59:59
 63651617,"SS：Service warning - class interruption",20261130 23:59:59
 63738919,"SS：Service warning - class interruption",20261130 23:59:59
-63876872,"SS：Service warning - class interruption",20261130 23:59:59
-63877816,"SS：Service warning - class interruption",20261130 23:59:59
-63914231,"SS：Service warning - class interruption",20261130 23:59:59
 63955276,"SS：Service warning - class interruption",20261130 23:59:59
-64131090,"SS：Service warning - class interruption",20261130 23:59:59
 64328643,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64328730,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
-64476085,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64505919,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 64587095,"SS：Service warning - class interruption",20261130 23:59:59
 
-=== 2. UNFIXED TEACHER BINDING (69) ===
+=== 2. UNFIXED TEACHER BINDING (70) ===
 Student_ID,Pool_Cohort,Classes,Priority
 58349110,"M3+ Pool",0,"UNFIXED BINDING"
 58399814,"M3+ Pool",0,"UNFIXED BINDING"
@@ -125,6 +115,7 @@ Student_ID,Pool_Cohort,Classes,Priority
 63955276,"M1 Pool",0,"HIGH BINDING"
 64131090,"M2 Pool",0,"MEDIUM BINDING"
 64179228,"M2 Pool",0,"MEDIUM BINDING"
+64197792,"M2 Pool",0,"MEDIUM BINDING"
 64465984,"M2 Pool",0,"MEDIUM BINDING"
 64587095,"M1 Pool",0,"HIGH BINDING"
 64587701,"M1 Pool",0,"HIGH BINDING"
@@ -510,14 +501,14 @@ Student_ID,Level,Completed,Status
 64166730,"3",0,"Booking Required"
 64177823,"1",0,"Booking Required"
 64169405,"0",0,"Booking Required"
-64179228,"0",0,"Booked"
-64179547,"2",1,"Attended"
 58151985,"2",0,"Booking Required"
 64169094,"0",0,"Booking Required"
 64167246,"1",0,"Booking Required"
+64179228,"0",0,"Booked"
+64179547,"2",1,"Attended"
 64131090,"0",0,"Booking Required"
 64189323,"1",0,"Booking Required"
-64213902,"0",0,"Booking Required"
+64213902,"0",0,"Booked"
 63216617,"2",0,"Booking Required"
 64238226,"2",1,"Attended"
 64191173,"0",0,"Booking Required"
