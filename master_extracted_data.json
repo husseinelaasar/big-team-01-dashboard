@@ -734,12 +734,12 @@
                     "ec":  2,
                     "r1":  1,
                     "r2":  0,
-                    "r3":  0,
+                    "r3":  1,
                     "r4":  0,
                     "r6d":  5,
                     "r6e":  0,
                     "absence":  8,
-                    "total":  16
+                    "total":  17
                 },
                 {
                     "name":  "EGSS-AbdelrahmanNASEF",
@@ -775,23 +775,23 @@
                     "r2":  0,
                     "r3":  1,
                     "r4":  0,
-                    "r6d":  15,
+                    "r6d":  14,
                     "r6e":  0,
                     "absence":  8,
-                    "total":  24
+                    "total":  23
                 },
                 {
                     "name":  "EGSS-KhaledGonam",
                     "team":  "ME-EGSS05",
                     "ec":  0,
                     "r1":  1,
-                    "r2":  0,
+                    "r2":  1,
                     "r3":  0,
                     "r4":  0,
                     "r6d":  0,
                     "r6e":  0,
                     "absence":  5,
-                    "total":  6
+                    "total":  7
                 },
                 {
                     "name":  "EGSS-OmarMoneb",
@@ -801,10 +801,10 @@
                     "r2":  0,
                     "r3":  1,
                     "r4":  0,
-                    "r6d":  3,
+                    "r6d":  4,
                     "r6e":  0,
                     "absence":  4,
-                    "total":  8
+                    "total":  9
                 },
                 {
                     "name":  "EGSS-alihesham01",
@@ -879,10 +879,10 @@
                     "r2":  0,
                     "r3":  0,
                     "r4":  1,
-                    "r6d":  16,
+                    "r6d":  15,
                     "r6e":  0,
                     "absence":  4,
-                    "total":  23
+                    "total":  22
                 },
                 {
                     "name":  "EGSS-Amrsafwat",
@@ -968,12 +968,12 @@
                     "ec":  0,
                     "r1":  0,
                     "r2":  0,
-                    "r3":  2,
+                    "r3":  1,
                     "r4":  0,
                     "r6d":  24,
                     "r6e":  0,
                     "absence":  6,
-                    "total":  32
+                    "total":  31
                 }
             ],
     "englishClub":  [

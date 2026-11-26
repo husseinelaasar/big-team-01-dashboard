@@ -1,7 +1,7 @@
 ﻿# 51TALK BIG TEAM 01 - SECTOR ACTIONABLE STUDENT LEADS
-# Sector: BIG_TEAM_01 (Saber Hussien) | Reps: 19 | Generated: 2026-11-26 18:48
+# Sector: BIG_TEAM_01 (Saber Hussien) | Reps: 19 | Generated: 2026-11-26 19:50
 
-=== 1. SOP PENDING TASKS (860) ===
+=== 1. SOP PENDING TASKS (851) ===
 Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-ashraqatal",63783829,"SS:Service warning - absence",20261127 18:55:00
 "EGSS-ashraqatal",63955276,"Round 3 Habit Cultivation (1st Unit Assessment)",20261127 18:55:00
@@ -316,6 +316,7 @@ Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-samira01",64953195,"Round 1  Awareness building (First call)",20261128 18:55:00
 "EGSS-samira01",61752543,"English Club Booking",20261129 18:55:00
 "EGSS-samira01",63812725,"English Club Booking",20261129 18:55:00
+"EGSS-samira01",64898776,"Round 3 Habit Cultivation (1st Unit Assessment)",20261129 18:55:00
 "EGSS-samira01",59899606,"SS：Service warning - class interruption",20261130 18:59:59
 "EGSS-samira01",58621983,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-samira01",59255040,"SS：Service warning - class interruption",20261130 23:59:59
@@ -481,8 +482,6 @@ Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-ibrahimismaiel",58852059,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-ibrahimismaiel",58852059,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 "EGSS-ibrahimismaiel",58954665,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
-"EGSS-ibrahimismaiel",58963811,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-ibrahimismaiel",58963811,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 "EGSS-ibrahimismaiel",59003788,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 "EGSS-ibrahimismaiel",59031891,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-ibrahimismaiel",59138108,"SS：Service warning - class interruption",20261130 23:59:59
@@ -566,7 +565,6 @@ Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-ibrahimismaiel",64092603,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-ibrahimismaiel",64166734,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-ibrahimismaiel",64202439,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
-"EGSS-ibrahimismaiel",64238521,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-ibrahimismaiel",64436131,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-ibrahimismaiel",64460754,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-ibrahimismaiel",64497058,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
@@ -578,6 +576,7 @@ Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-khaledgonam",60144653,"Round 1  Awareness building (First call)",20261128 18:55:00
 "EGSS-khaledgonam",60433632,"SS:Service warning - absence",20261128 18:55:00
 "EGSS-khaledgonam",60535581,"SS:Service warning - absence",20261128 18:55:00
+"EGSS-khaledgonam",64896173,"Round 2  Trust Enhancement (First Class Follow-up)",20261129 18:55:00
 "EGSS-khaledgonam",58367131,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-khaledgonam",58745679,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-khaledgonam",59171545,"SS：Service warning - class interruption",20261130 23:59:59
@@ -639,6 +638,8 @@ Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-omarmoneb",61290918,"SS:Service warning - absence",20261128 18:55:00
 "EGSS-omarmoneb",64280947,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 "EGSS-omarmoneb",64342964,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
+"EGSS-omarmoneb",58963811,"SS：Service warning - class interruption",20261130 18:59:59
+"EGSS-omarmoneb",58963811,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 18:59:59
 "EGSS-omarmoneb",57940143,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-omarmoneb",58823566,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-omarmoneb",59019680,"SS：Service warning - class interruption",20261130 23:59:59
@@ -655,6 +656,7 @@ Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-alihesham01",64473809,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 "EGSS-alihesham01",64495305,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 "EGSS-alihesham01",64838397,"English Club Booking",20261129 18:55:00
+"EGSS-alihesham01",64238521,"SS：Service warning - class interruption",20261130 18:59:59
 "EGSS-abdelrhmanshehata",61232248,"SS:Service warning - absence",20261127 18:55:00
 "EGSS-abdelrhmanshehata",61410343,"SS:Service warning - absence",20261127 18:55:00
 "EGSS-abdelrhmanshehata",62513206,"SS:Service warning - absence",20261127 18:55:00
@@ -668,7 +670,6 @@ Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-titooooo",61607876,"SS:Service warning - absence",20261127 18:55:00
 "EGSS-titooooo",64160373,"SS:Service warning - absence",20261127 18:55:00
 "EGSS-titooooo",64813319,"Round 3 Habit Cultivation (1st Unit Assessment)",20261127 18:55:00
-"EGSS-titooooo",64898776,"Round 3 Habit Cultivation (1st Unit Assessment)",20261127 18:55:00
 "EGSS-titooooo",58594437,"SS:Service warning - absence",20261128 18:55:00
 "EGSS-titooooo",58739251,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
 "EGSS-titooooo",61433726,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
@@ -724,14 +725,11 @@ Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-marwaahmed",59198658,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",59281176,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",59327819,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",59739842,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",59812488,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",60144049,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",60433142,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",60620322,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",60797757,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",60862386,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",61195255,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",61396633,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",61716413,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",62897769,"SS：Service warning - class interruption",20261130 23:59:59
@@ -740,25 +738,18 @@ Representative,Student_ID,Task_Name,Expiration_Time
 "EGSS-marwaahmed",63086573,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",63086574,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",63509698,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",63510284,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",63521092,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",63521613,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",63523714,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",63526954,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",63530434,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",63560171,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",63561259,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",64080013,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",64188982,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 "EGSS-marwaahmed",64202381,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 "EGSS-marwaahmed",64301357,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",64324541,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
 "EGSS-marwaahmed",64329863,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
-"EGSS-marwaahmed",64362618,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-marwaahmed",64394317,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
-"EGSS-marwaahmed",64436458,"SS：Service warning - class interruption",20261130 23:59:59
-"EGSS-marwaahmed",64436458,"Round 5 Learning Path Planning-Upgrade outsidepool",20261130 23:59:59
-"EGSS-marwaahmed",64685222,"SS：Service warning - class interruption",20261130 23:59:59
 "EGSS-mohamedha",58615813,"Round 2  Trust Enhancement (First Class Follow-up)",20261127 18:55:00
 "EGSS-mohamedha",60218569,"SS:Service warning - absence",20261127 18:55:00
 "EGSS-mohamedha",58617055,"Round 5 Learning Path Planning-Upgrade insidepool",20261128 18:55:00
