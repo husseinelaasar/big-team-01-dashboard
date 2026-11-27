@@ -3592,31 +3592,21 @@ function renderAgentBadge(agentName) {
 
       const countAll = master.length;
       const countBT01 = master.filter(x => x.is_bt01_team).length;
-      const countTransferred = master.filter(x => x.sector_status && x.sector_status.includes('Transferred')).length;
-      const countPartial = master.filter(x => !x.is_fully_paid).length;
-      const countFull = master.filter(x => x.is_fully_paid).length;
+      const countTransferred = master.filter(x => !x.is_bt01_team).length;
 
       container.innerHTML = `
-        <span style="font-size: 0.75rem; font-weight: 800; color: #cbd5e1; margin-left: 6px;">تصفية العربون:</span>
+        <span style="font-size: 0.75rem; font-weight: 800; color: #cbd5e1; margin-left: 6px;">تصفية عملاء العربون المستحق:</span>
         <button type="button" class="risk-filter-pill ${currentDepositFilter === 'ALL' ? 'active active-all' : ''}" onclick="filterDepositTab('ALL')">
-          <span>${t.pill_all}</span>
+          <span>الكل المستحق (${countAll})</span>
           <span class="count-tag">${countAll}</span>
         </button>
         <button type="button" class="risk-filter-pill ${currentDepositFilter === 'BT01' ? 'active active-safe' : ''}" onclick="filterDepositTab('BT01')">
-          <span>⭐ عملاء قطاعنا (Big Team 01)</span>
+          <span>⭐ عملاء حاليون بالقطاع</span>
           <span class="count-tag" style="background: rgba(16, 185, 129, 0.35); color: #34d399;">${countBT01}</span>
         </button>
         <button type="button" class="risk-filter-pill ${currentDepositFilter === 'TRANSFERRED' ? 'active active-critical' : ''}" onclick="filterDepositTab('TRANSFERRED')">
-          <span>🚨 عملاء محولون (استرداد)</span>
+          <span>🚨 عملاء محولون (استرداد ومتبقي)</span>
           <span class="count-tag" style="background: rgba(239, 68, 68, 0.35); color: #f87171;">${countTransferred}</span>
-        </button>
-        <button type="button" class="risk-filter-pill ${currentDepositFilter === 'PARTIAL' ? 'active active-warning' : ''}" onclick="filterDepositTab('PARTIAL')">
-          <span>⏳ عربون جزئي (قيد التحصيل)</span>
-          <span class="count-tag" style="background: rgba(245, 158, 11, 0.35); color: #fbbf24;">${countPartial}</span>
-        </button>
-        <button type="button" class="risk-filter-pill ${currentDepositFilter === 'FULL' ? 'active active-all' : ''}" onclick="filterDepositTab('FULL')">
-          <span>✅ مسدد بالكامل</span>
-          <span class="count-tag">${countFull}</span>
         </button>
       `;
     }
@@ -3966,14 +3956,15 @@ function renderAgentBadge(agentName) {
           <th style="width: 35px;">${t.th_num}</th>
           <th style="width: 90px;">${t.th_student_id}</th>
           <th style="min-width: 150px; text-align: center;">${t.th_rep_notes}</th>
-          <th style="min-width: 140px; text-align: center;">${t.th_deposit_status}</th>
-          <th>المحصل وفريق المبيعات</th>
-          <th style="text-align: center;">إجمالي الباقة 💵</th>
+          <th style="min-width: 135px; text-align: center;">${t.th_deposit_status}</th>
+          <th style="min-width: 230px; text-align: right;">ارتباط الطالب بـ Big Team 01 (المستشار السابق / الحالي)</th>
+          <th style="text-align: center; color: #f59e0b; cursor: pointer;" onclick="toggleSorting('bal_due')">المبلغ المتبقي للتحصيل ⏳</th>
+          <th style="text-align: center; color: #34d399; cursor: pointer;" onclick="toggleSorting('paid')">العربون المدفوع 💵</th>
+          <th style="text-align: center; color: #38bdf8;">إجمالي الباقة 📦</th>
+          <th>المحصل الحالي وفريق المبيعات</th>
           <th style="text-align: center;">تاريخ أول عربون 📅</th>
           <th style="text-align: center;">تصنيف الطالب</th>
           <th style="text-align: center;">الحصص المتبقية</th>
-          <th>علاقة السجل بقطاعنا</th>
-          <th style="cursor: pointer; color: #34d399; text-align: center; width: 75px;" onclick="toggleSorting('points')">${t.th_points} ${sortField==='points'?(sortAscending?'↑':'↓'):''}</th>
           <th style="text-align: center; min-width: 200px;">${t.th_sop_actions}</th>
         `;
       }
@@ -4195,16 +4186,31 @@ function renderAgentBadge(agentName) {
           `;
         } else if (currentTab === 'deposit') {
           const dep = item.deposit_info || item;
-          const isTransferred = Boolean(dep.is_transferred_from_bt01 || (item.sector_status && item.sector_status.includes('Transferred')));
-          const isBt01 = Boolean(item.is_bt01_team);
+          const isTransferred = !item.is_bt01_team;
+          const prevNames = (item.previous_bt01_reps && item.previous_bt01_reps.length > 0) ? item.previous_bt01_reps.join(', ') : '';
 
-          let relationBadge = '';
-          if (isBt01) {
-            relationBadge = `<span class="badge-pill" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #34d399; font-weight: 800;">⭐ عميل حالي بقطاعنا</span>`;
-          } else if (isTransferred) {
-            relationBadge = `<span class="badge-pill badge-critical" style="background: rgba(239, 68, 68, 0.25); border: 1px solid #ef4444; color: #f87171; font-weight: 800;">🚨 محول من قطاعنا (استرداد)</span>`;
+          let historyBadge = '';
+          if (isTransferred) {
+            historyBadge = `
+              <div style="background: rgba(239, 68, 68, 0.16); border: 1px solid rgba(239, 68, 68, 0.5); border-radius: 8px; padding: 5px 9px; text-align: right;">
+                <div style="font-weight: 800; color: #fca5a5; font-size: 0.77rem; display: flex; align-items: center; gap: 4px;">
+                  <span>🚨</span> <span>كان سابقاً مع: <strong style="color: #fff; text-decoration: underline;">${prevNames || 'EGSS-amrsafwat'}</strong></span>
+                </div>
+                <div style="font-size: 0.69rem; color: #f87171; margin-top: 2px;">محول بالخارج إلى: <strong>${item.user_name || item.collector}</strong> (${item.group_name || item.current_team})</div>
+                <div style="font-size: 0.68rem; color: #fbbf24; font-weight: 700; margin-top: 1px;">🎯 مؤهل للاسترداد الفوري لتحصيل المتبقي ($${item.balance_due_usd})</div>
+              </div>
+            `;
           } else {
-            relationBadge = `<span style="font-size: 0.73rem; color: #64748b;">فرق أخرى بالشرق الأوسط</span>`;
+            const hasDifferentPrev = prevNames && prevNames !== item.user_name;
+            historyBadge = `
+              <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.45); border-radius: 8px; padding: 5px 9px; text-align: right;">
+                <div style="font-weight: 800; color: #34d399; font-size: 0.77rem; display: flex; align-items: center; gap: 4px;">
+                  <span>⭐</span> <span>حالي بقطاعنا مع: <strong style="color: #fff;">${item.user_name || item.collector}</strong></span>
+                </div>
+                <div style="font-size: 0.69rem; color: #94a3b8; margin-top: 2px;">الفريق: ${item.group_name || item.current_team}</div>
+                ${hasDifferentPrev ? `<div style="font-size: 0.68rem; color: #38bdf8; font-weight: 700;">سابقاً مع: ${prevNames}</div>` : `<div style="font-size: 0.68rem; color: #64748b;">مسجل ومستمر بقطاعنا</div>`}
+              </div>
+            `;
           }
 
           rowsHtml += `
@@ -4221,18 +4227,19 @@ function renderAgentBadge(agentName) {
               </td>
               ${renderStudentNotesCell(item.student_id, item.user_name || item.current_agent)}
               <td style="white-space: nowrap; text-align: center;">${renderDepositBadge(item)}</td>
+              <td style="white-space: normal; min-width: 230px;">${historyBadge}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #f59e0b; font-size: 0.88rem;">$${Number(item.balance_due_usd || 0).toLocaleString()}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #34d399;">$${Number(item.total_deposit_paid || 0).toLocaleString()}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #38bdf8;">$${Number(item.package_total_usd || 0).toLocaleString()}</td>
               <td style="white-space: nowrap;">
                 <div style="display: flex; flex-direction: column; gap: 2px;">
                   <div>${renderAgentBadge(item.user_name || item.current_agent)}</div>
                   <span style="font-size: 0.72rem; color: #94a3b8;">${item.group_name || item.current_team || '—'}</span>
                 </div>
               </td>
-              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #38bdf8;">$${Number(item.package_total_usd || 0).toLocaleString()}</td>
               <td style="white-space: nowrap; text-align: center; font-size: 0.76rem; font-family: 'JetBrains Mono', monospace; color: #94a3b8;">${item.first_deposit_date || '—'}</td>
               <td style="white-space: nowrap; text-align: center;"><span style="font-size: 0.74rem; background: rgba(255,255,255,0.06); padding: 2px 7px; border-radius: 4px;">${item.student_cohort || '—'}</span></td>
               <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #cbd5e1;">${item.remaining_lessons ?? '—'}</td>
-              <td style="white-space: nowrap;">${relationBadge}</td>
-              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #34d399;">${item.current_points ?? 0}</td>
               <td style="text-align: center;">
                 <div class="btn-action-cluster">
                   <button type="button" class="btn-ticket-mini" onclick="copyDepositDetailsTicket('${item.student_id}')" title="نسخ تذكرة بيانات العربون">
