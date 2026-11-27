@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261127_114815">
+  <link rel="stylesheet" href="styles.css?v=20261127_132515">
   <style>
     /* Golden Active Filter & Interactive Sort Styling */
     .filter-active-gold {
@@ -328,13 +328,13 @@
           </div>
           <div>
             <div class="sprint-hud-title">NOVEMBER SPRINT MISSION CONTROL</div>
-            <div class="sprint-hud-sub">Big Team 01 Target: <strong>$173,541 Cash</strong> | <strong>48 Orders MTD</strong></div>
+            <div class="sprint-hud-sub">Big Team 01 Target: <strong>$173,541 Cash</strong> | <strong>130 Orders Achieved (Target: 204)</strong></div>
           </div>
         </div>
 
         <div class="sprint-countdown-timer">
           <div class="time-unit-box">
-            <span class="time-digit" id="hudDaysLeft">06</span>
+            <span class="time-digit" id="hudDaysLeft">03</span>
             <span class="time-label">DAYS</span>
           </div>
           <span class="time-separator">:</span>
@@ -356,8 +356,8 @@
 
         <div class="sprint-velocity-metric">
           <div class="velocity-label">DAILY RUN RATE NEEDED</div>
-          <div class="velocity-value" id="hudDailyNeeded">$57,847 <span>/day</span></div>
-          <div class="velocity-badge">ON TRACK ?</div>
+          <div class="velocity-value" id="hudDailyNeeded">$16,762 <span>/day</span></div>
+          <div class="velocity-badge">ON TRACK 🚀</div>
         </div>
       </div>
 
@@ -373,25 +373,26 @@
             </div>
           </div>
           <div class="slider-badge-group">
-            <span class="slider-active-day-badge live" id="sliderDayLabel">?? Live Today: <strong>Day 16</strong> (41% BM)</span>
-            <button type="button" class="btn-reset-slider" onclick="resetDateSlider()" id="btnResetSlider" title="Snap back to today (Day 16)">
-              ? Today (Live)
+            <span class="slider-active-day-badge live" id="sliderDayLabel">🎯 Live Today: <strong>Day 27</strong> (80% BM)</span>
+            <button type="button" class="btn-reset-slider" onclick="resetDateSlider()" id="btnResetSlider" title="Snap back to today (Day 27)">
+              📍 Today (Live)
             </button>
           </div>
         </div>
         <div class="slider-control-row">
           <span class="slider-bound">Day 1</span>
-          <input type="range" min="1" max="30" value="16" id="datePacingSlider" class="timeline-slider" oninput="onDateSliderChange(this.value)">
+          <input type="range" min="1" max="30" value="27" id="datePacingSlider" class="timeline-slider" oninput="onDateSliderChange(this.value)">
           <span class="slider-bound">Day 30</span>
         </div>
         <div class="slider-ticks-row">
           <span>D1 (5%)</span>
           <span>D5 (17%)</span>
           <span>D10 (26%)</span>
-          <span class="active-tick">D16 (41%)</span>
-          <span>D20 (51%)</span>
-          <span>D25 (60%)</span>
-          <span>D30 (96%)</span>
+          <span>D16 (41%)</span>
+          <span>D20 (56%)</span>
+          <span>D25 (68%)</span>
+          <span class="active-tick">D27 (80%)</span>
+          <span>D30 (100%)</span>
         </div>
       </div>
 
@@ -402,10 +403,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <div class="kpi-label">Total Cash Revenue (MTD)</div>
-          <div class="kpi-value" id="totalCash">$104,382</div>
-          <div class="kpi-sub" id="cashTarget">Target: $173,541 | Projected: id="cashTarget">Target: $173,541 | Projected: id="cashTarget">Target: $173,541 | Projected: id="cashTarget">Target: $173,541 | Projected: id="cashTarget">Target: $173,541 | Projected: id="cashTarget">Target: $173,541 | Projected: id="cashTarget">Target: $173,541 | Projected: id="cashTarget">Target: $173,541 | Projected: id="cashTarget">Target: $173,541 | Projected: $125,258</div></div></div></div></div></div></div></div></div>
-          <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 60.2%;"></div></div>
-          <div class="kpi-pct" id="cashPct">60.2% Achieved</div>
+          <div class="kpi-value" id="totalCash">$123,256</div>
+          <div class="kpi-sub" id="cashTarget">Target: $173,541 | Projected: $136,951</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="cashBar" style="width: 73.3%;"></div></div>
+          <div class="kpi-pct" id="cashPct">71% Achieved</div>
         </div>
 
         <!-- 2. Total Contracts & Breakdown -->
@@ -414,10 +415,10 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
           <div class="kpi-label">Total Contracts (Orders)</div>
-          <div class="kpi-value" id="totalContracts">108</div>
-          <div class="kpi-sub" id="contractsSub">Normal: 231 | Upgrade M2: 23</div>
-          <div class="kpi-progress"><div class="kpi-bar" id="contractsBar" style="width: 0%;"></div></div>
-          <div class="kpi-pct" id="contractsPct">Avg: $976 / contract</div>
+          <div class="kpi-value" id="totalContracts">130</div>
+          <div class="kpi-sub" id="contractsSub">Target: 204 Contracts | Normal: 107 | Upgrade M2: 23</div>
+          <div class="kpi-progress"><div class="kpi-bar" id="contractsBar" style="width: 63.7%;"></div></div>
+          <div class="kpi-pct" id="contractsPct">63.7% Achieved | Avg: $979 / contract</div>
         </div>
 
         <!-- 3. Target Achievement & Daily Benchmark Pacing -->
@@ -426,9 +427,9 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div class="kpi-label">Day 27 Target Benchmark</div>
-          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">60.2%</div>
+          <div class="kpi-value" id="achPct" style="font-family: var(--font-mono); color: #fff;">71%</div>
           <div class="kpi-sub" id="achSub">Day 27 Benchmark: 80% | Target: $173,541</div>
-          <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 60.2%; background: linear-gradient(90deg, #6366f1, #38bdf8);"></div></div>
+          <div class="kpi-progress"><div class="kpi-bar" id="achBar" style="width: 73.3%; background: linear-gradient(90deg, #6366f1, #38bdf8);"></div></div>
           <div class="kpi-pct" id="achDays" style="color: #38bdf8; font-weight: 600;">Day 27 of 30 | Expected Target Pace: 80% (3 Days Left)</div>
         </div>
 
@@ -2637,7 +2638,7 @@
     });
   </script>
   <script src="leads/uncovered_leads_data.js?v=20261125_184500" defer></script>
-  <script src="dashboard.js?v=20261127_114815" defer></script>
+  <script src="dashboard.js?v=20261127_132515" defer></script>
   <script src="dashboard_ai_command_suite.js?v=20261122_235500" defer></script>
   <script src="dashboard_i18n.js?v=20261122_235500" defer></script>
   <script src="dashboard_voice_assistant.js?v=20261122_235500" defer></script>
@@ -2738,6 +2739,9 @@
   </script>
 </body>
 </html>
+
+
+
 
 
 
