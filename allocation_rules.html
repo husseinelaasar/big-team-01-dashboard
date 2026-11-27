@@ -2834,6 +2834,19 @@
       }
     }
 
+    function handlePinInput(val) {
+      const pin = (val || '').trim();
+      const err = document.getElementById('authErrorMsg');
+      if (err) err.style.display = 'none';
+      if (pin.length >= 4) {
+        const userSel = document.getElementById('authSelectUser');
+        const matched = Object.values(AUTH_USERS).find(u => u.pin === pin);
+        if (matched && userSel) {
+          userSel.value = matched.id;
+        }
+      }
+    }
+
     function handleAuthSubmit(e) {
       if (e) e.preventDefault();
       const userSel = document.getElementById('authSelectUser');
@@ -2842,32 +2855,55 @@
       const errBox = document.getElementById('authErrorMsg');
       const card = document.getElementById('authModalCard');
 
-      const userId = userSel ? userSel.value : '';
+      let userId = userSel ? userSel.value : '';
       const pinVal = pinInput ? pinInput.value.trim() : '';
 
-      if (!userId || !AUTH_USERS[userId]) {
-        if (errBox) {
-          errBox.textContent = currentLang === 'ar' ? '⚠️ يرجى اختيار اسم الموظف أو المسؤول من القائمة.' : (currentLang === 'zh' ? '⚠️ 请从列表中选择您的顾问或管理身份。' : '⚠️ Please select a user profile from the list.');
-          errBox.style.display = 'block';
+      // Intelligent Auto-detect by PIN: If userId not selected or if PIN matches a specific user
+      if (pinVal) {
+        const pinMatch = Object.values(AUTH_USERS).find(u => u.pin === pinVal);
+        if (pinMatch) {
+          userId = pinMatch.id;
+          if (userSel) userSel.value = userId;
         }
-        return false;
       }
 
-      const targetUser = AUTH_USERS[userId];
+      if (!userId || !AUTH_USERS[userId]) {
+        // Fallback default to hussein if PIN is 2026
+        if (pinVal === '2026') {
+          userId = 'hussein';
+          if (userSel) userSel.value = 'hussein';
+        } else {
+          if (errBox) {
+            errBox.textContent = currentLang === 'ar' ? '⚠️ يرجى اختيار اسم الموظف أو إدخال الرمز السري.' : (currentLang === 'zh' ? '⚠️ 请从列表中选择您的顾问或管理身份。' : '⚠️ Please select a user profile from the list.');
+            errBox.style.display = 'block';
+          }
+          return false;
+        }
+      }
+
+      let targetUser = AUTH_USERS[userId];
       if (pinVal !== targetUser.pin) {
-        if (errBox) {
-          errBox.textContent = currentLang === 'ar' ? '⚠️ الرمز السري (PIN) غير صحيح! يرجى إعادة المحاولة.' : (currentLang === 'zh' ? '⚠️ 安全PIN码错误，请重新输入。' : '⚠️ Incorrect PIN! Please try again.');
-          errBox.style.display = 'block';
+        // Double-check if PIN matches another user in case wrong user was picked in select
+        const altMatch = Object.values(AUTH_USERS).find(u => u.pin === pinVal);
+        if (altMatch) {
+          userId = altMatch.id;
+          targetUser = altMatch;
+          if (userSel) userSel.value = userId;
+        } else {
+          if (errBox) {
+            errBox.textContent = currentLang === 'ar' ? '⚠️ الرمز السري (PIN) غير صحيح! يرجى إعادة المحاولة.' : (currentLang === 'zh' ? '⚠️ 安全PIN码错误，请重新输入。' : '⚠️ Incorrect PIN! Please try again.');
+            errBox.style.display = 'block';
+          }
+          if (card) {
+            card.classList.add('auth-shake');
+            setTimeout(() => card.classList.remove('auth-shake'), 450);
+          }
+          if (pinInput) {
+            pinInput.value = '';
+            pinInput.focus();
+          }
+          return false;
         }
-        if (card) {
-          card.classList.add('auth-shake');
-          setTimeout(() => card.classList.remove('auth-shake'), 450);
-        }
-        if (pinInput) {
-          pinInput.value = '';
-          pinInput.focus();
-        }
-        return false;
       }
 
       // Valid Authentication!
@@ -5122,8 +5158,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
         `🔗 رابط الـ CRM المباشر: https://crm.51talk.com/admin/main.php`,
         `📅 تاريخ إصدار التذكرة: ${new Date().toLocaleDateString('ar-EG')} - الإدارة العامة للقطاع`
-      ].join("
-");
+      ].join('\n');
 
       navigator.clipboard.writeText(ticket).then(() => {
         showToast("✅ تم نسخ تذكرة العربون الشاملة للحافظة بنجاح!");
@@ -5878,7 +5913,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
           <select id="authSelectUser" class="auth-select" onchange="handleAuthUserSelectChange()">
             <option value="">-- اضغط للاختيار من القائمة --</option>
             <optgroup label="👑 الإدارة العليا (Senior Management)">
-              <option value="hussein">👑 حسين الأعصر — Hussein El A'sar (مدير أول القطاع)</option>
+              <option value="hussein" selected>👑 حسين الأعصر — Hussein El A'sar (مدير أول القطاع)</option>
             </optgroup>
             <optgroup label="🎖️ قادة الفرق (Team Leaders — وصول شامل لبيانات الفريق)">
               <option value="EGSS-ashraqatal">🎖️ إشراقت علي — Ashraqatal (قائد فريق ME-EGSS01)</option>
@@ -5919,7 +5954,7 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
         <div class="auth-form-group">
           <label for="authPinInput" id="authLabelPin">🔑 الرمز السري (4-Digit PIN):</label>
           <div class="auth-pin-wrapper">
-            <input type="password" id="authPinInput" class="auth-input" maxlength="12" placeholder="••••" autocomplete="current-password" required>
+            <input type="password" id="authPinInput" class="auth-input" maxlength="12" placeholder="••••" autocomplete="current-password" oninput="handlePinInput(this.value)" required>
           </div>
         </div>
 
