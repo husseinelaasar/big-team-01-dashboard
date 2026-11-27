@@ -398,6 +398,113 @@
       border-color: #10b981;
       color: #34d399;
     }
+    .risk-filter-pill.active.active-deposit {
+      background: rgba(245, 158, 11, 0.25) !important;
+      border-color: #f59e0b !important;
+      color: #fcd34d !important;
+    }
+
+    /* Deposit Badges & Modal Styling */
+    .deposit-badge {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 3px 8px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+      min-width: 110px;
+    }
+    .deposit-badge:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .deposit-paid-full {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #34d399;
+    }
+    .deposit-partial {
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      color: #fbbf24;
+    }
+    .deposit-alert-ext {
+      background: rgba(239, 68, 68, 0.16);
+      border: 1px solid rgba(239, 68, 68, 0.55);
+      color: #f87171;
+    }
+    .deposit-title {
+      font-size: 0.73rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .deposit-sub {
+      font-size: 0.69rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+    }
+    .dep-due-tag {
+      color: #f87171;
+    }
+    .deposit-date {
+      font-size: 0.65rem;
+      color: #94a3b8;
+    }
+    .deposit-collector {
+      font-size: 0.65rem;
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+
+    .dep-modal-status-box {
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .dep-modal-status-box.status-full {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      color: #34d399;
+    }
+    .dep-modal-status-box.status-partial {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      color: #fbbf24;
+    }
+    .dep-modal-status-box.status-alert {
+      background: rgba(239, 68, 68, 0.18);
+      border: 1px solid rgba(239, 68, 68, 0.55);
+      color: #f87171;
+    }
+
+    .dep-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .dep-detail-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+    .dep-detail-item .lbl {
+      font-size: 0.70rem;
+      color: #94a3b8;
+      margin-bottom: 2px;
+    }
+    .dep-detail-item .val {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #f8fafc;
+      font-family: 'JetBrains Mono', monospace;
+    }
 
     /* Table Container & Scrollbar */
     .table-card {
@@ -1858,6 +1965,15 @@
         <div class="value" style="color: #c084fc;" id="kpiProtectedCount">122</div>
         <div class="desc" id="kpiProtectedDesc">طلاب تم تجديدهم أو لديهم تواصل فعال مسجل</div>
       </div>
+
+      <div class="metric-card-exec" style="border-top: 3px solid #f59e0b;" onclick="setPortalTab('deposit');">
+        <div class="top-row">
+          <span class="title" id="kpiDepositTitle">عملاء العربون (Big Team 01)</span>
+          <span class="badge-pill badge-warning">💰 Deposits</span>
+        </div>
+        <div class="value" style="color: #fbbf24;" id="kpiDepositCount">18 عميل</div>
+        <div class="desc" id="kpiDepositDesc">$14,015 محصل | $9,389 متبقي تحصيله + 1 استرداد</div>
+      </div>
     </div>
 
     <!-- Main Tab Navigation -->
@@ -1878,6 +1994,12 @@
         <span style="font-size: 1.1rem;">👨‍👩‍👧‍👦</span>
         <span id="tabTextFamily">منظومة العائلات و Family Back (الشرق الأوسط بالكامل)</span>
         <span class="pill-count-tag" id="tabBadgeFamily">195</span>
+      </button>
+
+      <button type="button" class="tab-btn" id="tabBtnDeposit" onclick="setPortalTab('deposit')">
+        <span style="font-size: 1.1rem;">💰</span>
+        <span id="tabTextDeposit">رادار عملاء العربون الشامل (Middle East Deposits)</span>
+        <span class="pill-count-tag" id="tabBadgeDeposit" style="background: rgba(245, 158, 11, 0.35); color: #fde047;">268</span>
       </button>
     </div>
 
@@ -2194,6 +2316,11 @@
         th_action_reclaim: "الإجراء الموصى به",
         th_action_defense: "الإجراء المطلوب فوراً",
         th_rep_notes: "ملاحظات الموظف",
+        th_deposit_status: "حالة العربون والمدفوعات 💰",
+        pill_deposit_leads: "عملاء العربون",
+        tab_deposit: "رادار عملاء العربون الشامل (Middle East Deposits)",
+        kpi_deposit_title: "عملاء العربون (Big Team 01)",
+        kpi_deposit_desc: "$14,015 محصل | $9,389 متبقي تحصيله + 1 استرداد",
         btn_add_note: "إضافة ملاحظة",
         add_note_title: "تدوين ملاحظة متابعة جديدة للطالب",
         view_notes_title: "عرض سجل ملاحظات ومتابعات الطالب",
@@ -2324,6 +2451,11 @@
         th_action_reclaim: "Recommended Action",
         th_action_defense: "Immediate Action Required",
         th_rep_notes: "Employee Notes",
+        th_deposit_status: "Deposit & Payment 💰",
+        pill_deposit_leads: "Deposit Leads",
+        tab_deposit: "Master Deposit Radar (Middle East)",
+        kpi_deposit_title: "Deposit Leads (Big Team 01)",
+        kpi_deposit_desc: "$14,015 Collected | $9,389 Balance Due + 1 Reclaim",
         btn_add_note: "+ Add Note",
         add_note_title: "Log a new follow-up note for this student",
         view_notes_title: "View student follow-up notes history",
@@ -2454,6 +2586,11 @@
         th_action_reclaim: "建议执行操作",
         th_action_defense: "立即要求操作",
         th_rep_notes: "顾问跟进备注",
+        th_deposit_status: "订金及支付状态 💰",
+        pill_deposit_leads: "订金学员",
+        tab_deposit: "全中东订金总看板 (Middle East Deposits)",
+        kpi_deposit_title: "订金学员 (Big Team 01)",
+        kpi_deposit_desc: "已收 $14,015 美元 | 待收 $9,389 美元 + 1 回收机会",
         btn_add_note: "+ 添加备注",
         add_note_title: "为该学员记录新的跟进备注",
         view_notes_title: "查看学员历史跟进记录",
@@ -2519,6 +2656,7 @@
       if (currentTab === 'reclaim') renderReclaimFilters();
       else if (currentTab === 'defense') renderDefenseRiskFilters();
       else if (currentTab === 'family') renderFamilyFilters();
+      else if (currentTab === 'deposit') renderDepositFilters();
 
       initSelectors();
       renderTable();
@@ -2559,10 +2697,13 @@
       if (document.getElementById('kpiFamilyDesc')) document.getElementById('kpiFamilyDesc').textContent = t.kpi_family_desc;
       if (document.getElementById('kpiProtectedTitle')) document.getElementById('kpiProtectedTitle').textContent = t.kpi_protected_title;
       if (document.getElementById('kpiProtectedDesc')) document.getElementById('kpiProtectedDesc').textContent = t.kpi_protected_desc;
+      if (document.getElementById('kpiDepositTitle')) document.getElementById('kpiDepositTitle').textContent = t.kpi_deposit_title;
+      if (document.getElementById('kpiDepositDesc')) document.getElementById('kpiDepositDesc').textContent = t.kpi_deposit_desc;
 
       if (document.getElementById('tabTextReclaim')) document.getElementById('tabTextReclaim').textContent = t.tab_reclaim;
       if (document.getElementById('tabTextDefense')) document.getElementById('tabTextDefense').textContent = t.tab_defense;
       if (document.getElementById('tabTextFamily')) document.getElementById('tabTextFamily').textContent = t.tab_family;
+      if (document.getElementById('tabTextDeposit')) document.getElementById('tabTextDeposit').textContent = t.tab_deposit;
 
       if (document.getElementById('searchLabelText')) document.getElementById('searchLabelText').textContent = t.search_label;
       if (document.getElementById('filterSearch')) document.getElementById('filterSearch').placeholder = t.search_placeholder;
@@ -3135,9 +3276,16 @@ function renderAgentBadge(agentName) {
       document.getElementById('kpiFamilyCount').textContent = stats.split_families_total || 42;
       document.getElementById('kpiProtectedCount').textContent = (stats.reclaim_protected_renewed || 37) + (stats.reclaim_protected_contact || 85);
 
+      const kpiDepEl = document.getElementById('kpiDepositCount');
+      if (kpiDepEl) kpiDepEl.textContent = `${stats.deposit_bt01_leads || 18} عميل`;
+      const kpiDepDesc = document.getElementById('kpiDepositDesc');
+      if (kpiDepDesc) kpiDepDesc.textContent = `$${(stats.deposit_bt01_paid_usd || 14015).toLocaleString()} محصل | $${(stats.deposit_bt01_due_usd || 9389).toLocaleString()} متبقي`;
+
       document.getElementById('tabBadgeReclaim').textContent = stats.reclaim_total_opportunities || 145;
       document.getElementById('tabBadgeDefense').textContent = (stats.total_uncovered_leads || 3990).toLocaleString();
       document.getElementById('tabBadgeFamily').textContent = stats.split_families_total || 42;
+      const tabBadgeDep = document.getElementById('tabBadgeDeposit');
+      if (tabBadgeDep) tabBadgeDep.textContent = stats.deposit_total_me_leads || 268;
     }
 
     // Dynamic Rep Dropdown based on selected Team
@@ -3373,13 +3521,13 @@ function renderAgentBadge(agentName) {
       currentTab = tabName;
       currentPage = 1;
 
-      ['reclaim', 'defense', 'family'].forEach(t => {
+      ['reclaim', 'defense', 'family', 'deposit'].forEach(t => {
         const btn = document.getElementById(`tabBtn${t.charAt(0).toUpperCase() + t.slice(1)}`);
-        btn.classList.remove('active', 'active-reclaim', 'active-defense', 'active-family');
+        if (btn) btn.classList.remove('active', 'active-reclaim', 'active-defense', 'active-family', 'active-deposit');
       });
 
       const activeBtn = document.getElementById(`tabBtn${tabName.charAt(0).toUpperCase() + tabName.slice(1)}`);
-      activeBtn.classList.add('active', `active-${tabName}`);
+      if (activeBtn) activeBtn.classList.add('active', `active-${tabName}`);
 
       const data = window.ALLOCATION_RULES_DATA;
       if (tabName === 'reclaim') {
@@ -3391,8 +3539,56 @@ function renderAgentBadge(agentName) {
       } else if (tabName === 'family') {
         masterList = data.split_families || [];
         renderFamilyFilters();
+      } else if (tabName === 'deposit') {
+        masterList = data.deposit_master_leads || [];
+        renderDepositFilters();
       }
 
+      applyFiltersAndRender();
+    }
+
+    let currentDepositFilter = 'ALL';
+    function renderDepositFilters() {
+      const container = document.getElementById('dynamicFilterPillsCluster');
+      const data = window.ALLOCATION_RULES_DATA;
+      const master = data.deposit_master_leads || [];
+      const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+
+      const countAll = master.length;
+      const countBT01 = master.filter(x => x.is_bt01_team).length;
+      const countTransferred = master.filter(x => x.sector_status && x.sector_status.includes('Transferred')).length;
+      const countPartial = master.filter(x => !x.is_fully_paid).length;
+      const countFull = master.filter(x => x.is_fully_paid).length;
+
+      container.innerHTML = `
+        <span style="font-size: 0.75rem; font-weight: 800; color: #cbd5e1; margin-left: 6px;">تصفية العربون:</span>
+        <button type="button" class="risk-filter-pill ${currentDepositFilter === 'ALL' ? 'active active-all' : ''}" onclick="filterDepositTab('ALL')">
+          <span>${t.pill_all}</span>
+          <span class="count-tag">${countAll}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentDepositFilter === 'BT01' ? 'active active-safe' : ''}" onclick="filterDepositTab('BT01')">
+          <span>⭐ عملاء قطاعنا (Big Team 01)</span>
+          <span class="count-tag" style="background: rgba(16, 185, 129, 0.35); color: #34d399;">${countBT01}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentDepositFilter === 'TRANSFERRED' ? 'active active-critical' : ''}" onclick="filterDepositTab('TRANSFERRED')">
+          <span>🚨 عملاء محولون (استرداد)</span>
+          <span class="count-tag" style="background: rgba(239, 68, 68, 0.35); color: #f87171;">${countTransferred}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentDepositFilter === 'PARTIAL' ? 'active active-warning' : ''}" onclick="filterDepositTab('PARTIAL')">
+          <span>⏳ عربون جزئي (قيد التحصيل)</span>
+          <span class="count-tag" style="background: rgba(245, 158, 11, 0.35); color: #fbbf24;">${countPartial}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentDepositFilter === 'FULL' ? 'active active-all' : ''}" onclick="filterDepositTab('FULL')">
+          <span>✅ مسدد بالكامل</span>
+          <span class="count-tag">${countFull}</span>
+        </button>
+      `;
+    }
+
+    function filterDepositTab(filter) {
+      currentDepositFilter = filter;
+      renderDepositFilters();
+      currentPage = 1;
       applyFiltersAndRender();
     }
 
@@ -3400,13 +3596,19 @@ function renderAgentBadge(agentName) {
     function renderDefenseRiskFilters() {
       const container = document.getElementById('dynamicFilterPillsCluster');
       const stats = window.ALLOCATION_RULES_DATA.stats || {};
+      const master = window.ALLOCATION_RULES_DATA.defense_uncovered || [];
       const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
+      const countDeposit = master.filter(x => x.has_deposit).length;
 
       container.innerHTML = `
         <span style="font-size: 0.75rem; font-weight: 800; color: #cbd5e1; margin-left: 6px;">${t.defense_cluster_label}</span>
         <button type="button" class="risk-filter-pill ${currentRiskFilter === 'ALL' ? 'active active-all' : ''}" onclick="filterByRisk('ALL')">
           <span>${t.pill_all}</span>
-          <span class="count-tag">${(stats.total_uncovered_leads || 3990).toLocaleString()}</span>
+          <span class="count-tag">${(stats.total_uncovered_leads || master.length).toLocaleString()}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentRiskFilter === 'deposit' ? 'active active-deposit' : ''}" onclick="filterByRisk('deposit')">
+          <span>💰 ${t.pill_deposit_leads}</span>
+          <span class="count-tag" style="background: rgba(245, 158, 11, 0.35); color: #fde047;">${countDeposit}</span>
         </button>
         <button type="button" class="risk-filter-pill ${currentRiskFilter === 'critical' ? 'active active-critical' : ''}" onclick="filterByRisk('critical')">
           <span>${t.pill_critical_risk}</span>
@@ -3439,6 +3641,7 @@ function renderAgentBadge(agentName) {
       const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
 
       const countAll = master.length;
+      const countDeposit = master.filter(x => x.has_deposit).length;
       const countOverdue = master.filter(x => x.days_remaining_sla !== undefined && x.days_remaining_sla !== null && x.days_remaining_sla <= 0).length;
       const countDue1_3 = master.filter(x => x.days_remaining_sla !== undefined && x.days_remaining_sla !== null && x.days_remaining_sla >= 1 && x.days_remaining_sla <= 3).length;
       const countDue4Plus = master.filter(x => x.days_remaining_sla !== undefined && x.days_remaining_sla !== null && x.days_remaining_sla >= 4).length;
@@ -3449,6 +3652,10 @@ function renderAgentBadge(agentName) {
         <button type="button" class="risk-filter-pill ${currentReclaimStatus === 'ALL' ? 'active active-all' : ''}" onclick="filterReclaimStatus('ALL')">
           <span>${t.pill_all}</span>
           <span class="count-tag">${countAll}</span>
+        </button>
+        <button type="button" class="risk-filter-pill ${currentReclaimStatus === 'deposit' ? 'active active-deposit' : ''}" onclick="filterReclaimStatus('deposit')">
+          <span>💰 ${t.pill_deposit_leads}</span>
+          <span class="count-tag" style="background: rgba(245, 158, 11, 0.35); color: #fde047;">${countDeposit}</span>
         </button>
         <button type="button" class="risk-filter-pill ${currentReclaimStatus === 'overdue' ? 'active active-critical' : ''}" onclick="filterReclaimStatus('overdue')">
           <span>${t.pill_due_now}</span>
@@ -3528,10 +3735,11 @@ function renderAgentBadge(agentName) {
         // 1. Search Query
         if (searchQuery) {
           const sidMatch = String(item.student_id || '').includes(searchQuery);
-          const agMatch = String(item.current_agent || item.rep || '').toLowerCase().includes(searchQuery);
+          const agMatch = String(item.current_agent || item.rep || item.user_name || '').toLowerCase().includes(searchQuery);
           const oldSSMatch = String(item.old_ss || '').toLowerCase().includes(searchQuery);
-          const teamMatch = String(item.current_team || item.team || '').toLowerCase().includes(searchQuery);
-          if (!sidMatch && !agMatch && !oldSSMatch && !teamMatch) return false;
+          const teamMatch = String(item.current_team || item.team || item.group_name || '').toLowerCase().includes(searchQuery);
+          const depMatch = (searchQuery === 'عربون' || searchQuery === 'deposit') && Boolean(item.has_deposit);
+          if (!sidMatch && !agMatch && !oldSSMatch && !teamMatch && !depMatch) return false;
         }
 
         // 2. Special SS Filter (with Reclaim Rights & Multi-role matching)
@@ -3588,6 +3796,11 @@ function renderAgentBadge(agentName) {
             const splitWith = item.split_with || [];
             if (roster && (roster.includes(oldSS) || roster.includes(curAg) || splitWith.some(sw => roster.includes(sw)))) matchTeam = true;
             else if (oldT.includes(currentSmallTeam) || oldT.includes(teamNum) || curT.includes(currentSmallTeam) || curT.includes(teamNum)) matchTeam = true;
+          } else if (currentTab === 'deposit') {
+            const grp = item.group_name || '';
+            const usr = item.user_name || '';
+            if (roster && (roster.includes(usr) || roster.includes(item.current_agent))) matchTeam = true;
+            else if (grp.includes(currentSmallTeam) || grp.includes(teamNum)) matchTeam = true;
           }
 
           if (!matchTeam) return false;
@@ -3595,9 +3808,15 @@ function renderAgentBadge(agentName) {
 
         // 4. Tab-Specific Filters
         if (currentTab === 'defense') {
-          if (currentRiskFilter !== 'ALL' && item.risk_badge !== currentRiskFilter) return false;
+          if (currentRiskFilter === 'deposit') {
+            if (!item.has_deposit) return false;
+          } else if (currentRiskFilter !== 'ALL' && item.risk_badge !== currentRiskFilter) {
+            return false;
+          }
         } else if (currentTab === 'reclaim') {
-          if (currentReclaimStatus === 'overdue') {
+          if (currentReclaimStatus === 'deposit') {
+            if (!item.has_deposit) return false;
+          } else if (currentReclaimStatus === 'overdue') {
             if (!(item.days_remaining_sla !== undefined && item.days_remaining_sla !== null && item.days_remaining_sla <= 0)) return false;
           } else if (currentReclaimStatus === 'due_1_3') {
             if (!(item.days_remaining_sla !== undefined && item.days_remaining_sla !== null && item.days_remaining_sla >= 1 && item.days_remaining_sla <= 3)) return false;
@@ -3607,6 +3826,16 @@ function renderAgentBadge(agentName) {
             if (!item.rule_type || !item.rule_type.includes('Rule 6')) return false;
           } else if (currentReclaimStatus === 'transferred') {
             if (!item.rule_type || !item.rule_type.includes('Rule 1')) return false;
+          }
+        } else if (currentTab === 'deposit') {
+          if (currentDepositFilter === 'BT01') {
+            if (!item.is_bt01_team) return false;
+          } else if (currentDepositFilter === 'TRANSFERRED') {
+            if (!item.sector_status || !item.sector_status.includes('Transferred')) return false;
+          } else if (currentDepositFilter === 'PARTIAL') {
+            if (item.is_fully_paid) return false;
+          } else if (currentDepositFilter === 'FULL') {
+            if (!item.is_fully_paid) return false;
           }
         }
 
@@ -3647,6 +3876,7 @@ function renderAgentBadge(agentName) {
           <th style="width: 35px;">${t.th_num}</th>
           <th style="width: 90px;">${t.th_student_id}</th>
           <th style="min-width: 150px; text-align: center;">${t.th_rep_notes}</th>
+          <th style="min-width: 135px; text-align: center;">${t.th_deposit_status}</th>
           <th style="width: 140px;">${t.th_rule}</th>
           <th style="min-width: 220px;">${t.th_eligible_reclaim}</th>
           <th>${t.th_current_rep}</th>
@@ -3664,6 +3894,7 @@ function renderAgentBadge(agentName) {
           <th style="width: 35px;">${t.th_num}</th>
           <th style="width: 90px;">${t.th_student_id}</th>
           <th style="min-width: 150px; text-align: center;">${t.th_rep_notes}</th>
+          <th style="min-width: 135px; text-align: center;">${t.th_deposit_status}</th>
           <th>${t.th_assigned_rep}</th>
           <th>${t.th_small_team}</th>
           <th>${t.th_pool}</th>
@@ -3682,6 +3913,7 @@ function renderAgentBadge(agentName) {
           <th style="width: 80px;">${t.th_family_id}</th>
           <th style="width: 90px;">${t.th_student_id}</th>
           <th style="min-width: 150px; text-align: center;">${t.th_rep_notes}</th>
+          <th style="min-width: 135px; text-align: center;">${t.th_deposit_status}</th>
           <th style="min-width: 200px;">${t.th_family_claimants}</th>
           <th>${t.th_current_rep}</th>
           <th>${t.th_current_team}</th>
@@ -3692,6 +3924,21 @@ function renderAgentBadge(agentName) {
           <th style="cursor: pointer; color: #38bdf8; text-align: center; width: 80px;" onclick="toggleSorting('this_month')">${t.th_this_month} ${sortField==='this_month'?(sortAscending?'↑':'↓'):''}</th>
           <th>${t.th_family_status}</th>
           <th style="text-align: center; min-width: 220px;">${t.th_sop_actions}</th>
+        `;
+      } else if (currentTab === 'deposit') {
+        thead.innerHTML = `
+          <th style="width: 35px;">${t.th_num}</th>
+          <th style="width: 90px;">${t.th_student_id}</th>
+          <th style="min-width: 150px; text-align: center;">${t.th_rep_notes}</th>
+          <th style="min-width: 140px; text-align: center;">${t.th_deposit_status}</th>
+          <th>المحصل وفريق المبيعات</th>
+          <th style="text-align: center;">إجمالي الباقة 💵</th>
+          <th style="text-align: center;">تاريخ أول عربون 📅</th>
+          <th style="text-align: center;">تصنيف الطالب</th>
+          <th style="text-align: center;">الحصص المتبقية</th>
+          <th>علاقة السجل بقطاعنا</th>
+          <th style="cursor: pointer; color: #34d399; text-align: center; width: 75px;" onclick="toggleSorting('points')">${t.th_points} ${sortField==='points'?(sortAscending?'↑':'↓'):''}</th>
+          <th style="text-align: center; min-width: 200px;">${t.th_sop_actions}</th>
         `;
       }
 
@@ -3766,6 +4013,7 @@ function renderAgentBadge(agentName) {
                 </div>
               </td>
               ${renderStudentNotesCell(item.student_id, item.old_ss || item.current_agent)}
+              <td style="white-space: nowrap; text-align: center;">${renderDepositBadge(item)}</td>
               <td style="white-space: nowrap;"><span style="font-size: 0.74rem; color: #cbd5e1;">${item.rule_type}</span></td>
               <td style="white-space: normal; min-width: 220px;">${renderEligibleReclaimersBadge(item)}</td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
@@ -3840,6 +4088,7 @@ function renderAgentBadge(agentName) {
                 </div>
               </td>
               ${renderStudentNotesCell(item.student_id, item.rep)}
+              <td style="white-space: nowrap; text-align: center;">${renderDepositBadge(item)}</td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.rep)}</td>
               <td style="white-space: nowrap;"><span class="small-team-pill" style="padding: 2px 7px; font-size: 0.74rem;">${item.team || 'ME-EGSS' + item.team_clean}</span></td>
               <td style="white-space: nowrap;"><span style="font-size: 0.73rem; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px;">${item.pool || '—'}</span></td>
@@ -3883,6 +4132,7 @@ function renderAgentBadge(agentName) {
                 </div>
               </td>
               ${renderStudentNotesCell(item.student_id, item.current_agent || item.old_ss)}
+              <td style="white-space: nowrap; text-align: center;">${renderDepositBadge(item)}</td>
               <td style="white-space: normal; min-width: 200px;">${renderEligibleReclaimersBadge(item)}</td>
               <td style="white-space: nowrap;">${renderAgentBadge(item.current_agent)}</td>
               <td style="white-space: nowrap;"><span style="font-size: 0.75rem; color: #94a3b8;">${item.current_team || '—'}</span></td>
@@ -3901,6 +4151,61 @@ function renderAgentBadge(agentName) {
                     ${t.btn_dossier}
                   </button>
                   <button type="button" class="btn-dingtalk-mini" onclick="sendDirectDingTalk(${item.student_id}, '${escapeQuotes(item.old_ss || item.current_agent)}', 'family')" title="DingTalk">
+                    ${t.btn_dingtalk}
+                  </button>
+                </div>
+              </td>
+            </tr>
+          `;
+        } else if (currentTab === 'deposit') {
+          const dep = item.deposit_info || item;
+          const isTransferred = Boolean(dep.is_transferred_from_bt01 || (item.sector_status && item.sector_status.includes('Transferred')));
+          const isBt01 = Boolean(item.is_bt01_team);
+
+          let relationBadge = '';
+          if (isBt01) {
+            relationBadge = `<span class="badge-pill" style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #34d399; font-weight: 800;">⭐ عميل حالي بقطاعنا</span>`;
+          } else if (isTransferred) {
+            relationBadge = `<span class="badge-pill badge-critical" style="background: rgba(239, 68, 68, 0.25); border: 1px solid #ef4444; color: #f87171; font-weight: 800;">🚨 محول من قطاعنا (استرداد)</span>`;
+          } else {
+            relationBadge = `<span style="font-size: 0.73rem; color: #64748b;">فرق أخرى بالشرق الأوسط</span>`;
+          }
+
+          rowsHtml += `
+            <tr data-student-id="${item.student_id}">
+              <td style="white-space: nowrap; color: #64748b; font-family: 'JetBrains Mono', monospace; text-align: center;">${rowNum}</td>
+              <td style="white-space: nowrap;">
+                <div style="display: inline-flex; align-items: center; gap: 4px;">
+                  <button type="button" class="btn-copy-id" onclick="copyStudentID('${item.student_id}', this, event)" title="نسخ رقم الطالب"><span class="id-val">${item.student_id}</span><span class="copy-icon-tag">📋</span></button>
+                  <a href="https://crm.51talk.com/admin/main.php" target="_blank" class="btn-crm-link" onclick="copyStudentID('${item.student_id}', null, event)" title="نسخ ID وفتح صفحة الـ CRM مباشرة">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>CRM</span>
+                  </a>
+                </div>
+              </td>
+              ${renderStudentNotesCell(item.student_id, item.user_name || item.current_agent)}
+              <td style="white-space: nowrap; text-align: center;">${renderDepositBadge(item)}</td>
+              <td style="white-space: nowrap;">
+                <div style="display: flex; flex-direction: column; gap: 2px;">
+                  <div>${renderAgentBadge(item.user_name || item.current_agent)}</div>
+                  <span style="font-size: 0.72rem; color: #94a3b8;">${item.group_name || item.current_team || '—'}</span>
+                </div>
+              </td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #38bdf8;">$${Number(item.package_total_usd || 0).toLocaleString()}</td>
+              <td style="white-space: nowrap; text-align: center; font-size: 0.76rem; font-family: 'JetBrains Mono', monospace; color: #94a3b8;">${item.first_deposit_date || '—'}</td>
+              <td style="white-space: nowrap; text-align: center;"><span style="font-size: 0.74rem; background: rgba(255,255,255,0.06); padding: 2px 7px; border-radius: 4px;">${item.student_cohort || '—'}</span></td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #cbd5e1;">${item.remaining_lessons ?? '—'}</td>
+              <td style="white-space: nowrap;">${relationBadge}</td>
+              <td style="white-space: nowrap; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #34d399;">${item.current_points ?? 0}</td>
+              <td style="text-align: center;">
+                <div class="btn-action-cluster">
+                  <button type="button" class="btn-ticket-mini" onclick="copyDepositDetailsTicket('${item.student_id}')" title="نسخ تذكرة بيانات العربون">
+                    ${t.btn_ticket}
+                  </button>
+                  <button type="button" class="btn-dossier-mini" onclick="copyComprehensiveDossier(${item.student_id}, '${escapeQuotes(item.user_name || item.current_agent)}', 'deposit')" title="Dossier">
+                    ${t.btn_dossier}
+                  </button>
+                  <button type="button" class="btn-dingtalk-mini" onclick="sendDirectDingTalk(${item.student_id}, '${escapeQuotes(item.user_name || item.current_agent)}', 'deposit')" title="DingTalk">
                     ${t.btn_dingtalk}
                   </button>
                 </div>
@@ -4690,6 +4995,143 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
       return `[${last.author_name} - ${last.timestamp}]: ${last.text.replace(/"/g, '""')}`;
     }
 
+    // Helper: Render Deposit Status Badge
+    function renderDepositBadge(item) {
+      if (!item) return `<span style="color: #475569; font-size: 0.75rem;">—</span>`;
+      const dep = item.deposit_info || (item.has_deposit ? item : null);
+      if (!dep && !item.has_deposit) {
+        return `<span style="color: #475569; font-size: 0.75rem;">—</span>`;
+      }
+
+      const paid = Number(dep.total_deposit_paid ?? dep.deposit_amount ?? item.total_deposit_paid ?? 0);
+      const bal = Number(dep.balance_due_usd ?? dep.balance_amount ?? item.balance_due_usd ?? 0);
+      const isTrans = Boolean(dep.is_transferred_from_bt01 || (item.sector_status && item.sector_status.includes('Transferred')));
+      const isFull = (dep.is_fully_paid !== undefined) ? dep.is_fully_paid : (bal === 0);
+      const sid = String(item.student_id || '');
+      const datePart = (dep.first_deposit_date || item.first_deposit_date || '').split(' ')[0] || '';
+
+      if (isTrans) {
+        return `
+          <button type="button" class="deposit-badge deposit-alert-ext" onclick="showDepositDetailModal('${sid}', event)" title="🚨 تم دفع عربون لعميل محول من قطاعنا! اضغط لعرض التفاصيل والتذكرة">
+            <span class="deposit-title">🚨 عربون محول</span>
+            <span class="deposit-sub">$${paid.toLocaleString()} ${bal > 0 ? `<span class="dep-due-tag">(متبقي $${bal})</span>` : ''}</span>
+            ${datePart ? `<span class="deposit-date">${datePart}</span>` : ''}
+          </button>
+        `;
+      } else if (!isFull && bal > 0) {
+        return `
+          <button type="button" class="deposit-badge deposit-partial" onclick="showDepositDetailModal('${sid}', event)" title="⏳ مسجل له عربون قيد التحصيل. اضغط لعرض التفاصيل والتذكرة">
+            <span class="deposit-title">⏳ عربون قيد التحصيل</span>
+            <span class="deposit-sub">$${paid.toLocaleString()} <span class="dep-due-tag">(متبقي $${bal})</span></span>
+            ${datePart ? `<span class="deposit-date">${datePart}</span>` : ''}
+          </button>
+        `;
+      } else {
+        return `
+          <button type="button" class="deposit-badge deposit-paid-full" onclick="showDepositDetailModal('${sid}', event)" title="✅ مسدد بالكامل. اضغط لعرض التفاصيل والتذكرة">
+            <span class="deposit-title">✅ مسدد بالكامل</span>
+            <span class="deposit-sub">$${paid.toLocaleString()}</span>
+            ${datePart ? `<span class="deposit-date">${datePart}</span>` : ''}
+          </button>
+        `;
+      }
+    }
+
+    // Modal: Show Deposit Client Details
+    function showDepositDetailModal(studentId, event) {
+      if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+      const sid = String(studentId).trim();
+      const data = window.ALLOCATION_RULES_DATA || {};
+
+      let found = (data.deposit_master_leads || []).find(x => String(x.student_id) === sid);
+      if (!found) found = (data.defense_uncovered || []).find(x => String(x.student_id) === sid && x.has_deposit);
+      if (!found) found = (data.reclaim_opportunities || []).find(x => String(x.student_id) === sid && x.has_deposit);
+      if (!found) found = (data.split_families || []).find(x => String(x.student_id) === sid && x.has_deposit);
+
+      const modal = document.getElementById('depositDetailModal');
+      if (!modal) return;
+
+      const dep = (found && (found.deposit_info || found)) || {};
+      const paid = Number(dep.total_deposit_paid ?? dep.deposit_amount ?? 0);
+      const bal = Number(dep.balance_due_usd ?? dep.balance_amount ?? 0);
+      const total = Number(dep.package_total_usd ?? dep.package_total ?? (paid + bal));
+      const rep = found?.user_name || dep.collector || found?.rep || found?.current_agent || '—';
+      const grp = found?.group_name || dep.team || found?.team || found?.current_team || '—';
+      const isTrans = Boolean(dep.is_transferred_from_bt01 || (found?.sector_status && found.sector_status.includes('Transferred')));
+
+      document.getElementById('depModalStudentId').textContent = sid;
+      document.getElementById('depModalCollector').textContent = `${rep} (${grp})`;
+      document.getElementById('depModalPaid').textContent = `$${paid.toLocaleString()} USD`;
+      document.getElementById('depModalBalance').textContent = `$${bal.toLocaleString()} USD`;
+      document.getElementById('depModalPackageTotal').textContent = `$${total.toLocaleString()} USD`;
+      document.getElementById('depModalDate').textContent = dep.first_deposit_date || found?.first_deposit_date || '—';
+      document.getElementById('depModalCohort').textContent = dep.student_cohort || found?.student_cohort || '—';
+      document.getElementById('depModalLessons').textContent = dep.remaining_lessons ?? found?.remaining_lessons ?? '—';
+
+      const transAlertEl = document.getElementById('depModalTransferredAlert');
+      if (transAlertEl) {
+        transAlertEl.style.display = isTrans ? 'block' : 'none';
+      }
+
+      const copyBtn = document.getElementById('depModalCopyBtn');
+      if (copyBtn) {
+        copyBtn.onclick = () => copyDepositDetailsTicket(sid);
+      }
+
+      modal.style.display = 'flex';
+    }
+
+    function hideDepositDetailModal() {
+      const modal = document.getElementById('depositDetailModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function copyDepositDetailsTicket(studentId) {
+      const sid = String(studentId).trim();
+      const data = window.ALLOCATION_RULES_DATA || {};
+      let found = (data.deposit_master_leads || []).find(x => String(x.student_id) === sid);
+      if (!found) found = (data.defense_uncovered || []).find(x => String(x.student_id) === sid && x.has_deposit);
+      if (!found) found = (data.reclaim_opportunities || []).find(x => String(x.student_id) === sid && x.has_deposit);
+      if (!found) found = (data.split_families || []).find(x => String(x.student_id) === sid && x.has_deposit);
+
+      const dep = (found && (found.deposit_info || found)) || {};
+      const paid = Number(dep.total_deposit_paid ?? dep.deposit_amount ?? 0);
+      const bal = Number(dep.balance_due_usd ?? dep.balance_amount ?? 0);
+      const total = Number(dep.package_total_usd ?? dep.package_total ?? (paid + bal));
+      const rep = found?.user_name || dep.collector || found?.rep || found?.current_agent || '—';
+      const grp = found?.group_name || dep.team || found?.team || found?.current_team || '—';
+      const isTrans = Boolean(dep.is_transferred_from_bt01 || (found?.sector_status && found.sector_status.includes('Transferred')));
+      const date = dep.first_deposit_date || found?.first_deposit_date || '—';
+      const cohort = dep.student_cohort || found?.student_cohort || '—';
+      const lessons = dep.remaining_lessons ?? found?.remaining_lessons ?? '—';
+
+      const ticket = [
+        "💰 【تذكرة استحقاق ومتابعة عربون - BIG TEAM 01】",
+        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+        `🆔 رقم الطالب (Student ID): ${sid}`,
+        `👤 المستشار / المحصل: ${rep} (${grp})`,
+        `💵 العربون المسدد حتى الآن: $${paid.toLocaleString()} USD`,
+        `⏳ المبلغ المتبقي للتحصيل: $${bal.toLocaleString()} USD`,
+        `📦 إجمالي قيمة الباقة: $${total.toLocaleString()} USD`,
+        `📅 تاريخ تسجيل أول دفعة: ${date}`,
+        `📚 تصنيف الطالب وحصصه المتبقية: ${cohort} (${lessons} حصة)`,
+        isTrans ? "🚨 تنبيه سيادي: هذا الطالب كان مسجلاً سابقاً لدى فريقنا وتم تحويله وسدد عربون بالخارج! مؤهل للاسترداد الفوري بموجب القاعدة 1." : "⭐ حالة السجل: عميل مسجل رسمياً بقاعدة بيانات الشرق الأوسط.",
+        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+        `🔗 رابط الـ CRM المباشر: https://crm.51talk.com/admin/main.php`,
+        `📅 تاريخ إصدار التذكرة: ${new Date().toLocaleDateString('ar-EG')} - الإدارة العامة للقطاع`
+      ].join("
+");
+
+      navigator.clipboard.writeText(ticket).then(() => {
+        showToast("✅ تم نسخ تذكرة العربون الشاملة للحافظة بنجاح!");
+      }).catch(() => {
+        showToast("⚠️ تعذر النسخ المباشر للحافظة.");
+      });
+    }
+
     function renderStudentNotesCell(studentId, repHint) {
       const notes = getStudentNotes(studentId);
       const t = TRANSLATIONS[currentLang] || TRANSLATIONS['ar'];
@@ -5371,6 +5813,57 @@ ${i + 1}. الممثل: ${rep} (${p.teamName} - المشرف: ${p.supervisor})
 
   <!-- Global Floating Note Hover Pop-up Card -->
   <div id="globalNoteHoverCard" class="global-note-hover-card" style="display: none; position: fixed; z-index: 9999999;"></div>
+
+  <!-- Modal: Deposit Client Deep Dive -->
+  <div id="depositDetailModal" class="modal-overlay" style="display: none;" onclick="if(event.target===this) hideDepositDetailModal()">
+    <div class="modal-box" style="max-width: 600px;" onclick="event.stopPropagation()">
+      <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px; margin-bottom: 14px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.3rem;">💰</span>
+          <div>
+            <h3 style="margin: 0; font-size: 1.05rem; color: #fff;">تفاصيل بيانات العربون والتحصيل</h3>
+            <div style="font-size: 0.74rem; color: #94a3b8; margin-top: 2px;">رقم الطالب: <span id="depModalStudentId" style="font-family: 'JetBrains Mono', monospace; color: #38bdf8; font-weight: 800;"></span></div>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="hideDepositDetailModal()">✕</button>
+      </div>
+      <div class="modal-body" style="padding: 10px 0;">
+        <div id="depModalTransferredAlert" style="display: none; background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; font-size: 0.8rem; color: #fca5a5; font-weight: 700;">
+          🚨 تنبيه استرداد (Rule 1 Reclaim): هذا الطالب كان تابعاً لقطاعنا سابقاً، وسدد عربوناً لدى فريق آخر! يحق لنا المطالبة باسترداد العميل ومتابعة تحصيل المتبقي.
+        </div>
+        <div class="dep-detail-grid">
+          <div class="dep-detail-item">
+            <div class="lbl">المحصل والفريق:</div>
+            <div class="val" id="depModalCollector" style="font-size: 0.8rem;">—</div>
+          </div>
+          <div class="dep-detail-item">
+            <div class="lbl">العربون المدفوع (Paid):</div>
+            <div class="val" id="depModalPaid" style="color: #34d399;">—</div>
+          </div>
+          <div class="dep-detail-item">
+            <div class="lbl">المتبقي (Balance Due):</div>
+            <div class="val" id="depModalBalance" style="color: #f59e0b;">—</div>
+          </div>
+          <div class="dep-detail-item">
+            <div class="lbl">إجمالي قيمة الباقة:</div>
+            <div class="val" id="depModalPackageTotal" style="color: #38bdf8;">—</div>
+          </div>
+          <div class="dep-detail-item">
+            <div class="lbl">تاريخ أول دفعة:</div>
+            <div class="val" id="depModalDate" style="font-size: 0.8rem;">—</div>
+          </div>
+          <div class="dep-detail-item">
+            <div class="lbl">تصنيف الباقة / الحصص:</div>
+            <div class="val"><span id="depModalCohort">—</span> (<span id="depModalLessons">—</span> حصة)</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: flex-end; gap: 8px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px; margin-top: 14px;">
+        <button type="button" id="depModalCopyBtn" class="btn-ticket-mini" style="background: linear-gradient(135deg, #0284c7, #2563eb); border: none; padding: 8px 18px; border-radius: 8px; color: #fff; font-weight: 800; cursor: pointer; font-size: 0.82rem;">📋 نسخ تذكرة العربون</button>
+        <button type="button" class="btn-cancel-note" onclick="hideDepositDetailModal()" style="padding: 8px 16px; font-size: 0.82rem;">إغلاق</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Security Access Gate Modal (PIN Auth) -->
   <div id="authGateModal" class="auth-gate-overlay">
