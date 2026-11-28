@@ -491,16 +491,16 @@ async function navigateAndEnsureBiFrame(page, browser, menuName, targetUrl, page
             const allEls = Array.from(document.querySelectorAll('*'));
             return allEls.find(el => {
                 const t = (el.innerText || '').trim();
-                if (isLens && (t === '中东 Lens 看板' || t.includes('Lens 看板') || t.includes('SA-SS') || t === 'ME Lens Dashboard' || t.includes('ME Lens'))) return el.children.length === 0;
-                if (isEC && (t === 'English Club数据看板' || t.includes('English Club'))) return el.children.length === 0;
+                if (isLens && (t === 'ME Lens Dashboard' || t.includes('ME Lens') || t === '中东 Lens 看板' || t.includes('Lens 看板') || t.includes('SA-SS'))) return el.children.length === 0;
+                if (isEC && (t === 'English Club' || t.includes('English Club') || t === 'English Club数据看板')) return el.children.length === 0;
                 return false;
             });
         }
 
         let target = findLeaf();
         if (!target) {
-            // Only click Data Center if leaf is NOT already visible!
-            const dcKeywords = ['数据中心', 'data center', 'مركز البيانات', 'datacenter'];
+            // Only click Data Center / Business Data accordion if leaf is NOT already visible!
+            const dcKeywords = ['business data', 'business', '数据中心', 'data center', 'مركز البيانات', 'datacenter'];
             const allEls = Array.from(document.querySelectorAll('*'));
             const dc = allEls.find(e => dcKeywords.some(k => (e.innerText || '').trim().toLowerCase().includes(k)) && e.children.length === 0);
             if (dc) {
@@ -1059,6 +1059,198 @@ async function runExporter() {
 
         // =====================================================================
 
+        // [2/5] Area/Big Team/Small Team/SS Hierarchy Breakdown (33 ROWS EXPANDED)
+
+        // =====================================================================
+
+        const r2Id = 2;
+
+        if (!shouldExportCategory(2, 'Area Hierarchy')) {
+
+            console.log('\n------------------------------------------------------------------------');
+
+            console.log('>>> [2/5] SKIPPED: Area Hierarchy (Already verified / not in delta list)');
+
+            console.log('------------------------------------------------------------------------');
+
+            tracker.log(r2Id, 'SKIPPED: Not requested in delta run');
+
+            tracker.reports[r2Id].status = 'SKIPPED';
+
+        } else {
+
+            console.log('\n------------------------------------------------------------------------');
+
+            console.log('>>> [1/5] EXPORTING: Area/Big Team/Small Team/SS (Full 33-Row Hierarchy)...');
+
+            console.log('------------------------------------------------------------------------');
+
+
+
+        for (let attempt = 1; attempt <= 3; attempt++) {
+            tracker.recordAttempt(r2Id);
+            await ensureBrowserReady();
+
+            try {
+                let existingFiles = fs.readdirSync(TARGET_INPUTS_DIR);
+                let nav2 = await navigateAndEnsureBiFrame(page, browser, 'ME Lens Dashboard', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r2Id, tracker);
+                let biFrame = nav2.biFrame;
+                page = nav2.page;
+                await setupDownload(browser, page, TARGET_INPUTS_DIR);
+
+                tracker.log(r2Id, 'Ensuring CASH & ACHIEVEMENT Tab is selected...');
+                await biFrame.evaluate(() => {
+                    const tabs = Array.from(document.querySelectorAll('.bi-tabs-tab, .ant-tabs-tab'));
+                    const target = tabs.find(t => (t.innerText || '').includes('CASH & ACHIEVEMENT') || (t.innerText || '').includes('业绩大盘'));
+                    if (target) {
+                        target.click();
+                        target.querySelector('.ant-tabs-tab-btn')?.click();
+                    } else if (tabs.length > 0) {
+                        tabs[0].click();
+                    }
+                });
+                await new Promise(r => setTimeout(r, 6000));
+
+                tracker.log(r2Id, 'Scrolling down 1500px to Area Hierarchy table...');
+                await biFrame.evaluate(() => {
+                    window.scrollTo(0, 1500);
+                    for (const el of Array.from(document.querySelectorAll('*'))) {
+                        if (el.scrollHeight > el.clientHeight + 50) el.scrollTop = 1500;
+                    }
+                });
+                await new Promise(r => setTimeout(r, 3000));
+
+                tracker.log(r2Id, 'Expanding all levels on Area cross table...');
+                const expAll = await biFrame.evaluate(async () => {
+                    const op = document.querySelector('.cross-table-expand-operator, [class*="expand-operator"], .crossTable-expand-icon, th .anticon, [class*="expand-icon"]');
+                    if (!op) return 'no-expand-op';
+                    op.scrollIntoView({ behavior: 'instant', block: 'center' });
+                    op.click();
+                    await new Promise(r => setTimeout(r, 800));
+                    const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, li, [role="menuitem"]'));
+                    const exp = items.find(i => (i.innerText || '').trim().toLowerCase().includes('expand all') || (i.innerText || '').includes('全部展开'));
+                    if (exp) { exp.click(); return 'clicked-expand-all'; }
+                    if (items.length > 0) { items[items.length - 1].click(); return 'clicked-last'; }
+                    return 'no-items';
+                });
+                tracker.log(r2Id, `Expand result: ${expAll}`);
+                await new Promise(r => setTimeout(r, 8000));
+
+                let areaDotsInfo = await biFrame.evaluate(() => {
+                    const allEls = Array.from(document.querySelectorAll('*'));
+                    const titleEl = allEls.find(el => {
+                        const t = (el.innerText || '').trim();
+                        return (t === 'Area/Big Team/Small Team/SS' || t.startsWith('Area/Big Team')) && el.children.length === 0;
+                    });
+                    if (!titleEl) return null;
+                    const card = titleEl.closest('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile"]');
+                    if (!card) return null;
+                    const more = card.querySelector('.card-menu-wrapper i.common-more-outlined, i.common-more-outlined, .card-menu-wrapper [class*="common-more"], .card-menu-wrapper');
+                    if (!more) return null;
+                    more.classList.remove('card-menu-hide');
+                    const icon = more.tagName === 'I' ? more : (more.querySelector('i.common-more-outlined') || more);
+                    icon.classList.remove('card-menu-hide');
+                    icon.style.opacity = '1';
+                    icon.style.visibility = 'visible';
+                    icon.style.display = 'inline-block';
+                    icon.scrollIntoView({ behavior: 'instant', block: 'center' });
+                    const r = icon.getBoundingClientRect();
+                    return { x: r.x, y: r.y, width: r.width, height: r.height };
+                });
+
+                if (!areaDotsInfo) {
+                    tracker.log(r2Id, 'Area table not detected on view. Reloading page to force QuickBI default Tab 1...');
+                    await page.reload({ waitUntil: 'networkidle2', timeout: 35000 }).catch(() => {});
+                    await new Promise(r => setTimeout(r, 8000));
+                    const fR = await findBiFrame(page, '9255940d', 20);
+                    if (fR) biFrame = fR;
+                    await biFrame.evaluate(() => {
+                        window.scrollTo(0, 1500);
+                        for (const el of Array.from(document.querySelectorAll('*'))) {
+                            if (el.scrollHeight > el.clientHeight + 50) el.scrollTop = 1500;
+                        }
+                    });
+                    await new Promise(r => setTimeout(r, 4000));
+                    areaDotsInfo = await biFrame.evaluate(() => {
+                        const allEls = Array.from(document.querySelectorAll('*'));
+                        const titleEl = allEls.find(el => {
+                            const t = (el.innerText || '').trim();
+                            return (t === 'Area/Big Team/Small Team/SS' || t.startsWith('Area/Big Team')) && el.children.length === 0;
+                        });
+                        if (!titleEl) return null;
+                        const card = titleEl.closest('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile"]');
+                        if (!card) return null;
+                        const more = card.querySelector('.card-menu-wrapper i.common-more-outlined, i.common-more-outlined, .card-menu-wrapper [class*="common-more"], .card-menu-wrapper');
+                        if (!more) return null;
+                        more.classList.remove('card-menu-hide');
+                        const icon = more.tagName === 'I' ? more : (more.querySelector('i.common-more-outlined') || more);
+                        icon.classList.remove('card-menu-hide');
+                        icon.style.opacity = '1';
+                        icon.style.visibility = 'visible';
+                        icon.style.display = 'inline-block';
+                        icon.scrollIntoView({ behavior: 'instant', block: 'center' });
+                        const r = icon.getBoundingClientRect();
+                        return { x: r.x, y: r.y, width: r.width, height: r.height };
+                    });
+                }
+
+                if (areaDotsInfo) {
+                    tracker.log(r2Id, `Clicking Area 3-dots (source: ${areaDotsInfo.source || 'unknown'})...`);
+                    await clickInFrameViaCoordinates(page, biFrame, areaDotsInfo);
+                    await new Promise(r => setTimeout(r, 1500));
+
+                    tracker.log(r2Id, 'Selecting Export from menu...');
+                    const exportClicked = await biFrame.evaluate(() => {
+                        const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, [role="menuitem"], li'));
+                        const target = items.find(i => {
+                            const txt = (i.innerText || '').trim();
+                            return txt === 'Export' || txt === '导出' || txt.includes('Export');
+                        });
+                        if (target) { target.click(); return true; }
+                        return false;
+                    });
+
+                    if (exportClicked) {
+                        tracker.log(r2Id, 'Confirming export dialog...');
+                        await new Promise(r => setTimeout(r, 1500));
+                        const conf = await clickModalConfirm(biFrame, page);
+                        tracker.log(r2Id, `Modal confirmed: ${conf}`);
+
+                        tracker.log(r2Id, 'Waiting for Area Hierarchy Excel download...');
+                        const file2 = await waitForNewDownload(existingFiles, 90, 4000, ['Area', 'SS Lens Dashboard_Area', 'Hierarchy', 'Team', 'Small']);
+                        if (file2) {
+                            const sz = fs.statSync(file2).size;
+                            tracker.recordSuccess(r2Id, file2, sz);
+                            tracker.log(r2Id, `Captured: ${path.basename(file2)} (${(sz/1024).toFixed(1)} KB)`);
+                            break;
+                        }
+                    }
+                }
+
+
+
+                if (attempt === 1) {
+
+                    tracker.recordHealing(r2Id, 'Attempt 1 missing Area file: re-executing export');
+
+                }
+
+            } catch(err) {
+
+                tracker.log(r2Id, `Error on attempt ${attempt}: ${err.message}`);
+
+                tracker.recordDiagnostic(r2Id, { attempt, error: err.message });
+
+            }
+
+        }
+
+        }
+
+
+
+        // =====================================================================
+
         // [1/5] Student-Detail Table (Full Student Records)
 
         // =====================================================================
@@ -1081,7 +1273,7 @@ async function runExporter() {
 
             console.log('\n------------------------------------------------------------------------');
 
-            console.log('>>> [1/5] EXPORTING: Student-Detail Table (Full Student Records)...');
+            console.log('>>> [2/5] EXPORTING: Student-Detail Table (Full Student Records)...');
 
             console.log('------------------------------------------------------------------------');
 
@@ -1100,16 +1292,11 @@ async function runExporter() {
 
                 tracker.log(r1Id, 'Switching to Effective Coverage tab...');
                 await biFrame.evaluate(() => {
-                    const coverageWords = ['effective coverage', 'coverage', '有效覆盖', '覆盖', 'التغطية الفعالة', 'التغطية', 'تغطية'];
-                    const tabs = Array.from(document.querySelectorAll('.ant-tabs-nav .ant-tabs-tab, .ant-tabs-tab, [role="tab"], .bi-tab, .qbi-tab-item')).filter(el => {
-                        const t = (el.innerText || '').trim().toLowerCase();
-                        return coverageWords.some(w => t.includes(w));
-                    });
-                    if (tabs.length > 0) {
-                        const target = tabs[tabs.length - 1];
-                        const btn = target.querySelector('.ant-tabs-tab-btn') || target;
-                        btn.click();
+                    const tabs = Array.from(document.querySelectorAll('.bi-tabs-tab, .ant-tabs-tab'));
+                    const target = tabs.find(t => (t.innerText || '').includes('Effective Coverage') || (t.innerText || '').includes('有效覆盖'));
+                    if (target) {
                         target.click();
+                        target.querySelector('.ant-tabs-tab-btn')?.click();
                     }
                 });
                 await new Promise(r => setTimeout(r, 6000));
@@ -1279,166 +1466,6 @@ async function runExporter() {
 
         // =====================================================================
 
-        // [2/5] Area/Big Team/Small Team/SS Hierarchy Breakdown (33 ROWS EXPANDED)
-
-        // =====================================================================
-
-        const r2Id = 2;
-
-        if (!shouldExportCategory(2, 'Area Hierarchy')) {
-
-            console.log('\n------------------------------------------------------------------------');
-
-            console.log('>>> [2/5] SKIPPED: Area Hierarchy (Already verified / not in delta list)');
-
-            console.log('------------------------------------------------------------------------');
-
-            tracker.log(r2Id, 'SKIPPED: Not requested in delta run');
-
-            tracker.reports[r2Id].status = 'SKIPPED';
-
-        } else {
-
-            console.log('\n------------------------------------------------------------------------');
-
-            console.log('>>> [2/5] EXPORTING: Area/Big Team/Small Team/SS (Full 33-Row Hierarchy)...');
-
-            console.log('------------------------------------------------------------------------');
-
-
-
-        for (let attempt = 1; attempt <= 3; attempt++) {
-            tracker.recordAttempt(r2Id);
-            await ensureBrowserReady();
-
-            try {
-                let existingFiles = fs.readdirSync(TARGET_INPUTS_DIR);
-                let nav2 = await navigateAndEnsureBiFrame(page, browser, 'ME Lens Dashboard', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r2Id, tracker);
-                let biFrame = nav2.biFrame;
-                page = nav2.page;
-                await setupDownload(browser, page, TARGET_INPUTS_DIR);
-
-                tracker.log(r2Id, 'Ensuring Achievement / Overview Tab is selected...');
-                await biFrame.evaluate(() => {
-                    const achieveWords = ['achievement', 'hourly update', '业绩大盘', '业绩', '分时', 'الإنجاز', 'التحصيل', 'الأداء'];
-                    const tabs = Array.from(document.querySelectorAll('.ant-tabs-nav .ant-tabs-tab, .ant-tabs-tab, [role="tab"], .bi-tab, .qbi-tab-item'));
-                    let target = tabs.find(el => {
-                        const t = (el.innerText || '').trim().toLowerCase();
-                        return achieveWords.some(w => t.includes(w));
-                    });
-                    if (!target && tabs.length > 0) target = tabs[0];
-                    if (target) {
-                        const btn = target.querySelector('.ant-tabs-tab-btn') || target;
-                        btn.click();
-                        target.click();
-                    }
-                });
-                await new Promise(r => setTimeout(r, 4000));
-
-                tracker.log(r2Id, 'Scrolling down 1500px to Area Hierarchy table...');
-                await biFrame.evaluate(() => {
-                    window.scrollTo(0, 1500);
-                    for (const el of Array.from(document.querySelectorAll('*'))) {
-                        if (el.scrollHeight > el.clientHeight + 50) el.scrollTop = 1500;
-                    }
-                });
-                await new Promise(r => setTimeout(r, 3000));
-
-                tracker.log(r2Id, 'Expanding all levels on Area cross table...');
-                const expAll = await biFrame.evaluate(async () => {
-                    const op = document.querySelector('.cross-table-expand-operator, [class*="expand-operator"], .crossTable-expand-icon, th .anticon, [class*="expand-icon"]');
-                    if (!op) return 'no-expand-op';
-                    op.scrollIntoView({ behavior: 'instant', block: 'center' });
-                    op.click();
-                    await new Promise(r => setTimeout(r, 800));
-                    const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, li, [role="menuitem"]'));
-                    const exp = items.find(i => (i.innerText || '').trim().toLowerCase().includes('expand all') || (i.innerText || '').includes('全部展开'));
-                    if (exp) { exp.click(); return 'clicked-expand-all'; }
-                    if (items.length > 0) { items[items.length - 1].click(); return 'clicked-last'; }
-                    return 'no-items';
-                });
-                tracker.log(r2Id, `Expand result: ${expAll}`);
-                await new Promise(r => setTimeout(r, 8000));
-
-                const areaDotsInfo = await biFrame.evaluate(() => {
-                    const allEls = Array.from(document.querySelectorAll('*'));
-                    const titleEl = allEls.find(el => {
-                        const t = (el.innerText || '').trim();
-                        return (t === 'Area/Big Team/Small Team/SS' || t.startsWith('Area/Big Team')) && el.children.length === 0;
-                    });
-                    if (!titleEl) return null;
-                    const card = titleEl.closest('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile"]');
-                    if (!card) return null;
-                    const more = card.querySelector('.card-menu-wrapper i.common-more-outlined, i.common-more-outlined, .card-menu-wrapper [class*="common-more"], .card-menu-wrapper');
-                    if (!more) return null;
-                    more.classList.remove('card-menu-hide');
-                    const icon = more.tagName === 'I' ? more : (more.querySelector('i.common-more-outlined') || more);
-                    icon.classList.remove('card-menu-hide');
-                    icon.style.opacity = '1';
-                    icon.style.visibility = 'visible';
-                    icon.style.display = 'inline-block';
-                    icon.scrollIntoView({ behavior: 'instant', block: 'center' });
-                    const r = icon.getBoundingClientRect();
-                    return { x: r.x, y: r.y, width: r.width, height: r.height };
-                });
-
-                if (areaDotsInfo) {
-                    tracker.log(r2Id, `Clicking Area 3-dots (source: ${areaDotsInfo.source || 'unknown'})...`);
-                    await clickInFrameViaCoordinates(page, biFrame, areaDotsInfo);
-                    await new Promise(r => setTimeout(r, 1500));
-
-                    tracker.log(r2Id, 'Selecting Export from menu...');
-                    const exportClicked = await biFrame.evaluate(() => {
-                        const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, [role="menuitem"], li'));
-                        const target = items.find(i => {
-                            const txt = (i.innerText || '').trim();
-                            return txt === 'Export' || txt === '导出' || txt.includes('Export');
-                        });
-                        if (target) { target.click(); return true; }
-                        return false;
-                    });
-
-                    if (exportClicked) {
-                        tracker.log(r2Id, 'Confirming export dialog...');
-                        await new Promise(r => setTimeout(r, 1500));
-                        const conf = await clickModalConfirm(biFrame, page);
-                        tracker.log(r2Id, `Modal confirmed: ${conf}`);
-
-                        tracker.log(r2Id, 'Waiting for Area Hierarchy Excel download...');
-                        const file2 = await waitForNewDownload(existingFiles, 90, 4000, ['Area', 'SS Lens Dashboard_Area', 'Hierarchy', 'Team', 'Small']);
-                        if (file2) {
-                            const sz = fs.statSync(file2).size;
-                            tracker.recordSuccess(r2Id, file2, sz);
-                            tracker.log(r2Id, `Captured: ${path.basename(file2)} (${(sz/1024).toFixed(1)} KB)`);
-                            break;
-                        }
-                    }
-                }
-
-
-
-                if (attempt === 1) {
-
-                    tracker.recordHealing(r2Id, 'Attempt 1 missing Area file: re-executing export');
-
-                }
-
-            } catch(err) {
-
-                tracker.log(r2Id, `Error on attempt ${attempt}: ${err.message}`);
-
-                tracker.recordDiagnostic(r2Id, { attempt, error: err.message });
-
-            }
-
-        }
-
-        }
-
-
-
-        // =====================================================================
-
         // [3/5] English Club Report (Details Table)
 
         // =====================================================================
@@ -1474,7 +1501,7 @@ async function runExporter() {
             try {
 
                 let existingFiles = fs.readdirSync(TARGET_INPUTS_DIR);
-                let nav4 = await navigateAndEnsureBiFrame(page, browser, 'English Club数据看板', 'https://lp.51talkjr.com/#/data-center/business/EnglishClub', 'afb30f29', r4Id, tracker);
+                let nav4 = await navigateAndEnsureBiFrame(page, browser, 'English Club', 'https://lp.51talkjr.com/#/data-center/business/EnglishClub', 'afb30f29', r4Id, tracker);
                 let biFrameEC = nav4.biFrame;
                 page = nav4.page;
                 await setupDownload(browser, page, TARGET_INPUTS_DIR);

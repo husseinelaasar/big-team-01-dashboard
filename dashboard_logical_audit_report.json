@@ -1,10 +1,14 @@
 {
-  "timestamp": "2026-11-28 13:18:55",
+  "timestamp": "2026-11-28 15:02:08",
   "calendar_day": 28,
   "days_left": 2,
   "audit_passed": true,
-  "total_anomalies_detected": 0,
-  "anomalies": [],
-  "total_heals_applied": 0,
-  "healed_fixes": []
+  "total_anomalies_detected": 1,
+  "anomalies": [
+    "Total Cash in index.html ($136,353) DOES NOT MATCH Excel truth ($134,756 Net / $138,756 Gross)!"
+  ],
+  "total_heals_applied": 1,
+  "healed_fixes": [
+    "Auto-healed #totalCash to $134,756 and #cashPct to 77.7%"
+  ]
 }
