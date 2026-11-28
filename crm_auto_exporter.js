@@ -307,37 +307,25 @@ class TelemetryAuditTracker {
 // ============================================================================
 
 function sanitizeChromeProfile() {
-
     console.log('   -> Sanitizing Chrome Profile & Eliminating Crash Warnings...');
-
     try {
-
         execFileSync('powershell.exe', [
-
             '-NoProfile',
-
+            '-ExecutionPolicy', 'Bypass',
             '-Command',
-
-            "Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -like '*automation_chrome_profile*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }"
-
+            "Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'chrome.exe' -and $_.CommandLine -like '*automation_chrome_profile*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }"
         ], { stdio: 'ignore' });
-
     } catch(e) {}
 
-
+    const end = Date.now() + 500;
+    while (Date.now() < end) {}
 
     const lockFiles = ['DevToolsActivePort', 'LOCK', 'SingletonLock', 'SingletonSocket', 'SingletonCookie', 'lockfile'];
-
     for (const lf of lockFiles) {
-
         try {
-
             const p = path.join(PROFILE_DIR, lf);
-
             if (fs.existsSync(p)) fs.unlinkSync(p);
-
         } catch(e) {}
-
     }
 
 
@@ -505,7 +493,7 @@ async function navigateAndEnsureBiFrame(page, browser, menuName, targetUrl, page
             const allEls = Array.from(document.querySelectorAll('*'));
             return allEls.find(el => {
                 const t = (el.innerText || '').trim();
-                if (isLens && (t === '中东 Lens 看板' || t.includes('Lens 看板') || t.includes('SA-SS'))) return el.children.length === 0;
+                if (isLens && (t === '中东 Lens 看板' || t.includes('Lens 看板') || t.includes('SA-SS') || t === 'ME Lens Dashboard' || t.includes('ME Lens'))) return el.children.length === 0;
                 if (isEC && (t === 'English Club数据看板' || t.includes('English Club'))) return el.children.length === 0;
                 return false;
             });
@@ -547,7 +535,7 @@ async function navigateAndEnsureBiFrame(page, browser, menuName, targetUrl, page
         const allEls = Array.from(document.querySelectorAll('*'));
         const target = allEls.find(el => {
             const t = (el.innerText || '').trim();
-            if (isLens && (t === '中东 Lens 看板' || t.includes('Lens 看板') || t.includes('SA-SS'))) return el.children.length === 0;
+            if (isLens && (t === '中东 Lens 看板' || t.includes('Lens 看板') || t.includes('SA-SS') || t === 'ME Lens Dashboard' || t.includes('ME Lens'))) return el.children.length === 0;
             if (isEC && (t === 'English Club数据看板' || t.includes('English Club'))) return el.children.length === 0;
             return false;
         });
@@ -1327,42 +1315,16 @@ async function runExporter() {
 
             try {
                 let existingFiles = fs.readdirSync(TARGET_INPUTS_DIR);
-                let nav2 = await navigateAndEnsureBiFrame(page, browser, '中东 Lens 看板', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r2Id, tracker);
+                let nav2 = await navigateAndEnsureBiFrame(page, browser, 'ME Lens Dashboard', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r2Id, tracker);
                 let biFrame = nav2.biFrame;
                 page = nav2.page;
                 await setupDownload(browser, page, TARGET_INPUTS_DIR);
 
-                // Ensure page is freshly reloaded so default Achievement tab is mounted cleanly
-                await page.reload({ waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => {});
-                await new Promise(r => setTimeout(r, 4000));
-                const fReset = await findBiFrame(page, '9255940d', 15);
-                if (fReset) biFrame = fReset;
-
-                tracker.log(r2Id, 'Switching to ACHIEVEMENT tab...');
-                const tabRes = await biFrame.evaluate(() => {
-                    const achieveWords = ['achievement', 'hourly update', '业绩', 'الإنجاز', 'التحصيل', 'الأداء'];
-                    const tabs = Array.from(document.querySelectorAll('.ant-tabs-nav .ant-tabs-tab, .ant-tabs-tab, [role="tab"], .bi-tab, .qbi-tab-item'));
-                    let target = tabs.find(el => {
-                        const t = (el.innerText || '').trim().toLowerCase();
-                        return achieveWords.some(w => t === w || t.includes(w));
-                    });
-                    if (!target && tabs.length > 0) target = tabs[0];
-                    if (target) {
-                        const btn = target.querySelector('.ant-tabs-tab-btn') || target;
-                        btn.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
-                        btn.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
-                        btn.click();
-                        target.click();
-                        return { clicked: true, name: (target.innerText || '').trim() };
-                    }
-                    return { clicked: false };
-                });
-                tracker.log(r2Id, `Achievement tab click: ${JSON.stringify(tabRes)}`);
-                await new Promise(r => setTimeout(r, 6000));
+                await new Promise(r => setTimeout(r, 3000));
                 const fAH1 = await findBiFrame(page, '9255940d', 15);
                 if (fAH1) biFrame = fAH1;
 
-                tracker.log(r2Id, 'Scrolling down 2500px to Area table...');
+                tracker.log(r2Id, 'Scrolling down 2500px to Area Hierarchy table...');
                 await biFrame.evaluate(() => {
                     window.scrollTo(0, 2500);
                     for (const el of Array.from(document.querySelectorAll('*'))) {
@@ -1374,7 +1336,7 @@ async function runExporter() {
                 if (fAH2) biFrame = fAH2;
 
                 const expandInfo = await biFrame.evaluate(() => {
-                    const op = document.querySelector('.cross-table-expand-operator, [class*="expand-operator"]');
+                    const op = document.querySelector('.cross-table-expand-operator, [class*="expand-operator"], .crossTable-expand-icon, th .anticon, [class*="expand-icon"]');
                     if (!op) return null;
                     op.scrollIntoView({ behavior: 'instant', block: 'center' });
                     const r = op.getBoundingClientRect();
@@ -1385,17 +1347,42 @@ async function runExporter() {
                     await clickInFrameViaCoordinates(page, biFrame, expandInfo);
                     await new Promise(r => setTimeout(r, 1200));
 
-                    const expAll = await biFrame.evaluate(() => {
-                        const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, li'));
-                        const expandWords = ['expand all', '全部展开', '展开全部', 'توسيع الكل', 'توسيع الجميع', 'توسيع'];
+                    const expAll = await biFrame.evaluate(async () => {
+                        const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, li, [role="menuitem"]'));
+                        const expandAllWords = ['expand all', '全部展开', '展开全部', 'توسيع الكل', 'توسيع الجميع', 'توسيع'];
+                        
+                        // Strategy A: Direct 'Expand all' click
                         let t = items.find(i => {
                             const txt = (i.innerText || '').trim().toLowerCase();
-                            return expandWords.some(w => txt.includes(w));
+                            return expandAllWords.some(w => txt.includes(w));
                         });
-                        if (!t && items.length > 0) {
-                            t = items[items.length - 1]; // Structural fallback: last item is typically Expand all
+                        if (t) { t.click(); return 'clicked-expand-all'; }
+
+                        // Strategy B: Hover 'Expand to' / '展开至' and click '4 levels' / '4层'
+                        const expandTo = items.find(i => {
+                            const txt = (i.innerText || '').trim().toLowerCase();
+                            return txt.includes('expand to') || txt.includes('展开至');
+                        });
+                        if (expandTo) {
+                            expandTo.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+                            expandTo.dispatchEvent(new MouseEvent('mouseenter', { bubbles: true }));
+                            await new Promise(r => setTimeout(r, 600));
+                            const subItems = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, li, [role="menuitem"]'));
+                            const level4 = subItems.find(si => {
+                                const stxt = (si.innerText || '').trim().toLowerCase();
+                                return stxt.includes('4 level') || stxt.includes('4 levels') || stxt.includes('4层') || stxt === '4';
+                            });
+                            if (level4) {
+                                level4.click();
+                                return 'clicked-4-levels';
+                            }
                         }
-                        if (t) { t.click(); return true; }
+
+                        // Strategy C: Structural fallback
+                        if (items.length > 0) {
+                            items[items.length - 1].click();
+                            return 'clicked-last-fallback';
+                        }
                         return false;
                     });
                     tracker.log(r2Id, `Expand all clicked: ${expAll}`);
@@ -1407,8 +1394,38 @@ async function runExporter() {
                 if (fAH3) biFrame = fAH3;
 
                 const areaDotsInfo = await biFrame.evaluate(() => {
+                    function findMenuIcon(container) {
+                        if (!container) return null;
+                        const more = container.querySelector('.card-menu-wrapper i.common-more-outlined, i.common-more-outlined, .card-menu-wrapper [class*="common-more"], .card-menu-wrapper');
+                        if (!more) return null;
+                        more.classList.remove('card-menu-hide');
+                        const icon = more.tagName === 'I' ? more : (more.querySelector('i.common-more-outlined') || more);
+                        icon.classList.remove('card-menu-hide');
+                        icon.style.opacity = '1';
+                        icon.style.visibility = 'visible';
+                        icon.style.display = 'inline-block';
+                        icon.scrollIntoView({ behavior: 'instant', block: 'center' });
+                        const r = icon.getBoundingClientRect();
+                        if (r.width > 0 && r.height > 0) {
+                            return { x: r.x, y: r.y, width: r.width, height: r.height };
+                        }
+                        return null;
+                    }
+
+                    // Strategy 0: Direct search in Achievement Card
+                    const tiles = Array.from(document.querySelectorAll('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile-wrapper"]'));
+                    const targetTile = tiles.find(t => {
+                        const txt = (t.innerText || '');
+                        const hasAchWords = txt.includes('REVENUE CASH') || txt.includes('Cash-Refund') || (txt.includes('Area') && txt.includes('CONTRACTS'));
+                        const isNotFixed = !txt.includes('UNFIXED') && !txt.includes('FIXED') && !txt.includes('>3 Teachers');
+                        return hasAchWords && isNotFixed;
+                    });
+                    if (targetTile) {
+                        const m = findMenuIcon(targetTile);
+                        if (m) return { ...m, source: 'target-achievement-tile' };
+                    }
+
                     // Strategy 1: Find from op (.cross-table-expand-operator)
-                    // op exists ONLY in the Area Hierarchy cross-table!
                     const op = document.querySelector('.cross-table-expand-operator, [class*="expand-operator"]');
                     if (op) {
                         let cur = op;
@@ -1419,15 +1436,8 @@ async function runExporter() {
                                            cur.hasAttribute?.('data-tile-id') ||
                                            (typeof cur.className === 'string' && (cur.className.includes('card-wrapper') || cur.className.includes('tile-wrapper')));
                             if (isTile) {
-                                const more = cur.querySelector('.common-more-outlined, .more-icon, i.anticon-more');
-                                if (more) {
-                                    more.classList.remove('card-menu-hide');
-                                    more.style.opacity = '1';
-                                    more.style.visibility = 'visible';
-                                    more.scrollIntoView({ behavior: 'instant', block: 'center' });
-                                    const r = more.getBoundingClientRect();
-                                    return { x: r.x, y: r.y, width: r.width, height: r.height, source: 'op-ancestor' };
-                                }
+                                const m = findMenuIcon(cur);
+                                if (m) return { ...m, source: 'op-ancestor' };
                             }
                             cur = cur.parentElement;
                         }
@@ -1442,15 +1452,8 @@ async function runExporter() {
                     if (titleEl) {
                         const card = titleEl.closest('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile"]');
                         if (card) {
-                            const more = card.querySelector('.common-more-outlined, .more-icon, i.anticon-more');
-                            if (more) {
-                                more.classList.remove('card-menu-hide');
-                                more.style.opacity = '1';
-                                more.style.visibility = 'visible';
-                                more.scrollIntoView({ behavior: 'instant', block: 'center' });
-                                const r = more.getBoundingClientRect();
-                                return { x: r.x, y: r.y, width: r.width, height: r.height, source: 'title-card' };
-                            }
+                            const m = findMenuIcon(card);
+                            if (m) return { ...m, source: 'title-card' };
                         }
                     }
 
@@ -1930,22 +1933,25 @@ async function runExporter() {
 
 
     } finally {
-
         await browser.close().catch(() => {});
-
+        sanitizeChromeProfile();
         tracker.printSummaryAndSave();
-
     }
-
 }
 
+process.on('SIGINT', () => {
+    sanitizeChromeProfile();
+    process.exit(1);
+});
 
+process.on('SIGTERM', () => {
+    sanitizeChromeProfile();
+    process.exit(1);
+});
 
 runExporter().catch(err => {
-
     console.error('FATAL:', err);
-
+    sanitizeChromeProfile();
     process.exit(1);
-
 });
 
