@@ -1324,6 +1324,27 @@ async function runExporter() {
                 const fAH1 = await findBiFrame(page, '9255940d', 15);
                 if (fAH1) biFrame = fAH1;
 
+                tracker.log(r2Id, 'Ensuring Achievement / Overview Tab is selected...');
+                await biFrame.evaluate(() => {
+                    const achieveWords = ['achievement', 'hourly update', '业绩大盘', '业绩', '分时', 'الإنجاز', 'التحصيل', 'الأداء'];
+                    const tabs = Array.from(document.querySelectorAll('.ant-tabs-nav .ant-tabs-tab, .ant-tabs-tab, [role="tab"], .bi-tab, .qbi-tab-item'));
+                    let target = tabs.find(el => {
+                        const t = (el.innerText || '').trim().toLowerCase();
+                        return achieveWords.some(w => t.includes(w));
+                    });
+                    if (!target && tabs.length > 0) {
+                        target = tabs[0];
+                    }
+                    if (target) {
+                        const btn = target.querySelector('.ant-tabs-tab-btn') || target;
+                        btn.click();
+                        target.click();
+                    }
+                });
+                await new Promise(r => setTimeout(r, 6000));
+                const fAH_tab = await findBiFrame(page, '9255940d', 15);
+                if (fAH_tab) biFrame = fAH_tab;
+
                 tracker.log(r2Id, 'Scrolling down 2500px to Area Hierarchy table...');
                 await biFrame.evaluate(() => {
                     window.scrollTo(0, 2500);
@@ -1412,17 +1433,18 @@ async function runExporter() {
                         return null;
                     }
 
-                    // Strategy 0: Direct search in Achievement Card
-                    const tiles = Array.from(document.querySelectorAll('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile-wrapper"]'));
-                    const targetTile = tiles.find(t => {
-                        const txt = (t.innerText || '');
-                        const hasAchWords = txt.includes('REVENUE CASH') || txt.includes('Cash-Refund') || (txt.includes('Area') && txt.includes('CONTRACTS'));
-                        const isNotFixed = !txt.includes('UNFIXED') && !txt.includes('FIXED') && !txt.includes('>3 Teachers');
-                        return hasAchWords && isNotFixed;
+                    // Strategy 0: Find from exact card title "Area/Big Team/Small Team/SS"
+                    const allEls = Array.from(document.querySelectorAll('*'));
+                    const titleEl = allEls.find(el => {
+                        const t = (el.innerText || '').trim();
+                        return (t === 'Area/Big Team/Small Team/SS' || t === 'Area/Big Team' || t.startsWith('Area/Big Team')) && el.children.length === 0;
                     });
-                    if (targetTile) {
-                        const m = findMenuIcon(targetTile);
-                        if (m) return { ...m, source: 'target-achievement-tile' };
+                    if (titleEl) {
+                        const card = titleEl.closest('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile"]');
+                        if (card) {
+                            const m = findMenuIcon(card);
+                            if (m) return { ...m, source: 'title-card' };
+                        }
                     }
 
                     // Strategy 1: Find from op (.cross-table-expand-operator)
@@ -1443,18 +1465,17 @@ async function runExporter() {
                         }
                     }
 
-                    // Strategy 2: Find from exact card title "Area/Big Team/Small Team/SS"
-                    const allEls = Array.from(document.querySelectorAll('*'));
-                    const titleEl = allEls.find(el => {
-                        const t = (el.innerText || '').trim();
-                        return (t === 'Area/Big Team/Small Team/SS' || t === 'Area/Big Team') && el.children.length === 0;
+                    // Strategy 2: Direct search in Achievement Card
+                    const tiles = Array.from(document.querySelectorAll('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile-wrapper"]'));
+                    const targetTile = tiles.find(t => {
+                        const txt = (t.innerText || '');
+                        const hasAchWords = txt.includes('REVENUE CASH') || txt.includes('Cash-Refund') || (txt.includes('Area') && txt.includes('CONTRACTS'));
+                        const isNotFixed = !txt.includes('UNFIXED') && !txt.includes('FIXED') && !txt.includes('>3 Teachers');
+                        return hasAchWords && isNotFixed;
                     });
-                    if (titleEl) {
-                        const card = titleEl.closest('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile"]');
-                        if (card) {
-                            const m = findMenuIcon(card);
-                            if (m) return { ...m, source: 'title-card' };
-                        }
+                    if (targetTile) {
+                        const m = findMenuIcon(targetTile);
+                        if (m) return { ...m, source: 'target-achievement-tile' };
                     }
 
                     return null;
@@ -1483,7 +1504,7 @@ async function runExporter() {
                         tracker.log(r2Id, `Modal confirmed: ${conf}`);
 
                         tracker.log(r2Id, 'Waiting for Area Hierarchy Excel download...');
-                        const file2 = await waitForNewDownload(existingFiles, 90, 8000, ['Area', 'SS Lens Dashboard_Area', 'Hierarchy', 'Team', 'Small']);
+                        const file2 = await waitForNewDownload(existingFiles, 90, 4000, ['Area', 'SS Lens Dashboard_Area', 'Hierarchy', 'Team', 'Small']);
                         if (file2) {
                             const sz = fs.statSync(file2).size;
                             tracker.recordSuccess(r2Id, file2, sz);
