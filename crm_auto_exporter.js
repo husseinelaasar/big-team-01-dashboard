@@ -386,12 +386,10 @@ async function findBiFrame(page, pageIdSubstr = null, maxWaitSeconds = 15) {
                 if (!isBi) continue;
                 if (typeof frame.isDetached === 'function' && frame.isDetached()) continue;
 
-                const alive = await frame.evaluate(() => document.readyState === 'complete' || document.readyState === 'interactive').catch(() => false);
-                if (!alive) continue;
-
                 if (pageIdSubstr && url.includes(pageIdSubstr)) {
                     return frame;
                 }
+
                 if (!fallbackFrame) {
                     fallbackFrame = frame;
                 }
@@ -479,8 +477,8 @@ async function navigateAndEnsureBiFrame(page, browser, menuName, targetUrl, page
         await new Promise(r => setTimeout(r, 4000));
     }
 
-    // Check if QuickBI iframe is already loaded
-    let biFrame = await findBiFrame(page, pageIdSubstr, 6);
+    // Check if QuickBI iframe is already loaded (give up to 25s for natural token mounting)
+    let biFrame = await findBiFrame(page, pageIdSubstr, 25);
     if (biFrame) return { biFrame, page };
 
     // Click leaf menu item directly (Never collapse an already-open Data Center accordion)
@@ -1095,7 +1093,7 @@ async function runExporter() {
 
             try {
                 let existingFiles = fs.readdirSync(TARGET_INPUTS_DIR);
-                let nav1 = await navigateAndEnsureBiFrame(page, browser, '中东 Lens 看板', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r1Id, tracker);
+                let nav1 = await navigateAndEnsureBiFrame(page, browser, 'ME Lens Dashboard', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r1Id, tracker);
                 let biFrame = nav1.biFrame;
                 page = nav1.page;
                 await setupDownload(browser, page, TARGET_INPUTS_DIR);
@@ -1320,10 +1318,6 @@ async function runExporter() {
                 page = nav2.page;
                 await setupDownload(browser, page, TARGET_INPUTS_DIR);
 
-                await new Promise(r => setTimeout(r, 3000));
-                const fAH1 = await findBiFrame(page, '9255940d', 15);
-                if (fAH1) biFrame = fAH1;
-
                 tracker.log(r2Id, 'Ensuring Achievement / Overview Tab is selected...');
                 await biFrame.evaluate(() => {
                     const achieveWords = ['achievement', 'hourly update', '业绩大盘', '业绩', '分时', 'الإنجاز', 'التحصيل', 'الأداء'];
@@ -1332,153 +1326,60 @@ async function runExporter() {
                         const t = (el.innerText || '').trim().toLowerCase();
                         return achieveWords.some(w => t.includes(w));
                     });
-                    if (!target && tabs.length > 0) {
-                        target = tabs[0];
-                    }
+                    if (!target && tabs.length > 0) target = tabs[0];
                     if (target) {
                         const btn = target.querySelector('.ant-tabs-tab-btn') || target;
                         btn.click();
                         target.click();
                     }
                 });
-                await new Promise(r => setTimeout(r, 6000));
-                const fAH_tab = await findBiFrame(page, '9255940d', 15);
-                if (fAH_tab) biFrame = fAH_tab;
+                await new Promise(r => setTimeout(r, 4000));
 
-                tracker.log(r2Id, 'Scrolling down 2500px to Area Hierarchy table...');
+                tracker.log(r2Id, 'Scrolling down 1500px to Area Hierarchy table...');
                 await biFrame.evaluate(() => {
-                    window.scrollTo(0, 2500);
+                    window.scrollTo(0, 1500);
                     for (const el of Array.from(document.querySelectorAll('*'))) {
-                        if (el.scrollHeight > el.clientHeight + 50) el.scrollTop = 2500;
+                        if (el.scrollHeight > el.clientHeight + 50) el.scrollTop = 1500;
                     }
                 });
-                await new Promise(r => setTimeout(r, 4000));
-                const fAH2 = await findBiFrame(page, '9255940d', 15);
-                if (fAH2) biFrame = fAH2;
+                await new Promise(r => setTimeout(r, 3000));
 
-                const expandInfo = await biFrame.evaluate(() => {
+                tracker.log(r2Id, 'Expanding all levels on Area cross table...');
+                const expAll = await biFrame.evaluate(async () => {
                     const op = document.querySelector('.cross-table-expand-operator, [class*="expand-operator"], .crossTable-expand-icon, th .anticon, [class*="expand-icon"]');
-                    if (!op) return null;
+                    if (!op) return 'no-expand-op';
                     op.scrollIntoView({ behavior: 'instant', block: 'center' });
-                    const r = op.getBoundingClientRect();
-                    return { x: r.x, y: r.y, width: r.width, height: r.height };
+                    op.click();
+                    await new Promise(r => setTimeout(r, 800));
+                    const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, li, [role="menuitem"]'));
+                    const exp = items.find(i => (i.innerText || '').trim().toLowerCase().includes('expand all') || (i.innerText || '').includes('全部展开'));
+                    if (exp) { exp.click(); return 'clicked-expand-all'; }
+                    if (items.length > 0) { items[items.length - 1].click(); return 'clicked-last'; }
+                    return 'no-items';
                 });
-
-                if (expandInfo) {
-                    await clickInFrameViaCoordinates(page, biFrame, expandInfo);
-                    await new Promise(r => setTimeout(r, 1200));
-
-                    const expAll = await biFrame.evaluate(async () => {
-                        const items = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, li, [role="menuitem"]'));
-                        const expandAllWords = ['expand all', '全部展开', '展开全部', 'توسيع الكل', 'توسيع الجميع', 'توسيع'];
-                        
-                        // Strategy A: Direct 'Expand all' click
-                        let t = items.find(i => {
-                            const txt = (i.innerText || '').trim().toLowerCase();
-                            return expandAllWords.some(w => txt.includes(w));
-                        });
-                        if (t) { t.click(); return 'clicked-expand-all'; }
-
-                        // Strategy B: Hover 'Expand to' / '展开至' and click '4 levels' / '4层'
-                        const expandTo = items.find(i => {
-                            const txt = (i.innerText || '').trim().toLowerCase();
-                            return txt.includes('expand to') || txt.includes('展开至');
-                        });
-                        if (expandTo) {
-                            expandTo.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
-                            expandTo.dispatchEvent(new MouseEvent('mouseenter', { bubbles: true }));
-                            await new Promise(r => setTimeout(r, 600));
-                            const subItems = Array.from(document.querySelectorAll('.ant-dropdown:not(.ant-dropdown-hidden) .ant-dropdown-menu-item, .bi-menu-item, li, [role="menuitem"]'));
-                            const level4 = subItems.find(si => {
-                                const stxt = (si.innerText || '').trim().toLowerCase();
-                                return stxt.includes('4 level') || stxt.includes('4 levels') || stxt.includes('4层') || stxt === '4';
-                            });
-                            if (level4) {
-                                level4.click();
-                                return 'clicked-4-levels';
-                            }
-                        }
-
-                        // Strategy C: Structural fallback
-                        if (items.length > 0) {
-                            items[items.length - 1].click();
-                            return 'clicked-last-fallback';
-                        }
-                        return false;
-                    });
-                    tracker.log(r2Id, `Expand all clicked: ${expAll}`);
-                    tracker.log(r2Id, 'Waiting 12s for complete 33-row expansion...');
-                    await new Promise(r => setTimeout(r, 12000));
-                }
-
-                const fAH3 = await findBiFrame(page, '9255940d', 15);
-                if (fAH3) biFrame = fAH3;
+                tracker.log(r2Id, `Expand result: ${expAll}`);
+                await new Promise(r => setTimeout(r, 8000));
 
                 const areaDotsInfo = await biFrame.evaluate(() => {
-                    function findMenuIcon(container) {
-                        if (!container) return null;
-                        const more = container.querySelector('.card-menu-wrapper i.common-more-outlined, i.common-more-outlined, .card-menu-wrapper [class*="common-more"], .card-menu-wrapper');
-                        if (!more) return null;
-                        more.classList.remove('card-menu-hide');
-                        const icon = more.tagName === 'I' ? more : (more.querySelector('i.common-more-outlined') || more);
-                        icon.classList.remove('card-menu-hide');
-                        icon.style.opacity = '1';
-                        icon.style.visibility = 'visible';
-                        icon.style.display = 'inline-block';
-                        icon.scrollIntoView({ behavior: 'instant', block: 'center' });
-                        const r = icon.getBoundingClientRect();
-                        if (r.width > 0 && r.height > 0) {
-                            return { x: r.x, y: r.y, width: r.width, height: r.height };
-                        }
-                        return null;
-                    }
-
-                    // Strategy 0: Find from exact card title "Area/Big Team/Small Team/SS"
                     const allEls = Array.from(document.querySelectorAll('*'));
                     const titleEl = allEls.find(el => {
                         const t = (el.innerText || '').trim();
-                        return (t === 'Area/Big Team/Small Team/SS' || t === 'Area/Big Team' || t.startsWith('Area/Big Team')) && el.children.length === 0;
+                        return (t === 'Area/Big Team/Small Team/SS' || t.startsWith('Area/Big Team')) && el.children.length === 0;
                     });
-                    if (titleEl) {
-                        const card = titleEl.closest('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile"]');
-                        if (card) {
-                            const m = findMenuIcon(card);
-                            if (m) return { ...m, source: 'title-card' };
-                        }
-                    }
-
-                    // Strategy 1: Find from op (.cross-table-expand-operator)
-                    const op = document.querySelector('.cross-table-expand-operator, [class*="expand-operator"]');
-                    if (op) {
-                        let cur = op;
-                        while (cur && cur !== document.body) {
-                            const isTile = cur.classList?.contains('component-card-wrapper') || 
-                                           cur.classList?.contains('bi-layout-tile') || 
-                                           cur.classList?.contains('react-grid-item') ||
-                                           cur.hasAttribute?.('data-tile-id') ||
-                                           (typeof cur.className === 'string' && (cur.className.includes('card-wrapper') || cur.className.includes('tile-wrapper')));
-                            if (isTile) {
-                                const m = findMenuIcon(cur);
-                                if (m) return { ...m, source: 'op-ancestor' };
-                            }
-                            cur = cur.parentElement;
-                        }
-                    }
-
-                    // Strategy 2: Direct search in Achievement Card
-                    const tiles = Array.from(document.querySelectorAll('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile-wrapper"]'));
-                    const targetTile = tiles.find(t => {
-                        const txt = (t.innerText || '');
-                        const hasAchWords = txt.includes('REVENUE CASH') || txt.includes('Cash-Refund') || (txt.includes('Area') && txt.includes('CONTRACTS'));
-                        const isNotFixed = !txt.includes('UNFIXED') && !txt.includes('FIXED') && !txt.includes('>3 Teachers');
-                        return hasAchWords && isNotFixed;
-                    });
-                    if (targetTile) {
-                        const m = findMenuIcon(targetTile);
-                        if (m) return { ...m, source: 'target-achievement-tile' };
-                    }
-
-                    return null;
+                    if (!titleEl) return null;
+                    const card = titleEl.closest('.component-card-wrapper, .bi-layout-tile, .react-grid-item, [class*="card-wrapper"], [class*="tile"]');
+                    if (!card) return null;
+                    const more = card.querySelector('.card-menu-wrapper i.common-more-outlined, i.common-more-outlined, .card-menu-wrapper [class*="common-more"], .card-menu-wrapper');
+                    if (!more) return null;
+                    more.classList.remove('card-menu-hide');
+                    const icon = more.tagName === 'I' ? more : (more.querySelector('i.common-more-outlined') || more);
+                    icon.classList.remove('card-menu-hide');
+                    icon.style.opacity = '1';
+                    icon.style.visibility = 'visible';
+                    icon.style.display = 'inline-block';
+                    icon.scrollIntoView({ behavior: 'instant', block: 'center' });
+                    const r = icon.getBoundingClientRect();
+                    return { x: r.x, y: r.y, width: r.width, height: r.height };
                 });
 
                 if (areaDotsInfo) {
@@ -1736,7 +1637,7 @@ async function runExporter() {
             try {
 
                 let existingFiles = fs.readdirSync(TARGET_INPUTS_DIR);
-                let nav5 = await navigateAndEnsureBiFrame(page, browser, '中东 Lens 看板', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r5Id, tracker);
+                let nav5 = await navigateAndEnsureBiFrame(page, browser, 'ME Lens Dashboard', 'https://lp.51talkjr.com/#/data-center/business/SA-SSdata', '9255940d', r5Id, tracker);
                 let biFullFrame = nav5.biFrame;
                 page = nav5.page;
                 await setupDownload(browser, page, TARGET_INPUTS_DIR);
